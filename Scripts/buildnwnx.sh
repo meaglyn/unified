@@ -7,7 +7,7 @@ JOBS=""
 BUILD_TYPE="RelWithDebInfo"
 SANITIZE=""
 
-while getopts "hcj:ds" o; do
+while getopts "hcj:dst" o; do
     case "${o}" in
         c) # Clean build - remove Binaries and re-execute cmake
             CLEAN=0
@@ -29,22 +29,22 @@ while getopts "hcj:ds" o; do
 done
 shift $((OPTIND-1))
 
-CC="gcc -m32" 
-CXX="g++ -m32" 
+CC="gcc -m64"
+CXX="g++ -m64"
 
 if [ ${CLEAN} == 0 ]; then
     if [ -d ./Binaries ]; then
-        echo "Removing Binaries" 
-        rm -rf ./Binaries; 
+        echo "Removing Binaries"
+        rm -rf ./Binaries;
     fi
 
-    if [ -d ./build-nwnx ]; then 
+    if [ -d ./build-nwnx ]; then
         echo "Removing build-nwnx"
-        rm -rf ./build-nwnx; 
+        rm -rf ./build-nwnx;
     fi
 fi
 
-mkdir ./build-nwnx
+mkdir -p ./build-nwnx
 pushd ./build-nwnx
 
 cmake -D CMAKE_BUILD_TYPE=$BUILD_TYPE $SANITIZE ..
@@ -54,4 +54,3 @@ make ${JOBS} all
 popd
 
 ./Scripts/packageNWScript.sh
-./Scripts/packageJarFile.sh

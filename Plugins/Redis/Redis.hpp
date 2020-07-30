@@ -4,6 +4,10 @@
 #include "Plugin.hpp"
 #include "Services/Hooks/Hooks.hpp"
 
+#include "API/Functions.hpp"
+#include "API/CVirtualMachine.hpp"
+#include "API/CExoString.hpp"
+
 #include <functional>
 
 namespace cpp_redis
@@ -40,7 +44,7 @@ public:
         std::vector<std::string> m_pubsub_channels;
     };
 
-    Redis(const Plugin::CreateParams& params);
+    Redis(NWNXLib::Services::ProxyServiceList* services);
     virtual ~Redis();
 
     // Retrieve a free connection to do stuff with. This could be a single
@@ -87,6 +91,8 @@ private:
     void LogQuery(const std::vector<std::string>&, const cpp_redis::reply&,
                   const uint64_t ns);
     std::unique_ptr<cpp_redis::redis_client> PoolMakeFunc();
+
+    static void CleanState(bool, CVirtualMachine*);
 };
 
 }

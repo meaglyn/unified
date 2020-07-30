@@ -1,86 +1,154 @@
+#include <unordered_map>
+
 #include "Redis.hpp"
 #include "Internal.hpp"
 
 #include "Services/Events/Events.hpp"
 
-#include "Util.h"
+#include "API/Functions.hpp"
+#include "API/CVirtualMachine.hpp"
+#include "API/CExoString.hpp"
 
 namespace Redis
 {
 
 using namespace NWNXLib;
 using namespace NWNXLib::Services;
+using namespace NWNXLib::API;
 
-int RedisReplyTypeToInt(const cpp_redis::reply::type& t)
+// We cache all results until the end of the current script invocation.
+static std::vector<cpp_redis::reply> s_results;
+
+void Redis::CleanState(bool before, CVirtualMachine* vm)
 {
-    switch (t)
+    if (!before && vm->m_nRecursionLevel == 0)
     {
-        case cpp_redis::reply::type::array: return 1;
-        case cpp_redis::reply::type::bulk_string: return 2;
-        case cpp_redis::reply::type::error: return 3;
-        case cpp_redis::reply::type::integer: return 4;
-        case cpp_redis::reply::type::simple_string: return 5;
-        case cpp_redis::reply::type::null: return 6;
+        LOG_DEBUG("Clearing all results after script exit.");
+        s_results.clear();
     }
-    return 0;
 }
 
 void Redis::RegisterWithNWScript()
 {
-    // Full reply data of the last command executed for nwscript purposes.
-    // Reason to keep it around is so that nwscript can, for example, iterate lists.
-    static cpp_redis::reply m_last_nwscript_reply;
-
     // NWScript: Executes a raw redis command with a variable argument list.
-    // Returns the reply type (as a constant, see RedisReplyTypeToInt).
-    GetServices()->m_events->RegisterEvent("RawCommand",
-    [&](Events::ArgumentStack && arg)
-    {
-        std::vector<std::string> v;
-        while (!arg.empty())
-        {
-            // be ignorant about type and just strip it, since we take
-            // raw values (integers, strings) and shove them as strings straight
-            // to redis.
-            v.push_back(arg.top().substr(2));
-            arg.pop();
-            reverse(v.begin(), v.end());
-        }
-        m_last_nwscript_reply = RawSync(v);
+    // Returns a opaque identifier you can use to access the result
+    GetServices()->m_events->RegisterEvent("Deferred",
+            [&](Events::ArgumentStack && arg)
+            {
+                std::vector<std::string> v;
+                while (!arg.empty())
+                {
+                    // be ignorant about type and just strip it, since we take
+                    // raw values (integers, strings) and shove them as strings straight
+                    // to redis.
+                    v.push_back(arg.top().toString());
+                    arg.pop();
+                }
+                reverse(v.begin(), v.end());
 
-        Events::ArgumentStack st;
-        // Return value: a simple string for now to cut down on call
-        // count.
-        Events::InsertArgument(st, m_last_nwscript_reply.as_string());
+                auto ret = RawSync(v);
 
-        // Events::InsertArgument(st, std::to_string(RedisReplyTypeToInt(
-        // m_last_nwscript_reply.get_type())));
-        return st;
-    });
+                s_results.emplace_back(ret);
 
-    // NWScript: Returns the last query result as a string.
-    // Values returned: last reply as a string
-    GetServices()->m_events->RegisterEvent("GetLastReplyAsString",
-    [&](Events::ArgumentStack &&)
-    {
-        Events::ArgumentStack st;
-        Events::InsertArgument(st, m_last_nwscript_reply.as_string());
-        return st;
-    });
+                // We return the assigned opaque value. Ignore that this is an array index.
+                return Events::Arguments(static_cast<int32_t>(s_results.size() - 1));
+            });
 
-    // NWScript: Get list length.
-    // N.B: Redis can return multi-list results.
+    // NWScript: Returns the last query result type as a int.
+    GetServices()->m_events->RegisterEvent("GetResultType",
+            [&](Events::ArgumentStack && arg)
+            {
+                const auto resultId = static_cast<uint32_t>(Services::Events::ExtractArgument<int32_t>(arg));
+
+                int type = 0;
+                if (resultId < s_results.size())
+                {
+                    type = RedisReplyTypeToInt(s_results[resultId].get_type());
+                }
+                else
+                {
+                    LOG_ERROR("Result %d was not found. This is a error on your side.", resultId);
+                }
+
+                return Events::Arguments(type);
+            });
+
+    // NWScript: Get list length of result. Returns 0 if not a list.
+    // N.B: Redis can return multi-list results. This is not handled here
+    GetServices()->m_events->RegisterEvent("GetResultArrayLength",
+            [&](Events::ArgumentStack && arg)
+            {
+                const auto resultId = static_cast<uint32_t>(Services::Events::ExtractArgument<int32_t>(arg));
+
+                int32_t len = 0;
+                if (resultId < s_results.size() && s_results[resultId].is_array())
+                {
+                    len = static_cast<int32_t>(s_results[resultId].as_array().size());
+                }
+                else
+                {
+                    LOG_ERROR("Result %d was not found or is not an array. "
+                              "This is a error on your side.", resultId);
+                }
+
+                return Events::Arguments(len);
+            });
+
+    // NWScript: Get array element as a new result.
+    GetServices()->m_events->RegisterEvent("GetResultArrayElement",
+            [&](Events::ArgumentStack && arg)
+            {
+                const auto arrayIndex = static_cast<uint32_t>(Services::Events::ExtractArgument<int32_t>(arg));
+                const auto resultId = static_cast<uint32_t>(Services::Events::ExtractArgument<int32_t>(arg));
+
+                int32_t newResultId = 0;
+                std::string ret;
+
+                if (resultId < s_results.size() &&
+                    s_results[resultId].is_array() &&
+                    arrayIndex < s_results[resultId].as_array().size())
+                {
+                    s_results.push_back(s_results[resultId].as_array()[arrayIndex]);
+                    newResultId = static_cast<int32_t>(s_results.size() - 1);
+                }
+                else
+                {
+                    LOG_ERROR("Result %d, not an array or index %d was out of bounds. "
+                              "This is a error on your side.", resultId, arrayIndex);
+                }
+
+                return Events::Arguments(newResultId);
+            });
+
+    // NWScript: Get a result force-cast to string.
+    GetServices()->m_events->RegisterEvent("GetResultAsString",
+            [&](Events::ArgumentStack && arg)
+            {
+                const auto resultId = static_cast<uint32_t>(Services::Events::ExtractArgument<int32_t>(arg));
+
+                std::string ret;
+
+                if (resultId < s_results.size())
+                {
+                    auto& res = s_results[resultId];
+                    ret = RedisReplyAsString(res);
+                }
+                else
+                {
+                    LOG_ERROR("Result %d was not found or isn't representable as a string. "
+                              "This is a error on your side.", resultId);
+                }
+
+                return Events::Arguments(ret);
+            });
 
     // NWScript: Get the last pubsub message.
     // Values returned: channel, message
     GetServices()->m_events->RegisterEvent("GetPubSubData",
-    [&](Events::ArgumentStack &&)
-    {
-        Events::ArgumentStack st;
-        Events::InsertArgument(st, m_internal->m_last_pubsub_channel);
-        Events::InsertArgument(st, m_internal->m_last_pubsub_message);
-        return st;
-    });
+            [&](Events::ArgumentStack &&)
+            {
+                return Events::Arguments(m_internal->m_last_pubsub_channel, m_internal->m_last_pubsub_message);
+            });
 }
 
 

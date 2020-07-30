@@ -1,14 +1,15 @@
 #include "Targets/Activity.hpp"
 #include "API/CExoLinkedListNode.hpp"
 #include "API/CExoLinkedListInternal.hpp"
-#include "API/CExoLinkedListTemplatedCNWSClient.hpp"
+#include "API/CExoLinkedList.hpp"
 #include "API/CNWSArea.hpp"
 #include "API/CNWSObject.hpp"
 #include "API/CNWSPlayer.hpp"
+#include "API/CNWSCreature.hpp"
+#include "API/CNWSCreatureStats.hpp"
 #include "API/Constants.hpp"
 #include "API/CServerExoAppInternal.hpp"
 #include "API/Functions.hpp"
-#include "API/Version.hpp"
 #include "Services/Metrics/Metrics.hpp"
 #include "Services/Metrics/Resamplers.hpp"
 
@@ -17,19 +18,19 @@ using namespace NWNXLib::API;
 
 namespace Tracking {
 
-static ViewPtr<Services::MetricsProxy> g_metrics;
+static Services::MetricsProxy* g_metrics;
 
-Activity::Activity(ViewPtr<Services::MetricsProxy> metrics, ViewPtr<Services::HooksProxy> hooks)
+Activity::Activity(Services::MetricsProxy* metrics, Services::HooksProxy* hooks)
 {
     g_metrics = metrics;
-    hooks->RequestSharedHook<Functions::CServerExoAppInternal__MainLoop, int32_t>(&MainLoopUpdate);
+    hooks->RequestSharedHook<Functions::_ZN21CServerExoAppInternal8MainLoopEv, int32_t>(&MainLoopUpdate);
     Services::Resamplers::ResamplerFuncPtr resampler = &Services::Resamplers::template Sum<uint32_t>;
     metrics->SetResampler("Activity", resampler, std::chrono::seconds(1));
 }
 
-void Activity::MainLoopUpdate(Services::Hooks::CallType type, CServerExoAppInternal* thisPtr)
+void Activity::MainLoopUpdate(bool before, CServerExoAppInternal* thisPtr)
 {
-    if (type != Services::Hooks::CallType::BEFORE_ORIGINAL)
+    if (!before)
     {
         return;
     }
@@ -42,26 +43,33 @@ void Activity::MainLoopUpdate(Services::Hooks::CallType type, CServerExoAppInter
     {
         s_lastUpdate = std::move(now);
 
-        CExoLinkedListNode* head = thisPtr->m_pNWSPlayerList->m_pcExoLinkedListInternal->pHead;
-
-        while (head)
+        for (auto oidPC = thisPtr->GetFirstPCObject();
+             oidPC != Constants::OBJECT_INVALID;
+             oidPC = thisPtr->GetNextPCObject())
         {
-            CNWSPlayer* player = static_cast<CNWSPlayer*>(head->pObject);
+            CNWSPlayer *player = thisPtr->GetClientObjectByObjectId(oidPC);
+            CNWSCreature *creature = thisPtr->GetCreatureByGameObjectID(player ? player->m_oidNWSObject : oidPC);
 
             std::string areaName;
-            CGameObject* obj = thisPtr->GetGameObject(player->m_oidNWSObject);
-
-            if (obj)
+            std::string clientType;
+            if (creature)
             {
-                CNWSArea* area = thisPtr->GetAreaByGameObjectID(static_cast<CNWSObject*>(obj)->m_oidArea);
+                CNWSArea* area = thisPtr->GetAreaByGameObjectID(creature->m_oidArea);
 
                 if (area)
                 {
-                    areaName = std::string(area->m_cResRef.m_resRef, area->m_cResRef.GetLength());
+                    areaName = std::string(area->m_cResRef.GetResRef(), area->m_cResRef.GetLength());
+                }
+
+                if (creature->m_pStats->m_bIsDM || creature->m_nAssociateType == 7 || creature->m_nAssociateType == 8)
+                {
+                    clientType = "DM";
+                }
+                else
+                {
+                    clientType = "Player";
                 }
             }
-
-            const bool isDm = false; //TODO: reinterpret_cast<uintptr_t>(player->m_vtable[3]) == Functions::CNWSDungeonMaster__AsNWSDungeonMaster; NWNX_EXPECT_VERSION(8109);
 
             g_metrics->Push(
                 "Activity",
@@ -70,10 +78,8 @@ void Activity::MainLoopUpdate(Services::Hooks::CallType type, CServerExoAppInter
                 },
                 {
                     { "Area", areaName.empty() ? "(unknown)" : std::move(areaName) },
-                    { "Type", isDm ? "DM" : "Player" }
+                    { "Type", clientType.empty() ? "(unknown)" : std::move(clientType) }
                 });
-
-            head = head->pNext;
         }
     }
 }

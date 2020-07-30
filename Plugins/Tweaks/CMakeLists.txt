@@ -1,4 +1,22 @@
 add_plugin(Tweaks
     "Tweaks.cpp"
     "Tweaks/HideClassesOnCharList.cpp"
-    "Tweaks/PlayerDyingHitPointLimit.cpp")
+    "Tweaks/PlayerDyingHitPointLimit.cpp"
+    "Tweaks/DisablePause.cpp"
+    "Tweaks/DisableQuicksave.cpp"
+    "Tweaks/CompareVarsForMerge.cpp"
+    "Tweaks/ParryAllAttacks.cpp"
+    "Tweaks/SneakAttackCritImmunity.cpp"
+    "Tweaks/PreserveDepletedItems.cpp"
+    "Tweaks/HideDMsOnCharList.cpp"
+    "Tweaks/DisableMonkAbilitiesWhenPolymorphed.cpp"
+    "Tweaks/StringToIntBaseToAuto.cpp"
+    "Tweaks/DeadCreatureFiresOnAreaExit.cpp"
+    "Tweaks/PreserveActionsOnDMPossess.cpp"
+    "Tweaks/FixGreaterSanctuaryBug.cpp"
+    "Tweaks/ItemChargesCost.cpp"
+    "Tweaks/FixDispelEffectLevels.cpp"
+    "Tweaks/AddPrestigeclassCasterLevels.cpp"
+    "Tweaks/FixUnlimitedPotionsBug.cpp"
+    "Tweaks/UnhardcodeShields.cpp"
+)

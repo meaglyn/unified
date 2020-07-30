@@ -58,7 +58,6 @@ public:
     //    Any returned above that are discarded.
     void Reconfigure(MakeFunc make, size_t min = 1, size_t max = 10)
     {
-        ASSERT(min >= 0);
         ASSERT(min < max);
 
         std::lock_guard<std::mutex> lock(m_pool_mtx);
@@ -66,6 +65,8 @@ public:
         m_make = make;
         m_min = min;
         m_max = max;
+
+        LOG_INFO("Pool reconfigured: min=%d, max=%d", m_min, m_max);
     }
 
     // Borrow a T with a function, ensuring it gets put back into to the pool
@@ -90,7 +91,10 @@ public:
         std::lock_guard<std::mutex> lock(m_pool_mtx);
 
         while (m_pool_available.size() < 1 + m_min)
+        {
             m_pool_available.push(m_make());
+            LOG_DEBUG("Pool exhausted, making new; pool at: %d", m_pool_available.size());
+        }
 
         auto inst = std::move(m_pool_available.front());
         m_pool_available.pop();

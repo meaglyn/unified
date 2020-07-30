@@ -1,5362 +1,5971 @@
-#pragma once
-
-#include <cstdint>
-
-namespace NWNXLib {
-
-namespace API {
-
-namespace Functions {
-
-NWNX_EXPECT_VERSION(8166);
-
-constexpr uintptr_t C2DA__C2DACtor__0 = 0x00045320;
-constexpr uintptr_t C2DA__C2DACtor__1 = 0x000453C0;
-constexpr uintptr_t C2DA__C2DADtor__0 = 0x00042E70;
-constexpr uintptr_t C2DA__GetCExoStringEntry__0 = 0x00043CC0;
-constexpr uintptr_t C2DA__GetCExoStringEntry__1 = 0x000430A0;
-constexpr uintptr_t C2DA__GetCExoStringEntry__2 = 0x00042FD0;
-constexpr uintptr_t C2DA__GetCExoStringEntry__3 = 0x00043DB0;
-constexpr uintptr_t C2DA__GetColumnIndex = 0x00042F20;
-constexpr uintptr_t C2DA__GetFLOATEntry__0 = 0x00044060;
-constexpr uintptr_t C2DA__GetFLOATEntry__1 = 0x00043330;
-constexpr uintptr_t C2DA__GetFLOATEntry__2 = 0x00043270;
-constexpr uintptr_t C2DA__GetFLOATEntry__3 = 0x00043F90;
-constexpr uintptr_t C2DA__GetINTEntry__0 = 0x00044270;
-constexpr uintptr_t C2DA__GetINTEntry__1 = 0x00043560;
-constexpr uintptr_t C2DA__GetINTEntry__2 = 0x000436D0;
-constexpr uintptr_t C2DA__GetINTEntry__3 = 0x000443E0;
-constexpr uintptr_t C2DA__GetNextLineLength = 0x00043A80;
-constexpr uintptr_t C2DA__GetNextToken = 0x00043AD0;
-constexpr uintptr_t C2DA__GetRowIndex = 0x00043C50;
-constexpr uintptr_t C2DA__Load2DArray = 0x000448C0;
-constexpr uintptr_t C2DA__SetBlankEntry__0 = 0x00043990;
-constexpr uintptr_t C2DA__SetBlankEntry__1 = 0x000446B0;
-constexpr uintptr_t C2DA__SetBlankEntry__2 = 0x00044730;
-constexpr uintptr_t C2DA__SetBlankEntry__3 = 0x00043A10;
-constexpr uintptr_t C2DA__SetCExoStringEntry__0 = 0x00043EA0;
-constexpr uintptr_t C2DA__SetCExoStringEntry__1 = 0x00043200;
-constexpr uintptr_t C2DA__SetCExoStringEntry__2 = 0x00043180;
-constexpr uintptr_t C2DA__SetCExoStringEntry__3 = 0x00043F10;
-constexpr uintptr_t C2DA__SetFLOATEntry__0 = 0x000441B0;
-constexpr uintptr_t C2DA__SetFLOATEntry__1 = 0x000434B0;
-constexpr uintptr_t C2DA__SetFLOATEntry__2 = 0x00043400;
-constexpr uintptr_t C2DA__SetFLOATEntry__3 = 0x000440F0;
-constexpr uintptr_t C2DA__SetINTEntry__0 = 0x00044550;
-constexpr uintptr_t C2DA__SetINTEntry__1 = 0x00043830;
-constexpr uintptr_t C2DA__SetINTEntry__2 = 0x000438E0;
-constexpr uintptr_t C2DA__SetINTEntry__3 = 0x00044600;
-constexpr uintptr_t C2DA__SkipNewLines = 0x000447C0;
-constexpr uintptr_t C2DA__Unload2DArray = 0x00045300;
-
-constexpr uintptr_t CAppManager__CAppManagerCtor = 0x00027AC0;
-constexpr uintptr_t CAppManager__CAppManagerDtor = 0x00027CD0;
-constexpr uintptr_t CAppManager__ConnectToServer = 0x000289E0;
-constexpr uintptr_t CAppManager__CreateServer = 0x00027DC0;
-constexpr uintptr_t CAppManager__DestroyScriptDebuggerPopup = 0x000289C0;
-constexpr uintptr_t CAppManager__DestroyServer = 0x00027C70;
-constexpr uintptr_t CAppManager__DisplayScriptDebuggerPopup = 0x000289B0;
-constexpr uintptr_t CAppManager__DoSaveGameScreenShot = 0x00027C50;
-constexpr uintptr_t CAppManager__GetDungeonMasterEXERunning = 0x00027E40;
-constexpr uintptr_t CAppManager__GetObjectTableManager = 0x00027C20;
-constexpr uintptr_t CAppManager__GetProgressFromCodeword = 0x000285D0;
-constexpr uintptr_t CAppManager__ReadProgressFromINI = 0x00027E50;
-constexpr uintptr_t CAppManager__SetDDCipherForModule = 0x000289F0;
-constexpr uintptr_t CAppManager__SetDungeonMasterEXERunning = 0x00027E30;
-constexpr uintptr_t CAppManager__ShowServerMem = 0x00027C60;
-constexpr uintptr_t CAppManager__SpawnExternalScriptDebugger = 0x000289D0;
-
-constexpr uintptr_t CCallbackImplTemplated12__GetCallbackSizeBytes = 0x00063780;
-constexpr uintptr_t CCallbackImplTemplated12__Run = 0x00063B60;
-
-constexpr uintptr_t CCallbackImplTemplated16__GetCallbackSizeBytes = 0x00063620;
-constexpr uintptr_t CCallbackImplTemplated16__Run = 0x00063C20;
-
-constexpr uintptr_t CCallbackImplTemplated20__GetCallbackSizeBytes = 0x00063740;
-constexpr uintptr_t CCallbackImplTemplated20__Run = 0x00063720;
-
-constexpr uintptr_t CCallbackImplTemplated264__GetCallbackSizeBytes = 0x000635E0;
-constexpr uintptr_t CCallbackImplTemplated264__Run = 0x00063BC0;
-
-constexpr uintptr_t CCallbackImplTemplated28__GetCallbackSizeBytes = 0x00063660;
-constexpr uintptr_t CCallbackImplTemplated28__Run = 0x00063C80;
-
-constexpr uintptr_t CCallbackImplTemplated4__GetCallbackSizeBytes = 0x000636E0;
-constexpr uintptr_t CCallbackImplTemplated4__Run = 0x00063D40;
-
-constexpr uintptr_t CCallbackImplTemplated8__GetCallbackSizeBytes = 0x000636A0;
-constexpr uintptr_t CCallbackImplTemplated8__Run = 0x00063CE0;
-
-constexpr uintptr_t CCodeBase__CCodeBaseCtor = 0x0027E260;
-constexpr uintptr_t CCodeBase__CCodeBaseDtor = 0x0027E2B0;
-constexpr uintptr_t CCodeBase__AddBinaryData = 0x0027E5C0;
-constexpr uintptr_t CCodeBase__AddFloat = 0x0027E480;
-constexpr uintptr_t CCodeBase__AddInt = 0x0027E4C0;
-constexpr uintptr_t CCodeBase__AddLocation = 0x0027E540;
-constexpr uintptr_t CCodeBase__AddString = 0x0027E580;
-constexpr uintptr_t CCodeBase__AddVector = 0x0027E500;
-constexpr uintptr_t CCodeBase__CloseAllFiles = 0x0027E650;
-constexpr uintptr_t CCodeBase__DeleteVar = 0x0027E610;
-constexpr uintptr_t CCodeBase__DestroyDatabase = 0x0027E680;
-constexpr uintptr_t CCodeBase__GetBinaryData = 0x0027E430;
-constexpr uintptr_t CCodeBase__GetFloat = 0x0027E2F0;
-constexpr uintptr_t CCodeBase__GetInt = 0x0027E330;
-constexpr uintptr_t CCodeBase__GetLocation = 0x0027E3B0;
-constexpr uintptr_t CCodeBase__GetString = 0x0027E3F0;
-constexpr uintptr_t CCodeBase__GetVector = 0x0027E370;
-
-constexpr uintptr_t CCodeBaseInternal__CCodeBaseInternalCtor = 0x0027E750;
-constexpr uintptr_t CCodeBaseInternal__CCodeBaseInternalDtor = 0x0027E7F0;
-constexpr uintptr_t CCodeBaseInternal__AddBinaryData = 0x0027FDF0;
-constexpr uintptr_t CCodeBaseInternal__AddFloat = 0x0027FA10;
-constexpr uintptr_t CCodeBaseInternal__AddInt = 0x0027FAB0;
-constexpr uintptr_t CCodeBaseInternal__AddLocation = 0x0027FC20;
-constexpr uintptr_t CCodeBaseInternal__AddString = 0x0027FD30;
-constexpr uintptr_t CCodeBaseInternal__AddVarEnd = 0x0027F9A0;
-constexpr uintptr_t CCodeBaseInternal__AddVarStart = 0x0027F790;
-constexpr uintptr_t CCodeBaseInternal__AddVector = 0x0027FB50;
-constexpr uintptr_t CCodeBaseInternal__CloseAllFiles = 0x0027E860;
-constexpr uintptr_t CCodeBaseInternal__CloseFile = 0x0027EF50;
-constexpr uintptr_t CCodeBaseInternal__DeleteVar = 0x0027F6A0;
-constexpr uintptr_t CCodeBaseInternal__DestroyDatabase = 0x0027E890;
-constexpr uintptr_t CCodeBaseInternal__GetBinaryData = 0x0027F5D0;
-constexpr uintptr_t CCodeBaseInternal__GetFile = 0x0027EE50;
-constexpr uintptr_t CCodeBaseInternal__GetFloat = 0x0027F1B0;
-constexpr uintptr_t CCodeBaseInternal__GetInt = 0x0027F270;
-constexpr uintptr_t CCodeBaseInternal__GetLocation = 0x0027F3F0;
-constexpr uintptr_t CCodeBaseInternal__GetString = 0x0027F4F0;
-constexpr uintptr_t CCodeBaseInternal__GetVar = 0x0027EF70;
-constexpr uintptr_t CCodeBaseInternal__GetVector = 0x0027F320;
-constexpr uintptr_t CCodeBaseInternal__OpenFile = 0x0027EA20;
-
-constexpr uintptr_t CCombatInformation__CCombatInformationCtor = 0x000E7440;
-constexpr uintptr_t CCombatInformation__CCombatInformationDtor = 0x000E7590;
-constexpr uintptr_t CCombatInformation__LoadData = 0x000ED590;
-constexpr uintptr_t CCombatInformation__OperatorNotEqualTo = 0x000E7F00;
-constexpr uintptr_t CCombatInformation__OperatorAssignment = 0x000EDFE0;
-constexpr uintptr_t CCombatInformation__OperatorEqualTo = 0x000E7E10;
-constexpr uintptr_t CCombatInformation__SaveData = 0x000E76D0;
-
-constexpr uintptr_t CCombatInformationNode__CCombatInformationNodeCtor = 0x000E7300;
-constexpr uintptr_t CCombatInformationNode__OperatorNotEqualTo = 0x000E73A0;
-constexpr uintptr_t CCombatInformationNode__OperatorAssignment = 0x000E7400;
-constexpr uintptr_t CCombatInformationNode__OperatorEqualTo = 0x000E7340;
-
-constexpr uintptr_t CERFFile__CERFFileCtor = 0x002BCAC0;
-constexpr uintptr_t CERFFile__CERFFileDtor = 0x002BCBD0;
-constexpr uintptr_t CERFFile__AddResource__0 = 0x002BAE60;
-constexpr uintptr_t CERFFile__AddResource__1 = 0x002BBDF0;
-constexpr uintptr_t CERFFile__AddString = 0x002BC510;
-constexpr uintptr_t CERFFile__Create = 0x002BB000;
-constexpr uintptr_t CERFFile__Finish = 0x002BB160;
-constexpr uintptr_t CERFFile__Read = 0x002BAFF0;
-constexpr uintptr_t CERFFile__ReadModuleDescription = 0x002BB290;
-constexpr uintptr_t CERFFile__RecalculateOffsets = 0x002BB1C0;
-constexpr uintptr_t CERFFile__RemoveResource__0 = 0x002BAFE0;
-constexpr uintptr_t CERFFile__RemoveResource__1 = 0x002BAE70;
-constexpr uintptr_t CERFFile__Reset = 0x002BAD00;
-constexpr uintptr_t CERFFile__SetNumEntries = 0x002BBC60;
-constexpr uintptr_t CERFFile__SetVersion = 0x002BAE40;
-constexpr uintptr_t CERFFile__Write = 0x002BC7C0;
-constexpr uintptr_t CERFFile__WriteHeader = 0x002BB0D0;
-constexpr uintptr_t CERFFile__WriteResource = 0x002BC140;
-constexpr uintptr_t CERFFile__WriteStringTable = 0x002BC630;
-
-constexpr uintptr_t CERFKey__CERFKeyCtor = 0x002BBC20;
-constexpr uintptr_t CERFKey__CERFKeyDtor = 0x002BBEE0;
-constexpr uintptr_t CERFKey__Read = 0x002BBF90;
-constexpr uintptr_t CERFKey__Reset = 0x002BBEF0;
-constexpr uintptr_t CERFKey__SetName = 0x002BBF30;
-constexpr uintptr_t CERFKey__Write = 0x002BBFA0;
-
-constexpr uintptr_t CERFRes__CERFResCtor = 0x002BC010;
-constexpr uintptr_t CERFRes__CERFResDtor = 0x002BC030;
-constexpr uintptr_t CERFRes__Read = 0x002BC0B0;
-constexpr uintptr_t CERFRes__Reset = 0x002BC060;
-constexpr uintptr_t CERFRes__Write = 0x002BC0C0;
-
-constexpr uintptr_t CERFString__CERFStringCtor = 0x002BC3C0;
-constexpr uintptr_t CERFString__CERFStringDtor = 0x002BC3E0;
-constexpr uintptr_t CERFString__GetText = 0x002BC460;
-constexpr uintptr_t CERFString__Read = 0x002BC5C0;
-constexpr uintptr_t CERFString__Reset = 0x002BC410;
-constexpr uintptr_t CERFString__SetText = 0x002BC490;
-constexpr uintptr_t CERFString__Write = 0x002BC5D0;
-
-constexpr uintptr_t CExoAliasList__CExoAliasListCtor = 0x00036010;
-constexpr uintptr_t CExoAliasList__CExoAliasListDtor = 0x00036060;
-constexpr uintptr_t CExoAliasList__Add = 0x000360A0;
-constexpr uintptr_t CExoAliasList__Clear = 0x00036150;
-constexpr uintptr_t CExoAliasList__Delete = 0x00036180;
-constexpr uintptr_t CExoAliasList__GetAliasPath = 0x000361F0;
-constexpr uintptr_t CExoAliasList__ResolveFileName = 0x00036220;
-
-constexpr uintptr_t CExoAliasListInternal__CExoAliasListInternalCtor = 0x00036A60;
-constexpr uintptr_t CExoAliasListInternal__CExoAliasListInternalDtor = 0x00036AC0;
-constexpr uintptr_t CExoAliasListInternal__Add = 0x00036B50;
-constexpr uintptr_t CExoAliasListInternal__Clear = 0x00036D60;
-constexpr uintptr_t CExoAliasListInternal__Delete = 0x00036DD0;
-constexpr uintptr_t CExoAliasListInternal__GetAliasPath = 0x00036F10;
-constexpr uintptr_t CExoAliasListInternal__ResolveFileName = 0x00036FB0;
-
-constexpr uintptr_t CExoArrayListTemplatedCCombatInformationNodePtr__Add = 0x000EE230;
-
-constexpr uintptr_t CExoArrayListTemplatedCExoString__CExoArrayListTemplatedCExoStringDtor = 0x0002F750;
-constexpr uintptr_t CExoArrayListTemplatedCExoString__Add = 0x000349B0;
-constexpr uintptr_t CExoArrayListTemplatedCExoString__AddUnique = 0x0002F9C0;
-constexpr uintptr_t CExoArrayListTemplatedCExoString__Allocate = 0x0002F880;
-constexpr uintptr_t CExoArrayListTemplatedCExoString__Insert = 0x00034A10;
-constexpr uintptr_t CExoArrayListTemplatedCExoString__Remove = 0x000D8890;
-constexpr uintptr_t CExoArrayListTemplatedCExoString__SetSize = 0x0008C4B0;
-
-constexpr uintptr_t CExoArrayListTemplatedCExoStringPtr__CExoArrayListTemplatedCExoStringPtrCtor = 0x0025DCF0;
-constexpr uintptr_t CExoArrayListTemplatedCExoStringPtr__Add = 0x002675C0;
-
-constexpr uintptr_t CExoArrayListTemplatedCFeatUseListEntryPtr__Add = 0x0018C620;
-
-constexpr uintptr_t CExoArrayListTemplatedCFileInfo__CExoArrayListTemplatedCFileInfoDtor = 0x0020DE10;
-constexpr uintptr_t CExoArrayListTemplatedCFileInfo__Add = 0x00034C70;
-constexpr uintptr_t CExoArrayListTemplatedCFileInfo__Allocate = 0x00034AE0;
-
-constexpr uintptr_t CExoArrayListTemplatedCGameEffectPtr__Add = 0x00135EC0;
-constexpr uintptr_t CExoArrayListTemplatedCGameEffectPtr__OperatorAssignment = 0x0018C510;
-
-constexpr uintptr_t CExoArrayListTemplatedCGameObjectPtr__Add = 0x000F9190;
-
-constexpr uintptr_t CExoArrayListTemplatedchar__Add = 0x000B0830;
-
-constexpr uintptr_t CExoArrayListTemplatedCNetLayerPlayerCDKeyInfo__CExoArrayListTemplatedCNetLayerPlayerCDKeyInfoDtor = 0x0005D650;
-constexpr uintptr_t CExoArrayListTemplatedCNetLayerPlayerCDKeyInfo__Allocate = 0x0005D800;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWCCMessageDataPtr__Add = 0x00163770;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWItemProperty__CExoArrayListTemplatedCNWItemPropertyDtor = 0x001D01C0;
-constexpr uintptr_t CExoArrayListTemplatedCNWItemProperty__Add = 0x001D04D0;
-constexpr uintptr_t CExoArrayListTemplatedCNWItemProperty__Allocate = 0x001D0230;
-constexpr uintptr_t CExoArrayListTemplatedCNWItemProperty__OperatorAssignment = 0x001D0590;
-constexpr uintptr_t CExoArrayListTemplatedCNWItemProperty__SetSize = 0x001D0430;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWLevelStatsPtr__Add = 0x0018C440;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWSExpressionListPtr__Add = 0x00267420;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWSExpressionNodePtr__Add = 0x002674F0;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWSFactionPtr__Add = 0x001FF2E0;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWSInvitationDetails__Add = 0x00153B90;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWSItemPtr__Add = 0x000B37F0;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWSPersonalReputation__Add = 0x0008B650;
-constexpr uintptr_t CExoArrayListTemplatedCNWSPersonalReputation__Allocate = 0x0008B550;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWSPlayerJournalQuestUpdates__CExoArrayListTemplatedCNWSPlayerJournalQuestUpdatesDtor = 0x00087760;
-constexpr uintptr_t CExoArrayListTemplatedCNWSPlayerJournalQuestUpdates__Add = 0x001D8820;
-constexpr uintptr_t CExoArrayListTemplatedCNWSPlayerJournalQuestUpdates__Allocate = 0x001D86B0;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWSScriptVar__CExoArrayListTemplatedCNWSScriptVarDtor = 0x002148D0;
-constexpr uintptr_t CExoArrayListTemplatedCNWSScriptVar__Allocate = 0x00214930;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWSSpellScriptDataPtr__Add = 0x00163840;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWSStats_SpellLikeAbility__Allocate = 0x000B0B20;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWTileSurfaceMeshAABBNodePtr__Add = 0x00079890;
-
-constexpr uintptr_t CExoArrayListTemplatedCNWVisibilityNodePtr__Add = 0x000B0480;
-
-constexpr uintptr_t CExoArrayListTemplatedCResRef__Add = 0x000D8A40;
-constexpr uintptr_t CExoArrayListTemplatedCResRef__Allocate = 0x000D8930;
-
-constexpr uintptr_t CExoArrayListTemplatedCSpell_AddPtr__Add = 0x000B0550;
-
-constexpr uintptr_t CExoArrayListTemplatedCWorldJournalEntry__CExoArrayListTemplatedCWorldJournalEntryDtor = 0x001E8120;
-constexpr uintptr_t CExoArrayListTemplatedCWorldJournalEntry__Add = 0x001E8530;
-constexpr uintptr_t CExoArrayListTemplatedCWorldJournalEntry__Allocate = 0x001E8360;
-
-constexpr uintptr_t CExoArrayListTemplatedfloat__CExoArrayListTemplatedfloatDtor = 0x001AC3D0;
-constexpr uintptr_t CExoArrayListTemplatedfloat__Add = 0x001AC400;
-constexpr uintptr_t CExoArrayListTemplatedfloat__Allocate = 0x0008C3C0;
-constexpr uintptr_t CExoArrayListTemplatedfloat__Insert = 0x0025DBF0;
-constexpr uintptr_t CExoArrayListTemplatedfloat__SetSize = 0x0008C440;
-
-constexpr uintptr_t CExoArrayListTemplatedint__Add = 0x0002F830;
-constexpr uintptr_t CExoArrayListTemplatedint__Allocate = 0x0002F7B0;
-constexpr uintptr_t CExoArrayListTemplatedint__SetSize = 0x0008C350;
-
-constexpr uintptr_t CExoArrayListTemplatedNWPlayerCharacterList_stPtr__AddUnique = 0x000B06F0;
-
-constexpr uintptr_t CExoArrayListTemplatedNWPlayerCharacterListClass_st__Add = 0x000B0620;
-
-constexpr uintptr_t CExoArrayListTemplatedSJournalEntry__Add = 0x001D8B00;
-constexpr uintptr_t CExoArrayListTemplatedSJournalEntry__Allocate = 0x001D8890;
-
-constexpr uintptr_t CExoArrayListTemplatedSMstBuddyEntryPtr__Add = 0x00278710;
-
-constexpr uintptr_t CExoArrayListTemplatedSMstDigiDistInfoPtr__Remove = 0x002787E0;
-
-constexpr uintptr_t CExoArrayListTemplatedunsignedchar__Add = 0x000B08F0;
-
-constexpr uintptr_t CExoArrayListTemplatedunsignedlong__CExoArrayListTemplatedunsignedlongDtor = 0x002B4380;
-constexpr uintptr_t CExoArrayListTemplatedunsignedlong__Add = 0x000B03C0;
-constexpr uintptr_t CExoArrayListTemplatedunsignedlong__AddUnique = 0x000BBD60;
-constexpr uintptr_t CExoArrayListTemplatedunsignedlong__Allocate = 0x00089AF0;
-constexpr uintptr_t CExoArrayListTemplatedunsignedlong__OperatorAssignment = 0x00153B40;
-constexpr uintptr_t CExoArrayListTemplatedunsignedlong__Remove = 0x00087700;
-constexpr uintptr_t CExoArrayListTemplatedunsignedlong__SetSize = 0x00089B70;
-
-constexpr uintptr_t CExoArrayListTemplatedunsignedlonglong__Add = 0x001A6EA0;
-constexpr uintptr_t CExoArrayListTemplatedunsignedlonglong__AddUnique = 0x000B09B0;
-
-constexpr uintptr_t CExoArrayListTemplatedunsignedshort__Add = 0x000877D0;
-constexpr uintptr_t CExoArrayListTemplatedunsignedshort__Allocate = 0x00108B10;
-constexpr uintptr_t CExoArrayListTemplatedunsignedshort__Insert = 0x00108B90;
-constexpr uintptr_t CExoArrayListTemplatedunsignedshort__SetSize = 0x00108BF0;
-
-constexpr uintptr_t CExoBase__CExoBaseCtor = 0x0002FB50;
-constexpr uintptr_t CExoBase__CExoBaseDtor = 0x0002FCC0;
-constexpr uintptr_t CExoBase__CheckForCD = 0x00030080;
-constexpr uintptr_t CExoBase__GetAugmentedDirectoryList = 0x0002FF00;
-constexpr uintptr_t CExoBase__GetDirectoryAndWorkshopList = 0x000300B0;
-constexpr uintptr_t CExoBase__GetDirectoryList = 0x0002FDF0;
-constexpr uintptr_t CExoBase__GetResourceExtension = 0x0002FF90;
-constexpr uintptr_t CExoBase__GetResTypeFromExtension = 0x0002FFC0;
-constexpr uintptr_t CExoBase__LoadAliases = 0x0002FFF0;
-constexpr uintptr_t CExoBase__ShutDown = 0x00030020;
-constexpr uintptr_t CExoBase__SpawnExternalApplication = 0x00030050;
-
-constexpr uintptr_t CExoBaseInternal__CExoBaseInternalCtor = 0x00030F60;
-constexpr uintptr_t CExoBaseInternal__CExoBaseInternalDtor = 0x000302E0;
-constexpr uintptr_t CExoBaseInternal__AddAlias = 0x00030F70;
-constexpr uintptr_t CExoBaseInternal__CheckForCD = 0x00033D40;
-constexpr uintptr_t CExoBaseInternal__CreateResourceExtensionTable = 0x00030360;
-constexpr uintptr_t CExoBaseInternal__GetAugmentedDirectoryList = 0x00034230;
-constexpr uintptr_t CExoBaseInternal__GetDirectoryList = 0x00033D50;
-constexpr uintptr_t CExoBaseInternal__GetResourceExtension = 0x000310B0;
-constexpr uintptr_t CExoBaseInternal__GetResTypeFromExtension = 0x00031100;
-constexpr uintptr_t CExoBaseInternal__LoadAliases = 0x00031180;
-constexpr uintptr_t CExoBaseInternal__ShutDown = 0x00033C60;
-constexpr uintptr_t CExoBaseInternal__SpawnExternalApplication = 0x00033C70;
-
-constexpr uintptr_t CExoCriticalSection__CExoCriticalSectionCtor = 0x00034D10;
-constexpr uintptr_t CExoCriticalSection__CExoCriticalSectionDtor = 0x00034D60;
-constexpr uintptr_t CExoCriticalSection__EnterCriticalSection = 0x00034DA0;
-constexpr uintptr_t CExoCriticalSection__LeaveCriticalSection = 0x00034DD0;
-
-constexpr uintptr_t CExoCriticalSectionInternal__CExoCriticalSectionInternalCtor = 0x00034E00;
-constexpr uintptr_t CExoCriticalSectionInternal__CExoCriticalSectionInternalDtor = 0x00034E60;
-constexpr uintptr_t CExoCriticalSectionInternal__EnterCriticalSection = 0x00034E90;
-constexpr uintptr_t CExoCriticalSectionInternal__LeaveCriticalSection = 0x00034EC0;
-
-constexpr uintptr_t CExoDebug__CExoDebugCtor = 0x00034F40;
-constexpr uintptr_t CExoDebug__CExoDebugDtor = 0x00034FB0;
-constexpr uintptr_t CExoDebug__Assert = 0x00035020;
-constexpr uintptr_t CExoDebug__CloseLogFiles = 0x00035070;
-constexpr uintptr_t CExoDebug__FlushErrorFile = 0x000350A0;
-constexpr uintptr_t CExoDebug__FlushLogFile = 0x000350B0;
-constexpr uintptr_t CExoDebug__GetCurrentAllocatedMemory = 0x000350E0;
-constexpr uintptr_t CExoDebug__GetCurrentMemoryAllocations = 0x00035110;
-constexpr uintptr_t CExoDebug__GetCurrentTimestamp = 0x000351F0;
-constexpr uintptr_t CExoDebug__GetMaxAllocatedMemory = 0x000350F0;
-constexpr uintptr_t CExoDebug__GetTotalMemoryAllocations = 0x00035100;
-constexpr uintptr_t CExoDebug__OpenLogFiles = 0x00035120;
-constexpr uintptr_t CExoDebug__SetRotateLogFile = 0x00035220;
-constexpr uintptr_t CExoDebug__Warning = 0x000351A0;
-constexpr uintptr_t CExoDebug__WriteToErrorFile = 0x000351B0;
-constexpr uintptr_t CExoDebug__WriteToLogFile = 0x000351C0;
-
-constexpr uintptr_t CExoDebugInternal__CExoDebugInternalCtor = 0x000352B0;
-constexpr uintptr_t CExoDebugInternal__CExoDebugInternalDtor = 0x00035320;
-constexpr uintptr_t CExoDebugInternal__Assert = 0x00035370;
-constexpr uintptr_t CExoDebugInternal__CloseLogFiles = 0x00035440;
-constexpr uintptr_t CExoDebugInternal__CreateDirectory = 0x00035A00;
-constexpr uintptr_t CExoDebugInternal__FlushErrorFile = 0x00035460;
-constexpr uintptr_t CExoDebugInternal__FlushLogFile = 0x00035490;
-constexpr uintptr_t CExoDebugInternal__GetCurrentTimestamp = 0x00035990;
-constexpr uintptr_t CExoDebugInternal__OpenLogFiles = 0x00035AF0;
-constexpr uintptr_t CExoDebugInternal__Warning = 0x000354C0;
-constexpr uintptr_t CExoDebugInternal__WriteToErrorFile = 0x00035590;
-constexpr uintptr_t CExoDebugInternal__WriteToLogFile = 0x00035790;
-
-constexpr uintptr_t CExoEncapsulatedFile__CExoEncapsulatedFileCtor = 0x00048A60;
-constexpr uintptr_t CExoEncapsulatedFile__CExoEncapsulatedFileDtor__0 = 0x00046BB0;
-constexpr uintptr_t CExoEncapsulatedFile__AddAsyncRefCount = 0x000458F0;
-constexpr uintptr_t CExoEncapsulatedFile__AddRefCount = 0x000458A0;
-constexpr uintptr_t CExoEncapsulatedFile__CloseAsyncFile = 0x00047350;
-constexpr uintptr_t CExoEncapsulatedFile__CloseFile = 0x00046B90;
-constexpr uintptr_t CExoEncapsulatedFile__DeleteAsyncRefCount = 0x00047310;
-constexpr uintptr_t CExoEncapsulatedFile__DeleteRefCount = 0x000473B0;
-constexpr uintptr_t CExoEncapsulatedFile__GetResourceSize = 0x00045940;
-constexpr uintptr_t CExoEncapsulatedFile__Initialize = 0x00045960;
-constexpr uintptr_t CExoEncapsulatedFile__LoadHeader = 0x00046450;
-constexpr uintptr_t CExoEncapsulatedFile__OpenAsyncFile = 0x00045E90;
-constexpr uintptr_t CExoEncapsulatedFile__OpenFile__0 = 0x00045B50;
-constexpr uintptr_t CExoEncapsulatedFile__OpenFile__1 = 0x000459C0;
-constexpr uintptr_t CExoEncapsulatedFile__ReadResource = 0x00046EC0;
-constexpr uintptr_t CExoEncapsulatedFile__ReadResourceAsync = 0x00046D80;
-constexpr uintptr_t CExoEncapsulatedFile__UnloadHeader = 0x00046D10;
-
-constexpr uintptr_t CExoEncrypt__EncryptString = 0x002B43B0;
-constexpr uintptr_t CExoEncrypt__GenerateChallenge = 0x002B44D0;
-
-constexpr uintptr_t CExoFile__CExoFileCtor = 0x00036270;
-constexpr uintptr_t CExoFile__CExoFileDtor = 0x000362D0;
-constexpr uintptr_t CExoFile__Eof = 0x00036310;
-constexpr uintptr_t CExoFile__FileOpened = 0x00036340;
-constexpr uintptr_t CExoFile__Flush = 0x00036360;
-constexpr uintptr_t CExoFile__GetOffset = 0x000363A0;
-constexpr uintptr_t CExoFile__GetSize = 0x000363D0;
-constexpr uintptr_t CExoFile__Read__0 = 0x00036450;
-constexpr uintptr_t CExoFile__Read__1 = 0x00036400;
-constexpr uintptr_t CExoFile__ReadAsync = 0x00036480;
-constexpr uintptr_t CExoFile__ReadAsyncBytesRead = 0x000364E0;
-constexpr uintptr_t CExoFile__ReadAsyncComplete = 0x000364B0;
-constexpr uintptr_t CExoFile__ReadStringLineFromBuffer = 0x00036690;
-constexpr uintptr_t CExoFile__Seek = 0x000365D0;
-constexpr uintptr_t CExoFile__SeekBeginning = 0x00036610;
-constexpr uintptr_t CExoFile__SeekEnd = 0x00036650;
-constexpr uintptr_t CExoFile__Write__0 = 0x00036580;
-constexpr uintptr_t CExoFile__Write__1 = 0x00036550;
-constexpr uintptr_t CExoFile__Write__2 = 0x00036510;
-
-constexpr uintptr_t CExoFileInternal__CExoFileInternalCtor = 0x000371D0;
-constexpr uintptr_t CExoFileInternal__CExoFileInternalDtor = 0x00037310;
-constexpr uintptr_t CExoFileInternal__GetOffset = 0x00037370;
-constexpr uintptr_t CExoFileInternal__GetSize = 0x000373A0;
-constexpr uintptr_t CExoFileInternal__Read = 0x000373C0;
-constexpr uintptr_t CExoFileInternal__ReadAsync = 0x00037430;
-constexpr uintptr_t CExoFileInternal__ReadAsyncBytesRead = 0x000374E0;
-constexpr uintptr_t CExoFileInternal__ReadAsyncComplete = 0x000374C0;
-constexpr uintptr_t CExoFileInternal__Write = 0x00037500;
-
-constexpr uintptr_t CExoFileThread__CExoFileThreadCtor = 0x000367F0;
-constexpr uintptr_t CExoFileThread__CExoFileThreadDtor = 0x00036780;
-constexpr uintptr_t CExoFileThread__AsyncRead = 0x000368C0;
-constexpr uintptr_t CExoFileThread__Read = 0x000369E0;
-
-constexpr uintptr_t CExoIni__CExoIniCtor = 0x00037550;
-constexpr uintptr_t CExoIni__CExoIniDtor = 0x000375F0;
-constexpr uintptr_t CExoIni__ReadIniEntry = 0x00037630;
-constexpr uintptr_t CExoIni__WriteIniEntry = 0x00037660;
-
-constexpr uintptr_t CExoIniInternal__CExoIniInternalCtor = 0x00037690;
-constexpr uintptr_t CExoIniInternal__CExoIniInternalDtor = 0x00037B20;
-constexpr uintptr_t CExoIniInternal__ReadIniEntry = 0x00037B80;
-constexpr uintptr_t CExoIniInternal__WriteIniEntry = 0x00037C50;
-
-constexpr uintptr_t CExoKeyTable__CExoKeyTableCtor = 0x00047520;
-constexpr uintptr_t CExoKeyTable__CExoKeyTableDtor = 0x00047610;
-constexpr uintptr_t CExoKeyTable__AddDirectoryContents = 0x000492D0;
-constexpr uintptr_t CExoKeyTable__AddEncapsulatedContents = 0x00048B20;
-constexpr uintptr_t CExoKeyTable__AddKey = 0x000481C0;
-constexpr uintptr_t CExoKeyTable__AddKeyTableContents = 0x000494D0;
-constexpr uintptr_t CExoKeyTable__AddResourceImageContents = 0x00048460;
-constexpr uintptr_t CExoKeyTable__AllocateTable = 0x00047760;
-constexpr uintptr_t CExoKeyTable__BuildNewTable = 0x0004AA70;
-constexpr uintptr_t CExoKeyTable__DeleteTableList = 0x00047C80;
-constexpr uintptr_t CExoKeyTable__DestroyTable = 0x000479F0;
-constexpr uintptr_t CExoKeyTable__FindKey__0 = 0x00048880;
-constexpr uintptr_t CExoKeyTable__FindKey__1 = 0x00048790;
-constexpr uintptr_t CExoKeyTable__GetEntryCount = 0x00047870;
-constexpr uintptr_t CExoKeyTable__GetKeysOfType = 0x00047D40;
-constexpr uintptr_t CExoKeyTable__GetRes = 0x000488C0;
-constexpr uintptr_t CExoKeyTable__GetResID = 0x000488F0;
-constexpr uintptr_t CExoKeyTable__GetTableEntry = 0x00048010;
-constexpr uintptr_t CExoKeyTable__GetTableIndex = 0x000480A0;
-constexpr uintptr_t CExoKeyTable__Hash = 0x00048130;
-constexpr uintptr_t CExoKeyTable__LocateBifFile = 0x00047900;
-constexpr uintptr_t CExoKeyTable__RebuildTable = 0x0004ABA0;
-
-constexpr uintptr_t CExoLinkedListInternal__CExoLinkedListInternalDtor = 0x00037CC0;
-constexpr uintptr_t CExoLinkedListInternal__AddAfter = 0x00037DE0;
-constexpr uintptr_t CExoLinkedListInternal__AddBefore = 0x00037EA0;
-constexpr uintptr_t CExoLinkedListInternal__AddHead = 0x00037D00;
-constexpr uintptr_t CExoLinkedListInternal__AddTail = 0x00037D70;
-constexpr uintptr_t CExoLinkedListInternal__GetAtPos = 0x00037F50;
-constexpr uintptr_t CExoLinkedListInternal__GetNext = 0x00037FA0;
-constexpr uintptr_t CExoLinkedListInternal__GetPrev = 0x00038010;
-constexpr uintptr_t CExoLinkedListInternal__Remove = 0x00038080;
-constexpr uintptr_t CExoLinkedListInternal__RemoveHead = 0x00038130;
-constexpr uintptr_t CExoLinkedListInternal__RemoveTail = 0x000381C0;
-
-constexpr uintptr_t CExoLinkedListTemplatedC2DA__CExoLinkedListTemplatedC2DADtor = 0x000DDA50;
-
-constexpr uintptr_t CExoLinkedListTemplatedCERFKey__CExoLinkedListTemplatedCERFKeyDtor = 0x002BCCB0;
-
-constexpr uintptr_t CExoLinkedListTemplatedCERFRes__CExoLinkedListTemplatedCERFResDtor = 0x002BCCF0;
-
-constexpr uintptr_t CExoLinkedListTemplatedCERFString__CExoLinkedListTemplatedCERFStringDtor = 0x002BCC70;
-
-constexpr uintptr_t CExoLinkedListTemplatedCExoKeyTable__CExoLinkedListTemplatedCExoKeyTableDtor = 0x00040E50;
-
-constexpr uintptr_t CExoLinkedListTemplatedCExoString__CExoLinkedListTemplatedCExoStringDtor = 0x0005D7C0;
-
-constexpr uintptr_t CExoLinkedListTemplatedCKeyTableInfo__CExoLinkedListTemplatedCKeyTableInfoDtor = 0x0004B270;
-
-constexpr uintptr_t CExoLinkedListTemplatedCLinuxFileSection__CExoLinkedListTemplatedCLinuxFileSectionDtor = 0x002F59B0;
-
-constexpr uintptr_t CExoLinkedListTemplatedCNWSClient__CExoLinkedListTemplatedCNWSClientDtor = 0x000D8810;
-
-constexpr uintptr_t CExoLinkedListTemplatedCNWSDialogPlayer__CExoLinkedListTemplatedCNWSDialogPlayerDtor = 0x001F6400;
-
-constexpr uintptr_t CExoLinkedListTemplatedCNWSObjectActionNode__CExoLinkedListTemplatedCNWSObjectActionNodeDtor = 0x001F64F0;
-
-constexpr uintptr_t CExoLinkedListTemplatedCNWSPlayerLUOInventoryItem__CExoLinkedListTemplatedCNWSPlayerLUOInventoryItemDtor = 0x00089AB0;
-
-constexpr uintptr_t CExoLinkedListTemplatedCNWSPlayerTURD__CExoLinkedListTemplatedCNWSPlayerTURDDtor = 0x001E80E0;
-
-constexpr uintptr_t CExoLinkedListTemplatedCRes__CExoLinkedListTemplatedCResDtor = 0x00040E90;
-
-constexpr uintptr_t CExoLinkedListTemplatedCResRef__CExoLinkedListTemplatedCResRefDtor = 0x001E8060;
-
-constexpr uintptr_t CExoLinkedListTemplatedCServerAIEventNode__CExoLinkedListTemplatedCServerAIEventNodeDtor = 0x000BBE90;
-
-constexpr uintptr_t CExoLinkedListTemplatedExoLocString_st__CExoLinkedListTemplatedExoLocString_stDtor = 0x00039060;
-
-constexpr uintptr_t CExoLinkedListTemplatedNWAreaExpansion_st__CExoLinkedListTemplatedNWAreaExpansion_stDtor = 0x000F8F90;
-
-constexpr uintptr_t CExoLinkedListTemplatedNWModuleCutScene_st__CExoLinkedListTemplatedNWModuleCutScene_stDtor = 0x001E8020;
-
-constexpr uintptr_t CExoLinkedListTemplatedNWModuleExpansion_st__CExoLinkedListTemplatedNWModuleExpansion_stDtor = 0x001E7FE0;
-
-constexpr uintptr_t CExoLinkedListTemplatedNWPlayerListItem_st__CExoLinkedListTemplatedNWPlayerListItem_stDtor = 0x001E80A0;
-
-constexpr uintptr_t CExoLinkedListTemplatedunsignedlong__CExoLinkedListTemplatedunsignedlongDtor = 0x000D8850;
-
-constexpr uintptr_t CExoLinkedListTemplatedunsignedshort__CExoLinkedListTemplatedunsignedshortDtor = 0x0005D610;
-
-constexpr uintptr_t CExoLocString__CExoLocStringCtor__0 = 0x00038250;
-constexpr uintptr_t CExoLocString__CExoLocStringCtor__1 = 0x000382A0;
-constexpr uintptr_t CExoLocString__CExoLocStringDtor = 0x00038310;
-constexpr uintptr_t CExoLocString__AddString = 0x00038420;
-constexpr uintptr_t CExoLocString__ClearLocString = 0x000384B0;
-constexpr uintptr_t CExoLocString__GetString__0 = 0x000384E0;
-constexpr uintptr_t CExoLocString__GetString__1 = 0x00038530;
-constexpr uintptr_t CExoLocString__GetStringCount = 0x000387E0;
-constexpr uintptr_t CExoLocString__GetStringInternal = 0x00038840;
-constexpr uintptr_t CExoLocString__GetStringLength = 0x00038810;
-constexpr uintptr_t CExoLocString__GetStringLoc = 0x000387A0;
-constexpr uintptr_t CExoLocString__OperatorNotEqualTo = 0x00038390;
-constexpr uintptr_t CExoLocString__OperatorAssignment = 0x000383E0;
-constexpr uintptr_t CExoLocString__OperatorEqualTo = 0x00038350;
-constexpr uintptr_t CExoLocString__RemoveString__0 = 0x00038870;
-constexpr uintptr_t CExoLocString__RemoveString__1 = 0x000388C0;
-
-constexpr uintptr_t CExoLocStringInternal__CExoLocStringInternalCtor = 0x00038900;
-constexpr uintptr_t CExoLocStringInternal__CExoLocStringInternalDtor = 0x00039010;
-constexpr uintptr_t CExoLocStringInternal__AddString = 0x00038950;
-constexpr uintptr_t CExoLocStringInternal__Assign = 0x00038AB0;
-constexpr uintptr_t CExoLocStringInternal__ClearLocString = 0x00038A40;
-constexpr uintptr_t CExoLocStringInternal__Compare = 0x00038B90;
-constexpr uintptr_t CExoLocStringInternal__GetString__0 = 0x00038E00;
-constexpr uintptr_t CExoLocStringInternal__GetString__1 = 0x00038D30;
-constexpr uintptr_t CExoLocStringInternal__GetStringCount = 0x00038EB0;
-constexpr uintptr_t CExoLocStringInternal__GetStringLength = 0x00038EC0;
-constexpr uintptr_t CExoLocStringInternal__RemoveString = 0x00038F60;
-
-constexpr uintptr_t CExoMemman__CExoMemmanDtor = 0x002B60E0;
-constexpr uintptr_t CExoMemman__AddFreeRecord = 0x002B5E40;
-constexpr uintptr_t CExoMemman__Alloc = 0x002B58C0;
-constexpr uintptr_t CExoMemman__CheckHeaps = 0x002B56C0;
-constexpr uintptr_t CExoMemman__Clear = 0x002B53D0;
-constexpr uintptr_t CExoMemman__Destroy = 0x002B5C20;
-constexpr uintptr_t CExoMemman__DoHeapWalk = 0x002B55F0;
-constexpr uintptr_t CExoMemman__FillRecordPtrArray = 0x002B5EB0;
-constexpr uintptr_t CExoMemman__FinalReport = 0x002B5C90;
-constexpr uintptr_t CExoMemman__Free = 0x002B5AA0;
-constexpr uintptr_t CExoMemman__GetFreeRecord = 0x002B5E20;
-constexpr uintptr_t CExoMemman__GetHeaps = 0x002B55E0;
-constexpr uintptr_t CExoMemman__OutputTypeTrackingReport = 0x002B5CB0;
-constexpr uintptr_t CExoMemman__PopType = 0x002B5720;
-constexpr uintptr_t CExoMemman__PushType = 0x002B56D0;
-constexpr uintptr_t CExoMemman__ReportEntry = 0x002B5C40;
-constexpr uintptr_t CExoMemman__ReportRemoval = 0x002B5C60;
-constexpr uintptr_t CExoMemman__SnapShotReportPrint = 0x002B5F00;
-constexpr uintptr_t CExoMemman__SnapShotReportWithSort = 0x002B6040;
-constexpr uintptr_t CExoMemman__StartReport = 0x002B5760;
-
-constexpr uintptr_t CExoPackedFile__CExoPackedFileCtor = 0x00048920;
-constexpr uintptr_t CExoPackedFile__CExoPackedFileDtor__0 = 0x00048960;
-constexpr uintptr_t CExoPackedFile__GetAsyncFile = 0x00045750;
-constexpr uintptr_t CExoPackedFile__GetFile = 0x00045740;
-
-constexpr uintptr_t CExoRand__CExoRandCtor = 0x000390A0;
-constexpr uintptr_t CExoRand__CExoRandDtor = 0x000390F0;
-constexpr uintptr_t CExoRand__GetString = 0x00039160;
-constexpr uintptr_t CExoRand__Rand = 0x00039130;
-constexpr uintptr_t CExoRand__SignalEvent__0 = 0x000391B0;
-constexpr uintptr_t CExoRand__SignalEvent__1 = 0x000391E0;
-
-constexpr uintptr_t CExoRandInternal__CExoRandInternalCtor = 0x000396D0;
-constexpr uintptr_t CExoRandInternal__CExoRandInternalDtor = 0x00039210;
-constexpr uintptr_t CExoRandInternal__Add = 0x00039440;
-constexpr uintptr_t CExoRandInternal__GenSeed = 0x000393E0;
-constexpr uintptr_t CExoRandInternal__GetString = 0x00039550;
-constexpr uintptr_t CExoRandInternal__Rand = 0x00039240;
-constexpr uintptr_t CExoRandInternal__ReSeed = 0x000392E0;
-constexpr uintptr_t CExoRandInternal__SignalEvent__0 = 0x000399A0;
-constexpr uintptr_t CExoRandInternal__SignalEvent__1 = 0x00039AE0;
-
-constexpr uintptr_t CExoResFile__CExoResFileCtor = 0x000489D0;
-constexpr uintptr_t CExoResFile__CExoResFileDtor__0 = 0x00046AA0;
-constexpr uintptr_t CExoResFile__AddAsyncRefCount = 0x000457B0;
-constexpr uintptr_t CExoResFile__AddRefCount = 0x00045760;
-constexpr uintptr_t CExoResFile__CloseAsyncFile = 0x00047430;
-constexpr uintptr_t CExoResFile__CloseFile = 0x00046A80;
-constexpr uintptr_t CExoResFile__DeleteAsyncRefCount = 0x000473F0;
-constexpr uintptr_t CExoResFile__DeleteRefCount = 0x00047490;
-constexpr uintptr_t CExoResFile__GetResourceSize = 0x00045800;
-constexpr uintptr_t CExoResFile__Initialize = 0x00045820;
-constexpr uintptr_t CExoResFile__LoadHeader = 0x00046240;
-constexpr uintptr_t CExoResFile__OpenAsyncFile = 0x00047040;
-constexpr uintptr_t CExoResFile__OpenFile__0 = 0x00047170;
-constexpr uintptr_t CExoResFile__OpenFile__1 = 0x00045880;
-constexpr uintptr_t CExoResFile__ReadResource = 0x00046F80;
-constexpr uintptr_t CExoResFile__ReadResourceAsync = 0x00046E20;
-constexpr uintptr_t CExoResFile__UnloadHeader = 0x000472A0;
-
-constexpr uintptr_t CExoResMan__CExoResManCtor = 0x000400A0;
-constexpr uintptr_t CExoResMan__CExoResManDtor = 0x000402F0;
-constexpr uintptr_t CExoResMan__AddEncapsulatedResourceFile = 0x0003C6E0;
-constexpr uintptr_t CExoResMan__AddFixedKeyTableFile = 0x0003C720;
-constexpr uintptr_t CExoResMan__AddKeyTable = 0x0003C3A0;
-constexpr uintptr_t CExoResMan__AddResourceDirectory = 0x0003C740;
-constexpr uintptr_t CExoResMan__AddResourceImageFile = 0x0003C700;
-constexpr uintptr_t CExoResMan__CancelRequest = 0x0003DD90;
-constexpr uintptr_t CExoResMan__CleanDirectory = 0x00040D10;
-constexpr uintptr_t CExoResMan__CreateDirectory = 0x0003F900;
-constexpr uintptr_t CExoResMan__Demand = 0x0003FC60;
-constexpr uintptr_t CExoResMan__Dump = 0x0003C8E0;
-constexpr uintptr_t CExoResMan__DumpAll = 0x0003C990;
-constexpr uintptr_t CExoResMan__Exists = 0x0003D1B0;
-constexpr uintptr_t CExoResMan__Free = 0x0003C7D0;
-constexpr uintptr_t CExoResMan__FreeChunk = 0x0003CC50;
-constexpr uintptr_t CExoResMan__FreeResourceData = 0x0003C760;
-constexpr uintptr_t CExoResMan__GetEncapsulatedFileDescription = 0x0003CE30;
-constexpr uintptr_t CExoResMan__GetFreeDiskSpace = 0x0003F7B0;
-constexpr uintptr_t CExoResMan__GetIsStaticType = 0x0003E110;
-constexpr uintptr_t CExoResMan__GetKeyEntry = 0x0003CF30;
-constexpr uintptr_t CExoResMan__GetNewResRef = 0x0003D220;
-constexpr uintptr_t CExoResMan__GetResID = 0x0003DA00;
-constexpr uintptr_t CExoResMan__GetResObject = 0x0003D900;
-constexpr uintptr_t CExoResMan__GetResOfType__0 = 0x0003DD30;
-constexpr uintptr_t CExoResMan__GetResOfType__1 = 0x0003D550;
-constexpr uintptr_t CExoResMan__GetResRefFromFile = 0x0003DA70;
-constexpr uintptr_t CExoResMan__GetResTypeFromFile = 0x0003DB60;
-constexpr uintptr_t CExoResMan__GetTable = 0x0003DC70;
-constexpr uintptr_t CExoResMan__GetTableCount = 0x0003DF50;
-constexpr uintptr_t CExoResMan__GetTotalPhysicalMemory = 0x0003E150;
-constexpr uintptr_t CExoResMan__Malloc = 0x0003E160;
-constexpr uintptr_t CExoResMan__NukeDirectory = 0x00040D90;
-constexpr uintptr_t CExoResMan__ReadRaw = 0x0003F6F0;
-constexpr uintptr_t CExoResMan__Release = 0x0003E760;
-constexpr uintptr_t CExoResMan__ReleaseResObject = 0x0003E6E0;
-constexpr uintptr_t CExoResMan__RemoveEncapsulatedResourceFile = 0x0003E9A0;
-constexpr uintptr_t CExoResMan__RemoveFile = 0x0003F9F0;
-constexpr uintptr_t CExoResMan__RemoveFixedKeyTableFile = 0x0003E9E0;
-constexpr uintptr_t CExoResMan__RemoveFromToBeFreedList = 0x0003DFA0;
-constexpr uintptr_t CExoResMan__RemoveKeyTable = 0x0003E880;
-constexpr uintptr_t CExoResMan__RemoveResourceDirectory = 0x0003EA00;
-constexpr uintptr_t CExoResMan__RemoveResourceImageFile = 0x0003E9C0;
-constexpr uintptr_t CExoResMan__Request = 0x0003EA20;
-constexpr uintptr_t CExoResMan__ResumeServicing = 0x0003EA90;
-constexpr uintptr_t CExoResMan__ServiceCurrentAsyncRes = 0x0003FB40;
-constexpr uintptr_t CExoResMan__ServiceFromDirectory = 0x0003EAA0;
-constexpr uintptr_t CExoResMan__ServiceFromDirectoryRaw = 0x0003F0A0;
-constexpr uintptr_t CExoResMan__ServiceFromEncapsulated = 0x0003EDF0;
-constexpr uintptr_t CExoResMan__ServiceFromEncapsulatedRaw = 0x0003F360;
-constexpr uintptr_t CExoResMan__ServiceFromImage = 0x0003EE50;
-constexpr uintptr_t CExoResMan__ServiceFromImageRaw = 0x0003F5E0;
-constexpr uintptr_t CExoResMan__ServiceFromResFile = 0x0003EE20;
-constexpr uintptr_t CExoResMan__ServiceFromResFileRaw = 0x0003F490;
-constexpr uintptr_t CExoResMan__SetResObject = 0x0003D970;
-constexpr uintptr_t CExoResMan__SetTotalResourceMemory = 0x0003EE80;
-constexpr uintptr_t CExoResMan__SuspendServicing = 0x0003EEC0;
-constexpr uintptr_t CExoResMan__Update = 0x0003FF50;
-constexpr uintptr_t CExoResMan__UpdateEncapsulatedResourceFile = 0x0003F040;
-constexpr uintptr_t CExoResMan__UpdateFixedKeyTableFile = 0x0003F060;
-constexpr uintptr_t CExoResMan__UpdateKeyTable = 0x0003EED0;
-constexpr uintptr_t CExoResMan__UpdateResourceDirectory = 0x0003F080;
-constexpr uintptr_t CExoResMan__WipeDirectory = 0x00040460;
-
-constexpr uintptr_t CExoResourceImageFile__CExoResourceImageFileCtor = 0x000491E0;
-constexpr uintptr_t CExoResourceImageFile__CExoResourceImageFileDtor__0 = 0x00046C70;
-constexpr uintptr_t CExoResourceImageFile__AddRefCount = 0x000459E0;
-constexpr uintptr_t CExoResourceImageFile__CloseAsyncFile = 0x00045B30;
-constexpr uintptr_t CExoResourceImageFile__CloseFile = 0x000474D0;
-constexpr uintptr_t CExoResourceImageFile__DeleteAsyncRefCount = 0x00045B20;
-constexpr uintptr_t CExoResourceImageFile__DeleteRefCount = 0x00045A30;
-constexpr uintptr_t CExoResourceImageFile__GetHeader = 0x000492C0;
-constexpr uintptr_t CExoResourceImageFile__GetKeyList = 0x00049250;
-constexpr uintptr_t CExoResourceImageFile__GetKeyListEntry = 0x00049260;
-constexpr uintptr_t CExoResourceImageFile__GetResource = 0x00045A80;
-constexpr uintptr_t CExoResourceImageFile__GetResourceListEntry = 0x000492A0;
-constexpr uintptr_t CExoResourceImageFile__GetResourceSize = 0x00045A60;
-constexpr uintptr_t CExoResourceImageFile__Initialize = 0x00045AA0;
-constexpr uintptr_t CExoResourceImageFile__LoadHeader = 0x00045B40;
-constexpr uintptr_t CExoResourceImageFile__OpenFile__0 = 0x00045AE0;
-constexpr uintptr_t CExoResourceImageFile__OpenFile__1 = 0x0004AF20;
-constexpr uintptr_t CExoResourceImageFile__ReadResource = 0x000461D0;
-constexpr uintptr_t CExoResourceImageFile__ReadResourceAsync = 0x00045B00;
-
-constexpr uintptr_t CExoString__CExoStringCtor__0 = 0x00039B40;
-constexpr uintptr_t CExoString__CExoStringCtor__1 = 0x00039D20;
-constexpr uintptr_t CExoString__CExoStringCtor__2 = 0x00039C40;
-constexpr uintptr_t CExoString__CExoStringCtor__3 = 0x00039B60;
-constexpr uintptr_t CExoString__CExoStringCtor__4 = 0x00039BD0;
-constexpr uintptr_t CExoString__CExoStringCtor__5 = 0x00039CB0;
-constexpr uintptr_t CExoString__CExoStringDtor = 0x00039DA0;
-constexpr uintptr_t CExoString__AsFLOAT = 0x0003A670;
-constexpr uintptr_t CExoString__AsINT = 0x0003A630;
-constexpr uintptr_t CExoString__AsTAG = 0x0003B5C0;
-constexpr uintptr_t CExoString__CompareNoCase = 0x0003B100;
-constexpr uintptr_t CExoString__ComparePrefixNoCase = 0x0003B2A0;
-constexpr uintptr_t CExoString__CStr = 0x0003A6B0;
-constexpr uintptr_t CExoString__Find__0 = 0x0003A6D0;
-constexpr uintptr_t CExoString__Find__1 = 0x0003A7D0;
-constexpr uintptr_t CExoString__FindNot = 0x0003A8B0;
-constexpr uintptr_t CExoString__GetLength = 0x0003AAA0;
-constexpr uintptr_t CExoString__Insert = 0x0003AAE0;
-constexpr uintptr_t CExoString__IsEmpty = 0x0003ABE0;
-constexpr uintptr_t CExoString__Left = 0x0003AC10;
-constexpr uintptr_t CExoString__LowerCase = 0x0003ACC0;
-constexpr uintptr_t CExoString__OperatorNotEqualTo__0 = 0x0003A090;
-constexpr uintptr_t CExoString__OperatorNotEqualTo__1 = 0x0003A0F0;
-constexpr uintptr_t CExoString__OperatorMultiplication = 0x0003A490;
-constexpr uintptr_t CExoString__OperatorAddition = 0x0003A4F0;
-constexpr uintptr_t CExoString__OperatorLesserThan__0 = 0x0003A160;
-constexpr uintptr_t CExoString__OperatorLesserThan__1 = 0x0003A1C0;
-constexpr uintptr_t CExoString__OperatorLesserThanOrEqualTo__0 = 0x0003A2E0;
-constexpr uintptr_t CExoString__OperatorLesserThanOrEqualTo__1 = 0x0003A350;
-constexpr uintptr_t CExoString__OperatorAssignment__0 = 0x00039DE0;
-constexpr uintptr_t CExoString__OperatorAssignment__1 = 0x00039ED0;
-constexpr uintptr_t CExoString__OperatorEqualTo__0 = 0x00039FC0;
-constexpr uintptr_t CExoString__OperatorEqualTo__1 = 0x0003A020;
-constexpr uintptr_t CExoString__OperatorGreaterThan__0 = 0x0003A220;
-constexpr uintptr_t CExoString__OperatorGreaterThan__1 = 0x0003A280;
-constexpr uintptr_t CExoString__OperatorGreaterThanOrEqualTo__0 = 0x0003A3C0;
-constexpr uintptr_t CExoString__OperatorGreaterThanOrEqualTo__1 = 0x0003A430;
-constexpr uintptr_t CExoString__Right = 0x0003AE20;
-constexpr uintptr_t CExoString__StripNonAlphaNumeric = 0x0003B2F0;
-constexpr uintptr_t CExoString__SubString = 0x0003AEE0;
-constexpr uintptr_t CExoString__UpperCase = 0x0003AFA0;
-
-constexpr uintptr_t CExoStringList__CExoStringListCtor__0 = 0x002B4810;
-constexpr uintptr_t CExoStringList__CExoStringListCtor__1 = 0x002B4890;
-constexpr uintptr_t CExoStringList__CExoStringListCtor__2 = 0x002B4840;
-constexpr uintptr_t CExoStringList__CExoStringListDtor = 0x002B4980;
-constexpr uintptr_t CExoStringList__Add = 0x002B49F0;
-constexpr uintptr_t CExoStringList__AddSorted = 0x002B4610;
-constexpr uintptr_t CExoStringList__Clear = 0x002B4AD0;
-constexpr uintptr_t CExoStringList__Delete = 0x002B4B40;
-constexpr uintptr_t CExoStringList__GetCount = 0x002B4C70;
-constexpr uintptr_t CExoStringList__GetDuplicate = 0x002B4C80;
-constexpr uintptr_t CExoStringList__GetSize = 0x002B4C90;
-constexpr uintptr_t CExoStringList__GetSorted = 0x002B4CA0;
-constexpr uintptr_t CExoStringList__GetString = 0x002B4CB0;
-constexpr uintptr_t CExoStringList__Insert = 0x002B4CC0;
-constexpr uintptr_t CExoStringList__Introduce = 0x002B4530;
-constexpr uintptr_t CExoStringList__Merge = 0x002B4CE0;
-constexpr uintptr_t CExoStringList__OperatorMultiplication = 0x002B5160;
-constexpr uintptr_t CExoStringList__OperatorAssignment = 0x002B5170;
-constexpr uintptr_t CExoStringList__Remove = 0x002B50E0;
-
-constexpr uintptr_t CExoTimers__CExoTimersCtor = 0x0003B6D0;
-constexpr uintptr_t CExoTimers__CExoTimersDtor = 0x0003B720;
-constexpr uintptr_t CExoTimers__GetHighResolutionTimer = 0x0003B790;
-constexpr uintptr_t CExoTimers__GetLowResolutionTimer = 0x0003B760;
-
-constexpr uintptr_t CExoTimersInternal__CExoTimersInternalCtor = 0x0003B7C0;
-constexpr uintptr_t CExoTimersInternal__CExoTimersInternalDtor = 0x0003B820;
-constexpr uintptr_t CExoTimersInternal__GetHighResolutionTimer = 0x0003B850;
-constexpr uintptr_t CExoTimersInternal__GetLowResolutionTimer = 0x0003B830;
-
-constexpr uintptr_t CExtendedServerInfo__CExtendedServerInfoDtor = 0x0005D510;
-constexpr uintptr_t CExtendedServerInfo__OperatorAssignment = 0x0004E3F0;
-
-constexpr uintptr_t CFactionManager__CFactionManagerCtor = 0x000DDA90;
-constexpr uintptr_t CFactionManager__CFactionManagerDtor = 0x000DDB00;
-constexpr uintptr_t CFactionManager__CreateDefaultFactions = 0x000DE7E0;
-constexpr uintptr_t CFactionManager__DeleteFaction = 0x000DE1D0;
-constexpr uintptr_t CFactionManager__GetDefaultPCReputation = 0x000DE590;
-constexpr uintptr_t CFactionManager__GetFaction = 0x000DDBB0;
-constexpr uintptr_t CFactionManager__GetFactionIdByName = 0x000DE230;
-constexpr uintptr_t CFactionManager__GetIsNPCFaction = 0x000DDCB0;
-constexpr uintptr_t CFactionManager__GetNPCFactionReputation = 0x000DDC40;
-constexpr uintptr_t CFactionManager__LoadFactions = 0x000DDCD0;
-constexpr uintptr_t CFactionManager__LoadReputations = 0x000DE620;
-constexpr uintptr_t CFactionManager__SaveFactions = 0x000DDF80;
-constexpr uintptr_t CFactionManager__SaveReputations = 0x000DE0C0;
-constexpr uintptr_t CFactionManager__SetNPCFactionReputation = 0x000DDBE0;
-
-constexpr uintptr_t CFriendInfo__Sanitize = 0x0004CA40;
-
-constexpr uintptr_t CFriendPresenceInfo__CFriendPresenceInfoDtor = 0x00063DA0;
-constexpr uintptr_t CFriendPresenceInfo__Decode = 0x0004CD80;
-constexpr uintptr_t CFriendPresenceInfo__Encode = 0x0004CAE0;
-
-constexpr uintptr_t CGameEffect__CGameEffectCtor__0 = 0x00191A50;
-constexpr uintptr_t CGameEffect__CGameEffectCtor__1 = 0x00191C80;
-constexpr uintptr_t CGameEffect__CGameEffectDtor = 0x001918C0;
-constexpr uintptr_t CGameEffect__CopyEffect = 0x00192110;
-constexpr uintptr_t CGameEffect__GetCustomTag = 0x001920B0;
-constexpr uintptr_t CGameEffect__GetExpiryTime = 0x00192090;
-constexpr uintptr_t CGameEffect__GetFloat = 0x00191F90;
-constexpr uintptr_t CGameEffect__GetInteger = 0x00191F50;
-constexpr uintptr_t CGameEffect__GetObjectID = 0x00191FC0;
-constexpr uintptr_t CGameEffect__GetScriptEffectType = 0x00193240;
-constexpr uintptr_t CGameEffect__GetString = 0x00191FF0;
-constexpr uintptr_t CGameEffect__LoadGameEffect = 0x00192D00;
-constexpr uintptr_t CGameEffect__OperatorNotEqualTo = 0x00192630;
-constexpr uintptr_t CGameEffect__OperatorAssignment = 0x00192300;
-constexpr uintptr_t CGameEffect__OperatorEqualTo = 0x001924D0;
-constexpr uintptr_t CGameEffect__SaveGameEffect = 0x00192650;
-constexpr uintptr_t CGameEffect__SetCreator = 0x00192980;
-constexpr uintptr_t CGameEffect__SetCustomTag = 0x001920E0;
-constexpr uintptr_t CGameEffect__SetExpiryTime = 0x00192070;
-constexpr uintptr_t CGameEffect__SetFloat = 0x00191FA0;
-constexpr uintptr_t CGameEffect__SetInteger = 0x00191F70;
-constexpr uintptr_t CGameEffect__SetLinked = 0x00192CE0;
-constexpr uintptr_t CGameEffect__SetNumIntegers = 0x001919D0;
-constexpr uintptr_t CGameEffect__SetNumIntegersInitializeToNegativeOne = 0x00191ED0;
-constexpr uintptr_t CGameEffect__SetObjectID = 0x00191FD0;
-constexpr uintptr_t CGameEffect__SetString = 0x00192030;
-constexpr uintptr_t CGameEffect__UpdateLinked = 0x00192AE0;
-
-constexpr uintptr_t CGameObject__CGameObjectCtor = 0x000DE910;
-constexpr uintptr_t CGameObject__CGameObjectDtor__0 = 0x000DF1F0;
-constexpr uintptr_t CGameObject__AsNWCArea = 0x0008B280;
-constexpr uintptr_t CGameObject__AsNWCAreaOfEffectObject = 0x0008B340;
-constexpr uintptr_t CGameObject__AsNWCCreature = 0x0008B2A0;
-constexpr uintptr_t CGameObject__AsNWCDoor = 0x0008B240;
-constexpr uintptr_t CGameObject__AsNWCItem = 0x0008B2C0;
-constexpr uintptr_t CGameObject__AsNWCModule = 0x0008B260;
-constexpr uintptr_t CGameObject__AsNWCObject = 0x0008B230;
-constexpr uintptr_t CGameObject__AsNWCPlaceable = 0x0008B320;
-constexpr uintptr_t CGameObject__AsNWCProjectile = 0x0008B300;
-constexpr uintptr_t CGameObject__AsNWCSoundObject = 0x0008B3A0;
-constexpr uintptr_t CGameObject__AsNWCStore = 0x0008B370;
-constexpr uintptr_t CGameObject__AsNWCTrigger = 0x0008B2E0;
-constexpr uintptr_t CGameObject__AsNWSArea = 0x0008B290;
-constexpr uintptr_t CGameObject__AsNWSAreaOfEffectObject = 0x0008B330;
-constexpr uintptr_t CGameObject__AsNWSCreature = 0x0008B2B0;
-constexpr uintptr_t CGameObject__AsNWSDoor = 0x0008B250;
-constexpr uintptr_t CGameObject__AsNWSEncounter = 0x0008B360;
-constexpr uintptr_t CGameObject__AsNWSItem = 0x0008B2D0;
-constexpr uintptr_t CGameObject__AsNWSModule = 0x0008B270;
-constexpr uintptr_t CGameObject__AsNWSObject = 0x000DF200;
-constexpr uintptr_t CGameObject__AsNWSPlaceable = 0x0008B310;
-constexpr uintptr_t CGameObject__AsNWSPlayerTURD = 0x000B37B0;
-constexpr uintptr_t CGameObject__AsNWSSoundObject = 0x0008B390;
-constexpr uintptr_t CGameObject__AsNWSStore = 0x0008B380;
-constexpr uintptr_t CGameObject__AsNWSTrigger = 0x0008B2F0;
-constexpr uintptr_t CGameObject__AsNWSWaypoint = 0x0008B350;
-constexpr uintptr_t CGameObject__ResetUpdateTimes = 0x0008B220;
-constexpr uintptr_t CGameObject__SetId = 0x0008B210;
-
-constexpr uintptr_t CGameObjectArray__CGameObjectArrayCtor = 0x000DE940;
-constexpr uintptr_t CGameObjectArray__CGameObjectArrayDtor = 0x000DEB00;
-constexpr uintptr_t CGameObjectArray__AddCharacterObjectAtPos = 0x000DED80;
-constexpr uintptr_t CGameObjectArray__AddExternalObject = 0x000DEE80;
-constexpr uintptr_t CGameObjectArray__AddInternalObject = 0x000DEFC0;
-constexpr uintptr_t CGameObjectArray__AddObjectAtPos = 0x000DEBF0;
-constexpr uintptr_t CGameObjectArray__Clean = 0x000DF180;
-constexpr uintptr_t CGameObjectArray__Delete__0 = 0x000DF140;
-constexpr uintptr_t CGameObjectArray__Delete__1 = 0x000DF0A0;
-constexpr uintptr_t CGameObjectArray__GetGameObject = 0x000DF190;
-
-constexpr uintptr_t CItemRepository__CItemRepositoryCtor = 0x001C8A50;
-constexpr uintptr_t CItemRepository__CItemRepositoryDtor = 0x001CC530;
-constexpr uintptr_t CItemRepository__AddItem = 0x001CD6E0;
-constexpr uintptr_t CItemRepository__AddPanel = 0x001C96F0;
-constexpr uintptr_t CItemRepository__CalculateContentsWeight = 0x001CB2E0;
-constexpr uintptr_t CItemRepository__CalculatePage = 0x001C8AF0;
-constexpr uintptr_t CItemRepository__CheckFit = 0x001C8B10;
-constexpr uintptr_t CItemRepository__CheckItemOverlaps = 0x001C8DA0;
-constexpr uintptr_t CItemRepository__FindItemWithBaseItemId = 0x001C8EF0;
-constexpr uintptr_t CItemRepository__FindItemWithTag = 0x001C9010;
-constexpr uintptr_t CItemRepository__FindPosition = 0x001CD210;
-constexpr uintptr_t CItemRepository__GetItemInRepository__0 = 0x001C9160;
-constexpr uintptr_t CItemRepository__GetItemInRepository__1 = 0x001C9610;
-constexpr uintptr_t CItemRepository__ItemListGetItem = 0x001C9580;
-constexpr uintptr_t CItemRepository__ItemListGetItemObjectID = 0x001C95D0;
-constexpr uintptr_t CItemRepository__MoveItem = 0x001C9450;
-constexpr uintptr_t CItemRepository__RemoveItem = 0x001C92D0;
-
-constexpr uintptr_t CLastUpdateObject__CLastUpdateObjectCtor = 0x00088130;
-constexpr uintptr_t CLastUpdateObject__CLastUpdateObjectDtor = 0x000884F0;
-constexpr uintptr_t CLastUpdateObject__InitializeQuickbar = 0x000886C0;
-
-constexpr uintptr_t CLoopingVisualEffect__GetIsBeam = 0x001E9090;
-
-constexpr uintptr_t CMemRecord__Clear = 0x002B5390;
-
-constexpr uintptr_t CNetLayer__CNetLayerCtor = 0x0004B580;
-constexpr uintptr_t CNetLayer__CNetLayerDtor = 0x0004B5D0;
-constexpr uintptr_t CNetLayer__CleanUpEnumerateSpecific = 0x0004BCB0;
-constexpr uintptr_t CNetLayer__ClearSessionInfoChanged = 0x0004C0D0;
-constexpr uintptr_t CNetLayer__CloseStandardConnection = 0x0004C960;
-constexpr uintptr_t CNetLayer__DisconnectFromSession = 0x0004BD80;
-constexpr uintptr_t CNetLayer__DisconnectPlayer = 0x0004BE10;
-constexpr uintptr_t CNetLayer__DropConnectionToServer = 0x0004BDB0;
-constexpr uintptr_t CNetLayer__EndConnectToSession = 0x0004BD20;
-constexpr uintptr_t CNetLayer__EndEnumerateSessions = 0x0004BC80;
-constexpr uintptr_t CNetLayer__EndEnumerateSessionsSection = 0x0004BC40;
-constexpr uintptr_t CNetLayer__EndInternetAddressTranslation = 0x0004C390;
-constexpr uintptr_t CNetLayer__EndPing = 0x0004BFF0;
-constexpr uintptr_t CNetLayer__EndProtocol = 0x0004B7A0;
-constexpr uintptr_t CNetLayer__EndServerMode = 0x0004BAF0;
-constexpr uintptr_t CNetLayer__GetAnySessionsEnumerated = 0x0004C460;
-constexpr uintptr_t CNetLayer__GetAnyWindowBehind = 0x0004C830;
-constexpr uintptr_t CNetLayer__GetClientConnected = 0x0004C3F0;
-constexpr uintptr_t CNetLayer__GetConnectionError = 0x0004BD50;
-constexpr uintptr_t CNetLayer__GetConnectionsMustBeValidated = 0x0004CA00;
-constexpr uintptr_t CNetLayer__GetDisconnectReason = 0x0004BE70;
-constexpr uintptr_t CNetLayer__GetDisconnectStrref = 0x0004BE40;
-constexpr uintptr_t CNetLayer__GetEnumerateSpecificOverRelay = 0x0004CFC0;
-constexpr uintptr_t CNetLayer__GetExoApp = 0x0004B650;
-constexpr uintptr_t CNetLayer__GetExoNet = 0x0004C5E0;
-constexpr uintptr_t CNetLayer__GetExpansionPackReqd = 0x0004C7D0;
-constexpr uintptr_t CNetLayer__GetGameMasterPassword = 0x0004B970;
-constexpr uintptr_t CNetLayer__GetGameMasterPermision = 0x0004C580;
-constexpr uintptr_t CNetLayer__GetInternetAddressTranslationStatus = 0x0004C360;
-constexpr uintptr_t CNetLayer__GetIPBySessionId = 0x0004C9A0;
-constexpr uintptr_t CNetLayer__GetLocalAdapterString = 0x0004BF10;
-constexpr uintptr_t CNetLayer__GetLocalPrivileges = 0x0004C4A0;
-constexpr uintptr_t CNetLayer__GetMessageFromStandardConnection = 0x0004C8E0;
-constexpr uintptr_t CNetLayer__GetNumberLocalAdapters = 0x0004BEE0;
-constexpr uintptr_t CNetLayer__GetPasswordRequired = 0x0004B880;
-constexpr uintptr_t CNetLayer__GetPlayerAddress = 0x0004C500;
-constexpr uintptr_t CNetLayer__GetPlayerAddressData = 0x0004C020;
-constexpr uintptr_t CNetLayer__GetPlayerAddressRelayed = 0x0004C550;
-constexpr uintptr_t CNetLayer__GetPlayerInfo = 0x0004C4D0;
-constexpr uintptr_t CNetLayer__GetPlayerPassword = 0x0004B8B0;
-constexpr uintptr_t CNetLayer__GetPortBySessionId = 0x0004C250;
-constexpr uintptr_t CNetLayer__GetRouterPortMapDescription = 0x0004D030;
-constexpr uintptr_t CNetLayer__GetSendUDPSocket = 0x0004C6B0;
-constexpr uintptr_t CNetLayer__GetServerAdminPassword = 0x0004BA30;
-constexpr uintptr_t CNetLayer__GetServerConnected = 0x0004C430;
-constexpr uintptr_t CNetLayer__GetServerNetworkAddress = 0x0004C600;
-constexpr uintptr_t CNetLayer__GetSessionInfo = 0x0004C280;
-constexpr uintptr_t CNetLayer__GetSessionInfoChanged = 0x0004C0B0;
-constexpr uintptr_t CNetLayer__GetSessionMaxPlayers = 0x0004C100;
-constexpr uintptr_t CNetLayer__GetSessionName = 0x0004C160;
-constexpr uintptr_t CNetLayer__GetSessionSectionStart = 0x0004BBD0;
-constexpr uintptr_t CNetLayer__GetUDPRecievePort = 0x0004C220;
-constexpr uintptr_t CNetLayer__Initialize = 0x0004B620;
-constexpr uintptr_t CNetLayer__IsConnectedToLocalhost = 0x0004BDE0;
-constexpr uintptr_t CNetLayer__MessageArrived = 0x0004B6E0;
-constexpr uintptr_t CNetLayer__OpenStandardConnection = 0x0004C850;
-constexpr uintptr_t CNetLayer__PlayerIdToConnectionId = 0x0004C7F0;
-constexpr uintptr_t CNetLayer__ProcessReceivedFrames = 0x0004B680;
-constexpr uintptr_t CNetLayer__RequestExtendedServerInfo = 0x0004BF60;
-constexpr uintptr_t CNetLayer__RequestServerDetails = 0x0004BF90;
-constexpr uintptr_t CNetLayer__SendMessageToAddress = 0x0004B740;
-constexpr uintptr_t CNetLayer__SendMessageToPlayer = 0x0004B710;
-constexpr uintptr_t CNetLayer__SendMessageToStandardConnection = 0x0004C920;
-constexpr uintptr_t CNetLayer__SetConnectionsDisallowed = 0x0004C9E0;
-constexpr uintptr_t CNetLayer__SetConnectionsMustBeValidated = 0x0004CA20;
-constexpr uintptr_t CNetLayer__SetDisconnectReason = 0x0004BEB0;
-constexpr uintptr_t CNetLayer__SetDisconnectStrref = 0x0004BE50;
-constexpr uintptr_t CNetLayer__SetEnumerateSpecificOverRelay = 0x0004CFD0;
-constexpr uintptr_t CNetLayer__SetExpansionPackReqd = 0x0004C7B0;
-constexpr uintptr_t CNetLayer__SetGameMasterPassword = 0x0004B9C0;
-constexpr uintptr_t CNetLayer__SetMasterServerInternetAddress = 0x0004C670;
-constexpr uintptr_t CNetLayer__SetMstServerPassword = 0x0004C730;
-constexpr uintptr_t CNetLayer__SetPlayerPassword = 0x0004B900;
-constexpr uintptr_t CNetLayer__SetServerAdminPassword = 0x0004BA80;
-constexpr uintptr_t CNetLayer__SetServerLanguage = 0x0004B7D0;
-constexpr uintptr_t CNetLayer__SetSessionInfoChanged = 0x0004C080;
-constexpr uintptr_t CNetLayer__SetSessionMaxPlayers = 0x0004C130;
-constexpr uintptr_t CNetLayer__SetSessionName = 0x0004C1B0;
-constexpr uintptr_t CNetLayer__SetUpPlayBackConnection = 0x0004C2B0;
-constexpr uintptr_t CNetLayer__ShutDown = 0x0004B6B0;
-constexpr uintptr_t CNetLayer__ShutDownClientInterfaceWithReason = 0x0004C6F0;
-constexpr uintptr_t CNetLayer__StartConnectToSession = 0x0004BCE0;
-constexpr uintptr_t CNetLayer__StartEnumerateSessions__0 = 0x0004BB20;
-constexpr uintptr_t CNetLayer__StartEnumerateSessions__1 = 0x0004BB60;
-constexpr uintptr_t CNetLayer__StartEnumerateSessionsSection = 0x0004BC00;
-constexpr uintptr_t CNetLayer__StartInternetAddressTranslation = 0x0004C2E0;
-constexpr uintptr_t CNetLayer__StartPing = 0x0004BFC0;
-constexpr uintptr_t CNetLayer__StartProtocol = 0x0004B770;
-constexpr uintptr_t CNetLayer__StartServerMode = 0x0004B800;
-constexpr uintptr_t CNetLayer__StoreMessage = 0x0004C050;
-constexpr uintptr_t CNetLayer__TranslateAddressFromString = 0x0004C5A0;
-constexpr uintptr_t CNetLayer__UpdateStatusLoop = 0x0004C3C0;
-
-constexpr uintptr_t CNetLayerInternal__CNetLayerInternalCtor = 0x0005AD00;
-constexpr uintptr_t CNetLayerInternal__CNetLayerInternalDtor = 0x0005A9F0;
-constexpr uintptr_t CNetLayerInternal__BroadcastMessageToAddress = 0x000527C0;
-constexpr uintptr_t CNetLayerInternal__CheckMasterServerTimeouts = 0x000595B0;
-constexpr uintptr_t CNetLayerInternal__CleanUpEnumerateSpecific = 0x000501A0;
-constexpr uintptr_t CNetLayerInternal__ClearSessionInfoChanged = 0x00050400;
-constexpr uintptr_t CNetLayerInternal__CloseStandardConnection = 0x000593E0;
-constexpr uintptr_t CNetLayerInternal__ConnectionIdToSlidingWindow = 0x0004F550;
-constexpr uintptr_t CNetLayerInternal__ConnectToSessionLoop = 0x000516F0;
-constexpr uintptr_t CNetLayerInternal__CRCBlock = 0x00052620;
-constexpr uintptr_t CNetLayerInternal__CRCBuildTable = 0x000525D0;
-constexpr uintptr_t CNetLayerInternal__CRCEncodeFrame = 0x00052670;
-constexpr uintptr_t CNetLayerInternal__CRCVerifyFrame = 0x000526B0;
-constexpr uintptr_t CNetLayerInternal__DisconnectFromSession = 0x00055460;
-constexpr uintptr_t CNetLayerInternal__DisconnectPlayer = 0x000555A0;
-constexpr uintptr_t CNetLayerInternal__DropConnectionToServer = 0x00051790;
-constexpr uintptr_t CNetLayerInternal__EndConnectToSession = 0x00051640;
-constexpr uintptr_t CNetLayerInternal__EndEnumerateSessions = 0x00050090;
-constexpr uintptr_t CNetLayerInternal__EndEnumerateSessionsSection = 0x00050060;
-constexpr uintptr_t CNetLayerInternal__EndInternetAddressTranslation = 0x00052210;
-constexpr uintptr_t CNetLayerInternal__EndPing = 0x000502F0;
-constexpr uintptr_t CNetLayerInternal__EndProtocol = 0x0004F7F0;
-constexpr uintptr_t CNetLayerInternal__EndServerMode = 0x0004FC10;
-constexpr uintptr_t CNetLayerInternal__EnumerateSessionsList = 0x00053E30;
-constexpr uintptr_t CNetLayerInternal__EnumerateSessionsLoop = 0x000537C0;
-constexpr uintptr_t CNetLayerInternal__FindPlayerName = 0x00055840;
-constexpr uintptr_t CNetLayerInternal__GetConnectionError = 0x000516B0;
-constexpr uintptr_t CNetLayerInternal__GetExoApp = 0x0004EC10;
-constexpr uintptr_t CNetLayerInternal__GetGameMasterPassword = 0x0004FAD0;
-constexpr uintptr_t CNetLayerInternal__GetInternetAddressTranslationStatus = 0x00052100;
-constexpr uintptr_t CNetLayerInternal__GetIPBySessionId = 0x00059410;
-constexpr uintptr_t CNetLayerInternal__GetLocalAdapterString = 0x0004F870;
-constexpr uintptr_t CNetLayerInternal__GetLocalPrivileges = 0x0004FC40;
-constexpr uintptr_t CNetLayerInternal__GetMessageFromStandardConnection = 0x00059380;
-constexpr uintptr_t CNetLayerInternal__GetNumberLocalAdapters = 0x0004F840;
-constexpr uintptr_t CNetLayerInternal__GetPasswordRequired = 0x0004F9F0;
-constexpr uintptr_t CNetLayerInternal__GetPlayerAddress = 0x00051EF0;
-constexpr uintptr_t CNetLayerInternal__GetPlayerAddressData = 0x000504F0;
-constexpr uintptr_t CNetLayerInternal__GetPlayerAddressRelayed = 0x00051F90;
-constexpr uintptr_t CNetLayerInternal__GetPlayerPassword = 0x0004FA30;
-constexpr uintptr_t CNetLayerInternal__GetPortBySessionId = 0x00051540;
-constexpr uintptr_t CNetLayerInternal__GetRouterPortMapDescription = 0x0005A690;
-constexpr uintptr_t CNetLayerInternal__GetSendUDPSocket = 0x00052550;
-constexpr uintptr_t CNetLayerInternal__GetServerAdminPassword = 0x0004FB70;
-constexpr uintptr_t CNetLayerInternal__GetServerConnected = 0x00052270;
-constexpr uintptr_t CNetLayerInternal__GetServerNetworkAddress = 0x000522C0;
-constexpr uintptr_t CNetLayerInternal__GetServerPlayerCount = 0x00052420;
-constexpr uintptr_t CNetLayerInternal__GetSessionInfo = 0x000515F0;
-constexpr uintptr_t CNetLayerInternal__GetSessionMaxPlayers = 0x00051480;
-constexpr uintptr_t CNetLayerInternal__GetSessionName = 0x000514B0;
-constexpr uintptr_t CNetLayerInternal__GetSessionSection = 0x0005A640;
-constexpr uintptr_t CNetLayerInternal__GetSessionSectionSize = 0x0005A610;
-constexpr uintptr_t CNetLayerInternal__GetSessionSectionStart = 0x0005A5C0;
-constexpr uintptr_t CNetLayerInternal__GetUDPRecievePort = 0x00051510;
-constexpr uintptr_t CNetLayerInternal__GetWindowSendIdByReceiveId = 0x00052470;
-constexpr uintptr_t CNetLayerInternal__HandleBNCRMessage = 0x0005B270;
-constexpr uintptr_t CNetLayerInternal__HandleBNCSMessage = 0x00055950;
-constexpr uintptr_t CNetLayerInternal__HandleBNDMMessage = 0x00055770;
-constexpr uintptr_t CNetLayerInternal__HandleBNDPMessage = 0x00051B50;
-constexpr uintptr_t CNetLayerInternal__HandleBNDRMessage = 0x00050780;
-constexpr uintptr_t CNetLayerInternal__HandleBNDSMessage = 0x000545E0;
-constexpr uintptr_t CNetLayerInternal__HandleBNERMessage = 0x00056E00;
-constexpr uintptr_t CNetLayerInternal__HandleBNESMessage = 0x00052810;
-constexpr uintptr_t CNetLayerInternal__HandleBNLMMessage = 0x000550F0;
-constexpr uintptr_t CNetLayerInternal__HandleBNLRMessage = 0x000550C0;
-constexpr uintptr_t CNetLayerInternal__HandleBNVRMessage = 0x00051910;
-constexpr uintptr_t CNetLayerInternal__HandleBNVSMessage = 0x0005BD80;
-constexpr uintptr_t CNetLayerInternal__HandleBNXIMessage = 0x00054010;
-constexpr uintptr_t CNetLayerInternal__HandleBNXRMessage = 0x00050E20;
-constexpr uintptr_t CNetLayerInternal__Initialize = 0x0004E8A0;
-constexpr uintptr_t CNetLayerInternal__IsConnectedToLocalhost = 0x00051820;
-constexpr uintptr_t CNetLayerInternal__IsPlayerIpSameAsConnection = 0x000524E0;
-constexpr uintptr_t CNetLayerInternal__MessageArrived = 0x0004ECC0;
-constexpr uintptr_t CNetLayerInternal__NonWindowMessages = 0x0005CF00;
-constexpr uintptr_t CNetLayerInternal__OpenStandardConnection = 0x00059300;
-constexpr uintptr_t CNetLayerInternal__PacketizeSendMessageToPlayer = 0x00058060;
-constexpr uintptr_t CNetLayerInternal__PacketizeSmallMessageToPlayer = 0x00057B80;
-constexpr uintptr_t CNetLayerInternal__PlacePacketInSendQueues = 0x00057AB0;
-constexpr uintptr_t CNetLayerInternal__PlayerIdToConnectionId = 0x0004F610;
-constexpr uintptr_t CNetLayerInternal__PlayerIdToSlidingWindow = 0x0004F5B0;
-constexpr uintptr_t CNetLayerInternal__ProcessReceivedFrames = 0x0005D240;
-constexpr uintptr_t CNetLayerInternal__PurgeConnections = 0x0004F4A0;
-constexpr uintptr_t CNetLayerInternal__RequestExtendedServerInfo = 0x00056DC0;
-constexpr uintptr_t CNetLayerInternal__ResetEnumerateSessionsList = 0x00050250;
-constexpr uintptr_t CNetLayerInternal__SendBNCRMessage = 0x00053190;
-constexpr uintptr_t CNetLayerInternal__SendBNCSMessage = 0x00052C50;
-constexpr uintptr_t CNetLayerInternal__SendBNDMMessage = 0x00055430;
-constexpr uintptr_t CNetLayerInternal__SendBNDPMessage = 0x000554B0;
-constexpr uintptr_t CNetLayerInternal__SendBNDSMessage = 0x000552D0;
-constexpr uintptr_t CNetLayerInternal__SendBNESDirectMessageToAddress = 0x00053A00;
-constexpr uintptr_t CNetLayerInternal__SendBNLMMessage = 0x00054D30;
-constexpr uintptr_t CNetLayerInternal__SendBNVRMessage = 0x00053710;
-constexpr uintptr_t CNetLayerInternal__SendBNVSMessage = 0x000592D0;
-constexpr uintptr_t CNetLayerInternal__SendDirectMessage = 0x000526F0;
-constexpr uintptr_t CNetLayerInternal__SendMessageToAddress = 0x00052770;
-constexpr uintptr_t CNetLayerInternal__SendMessageToPlayer = 0x00058530;
-constexpr uintptr_t CNetLayerInternal__SendMessageToStandardConnection = 0x000593B0;
-constexpr uintptr_t CNetLayerInternal__SetGameMasterPassword = 0x0004FB30;
-constexpr uintptr_t CNetLayerInternal__SetMasterServerInternetAddress = 0x00052520;
-constexpr uintptr_t CNetLayerInternal__SetNetworkAddressData = 0x000506E0;
-constexpr uintptr_t CNetLayerInternal__SetPlayerConnected = 0x00051D00;
-constexpr uintptr_t CNetLayerInternal__SetPlayerPassword = 0x0004FA90;
-constexpr uintptr_t CNetLayerInternal__SetServerAdminPassword = 0x0004FBD0;
-constexpr uintptr_t CNetLayerInternal__SetServerLanguage = 0x0004F820;
-constexpr uintptr_t CNetLayerInternal__SetSessionInfoChanged = 0x0004EC20;
-constexpr uintptr_t CNetLayerInternal__SetSessionMaxPlayers = 0x00051490;
-constexpr uintptr_t CNetLayerInternal__SetSessionName = 0x000514E0;
-constexpr uintptr_t CNetLayerInternal__SetSlidingWindow = 0x0004F650;
-constexpr uintptr_t CNetLayerInternal__SetUpPlayBackConnection = 0x0004F760;
-constexpr uintptr_t CNetLayerInternal__ShutDown = 0x0004ECA0;
-constexpr uintptr_t CNetLayerInternal__ShutDownClientInterfaceWithReason = 0x00052580;
-constexpr uintptr_t CNetLayerInternal__StartConnectToSession = 0x00052ED0;
-constexpr uintptr_t CNetLayerInternal__StartEnumerateSessions = 0x0004FCB0;
-constexpr uintptr_t CNetLayerInternal__StartEnumerateSessionsSection = 0x0004FFD0;
-constexpr uintptr_t CNetLayerInternal__StartInternetAddressTranslation = 0x00052000;
-constexpr uintptr_t CNetLayerInternal__StartPing = 0x00054E80;
-constexpr uintptr_t CNetLayerInternal__StartProtocol = 0x0004F780;
-constexpr uintptr_t CNetLayerInternal__StartServerMode = 0x0004F8C0;
-constexpr uintptr_t CNetLayerInternal__StoreMessage = 0x00051450;
-constexpr uintptr_t CNetLayerInternal__UncompressMessage = 0x0004ED10;
-constexpr uintptr_t CNetLayerInternal__UpdateStatusLoop = 0x0005A260;
-constexpr uintptr_t CNetLayerInternal__ValidatePlayerAgainstLastSuccessfulLogin = 0x000594D0;
-
-constexpr uintptr_t CNetLayerPlayerCDKeyInfo__CNetLayerPlayerCDKeyInfoDtor = 0x0005D5C0;
-
-constexpr uintptr_t CNetLayerPlayerInfo__CNetLayerPlayerInfoCtor = 0x0005A8E0;
-constexpr uintptr_t CNetLayerPlayerInfo__CNetLayerPlayerInfoDtor = 0x0005D6D0;
-constexpr uintptr_t CNetLayerPlayerInfo__AddCDKey = 0x0005B0C0;
-constexpr uintptr_t CNetLayerPlayerInfo__AllKeysAuthed = 0x0004E7E0;
-constexpr uintptr_t CNetLayerPlayerInfo__GetPublicCDKey = 0x001C3CD0;
-constexpr uintptr_t CNetLayerPlayerInfo__Initialize = 0x0004E5D0;
-constexpr uintptr_t CNetLayerPlayerInfo__SetCDKey = 0x0004E840;
-constexpr uintptr_t CNetLayerPlayerInfo__StartMstTimer = 0x0004E720;
-constexpr uintptr_t CNetLayerPlayerInfo__UpdateMstTimer = 0x0004E750;
-
-constexpr uintptr_t CNetLayerSessionInfo__CNetLayerSessionInfoCtor = 0x0004DC00;
-constexpr uintptr_t CNetLayerSessionInfo__CNetLayerSessionInfoDtor = 0x0004DE50;
-constexpr uintptr_t CNetLayerSessionInfo__Clean = 0x0004DF60;
-
-constexpr uintptr_t CNetLayerWindow__CNetLayerWindowCtor = 0x0005A6E0;
-constexpr uintptr_t CNetLayerWindow__CNetLayerWindowDtor = 0x0005A820;
-constexpr uintptr_t CNetLayerWindow__AddToHighOutgoingQueue = 0x000578C0;
-constexpr uintptr_t CNetLayerWindow__AddToLowOutgoingQueue = 0x00057950;
-constexpr uintptr_t CNetLayerWindow__CutOutgoingBufferSize = 0x0004DAD0;
-constexpr uintptr_t CNetLayerWindow__DoubleOutgoingBufferSize = 0x0004DBE0;
-constexpr uintptr_t CNetLayerWindow__FauxNagle = 0x00057AE0;
-constexpr uintptr_t CNetLayerWindow__FrameNumberBetween = 0x0004D350;
-constexpr uintptr_t CNetLayerWindow__FrameReceive = 0x00058840;
-constexpr uintptr_t CNetLayerWindow__FrameSend = 0x000574E0;
-constexpr uintptr_t CNetLayerWindow__FrameTimeout = 0x00058CF0;
-constexpr uintptr_t CNetLayerWindow__Initialize = 0x0004D520;
-constexpr uintptr_t CNetLayerWindow__InitializeCompressionBuffers = 0x0004D1D0;
-constexpr uintptr_t CNetLayerWindow__LoadWindowWithFrames = 0x00057780;
-constexpr uintptr_t CNetLayerWindow__PlaceFrameInOutgoingBuffers = 0x00057710;
-constexpr uintptr_t CNetLayerWindow__SetAckTimer = 0x0004D460;
-constexpr uintptr_t CNetLayerWindow__SetFauxNagleTimer = 0x0004D4D0;
-constexpr uintptr_t CNetLayerWindow__SetInFrameTimer = 0x0004D3A0;
-constexpr uintptr_t CNetLayerWindow__SetOutFrameTimer = 0x0004DA20;
-constexpr uintptr_t CNetLayerWindow__ShutDown = 0x0004D680;
-constexpr uintptr_t CNetLayerWindow__TestAckTimer = 0x0004D4B0;
-constexpr uintptr_t CNetLayerWindow__TestFauxNagleTimer = 0x0004D990;
-constexpr uintptr_t CNetLayerWindow__TestInFrameTimer = 0x0004D420;
-constexpr uintptr_t CNetLayerWindow__TestOutFrameTimer = 0x0004DA90;
-constexpr uintptr_t CNetLayerWindow__UnpacketizeFullMessages = 0x0004F080;
-
-constexpr uintptr_t CNWArea__CNWAreaCtor = 0x0007A960;
-constexpr uintptr_t CNWArea__CNWAreaDtor__0 = 0x0007AA80;
-constexpr uintptr_t CNWArea__AddStaticBoundingBox = 0x0007C960;
-constexpr uintptr_t CNWArea__AddStaticObject = 0x0007B110;
-constexpr uintptr_t CNWArea__GetFog = 0x0007C920;
-constexpr uintptr_t CNWArea__GetIsIDInExcludeList = 0x0007CC10;
-constexpr uintptr_t CNWArea__GetIsNight = 0x0007C950;
-constexpr uintptr_t CNWArea__GrowStaticObjectArray = 0x0007ACA0;
-constexpr uintptr_t CNWArea__GrowStaticObjectTriangles = 0x0007AEC0;
-constexpr uintptr_t CNWArea__GrowStaticObjectVertices = 0x0007AFA0;
-constexpr uintptr_t CNWArea__HandleTransparentDoors = 0x0007CC00;
-constexpr uintptr_t CNWArea__InitializeStaticObjects = 0x0007B300;
-constexpr uintptr_t CNWArea__IntersectLineSegments = 0x0007B380;
-constexpr uintptr_t CNWArea__NoCreaturesOnLine = 0x00078C80;
-constexpr uintptr_t CNWArea__NoNonWalkPolys = 0x0007C790;
-constexpr uintptr_t CNWArea__NoNonWalkPolysDetailed = 0x0007BE80;
-constexpr uintptr_t CNWArea__NoNonWalkPolysInDoors = 0x0007BA50;
-constexpr uintptr_t CNWArea__RemoveStaticBoundingBox = 0x0007CB60;
-constexpr uintptr_t CNWArea__RemoveStaticObject = 0x0007C7E0;
-constexpr uintptr_t CNWArea__ReplaceStaticObject = 0x0007AB80;
-constexpr uintptr_t CNWArea__SetFog = 0x0007A8F0;
-constexpr uintptr_t CNWArea__SetIsNight = 0x0007A920;
-constexpr uintptr_t CNWArea__SetWind = 0x0007A940;
-
-constexpr uintptr_t CNWBaseItem__CNWBaseItemCtor = 0x000E1C20;
-constexpr uintptr_t CNWBaseItem__CNWBaseItemDtor = 0x000E1CC0;
-constexpr uintptr_t CNWBaseItem__GetIconResRef = 0x000E1CF0;
-constexpr uintptr_t CNWBaseItem__GetModelResRef = 0x000E1F50;
-constexpr uintptr_t CNWBaseItem__GetNameText = 0x000E1E90;
-constexpr uintptr_t CNWBaseItem__GetRequiredFeat = 0x000E1E60;
-constexpr uintptr_t CNWBaseItem__SetRequiredFeat = 0x000E1E30;
-constexpr uintptr_t CNWBaseItem__SetRequiredFeatCount = 0x000E1DC0;
-
-constexpr uintptr_t CNWBaseItemArray__CNWBaseItemArrayCtor = 0x000E2020;
-constexpr uintptr_t CNWBaseItemArray__CNWBaseItemArrayDtor = 0x000E2040;
-constexpr uintptr_t CNWBaseItemArray__GetBaseItem = 0x000E20C0;
-constexpr uintptr_t CNWBaseItemArray__Load = 0x000E20F0;
-
-constexpr uintptr_t CNWCCMessageData__CNWCCMessageDataCtor = 0x000E3BB0;
-constexpr uintptr_t CNWCCMessageData__CNWCCMessageDataDtor = 0x000E3C10;
-constexpr uintptr_t CNWCCMessageData__ClearData = 0x000E3FF0;
-constexpr uintptr_t CNWCCMessageData__CopyTo = 0x000E6260;
-constexpr uintptr_t CNWCCMessageData__GetFloat = 0x000E3D10;
-constexpr uintptr_t CNWCCMessageData__GetInteger = 0x000E3CF0;
-constexpr uintptr_t CNWCCMessageData__GetObjectID = 0x000E3D40;
-constexpr uintptr_t CNWCCMessageData__GetString = 0x000E3D60;
-constexpr uintptr_t CNWCCMessageData__LoadData = 0x000E5E70;
-constexpr uintptr_t CNWCCMessageData__SaveData = 0x000E3DC0;
-constexpr uintptr_t CNWCCMessageData__SetFloat = 0x000E5D10;
-constexpr uintptr_t CNWCCMessageData__SetInteger = 0x000E5CD0;
-constexpr uintptr_t CNWCCMessageData__SetObjectID = 0x000E5D50;
-constexpr uintptr_t CNWCCMessageData__SetString = 0x000E5D90;
-
-constexpr uintptr_t CNWClass__CNWClassCtor = 0x000DF240;
-constexpr uintptr_t CNWClass__CNWClassDtor = 0x000DF490;
-constexpr uintptr_t CNWClass__GetAttackBonus = 0x000DF5D0;
-constexpr uintptr_t CNWClass__GetBonusFeats = 0x000DF5F0;
-constexpr uintptr_t CNWClass__GetClassFeat = 0x000E11B0;
-constexpr uintptr_t CNWClass__GetDescriptionText = 0x000E0EB0;
-constexpr uintptr_t CNWClass__GetFortSaveBonus = 0x000DF610;
-constexpr uintptr_t CNWClass__GetIsAlignmentAllowed = 0x000E14D0;
-constexpr uintptr_t CNWClass__GetLevelFeatGranted = 0x000E11E0;
-constexpr uintptr_t CNWClass__GetLevelGranted = 0x000E13C0;
-constexpr uintptr_t CNWClass__GetNameLowerText = 0x000E1030;
-constexpr uintptr_t CNWClass__GetNamePluralText = 0x000E10F0;
-constexpr uintptr_t CNWClass__GetNameText = 0x000E0F70;
-constexpr uintptr_t CNWClass__GetRefSaveBonus = 0x000DF630;
-constexpr uintptr_t CNWClass__GetSpellGain = 0x000DF670;
-constexpr uintptr_t CNWClass__GetSpellsKnownPerLevel = 0x000DF6B0;
-constexpr uintptr_t CNWClass__GetWillSaveBonus = 0x000DF650;
-constexpr uintptr_t CNWClass__IsBonusFeat = 0x000E1240;
-constexpr uintptr_t CNWClass__IsFeatUseable = 0x000E1430;
-constexpr uintptr_t CNWClass__IsGrantedFeat = 0x000E1350;
-constexpr uintptr_t CNWClass__IsNormalFeat = 0x000E12B0;
-constexpr uintptr_t CNWClass__IsSkillClassSkill = 0x000E0DA0;
-constexpr uintptr_t CNWClass__IsSkillUseable = 0x000E0E20;
-constexpr uintptr_t CNWClass__LoadAttackBonusTable = 0x000DF760;
-constexpr uintptr_t CNWClass__LoadBonusFeatsTable = 0x000E04C0;
-constexpr uintptr_t CNWClass__LoadFeatsTable = 0x000DF9F0;
-constexpr uintptr_t CNWClass__LoadSavingThrowTable = 0x000DFF10;
-constexpr uintptr_t CNWClass__LoadSkillsTable = 0x000E01D0;
-constexpr uintptr_t CNWClass__LoadSpellGainTable = 0x000E06E0;
-constexpr uintptr_t CNWClass__LoadSpellKnownTable = 0x000E0A30;
-
-constexpr uintptr_t CNWCreatureStatsUpdate__CNWCreatureStatsUpdateCtor = 0x000B87B0;
-constexpr uintptr_t CNWCreatureStatsUpdate__CNWCreatureStatsUpdateDtor = 0x000B8A40;
-constexpr uintptr_t CNWCreatureStatsUpdate__ClearEffectIcons = 0x000B89A0;
-constexpr uintptr_t CNWCreatureStatsUpdate__SetCombatInformation = 0x000B8B40;
-
-constexpr uintptr_t CNWDomain__CNWDomainCtor = 0x0025DE20;
-constexpr uintptr_t CNWDomain__CNWDomainDtor = 0x0025DE90;
-constexpr uintptr_t CNWDomain__GetDescriptionText = 0x0025DEA0;
-constexpr uintptr_t CNWDomain__GetNameText = 0x0025DF60;
-
-constexpr uintptr_t CNWDoorSurfaceMesh__CNWDoorSurfaceMeshCtor = 0x0025E190;
-constexpr uintptr_t CNWDoorSurfaceMesh__CNWDoorSurfaceMeshDtor__0 = 0x0025E0E0;
-constexpr uintptr_t CNWDoorSurfaceMesh__GetMeshBoundingBox = 0x0025F3D0;
-constexpr uintptr_t CNWDoorSurfaceMesh__IntersectLineSegments = 0x0025E2B0;
-constexpr uintptr_t CNWDoorSurfaceMesh__LoadWalkMesh = 0x0025F5E0;
-constexpr uintptr_t CNWDoorSurfaceMesh__LoadWalkMeshString = 0x0025E280;
-constexpr uintptr_t CNWDoorSurfaceMesh__NoNonWalkPolysOnSurfaceMesh = 0x0025EB80;
-
-constexpr uintptr_t CNWFeat__CNWFeatCtor = 0x00260300;
-constexpr uintptr_t CNWFeat__CNWFeatDtor = 0x00260400;
-constexpr uintptr_t CNWFeat__GetDescriptionText = 0x00260410;
-constexpr uintptr_t CNWFeat__GetNameText = 0x002604D0;
-
-constexpr uintptr_t CNWItem__CNWItemCtor = 0x000E3A10;
-constexpr uintptr_t CNWItem__CNWItemDtor__0 = 0x000E1B70;
-constexpr uintptr_t CNWItem__GetLayeredTextureColorPerPart = 0x000E3B00;
-constexpr uintptr_t CNWItem__SetLayeredTextureColorPerPart = 0x000E3A70;
-
-constexpr uintptr_t CNWLevelStats__CNWLevelStatsCtor = 0x000E1640;
-constexpr uintptr_t CNWLevelStats__CNWLevelStatsDtor = 0x000E17E0;
-constexpr uintptr_t CNWLevelStats__AddFeat = 0x000E1A10;
-constexpr uintptr_t CNWLevelStats__ClearFeats = 0x000E1940;
-constexpr uintptr_t CNWLevelStats__GetSkillRankChange = 0x000E1990;
-constexpr uintptr_t CNWLevelStats__SetSkillRankChange = 0x000E19D0;
-
-constexpr uintptr_t CNWMessage__CNWMessageCtor = 0x000E4020;
-constexpr uintptr_t CNWMessage__CNWMessageDtor__0 = 0x000E3B30;
-constexpr uintptr_t CNWMessage__ClearReadMessage = 0x000E40E0;
-constexpr uintptr_t CNWMessage__CreateWriteMessage = 0x000E5270;
-constexpr uintptr_t CNWMessage__ExtendWriteBuffer = 0x000E4ED0;
-constexpr uintptr_t CNWMessage__ExtendWriteFragmentsBuffer = 0x000E5040;
-constexpr uintptr_t CNWMessage__GetWriteMessage = 0x000E5C00;
-constexpr uintptr_t CNWMessage__MessageMoreDataToRead = 0x000E4E90;
-constexpr uintptr_t CNWMessage__MessageReadOverflow = 0x000E4E20;
-constexpr uintptr_t CNWMessage__MessageReadUnderflow = 0x000E4E50;
-constexpr uintptr_t CNWMessage__PeekAtWriteMessageSize = 0x000E5BE0;
-constexpr uintptr_t CNWMessage__ReadBit = 0x000E4100;
-constexpr uintptr_t CNWMessage__ReadBits = 0x000E4160;
-constexpr uintptr_t CNWMessage__ReadBOOL = 0x000E4580;
-constexpr uintptr_t CNWMessage__ReadBYTE = 0x000E4370;
-constexpr uintptr_t CNWMessage__ReadCExoString = 0x000E4D20;
-constexpr uintptr_t CNWMessage__ReadCHAR = 0x000E46C0;
-constexpr uintptr_t CNWMessage__ReadCResRef = 0x000E4C70;
-constexpr uintptr_t CNWMessage__ReadDOUBLE__0 = 0x000E4B50;
-constexpr uintptr_t CNWMessage__ReadDOUBLE__1 = 0x000E4BE0;
-constexpr uintptr_t CNWMessage__ReadDWORD = 0x000E47F0;
-constexpr uintptr_t CNWMessage__ReadDWORD64 = 0x000E48B0;
-constexpr uintptr_t CNWMessage__ReadFLOAT__0 = 0x000E4990;
-constexpr uintptr_t CNWMessage__ReadFLOAT__1 = 0x000E4A80;
-constexpr uintptr_t CNWMessage__ReadINT = 0x000E4840;
-constexpr uintptr_t CNWMessage__ReadINT64 = 0x000E4920;
-constexpr uintptr_t CNWMessage__ReadSHORT = 0x000E4780;
-constexpr uintptr_t CNWMessage__ReadSigned = 0x000E45F0;
-constexpr uintptr_t CNWMessage__ReadUnsigned = 0x000E43C0;
-constexpr uintptr_t CNWMessage__ReadVOIDPtr = 0x000E4DF0;
-constexpr uintptr_t CNWMessage__ReadWORD = 0x000E4730;
-constexpr uintptr_t CNWMessage__SetReadMessage = 0x000E4620;
-constexpr uintptr_t CNWMessage__WriteBit = 0x000E4280;
-constexpr uintptr_t CNWMessage__WriteBits = 0x000E42C0;
-constexpr uintptr_t CNWMessage__WriteBOOL = 0x000E5380;
-constexpr uintptr_t CNWMessage__WriteBYTE = 0x000E53A0;
-constexpr uintptr_t CNWMessage__WriteCExoString = 0x000E5B00;
-constexpr uintptr_t CNWMessage__WriteCHAR = 0x000E53E0;
-constexpr uintptr_t CNWMessage__WriteCResRef = 0x000E5AA0;
-constexpr uintptr_t CNWMessage__WriteDOUBLE__0 = 0x000E5870;
-constexpr uintptr_t CNWMessage__WriteDOUBLE__1 = 0x000E5960;
-constexpr uintptr_t CNWMessage__WriteDWORD = 0x000E5500;
-constexpr uintptr_t CNWMessage__WriteDWORD64 = 0x000E55B0;
-constexpr uintptr_t CNWMessage__WriteFLOAT__0 = 0x000E5660;
-constexpr uintptr_t CNWMessage__WriteFLOAT__1 = 0x000E5740;
-constexpr uintptr_t CNWMessage__WriteINT = 0x000E5540;
-constexpr uintptr_t CNWMessage__WriteINT64 = 0x000E55F0;
-constexpr uintptr_t CNWMessage__WriteSHORT = 0x000E5490;
-constexpr uintptr_t CNWMessage__WriteSigned = 0x000E52F0;
-constexpr uintptr_t CNWMessage__WriteUnsigned = 0x000E50E0;
-constexpr uintptr_t CNWMessage__WriteVOIDPtr = 0x000E5B80;
-constexpr uintptr_t CNWMessage__WriteWORD = 0x000E5450;
-
-constexpr uintptr_t CNWNameGen__CNWNameGenCtor = 0x002C78D0;
-constexpr uintptr_t CNWNameGen__CNWNameGenDtor__0 = 0x002C7840;
-constexpr uintptr_t CNWNameGen__GetRandomName__0 = 0x002C79A0;
-constexpr uintptr_t CNWNameGen__GetRandomName__1 = 0x002C80C0;
-constexpr uintptr_t CNWNameGen__LoadNameTable = 0x002C8040;
-constexpr uintptr_t CNWNameGen__UnloadNameTable = 0x002C7960;
-
-constexpr uintptr_t CNWPlaceableSurfaceMesh__CNWPlaceableSurfaceMeshCtor = 0x00260700;
-constexpr uintptr_t CNWPlaceableSurfaceMesh__CNWPlaceableSurfaceMeshDtor__0 = 0x00260650;
-constexpr uintptr_t CNWPlaceableSurfaceMesh__LoadWalkMesh = 0x00260800;
-constexpr uintptr_t CNWPlaceableSurfaceMesh__LoadWalkMeshString = 0x002607D0;
-
-constexpr uintptr_t CNWPlaceMeshManager__CNWPlaceMeshManagerCtor = 0x000E64D0;
-constexpr uintptr_t CNWPlaceMeshManager__CNWPlaceMeshManagerDtor = 0x000E6570;
-constexpr uintptr_t CNWPlaceMeshManager__ClearWalkMeshes = 0x000E64F0;
-constexpr uintptr_t CNWPlaceMeshManager__GetWalkMesh = 0x000E6600;
-constexpr uintptr_t CNWPlaceMeshManager__InitializeWalkMeshes = 0x000E6580;
-
-constexpr uintptr_t CNWRace__CNWRaceCtor = 0x000E67E0;
-constexpr uintptr_t CNWRace__CNWRaceDtor = 0x000E6840;
-constexpr uintptr_t CNWRace__GetConverNameLowerText = 0x000E6B70;
-constexpr uintptr_t CNWRace__GetConverNameText = 0x000E6AB0;
-constexpr uintptr_t CNWRace__GetDefaultBiographyText = 0x000E6930;
-constexpr uintptr_t CNWRace__GetDescriptionText = 0x000E6870;
-constexpr uintptr_t CNWRace__GetNamePluralText = 0x000E6C30;
-constexpr uintptr_t CNWRace__GetNameText = 0x000E69F0;
-constexpr uintptr_t CNWRace__IsFirstLevelGrantedFeat = 0x000E6F90;
-constexpr uintptr_t CNWRace__LoadFeatsTable = 0x000E6CF0;
-
-constexpr uintptr_t CNWRules__CNWRulesCtor = 0x000ECC00;
-constexpr uintptr_t CNWRules__CNWRulesDtor__0 = 0x000E6FE0;
-constexpr uintptr_t CNWRules__CompareFeatName = 0x000E9A30;
-constexpr uintptr_t CNWRules__GetClassExpansionLevel = 0x000ED4D0;
-constexpr uintptr_t CNWRules__GetDamageIndexFromFlags = 0x000ED3A0;
-constexpr uintptr_t CNWRules__GetDifficultyOption = 0x000ECAC0;
-constexpr uintptr_t CNWRules__GetDomain = 0x000ECA80;
-constexpr uintptr_t CNWRules__GetFamiliarExpansionLevel = 0x000ED510;
-constexpr uintptr_t CNWRules__GetFeat = 0x000ECA40;
-constexpr uintptr_t CNWRules__GetFeatExpansionLevel = 0x000ED3C0;
-constexpr uintptr_t CNWRules__GetMasterFeatDescriptionText = 0x000E9CB0;
-constexpr uintptr_t CNWRules__GetMasterFeatIcon = 0x000E9D90;
-constexpr uintptr_t CNWRules__GetMasterFeatNameText = 0x000E9950;
-constexpr uintptr_t CNWRules__GetMetaMagicLevelCost = 0x000ECA10;
-constexpr uintptr_t CNWRules__GetSkillExpansionLevel = 0x000ED420;
-constexpr uintptr_t CNWRules__GetSpellExpansionLevel = 0x000ED450;
-constexpr uintptr_t CNWRules__GetWeightedDamageAmount = 0x000ED280;
-constexpr uintptr_t CNWRules__IsArcaneClass = 0x000ED550;
-constexpr uintptr_t CNWRules__IsFeatUseable = 0x000E8070;
-constexpr uintptr_t CNWRules__LoadClassInfo = 0x000E9EB0;
-constexpr uintptr_t CNWRules__LoadDifficultyInfo = 0x000ECAE0;
-constexpr uintptr_t CNWRules__LoadDomainInfo = 0x000EC440;
-constexpr uintptr_t CNWRules__LoadFeatInfo = 0x000E83B0;
-constexpr uintptr_t CNWRules__LoadRaceInfo = 0x000EB300;
-constexpr uintptr_t CNWRules__LoadSkillInfo = 0x000EBCC0;
-constexpr uintptr_t CNWRules__ReloadAll = 0x000ECF80;
-constexpr uintptr_t CNWRules__RollDice = 0x000EC9B0;
-constexpr uintptr_t CNWRules__SortFeats = 0x000E9E70;
-constexpr uintptr_t CNWRules__UnloadAll = 0x000E80C0;
-
-constexpr uintptr_t CNWSAmbientSound__CNWSAmbientSoundCtor = 0x00261580;
-constexpr uintptr_t CNWSAmbientSound__CNWSAmbientSoundDtor__0 = 0x000F8E30;
-constexpr uintptr_t CNWSAmbientSound__GetPlayersInArea = 0x002615F0;
-constexpr uintptr_t CNWSAmbientSound__Load = 0x002621B0;
-constexpr uintptr_t CNWSAmbientSound__PackIntoMessage = 0x002623C0;
-constexpr uintptr_t CNWSAmbientSound__PlayAmbientSound = 0x00261D30;
-constexpr uintptr_t CNWSAmbientSound__PlayBattleMusic = 0x00261B70;
-constexpr uintptr_t CNWSAmbientSound__PlayMusic = 0x002617F0;
-constexpr uintptr_t CNWSAmbientSound__Save = 0x002622E0;
-constexpr uintptr_t CNWSAmbientSound__SetAmbientDayTrack = 0x00261E10;
-constexpr uintptr_t CNWSAmbientSound__SetAmbientDayVolume = 0x00261FD0;
-constexpr uintptr_t CNWSAmbientSound__SetAmbientNightTrack = 0x00261EF0;
-constexpr uintptr_t CNWSAmbientSound__SetAmbientNightVolume = 0x002620C0;
-constexpr uintptr_t CNWSAmbientSound__SetBattleMusicTrack = 0x00261C50;
-constexpr uintptr_t CNWSAmbientSound__SetMusicDayTrack = 0x002619B0;
-constexpr uintptr_t CNWSAmbientSound__SetMusicDelay = 0x002618D0;
-constexpr uintptr_t CNWSAmbientSound__SetMusicNightTrack = 0x00261A90;
-
-constexpr uintptr_t CNWSArea__CNWSAreaCtor = 0x000F7BD0;
-constexpr uintptr_t CNWSArea__CNWSAreaDtor__0 = 0x000F7880;
-constexpr uintptr_t CNWSArea__AddObjectToArea = 0x000F40C0;
-constexpr uintptr_t CNWSArea__AIUpdate = 0x000F2BF0;
-constexpr uintptr_t CNWSArea__ApplyEffect = 0x000F5BD0;
-constexpr uintptr_t CNWSArea__AsNWSArea = 0x000B0380;
-constexpr uintptr_t CNWSArea__BudgeCreatures = 0x000F2EB0;
-constexpr uintptr_t CNWSArea__ClearLineOfSight = 0x000F82E0;
-constexpr uintptr_t CNWSArea__ComputeAwayVector = 0x000FE170;
-constexpr uintptr_t CNWSArea__ComputeBestCorner = 0x000FE6F0;
-constexpr uintptr_t CNWSArea__ComputeHeight = 0x000F9260;
-constexpr uintptr_t CNWSArea__ComputeNonVisibleLocation = 0x000FD690;
-constexpr uintptr_t CNWSArea__ComputePathDistance = 0x000F9430;
-constexpr uintptr_t CNWSArea__ComputeSafeLocation = 0x000FCD30;
-constexpr uintptr_t CNWSArea__ComputeSafeLocationInDirection = 0x000FD260;
-constexpr uintptr_t CNWSArea__CountAreaTransitionTriggers = 0x000F9B00;
-constexpr uintptr_t CNWSArea__CountVisibleToPlayers = 0x000F9900;
-constexpr uintptr_t CNWSArea__DecreaseAILevelPriority = 0x000EEBC0;
-constexpr uintptr_t CNWSArea__DecrementPlayersInArea = 0x000EECF0;
-constexpr uintptr_t CNWSArea__EvaluateOverlappingTargets = 0x000FC160;
-constexpr uintptr_t CNWSArea__EventHandler = 0x000F31A0;
-constexpr uintptr_t CNWSArea__ExploreArea = 0x000FAD40;
-constexpr uintptr_t CNWSArea__GenerateInterTilePath = 0x000FBF90;
-constexpr uintptr_t CNWSArea__GetDoorCrossed = 0x000F2860;
-constexpr uintptr_t CNWSArea__GetFirstObjectInArea = 0x000EE7C0;
-constexpr uintptr_t CNWSArea__GetFirstObjectIndiceByX = 0x000EE350;
-constexpr uintptr_t CNWSArea__GetIsIDInExcludeList = 0x000EE300;
-constexpr uintptr_t CNWSArea__GetNextObjectInArea = 0x000EE7F0;
-constexpr uintptr_t CNWSArea__GetPVPSetting = 0x000F26A0;
-constexpr uintptr_t CNWSArea__GetSurfaceMaterial = 0x000F2710;
-constexpr uintptr_t CNWSArea__GetTile = 0x000EE830;
-constexpr uintptr_t CNWSArea__GoalMoveDenied = 0x000FAF90;
-constexpr uintptr_t CNWSArea__GridDFSearch = 0x00100960;
-constexpr uintptr_t CNWSArea__GridDFSGenerateSuccessors = 0x001000F0;
-constexpr uintptr_t CNWSArea__GridDFSTransTableGet = 0x00100820;
-constexpr uintptr_t CNWSArea__GridDFSTransTableHash = 0x001007F0;
-constexpr uintptr_t CNWSArea__GridDFSTransTableInitialize = 0x00100780;
-constexpr uintptr_t CNWSArea__GridDFSTransTablePut = 0x001008D0;
-constexpr uintptr_t CNWSArea__HandleTransparentDoors = 0x000F8130;
-constexpr uintptr_t CNWSArea__IncreaseAILevelPriority = 0x000EE930;
-constexpr uintptr_t CNWSArea__IncrementPlayersInArea = 0x000EEB80;
-constexpr uintptr_t CNWSArea__InSubAreas = 0x00101910;
-constexpr uintptr_t CNWSArea__IntersectingLineSegment = 0x00101710;
-constexpr uintptr_t CNWSArea__InterTileDFS = 0x000FBDD0;
-constexpr uintptr_t CNWSArea__InterTileDFSExploreArea = 0x000F9DD0;
-constexpr uintptr_t CNWSArea__InterTileDFSGenerateSuccessors = 0x000FB100;
-constexpr uintptr_t CNWSArea__InterTileDFSSoundPath = 0x000FA4E0;
-constexpr uintptr_t CNWSArea__LoadArea = 0x000F8C50;
-constexpr uintptr_t CNWSArea__LoadAreaEffects = 0x000F4D40;
-constexpr uintptr_t CNWSArea__LoadAreaHeader = 0x000EEF60;
-constexpr uintptr_t CNWSArea__LoadCreatures = 0x000F0200;
-constexpr uintptr_t CNWSArea__LoadDoors = 0x000F4370;
-constexpr uintptr_t CNWSArea__LoadEncounters = 0x000F07B0;
-constexpr uintptr_t CNWSArea__LoadGIT__0 = 0x000F8B40;
-constexpr uintptr_t CNWSArea__LoadGIT__1 = 0x000F5060;
-constexpr uintptr_t CNWSArea__LoadItems = 0x000F0550;
-constexpr uintptr_t CNWSArea__LoadPlaceables = 0x000F4950;
-constexpr uintptr_t CNWSArea__LoadPlayers = 0x000F0540;
-constexpr uintptr_t CNWSArea__LoadProperties = 0x000F0F70;
-constexpr uintptr_t CNWSArea__LoadSounds = 0x000F0B30;
-constexpr uintptr_t CNWSArea__LoadStores = 0x000F0CA0;
-constexpr uintptr_t CNWSArea__LoadTileSetInfo = 0x000EFB20;
-constexpr uintptr_t CNWSArea__LoadTriggers = 0x000F4740;
-constexpr uintptr_t CNWSArea__LoadWaypoints = 0x000F0940;
-constexpr uintptr_t CNWSArea__NoCreaturesOnLine = 0x000FC280;
-constexpr uintptr_t CNWSArea__NoNoneWalkPolysInStaticObject = 0x00101660;
-constexpr uintptr_t CNWSArea__NWAreaAsNWSArea = 0x000F8E00;
-constexpr uintptr_t CNWSArea__PackAreaIntoMessage = 0x000F6110;
-constexpr uintptr_t CNWSArea__PlayVisualEffect = 0x000F2480;
-constexpr uintptr_t CNWSArea__PlotGridPath = 0x00100BB0;
-constexpr uintptr_t CNWSArea__PlotPath = 0x000FF330;
-constexpr uintptr_t CNWSArea__PlotSoundPath = 0x00101510;
-constexpr uintptr_t CNWSArea__PositionWalkable = 0x000F27B0;
-constexpr uintptr_t CNWSArea__RemoveInterTileExit = 0x000FC8B0;
-constexpr uintptr_t CNWSArea__RemoveObjectFromArea = 0x000EED10;
-constexpr uintptr_t CNWSArea__SaveArea = 0x000F1110;
-constexpr uintptr_t CNWSArea__SaveAreaEffects = 0x000F1F50;
-constexpr uintptr_t CNWSArea__SaveCreatures = 0x000F1120;
-constexpr uintptr_t CNWSArea__SaveDoors = 0x000F1500;
-constexpr uintptr_t CNWSArea__SaveEncounters = 0x000F17D0;
-constexpr uintptr_t CNWSArea__SaveGIT__0 = 0x000F5A50;
-constexpr uintptr_t CNWSArea__SaveGIT__1 = 0x000F51D0;
-constexpr uintptr_t CNWSArea__SaveItems = 0x000F13A0;
-constexpr uintptr_t CNWSArea__SavePlaceables = 0x000F1C50;
-constexpr uintptr_t CNWSArea__SaveProperties = 0x000F20D0;
-constexpr uintptr_t CNWSArea__SaveSounds = 0x000F1AD0;
-constexpr uintptr_t CNWSArea__SaveStores = 0x000F1DD0;
-constexpr uintptr_t CNWSArea__SaveTriggers = 0x000F1650;
-constexpr uintptr_t CNWSArea__SaveWaypoints = 0x000F1950;
-constexpr uintptr_t CNWSArea__SetCurrentWeather = 0x000F29A0;
-constexpr uintptr_t CNWSArea__SmoothCornerOptimize = 0x000FE9A0;
-constexpr uintptr_t CNWSArea__SmoothPointsOnPath = 0x000FF1B0;
-constexpr uintptr_t CNWSArea__SmoothSelection = 0x000FF0F0;
-constexpr uintptr_t CNWSArea__SmoothSelectNodes = 0x000FECE0;
-constexpr uintptr_t CNWSArea__TestDirectLine = 0x000FDC30;
-constexpr uintptr_t CNWSArea__TestLineWalkable = 0x000FCA40;
-constexpr uintptr_t CNWSArea__TestSafeLocationPoint = 0x000F94C0;
-constexpr uintptr_t CNWSArea__UnloadArea = 0x000F21E0;
-constexpr uintptr_t CNWSArea__UpdatePlayerAutomaps = 0x000FAE90;
-constexpr uintptr_t CNWSArea__UpdatePositionInObjectsArray = 0x000EE450;
-
-constexpr uintptr_t CNWSAreaOfEffectObject__CNWSAreaOfEffectObjectCtor = 0x0020F380;
-constexpr uintptr_t CNWSAreaOfEffectObject__CNWSAreaOfEffectObjectDtor__0 = 0x00211240;
-constexpr uintptr_t CNWSAreaOfEffectObject__AddToArea = 0x00212040;
-constexpr uintptr_t CNWSAreaOfEffectObject__AIUpdate = 0x00211BC0;
-constexpr uintptr_t CNWSAreaOfEffectObject__AsNWSAreaOfEffectObject = 0x00212290;
-constexpr uintptr_t CNWSAreaOfEffectObject__EventHandler = 0x00211120;
-constexpr uintptr_t CNWSAreaOfEffectObject__GetEffectSpellId = 0x00163750;
-constexpr uintptr_t CNWSAreaOfEffectObject__GetPosition = 0x0020FAE0;
-constexpr uintptr_t CNWSAreaOfEffectObject__InAreaOfEffect = 0x0020F940;
-constexpr uintptr_t CNWSAreaOfEffectObject__JumpToPoint = 0x00211EA0;
-constexpr uintptr_t CNWSAreaOfEffectObject__LineSegmentIntersectAreaOfEffect = 0x0020F550;
-constexpr uintptr_t CNWSAreaOfEffectObject__LoadAreaEffect = 0x0020FC20;
-constexpr uintptr_t CNWSAreaOfEffectObject__LoadEffect = 0x002101C0;
-constexpr uintptr_t CNWSAreaOfEffectObject__MoveToPoint = 0x00211FB0;
-constexpr uintptr_t CNWSAreaOfEffectObject__RemoveFromArea = 0x00211080;
-constexpr uintptr_t CNWSAreaOfEffectObject__RemoveFromSubAreas = 0x00210E30;
-constexpr uintptr_t CNWSAreaOfEffectObject__SaveEffect = 0x00210940;
-constexpr uintptr_t CNWSAreaOfEffectObject__SetCreator = 0x00210CD0;
-constexpr uintptr_t CNWSAreaOfEffectObject__SetDuration = 0x0020FBC0;
-constexpr uintptr_t CNWSAreaOfEffectObject__SetEffectSpellId = 0x000F8E10;
-constexpr uintptr_t CNWSAreaOfEffectObject__SetShape = 0x0020FA90;
-constexpr uintptr_t CNWSAreaOfEffectObject__SetTargetObjID = 0x00211440;
-constexpr uintptr_t CNWSAreaOfEffectObject__UpdateSubAreas = 0x00211590;
-
-constexpr uintptr_t CNWSBarter__CNWSBarterCtor = 0x00101AF0;
-constexpr uintptr_t CNWSBarter__CNWSBarterDtor = 0x00101EB0;
-constexpr uintptr_t CNWSBarter__AddItem = 0x00101FE0;
-constexpr uintptr_t CNWSBarter__CleanUp = 0x00101BE0;
-constexpr uintptr_t CNWSBarter__GetState = 0x00102630;
-constexpr uintptr_t CNWSBarter__MoveItem = 0x001023E0;
-constexpr uintptr_t CNWSBarter__PullItemOut = 0x00102520;
-constexpr uintptr_t CNWSBarter__RemoveItem = 0x00102220;
-constexpr uintptr_t CNWSBarter__Reset = 0x00101BB0;
-constexpr uintptr_t CNWSBarter__SetListAccepted = 0x00102750;
-constexpr uintptr_t CNWSBarter__SetListLocked = 0x00102E20;
-
-constexpr uintptr_t CNWSClient__CNWSClientCtor = 0x00102FC0;
-constexpr uintptr_t CNWSClient__CNWSClientDtor__0 = 0x00102F80;
-constexpr uintptr_t CNWSClient__AsNWSDungeonMaster = 0x000876A0;
-constexpr uintptr_t CNWSClient__AsNWSPlayer = 0x000B01F0;
-
-constexpr uintptr_t CNWSCombatAttackData__CNWSCombatAttackDataCtor = 0x00103670;
-constexpr uintptr_t CNWSCombatAttackData__CNWSCombatAttackDataDtor = 0x00103480;
-constexpr uintptr_t CNWSCombatAttackData__AddDamage = 0x00103A60;
-constexpr uintptr_t CNWSCombatAttackData__ClearAttackData = 0x00103540;
-constexpr uintptr_t CNWSCombatAttackData__Copy = 0x001037C0;
-constexpr uintptr_t CNWSCombatAttackData__GetDamage = 0x001038F0;
-constexpr uintptr_t CNWSCombatAttackData__GetTotalDamage = 0x00103AF0;
-constexpr uintptr_t CNWSCombatAttackData__LoadData = 0x00103E70;
-constexpr uintptr_t CNWSCombatAttackData__SaveData = 0x00103B40;
-constexpr uintptr_t CNWSCombatAttackData__SetBaseDamage = 0x00103A00;
-constexpr uintptr_t CNWSCombatAttackData__SetDamage = 0x00103A10;
-
-constexpr uintptr_t CNWSCombatRound__CNWSCombatRoundCtor = 0x00104340;
-constexpr uintptr_t CNWSCombatRound__CNWSCombatRoundDtor = 0x001045D0;
-constexpr uintptr_t CNWSCombatRound__AddAction = 0x00104D70;
-constexpr uintptr_t CNWSCombatRound__AddAttackOfOpportunity = 0x00108180;
-constexpr uintptr_t CNWSCombatRound__AddCircleKickAttack = 0x00107EE0;
-constexpr uintptr_t CNWSCombatRound__AddCleaveAttack = 0x00107D30;
-constexpr uintptr_t CNWSCombatRound__AddCombatStepAction = 0x00106640;
-constexpr uintptr_t CNWSCombatRound__AddEquipAction = 0x00106220;
-constexpr uintptr_t CNWSCombatRound__AddParryAttack = 0x00107BA0;
-constexpr uintptr_t CNWSCombatRound__AddParryIndex = 0x001061A0;
-constexpr uintptr_t CNWSCombatRound__AddReaction = 0x00106000;
-constexpr uintptr_t CNWSCombatRound__AddSpecialAttack = 0x00107970;
-constexpr uintptr_t CNWSCombatRound__AddSpellAction = 0x001060A0;
-constexpr uintptr_t CNWSCombatRound__AddUnequipAction = 0x00106460;
-constexpr uintptr_t CNWSCombatRound__AddWhirlwindAttack = 0x00108060;
-constexpr uintptr_t CNWSCombatRound__CalculateOffHandAttacks = 0x001050D0;
-constexpr uintptr_t CNWSCombatRound__CheckActionLength = 0x00104A60;
-constexpr uintptr_t CNWSCombatRound__CheckActionLengthAtTime = 0x00104AC0;
-constexpr uintptr_t CNWSCombatRound__ClearAllAttacks = 0x001052C0;
-constexpr uintptr_t CNWSCombatRound__ClearAllSpecialAttacks = 0x001082F0;
-constexpr uintptr_t CNWSCombatRound__DecrementPauseTimer = 0x00104980;
-constexpr uintptr_t CNWSCombatRound__DecrementRoundLength = 0x00104A30;
-constexpr uintptr_t CNWSCombatRound__EndCombatRound = 0x00104790;
-constexpr uintptr_t CNWSCombatRound__GetAction = 0x00104D20;
-constexpr uintptr_t CNWSCombatRound__GetActionPending = 0x00104B40;
-constexpr uintptr_t CNWSCombatRound__GetAttack = 0x00105270;
-constexpr uintptr_t CNWSCombatRound__GetAttackActionPending = 0x00104BA0;
-constexpr uintptr_t CNWSCombatRound__GetCombatStepRequired = 0x00106BF0;
-constexpr uintptr_t CNWSCombatRound__GetCurrentAttackWeapon = 0x00106A50;
-constexpr uintptr_t CNWSCombatRound__GetExtraAttack = 0x001050A0;
-constexpr uintptr_t CNWSCombatRound__GetNewAttackID = 0x00105FD0;
-constexpr uintptr_t CNWSCombatRound__GetNumSpecialAttacks = 0x00105D60;
-constexpr uintptr_t CNWSCombatRound__GetOffHandAttack = 0x00105060;
-constexpr uintptr_t CNWSCombatRound__GetSpecialAttack = 0x00105DF0;
-constexpr uintptr_t CNWSCombatRound__GetSpecialAttackID = 0x00105EC0;
-constexpr uintptr_t CNWSCombatRound__GetSpellActionPending = 0x00104C00;
-constexpr uintptr_t CNWSCombatRound__GetTotalAttacks = 0x00107400;
-constexpr uintptr_t CNWSCombatRound__GetWeaponAttackType = 0x001067C0;
-constexpr uintptr_t CNWSCombatRound__HasCreatureWeapons = 0x001066E0;
-constexpr uintptr_t CNWSCombatRound__IncrementTimer = 0x00104CB0;
-constexpr uintptr_t CNWSCombatRound__InitializeAttackActions = 0x00106D90;
-constexpr uintptr_t CNWSCombatRound__InitializeCombatModes = 0x001052F0;
-constexpr uintptr_t CNWSCombatRound__InitializeNumberOfAttacks = 0x00105340;
-constexpr uintptr_t CNWSCombatRound__InsertSpecialAttack = 0x00107AD0;
-constexpr uintptr_t CNWSCombatRound__LoadCombatRound = 0x00108390;
-constexpr uintptr_t CNWSCombatRound__RecomputeRound = 0x00105620;
-constexpr uintptr_t CNWSCombatRound__RemoveAllActions = 0x00105000;
-constexpr uintptr_t CNWSCombatRound__RemoveSpecialAttack = 0x00105B10;
-constexpr uintptr_t CNWSCombatRound__RemoveSpellAction = 0x001060C0;
-constexpr uintptr_t CNWSCombatRound__SaveCombatRound = 0x00107450;
-constexpr uintptr_t CNWSCombatRound__SetCurrentAttack = 0x001052A0;
-constexpr uintptr_t CNWSCombatRound__SetDeflectArrow = 0x00107430;
-constexpr uintptr_t CNWSCombatRound__SetPauseTimer = 0x001049E0;
-constexpr uintptr_t CNWSCombatRound__SetRoundPaused = 0x001049A0;
-constexpr uintptr_t CNWSCombatRound__SignalCombatRoundStarted = 0x00104730;
-constexpr uintptr_t CNWSCombatRound__StartCombatRound = 0x00107120;
-constexpr uintptr_t CNWSCombatRound__StartCombatRoundCast = 0x00104EC0;
-constexpr uintptr_t CNWSCombatRound__UpdateAttackTargetForAllActions = 0x00107350;
-
-constexpr uintptr_t CNWSCombatRoundAction__CNWSCombatRoundActionCtor = 0x00103170;
-constexpr uintptr_t CNWSCombatRoundAction__CNWSCombatRoundActionDtor = 0x001031C0;
-constexpr uintptr_t CNWSCombatRoundAction__LoadData = 0x001032F0;
-constexpr uintptr_t CNWSCombatRoundAction__SaveData = 0x001031D0;
-
-constexpr uintptr_t CNWSCreature__CNWSCreatureCtor = 0x0010F770;
-constexpr uintptr_t CNWSCreature__CNWSCreatureDtor__0 = 0x00134420;
-constexpr uintptr_t CNWSCreature__AcquireItem = 0x00147540;
-constexpr uintptr_t CNWSCreature__ActionManager = 0x0010C7D0;
-constexpr uintptr_t CNWSCreature__ActivityManager = 0x0010AB50;
-constexpr uintptr_t CNWSCreature__AddAnimalEmpathyAction = 0x0011B870;
-constexpr uintptr_t CNWSCreature__AddAppearActions = 0x001131D0;
-constexpr uintptr_t CNWSCreature__AddAssociate = 0x0014D800;
-constexpr uintptr_t CNWSCreature__AddAttackActions = 0x0011EAB0;
-constexpr uintptr_t CNWSCreature__AddCastSpellActions = 0x00119BA0;
-constexpr uintptr_t CNWSCreature__AddCounterSpellActions = 0x00113000;
-constexpr uintptr_t CNWSCreature__AddDisappearActions = 0x00113250;
-constexpr uintptr_t CNWSCreature__AddDriveAction = 0x0010AE40;
-constexpr uintptr_t CNWSCreature__AddDropItemActions = 0x0011B040;
-constexpr uintptr_t CNWSCreature__AddEquipItemActions = 0x0011A620;
-constexpr uintptr_t CNWSCreature__AddGold = 0x0011BAB0;
-constexpr uintptr_t CNWSCreature__AddHealActions = 0x0011B140;
-constexpr uintptr_t CNWSCreature__AddItemCastSpellActions = 0x0010B0E0;
-constexpr uintptr_t CNWSCreature__AddMoveToPointAction = 0x0010AFD0;
-constexpr uintptr_t CNWSCreature__AddMoveToPointActionToFront = 0x0010AD30;
-constexpr uintptr_t CNWSCreature__AddPathfindingWaitActionToFront = 0x0010AF20;
-constexpr uintptr_t CNWSCreature__AddPickPocketActions = 0x0010B8C0;
-constexpr uintptr_t CNWSCreature__AddPickUpItemActions = 0x0010BA30;
-constexpr uintptr_t CNWSCreature__AddRepositoryMoveActions = 0x0010B810;
-constexpr uintptr_t CNWSCreature__AddSitActions = 0x0010BAF0;
-constexpr uintptr_t CNWSCreature__AddTauntActions = 0x0011B9B0;
-constexpr uintptr_t CNWSCreature__AddToArea = 0x0012F070;
-constexpr uintptr_t CNWSCreature__AddToAssociateList = 0x0014D790;
-constexpr uintptr_t CNWSCreature__AddToInvitationsIgnored = 0x001531B0;
-constexpr uintptr_t CNWSCreature__AddToInvitationsOffered = 0x001530F0;
-constexpr uintptr_t CNWSCreature__AddToPersonalReputationList = 0x001533B0;
-constexpr uintptr_t CNWSCreature__AddToPVPList = 0x001498C0;
-constexpr uintptr_t CNWSCreature__AddToVisibleList = 0x0013BE70;
-constexpr uintptr_t CNWSCreature__AddTrapActions = 0x0010C870;
-constexpr uintptr_t CNWSCreature__AddUnequipActions = 0x0011AD60;
-constexpr uintptr_t CNWSCreature__AddUseTalentAtLocationActions = 0x0012AC00;
-constexpr uintptr_t CNWSCreature__AddUseTalentOnObjectActions = 0x0012AD20;
-constexpr uintptr_t CNWSCreature__AdjustReputation = 0x00140F60;
-constexpr uintptr_t CNWSCreature__AIActionAnimalEmpathy = 0x00143BF0;
-constexpr uintptr_t CNWSCreature__AIActionAppear = 0x0013C2D0;
-constexpr uintptr_t CNWSCreature__AIActionAreaWait = 0x00140D40;
-constexpr uintptr_t CNWSCreature__AIActionAttackObject = 0x00161C90;
-constexpr uintptr_t CNWSCreature__AIActionBarter = 0x00136FB0;
-constexpr uintptr_t CNWSCreature__AIActionCastSpell = 0x00141040;
-constexpr uintptr_t CNWSCreature__AIActionChangeFacingObject = 0x00137AD0;
-constexpr uintptr_t CNWSCreature__AIActionChangeFacingPoint = 0x00137C50;
-constexpr uintptr_t CNWSCreature__AIActionCheckForceFollowObject = 0x0013BA50;
-constexpr uintptr_t CNWSCreature__AIActionCheckInterAreaPathfinding = 0x00138230;
-constexpr uintptr_t CNWSCreature__AIActionCheckMoveAwayFromLocation = 0x00138020;
-constexpr uintptr_t CNWSCreature__AIActionCheckMoveAwayFromObject = 0x00137D30;
-constexpr uintptr_t CNWSCreature__AIActionCheckMoveToObject = 0x00138520;
-constexpr uintptr_t CNWSCreature__AIActionCheckMoveToObjectRadius = 0x001387A0;
-constexpr uintptr_t CNWSCreature__AIActionCheckMoveToPoint = 0x00138BC0;
-constexpr uintptr_t CNWSCreature__AIActionCheckMoveToPointRadius = 0x00138DD0;
-constexpr uintptr_t CNWSCreature__AIActionCounterSpell = 0x0013C930;
-constexpr uintptr_t CNWSCreature__AIActionDisappear = 0x0013C400;
-constexpr uintptr_t CNWSCreature__AIActionDisarmTrap = 0x0014B250;
-constexpr uintptr_t CNWSCreature__AIActionDrive = 0x00150400;
-constexpr uintptr_t CNWSCreature__AIActionDropItem = 0x00147F80;
-constexpr uintptr_t CNWSCreature__AIActionEncounterCreatureDestroySelf = 0x00138FE0;
-constexpr uintptr_t CNWSCreature__AIActionEquipItem = 0x00145E20;
-constexpr uintptr_t CNWSCreature__AIActionExamine = 0x00137250;
-constexpr uintptr_t CNWSCreature__AIActionExamineTrap = 0x001368F0;
-constexpr uintptr_t CNWSCreature__AIActionFlagTrap = 0x001361C0;
-constexpr uintptr_t CNWSCreature__AIActionForceFollowObject = 0x0013B810;
-constexpr uintptr_t CNWSCreature__AIActionHeal = 0x00148940;
-constexpr uintptr_t CNWSCreature__AIActionItemCastSpell = 0x0013FFE0;
-constexpr uintptr_t CNWSCreature__AIActionJumpToObject = 0x001517B0;
-constexpr uintptr_t CNWSCreature__AIActionJumpToPoint = 0x00151E50;
-constexpr uintptr_t CNWSCreature__AIActionMoveToPoint = 0x0014EFF0;
-constexpr uintptr_t CNWSCreature__AIActionOrientCamera = 0x0013BB50;
-constexpr uintptr_t CNWSCreature__AIActionPickPocket = 0x00152440;
-constexpr uintptr_t CNWSCreature__AIActionPickUpItem = 0x00147970;
-constexpr uintptr_t CNWSCreature__AIActionRandomWalk = 0x00139FC0;
-constexpr uintptr_t CNWSCreature__AIActionRecoverTrap = 0x0014A480;
-constexpr uintptr_t CNWSCreature__AIActionRepositoryMove = 0x00145F90;
-constexpr uintptr_t CNWSCreature__AIActionRest = 0x00146A20;
-constexpr uintptr_t CNWSCreature__AIActionSetTrap = 0x0014C500;
-constexpr uintptr_t CNWSCreature__AIActionSit = 0x0013C530;
-constexpr uintptr_t CNWSCreature__AIActionTaunt = 0x001534F0;
-constexpr uintptr_t CNWSCreature__AIActionUnequipItem = 0x00140DB0;
-constexpr uintptr_t CNWSCreature__AIActionWaitForEndOfRound = 0x0013BDA0;
-constexpr uintptr_t CNWSCreature__AIUpdate = 0x0012E810;
-constexpr uintptr_t CNWSCreature__ApplyDeathExperience = 0x00132680;
-constexpr uintptr_t CNWSCreature__ApplyDiseasePayload = 0x001268E0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitAbilityDamage = 0x00159BD0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitBlindness = 0x00157DB0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitCastSpell = 0x0015F810;
-constexpr uintptr_t CNWSCreature__ApplyOnHitConfusion = 0x00157FB0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitDaze = 0x001581C0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitDeafness = 0x001583D0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitDeathAttack = 0x001590A0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitDisease = 0x00159DF0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitDispelMagic__0 = 0x00159D30;
-constexpr uintptr_t CNWSCreature__ApplyOnHitDispelMagic__1 = 0x00162EF0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitDominate = 0x001585C0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitDoom = 0x001587D0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitFear = 0x00158C00;
-constexpr uintptr_t CNWSCreature__ApplyOnHitGreaterDispel = 0x00163080;
-constexpr uintptr_t CNWSCreature__ApplyOnHitHold = 0x00158E00;
-constexpr uintptr_t CNWSCreature__ApplyOnHitKnock = 0x00163210;
-constexpr uintptr_t CNWSCreature__ApplyOnHitLesserDispel = 0x00163430;
-constexpr uintptr_t CNWSCreature__ApplyOnHitLevelDrain = 0x00159EB0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitMordysDisjunction = 0x001635C0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitPoison = 0x0015A020;
-constexpr uintptr_t CNWSCreature__ApplyOnHitSilence = 0x00159350;
-constexpr uintptr_t CNWSCreature__ApplyOnHitSlayAlignment = 0x0015A1E0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitSlayAlignmentGroup = 0x0015A340;
-constexpr uintptr_t CNWSCreature__ApplyOnHitSlayRacialGroup = 0x0015A4C0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitSleep = 0x00159540;
-constexpr uintptr_t CNWSCreature__ApplyOnHitSlow = 0x001597D0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitStun = 0x001599C0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitVampiricRegeneration = 0x0015A7F0;
-constexpr uintptr_t CNWSCreature__ApplyOnHitVorpal = 0x0015A730;
-constexpr uintptr_t CNWSCreature__ApplyOnHitWounding = 0x0015A620;
-constexpr uintptr_t CNWSCreature__ApplyPoisonPayload = 0x001270D0;
-constexpr uintptr_t CNWSCreature__ApplyWounding = 0x0012B170;
-constexpr uintptr_t CNWSCreature__AsNWSCreature = 0x00135DD0;
-constexpr uintptr_t CNWSCreature__AutoCloseGUIPanels = 0x001200B0;
-constexpr uintptr_t CNWSCreature__BringAssociatesToNewFaction = 0x001456D0;
-constexpr uintptr_t CNWSCreature__BroadcastAssociateCommand = 0x001125B0;
-constexpr uintptr_t CNWSCreature__BroadcastAttackDataToParty = 0x00110DA0;
-constexpr uintptr_t CNWSCreature__BroadcastAttackOfOpportunity = 0x0012B600;
-constexpr uintptr_t CNWSCreature__BroadcastBattleCry = 0x00111FE0;
-constexpr uintptr_t CNWSCreature__BroadcastCombatStateToParty = 0x001134A0;
-constexpr uintptr_t CNWSCreature__BroadcastDamageDataToParty = 0x001110B0;
-constexpr uintptr_t CNWSCreature__BroadcastDeathDataToParty = 0x00111370;
-constexpr uintptr_t CNWSCreature__BroadcastFloatyData = 0x00109B80;
-constexpr uintptr_t CNWSCreature__BroadcastSavingThrowData = 0x00111820;
-constexpr uintptr_t CNWSCreature__BroadcastSkillData = 0x001116C0;
-constexpr uintptr_t CNWSCreature__BroadcastSpellCast = 0x00133790;
-constexpr uintptr_t CNWSCreature__BroadcastVoiceChat = 0x00112160;
-constexpr uintptr_t CNWSCreature__BroadcastWhirlwindAttack = 0x0012AFF0;
-constexpr uintptr_t CNWSCreature__BumpFriends = 0x001234D0;
-constexpr uintptr_t CNWSCreature__CalculateDamagePower = 0x00116550;
-constexpr uintptr_t CNWSCreature__CalculateDeathExperience = 0x0010F480;
-constexpr uintptr_t CNWSCreature__CalculateMaxElementalDamage = 0x00156D60;
-constexpr uintptr_t CNWSCreature__CalculatePersonalReputationAdjustment = 0x00149270;
-constexpr uintptr_t CNWSCreature__CalculateProjectileTimeToTarget = 0x001579F0;
-constexpr uintptr_t CNWSCreature__CalculateSpellSaveDC = 0x00127930;
-constexpr uintptr_t CNWSCreature__CancelAction = 0x00110BB0;
-constexpr uintptr_t CNWSCreature__CancelGoldTransfer = 0x001143D0;
-constexpr uintptr_t CNWSCreature__CancelRest = 0x00125E00;
-constexpr uintptr_t CNWSCreature__CanEquipItem = 0x00144A80;
-constexpr uintptr_t CNWSCreature__CanEquipMiscellaneous = 0x00139EC0;
-constexpr uintptr_t CNWSCreature__CanEquipShield = 0x00139BB0;
-constexpr uintptr_t CNWSCreature__CanEquipWeapon = 0x001390D0;
-constexpr uintptr_t CNWSCreature__CanUnEquipWeapon = 0x0013BBF0;
-constexpr uintptr_t CNWSCreature__CanUseItem = 0x00144EE0;
-constexpr uintptr_t CNWSCreature__CheckInventoryForPlotItems = 0x00123F90;
-constexpr uintptr_t CNWSCreature__CheckItemAlignmentRestrictions = 0x00144730;
-constexpr uintptr_t CNWSCreature__CheckItemClassRestrictions = 0x00144540;
-constexpr uintptr_t CNWSCreature__CheckItemRaceRestrictions = 0x00144660;
-constexpr uintptr_t CNWSCreature__CheckMasterIsValid = 0x00115020;
-constexpr uintptr_t CNWSCreature__CheckProficiencies = 0x00139D50;
-constexpr uintptr_t CNWSCreature__CheckUseMagicDeviceSkill = 0x00144350;
-constexpr uintptr_t CNWSCreature__CheckVisibleList = 0x0013C180;
-constexpr uintptr_t CNWSCreature__CleanInvitationLists = 0x00145780;
-constexpr uintptr_t CNWSCreature__CleanOutPersonalReputationList = 0x00149FD0;
-constexpr uintptr_t CNWSCreature__ClearAction = 0x00125FE0;
-constexpr uintptr_t CNWSCreature__ClearActivities = 0x0010A420;
-constexpr uintptr_t CNWSCreature__ClearAutoMapData = 0x00134370;
-constexpr uintptr_t CNWSCreature__ClearHostileActionsVersus = 0x00124990;
-constexpr uintptr_t CNWSCreature__ClearPersonalReputation = 0x0013C210;
-constexpr uintptr_t CNWSCreature__ClearVisibleList = 0x0013BFF0;
-constexpr uintptr_t CNWSCreature__ComputeAIState = 0x0010C6F0;
-constexpr uintptr_t CNWSCreature__ComputeAIStateOnAction = 0x0010C250;
-constexpr uintptr_t CNWSCreature__ComputeArmourClass = 0x0011BDA0;
-constexpr uintptr_t CNWSCreature__ComputeModifiedMovementRate = 0x001238E0;
-constexpr uintptr_t CNWSCreature__ComputeSpellRange = 0x0010ABB0;
-constexpr uintptr_t CNWSCreature__ComputeTotalEquippedWeight = 0x0010BE10;
-constexpr uintptr_t CNWSCreature__ComputeTotalWalkDistance = 0x0013AC90;
-constexpr uintptr_t CNWSCreature__ComputeTotalWeightCarried = 0x0010BDE0;
-constexpr uintptr_t CNWSCreature__ConvertModeToggleQuickButton = 0x0010DA80;
-constexpr uintptr_t CNWSCreature__CopyQuickButtonsFromDM = 0x0010F210;
-constexpr uintptr_t CNWSCreature__CreateDefaultQuickButtons = 0x00128140;
-constexpr uintptr_t CNWSCreature__CreateDefaultQuickButtons_AddFeat = 0x0010DBD0;
-constexpr uintptr_t CNWSCreature__CreateDefaultQuickButtons_CheckItem = 0x0010DB40;
-constexpr uintptr_t CNWSCreature__CreateDefaultQuickButtonsDM = 0x0010F1B0;
-constexpr uintptr_t CNWSCreature__CutWaypointPath = 0x00120750;
-constexpr uintptr_t CNWSCreature__DecrementSpellReadyCount = 0x00115FB0;
-constexpr uintptr_t CNWSCreature__DesiredAttackRange = 0x0010C070;
-constexpr uintptr_t CNWSCreature__DestroyEquippedItems = 0x0010BD70;
-constexpr uintptr_t CNWSCreature__DisplayFloatyDataToSelf = 0x001267E0;
-constexpr uintptr_t CNWSCreature__DMClearScripts = 0x0013DC60;
-constexpr uintptr_t CNWSCreature__DMResetClearedScripts = 0x0013E5B0;
-constexpr uintptr_t CNWSCreature__DoCombatStep = 0x00157150;
-constexpr uintptr_t CNWSCreature__DoDamage = 0x00109940;
-constexpr uintptr_t CNWSCreature__DoListenDetection = 0x00120ED0;
-constexpr uintptr_t CNWSCreature__DoPerceptionUpdateOnCreature = 0x00125080;
-constexpr uintptr_t CNWSCreature__DoSpotDetection = 0x00121600;
-constexpr uintptr_t CNWSCreature__DoStealthDetection = 0x00121CB0;
-constexpr uintptr_t CNWSCreature__DriveUpdateLocation = 0x00150020;
-constexpr uintptr_t CNWSCreature__DumpToLog = 0x00127360;
-constexpr uintptr_t CNWSCreature__EquipItem = 0x0011C630;
-constexpr uintptr_t CNWSCreature__EquipMostDamagingAmmunition = 0x0011DB50;
-constexpr uintptr_t CNWSCreature__EquipMostDamagingMeleeWeapon = 0x0011D560;
-constexpr uintptr_t CNWSCreature__EquipMostDamagingRangedWeapon = 0x0011DF50;
-constexpr uintptr_t CNWSCreature__EquipMostEffectiveArmor = 0x0011AAD0;
-constexpr uintptr_t CNWSCreature__EvaluateLock = 0x0011B250;
-constexpr uintptr_t CNWSCreature__EventHandler = 0x0012F4D0;
-constexpr uintptr_t CNWSCreature__ExternalResolveAttack = 0x00162ED0;
-constexpr uintptr_t CNWSCreature__FailedOpenInformAssociates = 0x00149840;
-constexpr uintptr_t CNWSCreature__ForceMoveToPoint = 0x00115C90;
-constexpr uintptr_t CNWSCreature__GetActivity = 0x0010A400;
-constexpr uintptr_t CNWSCreature__GetAmmunitionAvailable = 0x00153F80;
-constexpr uintptr_t CNWSCreature__GetArmorClass = 0x00114030;
-constexpr uintptr_t CNWSCreature__GetAssociateId = 0x0013EC60;
-constexpr uintptr_t CNWSCreature__GetAttackResultHit = 0x00157B90;
-constexpr uintptr_t CNWSCreature__GetBarterInfo = 0x00114C00;
-constexpr uintptr_t CNWSCreature__GetBlind = 0x00120E90;
-constexpr uintptr_t CNWSCreature__GetBodyBagAppearance = 0x00123E00;
-constexpr uintptr_t CNWSCreature__GetCanSlayAlignment = 0x00157A90;
-constexpr uintptr_t CNWSCreature__GetCreatureReputation = 0x001495B0;
-constexpr uintptr_t CNWSCreature__GetDamageFlags = 0x00114130;
-constexpr uintptr_t CNWSCreature__GetDetectMode = 0x001149C0;
-constexpr uintptr_t CNWSCreature__GetDialogInterruptable = 0x00135DE0;
-constexpr uintptr_t CNWSCreature__GetDialogResref = 0x000B0270;
-constexpr uintptr_t CNWSCreature__GetDominatedCreatureId = 0x0013FF40;
-constexpr uintptr_t CNWSCreature__GetEffectSpellId = 0x00135E00;
-constexpr uintptr_t CNWSCreature__GetFaction = 0x0013BE30;
-constexpr uintptr_t CNWSCreature__GetFilteredEffectList = 0x0012C810;
-constexpr uintptr_t CNWSCreature__GetFirstName = 0x000876C0;
-constexpr uintptr_t CNWSCreature__GetFlanked = 0x001578B0;
-constexpr uintptr_t CNWSCreature__GetFlatFooted = 0x00157800;
-constexpr uintptr_t CNWSCreature__GetGender = 0x000B0C10;
-constexpr uintptr_t CNWSCreature__GetHasInvisbilityEffectApplied = 0x0012B560;
-constexpr uintptr_t CNWSCreature__GetHenchmanIndex = 0x0012AF10;
-constexpr uintptr_t CNWSCreature__GetInvisible = 0x00124C00;
-constexpr uintptr_t CNWSCreature__GetIsAbleToPossessFamiliar = 0x00114390;
-constexpr uintptr_t CNWSCreature__GetIsCreatureBumpable = 0x00123220;
-constexpr uintptr_t CNWSCreature__GetIsInInvitationsIgnored = 0x00145530;
-constexpr uintptr_t CNWSCreature__GetIsInInvitationsOffered = 0x001452F0;
-constexpr uintptr_t CNWSCreature__GetIsInMelee = 0x00157990;
-constexpr uintptr_t CNWSCreature__GetIsInUseRange = 0x001226F0;
-constexpr uintptr_t CNWSCreature__GetIsPossessedFamiliar = 0x0013FF80;
-constexpr uintptr_t CNWSCreature__GetIsWeaponEffective = 0x00115AF0;
-constexpr uintptr_t CNWSCreature__GetItemCount = 0x00113F10;
-constexpr uintptr_t CNWSCreature__GetJournal = 0x00114B90;
-constexpr uintptr_t CNWSCreature__GetLastName = 0x000876E0;
-constexpr uintptr_t CNWSCreature__GetListenCheckDistance = 0x001230F0;
-constexpr uintptr_t CNWSCreature__GetLockOrientationToObject = 0x000B0220;
-constexpr uintptr_t CNWSCreature__GetMaxHitPoints = 0x00109430;
-constexpr uintptr_t CNWSCreature__GetMode = 0x00114A20;
-constexpr uintptr_t CNWSCreature__GetMovementRateFactor = 0x00110910;
-constexpr uintptr_t CNWSCreature__GetNearestEnemy = 0x001127B0;
-constexpr uintptr_t CNWSCreature__GetNumAssociatesOfType = 0x0013EC90;
-constexpr uintptr_t CNWSCreature__GetNumCounterSpellingCreatures = 0x00111990;
-constexpr uintptr_t CNWSCreature__GetNumInvited = 0x00145AD0;
-constexpr uintptr_t CNWSCreature__GetPortrait = 0x000B02F0;
-constexpr uintptr_t CNWSCreature__GetPVPPlayerLikesMe = 0x001499C0;
-constexpr uintptr_t CNWSCreature__GetPVPReputation = 0x001494E0;
-constexpr uintptr_t CNWSCreature__GetQuickbarButton = 0x00129D60;
-constexpr uintptr_t CNWSCreature__GetRangeWeaponEquipped = 0x0010BE80;
-constexpr uintptr_t CNWSCreature__GetRelativeWeaponSize = 0x00113EC0;
-constexpr uintptr_t CNWSCreature__GetRunRate = 0x00110B10;
-constexpr uintptr_t CNWSCreature__GetSpellOrHealActionQueued = 0x0012B480;
-constexpr uintptr_t CNWSCreature__GetSpotCheckDistance = 0x001230C0;
-constexpr uintptr_t CNWSCreature__GetStandardFactionReputation = 0x00149BD0;
-constexpr uintptr_t CNWSCreature__GetTileExplored = 0x0012DD40;
-constexpr uintptr_t CNWSCreature__GetTotalEffectBonus = 0x00116AA0;
-constexpr uintptr_t CNWSCreature__GetTurnResistanceHD = 0x00123120;
-constexpr uintptr_t CNWSCreature__GetUnarmed = 0x0010BEE0;
-constexpr uintptr_t CNWSCreature__GetUseMonkAbilities = 0x001107D0;
-constexpr uintptr_t CNWSCreature__GetUseRange = 0x001222B0;
-constexpr uintptr_t CNWSCreature__GetVisibleListElement = 0x0013C1D0;
-constexpr uintptr_t CNWSCreature__GetWalkRate = 0x00110AD0;
-constexpr uintptr_t CNWSCreature__GetWeaponPower = 0x00116050;
-constexpr uintptr_t CNWSCreature__HandleSubAreaStateChanges = 0x0013A450;
-constexpr uintptr_t CNWSCreature__InitialisePVPList = 0x00149AC0;
-constexpr uintptr_t CNWSCreature__InitializeQuickbar = 0x00127FA0;
-constexpr uintptr_t CNWSCreature__LearnScroll = 0x00127420;
-constexpr uintptr_t CNWSCreature__LoadAssociateList = 0x00135230;
-constexpr uintptr_t CNWSCreature__LoadAutoMapData = 0x00134CF0;
-constexpr uintptr_t CNWSCreature__LoadCreature = 0x00135540;
-constexpr uintptr_t CNWSCreature__LoadFromTemplate = 0x00135AF0;
-constexpr uintptr_t CNWSCreature__LoadPersonalReputationList = 0x00134EF0;
-constexpr uintptr_t CNWSCreature__LoadPolymorphData = 0x0010D530;
-constexpr uintptr_t CNWSCreature__LoadQuickBarHack = 0x00135A10;
-constexpr uintptr_t CNWSCreature__LoadQuickButtons = 0x00128DE0;
-constexpr uintptr_t CNWSCreature__MaxAttackRange = 0x0010C1B0;
-constexpr uintptr_t CNWSCreature__MergeItem = 0x0011A8C0;
-constexpr uintptr_t CNWSCreature__NotifyAssociateActionToggle = 0x00129DB0;
-constexpr uintptr_t CNWSCreature__PacifyCreature__0 = 0x001249C0;
-constexpr uintptr_t CNWSCreature__PacifyCreature__1 = 0x00124AC0;
-constexpr uintptr_t CNWSCreature__PayToIdentifyItem = 0x0011BCF0;
-constexpr uintptr_t CNWSCreature__Polymorph = 0x00131350;
-constexpr uintptr_t CNWSCreature__PossessCreature = 0x0013DB70;
-constexpr uintptr_t CNWSCreature__PossessCreatureDM = 0x0013E510;
-constexpr uintptr_t CNWSCreature__PossessFamiliar = 0x0013D2B0;
-constexpr uintptr_t CNWSCreature__PostProcess = 0x00132CA0;
-constexpr uintptr_t CNWSCreature__ProcessMasterDeathForAssociates = 0x0014C1F0;
-constexpr uintptr_t CNWSCreature__ProcessPendingCombatActions = 0x00125B40;
-constexpr uintptr_t CNWSCreature__QuickbarButton_RemoveItem = 0x00115900;
-constexpr uintptr_t CNWSCreature__QuickbarButton_RemoveSpell = 0x001159E0;
-constexpr uintptr_t CNWSCreature__ReadItemsFromGff = 0x0012C160;
-constexpr uintptr_t CNWSCreature__ReadScriptsFromGff = 0x0010CB00;
-constexpr uintptr_t CNWSCreature__RealizeAssociateList = 0x001310D0;
-constexpr uintptr_t CNWSCreature__ReceiveAssociateCommand = 0x0013FC80;
-constexpr uintptr_t CNWSCreature__RecomputeAmbientAnimationState = 0x00112510;
-constexpr uintptr_t CNWSCreature__ReconcileAutoMapData = 0x0012D9A0;
-constexpr uintptr_t CNWSCreature__RelayQuickChatCommandToAssociates = 0x0013FEA0;
-constexpr uintptr_t CNWSCreature__RemoveAllAssociates = 0x00149EF0;
-constexpr uintptr_t CNWSCreature__RemoveAssociate = 0x0014BE90;
-constexpr uintptr_t CNWSCreature__RemoveBadEffects = 0x00113D80;
-constexpr uintptr_t CNWSCreature__RemoveCharmEffectsByFactionID = 0x00113930;
-constexpr uintptr_t CNWSCreature__RemoveCharmEffectsByOBJECTID = 0x00113670;
-constexpr uintptr_t CNWSCreature__RemoveCombatInvisibilityEffects = 0x00121F00;
-constexpr uintptr_t CNWSCreature__RemoveCounterspeller = 0x0010BF20;
-constexpr uintptr_t CNWSCreature__RemoveDomination = 0x0014C160;
-constexpr uintptr_t CNWSCreature__RemoveDominationEffect = 0x0013FBB0;
-constexpr uintptr_t CNWSCreature__RemoveFromArea = 0x00114C70;
-constexpr uintptr_t CNWSCreature__RemoveFromAssociateList = 0x0014BE30;
-constexpr uintptr_t CNWSCreature__RemoveFromInvitationsOffered = 0x00145490;
-constexpr uintptr_t CNWSCreature__RemoveFromPVPList = 0x00149A20;
-constexpr uintptr_t CNWSCreature__RemoveFromVisibleList = 0x0013C0B0;
-constexpr uintptr_t CNWSCreature__RemoveGold = 0x0011BBE0;
-constexpr uintptr_t CNWSCreature__RemoveItem = 0x00147430;
-constexpr uintptr_t CNWSCreature__RemoveItemFromRepository = 0x00127EC0;
-constexpr uintptr_t CNWSCreature__RemovePolymorphFromOutputCreature = 0x0012BD10;
-constexpr uintptr_t CNWSCreature__RemoveSleepEffects = 0x00113BF0;
-constexpr uintptr_t CNWSCreature__RemoveSpellActionFromRound = 0x00124750;
-constexpr uintptr_t CNWSCreature__RemoveWoundingEffects = 0x00113E40;
-constexpr uintptr_t CNWSCreature__ReplyToInvitation = 0x00153270;
-constexpr uintptr_t CNWSCreature__ReprocessAssociateList = 0x0014DAF0;
-constexpr uintptr_t CNWSCreature__RequestBuy = 0x0011E360;
-constexpr uintptr_t CNWSCreature__RequestSell = 0x0011E4A0;
-constexpr uintptr_t CNWSCreature__ResetItemPossessor = 0x00144260;
-constexpr uintptr_t CNWSCreature__ResetPCDominatedScripts = 0x0013F5A0;
-constexpr uintptr_t CNWSCreature__ResetUpdateTimes = 0x00108C60;
-constexpr uintptr_t CNWSCreature__ResolveAmmunition = 0x00153E30;
-constexpr uintptr_t CNWSCreature__ResolveAttack = 0x00161840;
-constexpr uintptr_t CNWSCreature__ResolveAttackRoll = 0x0015F260;
-constexpr uintptr_t CNWSCreature__ResolveCachedSpecialAttacks = 0x00156AC0;
-constexpr uintptr_t CNWSCreature__ResolveDamage = 0x0015FD70;
-constexpr uintptr_t CNWSCreature__ResolveDamageShields = 0x00156DC0;
-constexpr uintptr_t CNWSCreature__ResolveDeathAttack = 0x0015B260;
-constexpr uintptr_t CNWSCreature__ResolveDefensiveEffects = 0x0015C9C0;
-constexpr uintptr_t CNWSCreature__ResolveElementalDamage = 0x00156D30;
-constexpr uintptr_t CNWSCreature__ResolveInitiative = 0x00112350;
-constexpr uintptr_t CNWSCreature__ResolveItemCastSpell = 0x0015FAD0;
-constexpr uintptr_t CNWSCreature__ResolveMeleeAnimations = 0x00156270;
-constexpr uintptr_t CNWSCreature__ResolveMeleeAttack = 0x00161680;
-constexpr uintptr_t CNWSCreature__ResolveMeleeSpecialAttack = 0x00160940;
-constexpr uintptr_t CNWSCreature__ResolveOnHitEffect = 0x0015D450;
-constexpr uintptr_t CNWSCreature__ResolveOnHitVisuals = 0x00157BB0;
-constexpr uintptr_t CNWSCreature__ResolvePostMeleeDamage = 0x0015E4B0;
-constexpr uintptr_t CNWSCreature__ResolvePostRangedDamage = 0x0015EDE0;
-constexpr uintptr_t CNWSCreature__ResolveRangedAnimations = 0x00154690;
-constexpr uintptr_t CNWSCreature__ResolveRangedAttack = 0x00160710;
-constexpr uintptr_t CNWSCreature__ResolveRangedMiss = 0x00154CE0;
-constexpr uintptr_t CNWSCreature__ResolveRangedSpecialAttack = 0x001602D0;
-constexpr uintptr_t CNWSCreature__ResolveSafeProjectile = 0x00153CC0;
-constexpr uintptr_t CNWSCreature__ResolveSituationalModifiers = 0x00156C00;
-constexpr uintptr_t CNWSCreature__ResolveSneakAttack = 0x0015A8E0;
-constexpr uintptr_t CNWSCreature__Rest = 0x0011E750;
-constexpr uintptr_t CNWSCreature__RestoreCutsceneVars = 0x0012AFD0;
-constexpr uintptr_t CNWSCreature__RestoreItemProperties = 0x00112730;
-constexpr uintptr_t CNWSCreature__RestoreItemPropertiesInRepository = 0x00112630;
-constexpr uintptr_t CNWSCreature__RestorePolymorphToOutputCreature = 0x0012BFF0;
-constexpr uintptr_t CNWSCreature__RunEquip = 0x0011C7D0;
-constexpr uintptr_t CNWSCreature__RunUnequip = 0x0011CF00;
-constexpr uintptr_t CNWSCreature__SaveAssociateList = 0x0010EFE0;
-constexpr uintptr_t CNWSCreature__SaveAutoMapData = 0x0010D960;
-constexpr uintptr_t CNWSCreature__SaveCreature = 0x0010E240;
-constexpr uintptr_t CNWSCreature__SavePersonalReputationList = 0x0010D330;
-constexpr uintptr_t CNWSCreature__SaveQuickBarHack = 0x00123C20;
-constexpr uintptr_t CNWSCreature__SaveQuickButtons = 0x0010DC00;
-constexpr uintptr_t CNWSCreature__SavingThrowRoll = 0x0015B970;
-constexpr uintptr_t CNWSCreature__SawTrapInformAssociates = 0x0014D620;
-constexpr uintptr_t CNWSCreature__SendFeedbackMessage = 0x00119AC0;
-constexpr uintptr_t CNWSCreature__SendFeedbackString = 0x0011FFE0;
-constexpr uintptr_t CNWSCreature__SetActivity = 0x0010A880;
-constexpr uintptr_t CNWSCreature__SetAllTilesExplored = 0x0012EF70;
-constexpr uintptr_t CNWSCreature__SetAnimation = 0x001092B0;
-constexpr uintptr_t CNWSCreature__SetAssociateListenPatterns = 0x0013CC70;
-constexpr uintptr_t CNWSCreature__SetAssociatesToForgetAggression = 0x0014A160;
-constexpr uintptr_t CNWSCreature__SetAssociateType = 0x00129D80;
-constexpr uintptr_t CNWSCreature__SetAutoMapData = 0x00134C10;
-constexpr uintptr_t CNWSCreature__SetBroadcastedAOOTo = 0x00111960;
-constexpr uintptr_t CNWSCreature__SetCombatMode = 0x00137530;
-constexpr uintptr_t CNWSCreature__SetCombatState = 0x001122B0;
-constexpr uintptr_t CNWSCreature__SetDefensiveCastingMode = 0x001374C0;
-constexpr uintptr_t CNWSCreature__SetDetectMode = 0x00137390;
-constexpr uintptr_t CNWSCreature__SetEffectSpellId = 0x00135E10;
-constexpr uintptr_t CNWSCreature__SetExcitedState = 0x00113350;
-constexpr uintptr_t CNWSCreature__SetGold = 0x00115F90;
-constexpr uintptr_t CNWSCreature__SetId = 0x00109260;
-constexpr uintptr_t CNWSCreature__SetInTransit = 0x001207F0;
-constexpr uintptr_t CNWSCreature__SetInvitedToParty = 0x00126790;
-constexpr uintptr_t CNWSCreature__SetLockOrientationToObject = 0x00109E50;
-constexpr uintptr_t CNWSCreature__SetMode = 0x0012A370;
-constexpr uintptr_t CNWSCreature__SetMovementRateFactor = 0x0010F670;
-constexpr uintptr_t CNWSCreature__SetPCDominatedScripts = 0x0013ED40;
-constexpr uintptr_t CNWSCreature__SetPortrait = 0x00135E30;
-constexpr uintptr_t CNWSCreature__SetPortraitId = 0x00109FF0;
-constexpr uintptr_t CNWSCreature__SetPVPPlayerLikesMe = 0x0014A350;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_AssociateCommand = 0x001152E0;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_CommandLine = 0x00115790;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_DM_General_ResRefParam = 0x00115800;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_DungeonMaster_CreateCreature = 0x00115330;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_DungeonMaster_CreateEncounter = 0x00115470;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_DungeonMaster_CreateItem = 0x001153D0;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_DungeonMaster_CreatePlaceable = 0x001156F0;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_DungeonMaster_CreatePortal = 0x00115650;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_DungeonMaster_CreateTrigger = 0x001155B0;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_DungeonMaster_CreateWaypoint = 0x00115510;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_GeneralINTParam = 0x001158C0;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_GeneralNoParam = 0x00115890;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_Item = 0x001151F0;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_Spell = 0x00115230;
-constexpr uintptr_t CNWSCreature__SetQuickbarButton_SpellLikeAbility = 0x001152A0;
-constexpr uintptr_t CNWSCreature__SetStandardFactionReputation = 0x00149DA0;
-constexpr uintptr_t CNWSCreature__SetStealthMode = 0x001373D0;
-constexpr uintptr_t CNWSCreature__SetTileExplored = 0x0012DC60;
-constexpr uintptr_t CNWSCreature__SignalMeleeDamage = 0x00156530;
-constexpr uintptr_t CNWSCreature__SignalRangedDamage = 0x00155DA0;
-constexpr uintptr_t CNWSCreature__SpawnInHeartbeatPerception = 0x0012E030;
-constexpr uintptr_t CNWSCreature__SplitItem = 0x0010BBF0;
-constexpr uintptr_t CNWSCreature__StartBarter = 0x00122A30;
-constexpr uintptr_t CNWSCreature__StartGuiTimingBar = 0x00125CE0;
-constexpr uintptr_t CNWSCreature__StopGuiTimingBar = 0x00125D70;
-constexpr uintptr_t CNWSCreature__StoreCutsceneVars = 0x0012AFB0;
-constexpr uintptr_t CNWSCreature__SummonAnimalCompanion = 0x0014DF30;
-constexpr uintptr_t CNWSCreature__SummonAssociate = 0x0014DBF0;
-constexpr uintptr_t CNWSCreature__SummonFamiliar = 0x0014E3B0;
-constexpr uintptr_t CNWSCreature__TerminateClientSidePath = 0x0013A3D0;
-constexpr uintptr_t CNWSCreature__TestAIStateAsMode = 0x0010C240;
-constexpr uintptr_t CNWSCreature__ToggleMode = 0x00129ED0;
-constexpr uintptr_t CNWSCreature__TransferGold = 0x00122DF0;
-constexpr uintptr_t CNWSCreature__TranslateAddress = 0x00110B50;
-constexpr uintptr_t CNWSCreature__UnequipItem = 0x0011C530;
-constexpr uintptr_t CNWSCreature__UnPolymorph = 0x00120840;
-constexpr uintptr_t CNWSCreature__UnpossessCreature = 0x0013DBA0;
-constexpr uintptr_t CNWSCreature__UnpossessCreatureDM = 0x0013EC00;
-constexpr uintptr_t CNWSCreature__UnpossessFamiliar = 0x0013D660;
-constexpr uintptr_t CNWSCreature__UnsummonMyself = 0x0013D080;
-constexpr uintptr_t CNWSCreature__UpdateActionQueue = 0x00124340;
-constexpr uintptr_t CNWSCreature__UpdateAppearanceDependantInfo = 0x001146C0;
-constexpr uintptr_t CNWSCreature__UpdateAppearanceForEquippedItems = 0x001141A0;
-constexpr uintptr_t CNWSCreature__UpdateAttributesOnEffect = 0x00120350;
-constexpr uintptr_t CNWSCreature__UpdateAutoMap = 0x0012E010;
-constexpr uintptr_t CNWSCreature__UpdateCombatRoundTimer = 0x0010BF70;
-constexpr uintptr_t CNWSCreature__UpdateEffectPtrs = 0x00108CA0;
-constexpr uintptr_t CNWSCreature__UpdateEncumbranceState = 0x00145AF0;
-constexpr uintptr_t CNWSCreature__UpdateExcitedStateTimer = 0x00113640;
-constexpr uintptr_t CNWSCreature__UpdatePersonalSpace = 0x00114480;
-constexpr uintptr_t CNWSCreature__UpdateSpecialAttacks = 0x00124260;
-constexpr uintptr_t CNWSCreature__UpdateSubareasOnJumpPosition = 0x00151590;
-constexpr uintptr_t CNWSCreature__UpdateSubareasOnMoveTo = 0x0014E7E0;
-constexpr uintptr_t CNWSCreature__UpdateTrapCheck = 0x0012CDB0;
-constexpr uintptr_t CNWSCreature__UpdateTrapCheckDM = 0x0010BD60;
-constexpr uintptr_t CNWSCreature__UpdateVisibleList = 0x00143910;
-constexpr uintptr_t CNWSCreature__UseFeat = 0x0011EF80;
-constexpr uintptr_t CNWSCreature__UseItem = 0x0012A940;
-constexpr uintptr_t CNWSCreature__UseLoreOnItem = 0x00115E40;
-constexpr uintptr_t CNWSCreature__UseSkill = 0x0012A3B0;
-constexpr uintptr_t CNWSCreature__ValidateCounterSpellData = 0x00111EF0;
-constexpr uintptr_t CNWSCreature__WalkUpdateLocation = 0x0014EA20;
-constexpr uintptr_t CNWSCreature__WalkUpdateLocationDistance = 0x0013B0A0;
-constexpr uintptr_t CNWSCreature__WalkUpdateLocationTestDistance = 0x0013AD90;
-
-constexpr uintptr_t CNWSCreatureStats__CNWSCreatureStatsCtor = 0x00182010;
-constexpr uintptr_t CNWSCreatureStats__CNWSCreatureStatsDtor = 0x00181C60;
-constexpr uintptr_t CNWSCreatureStats__AddExperience = 0x001842D0;
-constexpr uintptr_t CNWSCreatureStats__AddFeat = 0x00180660;
-constexpr uintptr_t CNWSCreatureStats__AddKnownSpell = 0x001829F0;
-constexpr uintptr_t CNWSCreatureStats__AddSpellLikeAbilityToList = 0x0016AE20;
-constexpr uintptr_t CNWSCreatureStats__AdjustAlignment = 0x0017F5E0;
-constexpr uintptr_t CNWSCreatureStats__AdjustSpellUsesPerDay = 0x0016EC60;
-constexpr uintptr_t CNWSCreatureStats__AutoMemorizeSpells = 0x00187AA0;
-constexpr uintptr_t CNWSCreatureStats__CalcLevelUpNumberFeats = 0x0016EE70;
-constexpr uintptr_t CNWSCreatureStats__CalcStatModifier = 0x00165CA0;
-constexpr uintptr_t CNWSCreatureStats__CanChooseFeat = 0x0017BA90;
-constexpr uintptr_t CNWSCreatureStats__CanLevelUp = 0x0016A7A0;
-constexpr uintptr_t CNWSCreatureStats__CheckSpellSuitability = 0x0017DBD0;
-constexpr uintptr_t CNWSCreatureStats__ClearFeats = 0x00166270;
-constexpr uintptr_t CNWSCreatureStats__ClearMemorizedSpellSlot = 0x00167DA0;
-constexpr uintptr_t CNWSCreatureStats__ComputeFeatBonuses = 0x00177780;
-constexpr uintptr_t CNWSCreatureStats__ComputeNumberKnownSpellsLeft = 0x0016C180;
-constexpr uintptr_t CNWSCreatureStats__ConfirmDomainSpell = 0x00167D10;
-constexpr uintptr_t CNWSCreatureStats__DecrementFeatRemainingUses = 0x00167B20;
-constexpr uintptr_t CNWSCreatureStats__DecrementSpellsPerDayLeft = 0x0016A500;
-constexpr uintptr_t CNWSCreatureStats__FeatAcquired = 0x0016A9D0;
-constexpr uintptr_t CNWSCreatureStats__FeatRequirementsMet = 0x0017B590;
-constexpr uintptr_t CNWSCreatureStats__FeatRequirementsMetAfterLevelUp = 0x001751F0;
-constexpr uintptr_t CNWSCreatureStats__GetAbilityModsFromFeats = 0x00176B00;
-constexpr uintptr_t CNWSCreatureStats__GetACNaturalBase = 0x0016C6F0;
-constexpr uintptr_t CNWSCreatureStats__GetAlignmentString = 0x00165CD0;
-constexpr uintptr_t CNWSCreatureStats__GetArmorClassVersus = 0x0016CAF0;
-constexpr uintptr_t CNWSCreatureStats__GetAttackModifierVersus = 0x001785E0;
-constexpr uintptr_t CNWSCreatureStats__GetAttacksPerRound = 0x00177BC0;
-constexpr uintptr_t CNWSCreatureStats__GetBaseAttackBonus = 0x00177AA0;
-constexpr uintptr_t CNWSCreatureStats__GetBaseFortSavingThrow = 0x0017B350;
-constexpr uintptr_t CNWSCreatureStats__GetBaseReflexSavingThrow = 0x0017C060;
-constexpr uintptr_t CNWSCreatureStats__GetBaseWillSavingThrow = 0x0017BE20;
-constexpr uintptr_t CNWSCreatureStats__GetBonusFeat = 0x0016E8F0;
-constexpr uintptr_t CNWSCreatureStats__GetCanUseRelatedCategory = 0x0016EDA0;
-constexpr uintptr_t CNWSCreatureStats__GetCanUseSkill = 0x00167960;
-constexpr uintptr_t CNWSCreatureStats__GetCanUseSkillAfterLevelUp = 0x001749D0;
-constexpr uintptr_t CNWSCreatureStats__GetCasterLevel = 0x0016E850;
-constexpr uintptr_t CNWSCreatureStats__GetCHAStat = 0x0016B7B0;
-constexpr uintptr_t CNWSCreatureStats__GetClass = 0x001654F0;
-constexpr uintptr_t CNWSCreatureStats__GetClassInfo = 0x00165530;
-constexpr uintptr_t CNWSCreatureStats__GetClassLevel = 0x001655D0;
-constexpr uintptr_t CNWSCreatureStats__GetClassNegativeLevels = 0x00165630;
-constexpr uintptr_t CNWSCreatureStats__GetClassString = 0x00165C00;
-constexpr uintptr_t CNWSCreatureStats__GetCONStat = 0x0016B460;
-constexpr uintptr_t CNWSCreatureStats__GetCreatureDamageDice = 0x00165110;
-constexpr uintptr_t CNWSCreatureStats__GetCreatureDamageDie = 0x00165250;
-constexpr uintptr_t CNWSCreatureStats__GetCreatureHasTalent = 0x0017DB90;
-constexpr uintptr_t CNWSCreatureStats__GetCreatureTalentRandom = 0x00189130;
-constexpr uintptr_t CNWSCreatureStats__GetCreatureTalentRandomFeat = 0x00180B60;
-constexpr uintptr_t CNWSCreatureStats__GetCreatureTalentRandomKnownSpell = 0x00180F00;
-constexpr uintptr_t CNWSCreatureStats__GetCreatureTalentRandomMemorisedSpell = 0x00181410;
-constexpr uintptr_t CNWSCreatureStats__GetCreatureTalentRandomSkill = 0x00180D10;
-constexpr uintptr_t CNWSCreatureStats__GetCreatureTalentRandomSpell = 0x00181A40;
-constexpr uintptr_t CNWSCreatureStats__GetCreatureTalentRandomSpellFromItem = 0x00188940;
-constexpr uintptr_t CNWSCreatureStats__GetCreatureTalentRandomSpellLikeAbility = 0x00180850;
-constexpr uintptr_t CNWSCreatureStats__GetCriticalHitMultiplier = 0x001719A0;
-constexpr uintptr_t CNWSCreatureStats__GetCriticalHitRoll = 0x001717A0;
-constexpr uintptr_t CNWSCreatureStats__GetDamageBonus = 0x00171AC0;
-constexpr uintptr_t CNWSCreatureStats__GetDamageRoll = 0x00173110;
-constexpr uintptr_t CNWSCreatureStats__GetDEXMod = 0x00165880;
-constexpr uintptr_t CNWSCreatureStats__GetDEXStat = 0x0016B330;
-constexpr uintptr_t CNWSCreatureStats__GetDomain1 = 0x0016A5E0;
-constexpr uintptr_t CNWSCreatureStats__GetDomain2 = 0x0016A640;
-constexpr uintptr_t CNWSCreatureStats__GetEffectImmunity = 0x0016E920;
-constexpr uintptr_t CNWSCreatureStats__GetEffectiveCRForPotentialLevel = 0x001660D0;
-constexpr uintptr_t CNWSCreatureStats__GetEpicWeaponDevastatingCritical = 0x00169C90;
-constexpr uintptr_t CNWSCreatureStats__GetEpicWeaponFocus = 0x001687A0;
-constexpr uintptr_t CNWSCreatureStats__GetEpicWeaponOverwhelmingCritical = 0x001699A0;
-constexpr uintptr_t CNWSCreatureStats__GetEpicWeaponSpecialization = 0x00168D80;
-constexpr uintptr_t CNWSCreatureStats__GetExpNeededForLevelUp = 0x00165FF0;
-constexpr uintptr_t CNWSCreatureStats__GetFavoredEnemyBonus = 0x0016E250;
-constexpr uintptr_t CNWSCreatureStats__GetFeat = 0x0016E820;
-constexpr uintptr_t CNWSCreatureStats__GetFeatRemainingUses = 0x0016EFE0;
-constexpr uintptr_t CNWSCreatureStats__GetFeatSourceClass = 0x00175990;
-constexpr uintptr_t CNWSCreatureStats__GetFeatTotalUses = 0x00170B60;
-constexpr uintptr_t CNWSCreatureStats__GetFortSavingThrow = 0x0017B4E0;
-constexpr uintptr_t CNWSCreatureStats__GetFullName = 0x00164A80;
-constexpr uintptr_t CNWSCreatureStats__GetHasLostClassAbilities = 0x00165690;
-constexpr uintptr_t CNWSCreatureStats__GetHasSilencedSpell = 0x001680A0;
-constexpr uintptr_t CNWSCreatureStats__GetHasStilledSpell = 0x00168210;
-constexpr uintptr_t CNWSCreatureStats__GetHighestLevelKnown = 0x00167FC0;
-constexpr uintptr_t CNWSCreatureStats__GetHighestLevelOfFeat = 0x0016EF40;
-constexpr uintptr_t CNWSCreatureStats__GetHitDie = 0x0016A670;
-constexpr uintptr_t CNWSCreatureStats__GetINTStat = 0x0016B5D0;
-constexpr uintptr_t CNWSCreatureStats__GetIsClass = 0x00165560;
-constexpr uintptr_t CNWSCreatureStats__GetIsClassAvailable = 0x00189E50;
-constexpr uintptr_t CNWSCreatureStats__GetIsDomainSpell = 0x00167D50;
-constexpr uintptr_t CNWSCreatureStats__GetIsEpitomeOfAlignment = 0x001656F0;
-constexpr uintptr_t CNWSCreatureStats__GetIsInKnownSpellList = 0x0016B0C0;
-constexpr uintptr_t CNWSCreatureStats__GetIsInSpellLikeAbilityList = 0x0016B070;
-constexpr uintptr_t CNWSCreatureStats__GetIsWeaponOfChoice = 0x00171570;
-constexpr uintptr_t CNWSCreatureStats__GetKnownSpell = 0x00167DE0;
-constexpr uintptr_t CNWSCreatureStats__GetLargePortrait = 0x00165A50;
-constexpr uintptr_t CNWSCreatureStats__GetLevel = 0x00164B50;
-constexpr uintptr_t CNWSCreatureStats__GetLevelStats = 0x00165660;
-constexpr uintptr_t CNWSCreatureStats__GetMeetsPrestigeClassRequirements = 0x001893A0;
-constexpr uintptr_t CNWSCreatureStats__GetMeleeAttackBonus = 0x00177C40;
-constexpr uintptr_t CNWSCreatureStats__GetMeleeDamageBonus = 0x00169070;
-constexpr uintptr_t CNWSCreatureStats__GetMemorizedSpellInSlot = 0x00167E30;
-constexpr uintptr_t CNWSCreatureStats__GetMemorizedSpellInSlotMetaType = 0x00167F20;
-constexpr uintptr_t CNWSCreatureStats__GetMemorizedSpellInSlotReady = 0x00167E80;
-constexpr uintptr_t CNWSCreatureStats__GetMemorizedSpellReadyCount__0 = 0x0016C610;
-constexpr uintptr_t CNWSCreatureStats__GetMemorizedSpellReadyCount__1 = 0x0016C5A0;
-constexpr uintptr_t CNWSCreatureStats__GetMemorizedSpellReadyCount__2 = 0x0016C550;
-constexpr uintptr_t CNWSCreatureStats__GetMetamagicPrerequisitesMet = 0x0017D0A0;
-constexpr uintptr_t CNWSCreatureStats__GetNumberKnownSpells = 0x00167F80;
-constexpr uintptr_t CNWSCreatureStats__GetNumberMemorizedSpellSlots = 0x00168020;
-constexpr uintptr_t CNWSCreatureStats__GetNumberOfBonusSpells = 0x0016E6D0;
-constexpr uintptr_t CNWSCreatureStats__GetNumLevelsOfClass__0 = 0x0017D030;
-constexpr uintptr_t CNWSCreatureStats__GetNumLevelsOfClass__1 = 0x00177A60;
-constexpr uintptr_t CNWSCreatureStats__GetPotentialLevel = 0x00166020;
-constexpr uintptr_t CNWSCreatureStats__GetPrimaryMod = 0x0016AA50;
-constexpr uintptr_t CNWSCreatureStats__GetRaceString = 0x00165B20;
-constexpr uintptr_t CNWSCreatureStats__GetRangedAttackBonus = 0x001781B0;
-constexpr uintptr_t CNWSCreatureStats__GetRangedDamageBonus = 0x001692D0;
-constexpr uintptr_t CNWSCreatureStats__GetReflexSavingThrow = 0x0017C1F0;
-constexpr uintptr_t CNWSCreatureStats__GetSchool = 0x0016A580;
-constexpr uintptr_t CNWSCreatureStats__GetSimpleAlignmentGoodEvil = 0x00165850;
-constexpr uintptr_t CNWSCreatureStats__GetSimpleAlignmentLawChaos = 0x00165820;
-constexpr uintptr_t CNWSCreatureStats__GetSkillRank = 0x00166B50;
-constexpr uintptr_t CNWSCreatureStats__GetSmallPortrait = 0x00165980;
-constexpr uintptr_t CNWSCreatureStats__GetSpellFailure = 0x00171530;
-constexpr uintptr_t CNWSCreatureStats__GetSpellGainWithBonus = 0x0016B810;
-constexpr uintptr_t CNWSCreatureStats__GetSpellGainWithBonusAfterLevelUp = 0x00174B90;
-constexpr uintptr_t CNWSCreatureStats__GetSpellLikeAbilityCasterLevel = 0x0016EE20;
-constexpr uintptr_t CNWSCreatureStats__GetSpellMinAbilityMet = 0x00169F80;
-constexpr uintptr_t CNWSCreatureStats__GetSpellResistance = 0x0016C310;
-constexpr uintptr_t CNWSCreatureStats__GetSpellsOfLevelReady = 0x00175AC0;
-constexpr uintptr_t CNWSCreatureStats__GetSpellsPerDayLeft = 0x0016A4C0;
-constexpr uintptr_t CNWSCreatureStats__GetSpellUsesLeft = 0x0017D160;
-constexpr uintptr_t CNWSCreatureStats__GetStatBonusesFromFeats = 0x00175B80;
-constexpr uintptr_t CNWSCreatureStats__GetStatById = 0x0017B1F0;
-constexpr uintptr_t CNWSCreatureStats__GetSTRStat = 0x0016B220;
-constexpr uintptr_t CNWSCreatureStats__GetTag = 0x00165F30;
-constexpr uintptr_t CNWSCreatureStats__GetTotalACSkillMod = 0x00175A40;
-constexpr uintptr_t CNWSCreatureStats__GetTotalCHABonus = 0x0016B770;
-constexpr uintptr_t CNWSCreatureStats__GetTotalCONBonus = 0x0016B420;
-constexpr uintptr_t CNWSCreatureStats__GetTotalDEXBonus = 0x0016B2F0;
-constexpr uintptr_t CNWSCreatureStats__GetTotalINTBonus = 0x0016B590;
-constexpr uintptr_t CNWSCreatureStats__GetTotalNegativeLevels = 0x00175A80;
-constexpr uintptr_t CNWSCreatureStats__GetTotalSTRBonus = 0x0016B1E0;
-constexpr uintptr_t CNWSCreatureStats__GetTotalWISBonus = 0x0016B680;
-constexpr uintptr_t CNWSCreatureStats__GetUnarmedDamageDice = 0x00164DA0;
-constexpr uintptr_t CNWSCreatureStats__GetUnarmedDamageDie = 0x00164ED0;
-constexpr uintptr_t CNWSCreatureStats__GetUnarmedDamageRoll = 0x00165390;
-constexpr uintptr_t CNWSCreatureStats__GetUseMonkAttackTables = 0x00164CF0;
-constexpr uintptr_t CNWSCreatureStats__GetWeaponFinesse = 0x00168380;
-constexpr uintptr_t CNWSCreatureStats__GetWeaponFocus = 0x001684B0;
-constexpr uintptr_t CNWSCreatureStats__GetWeaponImprovedCritical = 0x001696B0;
-constexpr uintptr_t CNWSCreatureStats__GetWeaponSpecialization = 0x00168A90;
-constexpr uintptr_t CNWSCreatureStats__GetWillSavingThrow = 0x0017BFB0;
-constexpr uintptr_t CNWSCreatureStats__GetWISStat = 0x0016B6C0;
-constexpr uintptr_t CNWSCreatureStats__HasFeat = 0x001662F0;
-constexpr uintptr_t CNWSCreatureStats__IncrementFeatRemainingUses = 0x00167B70;
-constexpr uintptr_t CNWSCreatureStats__IncrementSpellsPerDayLeft = 0x0016A540;
-constexpr uintptr_t CNWSCreatureStats__LevelDown = 0x001836D0;
-constexpr uintptr_t CNWSCreatureStats__LevelUp = 0x00182EB0;
-constexpr uintptr_t CNWSCreatureStats__LevelUpAutomatic = 0x0018AA30;
-constexpr uintptr_t CNWSCreatureStats__ModifyAlignment = 0x0017F400;
-constexpr uintptr_t CNWSCreatureStats__ModifyNumberBonusSpells = 0x0016E710;
-constexpr uintptr_t CNWSCreatureStats__ReadSpellsFromGff = 0x00182A20;
-constexpr uintptr_t CNWSCreatureStats__ReadStatsFromGff = 0x00184550;
-constexpr uintptr_t CNWSCreatureStats__ReadySpellLevel = 0x0016BDA0;
-constexpr uintptr_t CNWSCreatureStats__RemoveFeat = 0x00167BD0;
-constexpr uintptr_t CNWSCreatureStats__RemoveKnownSpell = 0x0017DE30;
-constexpr uintptr_t CNWSCreatureStats__ResetFeatRemainingUses = 0x00167AE0;
-constexpr uintptr_t CNWSCreatureStats__ResetSpellLikeAbilities = 0x0016B030;
-constexpr uintptr_t CNWSCreatureStats__ResetSpellsPerDayLeft = 0x0016BD70;
-constexpr uintptr_t CNWSCreatureStats__ResolveSpecialAttackAttackBonus = 0x00166420;
-constexpr uintptr_t CNWSCreatureStats__ResolveSpecialAttackDamageBonus = 0x00166670;
-constexpr uintptr_t CNWSCreatureStats__SaveClassInfo = 0x0016F900;
-constexpr uintptr_t CNWSCreatureStats__SaveStats = 0x0017C2A0;
-constexpr uintptr_t CNWSCreatureStats__SetArcaneSpellFailure = 0x00180270;
-constexpr uintptr_t CNWSCreatureStats__SetCHABase = 0x0016C130;
-constexpr uintptr_t CNWSCreatureStats__SetClass = 0x0016C040;
-constexpr uintptr_t CNWSCreatureStats__SetClassLevel = 0x0016C080;
-constexpr uintptr_t CNWSCreatureStats__SetClassNegativeLevels = 0x0016C0C0;
-constexpr uintptr_t CNWSCreatureStats__SetCONBase = 0x0016B4C0;
-constexpr uintptr_t CNWSCreatureStats__SetDEXBase = 0x0016B3D0;
-constexpr uintptr_t CNWSCreatureStats__SetDomain1 = 0x0016A5B0;
-constexpr uintptr_t CNWSCreatureStats__SetDomain2 = 0x0016A610;
-constexpr uintptr_t CNWSCreatureStats__SetExperience = 0x00183FC0;
-constexpr uintptr_t CNWSCreatureStats__SetFeatRemainingUses = 0x00180760;
-constexpr uintptr_t CNWSCreatureStats__SetHasLostClassAbilities = 0x001656C0;
-constexpr uintptr_t CNWSCreatureStats__SetINTBase = 0x0016B630;
-constexpr uintptr_t CNWSCreatureStats__SetMemorizedSpellInSlotReady = 0x00167ED0;
-constexpr uintptr_t CNWSCreatureStats__SetMemorizedSpellSlot = 0x0016A460;
-constexpr uintptr_t CNWSCreatureStats__SetMovementRate = 0x0016AB40;
-constexpr uintptr_t CNWSCreatureStats__SetNormalBonusFlags = 0x0016A8B0;
-constexpr uintptr_t CNWSCreatureStats__SetNumberMemorizedSpellSlots = 0x00168060;
-constexpr uintptr_t CNWSCreatureStats__SetSchool = 0x0016C100;
-constexpr uintptr_t CNWSCreatureStats__SetSkillRank = 0x00166230;
-constexpr uintptr_t CNWSCreatureStats__SetSpellFailure = 0x00171550;
-constexpr uintptr_t CNWSCreatureStats__SetSpellLikeAbilityReady = 0x0016AF70;
-constexpr uintptr_t CNWSCreatureStats__SetSpellResistance = 0x00180290;
-constexpr uintptr_t CNWSCreatureStats__SetSpellResistancePenalty = 0x00180640;
-constexpr uintptr_t CNWSCreatureStats__SetStatById = 0x001802B0;
-constexpr uintptr_t CNWSCreatureStats__SetSTRBase = 0x0016B280;
-constexpr uintptr_t CNWSCreatureStats__SetTag = 0x00165F40;
-constexpr uintptr_t CNWSCreatureStats__SetWISBase = 0x0016B720;
-constexpr uintptr_t CNWSCreatureStats__UnReadySpell = 0x0017D4D0;
-constexpr uintptr_t CNWSCreatureStats__UpdateCombatInformation = 0x0017E3E0;
-constexpr uintptr_t CNWSCreatureStats__UpdateLastStatsObject = 0x0017DEF0;
-constexpr uintptr_t CNWSCreatureStats__UpdateNumberMemorizedSpellSlots = 0x0016BF10;
-constexpr uintptr_t CNWSCreatureStats__ValidateLevelUp = 0x0018A080;
-
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__CNWSCreatureStats_ClassInfoCtor = 0x00163EF0;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__CNWSCreatureStats_ClassInfoDtor = 0x00181B20;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__AddKnownSpell = 0x00182850;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__ClearMemorizedKnownSpells = 0x00164040;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__ClearMemorizedSpellSlot = 0x00164010;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__ConfirmDomainSpell = 0x00164940;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__DecrementSpellsPerDayLeft = 0x001648C0;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__GetIsDomainSpell = 0x00164220;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__GetKnownSpell = 0x001641C0;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__GetMaxSpellsPerDayLeft = 0x00164880;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__GetMemorizedSpellInSlot = 0x001641F0;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__GetMemorizedSpellInSlotDetails = 0x00164250;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__GetMemorizedSpellInSlotMetaType = 0x00164810;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__GetMemorizedSpellInSlotReady = 0x001642D0;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__GetMemorizedSpellReadyCount__0 = 0x001647E0;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__GetMemorizedSpellReadyCount__1 = 0x00164330;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__GetNumberBonusSpells = 0x001649D0;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__GetNumberKnownSpells = 0x00164990;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__GetNumberMemorizedSpellSlots = 0x001649B0;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__GetSpellsPerDayLeft = 0x00164840;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__IncrementSpellsPerDayLeft = 0x001648E0;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__ModifyNumberBonusSpells = 0x00164A00;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__RemoveKnownSpell = 0x0017DE00;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__ResetSpellsPerDayLeft = 0x00164900;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__SetMaxSpellsPerDayLeft = 0x001648A0;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__SetMemorizedSpellInSlotReady = 0x00164300;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__SetMemorizedSpellSlot = 0x00163FC0;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__SetNumberMemorizedSpellSlots = 0x001642A0;
-constexpr uintptr_t CNWSCreatureStats_ClassInfo__SetSpellsPerDayLeft = 0x00164860;
-
-constexpr uintptr_t CNWSDialog__CNWSDialogCtor = 0x00262480;
-constexpr uintptr_t CNWSDialog__CNWSDialogDtor__0 = 0x001F6440;
-constexpr uintptr_t CNWSDialog__AddJournalEntry = 0x00264A50;
-constexpr uintptr_t CNWSDialog__CheckScript = 0x002644B0;
-constexpr uintptr_t CNWSDialog__Cleanup = 0x00262640;
-constexpr uintptr_t CNWSDialog__ClearDialogOwnerInObject = 0x00262590;
-constexpr uintptr_t CNWSDialog__GetSpeaker = 0x00264020;
-constexpr uintptr_t CNWSDialog__GetStartEntry = 0x00264660;
-constexpr uintptr_t CNWSDialog__GetStartEntryOneLiner = 0x00264760;
-constexpr uintptr_t CNWSDialog__HandleReply = 0x00265A80;
-constexpr uintptr_t CNWSDialog__IsPlayerInDialog = 0x00263F90;
-constexpr uintptr_t CNWSDialog__LoadDialog = 0x00262A30;
-constexpr uintptr_t CNWSDialog__RemovePlayer = 0x00263E60;
-constexpr uintptr_t CNWSDialog__RunScript = 0x002645B0;
-constexpr uintptr_t CNWSDialog__SendDialogEntry = 0x002654A0;
-constexpr uintptr_t CNWSDialog__SendDialogReplies = 0x00264D30;
-constexpr uintptr_t CNWSDialog__SetDialogDelay = 0x002648A0;
-
-constexpr uintptr_t CNWSDoor__CNWSDoorCtor = 0x0018CF60;
-constexpr uintptr_t CNWSDoor__CNWSDoorDtor__0 = 0x001902A0;
-constexpr uintptr_t CNWSDoor__AddToArea = 0x00190560;
-constexpr uintptr_t CNWSDoor__AIUpdate = 0x0018CD60;
-constexpr uintptr_t CNWSDoor__AsNWSDoor = 0x00101AE0;
-constexpr uintptr_t CNWSDoor__DoDamage = 0x0018CEB0;
-constexpr uintptr_t CNWSDoor__EventHandler = 0x001908C0;
-constexpr uintptr_t CNWSDoor__GetActionPoint = 0x0018DEF0;
-constexpr uintptr_t CNWSDoor__GetDialogResref = 0x00191860;
-constexpr uintptr_t CNWSDoor__GetFirstName = 0x000B0240;
-constexpr uintptr_t CNWSDoor__GetNearestActionPoint = 0x0018DFC0;
-constexpr uintptr_t CNWSDoor__GetOpenState = 0x0018FF80;
-constexpr uintptr_t CNWSDoor__LoadDoor = 0x0018E690;
-constexpr uintptr_t CNWSDoor__NoNonWalkPolysInDoor = 0x0018DD80;
-constexpr uintptr_t CNWSDoor__PostProcess = 0x0018E590;
-constexpr uintptr_t CNWSDoor__RemoveFromArea = 0x0018FFB0;
-constexpr uintptr_t CNWSDoor__SaveDoor = 0x0018D360;
-constexpr uintptr_t CNWSDoor__SetOpenState = 0x0018E400;
-
-constexpr uintptr_t CNWSDungeonMaster__CNWSDungeonMasterCtor = 0x0018C6F0;
-constexpr uintptr_t CNWSDungeonMaster__CNWSDungeonMasterDtor__0 = 0x0018CCF0;
-constexpr uintptr_t CNWSDungeonMaster__AsNWSDungeonMaster = 0x000B0260;
-constexpr uintptr_t CNWSDungeonMaster__PossessCreature = 0x0018C740;
-
-constexpr uintptr_t CNWSEffectListHandler__CNWSEffectListHandlerDtor__0 = 0x00193C90;
-constexpr uintptr_t CNWSEffectListHandler__InitializeEffects = 0x00193D10;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyAbilityDecrease = 0x0019CBC0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyAbilityIncrease = 0x00197420;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyACDecrease = 0x001994D0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyACIncrease = 0x001975B0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyAppear = 0x001A1710;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyArcaneSpellFailure = 0x001A2600;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyAreaOfEffect = 0x001A2FF0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyAttackDecrease = 0x00199D70;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyAttackIncrease = 0x001962B0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyBeam = 0x0019D180;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyBlindness = 0x00199FB0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyBlindnessInactive = 0x00194D00;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyBonusFeat = 0x001971C0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyBonusSpellOfLevel = 0x00193BE0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyConcealment = 0x00195D00;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyCurse = 0x00199710;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyCutsceneGhost = 0x00193C00;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyCutsceneImmobile = 0x00194E00;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDamage = 0x00197940;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDamageDecrease = 0x00199EA0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDamageImmunityDecrease = 0x0019E0C0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDamageImmunityIncrease = 0x0019DE70;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDamageIncrease = 0x00195830;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDamageReduction = 0x001A4730;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDamageResistance = 0x001A47D0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDamageShield = 0x00195780;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDarkness = 0x001954E0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDeaf = 0x001A4C90;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDeath = 0x0019B880;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDefensiveStance = 0x00194E80;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDisappear = 0x001A2990;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDisappearAppear = 0x001A1550;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDisarm = 0x0019E660;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDisease = 0x001A5860;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDispelAllMagic = 0x001A6630;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyDispelBestMagic = 0x001A6AD0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyEffectIcon = 0x001A2300;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyEffectImmunity = 0x00195EA0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyEnemyAttackBonus = 0x00195FB0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyEntangled = 0x001A4980;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyHasteInternal = 0x00195120;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyHasteOrSlow = 0x0019B4C0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyHeal = 0x001A2A80;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyHitPointChangeWhenDying = 0x0019D280;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyInvisibility = 0x001A5FC0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyItemProperty = 0x001A3EF0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyKnockdown = 0x0019A520;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyLight = 0x00195B90;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyLimitMovementSpeed = 0x00195900;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyLink = 0x001A09C0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyMissChance = 0x001A21E0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyModifyNumAttacks = 0x001A2720;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyMovementSpeedDecrease = 0x0019F020;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyMovementSpeedIncrease = 0x0019EED0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyNegativeLevel = 0x001A1A40;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyPetrify = 0x00195A00;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyPoison = 0x0019FDF0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyPolymorph = 0x001A0BB0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyRacialType = 0x001A10E0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyRegenerate = 0x0019FD00;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyResurrection = 0x001A5D00;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySanctuary = 0x001A60F0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySavingThrowDecrease = 0x00199C40;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySavingThrowIncrease = 0x00196150;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySeeInvisible = 0x00195080;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySetAIState = 0x001960E0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySetState = 0x0019A900;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySetStateInternal = 0x001A4F10;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySilence = 0x0019A2F0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySkillDecrease = 0x00199B20;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySkillIncrease = 0x00195C30;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySlowInternal = 0x00195280;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySpecialWalkAnimation = 0x00196550;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySpellFailure = 0x001A2020;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySpellImmunity = 0x001956D0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySpellLevelAbsorption = 0x00195DD0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySpellResistanceDecrease = 0x0019F9F0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySpellResistanceIncrease = 0x0019F720;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySummonCreature = 0x0019D890;
-constexpr uintptr_t CNWSEffectListHandler__OnApplySwarm = 0x0019D110;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyTaunt = 0x001963A0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyTemporaryHitpoints = 0x001A4870;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyTimestop = 0x001A27D0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyTrueSeeing = 0x001A13D0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyTurnResistance = 0x001A2580;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyUltraVision = 0x001A1270;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyVampiricRegeneration = 0x00197850;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyVision = 0x001A0A30;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyVisualEffect = 0x0019F2E0;
-constexpr uintptr_t CNWSEffectListHandler__OnApplyWounding = 0x00194D80;
-constexpr uintptr_t CNWSEffectListHandler__OnEffectApplied = 0x00193880;
-constexpr uintptr_t CNWSEffectListHandler__OnEffectRemoved = 0x001938D0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveAbilityDecrease = 0x00195B40;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveAbilityIncrease = 0x00195AE0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveACDecrease = 0x00196830;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveACIncrease = 0x001965C0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveArcaneSpellFailure = 0x0019EAF0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveAreaOfEffect = 0x0019D040;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveAttackDecrease = 0x00193970;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveAttackIncrease = 0x00193980;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveBeam = 0x001A3960;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveBlindness = 0x00196D50;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveBonusFeat = 0x00197310;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveBonusSpellOfLevel = 0x001A3950;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveConcealment = 0x001A3930;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveCurse = 0x001A3990;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveCutsceneGhost = 0x00193C50;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveDamageDecrease = 0x00193920;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveDamageImmunityDecrease = 0x0019E4B0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveDamageImmunityIncrease = 0x0019E380;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveDamageIncrease = 0x00193960;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveDamageShield = 0x001A39F0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveDarkness = 0x00196E60;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveDisappearAppear = 0x001A17A0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveDisarm = 0x001A39C0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveEffectIcon = 0x00196F50;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveEffectImmunity = 0x001A39A0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveEnemyAttackBonus = 0x00196BB0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveEntangled = 0x0019E5E0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveHasteInternal = 0x001939B0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveHasteOrSlow = 0x00199260;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveHitPointChangeWhenDying = 0x0019D3C0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveInvisibility = 0x001A5E90;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveItemProperty = 0x001A3A10;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveKnockdown = 0x0019C660;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveLight = 0x001A3970;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveLimitMovementSpeed = 0x00193A90;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveMissChance = 0x001A3920;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveModifyNumAttacks = 0x00196C90;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveMovementSpeedDecrease = 0x0019F180;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveMovementSpeedIncrease = 0x0019F2D0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveNegativeLevel = 0x001A1F90;
-constexpr uintptr_t CNWSEffectListHandler__OnRemovePetrify = 0x00193BF0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemovePolymorph = 0x001A0DF0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveRacialType = 0x001A3910;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSanctuary = 0x001A6330;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSavingThrowDecrease = 0x00193990;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSavingThrowIncrease = 0x001939A0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSeeInvisible = 0x00193B20;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSetAIState = 0x00196AC0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSetState = 0x00199030;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSetStateInternal = 0x0019ECC0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSilence = 0x00193A10;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSkillDecrease = 0x001A3900;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSkillIncrease = 0x001A39B0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSlowInternal = 0x001939E0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSpecialWalkAnimation = 0x001A2250;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSpellFailure = 0x001A2150;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSpellImmunity = 0x001A39E0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSpellLevelAbsorption = 0x001A39D0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSpellResistanceDecrease = 0x0019FBB0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSpellResistanceIncrease = 0x0019F890;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSummonCreature = 0x0019DDD0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveSwarm = 0x0019DE20;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveTaunt = 0x00193A50;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveTemporaryHitpoints = 0x0019C730;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveTimestop = 0x001A1090;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveTrueSeeing = 0x001A3610;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveTurnResistance = 0x001A3940;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveUltraVision = 0x001A3320;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveVision = 0x001A3980;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveVisualEffect = 0x0019F6E0;
-constexpr uintptr_t CNWSEffectListHandler__OnRemoveWounding = 0x001A3A00;
-constexpr uintptr_t CNWSEffectListHandler__SendFloatyEffect = 0x001A4530;
-
-constexpr uintptr_t CNWSEncounter__CNWSEncounterCtor = 0x001ABEA0;
-constexpr uintptr_t CNWSEncounter__CNWSEncounterDtor__0 = 0x001A7070;
-constexpr uintptr_t CNWSEncounter__AddCreaturesToSpawnList = 0x001A8D60;
-constexpr uintptr_t CNWSEncounter__AddToActivateAreaList = 0x001A7BE0;
-constexpr uintptr_t CNWSEncounter__AddToArea = 0x001A7310;
-constexpr uintptr_t CNWSEncounter__AIUpdate = 0x001ABA70;
-constexpr uintptr_t CNWSEncounter__AsNWSEncounter = 0x001AC3B0;
-constexpr uintptr_t CNWSEncounter__CalculatePointsFromCR = 0x001A8C50;
-constexpr uintptr_t CNWSEncounter__CalculateSpawnPool = 0x001AB650;
-constexpr uintptr_t CNWSEncounter__EventHandler = 0x001AB800;
-constexpr uintptr_t CNWSEncounter__GetFirstName = 0x001AC3C0;
-constexpr uintptr_t CNWSEncounter__GetInActivateArea = 0x001A7580;
-constexpr uintptr_t CNWSEncounter__GetInActivateAreaList = 0x001A7B90;
-constexpr uintptr_t CNWSEncounter__LineSegmentIntersectActivateArea = 0x001A7460;
-constexpr uintptr_t CNWSEncounter__LoadEncounter = 0x001AA320;
-constexpr uintptr_t CNWSEncounter__LoadFractionalCRData = 0x001ABDB0;
-constexpr uintptr_t CNWSEncounter__LoadFromTemplate = 0x001AC1F0;
-constexpr uintptr_t CNWSEncounter__MakeSpawnList = 0x001A77C0;
-constexpr uintptr_t CNWSEncounter__PadOutCreatureCount = 0x001AA810;
-constexpr uintptr_t CNWSEncounter__ReadEncounterFromGff = 0x001A8FE0;
-constexpr uintptr_t CNWSEncounter__ReadEncounterScriptsFromGff = 0x001A8050;
-constexpr uintptr_t CNWSEncounter__RemoveFromActivateAreaList = 0x001A7D00;
-constexpr uintptr_t CNWSEncounter__RemoveFromActiveCreatureCount = 0x001AA560;
-constexpr uintptr_t CNWSEncounter__RemoveFromArea = 0x001A6F80;
-constexpr uintptr_t CNWSEncounter__SaveEncounter = 0x001A83D0;
-constexpr uintptr_t CNWSEncounter__SetActive = 0x001ABD70;
-constexpr uintptr_t CNWSEncounter__SetDifficulty = 0x001AA720;
-constexpr uintptr_t CNWSEncounter__SpawnEncounterCreatures = 0x001AAA60;
-constexpr uintptr_t CNWSEncounter__SpawnIfAppropriate = 0x001AB780;
-constexpr uintptr_t CNWSEncounter__TallyEnemyRadiusPoints = 0x001AB340;
-constexpr uintptr_t CNWSEncounter__UpdateActivateAreaList = 0x001A7D60;
-
-constexpr uintptr_t CNWSExpression__CNWSExpressionCtor = 0x00266340;
-constexpr uintptr_t CNWSExpression__CNWSExpressionDtor = 0x002663C0;
-constexpr uintptr_t CNWSExpression__ClearAlternate = 0x002664E0;
-constexpr uintptr_t CNWSExpression__ClearGraph = 0x00266540;
-constexpr uintptr_t CNWSExpression__NewNode = 0x002662E0;
-constexpr uintptr_t CNWSExpression__ParseString = 0x00266590;
-constexpr uintptr_t CNWSExpression__TestString = 0x00266D90;
-
-constexpr uintptr_t CNWSExpressionList__CNWSExpressionListCtor = 0x00266130;
-constexpr uintptr_t CNWSExpressionList__CNWSExpressionListDtor = 0x00266150;
-constexpr uintptr_t CNWSExpressionList__AddNode = 0x00266250;
-constexpr uintptr_t CNWSExpressionList__AddNodeToHead = 0x002662A0;
-constexpr uintptr_t CNWSExpressionList__DeleteAlternate = 0x00266160;
-constexpr uintptr_t CNWSExpressionList__DeleteList = 0x002661E0;
-
-constexpr uintptr_t CNWSExpressionNode__CNWSExpressionNodeCtor = 0x002660C0;
-constexpr uintptr_t CNWSExpressionNode__CNWSExpressionNodeDtor = 0x00266100;
-
-constexpr uintptr_t CNWSFaction__CNWSFactionCtor__0 = 0x001FF220;
-constexpr uintptr_t CNWSFaction__CNWSFactionCtor__1 = 0x001FEBB0;
-constexpr uintptr_t CNWSFaction__CNWSFactionDtor = 0x001FD1B0;
-constexpr uintptr_t CNWSFaction__AddMember = 0x001FEF90;
-constexpr uintptr_t CNWSFaction__AttemptJoin = 0x001FF190;
-constexpr uintptr_t CNWSFaction__AttemptRemove = 0x001FF1D0;
-constexpr uintptr_t CNWSFaction__ChangeMemberId = 0x001FD2C0;
-constexpr uintptr_t CNWSFaction__ClearAllReputationsTowards = 0x001FEA70;
-constexpr uintptr_t CNWSFaction__GetAverageGoodEvilAlignment = 0x001FDE40;
-constexpr uintptr_t CNWSFaction__GetAverageLawChaosAlignment = 0x001FDF20;
-constexpr uintptr_t CNWSFaction__GetAverageLevel = 0x001FE000;
-constexpr uintptr_t CNWSFaction__GetAverageReputation = 0x001FDD70;
-constexpr uintptr_t CNWSFaction__GetAverageXP = 0x001FE0A0;
-constexpr uintptr_t CNWSFaction__GetBestAC = 0x001FE480;
-constexpr uintptr_t CNWSFaction__GetCreatureInParty = 0x001FE640;
-constexpr uintptr_t CNWSFaction__GetFactionManager = 0x001FE9B0;
-constexpr uintptr_t CNWSFaction__GetFactionMember = 0x001FE8F0;
-constexpr uintptr_t CNWSFaction__GetGold = 0x001FDD10;
-constexpr uintptr_t CNWSFaction__GetIsInvited = 0x001FE7D0;
-constexpr uintptr_t CNWSFaction__GetLeader = 0x001FE680;
-constexpr uintptr_t CNWSFaction__GetLeastDamagedMember = 0x001FDB20;
-constexpr uintptr_t CNWSFaction__GetMemberList = 0x001FD210;
-constexpr uintptr_t CNWSFaction__GetMostDamagedMember = 0x001FD910;
-constexpr uintptr_t CNWSFaction__GetMostFrequentClass = 0x001FE130;
-constexpr uintptr_t CNWSFaction__GetSingletonParty = 0x001FE820;
-constexpr uintptr_t CNWSFaction__GetStrongestMember = 0x001FD750;
-constexpr uintptr_t CNWSFaction__GetWeakestMember = 0x001FD590;
-constexpr uintptr_t CNWSFaction__GetWorstAC = 0x001FE2C0;
-constexpr uintptr_t CNWSFaction__Initialise = 0x001FE9F0;
-constexpr uintptr_t CNWSFaction__InviteMember = 0x001FD230;
-constexpr uintptr_t CNWSFaction__RemoveMember = 0x001FED00;
-constexpr uintptr_t CNWSFaction__SendChatMessage = 0x001FD300;
-constexpr uintptr_t CNWSFaction__SendFactionUpdateAdd = 0x001FD470;
-constexpr uintptr_t CNWSFaction__SendFactionUpdateList = 0x001FD3E0;
-constexpr uintptr_t CNWSFaction__SendFactionUpdateRemove = 0x001FD500;
-constexpr uintptr_t CNWSFaction__TransferLeadership = 0x001FEB00;
-
-constexpr uintptr_t CNWSForcedAction__CNWSForcedActionCtor = 0x001AC4C0;
-constexpr uintptr_t CNWSForcedAction__CNWSForcedActionDtor = 0x001AC4F0;
-constexpr uintptr_t CNWSForcedAction__LoadForcedAction = 0x001AC5C0;
-constexpr uintptr_t CNWSForcedAction__SaveForcedAction = 0x001AC500;
-
-constexpr uintptr_t CNWSInventory__CNWSInventoryCtor = 0x001C66B0;
-constexpr uintptr_t CNWSInventory__CNWSInventoryDtor__0 = 0x001C6610;
-constexpr uintptr_t CNWSInventory__GetArraySlotFromSlotFlag = 0x001C6760;
-constexpr uintptr_t CNWSInventory__GetItemInInventory = 0x001C66E0;
-constexpr uintptr_t CNWSInventory__GetItemInSlot = 0x001C68C0;
-constexpr uintptr_t CNWSInventory__GetSlotFromItem = 0x001C6720;
-constexpr uintptr_t CNWSInventory__PutItemInSlot = 0x001C6950;
-constexpr uintptr_t CNWSInventory__RemoveItem = 0x001C6910;
-
-constexpr uintptr_t CNWSItem__CNWSItemCtor = 0x001CC1E0;
-constexpr uintptr_t CNWSItem__CNWSItemDtor__0 = 0x001CC6C0;
-constexpr uintptr_t CNWSItem__AcquireItem = 0x001CE0B0;
-constexpr uintptr_t CNWSItem__ActiveProperty = 0x001C8220;
-constexpr uintptr_t CNWSItem__AddActiveProperty = 0x001CCA30;
-constexpr uintptr_t CNWSItem__AddPassiveProperty = 0x001CCB10;
-constexpr uintptr_t CNWSItem__AddToArea = 0x001C7C90;
-constexpr uintptr_t CNWSItem__AIUpdate = 0x001C6980;
-constexpr uintptr_t CNWSItem__ApplyItemProperties = 0x001C84A0;
-constexpr uintptr_t CNWSItem__AsNWSItem = 0x000B03A0;
-constexpr uintptr_t CNWSItem__CalculateBaseCosts = 0x001C9EC0;
-constexpr uintptr_t CNWSItem__CalculatePassiveCost = 0x001C9BF0;
-constexpr uintptr_t CNWSItem__CloseInventory = 0x001C9740;
-constexpr uintptr_t CNWSItem__CloseItemForAllPlayers = 0x001CB780;
-constexpr uintptr_t CNWSItem__CompareItem = 0x001C8740;
-constexpr uintptr_t CNWSItem__ComputeArmorClass = 0x001C85E0;
-constexpr uintptr_t CNWSItem__ComputeWeight = 0x001C75C0;
-constexpr uintptr_t CNWSItem__CopyItem = 0x001CCBF0;
-constexpr uintptr_t CNWSItem__EventHandler = 0x001CB880;
-constexpr uintptr_t CNWSItem__GetActiveProperty = 0x001C8370;
-constexpr uintptr_t CNWSItem__GetCost = 0x001CA3B0;
-constexpr uintptr_t CNWSItem__GetDamageFlags = 0x001CB490;
-constexpr uintptr_t CNWSItem__GetFirstName = 0x000B0200;
-constexpr uintptr_t CNWSItem__GetMinEquipLevel = 0x001CB650;
-constexpr uintptr_t CNWSItem__GetPassiveProperty = 0x001C83A0;
-constexpr uintptr_t CNWSItem__GetPropertyByType = 0x001C83D0;
-constexpr uintptr_t CNWSItem__GetPropertyByTypeExists = 0x001C8250;
-constexpr uintptr_t CNWSItem__GetUsedActivePropertyUsesLeft = 0x001C7D50;
-constexpr uintptr_t CNWSItem__GetWeight = 0x001CB280;
-constexpr uintptr_t CNWSItem__InitRepository = 0x001CC5E0;
-constexpr uintptr_t CNWSItem__LoadDataFromGff = 0x001CEAB0;
-constexpr uintptr_t CNWSItem__LoadFromTemplate = 0x001CE390;
-constexpr uintptr_t CNWSItem__LoadItem = 0x001CE5D0;
-constexpr uintptr_t CNWSItem__MergeItem = 0x001C89B0;
-constexpr uintptr_t CNWSItem__OpenInventory = 0x001C9940;
-constexpr uintptr_t CNWSItem__ReadContainerItemsFromGff = 0x001CE8C0;
-constexpr uintptr_t CNWSItem__RemoveActiveProperty = 0x001C82F0;
-constexpr uintptr_t CNWSItem__RemoveFromArea = 0x001C7C10;
-constexpr uintptr_t CNWSItem__RemoveItemProperties = 0x001C8540;
-constexpr uintptr_t CNWSItem__RemovePassiveProperty = 0x001C8330;
-constexpr uintptr_t CNWSItem__RestoreUsedActiveProperties = 0x001C81C0;
-constexpr uintptr_t CNWSItem__RestoreUsedActiveProperty = 0x001C8120;
-constexpr uintptr_t CNWSItem__SaveContainerItems = 0x001CB120;
-constexpr uintptr_t CNWSItem__SaveItem = 0x001CA4F0;
-constexpr uintptr_t CNWSItem__SaveItemProperties = 0x001C7860;
-constexpr uintptr_t CNWSItem__SetIdentified = 0x001CB750;
-constexpr uintptr_t CNWSItem__SetNumCharges = 0x001C7D10;
-constexpr uintptr_t CNWSItem__SetPossessor = 0x001C6BF0;
-constexpr uintptr_t CNWSItem__SplitItem = 0x001CD160;
-constexpr uintptr_t CNWSItem__UpdateUsedActiveProperties = 0x001C7EB0;
-constexpr uintptr_t CNWSItem__UpdateVisualEffect = 0x001CBCF0;
-
-constexpr uintptr_t CNWSItemPropertyHandler__CNWSItemPropertyHandlerDtor__0 = 0x001D06B0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyAbilityBonus = 0x001D2000;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyACBonus = 0x001D4800;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyArcaneSpellFailure = 0x001D1AD0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyAttackBonus = 0x001D4110;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyAttackPenalty = 0x001D4570;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyBonusFeat = 0x001D1C00;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyBonusSpellOfLevel = 0x001D5510;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyChangedSavingThrow = 0x001D6200;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyChangedSavingThrowVsX = 0x001D64E0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyDamageBonus = 0x001D2EF0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyDamageImmunity = 0x001D2300;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyDamagePenalty = 0x001D4B40;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyDamageReduction = 0x001D2530;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyDamageResistance = 0x001D2670;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyDamageVulnerability = 0x001D27C0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyDarkVision = 0x001D10F0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyDecreaseAbility = 0x001D2910;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyDecreaseAC = 0x001D2AE0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyDecreaseSkill = 0x001D2C60;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyEnhancementBonus = 0x001D3330;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyEnhancementPenalty = 0x001D3C70;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyFreeAction = 0x001D12C0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyHaste = 0x001D14D0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyHolyAvenger = 0x001D56C0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyImmunity = 0x001D1D30;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyImprovedEvasion = 0x001D1220;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyImprovedSavingThrow = 0x001D6340;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyImprovedSavingThrowVsX = 0x001D67E0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyImprovedSpellResistance = 0x001D21D0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyLight = 0x001D4E10;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyReducedSavingThrow = 0x001D6410;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyReducedSavingThrowVsX = 0x001D68B0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyRegeneration = 0x001D1A10;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplySkillBonus = 0x001D1870;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplySpecialWalk = 0x001D1560;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplySpellImmunityLevel = 0x001D1940;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplySpellImmunitySchool = 0x001D1670;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplySpellImmunitySpecific = 0x001D2DC0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyTrueSeeing = 0x001D1190;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyTurnResistance = 0x001D17D0;
-constexpr uintptr_t CNWSItemPropertyHandler__ApplyUnlimitedAmmo = 0x001D4FF0;
-constexpr uintptr_t CNWSItemPropertyHandler__InitializeItemProperties = 0x001D0730;
-constexpr uintptr_t CNWSItemPropertyHandler__OnItemPropertyApplied = 0x001D0C50;
-constexpr uintptr_t CNWSItemPropertyHandler__OnItemPropertyRemoved = 0x001D0EC0;
-constexpr uintptr_t CNWSItemPropertyHandler__RemoveBonusSpellOfLevel = 0x001D55C0;
-constexpr uintptr_t CNWSItemPropertyHandler__RemoveUnlimitedAmmo = 0x001D4F20;
-
-constexpr uintptr_t CNWSJournal__CNWSJournalCtor = 0x001D6980;
-constexpr uintptr_t CNWSJournal__CNWSJournalDtor = 0x001D69A0;
-constexpr uintptr_t CNWSJournal__Destroy = 0x001D6A50;
-constexpr uintptr_t CNWSJournal__SetDate = 0x001D6D90;
-constexpr uintptr_t CNWSJournal__SetPicture = 0x001D6A40;
-constexpr uintptr_t CNWSJournal__SetState = 0x001D76D0;
-constexpr uintptr_t CNWSJournal__SetTime = 0x001D7230;
-
-constexpr uintptr_t CNWSkill__CNWSkillCtor = 0x001D8BC0;
-constexpr uintptr_t CNWSkill__CNWSkillDtor = 0x001D8C20;
-constexpr uintptr_t CNWSkill__GetDescriptionText = 0x001D8C50;
-constexpr uintptr_t CNWSkill__GetNameText = 0x001D8D10;
-
-constexpr uintptr_t CNWSMessage__CNWSMessageCtor = 0x001AC740;
-constexpr uintptr_t CNWSMessage__CNWSMessageDtor__0 = 0x001AC6D0;
-constexpr uintptr_t CNWSMessage__AddActiveItemPropertiesToMessage = 0x0008CD60;
-constexpr uintptr_t CNWSMessage__AddAreaOfEffectObjectToMessage = 0x0008D2A0;
-constexpr uintptr_t CNWSMessage__AddDoorAppearanceToMessage = 0x0008CB40;
-constexpr uintptr_t CNWSMessage__AddItemAppearanceToMessage = 0x0008D070;
-constexpr uintptr_t CNWSMessage__AddPlaceableAppearanceToMessage = 0x0008CBA0;
-constexpr uintptr_t CNWSMessage__AddTriggerGeometryToMessage = 0x000901A0;
-constexpr uintptr_t CNWSMessage__AssignCreatureLists = 0x000A25B0;
-constexpr uintptr_t CNWSMessage__AssignVisualEffectLists = 0x0008D370;
-constexpr uintptr_t CNWSMessage__CompareCreatureLists = 0x0008D740;
-constexpr uintptr_t CNWSMessage__CompareVisualEffectLists = 0x0008D5F0;
-constexpr uintptr_t CNWSMessage__ComputeAppearanceUpdateRequired = 0x0008D2F0;
-constexpr uintptr_t CNWSMessage__ComputeGameObjectUpdateForCategory = 0x000AB790;
-constexpr uintptr_t CNWSMessage__ComputeGameObjectUpdateForObject = 0x000AB650;
-constexpr uintptr_t CNWSMessage__ComputeGameObjectUpdateForYourself = 0x000AB760;
-constexpr uintptr_t CNWSMessage__ComputeGameObjectUpdateForYourselfToo = 0x000AB770;
-constexpr uintptr_t CNWSMessage__ComputeInventoryUpdateRequired = 0x0008D330;
-constexpr uintptr_t CNWSMessage__ComputeLastUpdate_ActionQueue = 0x0008E040;
-constexpr uintptr_t CNWSMessage__ComputeLastUpdate_AssociateState = 0x0008E480;
-constexpr uintptr_t CNWSMessage__ComputeLastUpdate_AutoMap = 0x0008E0D0;
-constexpr uintptr_t CNWSMessage__ComputeLastUpdate_CompareSpellLikeAbility = 0x0008DAD0;
-constexpr uintptr_t CNWSMessage__ComputeLastUpdate_GuiEffectIcons = 0x000A1390;
-constexpr uintptr_t CNWSMessage__ComputeLastUpdate_GuiFeats = 0x0008D950;
-constexpr uintptr_t CNWSMessage__ComputeLastUpdate_GuiKnownSpells = 0x000A3EA0;
-constexpr uintptr_t CNWSMessage__ComputeLastUpdate_GuiKnownSpellUses = 0x0008DCF0;
-constexpr uintptr_t CNWSMessage__ComputeLastUpdate_GuiMemorizedSpells = 0x000A7060;
-constexpr uintptr_t CNWSMessage__ComputeLastUpdate_GuiNumberMemorizedSpells = 0x0008E1F0;
-constexpr uintptr_t CNWSMessage__ComputeLastUpdate_GuiSkills = 0x0008D8C0;
-constexpr uintptr_t CNWSMessage__ComputeLastUpdate_PlayerState = 0x0008E2F0;
-constexpr uintptr_t CNWSMessage__ComputeLastUpdate_StoreUpdateSpellLikeAbility = 0x000ABD10;
-constexpr uintptr_t CNWSMessage__ComputeLastUpdate_WriteSpellLikeAbility = 0x0008DB70;
-constexpr uintptr_t CNWSMessage__ComputeNumAutoMapUpdatesRequired = 0x0008DE90;
-constexpr uintptr_t CNWSMessage__ComputeQuickbarItemUseCountUpdateRequired = 0x000A1A10;
-constexpr uintptr_t CNWSMessage__ComputeRepositoryUpdateRequired = 0x0008D360;
-constexpr uintptr_t CNWSMessage__ComputeUpdateRequired = 0x0008E550;
-constexpr uintptr_t CNWSMessage__ComputeVisibilityLists = 0x0008D7A0;
-constexpr uintptr_t CNWSMessage__CreateNewLastUpdateObject = 0x000A32D0;
-constexpr uintptr_t CNWSMessage__DeleteLastUpdateObjectsForObject = 0x00090AF0;
-constexpr uintptr_t CNWSMessage__DeleteLastUpdateObjectsInOtherAreas = 0x00090830;
-constexpr uintptr_t CNWSMessage__GetLocStringServer = 0x0007DFB0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerAreaMessage = 0x001B8740;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerBarter = 0x001BB390;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerBarter_AcceptTrade = 0x001BB240;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerBarter_AddItem = 0x001BAE60;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerBarter_CloseBarter = 0x001BAD50;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerBarter_LockList = 0x001BB190;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerBarter_MoveItem = 0x001BB080;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerBarter_RemoveItem = 0x001BAF70;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerBarter_StartBarter = 0x001BACB0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerBarter_Window = 0x001BB2F0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerCharacterDownload = 0x001BBE20;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerCharacterSheetMessage = 0x001B1170;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerCharListMessage = 0x001B8150;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerChatMessage = 0x001AC840;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerCheatMessage = 0x001ACD70;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerCutscene = 0x001BC240;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerDialogMessage = 0x001AFF70;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerDungeonMasterMessage = 0x001BC570;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerGameObjectUpdate = 0x001B00B0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerGoldMessage = 0x001B2620;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerGroupInputMessage = 0x001B4F60;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerGroupInputWalkToWaypoint = 0x001B1BF0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerGuiContainerMessage = 0x001B0EB0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerGuiInventoryMessage = 0x001B0CF0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerGuiQuickbar = 0x001BA4D0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerGuiQuickbar_SetButton = 0x001B9AB0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerInputAbortDriveControl = 0x001B1490;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerInputCancelGuiTimingEvent = 0x001B1540;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerInputDriveControl = 0x001B12B0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerInputMessage = 0x001B2800;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerInputWalkToWaypoint = 0x001B15C0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerInventoryMessage = 0x001B6B30;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerJournalMessage = 0x001B9750;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerLevelUpMessage = 0x001C3050;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerLoginMessage = 0x001B7B70;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerMapPinChangePin = 0x001BA9D0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerMapPinDestroyMapPin = 0x001BA830;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerMapPinMessage = 0x001BAC60;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerMapPinSetMapPinAt = 0x001BA4F0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerMessage = 0x001C35D0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerModuleMessage = 0x001B82F0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerParty = 0x001B88E0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerPlayerDeath = 0x001BB450;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerPlayerList = 0x001BC330;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerPlayModuleCharacterList = 0x001BC1C0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerPlayModuleCharacterList_Start = 0x001BC010;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerPlayModuleCharacterList_Stop = 0x001BC160;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerPortal = 0x001BBD60;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerPVPListOperations = 0x001BB520;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerQuickChatMessage = 0x001AC770;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerServerChatMessage = 0x001B96E0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerServerStatusMessage = 0x001B96F0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerShutDownServer = 0x001BBEB0;
-constexpr uintptr_t CNWSMessage__HandlePlayerToServerStoreMessage = 0x001B2090;
-constexpr uintptr_t CNWSMessage__HandleServerAdminToServerMessage = 0x001C41B0;
-constexpr uintptr_t CNWSMessage__HasValidString = 0x000A01E0;
-constexpr uintptr_t CNWSMessage__ParseGetBool = 0x001C4000;
-constexpr uintptr_t CNWSMessage__ParseGetString = 0x001C4050;
-constexpr uintptr_t CNWSMessage__ParseToken = 0x001C4100;
-constexpr uintptr_t CNWSMessage__ReadOBJECTIDServer = 0x0007DB00;
-constexpr uintptr_t CNWSMessage__SelectCategoryForGameObject = 0x0008FBF0;
-constexpr uintptr_t CNWSMessage__SendPlayerToServerGuiInventory_Status = 0x0009CF30;
-constexpr uintptr_t CNWSMessage__SendServerPlayerItemUpdate_DestroyItem = 0x0009D3B0;
-constexpr uintptr_t CNWSMessage__SendServerToAllPlayersCreatureUpdate_StripEquippedItems = 0x0009D280;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerActivatePortal = 0x000A0E90;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerAIActionPlaySound = 0x000939D0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerAmbientBattleMusicChange = 0x000A0C50;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerAmbientBattleMusicPlay = 0x000A0BC0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerAmbientMusicChangeTrack = 0x000A0B30;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerAmbientMusicPlay = 0x000A0A10;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerAmbientMusicSetDelay = 0x000A0AA0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerAmbientSoundLoopChange = 0x000A0D70;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerAmbientSoundLoopPlay = 0x000A0CE0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerAmbientSoundVolumeChange = 0x000A0E00;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerArea_ChangeDayNight = 0x000935F0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerArea_ClientArea = 0x00092E20;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerArea_RecomputeStaticLighting = 0x00098B80;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerArea_SetName = 0x00093690;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerArea_VisualEffect = 0x00093480;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerArea_Weather = 0x00093550;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerBarterAcceptTrade = 0x0009FE60;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerBarterCloseBarter = 0x0009FCF0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerBarterLockList = 0x0009FDB0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerBarterReject = 0x0009FF10;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerBarterStartBarter = 0x0009FC40;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCamera_ChangeLocation = 0x00092340;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCamera_LockDistance = 0x00092670;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCamera_LockPitch = 0x000925E0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCamera_LockYaw = 0x00092700;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCamera_Restore = 0x00092530;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCamera_SetHeight = 0x00092550;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCamera_SetMode = 0x00092470;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCamera_Store = 0x00092510;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCCMessage = 0x00099D00;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCharacterDownloadFail = 0x000A10D0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCharacterDownloadReply = 0x000A0FE0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCharList = 0x000ACBD0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChat_DM_Silent_Shout = 0x000953A0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChat_DM_Talk = 0x00094370;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChat_DM_Whisper = 0x00095610;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChat_Party = 0x00094030;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChat_ServerTell = 0x00094AF0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChat_Shout = 0x00094BB0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChat_Silent_Shout = 0x00094F40;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChat_StrRef = 0x00093D20;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChat_Talk = 0x000942A0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChat_Tell = 0x00094880;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChat_Whisper = 0x000952D0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChatMessage = 0x00095890;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChatMultiLang_Helper = 0x000995A0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChatMultiLangMessage = 0x00099310;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerChatStrRefMessage = 0x00093DC0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCheatDebugMode = 0x0009BE30;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCheatNasty = 0x0009BC80;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCheatPonyRide = 0x0009BD10;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCheatRainOfCows = 0x0009BDA0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCloseStoreInventory = 0x000966B0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCombatRoundStarted = 0x0009C370;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCutscene_BlackScreen = 0x0009D1D0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCutscene_FadeFromBlack = 0x0009D110;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCutscene_FadeToBlack = 0x0009D070;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCutscene_HideGui = 0x0009D1F0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCutscene_Status = 0x0009CFD0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerCutscene_StopFade = 0x0009D1B0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDebugInfo_Area = 0x0009FB50;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDebugInfo_Creature = 0x0009EED0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDebugInfo_Door = 0x0009F8B0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDebugInfo_Item = 0x0009F390;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDebugInfo_Placeable = 0x0009F620;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDebugInfo_Trigger = 0x0009F4F0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDestroyDeathGUI = 0x000A18A0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDialogClose = 0x000972F0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDialogEntry = 0x00096FA0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDialogReplies = 0x00097060;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDialogReplyChosen = 0x00097210;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDungeonMasterAreaList__0 = 0x00097310;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDungeonMasterAreaList__1 = 0x000990D0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDungeonMasterCreatorLists = 0x00097600;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDungeonMasterObjectList = 0x000A50B0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDungeonMastersDifficultyChange = 0x00098A40;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDungeonMasterSearchByIdResult = 0x00097550;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDungeonMasterSearchByTagResult = 0x000A56E0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDungeonMasterUpdatePartyList__0 = 0x00097DD0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerDungeonMasterUpdatePartyList__1 = 0x00097DF0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerExamineGui_CreatureData = 0x000AEE50;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerExamineGui_DoorData = 0x00096D70;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerExamineGui_ItemData = 0x000A0350;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerExamineGui_PlaceableData = 0x000966D0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerExamineGui_TrapData = 0x00096870;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerGameObjUpdate__0 = 0x000ACBB0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerGameObjUpdate__1 = 0x000AC750;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerGameObjUpdate_ObjControl = 0x00096F10;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerGameObjUpdateFloatyText = 0x0009C2D0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerGameObjUpdateVisEffect = 0x0009BF40;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerGUICharacterSheet_NotPermitted = 0x000A1FA0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerGuiContainerObject_Status = 0x0009CE90;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerGuiQuickbar_SetButton = 0x0009E640;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerGuiTimingEvent = 0x000A18C0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerInventory_ConfirmDrop = 0x000981D0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerInventory_Drop = 0x00097E50;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerInventory_DropCancel = 0x00097EE0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerInventory_Equip = 0x00097F70;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerInventory_EquipCancel = 0x00098010;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerInventory_LearnScroll = 0x000A16E0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerInventory_Pickup = 0x000982F0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerInventory_PickupCancel = 0x00098380;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerInventory_RepositoryMove = 0x000980B0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerInventory_RepositoryMoveCancel = 0x00098140;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerInventory_SelectPage = 0x00092210;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerInventory_SelectPanel = 0x00098260;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerInventory_Unequip = 0x00098410;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerInventory_UnequipCancel = 0x000984A0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerJournalAddQuest = 0x0009D440;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerJournalAddWorld = 0x0009D720;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerJournalAddWorldStrref = 0x0009D860;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerJournalDeleteWorld = 0x0009D920;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerJournalDeleteWorldAll = 0x0009DA40;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerJournalDeleteWorldStrref = 0x0009D9B0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerJournalFullUpdate = 0x0009DBA0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerJournalFullUpdateNotNeeded = 0x0009DAD0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerJournalRemoveQuest = 0x0009D590;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerJournalSetQuestPicture = 0x0009D650;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerJournalUpdated = 0x0009E1F0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerLevelUp_Begin = 0x0009E2F0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerLevelUp_Confirmation = 0x0009E2A0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerLoadBar_EndStallEvent = 0x00092B40;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerLoadBar_StartStallEvent = 0x00092A10;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerLoadBar_UpdateStallEvent = 0x00092AA0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerLogin_CharacterQuery = 0x00092790;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerLogin_Confirm = 0x00098530;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerLogin_Fail = 0x00098570;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerLogin_GetWaypoint = 0x00098550;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerLogin_NeedCharacter = 0x000928A0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerMapPinAdded = 0x0009ECE0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerMapPinCreated = 0x0009EDF0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerMapPinEnabled = 0x0009EC40;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerMessage = 0x00092220;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerModule_DumpPlayer = 0x00092E00;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerModule_EndGame = 0x00092960;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerModule_EndStartNewModule = 0x00092D70;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerModule_ExportReply = 0x00092BE0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerModule_Info = 0x00099620;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerModule_Loading = 0x00092C70;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerModule_SaveGameStatus = 0x000928C0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerModule_SetPauseState = 0x00098860;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerModule_StartStartNewModule = 0x00092D40;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerModuleUpdate_Time = 0x0009E420;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerOpenStoreInventory = 0x00098600;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerParty_Invite = 0x00099700;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerParty_List = 0x00099710;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerParty_TransferObjectControl = 0x00099840;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerPartyBar_PanelButtonFlash = 0x000A1770;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerPlaceableUpdate_Useable = 0x000A2410;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerPlayerList_Add = 0x000AE950;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerPlayerList_All = 0x000ADF00;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerPlayerList_Delete = 0x000998D0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerPlayerList_ReauthorizeCDKey = 0x00099980;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerPlayModuleCharacterListResponse = 0x000AE550;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerPolymorph = 0x000A2030;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerPopUpGUIPanel = 0x0009FFD0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerPVP_Attitude_Change = 0x000A1250;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerQuickChat = 0x000945E0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerQuickChatMessage = 0x00094680;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerSafeProjectile = 0x00096420;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerSaveLoad_Status = 0x00092C90;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerServerStatus_Status = 0x00099A80;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerSetCustomToken = 0x00093770;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerSetCustomTokenList = 0x00093840;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerShutDownServer = 0x000A1810;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerSoundObject_ChangePosition = 0x00093C60;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerSoundObject_ChangeVolume = 0x00093BC0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerSoundObject_Play = 0x00093AA0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerSoundObject_Stop = 0x00093B30;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerStoreConfirmTransaction = 0x0009E5A0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerStringMessage = 0x000965F0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerUpdateActiveItemProperties = 0x0009C510;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerUpdateActiveItemPropertiesUses = 0x0009C400;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerUpdateBlackoutEffect = 0x000A1980;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerUpdateCharResponse = 0x000AF650;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerUpdateFogAmount = 0x0009CC40;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerUpdateFogColor = 0x0009CAB0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerUpdateItemHidden = 0x0009C880;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerUpdateItemName = 0x0009C6C0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerUpdateSkyBox = 0x0009C930;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerVoiceChat_Play = 0x0009CDE0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerWhirlwindAttack = 0x000A20D0;
-constexpr uintptr_t CNWSMessage__SendServerToPlayerWhirlwindAttackDamage = 0x000A2280;
-constexpr uintptr_t CNWSMessage__SendServerToServerAdminBannedList = 0x0020A7E0;
-constexpr uintptr_t CNWSMessage__SendServerToServerAdminMessage = 0x0020A3C0;
-constexpr uintptr_t CNWSMessage__SendServerToServerAdminModuleList = 0x0020CB30;
-constexpr uintptr_t CNWSMessage__SendServerToServerAdminPlayerList = 0x0020A6B0;
-constexpr uintptr_t CNWSMessage__SendServerToServerAdminPortalList = 0x0020A910;
-constexpr uintptr_t CNWSMessage__SendServerToServerAdminSaveGameList = 0x0020D730;
-constexpr uintptr_t CNWSMessage__SendServerToServerAdminSaveStatus = 0x0020CA60;
-constexpr uintptr_t CNWSMessage__SendServerToServerAdminServerSettings = 0x0020AA40;
-constexpr uintptr_t CNWSMessage__SendServerToServerAdminServerStatus = 0x0020A470;
-constexpr uintptr_t CNWSMessage__SortObjectsForGameObjectUpdate = 0x0008FCE0;
-constexpr uintptr_t CNWSMessage__StoreValuesInLastPlayerUpdateObject = 0x000ABDF0;
-constexpr uintptr_t CNWSMessage__StoreValuesInLastUpdateObject = 0x000A3260;
-constexpr uintptr_t CNWSMessage__StoreValuesInLastUpdatePartyObject = 0x00091F00;
-constexpr uintptr_t CNWSMessage__TestObjectUpdateDifferences = 0x000A3D70;
-constexpr uintptr_t CNWSMessage__TestObjectVisible = 0x00090250;
-constexpr uintptr_t CNWSMessage__TestPartyObjectUpdateDifferences = 0x00091870;
-constexpr uintptr_t CNWSMessage__TestPlayerUpdateDifferences = 0x000A73C0;
-constexpr uintptr_t CNWSMessage__UpdateLastUpdate_GuiEffectIcons = 0x000A1430;
-constexpr uintptr_t CNWSMessage__UpdateLastUpdateActionQueue = 0x0008DFD0;
-constexpr uintptr_t CNWSMessage__UpdateLastUpdateAutoMap = 0x0008DDD0;
-constexpr uintptr_t CNWSMessage__UpdateLastUpdateInventory = 0x00099C90;
-constexpr uintptr_t CNWSMessage__UpdateLastUpdateObject = 0x000A2630;
-constexpr uintptr_t CNWSMessage__UpdateLastUpdateObjectAppearance = 0x00099CC0;
-constexpr uintptr_t CNWSMessage__UpdateLastUpdateVisibilityList = 0x000A6F10;
-constexpr uintptr_t CNWSMessage__WriteCExoLocStringServer = 0x0007DBA0;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_CharacterSheet = 0x000A6070;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_DungeonMasterAIState = 0x000ABB20;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_MajorGUIPanels = 0x000AC5B0;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_MajorGUIPanels_HenchmanInventoryData = 0x00090CF0;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_MajorGUIPanels_Inventory = 0x000A4CE0;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_MinorGUIPanels = 0x000A6D70;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_PartyAIState = 0x000AB920;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_PlayerUpdate = 0x000A7800;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_UpdateAppearance = 0x000A4070;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_UpdateObject = 0x000A9340;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_UpdateQuickbarItemUseCount = 0x000A1BB0;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_WorkRemaining = 0x000900C0;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_WriteInventorySlotAdd = 0x0008FAB0;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_WriteInventorySlotDelete = 0x0008FB20;
-constexpr uintptr_t CNWSMessage__WriteGameObjUpdate_WriteInventorySlotUpdate = 0x0008FB70;
-constexpr uintptr_t CNWSMessage__WriteGuiEffectIconsUpdate = 0x000A5D50;
-constexpr uintptr_t CNWSMessage__WriteOBJECTIDServer = 0x0007DB30;
-constexpr uintptr_t CNWSMessage__WriteRepositoryUpdate = 0x00090E60;
-constexpr uintptr_t CNWSMessage__WriteStoreInventoryUpdate = 0x000913E0;
-
-constexpr uintptr_t CNWSModule__CNWSModuleCtor = 0x001E3F90;
-constexpr uintptr_t CNWSModule__CNWSModuleDtor__0 = 0x001DF270;
-constexpr uintptr_t CNWSModule__AddObjectToLimbo = 0x001E00D0;
-constexpr uintptr_t CNWSModule__AddObjectToLookupTable = 0x001DD4C0;
-constexpr uintptr_t CNWSModule__AddToTURDList = 0x001DDF50;
-constexpr uintptr_t CNWSModule__AddTURDsToWorld = 0x001DA0A0;
-constexpr uintptr_t CNWSModule__AddWorldJournalEntry = 0x001E03A0;
-constexpr uintptr_t CNWSModule__AddWorldJournalEntryStrref = 0x001E0660;
-constexpr uintptr_t CNWSModule__AIUpdate = 0x001DEB10;
-constexpr uintptr_t CNWSModule__AsNWSModule = 0x000BBD40;
-constexpr uintptr_t CNWSModule__CleanUpLimboList = 0x001DE870;
-constexpr uintptr_t CNWSModule__ClearAreaVisitedFlags = 0x001D99E0;
-constexpr uintptr_t CNWSModule__ComputeInterAreaPath = 0x001D9D70;
-constexpr uintptr_t CNWSModule__DeleteWorldJournalAllEntries = 0x001DDD90;
-constexpr uintptr_t CNWSModule__DeleteWorldJournalEntry = 0x001DDB50;
-constexpr uintptr_t CNWSModule__DeleteWorldJournalEntryStrref = 0x001DDC70;
-constexpr uintptr_t CNWSModule__DoUpdate = 0x001DECC0;
-constexpr uintptr_t CNWSModule__EventHandler = 0x001D9020;
-constexpr uintptr_t CNWSModule__FindObjectByTagOrdinal = 0x001DD8E0;
-constexpr uintptr_t CNWSModule__FindObjectByTagTypeOrdinal = 0x001DD9D0;
-constexpr uintptr_t CNWSModule__FindTagPositionInTable = 0x001DD410;
-constexpr uintptr_t CNWSModule__GenerateInterAreaDFSSuccessors = 0x001D9620;
-constexpr uintptr_t CNWSModule__GetArea__0 = 0x001D95A0;
-constexpr uintptr_t CNWSModule__GetArea__1 = 0x001D94C0;
-constexpr uintptr_t CNWSModule__GetAreaByName = 0x001D96D0;
-constexpr uintptr_t CNWSModule__GetAreaByTag = 0x001D9830;
-constexpr uintptr_t CNWSModule__GetFullCipher = 0x001E38F0;
-constexpr uintptr_t CNWSModule__GetPlayerIndexInPlayerList = 0x001DCD50;
-constexpr uintptr_t CNWSModule__GetPlayerTURDFromList = 0x001DAF80;
-constexpr uintptr_t CNWSModule__GetPrimaryPlayerIndex = 0x001DCF00;
-constexpr uintptr_t CNWSModule__GetTime = 0x001DE750;
-constexpr uintptr_t CNWSModule__GetWaypoint = 0x001DDB20;
-constexpr uintptr_t CNWSModule__GetWorldJournalIndexUnique = 0x001DDF00;
-constexpr uintptr_t CNWSModule__InterAreaDFS = 0x001D9A50;
-constexpr uintptr_t CNWSModule__IsObjectInLimbo = 0x001DE820;
-constexpr uintptr_t CNWSModule__IsOfficialCampaign = 0x001DED40;
-constexpr uintptr_t CNWSModule__LoadLimboCreatures = 0x001E0130;
-constexpr uintptr_t CNWSModule__LoadModuleFinish = 0x001DFE30;
-constexpr uintptr_t CNWSModule__LoadModuleInProgress = 0x001D9E50;
-constexpr uintptr_t CNWSModule__LoadModuleStart = 0x001E49B0;
-constexpr uintptr_t CNWSModule__LoadTURDList = 0x001DE1B0;
-constexpr uintptr_t CNWSModule__PackModuleIntoMessage = 0x001DEF70;
-constexpr uintptr_t CNWSModule__PackModuleResourcesIntoMessage = 0x001DA150;
-constexpr uintptr_t CNWSModule__PackPlayerCharacterListIntoMessage = 0x001DCFA0;
-constexpr uintptr_t CNWSModule__PlotInterAreaPath = 0x001DABA0;
-constexpr uintptr_t CNWSModule__PlotPath = 0x001DADA0;
-constexpr uintptr_t CNWSModule__PlotPathInArea = 0x001DA300;
-constexpr uintptr_t CNWSModule__PostProcess = 0x001DFC40;
-constexpr uintptr_t CNWSModule__RemoveFromTURDList = 0x001DE2B0;
-constexpr uintptr_t CNWSModule__RemoveObjectFromLimbo = 0x001DE7A0;
-constexpr uintptr_t CNWSModule__RemoveObjectFromLookupTable = 0x001DD790;
-constexpr uintptr_t CNWSModule__SaveLimboCreatures = 0x001DB9E0;
-constexpr uintptr_t CNWSModule__SaveModuleFAC = 0x001DB150;
-constexpr uintptr_t CNWSModule__SaveModuleFinish = 0x001E32D0;
-constexpr uintptr_t CNWSModule__SaveModuleIFOFinish = 0x001E31A0;
-constexpr uintptr_t CNWSModule__SaveModuleIFOStart = 0x001DBB80;
-constexpr uintptr_t CNWSModule__SaveModuleInProgress = 0x001DB580;
-constexpr uintptr_t CNWSModule__SaveModuleStart = 0x001DC9F0;
-constexpr uintptr_t CNWSModule__SavePlayers = 0x001E0870;
-constexpr uintptr_t CNWSModule__SaveStatic = 0x001DB750;
-constexpr uintptr_t CNWSModule__SaveTURDList = 0x001DAEB0;
-constexpr uintptr_t CNWSModule__SetIntraAreaGoal = 0x001DD3E0;
-constexpr uintptr_t CNWSModule__TimeStopSanityCheck = 0x001DE9B0;
-constexpr uintptr_t CNWSModule__UnloadModule = 0x001DD400;
-constexpr uintptr_t CNWSModule__UpdateTime = 0x001DE4A0;
-
-constexpr uintptr_t CNWSObject__CNWSObjectCtor = 0x001F2DE0;
-constexpr uintptr_t CNWSObject__CNWSObjectDtor__0 = 0x001F33E0;
-constexpr uintptr_t CNWSObject__AddAction = 0x001E9B80;
-constexpr uintptr_t CNWSObject__AddActionAfterFront = 0x001EAEE0;
-constexpr uintptr_t CNWSObject__AddActionNodeParameter = 0x001E99B0;
-constexpr uintptr_t CNWSObject__AddActionToFront = 0x001EABC0;
-constexpr uintptr_t CNWSObject__AddCloseDoorAction = 0x001EE650;
-constexpr uintptr_t CNWSObject__AddDoCommandAction = 0x001FA650;
-constexpr uintptr_t CNWSObject__AddGiveItemActions = 0x001FA3A0;
-constexpr uintptr_t CNWSObject__AddLockObjectAction = 0x001EE730;
-constexpr uintptr_t CNWSObject__AddLoopingVisualEffect = 0x001EBEB0;
-constexpr uintptr_t CNWSObject__AddMatchedExpressionString = 0x001EDA70;
-constexpr uintptr_t CNWSObject__AddOpenDoorAction = 0x001EE5E0;
-constexpr uintptr_t CNWSObject__AddTakeItemActions = 0x001FA470;
-constexpr uintptr_t CNWSObject__AddUnlockObjectAction = 0x001EE6C0;
-constexpr uintptr_t CNWSObject__AddUseObjectAction = 0x001FA300;
-constexpr uintptr_t CNWSObject__AIActionCloseDoor = 0x001F8240;
-constexpr uintptr_t CNWSObject__AIActionDialogObject = 0x001F6750;
-constexpr uintptr_t CNWSObject__AIActionDoCommand = 0x001F7310;
-constexpr uintptr_t CNWSObject__AIActionGiveItem = 0x001F7A80;
-constexpr uintptr_t CNWSObject__AIActionLockObject = 0x001F9480;
-constexpr uintptr_t CNWSObject__AIActionOpenDoor = 0x001FAAB0;
-constexpr uintptr_t CNWSObject__AIActionPauseDialog = 0x001F6E50;
-constexpr uintptr_t CNWSObject__AIActionPlayAnimation = 0x001F76B0;
-constexpr uintptr_t CNWSObject__AIActionPlaySound = 0x001F74C0;
-constexpr uintptr_t CNWSObject__AIActionResumeDialog = 0x001F6F90;
-constexpr uintptr_t CNWSObject__AIActionSetCommandable = 0x001FA290;
-constexpr uintptr_t CNWSObject__AIActionSpeak = 0x001F71C0;
-constexpr uintptr_t CNWSObject__AIActionSpeakStrRef = 0x001F7120;
-constexpr uintptr_t CNWSObject__AIActionTakeItem = 0x001F8040;
-constexpr uintptr_t CNWSObject__AIActionUnlockObject = 0x001F85A0;
-constexpr uintptr_t CNWSObject__AIActionUseObject = 0x001FB170;
-constexpr uintptr_t CNWSObject__AIActionWait = 0x001F7390;
-constexpr uintptr_t CNWSObject__AnimationStationary = 0x001EB320;
-constexpr uintptr_t CNWSObject__ApplyEffect = 0x001F0C10;
-constexpr uintptr_t CNWSObject__AsNWSObject = 0x0008B3B0;
-constexpr uintptr_t CNWSObject__BroadcastCounterSpellData = 0x001EE7A0;
-constexpr uintptr_t CNWSObject__BroadcastDialog = 0x001EDC40;
-constexpr uintptr_t CNWSObject__BroadcastFloatyData = 0x001E8630;
-constexpr uintptr_t CNWSObject__BroadcastFloatyDataSTRREF = 0x001E8800;
-constexpr uintptr_t CNWSObject__BroadcastSafeProjectile = 0x001EEE60;
-constexpr uintptr_t CNWSObject__BroadcastSpellData = 0x001EEAB0;
-constexpr uintptr_t CNWSObject__CalculateLastSpellProjectileTime = 0x001EF6F0;
-constexpr uintptr_t CNWSObject__CalculateSpellRangedMissTarget = 0x001EFA70;
-constexpr uintptr_t CNWSObject__ClearAction = 0x0008B3C0;
-constexpr uintptr_t CNWSObject__ClearAllActions = 0x001EB370;
-constexpr uintptr_t CNWSObject__ClearAllHostileActions = 0x001EB4D0;
-constexpr uintptr_t CNWSObject__ClearMatchedExpressionStrings = 0x001EDB90;
-constexpr uintptr_t CNWSObject__ClearSpellEffectsOnOthers = 0x001ECD30;
-constexpr uintptr_t CNWSObject__CopyScriptVars = 0x001E9EA0;
-constexpr uintptr_t CNWSObject__DeleteCurrentAIAction = 0x001EB2A0;
-constexpr uintptr_t CNWSObject__DoDamage = 0x001E8DD0;
-constexpr uintptr_t CNWSObject__DoDamageImmunity = 0x001F5780;
-constexpr uintptr_t CNWSObject__DoDamageReduction = 0x001F38A0;
-constexpr uintptr_t CNWSObject__DoDamageResistance = 0x001F44A0;
-constexpr uintptr_t CNWSObject__DoSpellImmunity = 0x001EB9E0;
-constexpr uintptr_t CNWSObject__DoSpellLevelAbsorption = 0x001EC410;
-constexpr uintptr_t CNWSObject__GetAcceptableAction = 0x001F6560;
-constexpr uintptr_t CNWSObject__GetActionByGroupId = 0x001E9530;
-constexpr uintptr_t CNWSObject__GetAIStateReaction = 0x001FCF80;
-constexpr uintptr_t CNWSObject__GetAQActionIDByID = 0x001F6590;
-constexpr uintptr_t CNWSObject__GetArea = 0x001ECF60;
-constexpr uintptr_t CNWSObject__GetCurrentHitPoints = 0x001E85E0;
-constexpr uintptr_t CNWSObject__GetDamageImmunity = 0x001E8890;
-constexpr uintptr_t CNWSObject__GetDamageImmunityByFlags = 0x001E89E0;
-constexpr uintptr_t CNWSObject__GetDamageLevel = 0x001EBCE0;
-constexpr uintptr_t CNWSObject__GetDead = 0x001EE340;
-constexpr uintptr_t CNWSObject__GetDialogInterruptable = 0x0008B3D0;
-constexpr uintptr_t CNWSObject__GetDialogResref = 0x0008B520;
-constexpr uintptr_t CNWSObject__GetEffectSpellId = 0x0008B3F0;
-constexpr uintptr_t CNWSObject__GetFirstName = 0x000B37C0;
-constexpr uintptr_t CNWSObject__GetGender = 0x001E8610;
-constexpr uintptr_t CNWSObject__GetHasFeatEffectApplied = 0x001F0700;
-constexpr uintptr_t CNWSObject__GetIDByAQActionID = 0x001F6720;
-constexpr uintptr_t CNWSObject__GetIsPCDying = 0x001EE4F0;
-constexpr uintptr_t CNWSObject__GetLastDamageAmountByFlags = 0x001EB9A0;
-constexpr uintptr_t CNWSObject__GetLastName = 0x000B37D0;
-constexpr uintptr_t CNWSObject__GetListenExpressionObj = 0x001ED600;
-constexpr uintptr_t CNWSObject__GetLockOrientationToObject = 0x0008B420;
-constexpr uintptr_t CNWSObject__GetMaxHitPoints = 0x0008B3E0;
-constexpr uintptr_t CNWSObject__GetMaximumDamageResistanceVsDamageFlag = 0x001E8C00;
-constexpr uintptr_t CNWSObject__GetNearestObjectByName = 0x001ED250;
-constexpr uintptr_t CNWSObject__GetNewGroupID = 0x001E9980;
-constexpr uintptr_t CNWSObject__GetNodeById = 0x001E96F0;
-constexpr uintptr_t CNWSObject__GetNumActionGroups = 0x001E97A0;
-constexpr uintptr_t CNWSObject__GetPortrait = 0x0008B430;
-constexpr uintptr_t CNWSObject__GetPortraitId = 0x0008B470;
-constexpr uintptr_t CNWSObject__GetPositionByGroupIndex = 0x001E9630;
-constexpr uintptr_t CNWSObject__GetReputation = 0x001FA6E0;
-constexpr uintptr_t CNWSObject__GetScriptLocation = 0x001EE210;
-constexpr uintptr_t CNWSObject__HasSpellEffectApplied = 0x001EE270;
-constexpr uintptr_t CNWSObject__IsDialogDelay = 0x001ED1B0;
-constexpr uintptr_t CNWSObject__LoadActionQueue = 0x001EA080;
-constexpr uintptr_t CNWSObject__LoadEffectList = 0x001F14A0;
-constexpr uintptr_t CNWSObject__LoadListenData = 0x001ED810;
-constexpr uintptr_t CNWSObject__LoadObjectState = 0x001F15D0;
-constexpr uintptr_t CNWSObject__LoadVarTable = 0x001EAA30;
-constexpr uintptr_t CNWSObject__PlaySoundSet = 0x001ED500;
-constexpr uintptr_t CNWSObject__RemoveEffect = 0x001ECB40;
-constexpr uintptr_t CNWSObject__RemoveEffectByCreator = 0x001ECCD0;
-constexpr uintptr_t CNWSObject__RemoveEffectById = 0x001EC1C0;
-constexpr uintptr_t CNWSObject__RemoveEffectBySpellId = 0x001EE2D0;
-constexpr uintptr_t CNWSObject__RemoveEffectTarget = 0x001EC0A0;
-constexpr uintptr_t CNWSObject__RemoveGroup = 0x001E9850;
-constexpr uintptr_t CNWSObject__RemoveLoopingVisualEffect = 0x001EBFE0;
-constexpr uintptr_t CNWSObject__RemoveObjectFromDialog = 0x001F2A30;
-constexpr uintptr_t CNWSObject__RemoveSomeEffectsOfDurationType = 0x001ECAD0;
-constexpr uintptr_t CNWSObject__ReplyDialog = 0x001F2710;
-constexpr uintptr_t CNWSObject__ReportOverflow = 0x001F0780;
-constexpr uintptr_t CNWSObject__RunActions = 0x001FBBB0;
-constexpr uintptr_t CNWSObject__RunDialogOneLiner = 0x001F5A10;
-constexpr uintptr_t CNWSObject__SaveActionQueue = 0x001EA6C0;
-constexpr uintptr_t CNWSObject__SaveEffectList = 0x001EAA90;
-constexpr uintptr_t CNWSObject__SaveListenData = 0x001EAAC0;
-constexpr uintptr_t CNWSObject__SaveObjectState = 0x001EA9C0;
-constexpr uintptr_t CNWSObject__SaveVarTable = 0x001EAA60;
-constexpr uintptr_t CNWSObject__SendDialogEntry = 0x001F25B0;
-constexpr uintptr_t CNWSObject__SendDialogReplies = 0x001F2AB0;
-constexpr uintptr_t CNWSObject__SetAnimation = 0x001E85C0;
-constexpr uintptr_t CNWSObject__SetArea = 0x001ED090;
-constexpr uintptr_t CNWSObject__SetDamageImmunity = 0x001EB950;
-constexpr uintptr_t CNWSObject__SetDialogDelay = 0x001ED0E0;
-constexpr uintptr_t CNWSObject__SetDialogOwner = 0x001ED490;
-constexpr uintptr_t CNWSObject__SetEffectSpellId = 0x0008B400;
-constexpr uintptr_t CNWSObject__SetGroupInterruptable = 0x001E9A70;
-constexpr uintptr_t CNWSObject__SetLastHostileActor = 0x001F0A20;
-constexpr uintptr_t CNWSObject__SetListenExpression = 0x001ED640;
-constexpr uintptr_t CNWSObject__SetLockOrientationToObject = 0x0008B410;
-constexpr uintptr_t CNWSObject__SetOrientation = 0x001EBE80;
-constexpr uintptr_t CNWSObject__SetPortrait = 0x0008B4D0;
-constexpr uintptr_t CNWSObject__SetPortraitId = 0x001E8640;
-constexpr uintptr_t CNWSObject__SetPosition = 0x001ECFF0;
-constexpr uintptr_t CNWSObject__SetTag = 0x0025DB30;
-constexpr uintptr_t CNWSObject__SpawnBodyBag = 0x001F0340;
-constexpr uintptr_t CNWSObject__SpellCastAndImpact = 0x001EF040;
-constexpr uintptr_t CNWSObject__StartDialog = 0x001F5DB0;
-constexpr uintptr_t CNWSObject__StopDialog = 0x001F2840;
-constexpr uintptr_t CNWSObject__TerminateAISliceAfterAction = 0x001F6530;
-constexpr uintptr_t CNWSObject__TestActionList = 0x001E9B10;
-constexpr uintptr_t CNWSObject__TestListenExpression = 0x001ED9E0;
-constexpr uintptr_t CNWSObject__UpdateAttributesOnEffect = 0x0008B490;
-constexpr uintptr_t CNWSObject__UpdateDialog = 0x001F2C00;
-constexpr uintptr_t CNWSObject__UpdateEffectList = 0x001F1640;
-constexpr uintptr_t CNWSObject__UpdateEffectPtrs = 0x0008B480;
-
-constexpr uintptr_t CNWSObjectActionNode__CNWSObjectActionNodeCtor = 0x001E9440;
-constexpr uintptr_t CNWSObjectActionNode__CNWSObjectActionNodeDtor = 0x001E9470;
-
-constexpr uintptr_t CNWSpell__CNWSpellCtor = 0x001FF3B0;
-constexpr uintptr_t CNWSpell__CNWSpellDtor = 0x001FF750;
-constexpr uintptr_t CNWSpell__GetSpellHasSomaticComponent = 0x001FF920;
-constexpr uintptr_t CNWSpell__GetSpellHasVerbalComponent = 0x001FF8A0;
-constexpr uintptr_t CNWSpell__GetSpellLevel = 0x001FF7F0;
-constexpr uintptr_t CNWSpell__GetSpellNameText = 0x001FFA70;
-constexpr uintptr_t CNWSpell__GetSubRadialSpell = 0x001FF9A0;
-constexpr uintptr_t CNWSpell__SetSubRadialSpell = 0x001FF9D0;
-constexpr uintptr_t CNWSpell__SetSubRadialSpellCount = 0x001FFA00;
-
-constexpr uintptr_t CNWSpellArray__CNWSpellArrayCtor = 0x001FFB30;
-constexpr uintptr_t CNWSpellArray__CNWSpellArrayDtor = 0x001FFB50;
-constexpr uintptr_t CNWSpellArray__GetSpell = 0x001FFBC0;
-constexpr uintptr_t CNWSpellArray__Load = 0x001FFBF0;
-constexpr uintptr_t CNWSpellArray__OperatorMultiplication = 0x002023B0;
-
-constexpr uintptr_t CNWSPlaceable__CNWSPlaceableCtor = 0x00203460;
-constexpr uintptr_t CNWSPlaceable__CNWSPlaceableDtor__0 = 0x002082E0;
-constexpr uintptr_t CNWSPlaceable__AcquireItem = 0x002046D0;
-constexpr uintptr_t CNWSPlaceable__AcquireItemsFromObject = 0x00209A00;
-constexpr uintptr_t CNWSPlaceable__AddCastSpellActions = 0x00204F80;
-constexpr uintptr_t CNWSPlaceable__AddToArea = 0x002085D0;
-constexpr uintptr_t CNWSPlaceable__AIActionCastSpell = 0x002050E0;
-constexpr uintptr_t CNWSPlaceable__AIUpdate = 0x00203180;
-constexpr uintptr_t CNWSPlaceable__AsNWSPlaceable = 0x00163760;
-constexpr uintptr_t CNWSPlaceable__CalculateActionPoints = 0x00204340;
-constexpr uintptr_t CNWSPlaceable__CloseInventory = 0x002048C0;
-constexpr uintptr_t CNWSPlaceable__ClosePlaceableForAllPlayers = 0x00208100;
-constexpr uintptr_t CNWSPlaceable__DoDamage = 0x00203420;
-constexpr uintptr_t CNWSPlaceable__DropItemsIntoArea = 0x00204D10;
-constexpr uintptr_t CNWSPlaceable__EventHandler = 0x00208980;
-constexpr uintptr_t CNWSPlaceable__GetBodyBagAppearance = 0x00207ED0;
-constexpr uintptr_t CNWSPlaceable__GetDialogResref = 0x0020A290;
-constexpr uintptr_t CNWSPlaceable__GetEffectSpellId = 0x0020A2F0;
-constexpr uintptr_t CNWSPlaceable__GetFirstName = 0x000B0250;
-constexpr uintptr_t CNWSPlaceable__GetItemCount = 0x00208050;
-constexpr uintptr_t CNWSPlaceable__GetLightIsOn = 0x002053C0;
-constexpr uintptr_t CNWSPlaceable__GetNearestActionPoint = 0x00204DB0;
-constexpr uintptr_t CNWSPlaceable__LoadBodyBag = 0x00203A20;
-constexpr uintptr_t CNWSPlaceable__LoadFromTemplate = 0x0020A0F0;
-constexpr uintptr_t CNWSPlaceable__LoadPlaceable = 0x00205470;
-constexpr uintptr_t CNWSPlaceable__OpenInventory = 0x00204A80;
-constexpr uintptr_t CNWSPlaceable__PostProcess = 0x00203940;
-constexpr uintptr_t CNWSPlaceable__RemoveFromArea = 0x002081D0;
-constexpr uintptr_t CNWSPlaceable__RemoveItem = 0x00204650;
-constexpr uintptr_t CNWSPlaceable__SavePlaceable = 0x00207280;
-constexpr uintptr_t CNWSPlaceable__SetEffectSpellId = 0x0020A300;
-constexpr uintptr_t CNWSPlaceable__SetLightIsOn = 0x00205300;
-constexpr uintptr_t CNWSPlaceable__SetOrientation = 0x00204520;
-
-constexpr uintptr_t CNWSPlayer__CNWSPlayerCtor = 0x0007E9D0;
-constexpr uintptr_t CNWSPlayer__CNWSPlayerDtor__0 = 0x00082620;
-constexpr uintptr_t CNWSPlayer__AddArea = 0x00080F80;
-constexpr uintptr_t CNWSPlayer__AddDMAbilities = 0x0007F040;
-constexpr uintptr_t CNWSPlayer__AllocateAreas = 0x00080F00;
-constexpr uintptr_t CNWSPlayer__AsNWSPlayer = 0x000876B0;
-constexpr uintptr_t CNWSPlayer__BackupServerCharacter = 0x0007F8E0;
-constexpr uintptr_t CNWSPlayer__CleanMyTURDs = 0x0007ECA0;
-constexpr uintptr_t CNWSPlayer__ClearPlayerLastUpdateObject = 0x00081460;
-constexpr uintptr_t CNWSPlayer__ClearPlayerOnDestroyGame = 0x000828D0;
-constexpr uintptr_t CNWSPlayer__CreateNewPlayerLastUpdateObject = 0x000813E0;
-constexpr uintptr_t CNWSPlayer__DropTURD = 0x00081050;
-constexpr uintptr_t CNWSPlayer__EatTURD = 0x000817A0;
-constexpr uintptr_t CNWSPlayer__GetCharacterInfoFromIFO = 0x0007EE20;
-constexpr uintptr_t CNWSPlayer__GetGameObject = 0x0007FBA0;
-constexpr uintptr_t CNWSPlayer__GetIsAllowedToSave = 0x0007ED90;
-constexpr uintptr_t CNWSPlayer__GetLastUpdateObject = 0x0007ED00;
-constexpr uintptr_t CNWSPlayer__GetPlayerName = 0x00080FD0;
-constexpr uintptr_t CNWSPlayer__HasExpansionPack = 0x00082320;
-constexpr uintptr_t CNWSPlayer__LoadCharacterFromIFO = 0x00081B70;
-constexpr uintptr_t CNWSPlayer__LoadCreatureData = 0x000864E0;
-constexpr uintptr_t CNWSPlayer__LoadDMCharacter = 0x00087420;
-constexpr uintptr_t CNWSPlayer__LoadLocalCharacter = 0x00087340;
-constexpr uintptr_t CNWSPlayer__LoadServerCharacter = 0x00087530;
-constexpr uintptr_t CNWSPlayer__LoadTURDInfoFromIFO = 0x0007FDA0;
-constexpr uintptr_t CNWSPlayer__PackCreatureIntoMessage = 0x00080050;
-constexpr uintptr_t CNWSPlayer__PermittedToDisplayCharacterSheet = 0x00082280;
-constexpr uintptr_t CNWSPlayer__RestoreCameraSettings = 0x00082390;
-constexpr uintptr_t CNWSPlayer__SaveServerCharacter = 0x00085600;
-constexpr uintptr_t CNWSPlayer__SetAreaTransitionBMP = 0x0007EDD0;
-constexpr uintptr_t CNWSPlayer__SetGameObject = 0x000814B0;
-constexpr uintptr_t CNWSPlayer__StoreCameraSettings = 0x00082350;
-constexpr uintptr_t CNWSPlayer__StripAllInvalidItemPropertiesInInventory = 0x00082530;
-constexpr uintptr_t CNWSPlayer__StripAllInvalidItemPropertiesOnItem = 0x000823D0;
-constexpr uintptr_t CNWSPlayer__ValidateCharacter = 0x00082B60;
-constexpr uintptr_t CNWSPlayer__ValidateCharacter_SetNormalBonusFlags = 0x0007FAC0;
-
-constexpr uintptr_t CNWSPlayerCharSheetGUI__ComputeCharacterSheetUpdateRequired = 0x00080700;
-constexpr uintptr_t CNWSPlayerCharSheetGUI__SetCreatureDisplayed = 0x0007E4C0;
-
-constexpr uintptr_t CNWSPlayerContainerGUI__CNWSPlayerContainerGUICtor = 0x0007E800;
-constexpr uintptr_t CNWSPlayerContainerGUI__SetNextPage = 0x0007E830;
-constexpr uintptr_t CNWSPlayerContainerGUI__SetOpen = 0x0007E950;
-constexpr uintptr_t CNWSPlayerContainerGUI__SetPreviousPage = 0x0007E8C0;
-
-constexpr uintptr_t CNWSPlayerInventoryGUI__CNWSPlayerInventoryGUICtor = 0x0007E540;
-constexpr uintptr_t CNWSPlayerInventoryGUI__CNWSPlayerInventoryGUIDtor = 0x0007E5C0;
-constexpr uintptr_t CNWSPlayerInventoryGUI__SetOpen = 0x0007E620;
-constexpr uintptr_t CNWSPlayerInventoryGUI__SetOwner = 0x0007E770;
-constexpr uintptr_t CNWSPlayerInventoryGUI__SetPanel = 0x0007FD10;
-
-constexpr uintptr_t CNWSPlayerLastUpdateObject__CNWSPlayerLastUpdateObjectCtor = 0x00088740;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__CNWSPlayerLastUpdateObjectDtor = 0x000894F0;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__AddKnownSpell = 0x00089A20;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__ClearActionQueue = 0x00089010;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__ClearAutoMapData = 0x00089070;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__ClearEffectIcons = 0x000889E0;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__ClearKnownSpells = 0x000893E0;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__ClearKnownSpellUsesLeft = 0x00088EA0;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__ClearMemorizedSpells = 0x00088940;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__ClearSpellAddDeleteLists = 0x00089430;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__ClearVisibilityList = 0x00088F40;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__GetIsDomainSpell = 0x00088C20;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__GetKnownSpell = 0x00088B60;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__GetKnownSpellUsesLeft = 0x00088ED0;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__GetMemorizedSpell = 0x00088BA0;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__GetMemorizedSpellMetaType = 0x00088C60;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__GetMemorizedSpellReadied = 0x00088BE0;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__InitializeAutoMapData = 0x000890C0;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__ResetAutoMapData = 0x00089150;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__SetKnownSpellUsesLeft = 0x00088F10;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__SetMemorizedSpellReadied = 0x00088CA0;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__SetMemorizedSpellSlot = 0x00088A90;
-constexpr uintptr_t CNWSPlayerLastUpdateObject__SetNumberMemorizedSpellSlots = 0x00088CE0;
-
-constexpr uintptr_t CNWSPlayerLUOInventory__CNWSPlayerLUOInventoryCtor = 0x00089190;
-constexpr uintptr_t CNWSPlayerLUOInventory__CNWSPlayerLUOInventoryDtor = 0x000892F0;
-constexpr uintptr_t CNWSPlayerLUOInventory__ClearBarter = 0x000879A0;
-constexpr uintptr_t CNWSPlayerLUOInventory__ClearContainer = 0x000878F0;
-constexpr uintptr_t CNWSPlayerLUOInventory__ClearRepository = 0x000878A0;
-constexpr uintptr_t CNWSPlayerLUOInventory__ClearSlots = 0x000879F0;
-constexpr uintptr_t CNWSPlayerLUOInventory__ClearStore = 0x00087940;
-constexpr uintptr_t CNWSPlayerLUOInventory__ItemListAddHead = 0x00088040;
-constexpr uintptr_t CNWSPlayerLUOInventory__ItemListGetItem = 0x00087A30;
-constexpr uintptr_t CNWSPlayerLUOInventory__ItemListGetItemObjectID = 0x00087B50;
-constexpr uintptr_t CNWSPlayerLUOInventory__ItemListGetNext = 0x00087DC0;
-constexpr uintptr_t CNWSPlayerLUOInventory__ItemListGetNumber = 0x00087F20;
-constexpr uintptr_t CNWSPlayerLUOInventory__ItemListGetPrev = 0x00087E70;
-constexpr uintptr_t CNWSPlayerLUOInventory__ItemListGetUpdateItem = 0x00087C10;
-constexpr uintptr_t CNWSPlayerLUOInventory__ItemListRemove = 0x00087F80;
-constexpr uintptr_t CNWSPlayerLUOInventory__ItemListSetEnd = 0x00087D40;
-constexpr uintptr_t CNWSPlayerLUOInventory__ItemListSetStart = 0x00087CC0;
-
-constexpr uintptr_t CNWSPlayerStoreGUI__CNWSPlayerStoreGUICtor = 0x0007E480;
-constexpr uintptr_t CNWSPlayerStoreGUI__CloseStore = 0x0007FC00;
-constexpr uintptr_t CNWSPlayerStoreGUI__OpenStore = 0x00080530;
-
-constexpr uintptr_t CNWSPlayerTURD__CNWSPlayerTURDCtor = 0x00089C00;
-constexpr uintptr_t CNWSPlayerTURD__CNWSPlayerTURDDtor__0 = 0x0008A040;
-constexpr uintptr_t CNWSPlayerTURD__AddToArea = 0x00089D60;
-constexpr uintptr_t CNWSPlayerTURD__AIUpdate = 0x00089BE0;
-constexpr uintptr_t CNWSPlayerTURD__AsNWSPlayerTURD = 0x0008B4A0;
-constexpr uintptr_t CNWSPlayerTURD__ClearAutomapData = 0x00089F80;
-constexpr uintptr_t CNWSPlayerTURD__CopyAutomapData = 0x0008A200;
-constexpr uintptr_t CNWSPlayerTURD__CopyEffectList = 0x00089E10;
-constexpr uintptr_t CNWSPlayerTURD__EventHandler = 0x00089BF0;
-constexpr uintptr_t CNWSPlayerTURD__GetFirstName = 0x0008B4B0;
-constexpr uintptr_t CNWSPlayerTURD__GetLastName = 0x0008B4C0;
-constexpr uintptr_t CNWSPlayerTURD__LoadAutoMapData = 0x0008A310;
-constexpr uintptr_t CNWSPlayerTURD__LoadTURD = 0x0008AC00;
-constexpr uintptr_t CNWSPlayerTURD__RemoveFromArea = 0x00089D00;
-constexpr uintptr_t CNWSPlayerTURD__SaveAutoMapData = 0x0008A4C0;
-constexpr uintptr_t CNWSPlayerTURD__SaveTURD = 0x0008A5C0;
-constexpr uintptr_t CNWSPlayerTURD__SetPersonalReputation = 0x0008AB10;
-constexpr uintptr_t CNWSPlayerTURD__SetReputation = 0x0008AA30;
-
-constexpr uintptr_t CNWSRules__CNWSRulesCtor = 0x0020A390;
-constexpr uintptr_t CNWSRules__CNWSRulesDtor__0 = 0x0020A320;
-
-constexpr uintptr_t CNWSScriptVarTable__CNWSScriptVarTableDtor = 0x002139B0;
-constexpr uintptr_t CNWSScriptVarTable__DeleteIndex = 0x00213770;
-constexpr uintptr_t CNWSScriptVarTable__DestroyFloat = 0x00213930;
-constexpr uintptr_t CNWSScriptVarTable__DestroyInt = 0x00213830;
-constexpr uintptr_t CNWSScriptVarTable__DestroyLocation = 0x00213990;
-constexpr uintptr_t CNWSScriptVarTable__DestroyObject = 0x00213970;
-constexpr uintptr_t CNWSScriptVarTable__DestroyString = 0x00213950;
-constexpr uintptr_t CNWSScriptVarTable__GetFloat = 0x00213CB0;
-constexpr uintptr_t CNWSScriptVarTable__GetInt = 0x00213C80;
-constexpr uintptr_t CNWSScriptVarTable__GetLocation = 0x00213D90;
-constexpr uintptr_t CNWSScriptVarTable__GetObject = 0x00213D50;
-constexpr uintptr_t CNWSScriptVarTable__GetString = 0x00213CE0;
-constexpr uintptr_t CNWSScriptVarTable__LoadVarTable = 0x00214430;
-constexpr uintptr_t CNWSScriptVarTable__MatchIndex = 0x00213A70;
-constexpr uintptr_t CNWSScriptVarTable__SaveVarTable = 0x00213E10;
-constexpr uintptr_t CNWSScriptVarTable__SetFloat = 0x00214360;
-constexpr uintptr_t CNWSScriptVarTable__SetInt = 0x00214100;
-constexpr uintptr_t CNWSScriptVarTable__SetLocation = 0x002143E0;
-constexpr uintptr_t CNWSScriptVarTable__SetObject = 0x002143C0;
-constexpr uintptr_t CNWSScriptVarTable__SetString = 0x00214380;
-
-constexpr uintptr_t CNWSSoundObject__CNWSSoundObjectCtor = 0x0020DF10;
-constexpr uintptr_t CNWSSoundObject__CNWSSoundObjectDtor__0 = 0x0020DE90;
-constexpr uintptr_t CNWSSoundObject__AddToArea = 0x0020E3B0;
-constexpr uintptr_t CNWSSoundObject__AIUpdate = 0x0020DE70;
-constexpr uintptr_t CNWSSoundObject__AsNWSSoundObject = 0x0020F2C0;
-constexpr uintptr_t CNWSSoundObject__ChangePosition = 0x0020EA60;
-constexpr uintptr_t CNWSSoundObject__ChangeVolume = 0x0020E910;
-constexpr uintptr_t CNWSSoundObject__EventHandler = 0x0020DE80;
-constexpr uintptr_t CNWSSoundObject__GetPeopleInSoundRange = 0x0020EBC0;
-constexpr uintptr_t CNWSSoundObject__Load = 0x0020EBE0;
-constexpr uintptr_t CNWSSoundObject__PackIntoMessage = 0x0020E460;
-constexpr uintptr_t CNWSSoundObject__Play = 0x0020E6D0;
-constexpr uintptr_t CNWSSoundObject__RemoveFromArea = 0x0020E350;
-constexpr uintptr_t CNWSSoundObject__Save = 0x0020E020;
-constexpr uintptr_t CNWSSoundObject__Stop = 0x0020E7F0;
-
-constexpr uintptr_t CNWSSpellScriptData__LoadData = 0x001220E0;
-constexpr uintptr_t CNWSSpellScriptData__SaveData = 0x00121FD0;
-
-constexpr uintptr_t CNWSStats_Spell__CNWSStats_SpellCtor = 0x00164A40;
-
-constexpr uintptr_t CNWSStats_SpellLikeAbility__CNWSStats_SpellLikeAbilityCtor = 0x00164A60;
-
-constexpr uintptr_t CNWSStore__CNWSStoreCtor = 0x000B0C90;
-constexpr uintptr_t CNWSStore__CNWSStoreDtor__0 = 0x000B1610;
-constexpr uintptr_t CNWSStore__AcquireItem = 0x000B2490;
-constexpr uintptr_t CNWSStore__AddCustomer = 0x000B1C50;
-constexpr uintptr_t CNWSStore__AddItemToInventory = 0x000B2160;
-constexpr uintptr_t CNWSStore__AddToArea = 0x000B1490;
-constexpr uintptr_t CNWSStore__AIUpdate = 0x000B0C50;
-constexpr uintptr_t CNWSStore__AsNWSStore = 0x000B37E0;
-constexpr uintptr_t CNWSStore__CalculateItemBuyPrice = 0x000B1FB0;
-constexpr uintptr_t CNWSStore__CalculateItemSellPrice = 0x000B1950;
-constexpr uintptr_t CNWSStore__EventHandler = 0x000B1500;
-constexpr uintptr_t CNWSStore__GetAppropriateListId = 0x000B1A90;
-constexpr uintptr_t CNWSStore__GetCustomer = 0x000B1E80;
-constexpr uintptr_t CNWSStore__GetCustomerBuyRate = 0x000B1F30;
-constexpr uintptr_t CNWSStore__GetCustomerSellRate = 0x000B1EC0;
-constexpr uintptr_t CNWSStore__GetIsRestrictedBuyItem = 0x000B1BC0;
-constexpr uintptr_t CNWSStore__GetItemInInventory__0 = 0x000B20F0;
-constexpr uintptr_t CNWSStore__GetItemInInventory__1 = 0x000B2070;
-constexpr uintptr_t CNWSStore__LoadFromTemplate = 0x000B3600;
-constexpr uintptr_t CNWSStore__LoadStore = 0x000B28A0;
-constexpr uintptr_t CNWSStore__RemoveCustomer = 0x000B1DC0;
-constexpr uintptr_t CNWSStore__RemoveFromArea = 0x000B1430;
-constexpr uintptr_t CNWSStore__RemoveItem = 0x000B1A30;
-constexpr uintptr_t CNWSStore__RemoveItemFromInventory = 0x000B1AD0;
-constexpr uintptr_t CNWSStore__SaveStore = 0x000B0EF0;
-constexpr uintptr_t CNWSStore__SellItem = 0x000B2660;
-
-constexpr uintptr_t CNWSSysAdmin__CNWSSysAdminCtor = 0x00212310;
-constexpr uintptr_t CNWSSysAdmin__CNWSSysAdminDtor__0 = 0x002122A0;
-constexpr uintptr_t CNWSSysAdmin__AsNWSSysAdmin = 0x00212350;
-
-constexpr uintptr_t CNWSTile__CNWSTileCtor = 0x00212450;
-constexpr uintptr_t CNWSTile__CNWSTileDtor__0 = 0x002123C0;
-constexpr uintptr_t CNWSTile__AddTrigger = 0x002124D0;
-constexpr uintptr_t CNWSTile__ClearLineOfSight = 0x00212590;
-constexpr uintptr_t CNWSTile__ClippedLineSegmentWalkable = 0x00212720;
-constexpr uintptr_t CNWSTile__ComputeClippedLineSegment = 0x00212850;
-constexpr uintptr_t CNWSTile__ComputeHeight = 0x00212B40;
-constexpr uintptr_t CNWSTile__FindClosestRegion = 0x00212BF0;
-constexpr uintptr_t CNWSTile__GetExit = 0x00212C80;
-constexpr uintptr_t CNWSTile__GetExitNumber = 0x00212D20;
-constexpr uintptr_t CNWSTile__GetRegionCoords = 0x00212DA0;
-constexpr uintptr_t CNWSTile__GetRegionEntrance = 0x00212E40;
-constexpr uintptr_t CNWSTile__GetSurfaceMaterial = 0x002132C0;
-constexpr uintptr_t CNWSTile__GetTileData = 0x00212ED0;
-constexpr uintptr_t CNWSTile__GetTotalExits = 0x00212EE0;
-constexpr uintptr_t CNWSTile__GetWalkMesh = 0x00213270;
-constexpr uintptr_t CNWSTile__IntersectLineSegments = 0x002130C0;
-constexpr uintptr_t CNWSTile__InTrigger = 0x00212F20;
-constexpr uintptr_t CNWSTile__LoadWalkMesh = 0x00213240;
-constexpr uintptr_t CNWSTile__NoNonWalkPolysOnTile = 0x00213360;
-constexpr uintptr_t CNWSTile__PlotIntraTilePath = 0x00213470;
-constexpr uintptr_t CNWSTile__SetMainLightColor = 0x00212360;
-constexpr uintptr_t CNWSTile__SetSourceLightColor = 0x00212390;
-constexpr uintptr_t CNWSTile__SetTileData = 0x00213760;
-
-constexpr uintptr_t CNWSTransition__LoadFromGff = 0x000B3B40;
-constexpr uintptr_t CNWSTransition__LookupTarget = 0x000B38C0;
-constexpr uintptr_t CNWSTransition__SaveToGff = 0x000B3C20;
-constexpr uintptr_t CNWSTransition__SetTarget__0 = 0x000B3A50;
-constexpr uintptr_t CNWSTransition__SetTarget__1 = 0x000B39E0;
-constexpr uintptr_t CNWSTransition__Unlink = 0x000B3AD0;
-
-constexpr uintptr_t CNWSTrigger__CNWSTriggerCtor = 0x000B3F00;
-constexpr uintptr_t CNWSTrigger__CNWSTriggerDtor__0 = 0x000B71C0;
-constexpr uintptr_t CNWSTrigger__AddToArea = 0x000B77B0;
-constexpr uintptr_t CNWSTrigger__AIUpdate = 0x000B3CB0;
-constexpr uintptr_t CNWSTrigger__AsNWSTrigger = 0x000B87A0;
-constexpr uintptr_t CNWSTrigger__CalculateNearestPoint = 0x000B4270;
-constexpr uintptr_t CNWSTrigger__ComputeBoundingBox = 0x000B4490;
-constexpr uintptr_t CNWSTrigger__CreateNewGeometry__0 = 0x000B6920;
-constexpr uintptr_t CNWSTrigger__CreateNewGeometry__1 = 0x000B6B00;
-constexpr uintptr_t CNWSTrigger__EventHandler = 0x000B7420;
-constexpr uintptr_t CNWSTrigger__GetCanFireTrapOnObject = 0x000B6DF0;
-constexpr uintptr_t CNWSTrigger__GetClosestPointWithinTrigger = 0x000B49D0;
-constexpr uintptr_t CNWSTrigger__GetFacingPosition = 0x000B45D0;
-constexpr uintptr_t CNWSTrigger__GetFirstName = 0x000B0230;
-constexpr uintptr_t CNWSTrigger__GetScriptName = 0x000B6DD0;
-constexpr uintptr_t CNWSTrigger__GetTargetArea = 0x000B41F0;
-constexpr uintptr_t CNWSTrigger__InTrigger = 0x000B4790;
-constexpr uintptr_t CNWSTrigger__LineSegmentIntersectTrigger = 0x000B4670;
-constexpr uintptr_t CNWSTrigger__LoadFromTemplate = 0x000B7A50;
-constexpr uintptr_t CNWSTrigger__LoadTrigger = 0x000B4BB0;
-constexpr uintptr_t CNWSTrigger__OnEnterTrap = 0x000B6E20;
-constexpr uintptr_t CNWSTrigger__RemoveFromArea = 0x000B70D0;
-constexpr uintptr_t CNWSTrigger__SaveTrigger = 0x000B6190;
-
-constexpr uintptr_t CNWSWaypoint__CNWSWaypointCtor = 0x00214AB0;
-constexpr uintptr_t CNWSWaypoint__CNWSWaypointDtor__0 = 0x00215340;
-constexpr uintptr_t CNWSWaypoint__AddToArea = 0x002154A0;
-constexpr uintptr_t CNWSWaypoint__AIUpdate = 0x00214AA0;
-constexpr uintptr_t CNWSWaypoint__AsNWSWaypoint = 0x00215760;
-constexpr uintptr_t CNWSWaypoint__EventHandler = 0x00215560;
-constexpr uintptr_t CNWSWaypoint__GetFirstName = 0x00215770;
-constexpr uintptr_t CNWSWaypoint__LoadFromTemplate = 0x002155B0;
-constexpr uintptr_t CNWSWaypoint__LoadWaypoint = 0x00214B60;
-constexpr uintptr_t CNWSWaypoint__RemoveFromArea = 0x002152D0;
-constexpr uintptr_t CNWSWaypoint__SaveWaypoint = 0x002150D0;
-
-constexpr uintptr_t CNWTile__CNWTileCtor = 0x0007CCD0;
-constexpr uintptr_t CNWTile__CNWTileDtor__0 = 0x0007CC20;
-constexpr uintptr_t CNWTile__GetAnimLoop = 0x0007D080;
-constexpr uintptr_t CNWTile__GetLocation = 0x0007CD40;
-constexpr uintptr_t CNWTile__GetMainLightColor = 0x0007D040;
-constexpr uintptr_t CNWTile__GetSourceLightColor = 0x0007D060;
-constexpr uintptr_t CNWTile__RotateCanonicalToReal = 0x0007CED0;
-constexpr uintptr_t CNWTile__RotateCanonicalToRealTile = 0x0007CD70;
-constexpr uintptr_t CNWTile__RotateRealToCanonical = 0x0007CF50;
-constexpr uintptr_t CNWTile__RotateRealToCanonicalTile = 0x0007CE20;
-constexpr uintptr_t CNWTile__SetAnimLoop = 0x0007CC80;
-constexpr uintptr_t CNWTile__SetID = 0x0007CFD0;
-constexpr uintptr_t CNWTile__SetMainLightColor = 0x0007CC30;
-constexpr uintptr_t CNWTile__SetOrientation = 0x0007D030;
-constexpr uintptr_t CNWTile__SetPosition = 0x0007CFE0;
-constexpr uintptr_t CNWTile__SetReplaceTexture = 0x0007CC70;
-constexpr uintptr_t CNWTile__SetSourceLightColor = 0x0007CC50;
-
-constexpr uintptr_t CNWTileData__CNWTileDataCtor = 0x0007D620;
-constexpr uintptr_t CNWTileData__CNWTileDataDtor__0 = 0x0007D8D0;
-constexpr uintptr_t CNWTileData__AddPropertyMethodString = 0x0007D0B0;
-constexpr uintptr_t CNWTileData__GetCornerType = 0x0007D350;
-constexpr uintptr_t CNWTileData__GetEdgeType = 0x0007D4C0;
-constexpr uintptr_t CNWTileData__GetMapIcon = 0x0007D590;
-constexpr uintptr_t CNWTileData__GetModelResRef = 0x0007D170;
-constexpr uintptr_t CNWTileData__GetPropertyMethodStringList = 0x0007D140;
-constexpr uintptr_t CNWTileData__SetCornerType = 0x0007D200;
-constexpr uintptr_t CNWTileData__SetEdgeType = 0x0007D420;
-constexpr uintptr_t CNWTileData__SetMapIcon = 0x0007D5D0;
-constexpr uintptr_t CNWTileData__SetModelResRef = 0x0007D1B0;
-
-constexpr uintptr_t CNWTileSet__CNWTileSetCtor = 0x0006E200;
-constexpr uintptr_t CNWTileSet__CNWTileSetDtor__0 = 0x0006E160;
-constexpr uintptr_t CNWTileSet__GetCornerType = 0x0006CC70;
-constexpr uintptr_t CNWTileSet__GetEdgeType = 0x0006CCD0;
-constexpr uintptr_t CNWTileSet__GetEnvMapResRef = 0x0006CD30;
-constexpr uintptr_t CNWTileSet__GetHeightTransition = 0x0006CD70;
-constexpr uintptr_t CNWTileSet__GetTileData = 0x0006CD80;
-constexpr uintptr_t CNWTileSet__LoadTileSet = 0x0006CE80;
-constexpr uintptr_t CNWTileSet__ParseLine = 0x0006DEC0;
-constexpr uintptr_t CNWTileSet__SetTileValue = 0x0006DBD0;
-constexpr uintptr_t CNWTileSet__UnloadTileSet = 0x0006E0D0;
-
-constexpr uintptr_t CNWTileSetManager__CNWTileSetManagerCtor = 0x00069FF0;
-constexpr uintptr_t CNWTileSetManager__CNWTileSetManagerDtor = 0x0006A360;
-constexpr uintptr_t CNWTileSetManager__ClearTilePathNodes = 0x0006A280;
-constexpr uintptr_t CNWTileSetManager__ComputePathNodeInformation = 0x0006A470;
-constexpr uintptr_t CNWTileSetManager__ComputePathNodeRotation = 0x0006A3B0;
-constexpr uintptr_t CNWTileSetManager__GetTilePathNode = 0x0006C130;
-constexpr uintptr_t CNWTileSetManager__InitializeTilePathNodes = 0x0006A240;
-constexpr uintptr_t CNWTileSetManager__RegisterTileSet = 0x0006A050;
-constexpr uintptr_t CNWTileSetManager__UnregisterTileSet = 0x0006A1D0;
-
-constexpr uintptr_t CNWTileSurfaceMesh__CNWTileSurfaceMeshCtor = 0x0006E9D0;
-constexpr uintptr_t CNWTileSurfaceMesh__CNWTileSurfaceMeshDtor__0 = 0x0006ED00;
-constexpr uintptr_t CNWTileSurfaceMesh__CheckAABBNode = 0x0006F760;
-constexpr uintptr_t CNWTileSurfaceMesh__CheckAABBNodeOneWay = 0x0006FA40;
-constexpr uintptr_t CNWTileSurfaceMesh__ClearLineOfSight = 0x00073610;
-constexpr uintptr_t CNWTileSurfaceMesh__ClearLineOfSightOneWay = 0x00073690;
-constexpr uintptr_t CNWTileSurfaceMesh__ClearSubdivision = 0x0006EC10;
-constexpr uintptr_t CNWTileSurfaceMesh__ClippedLineSegmentWalkable = 0x000749E0;
-constexpr uintptr_t CNWTileSurfaceMesh__ComputeClippedLineSegment = 0x000730A0;
-constexpr uintptr_t CNWTileSurfaceMesh__ComputeHeight = 0x00073B60;
-constexpr uintptr_t CNWTileSurfaceMesh__ComputePathNodes = 0x0006FC80;
-constexpr uintptr_t CNWTileSurfaceMesh__ComputeTriangleAdjacency = 0x0006FCF0;
-constexpr uintptr_t CNWTileSurfaceMesh__ConvertToTileOrientation = 0x00070D20;
-constexpr uintptr_t CNWTileSurfaceMesh__EstimateDistanceToTarget = 0x00070210;
-constexpr uintptr_t CNWTileSurfaceMesh__FindClosestRegion = 0x00073D60;
-constexpr uintptr_t CNWTileSurfaceMesh__FindRegionViaTriangle = 0x00073710;
-constexpr uintptr_t CNWTileSurfaceMesh__FindTriangle = 0x00073840;
-constexpr uintptr_t CNWTileSurfaceMesh__GenerateBestIntraTileExit = 0x00075C50;
-constexpr uintptr_t CNWTileSurfaceMesh__GetExit = 0x00073FD0;
-constexpr uintptr_t CNWTileSurfaceMesh__GetExitNumber = 0x00070290;
-constexpr uintptr_t CNWTileSurfaceMesh__GetLOSMaterials = 0x0006E8D0;
-constexpr uintptr_t CNWTileSurfaceMesh__GetPathNode = 0x00070400;
-constexpr uintptr_t CNWTileSurfaceMesh__GetPathNodeOrientation = 0x00070410;
-constexpr uintptr_t CNWTileSurfaceMesh__GetRegionCoords = 0x00070420;
-constexpr uintptr_t CNWTileSurfaceMesh__GetRegionEntrance = 0x00070490;
-constexpr uintptr_t CNWTileSurfaceMesh__GetSurfaceMaterial = 0x00073AF0;
-constexpr uintptr_t CNWTileSurfaceMesh__GetTopLevelVertexGeometry = 0x00074070;
-constexpr uintptr_t CNWTileSurfaceMesh__GetTotalExits = 0x000705A0;
-constexpr uintptr_t CNWTileSurfaceMesh__GetTriangleAdjacency = 0x000705E0;
-constexpr uintptr_t CNWTileSurfaceMesh__GetTriangleCentroid = 0x00070650;
-constexpr uintptr_t CNWTileSurfaceMesh__GetTriangleVertices = 0x00070690;
-constexpr uintptr_t CNWTileSurfaceMesh__GetVertexGeometry__0 = 0x00070740;
-constexpr uintptr_t CNWTileSurfaceMesh__GetVertexGeometry__1 = 0x00070700;
-constexpr uintptr_t CNWTileSurfaceMesh__GetWalkMesh = 0x00070780;
-constexpr uintptr_t CNWTileSurfaceMesh__IntersectLineSegments = 0x000740E0;
-constexpr uintptr_t CNWTileSurfaceMesh__IntraTileDFS = 0x00077AD0;
-constexpr uintptr_t CNWTileSurfaceMesh__IntraTileDFSGenerateSuccessors = 0x00076C50;
-constexpr uintptr_t CNWTileSurfaceMesh__LoadDefaultWalkMesh = 0x00070900;
-constexpr uintptr_t CNWTileSurfaceMesh__LoadWalkMesh = 0x00070E00;
-constexpr uintptr_t CNWTileSurfaceMesh__LoadWalkMeshString = 0x00070CE0;
-constexpr uintptr_t CNWTileSurfaceMesh__NoNonWalkPolysOnTile = 0x000751B0;
-constexpr uintptr_t CNWTileSurfaceMesh__PlotIntraTilePath = 0x000785A0;
-constexpr uintptr_t CNWTileSurfaceMesh__PolyHit = 0x0006F380;
-constexpr uintptr_t CNWTileSurfaceMesh__PrintAABBTreeToPrintLog = 0x00070B70;
-constexpr uintptr_t CNWTileSurfaceMesh__RunSubdivision = 0x00078020;
-constexpr uintptr_t CNWTileSurfaceMesh__SetPathNode = 0x00070D10;
-constexpr uintptr_t CNWTileSurfaceMesh__SetWalkMesh = 0x00070DB0;
-constexpr uintptr_t CNWTileSurfaceMesh__Subdivide = 0x00078340;
-constexpr uintptr_t CNWTileSurfaceMesh__TestLineForWalkableOnArea = 0x000707C0;
-constexpr uintptr_t CNWTileSurfaceMesh__TestLineForWalkableOnTile = 0x00075AB0;
-
-constexpr uintptr_t CNWTileSurfaceMeshAABBNode__CNWTileSurfaceMeshAABBNodeDtor = 0x00078D40;
-
-constexpr uintptr_t CNWTileSurfaceMeshHashTableEntry__CNWTileSurfaceMeshHashTableEntryCtor = 0x0006E840;
-constexpr uintptr_t CNWTileSurfaceMeshHashTableEntry__Fetch = 0x0006E860;
-constexpr uintptr_t CNWTileSurfaceMeshHashTableEntry__Store = 0x0006E8A0;
-
-constexpr uintptr_t CNWVirtualMachineCommands__CNWVirtualMachineCommandsDtor__0 = 0x002157F0;
-constexpr uintptr_t CNWVirtualMachineCommands__CopyGameDefinedStructure = 0x0021AA90;
-constexpr uintptr_t CNWVirtualMachineCommands__CreateGameDefinedStructure = 0x0021A980;
-constexpr uintptr_t CNWVirtualMachineCommands__DebugGUIGetMessageFrom = 0x0021BB90;
-constexpr uintptr_t CNWVirtualMachineCommands__DebugGUISendMessageTo = 0x0021BB50;
-constexpr uintptr_t CNWVirtualMachineCommands__DebugGUIStart = 0x0021B640;
-constexpr uintptr_t CNWVirtualMachineCommands__DebugGUIStop = 0x0021BB10;
-constexpr uintptr_t CNWVirtualMachineCommands__DebugGUIUpdate = 0x002157E0;
-constexpr uintptr_t CNWVirtualMachineCommands__DestroyGameDefinedStructure = 0x0021AE50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommand = 0x00215780;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionCounterSpell = 0x00233620;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionDoCommand = 0x0022EA80;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionEquipMostDamagingMelee = 0x00231A00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionEquipMostDamagingRanged = 0x00231AD0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionEquipMostEffectiveArmor = 0x00231D60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionExamine = 0x0021FB80;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionExchangeItem = 0x00244900;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionFollowObject = 0x0021F8A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionInteractObject = 0x0022F740;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionJumpToObject = 0x00221080;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionJumpToPoint = 0x0023BF80;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionLockActions = 0x0024A4A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionMoveAwayFromLocation = 0x00247F10;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionPauseConversation = 0x0023AB00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionRandomWalk = 0x0021EAB0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionRest = 0x00231B90;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionResumeConversation = 0x0023AA20;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionSit = 0x00232E00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionStartConversation = 0x0022D690;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionUseFeat = 0x002456A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionUseSkill = 0x00245830;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActionUseTalent = 0x0022EEC0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandActivatePortal = 0x00249BC0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandAddItemProperty = 0x0024D390;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandAddJournalQuestEntry = 0x00248250;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandAddToParty = 0x0022F550;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandAdjustAlignment = 0x0022E460;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandAdjustReputation = 0x0022D880;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandAmbientSound = 0x00232480;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandApplyEffectAtPoint = 0x0022D9A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandApplyEffectOnObject = 0x002423A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandAreaManagement = 0x0025C840;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandAssignCommand = 0x0021D8E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandAssociateAccess = 0x00230060;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandAttack = 0x002238A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandAutoMapExplorationManagement = 0x002534E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandBeginConversation = 0x00243490;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandBlackScreen = 0x00238BA0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandBootPC = 0x00225A30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandCastSpell = 0x0023B800;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandChangeFaction = 0x0022C000;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandClearAllActions = 0x0023AE00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandCloseDoor = 0x0023E320;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandCopyItem = 0x0024C670;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandCopyItemAndModify = 0x00257F10;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandCopyObject = 0x00255610;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandCreateItemOnObject = 0x0023CAF0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandCreateObject = 0x00258960;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandCreateTrapAtLocation = 0x0025A2E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandCreateTrapOnObject = 0x0025AA60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandDayNightCycle = 0x00239600;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandDecrementFeatUses = 0x002338A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandDecrementSpellUses = 0x002339B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandDelayCommand = 0x0021DA00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandDeleteCampaignVariable = 0x00236450;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandDeleteVar = 0x0022E280;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandDestroyCampaignDatabase = 0x00235080;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandDestroyObject = 0x0021DB80;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandDistanceConversions = 0x002225D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandDoDoorAction = 0x002469B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandDoSinglePlayerAutoSave = 0x0024B200;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandDoTouchAttack = 0x00241740;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandDoWhirlwindAttack = 0x00238EB0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectAbilityDecrease = 0x002264F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectAbilityIncrease = 0x00226350;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectACDecrease = 0x00226B60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectACIncrease = 0x00226960;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectAppear = 0x00228EF0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectAreaEffect = 0x0022AF10;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectAttackDecrease = 0x002272F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectAttackIncrease = 0x00227140;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectBeam = 0x0022AA30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectBlindness = 0x00228D30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectComplex = 0x002274A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectConcealment = 0x002287B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectCutsceneGhost = 0x00229AF0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectDamage = 0x0022A660;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectDamageDecrease = 0x0022BBB0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectDamageImmunityDecrease = 0x0022A4F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectDamageImmunityIncrease = 0x0022A380;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectDamageIncrease = 0x0022B9D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectDamageReduction = 0x0022A080;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectDamageResistance = 0x002267A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectDamageShield = 0x00229440;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectDarkness = 0x00228970;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectDisappear = 0x00228DF0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectDisappearAppear = 0x0022B310;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectDisease = 0x00228400;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectEthereal = 0x00229A00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectHeal = 0x0023EA60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectHitPointChangeWhenDying = 0x0022B1E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectImmunity = 0x0022A260;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectInvisibility = 0x00228670;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectLinkEffects = 0x0022E100;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectMissChance = 0x00228AD0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectModifyAttacks = 0x00228FF0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectMovementSpeedDecrease = 0x00227E30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectMovementSpeedIncrease = 0x00227CE0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectNegativeLevel = 0x002292D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectPetrify = 0x002297C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectPoison = 0x00228300;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectResurrection = 0x00226690;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectSanctuary = 0x00228500;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectSavingThrowDecrease = 0x00226F50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectSavingThrowIncrease = 0x00226D60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectSeeInvisible = 0x00228C80;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectSkillDecrease = 0x00229EA0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectSkillIncrease = 0x00229CC0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectSpellFailure = 0x002298D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectSpellImmunity = 0x00229B90;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectSpellLevelAbsorption = 0x00229110;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectSpellResistanceDecrease = 0x00228200;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectSpellResistanceIncrease = 0x00228100;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectSummonCreature = 0x0022ACF0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectSwarm = 0x0024AEB0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectTemporaryHP = 0x00245CC0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectTrueSeeing = 0x00228A20;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectTurnResistance = 0x00229690;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectUltravision = 0x002295E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEffectVisualEffect = 0x00227F80;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEndGame = 0x002329A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEquipItem = 0x0023D270;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEventActivateItem = 0x002322D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEventConversation = 0x00222540;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEventScriptManagement = 0x00253640;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEventSpellCastAt = 0x0022DFD0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandEventUserDefined = 0x0022BD90;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandExecuteScript = 0x0021DCA0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandExploreAreaForPlayer = 0x00231C40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandExportAllCharacters = 0x00233270;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandExportSingleCharacter = 0x002332A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandFindSubString = 0x00225BA0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandFloatingText = 0x0024B4B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandFloatToInt = 0x0021C140;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandFloatToString = 0x002241A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandForceRest = 0x00239A50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGet2DAString = 0x00238550;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAbilityModifier = 0x0022F7F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAbilityScore = 0x00244B60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAC = 0x002403C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetActionMode = 0x0023B160;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAge = 0x0021FFE0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAILevel = 0x0021FC50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAlignment = 0x00240510;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAnimalCompanionCreatureType = 0x002201F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAnimalCompanionName = 0x00224AF0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAOEObjectCreator = 0x00244A60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAppearanceType = 0x0024C320;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetArcaneSpellFailure = 0x00220E90;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetArea = 0x00221250;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAreaSize = 0x00251970;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAssociate = 0x0022FF20;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAssociateType = 0x00220A80;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAttackTarget = 0x00221A30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAttemptedAttackTarget = 0x00221AD0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetAttemptedSpellTarget = 0x00221B40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetBaseAttackBonus = 0x00238C40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetBaseItemType = 0x00222ED0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetBattleTrack = 0x0021D1A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetBlockingDoor = 0x00221C50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCalendarDay = 0x0021E920;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCalendarMonth = 0x0021E8D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCalendarYear = 0x0021E880;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCampaignFloat = 0x00235140;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCampaignInt = 0x002354D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCampaignLocation = 0x00235C30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCampaignString = 0x00236080;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCampaignVector = 0x00235860;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCasterLevel = 0x0023EC10;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetChallengeRating = 0x00222C80;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetClassInformation = 0x0022B530;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetColor = 0x00252B30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCommandable = 0x0021D540;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCreatureBodyPart = 0x0024F640;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCreatureHasTalent = 0x0022EB50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCreatureSize = 0x00220720;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCreatureTailType = 0x0024FA50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCreatureTalent = 0x0022EC50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCreatureWingType = 0x0024F3C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCurrentAction = 0x0024B310;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCutsceneCameraMoveRate = 0x00222D30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetCutsceneMode = 0x00223FD0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetDamageDealtByType = 0x00247620;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetDayTrack = 0x0021D040;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetDeity = 0x002247C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetDescription = 0x00257110;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetDialogSoundLength = 0x002548E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetDistanceBetween = 0x00223E00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetDistanceBetweenLocations = 0x00223B30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetDistanceToObject = 0x00223C50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetDroppableFlag = 0x0021CBF0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetEffect = 0x0023EF00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetEffectCasterLevel = 0x0021F620;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetEffectCreator = 0x00221370;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetEffectDuration = 0x0021F6D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetEffectDurationRemaining = 0x00239FB0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetEffectDurationType = 0x0021EF70;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetEffectSpellId = 0x0021F3A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetEffectSubType = 0x0021F020;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetEffectTag = 0x00239DC0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetEffectType = 0x0021EBE0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetEmotions = 0x00242830;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetEncounterData = 0x0022E660;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetEnteringObject = 0x0023C7B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFacing = 0x00222AF0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionAverageGoodEvilAlignment = 0x0022CB60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionAverageLawChaosAlignment = 0x0022CC50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionAverageLevel = 0x0022CD40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionAverageReputation = 0x0022CA60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionAverageXP = 0x0022CE30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionBestAC = 0x0022D130;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionEqual = 0x0022BF10;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionGold = 0x0022C970;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionLeader = 0x00233550;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionLeastDamagedMember = 0x0022C850;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionMember = 0x00231120;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionMostDamagedMember = 0x0022C730;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionMostFrequentClass = 0x0022CF20;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionNthNearestMember = 0x00257E10;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionStrongestMember = 0x0022C610;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionWeakestMember = 0x0022C4F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFactionWorstAC = 0x0022D010;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFamiliarCreatureType = 0x00220140;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFamiliarName = 0x002249E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFogAmount = 0x0024EF40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFogColor = 0x0024EB60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFootstepType = 0x0024F100;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetFortitudeSavingThrow = 0x0024AA30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetGameDifficulty = 0x0021BDB0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetGoingToBeAttackedBy = 0x00221BB0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetGold = 0x00232030;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetGoldPieceValue = 0x0022F090;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetGroundHeight = 0x0022DF10;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetHardness = 0x0024FCD0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetHasFeat = 0x00245280;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetHasFeatEffect = 0x0024BBE0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetHasInventory = 0x0024C1B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetHasSkill = 0x002453F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetHasSpell = 0x00230D80;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetHasSpellEffect = 0x00245A60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetHenchman = 0x0022FE30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetHiddenWhenEquipped = 0x0021CF80;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetHitDice = 0x00241F30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetHitpoints = 0x0023E890;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIdentified = 0x00223250;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetImmortal = 0x00220DF0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetInfiniteFlag = 0x0021C870;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetInPersistentObject = 0x00243EB0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetInventoryDisturbItem = 0x00247E60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetInventoryDisturbType = 0x00247DC0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsAreaAboveGround = 0x0021C400;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsAreaInterior = 0x0021C4B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsAreaNatural = 0x0021C350;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsCreatureDisarmable = 0x00222DE0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsDawn = 0x0021DEC0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsDay = 0x0021DDE0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsDMPossessed = 0x002209D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsDoorActionPossible = 0x0022FAB0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsDusk = 0x0021DF30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsEncounterCreature = 0x00220B30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsImmune = 0x002450F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsInCombat = 0x00220890;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsInTrigger = 0x00220F80;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsNight = 0x0021DE50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsOpen = 0x00249180;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsPossessedFamiliar = 0x0022F180;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsRacialTypePlayable = 0x00245B60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsReactionType = 0x00249A40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsResting = 0x00220670;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsSkillSuccessful = 0x0024DA50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsTalentValid = 0x0021EC90;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsTrapped = 0x0024BCE0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetIsWeaponEffective = 0x00232210;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemACValue = 0x002318F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemAppearance = 0x00223030;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemCharges = 0x002235E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemCursedFlag = 0x0021CED0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemHasItemProperty = 0x002317C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemInInventory = 0x00246D90;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemInSlot = 0x00241E00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemPossessedBy = 0x0023CEC0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemPossessor = 0x002217C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemProperty = 0x0024D7E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemPropertyDuration = 0x0021F7B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemPropertyDurationRemaining = 0x0023A0F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemPropertyDurationType = 0x0021F1B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemPropertyInfo = 0x00237440;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemPropertyTag = 0x0023A240;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemPropertyType = 0x00237350;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetItemStackSize = 0x00223390;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetJournalQuestExperience = 0x00230B10;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetKeyRequiredFeedbackMessage = 0x002515D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastAssociateCommand = 0x00220930;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastAttacker = 0x0023D440;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastAttackMode = 0x00246040;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastAttackType = 0x00245E60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastClosedBy = 0x0024C060;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastDamager = 0x00247860;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastDisarmed = 0x00247970;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastDisturbed = 0x00247AB0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastEquipped = 0x002214D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastHostileActor = 0x0024BE60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastKiller = 0x00249030;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastLocked = 0x00247BA0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastOpenedBy = 0x00246860;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastPCRested = 0x00221580;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastPerceived = 0x00243960;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastPerception = 0x00243A40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastRestEventType = 0x0021DD80;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastSpeaker = 0x002433B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastSpellCastClass = 0x0024E580;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastTrapDetected = 0x002218F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastUnlocked = 0x00247CB0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastUsedBy = 0x00246720;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLastWeaponUsed = 0x00221430;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLeavingObject = 0x0023C960;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLimitAbilityBonus = 0x0023A510;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLimitAbilityPenalty = 0x0023A560;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLimitAttackBonus = 0x0023A420;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLimitDamageBonus = 0x0023A470;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLimitSavingThrowBonus = 0x0023A4C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLimitSkillBonus = 0x0023A5B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLocation = 0x002221E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLocked = 0x002465D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLockInfo = 0x0024B770;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetLootable = 0x00220BE0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetMaster = 0x00221990;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetMatchedString = 0x0025C360;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetMatchedStringsCount = 0x0021D840;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetMatchedStringsNum = 0x0021D7A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetMaxHenchmen = 0x0021DFA0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetMetaMagicFeat = 0x0023FF30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetModeState = 0x002337A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetModule = 0x002211E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetModuleItemStuff = 0x002215E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetModuleName = 0x00233470;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetMovementRate = 0x00220090;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetName = 0x0023F650;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetNearestObject = 0x0025B1B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetNearestTrap = 0x0024A5F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetNightTrack = 0x0021D0F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetNumStackedItems = 0x002232F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetObjectByTag = 0x0022D330;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetObjectInArea = 0x0023F330;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetObjectInShape = 0x002406A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetObjectType = 0x0021D380;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetObjectValid = 0x0021C2C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetObjectVisibility = 0x00243D00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPC = 0x002331E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPCChatMessage = 0x002246E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPCChatSpeaker = 0x00221750;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPCChatVolume = 0x0021E130;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPCIPAddress = 0x00230660;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPCLevellingUp = 0x002216F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPCPlayerName = 0x00230260;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPCPublicCDKey = 0x00230380;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPCSpeaker = 0x00242A60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPhenoType = 0x002204C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPickpocketableFlag = 0x0021CD50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPlaceableIllumination = 0x00233140;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPlayerConnectionRelayed = 0x00230790;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPlotFlag = 0x00249690;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPortraitId = 0x002547D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPortraitResRef = 0x00252260;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetPosition = 0x00221E70;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetRacialType = 0x0023FFD0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetReflexAdjustedDamage = 0x0022DB60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetReflexSavingThrow = 0x0024AD30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetReputation = 0x00242280;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetResRef = 0x0024C480;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetSittingCreature = 0x0022B490;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetSkillRank = 0x00245520;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetSkyBox = 0x0024EA20;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetSpellCast = 0x00242F00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetSpellCasterItem = 0x002490D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetSpellId = 0x002432D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetSpellResistance = 0x0022BE60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetSpellSaveDC = 0x00240280;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetSpellTargetLoc = 0x00242640;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetSpellTargetObject = 0x0023E780;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetStartingPackage = 0x00220410;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetStat = 0x0021FCF0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetStolenFlag = 0x0021C9E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetStrByStrRef = 0x002550D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetStringLeft = 0x002256D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetStringLength = 0x002252F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetStringLowerCase = 0x002254A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetStringRight = 0x002255B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetStringUpperCase = 0x00225390;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetStrRefSoundDuration = 0x00254E60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetSubRace = 0x002248D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetSubString = 0x002258F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetSurfaceMaterial = 0x0023A370;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetTag = 0x00224540;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetTileLightColor = 0x00232AD0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetTimeHour = 0x0021E970;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetTimeMillisecond = 0x0021EA60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetTimeMinute = 0x0021E9C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetTimeSecond = 0x0021EA10;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetTotalDamageDealt = 0x00247770;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetTransitionTarget = 0x00242030;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetTrapInfo = 0x00259390;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetTurnResistanceHD = 0x00232630;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetUseableFlag = 0x0024CA90;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetUserDefinedEventNumber = 0x00243170;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetVar = 0x00224C00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetWaypointByTag = 0x0022D250;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetWeaponRanged = 0x00222F70;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetWeather = 0x0021C7D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetWeight = 0x0024E0C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetWillSavingThrow = 0x0024ABB0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetXP = 0x00248F40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGetXPScale = 0x0021E000;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGiveGoldToCreature = 0x00248C50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandGiveXPToCreature = 0x00248D40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandIncrementRemainingFeatUses = 0x00239510;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandInsertString = 0x002257F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandIntToFloat = 0x002227F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandIntToHexString = 0x00224490;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandIntToString = 0x002240C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandIsAIState = 0x002415F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandIsDM = 0x00220C80;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandIsEffectValid = 0x0021F290;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandIsInConversation = 0x002498F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandIsItemPropertyValid = 0x0021F0D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandIsListening = 0x0021D6E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandIsPC = 0x00223F40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandItemActivated = 0x00222330;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandItemPropertyEffect = 0x002375E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandLevelUpHenchman = 0x0024DF20;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandLineOfSight = 0x0024E1C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandLocation = 0x00222070;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandLocationAccess = 0x00222680;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandLockCamera = 0x00239C60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandMath = 0x00225CC0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandModuleAccess = 0x0022E8A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandMoveAwayFromObject = 0x0023C5C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandMoveToObject = 0x0023C280;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandMoveToPoint = 0x0023B570;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandMusicBackground = 0x0021C560;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandMusicBattle = 0x0021C6B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandObjectToString = 0x002243A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandOpenDoor = 0x0023E200;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandOpenInventory = 0x00238CF0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandOpenStore = 0x00248AA0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandPersonalReputationAccess = 0x002315E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandPickUpItem = 0x00223750;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandPlayAnimation = 0x0023D930;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandPlaySound = 0x0023E630;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandPlaySoundByStrRef = 0x00255220;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandPopUpGUIPanel = 0x00231400;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandPrintFloat = 0x0021BF10;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandPrintInteger = 0x0021BC20;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandPrintLogEntry = 0x00233350;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandPrintObject = 0x0021C1D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandPrintString = 0x0021BE00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandPrintVector = 0x0021D250;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandPutDownItem = 0x002237F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandRandom = 0x0021BD10;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandRandomName = 0x0025C4D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandRecomputeStaticLighting = 0x00232A50;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandRemoveEffect = 0x0023F140;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandRemoveFromParty = 0x002336B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandRemoveItemProperty = 0x0024D610;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandRemoveJournalQuestEntry = 0x00248720;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandResistSpell = 0x002540F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandRestoreBaseAttackBonus = 0x00220380;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandRestoreCameraFacing = 0x0024DE40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandRetrieveCampaignObject = 0x002367A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandRollDice = 0x0022B760;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSavingThrow = 0x002400D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSendMessageToAllDMs = 0x00223970;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSendMessageToPC = 0x0021FA30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSendMessageToPCByStrRef = 0x00254F60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetActionMode = 0x0023B060;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetAILevel = 0x0022F220;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetAreaTransitionBMP = 0x0022D410;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetAssociateListenPatterns = 0x0022F6B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetBaseAttackBonus = 0x002202A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCalendar = 0x0021E4C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCameraHeight = 0x00239B90;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCameraLocation = 0x0023E410;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCameraMode = 0x002326E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCampaignFloat = 0x00233E40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCampaignInt = 0x002341B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCampaignLocation = 0x002348D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCampaignString = 0x00234CE0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCampaignVector = 0x00234520;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetColor = 0x00252D40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCommandable = 0x0021D460;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCreatureAppearanceType = 0x002398C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCreatureBodyPart = 0x0024F830;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCreatureTailType = 0x0024FB10;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCreatureWingType = 0x0024F480;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCustomToken = 0x0022D520;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCutsceneCameraMoveRate = 0x002207C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetCutsceneMode = 0x00238700;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetDeity = 0x0021FDA0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetDescription = 0x002526D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetDislike = 0x002309B0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetDroppableFlag = 0x0021CB40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetEncounterData = 0x0022E780;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetFacing = 0x0023B250;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetFade = 0x002389D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetFogAmount = 0x0024ED40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetFogColor = 0x0024E810;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetFootstepType = 0x0024F260;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetHardness = 0x0024FE30;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetHiddenWhenEquipped = 0x00253190;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetIdentified = 0x0022F950;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetImmortal = 0x00220D40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetInfiniteFlag = 0x0021C920;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetIsDestroyable = 0x002461E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetItemCharges = 0x00237210;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetItemCursedFlag = 0x0021CE20;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetItemStackSize = 0x00223430;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetKeyRequiredFeedbackMessage = 0x00251790;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetLike = 0x00230850;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetLimitAbilityBonus = 0x0023A780;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetLimitAbilityPenalty = 0x0023A800;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetLimitAttackBonus = 0x0023A600;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetLimitDamageBonus = 0x0023A680;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetLimitSavingThrowBonus = 0x0023A700;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetLimitSkillBonus = 0x0023A880;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetListening = 0x0021D620;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetListenString = 0x0022C240;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetLocked = 0x002463C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetLockInfo = 0x00250340;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetLootable = 0x0022F460;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetMapPinEnabled = 0x002312C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetMaxHenchmen = 0x0021E320;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetName = 0x00251B60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetPanelButtonFlash = 0x00232D10;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetPCChatMessage = 0x0021E070;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetPCChatVolume = 0x0021E200;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetPhenoType = 0x00220580;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetPickpocketableFlag = 0x0021CCA0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetPlaceableIllumination = 0x002330A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetPlotFlag = 0x00249790;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetPortraitId = 0x00252170;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetPortraitResRef = 0x00252380;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetSavingThrow = 0x00251330;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetSkyBox = 0x0024E670;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetStolenFlag = 0x0021CA90;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetSubRace = 0x0021FEC0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetSubType = 0x0022B8D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetTag = 0x00254AE0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetTileLightColor = 0x0021F450;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetTime = 0x0021E700;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetTransitionTarget = 0x00253040;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetTrapInfo = 0x002508E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetUseableFlag = 0x002524E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetVar = 0x00224FB0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetWeather = 0x002327A0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetXP = 0x00248E40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSetXPScale = 0x0021E400;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSignalEvent = 0x0021EE20;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSoundObjectPlay = 0x00231DB0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSoundObjectSetPosition = 0x00231F70;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSoundObjectSetVolume = 0x00231ED0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSoundObjectStop = 0x00231E40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSpawnScriptDebugger = 0x0023A9D0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSpeakOneLinerConversation = 0x0023D7C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSpeakString = 0x0023D530;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSpeakStrRef = 0x00242B60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandStandardFactionReputationAccess = 0x00232E90;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandStartNewModule = 0x002328F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandStopFade = 0x00238B00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandStoreCameraFacing = 0x0024DD60;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandStoreCampaignObject = 0x0024CB70;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandStoreGet = 0x002396E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandStoreSet = 0x002397C0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandStringConversions = 0x0022DE20;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSummonAssociate = 0x0022F9F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandSurrenderToEnemies = 0x00249FC0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandTagEffect = 0x00239E90;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandTagItemProperty = 0x0022A8E0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandTakeGoldFromCreature = 0x002492F0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandTalent = 0x00221F70;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandTalentAccess = 0x0021ED40;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandTestString = 0x0022C390;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandTileExplorationManagement = 0x00253310;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandTimeConversions = 0x00222A00;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandUnequipItem = 0x00223680;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandUnpossessFamiliar = 0x00239420;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandVector = 0x00221CC0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandVectorConversions = 0x00222870;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandVectorMagnitude = 0x00223A90;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandVectorNormalize = 0x00221D80;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandVersusEffect = 0x00225FE0;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandVoiceChat = 0x00232130;
-constexpr uintptr_t CNWVirtualMachineCommands__ExecuteCommandWait = 0x00242130;
-constexpr uintptr_t CNWVirtualMachineCommands__GetDebuggerLabelName = 0x002549D0;
-constexpr uintptr_t CNWVirtualMachineCommands__GetEngineStructureWatchView = 0x0021B030;
-constexpr uintptr_t CNWVirtualMachineCommands__GetEqualGameDefinedStructure = 0x0023A900;
-constexpr uintptr_t CNWVirtualMachineCommands__GetGameDefinedStructureName = 0x0021AF40;
-constexpr uintptr_t CNWVirtualMachineCommands__GetObjectWatchView = 0x00256600;
-constexpr uintptr_t CNWVirtualMachineCommands__GetTableFromArmorPart = 0x00257E20;
-constexpr uintptr_t CNWVirtualMachineCommands__InitializeCommands = 0x00215880;
-constexpr uintptr_t CNWVirtualMachineCommands__LoadGameDefinedStructure = 0x0021ACC0;
-constexpr uintptr_t CNWVirtualMachineCommands__ReportError = 0x0023ABE0;
-constexpr uintptr_t CNWVirtualMachineCommands__RunScriptCallback = 0x0021A8E0;
-constexpr uintptr_t CNWVirtualMachineCommands__SaveGameDefinedStructure = 0x0021ABD0;
-
-constexpr uintptr_t CObjectLookupTable__CObjectLookupTableCtor = 0x000699D0;
-constexpr uintptr_t CObjectLookupTable__CObjectLookupTableDtor = 0x00069A30;
-constexpr uintptr_t CObjectLookupTable__AddID = 0x00069A60;
-constexpr uintptr_t CObjectLookupTable__GetIDFromIndex = 0x00069AB0;
-constexpr uintptr_t CObjectLookupTable__GetIndexFromID = 0x00069AC0;
-constexpr uintptr_t CObjectLookupTable__GetUpdate = 0x00069C00;
-constexpr uintptr_t CObjectLookupTable__Touch = 0x00069B10;
-constexpr uintptr_t CObjectLookupTable__Update = 0x00069C60;
-
-constexpr uintptr_t CObjectTableManager__CObjectTableManagerCtor = 0x00069CB0;
-constexpr uintptr_t CObjectTableManager__CObjectTableManagerDtor = 0x00069E60;
-constexpr uintptr_t CObjectTableManager__AddID = 0x00069EA0;
-constexpr uintptr_t CObjectTableManager__ClearAll = 0x00069DE0;
-constexpr uintptr_t CObjectTableManager__CreateNewPlayer = 0x00069CE0;
-constexpr uintptr_t CObjectTableManager__GetIDFromIndex = 0x00069F40;
-constexpr uintptr_t CObjectTableManager__GetIndexFromID = 0x00069F90;
-constexpr uintptr_t CObjectTableManager__RemovePlayer = 0x00069D80;
-constexpr uintptr_t CObjectTableManager__Touch = 0x00069E70;
-
-constexpr uintptr_t CPathfindInfoIntraTileSuccessors__CPathfindInfoIntraTileSuccessorsCtor = 0x002F34E0;
-
-constexpr uintptr_t CPathfindInformation__CPathfindInformationCtor = 0x002F3800;
-constexpr uintptr_t CPathfindInformation__CPathfindInformationDtor = 0x002F3CF0;
-constexpr uintptr_t CPathfindInformation__ComputeStepTolerance = 0x002F4140;
-constexpr uintptr_t CPathfindInformation__CreateFirstTileFValueAlternatives = 0x002F3FB0;
-constexpr uintptr_t CPathfindInformation__DeleteFirstTileFValueAlternatives = 0x002F3AA0;
-constexpr uintptr_t CPathfindInformation__FlipStartEndPoints = 0x002F40B0;
-constexpr uintptr_t CPathfindInformation__FlipTempEndPoints = 0x002F40F0;
-constexpr uintptr_t CPathfindInformation__GetFirstTileFValueAlternatives = 0x002F3A20;
-constexpr uintptr_t CPathfindInformation__Initialize = 0x002F3500;
-constexpr uintptr_t CPathfindInformation__ResetAtEndOfPath = 0x002F3F50;
-constexpr uintptr_t CPathfindInformation__ResetGridSearchData = 0x002F38B0;
-constexpr uintptr_t CPathfindInformation__ResetInterAreaPathSearchData = 0x002F3E40;
-constexpr uintptr_t CPathfindInformation__ResetInterAreaSearchData = 0x002F3EE0;
-constexpr uintptr_t CPathfindInformation__ResetInterTileSearchData = 0x002F3D70;
-constexpr uintptr_t CPathfindInformation__ResetIntraTileSearchData = 0x002F3D00;
-constexpr uintptr_t CPathfindInformation__ResetWayPointData = 0x002F3950;
-constexpr uintptr_t CPathfindInformation__SetFirstTileFValueAlternatives = 0x002F3A60;
-constexpr uintptr_t CPathfindInformation__Shutdown = 0x002F3B80;
-
-constexpr uintptr_t CrashReporter_Linux__CrashReporter_LinuxCtor = 0x003A2E60;
-constexpr uintptr_t CrashReporter_Linux__CrashReporter_LinuxDtor__0 = 0x003A2CE0;
-constexpr uintptr_t CrashReporter_Linux__CanWriteCallstack = 0x003A2EE0;
-constexpr uintptr_t CrashReporter_Linux__CanWriteMinidump = 0x003A2CC0;
-constexpr uintptr_t CrashReporter_Linux__CanWriteSystemFiles = 0x003A2CD0;
-constexpr uintptr_t CrashReporter_Linux__InternalCrashHandler = 0x003A2E20;
-constexpr uintptr_t CrashReporter_Linux__WriteCallstack = 0x003A2D70;
-constexpr uintptr_t CrashReporter_Linux__WriteSystemFiles = 0x003A2DE0;
-
-constexpr uintptr_t CRes__CResCtor__0 = 0x0003C200;
-constexpr uintptr_t CRes__CResCtor__1 = 0x0003C270;
-constexpr uintptr_t CRes__CResDtor__0 = 0x0003E070;
-constexpr uintptr_t CRes__CancelRequest = 0x0003DF20;
-constexpr uintptr_t CRes__Demand = 0x0003FF10;
-constexpr uintptr_t CRes__Dump = 0x0003C920;
-constexpr uintptr_t CRes__GetData = 0x0003C2C0;
-constexpr uintptr_t CRes__GetDemands = 0x0003C2D0;
-constexpr uintptr_t CRes__GetFixedResourceDataOffset = 0x00040E20;
-constexpr uintptr_t CRes__GetFixedResourceSize = 0x00040E10;
-constexpr uintptr_t CRes__GetID = 0x0003C2F0;
-constexpr uintptr_t CRes__GetRequests = 0x0003C2E0;
-constexpr uintptr_t CRes__GetSize = 0x0003C300;
-constexpr uintptr_t CRes__OnResourceFreed = 0x00040E30;
-constexpr uintptr_t CRes__OnResourceServiced = 0x00040E40;
-constexpr uintptr_t CRes__ReadRaw = 0x0003F780;
-constexpr uintptr_t CRes__Release = 0x0003E850;
-constexpr uintptr_t CRes__Request = 0x0003C310;
-constexpr uintptr_t CRes__SetID = 0x0003C950;
-
-constexpr uintptr_t CRes2DA__CRes2DACtor = 0x0004B4F0;
-constexpr uintptr_t CRes2DA__CRes2DADtor__0 = 0x0004B3B0;
-constexpr uintptr_t CRes2DA__Get2DADataPtr = 0x0004B550;
-constexpr uintptr_t CRes2DA__Get2DAHeaderPtr = 0x0004B540;
-constexpr uintptr_t CRes2DA__Get2DASize = 0x0004B560;
-constexpr uintptr_t CRes2DA__IsLoaded = 0x0004B570;
-constexpr uintptr_t CRes2DA__OnResourceFreed = 0x0004B380;
-constexpr uintptr_t CRes2DA__OnResourceServiced = 0x0004B420;
-
-constexpr uintptr_t CResARE__CResAREDtor__0 = 0x000F8E60;
-
-constexpr uintptr_t CResDWK__CResDWKCtor = 0x00267770;
-constexpr uintptr_t CResDWK__CResDWKDtor__0 = 0x00267700;
-constexpr uintptr_t CResDWK__GetDWKDataPtr = 0x002677C0;
-constexpr uintptr_t CResDWK__GetDWKSize = 0x002677D0;
-constexpr uintptr_t CResDWK__IsLoaded = 0x002677E0;
-constexpr uintptr_t CResDWK__OnResourceFreed = 0x00267690;
-constexpr uintptr_t CResDWK__OnResourceServiced = 0x002676C0;
-
-constexpr uintptr_t CResGFF__CResGFFCtor__0 = 0x002BCDA0;
-constexpr uintptr_t CResGFF__CResGFFCtor__1 = 0x002BCED0;
-constexpr uintptr_t CResGFF__CResGFFDtor__0 = 0x002BD140;
-constexpr uintptr_t CResGFF__AddDataField = 0x002BDE90;
-constexpr uintptr_t CResGFF__AddDataLayoutField = 0x002BDF80;
-constexpr uintptr_t CResGFF__AddDataLayoutList = 0x002BE200;
-constexpr uintptr_t CResGFF__AddField = 0x002BE060;
-constexpr uintptr_t CResGFF__AddLabel = 0x002BDCE0;
-constexpr uintptr_t CResGFF__AddList = 0x002BF260;
-constexpr uintptr_t CResGFF__AddListElement = 0x002BF330;
-constexpr uintptr_t CResGFF__AddStruct = 0x002BDC10;
-constexpr uintptr_t CResGFF__AddStructToStruct = 0x002BF430;
-constexpr uintptr_t CResGFF__CreateGFFFile = 0x002C0190;
-constexpr uintptr_t CResGFF__FinalizeSetup = 0x002BD460;
-constexpr uintptr_t CResGFF__GetDataField = 0x002BD610;
-constexpr uintptr_t CResGFF__GetDataFromFile = 0x002BE2F0;
-constexpr uintptr_t CResGFF__GetDataFromPointer = 0x002BE3D0;
-constexpr uintptr_t CResGFF__GetDataLayoutField = 0x002BD650;
-constexpr uintptr_t CResGFF__GetDataLayoutList = 0x002BD690;
-constexpr uintptr_t CResGFF__GetElementType = 0x002BE450;
-constexpr uintptr_t CResGFF__GetField = 0x002BD540;
-constexpr uintptr_t CResGFF__GetFieldByLabel = 0x002BD6D0;
-constexpr uintptr_t CResGFF__GetFieldCount__0 = 0x002BE4C0;
-constexpr uintptr_t CResGFF__GetFieldCount__1 = 0x002BE4A0;
-constexpr uintptr_t CResGFF__GetFieldLabel = 0x002BE560;
-constexpr uintptr_t CResGFF__GetFieldSize = 0x002BE5D0;
-constexpr uintptr_t CResGFF__GetFieldStringID = 0x002BE570;
-constexpr uintptr_t CResGFF__GetFieldType = 0x002BE510;
-constexpr uintptr_t CResGFF__GetGFFFileInfo = 0x002BE3F0;
-constexpr uintptr_t CResGFF__GetLabel = 0x002BD5C0;
-constexpr uintptr_t CResGFF__GetList = 0x002BE6D0;
-constexpr uintptr_t CResGFF__GetListCount = 0x002BE780;
-constexpr uintptr_t CResGFF__GetListElement = 0x002BE7F0;
-constexpr uintptr_t CResGFF__GetStruct = 0x002BD500;
-constexpr uintptr_t CResGFF__GetStructFromStruct = 0x002BE880;
-constexpr uintptr_t CResGFF__GetTopLevelStruct = 0x002BE8F0;
-constexpr uintptr_t CResGFF__GetTotalSize = 0x002C04A0;
-constexpr uintptr_t CResGFF__InitializeForWriting = 0x002BD890;
-constexpr uintptr_t CResGFF__IsDataInPlace = 0x002BD870;
-constexpr uintptr_t CResGFF__OnResourceFreed = 0x002BCD30;
-constexpr uintptr_t CResGFF__OnResourceServiced = 0x002C1800;
-constexpr uintptr_t CResGFF__Pack = 0x002C04E0;
-constexpr uintptr_t CResGFF__PrepareHeader = 0x002BD2D0;
-constexpr uintptr_t CResGFF__ReadFieldBYTE = 0x002BE920;
-constexpr uintptr_t CResGFF__ReadFieldCExoLocString = 0x002BEFB0;
-constexpr uintptr_t CResGFF__ReadFieldCExoString = 0x002BEEF0;
-constexpr uintptr_t CResGFF__ReadFieldCHAR = 0x002BE990;
-constexpr uintptr_t CResGFF__ReadFieldCResRef = 0x002BEE00;
-constexpr uintptr_t CResGFF__ReadFieldDOUBLE = 0x002BED70;
-constexpr uintptr_t CResGFF__ReadFieldDWORD = 0x002BEAE0;
-constexpr uintptr_t CResGFF__ReadFieldDWORD64 = 0x002BEC30;
-constexpr uintptr_t CResGFF__ReadFieldFLOAT = 0x002BEBC0;
-constexpr uintptr_t CResGFF__ReadFieldINT = 0x002BEB50;
-constexpr uintptr_t CResGFF__ReadFieldINT64 = 0x002BECD0;
-constexpr uintptr_t CResGFF__ReadFieldSHORT = 0x002BEA70;
-constexpr uintptr_t CResGFF__ReadFieldVOID = 0x002BF190;
-constexpr uintptr_t CResGFF__ReadFieldWORD = 0x002BEA00;
-constexpr uintptr_t CResGFF__ReleaseResource = 0x002BD060;
-constexpr uintptr_t CResGFF__ValidateAndSetup = 0x002C0C20;
-constexpr uintptr_t CResGFF__WriteFieldBYTE = 0x002BF4C0;
-constexpr uintptr_t CResGFF__WriteFieldCExoLocString = 0x002BFEA0;
-constexpr uintptr_t CResGFF__WriteFieldCExoString = 0x002BFD90;
-constexpr uintptr_t CResGFF__WriteFieldCHAR = 0x002BF560;
-constexpr uintptr_t CResGFF__WriteFieldCResRef = 0x002BFC50;
-constexpr uintptr_t CResGFF__WriteFieldDOUBLE = 0x002BFB40;
-constexpr uintptr_t CResGFF__WriteFieldDWORD = 0x002BF740;
-constexpr uintptr_t CResGFF__WriteFieldDWORD64 = 0x002BF880;
-constexpr uintptr_t CResGFF__WriteFieldFLOAT = 0x002BFAA0;
-constexpr uintptr_t CResGFF__WriteFieldINT = 0x002BF7E0;
-constexpr uintptr_t CResGFF__WriteFieldINT64 = 0x002BF990;
-constexpr uintptr_t CResGFF__WriteFieldSHORT = 0x002BF6A0;
-constexpr uintptr_t CResGFF__WriteFieldVOID = 0x002C00D0;
-constexpr uintptr_t CResGFF__WriteFieldWORD = 0x002BF600;
-constexpr uintptr_t CResGFF__WriteGFFData = 0x002C0340;
-constexpr uintptr_t CResGFF__WriteGFFFile__0 = 0x002C0AA0;
-constexpr uintptr_t CResGFF__WriteGFFFile__1 = 0x002C07E0;
-constexpr uintptr_t CResGFF__WriteGFFToPointer = 0x002C08D0;
-
-constexpr uintptr_t CResGFFFieldIDHash__Hash = 0x0004B310;
-constexpr uintptr_t CResGFFFieldIDHash__Initialize = 0x0004B2B0;
-
-constexpr uintptr_t CResHelperTemplatedCRes2DA2017__CResHelperTemplatedCRes2DA2017Ctor = 0x00045520;
-constexpr uintptr_t CResHelperTemplatedCRes2DA2017__CResHelperTemplatedCRes2DA2017Dtor__0 = 0x00045470;
-constexpr uintptr_t CResHelperTemplatedCRes2DA2017__SetResRef = 0x000455A0;
-
-constexpr uintptr_t CResHelperTemplatedCResARE2012__CResHelperTemplatedCResARE2012Dtor__0 = 0x000F8ED0;
-constexpr uintptr_t CResHelperTemplatedCResARE2012__SetResRef = 0x000F8FD0;
-
-constexpr uintptr_t CResHelperTemplatedCResDWK2052__CResHelperTemplatedCResDWK2052Dtor__0 = 0x002600B0;
-constexpr uintptr_t CResHelperTemplatedCResDWK2052__SetResRef = 0x00260160;
-
-constexpr uintptr_t CResHelperTemplatedCResIFO2014__CResHelperTemplatedCResIFO2014Dtor__0 = 0x001E7EE0;
-constexpr uintptr_t CResHelperTemplatedCResIFO2014__SetResRef = 0x001E81A0;
-
-constexpr uintptr_t CResHelperTemplatedCResLTR2036__CResHelperTemplatedCResLTR2036Dtor__0 = 0x002C84B0;
-constexpr uintptr_t CResHelperTemplatedCResLTR2036__SetResRef = 0x002C8560;
-
-constexpr uintptr_t CResHelperTemplatedCResNCS2010__CResHelperTemplatedCResNCS2010Ctor = 0x002ECE60;
-constexpr uintptr_t CResHelperTemplatedCResNCS2010__CResHelperTemplatedCResNCS2010Dtor__0 = 0x002ECD30;
-constexpr uintptr_t CResHelperTemplatedCResNCS2010__SetResRef = 0x002ECEE0;
-
-constexpr uintptr_t CResHelperTemplatedCResNDB2064__CResHelperTemplatedCResNDB2064Dtor__0 = 0x002CECB0;
-constexpr uintptr_t CResHelperTemplatedCResNDB2064__SetResRef = 0x002F2F20;
-
-constexpr uintptr_t CResHelperTemplatedCResNSS2009__CResHelperTemplatedCResNSS2009Ctor = 0x002CEF20;
-constexpr uintptr_t CResHelperTemplatedCResNSS2009__CResHelperTemplatedCResNSS2009Dtor__0 = 0x002CEDC0;
-constexpr uintptr_t CResHelperTemplatedCResNSS2009__SetResRef = 0x002CEFA0;
-
-constexpr uintptr_t CResHelperTemplatedCResPWK2053__CResHelperTemplatedCResPWK2053Dtor__0 = 0x00261330;
-constexpr uintptr_t CResHelperTemplatedCResPWK2053__SetResRef = 0x002613E0;
-
-constexpr uintptr_t CResHelperTemplatedCResSET2013__CResHelperTemplatedCResSET2013Dtor__0 = 0x0006E400;
-constexpr uintptr_t CResHelperTemplatedCResSET2013__SetResRef = 0x0006E4B0;
-
-constexpr uintptr_t CResHelperTemplatedCResWOK2016__CResHelperTemplatedCResWOK2016Dtor__0 = 0x00078C90;
-constexpr uintptr_t CResHelperTemplatedCResWOK2016__SetResRef = 0x000796F0;
-
-constexpr uintptr_t CResIFO__CResIFODtor__0 = 0x001E7E70;
-
-constexpr uintptr_t CResLTR__CResLTRCtor = 0x002C91A0;
-constexpr uintptr_t CResLTR__CResLTRDtor__0 = 0x002C8700;
-constexpr uintptr_t CResLTR__OnResourceFreed = 0x002C8770;
-constexpr uintptr_t CResLTR__OnResourceServiced = 0x002C8A20;
-
-constexpr uintptr_t CResNCS__CResNCSCtor = 0x002F31A0;
-constexpr uintptr_t CResNCS__CResNCSDtor__0 = 0x002F3130;
-constexpr uintptr_t CResNCS__GetNCSDataPtr = 0x002F31F0;
-constexpr uintptr_t CResNCS__GetNCSSize = 0x002F3200;
-constexpr uintptr_t CResNCS__IsLoaded = 0x002F3210;
-constexpr uintptr_t CResNCS__OnResourceFreed = 0x002F30C0;
-constexpr uintptr_t CResNCS__OnResourceServiced = 0x002F30F0;
-
-constexpr uintptr_t CResNDB__CResNDBCtor = 0x002F3300;
-constexpr uintptr_t CResNDB__CResNDBDtor__0 = 0x002F3290;
-constexpr uintptr_t CResNDB__GetNDBDataPtr = 0x002F3350;
-constexpr uintptr_t CResNDB__GetNDBSize = 0x002F3360;
-constexpr uintptr_t CResNDB__IsLoaded = 0x002F3370;
-constexpr uintptr_t CResNDB__OnResourceFreed = 0x002F3220;
-constexpr uintptr_t CResNDB__OnResourceServiced = 0x002F3250;
-
-constexpr uintptr_t CResNSS__CResNSSCtor = 0x002F3460;
-constexpr uintptr_t CResNSS__CResNSSDtor__0 = 0x002F33F0;
-constexpr uintptr_t CResNSS__GetNSSDataPtr = 0x002F34B0;
-constexpr uintptr_t CResNSS__GetNSSSize = 0x002F34C0;
-constexpr uintptr_t CResNSS__IsLoaded = 0x002F34D0;
-constexpr uintptr_t CResNSS__OnResourceFreed = 0x002F3380;
-constexpr uintptr_t CResNSS__OnResourceServiced = 0x002F33B0;
-
-constexpr uintptr_t CResPWK__CResPWKCtor = 0x002678D0;
-constexpr uintptr_t CResPWK__CResPWKDtor__0 = 0x00267860;
-constexpr uintptr_t CResPWK__GetPWKDataPtr = 0x00267920;
-constexpr uintptr_t CResPWK__GetPWKSize = 0x00267930;
-constexpr uintptr_t CResPWK__IsLoaded = 0x00267940;
-constexpr uintptr_t CResPWK__OnResourceFreed = 0x002677F0;
-constexpr uintptr_t CResPWK__OnResourceServiced = 0x00267820;
-
-constexpr uintptr_t CResRef__CResRefCtor__0 = 0x0003B980;
-constexpr uintptr_t CResRef__CResRefCtor__1 = 0x0003BF20;
-constexpr uintptr_t CResRef__CResRefCtor__2 = 0x0003C0B0;
-constexpr uintptr_t CResRef__CResRefCtor__3 = 0x0003BDD0;
-constexpr uintptr_t CResRef__CResRefCtor__4 = 0x0003BF60;
-constexpr uintptr_t CResRef__CopyToString__0 = 0x0003B9C0;
-constexpr uintptr_t CResRef__CopyToString__1 = 0x0003BA30;
-constexpr uintptr_t CResRef__GetLength = 0x0003BAE0;
-constexpr uintptr_t CResRef__GetResRef__0 = 0x0003BA60;
-constexpr uintptr_t CResRef__GetResRef__1 = 0x0003C1D0;
-constexpr uintptr_t CResRef__GetResRefStr = 0x0003BA70;
-constexpr uintptr_t CResRef__IsValid = 0x0003BAC0;
-constexpr uintptr_t CResRef__OperatorUndefined = 0x0003BCA0;
-constexpr uintptr_t CResRef__OperatorNotEqualTo__0 = 0x0003BC60;
-constexpr uintptr_t CResRef__OperatorNotEqualTo__1 = 0x0003BC00;
-constexpr uintptr_t CResRef__OperatorNotEqualTo__2 = 0x0003BB10;
-constexpr uintptr_t CResRef__OperatorAdditionAssignment = 0x0003C0F0;
-constexpr uintptr_t CResRef__OperatorAssignment__0 = 0x0003BE10;
-constexpr uintptr_t CResRef__OperatorAssignment__1 = 0x0003C030;
-constexpr uintptr_t CResRef__OperatorAssignment__2 = 0x0003BD30;
-constexpr uintptr_t CResRef__OperatorAssignment__3 = 0x0003BCC0;
-constexpr uintptr_t CResRef__OperatorEqualTo__0 = 0x0003BC20;
-constexpr uintptr_t CResRef__OperatorEqualTo__1 = 0x0003BB70;
-constexpr uintptr_t CResRef__OperatorEqualTo__2 = 0x0003BB40;
-
-constexpr uintptr_t CResSET__CResSETCtor = 0x00079B30;
-constexpr uintptr_t CResSET__CResSETDtor__0 = 0x00079AB0;
-constexpr uintptr_t CResSET__CopySETData = 0x00079B90;
-constexpr uintptr_t CResSET__CreateSectionTable = 0x00079D70;
-constexpr uintptr_t CResSET__GetNextLine = 0x00079D10;
-constexpr uintptr_t CResSET__GetSectionEntryValue = 0x00079C00;
-constexpr uintptr_t CResSET__GetSETDataPtr = 0x00079BD0;
-constexpr uintptr_t CResSET__GetSETSize = 0x00079BE0;
-constexpr uintptr_t CResSET__IsLoaded = 0x00079BF0;
-constexpr uintptr_t CResSET__OnResourceFreed = 0x00079960;
-constexpr uintptr_t CResSET__OnResourceServiced = 0x0007A5D0;
-constexpr uintptr_t CResSET__SkipWhiteSpace = 0x0007A760;
-
-constexpr uintptr_t CResTGA__CResTGACtor = 0x002C1A80;
-constexpr uintptr_t CResTGA__CResTGADtor__0 = 0x002C1990;
-constexpr uintptr_t CResTGA__CopyTGAData = 0x002C1B00;
-constexpr uintptr_t CResTGA__GetTGAAttrib = 0x002C1B40;
-constexpr uintptr_t CResTGA__GetTGAColorMapPtr = 0x002C1B80;
-constexpr uintptr_t CResTGA__GetTGADataPtr = 0x002C1B90;
-constexpr uintptr_t CResTGA__GetTGAHeaderPtr = 0x002C1BA0;
-constexpr uintptr_t CResTGA__GetTGASize = 0x002C1BB0;
-constexpr uintptr_t CResTGA__IsColorMapped = 0x002C1BC0;
-constexpr uintptr_t CResTGA__IsCompressed = 0x002C1BD0;
-constexpr uintptr_t CResTGA__IsLoaded = 0x002C1BE0;
-constexpr uintptr_t CResTGA__OnResourceFreed = 0x002C1A00;
-constexpr uintptr_t CResTGA__OnResourceServiced = 0x002C2120;
-constexpr uintptr_t CResTGA__ReadColorMappedRLETGA = 0x002C1DA0;
-constexpr uintptr_t CResTGA__ReadUnmappedRLETGA = 0x002C1EA0;
-constexpr uintptr_t CResTGA__Write = 0x002C1BF0;
-
-constexpr uintptr_t CResWOK__CResWOKCtor = 0x0007A870;
-constexpr uintptr_t CResWOK__CResWOKDtor__0 = 0x0007A800;
-constexpr uintptr_t CResWOK__GetWOKDataPtr = 0x0007A8C0;
-constexpr uintptr_t CResWOK__GetWOKSize = 0x0007A8D0;
-constexpr uintptr_t CResWOK__IsLoaded = 0x0007A8E0;
-constexpr uintptr_t CResWOK__OnResourceFreed = 0x0007A790;
-constexpr uintptr_t CResWOK__OnResourceServiced = 0x0007A7C0;
-
-constexpr uintptr_t CScriptCompiler__CScriptCompilerCtor = 0x002CE520;
-constexpr uintptr_t CScriptCompiler__CScriptCompilerDtor = 0x002CDEA0;
-constexpr uintptr_t CScriptCompiler__AddStructureToStack = 0x002D0460;
-constexpr uintptr_t CScriptCompiler__AddSymbolToLabelList = 0x002D1110;
-constexpr uintptr_t CScriptCompiler__AddSymbolToQueryList = 0x002D12A0;
-constexpr uintptr_t CScriptCompiler__AddToGlobalVariableList = 0x002E1430;
-constexpr uintptr_t CScriptCompiler__AddToSymbolTableVarStack = 0x002D5670;
-constexpr uintptr_t CScriptCompiler__AddUserDefinedIdentifier = 0x002E0750;
-constexpr uintptr_t CScriptCompiler__AddVariableToStack = 0x002D0770;
-constexpr uintptr_t CScriptCompiler__CheckForBadLValue = 0x002E0710;
-constexpr uintptr_t CScriptCompiler__CleanUpAfterCompile = 0x002CF8C0;
-constexpr uintptr_t CScriptCompiler__CleanUpAfterCompiles = 0x002CBE80;
-constexpr uintptr_t CScriptCompiler__CleanUpDuringCompile = 0x002E6A40;
-constexpr uintptr_t CScriptCompiler__ClearAllSymbolLists = 0x002CF830;
-constexpr uintptr_t CScriptCompiler__ClearCompiledScriptCode = 0x002CC2E0;
-constexpr uintptr_t CScriptCompiler__ClearSwitchLabelList = 0x002D13F0;
-constexpr uintptr_t CScriptCompiler__ClearUserDefinedIdentifiers = 0x002CF530;
-constexpr uintptr_t CScriptCompiler__CompileFile = 0x002CCB40;
-constexpr uintptr_t CScriptCompiler__CompileScriptChunk = 0x002CBFF0;
-constexpr uintptr_t CScriptCompiler__CompileScriptConditional = 0x002CC170;
-constexpr uintptr_t CScriptCompiler__CreateScriptParseTreeNode = 0x002E0440;
-constexpr uintptr_t CScriptCompiler__DeleteCompileStack = 0x002E69B0;
-constexpr uintptr_t CScriptCompiler__DeleteParseTree = 0x002CBA70;
-constexpr uintptr_t CScriptCompiler__DeleteScriptParseTreeNode = 0x002E0360;
-constexpr uintptr_t CScriptCompiler__DetermineLocationOfCode = 0x002D0C50;
-constexpr uintptr_t CScriptCompiler__DuplicateScriptParseTree = 0x002E05D0;
-constexpr uintptr_t CScriptCompiler__EndLineNumberAtBinaryInstruction = 0x002D43E0;
-constexpr uintptr_t CScriptCompiler__FinalizeFinalCode = 0x002CF1C0;
-constexpr uintptr_t CScriptCompiler__FoundReturnStatementOnAllBranches = 0x002D0140;
-constexpr uintptr_t CScriptCompiler__GenerateCodeForSwitchLabels = 0x002D4630;
-constexpr uintptr_t CScriptCompiler__GenerateDebuggerTypeAbbreviation = 0x002D35A0;
-constexpr uintptr_t CScriptCompiler__GenerateFinalCodeFromParseTree = 0x002DD470;
-constexpr uintptr_t CScriptCompiler__GenerateIdentifierList = 0x002DD6A0;
-constexpr uintptr_t CScriptCompiler__GenerateIdentifiersFromConstantVariables = 0x002CFC60;
-constexpr uintptr_t CScriptCompiler__GenerateParseTree = 0x002E14A0;
-constexpr uintptr_t CScriptCompiler__GetCompiledScriptCode = 0x002CC2C0;
-constexpr uintptr_t CScriptCompiler__GetFunctionNameFromSymbolSubTypes = 0x002D09A0;
-constexpr uintptr_t CScriptCompiler__GetHashEntryByName = 0x002C9BB0;
-constexpr uintptr_t CScriptCompiler__GetIdentifierByName = 0x002D0280;
-constexpr uintptr_t CScriptCompiler__GetNewScriptParseTreeNode = 0x002E0010;
-constexpr uintptr_t CScriptCompiler__GetStructureField = 0x002D0360;
-constexpr uintptr_t CScriptCompiler__GetStructureSize = 0x002D01F0;
-constexpr uintptr_t CScriptCompiler__HandleIdentifierToken = 0x002DF770;
-constexpr uintptr_t CScriptCompiler__HandleToken = 0x002DEC50;
-constexpr uintptr_t CScriptCompiler__HashManagerAdd = 0x002C9CD0;
-constexpr uintptr_t CScriptCompiler__HashManagerDelete = 0x002C9DF0;
-constexpr uintptr_t CScriptCompiler__HashString__0 = 0x002C9B20;
-constexpr uintptr_t CScriptCompiler__HashString__1 = 0x002C9AA0;
-constexpr uintptr_t CScriptCompiler__Initialize = 0x002CA320;
-constexpr uintptr_t CScriptCompiler__InitializeFinalCode = 0x002CF140;
-constexpr uintptr_t CScriptCompiler__InitializeIncludeFile = 0x002CB9A0;
-constexpr uintptr_t CScriptCompiler__InitializePreDefinedStructures = 0x002CA240;
-constexpr uintptr_t CScriptCompiler__InitializeSwitchLabelList = 0x002CFC10;
-constexpr uintptr_t CScriptCompiler__InsertGlobalVariablesInParseTree = 0x002CFA90;
-constexpr uintptr_t CScriptCompiler__InstallLoader = 0x002D59C0;
-constexpr uintptr_t CScriptCompiler__InVisitGenerateCode = 0x002D46E0;
-constexpr uintptr_t CScriptCompiler__ModifySRStackReturnTree = 0x002DFFE0;
-constexpr uintptr_t CScriptCompiler__OutputError = 0x002CC330;
-constexpr uintptr_t CScriptCompiler__OutputIdentifierError = 0x002CFAD0;
-constexpr uintptr_t CScriptCompiler__OutputWalkTreeError = 0x002CF970;
-constexpr uintptr_t CScriptCompiler__ParseCharacterAlphabet = 0x002DE9E0;
-constexpr uintptr_t CScriptCompiler__ParseCharacterAmpersand = 0x002DF490;
-constexpr uintptr_t CScriptCompiler__ParseCharacterAsterisk = 0x002DF3B0;
-constexpr uintptr_t CScriptCompiler__ParseCharacterCarat = 0x002DEFC0;
-constexpr uintptr_t CScriptCompiler__ParseCharacterColon = 0x002DEF90;
-constexpr uintptr_t CScriptCompiler__ParseCharacterComma = 0x002DEF30;
-constexpr uintptr_t CScriptCompiler__ParseCharacterEllipsis = 0x002DEC10;
-constexpr uintptr_t CScriptCompiler__ParseCharacterEqualSign = 0x002DF100;
-constexpr uintptr_t CScriptCompiler__ParseCharacterExclamationPoint = 0x002DF160;
-constexpr uintptr_t CScriptCompiler__ParseCharacterHyphen = 0x002DF330;
-constexpr uintptr_t CScriptCompiler__ParseCharacterLeftAngle = 0x002DF1C0;
-constexpr uintptr_t CScriptCompiler__ParseCharacterLeftBrace = 0x002DEDB0;
-constexpr uintptr_t CScriptCompiler__ParseCharacterLeftBracket = 0x002DEE10;
-constexpr uintptr_t CScriptCompiler__ParseCharacterLeftSquareBracket = 0x002DEE70;
-constexpr uintptr_t CScriptCompiler__ParseCharacterNumeric = 0x002DE960;
-constexpr uintptr_t CScriptCompiler__ParseCharacterPercentSign = 0x002DF020;
-constexpr uintptr_t CScriptCompiler__ParseCharacterPeriod = 0x002DF7B0;
-constexpr uintptr_t CScriptCompiler__ParseCharacterPlusSign = 0x002DF080;
-constexpr uintptr_t CScriptCompiler__ParseCharacterQuestionMark = 0x002DEF60;
-constexpr uintptr_t CScriptCompiler__ParseCharacterQuotationMark = 0x002DECB0;
-constexpr uintptr_t CScriptCompiler__ParseCharacterRightAngle = 0x002DF260;
-constexpr uintptr_t CScriptCompiler__ParseCharacterRightBrace = 0x002DEDE0;
-constexpr uintptr_t CScriptCompiler__ParseCharacterRightBracket = 0x002DEE40;
-constexpr uintptr_t CScriptCompiler__ParseCharacterRightSquareBracket = 0x002DEEA0;
-constexpr uintptr_t CScriptCompiler__ParseCharacterSemicolon = 0x002DEED0;
-constexpr uintptr_t CScriptCompiler__ParseCharacterSlash = 0x002DF510;
-constexpr uintptr_t CScriptCompiler__ParseCharacterTilde = 0x002DEF00;
-constexpr uintptr_t CScriptCompiler__ParseCharacterVerticalBar = 0x002DF410;
-constexpr uintptr_t CScriptCompiler__ParseCommentedOutCharacter = 0x002DEAD0;
-constexpr uintptr_t CScriptCompiler__ParseFloatFromTokenString = 0x002DE860;
-constexpr uintptr_t CScriptCompiler__ParseIdentifierFile = 0x002DE670;
-constexpr uintptr_t CScriptCompiler__ParseNextCharacter = 0x002DF850;
-constexpr uintptr_t CScriptCompiler__ParseSource = 0x002E6C40;
-constexpr uintptr_t CScriptCompiler__ParseStringCharacter = 0x002DED00;
-constexpr uintptr_t CScriptCompiler__PopSRStack = 0x002DFF50;
-constexpr uintptr_t CScriptCompiler__PostVisitGenerateCode = 0x002D6320;
-constexpr uintptr_t CScriptCompiler__PreVisitGenerateCode = 0x002D1C00;
-constexpr uintptr_t CScriptCompiler__PrintBinaryAddress = 0x002D0100;
-constexpr uintptr_t CScriptCompiler__PrintParseIdentifierFileError = 0x002DE5A0;
-constexpr uintptr_t CScriptCompiler__PrintParseSourceError = 0x002E6AC0;
-constexpr uintptr_t CScriptCompiler__PushSRStack = 0x002DFE30;
-constexpr uintptr_t CScriptCompiler__RemoveFromSymbolTableVarStack = 0x002D5FD0;
-constexpr uintptr_t CScriptCompiler__ResolveDebuggingInformation = 0x002D3500;
-constexpr uintptr_t CScriptCompiler__ResolveDebuggingInformationForIdentifier = 0x002D3360;
-constexpr uintptr_t CScriptCompiler__ResolveLabels = 0x002D0D40;
-constexpr uintptr_t CScriptCompiler__SetAutomaticCleanUpAfterCompiles = 0x002CBE60;
-constexpr uintptr_t CScriptCompiler__SetCompileConditionalFile = 0x002CBE20;
-constexpr uintptr_t CScriptCompiler__SetCompileConditionalOrMain = 0x002CBE40;
-constexpr uintptr_t CScriptCompiler__SetCompileDebugLevel = 0x002CBB20;
-constexpr uintptr_t CScriptCompiler__SetCompileSymbolicOutput = 0x002CBB60;
-constexpr uintptr_t CScriptCompiler__SetGenerateDebuggerOutput = 0x002CBB40;
-constexpr uintptr_t CScriptCompiler__SetIdentifierSpecification = 0x002CBB80;
-constexpr uintptr_t CScriptCompiler__SetOptimizeBinaryCodeLength = 0x002CBE00;
-constexpr uintptr_t CScriptCompiler__SetOutputAlias = 0x002CBDD0;
-constexpr uintptr_t CScriptCompiler__ShutDown = 0x002C9F30;
-constexpr uintptr_t CScriptCompiler__ShutdownIncludeFile = 0x002CBA20;
-constexpr uintptr_t CScriptCompiler__StartLineNumberAtBinaryInstruction = 0x002D1B60;
-constexpr uintptr_t CScriptCompiler__Test_CompareDirectoryContents = 0x002CD6E0;
-constexpr uintptr_t CScriptCompiler__Test_CompareFileInclusion = 0x002CC570;
-constexpr uintptr_t CScriptCompiler__Test_CompileAllScriptsInDirectory = 0x002CCEA0;
-constexpr uintptr_t CScriptCompiler__TestIdentifierToken = 0x002DF5B0;
-constexpr uintptr_t CScriptCompiler__TokenInitialize = 0x002DFE10;
-constexpr uintptr_t CScriptCompiler__TraverseTreeForSwitchLabels = 0x002D15C0;
-constexpr uintptr_t CScriptCompiler__ValidateLocationOfIdentifier = 0x002D0AC0;
-constexpr uintptr_t CScriptCompiler__WalkParseTree = 0x002DD370;
-constexpr uintptr_t CScriptCompiler__WriteDebuggerOutputToFile = 0x002D3780;
-constexpr uintptr_t CScriptCompiler__WriteFinalCodeToFile = 0x002CF270;
-constexpr uintptr_t CScriptCompiler__WriteResolvedOutput = 0x002CFFC0;
-
-constexpr uintptr_t CScriptCompilerIdListEntry__CScriptCompilerIdListEntryCtor = 0x002C9230;
-constexpr uintptr_t CScriptCompilerIdListEntry__CScriptCompilerIdListEntryDtor = 0x002C9340;
-constexpr uintptr_t CScriptCompilerIdListEntry__ExpandParameterSpace = 0x002C94C0;
-
-constexpr uintptr_t CScriptCompilerIncludeFileStackEntry__CScriptCompilerIncludeFileStackEntryDtor = 0x002CEED0;
-
-constexpr uintptr_t CScriptEvent__CScriptEventCtor = 0x0008B6C0;
-constexpr uintptr_t CScriptEvent__CScriptEventDtor = 0x0008BC60;
-constexpr uintptr_t CScriptEvent__CopyScriptEvent = 0x0008BDA0;
-constexpr uintptr_t CScriptEvent__GetFloat = 0x0008B740;
-constexpr uintptr_t CScriptEvent__GetInteger = 0x0008B720;
-constexpr uintptr_t CScriptEvent__GetObjectID = 0x0008B770;
-constexpr uintptr_t CScriptEvent__GetString = 0x0008B790;
-constexpr uintptr_t CScriptEvent__LoadEvent = 0x0008BED0;
-constexpr uintptr_t CScriptEvent__OperatorNotEqualTo = 0x0008BB70;
-constexpr uintptr_t CScriptEvent__OperatorEqualTo = 0x0008BA20;
-constexpr uintptr_t CScriptEvent__SaveEvent = 0x0008B7F0;
-constexpr uintptr_t CScriptEvent__SetFloat = 0x0008BBD0;
-constexpr uintptr_t CScriptEvent__SetInteger = 0x0008BB90;
-constexpr uintptr_t CScriptEvent__SetObjectID = 0x0008BD60;
-constexpr uintptr_t CScriptEvent__SetString = 0x0008BC10;
-
-constexpr uintptr_t CScriptLocation__CScriptLocationCtor = 0x001E8E30;
-constexpr uintptr_t CScriptLocation__CScriptLocationDtor = 0x001E8E60;
-constexpr uintptr_t CScriptLocation__CopyScriptLocation = 0x001E8E70;
-constexpr uintptr_t CScriptLocation__LoadLocation = 0x001E8EB0;
-constexpr uintptr_t CScriptLocation__SaveLocation = 0x001E8FD0;
-
-constexpr uintptr_t CScriptParseTreeNode__CScriptParseTreeNodeDtor = 0x002E6D90;
-
-constexpr uintptr_t CScriptSourceFile__CScriptSourceFileCtor = 0x002CCA00;
-constexpr uintptr_t CScriptSourceFile__CScriptSourceFileDtor__0 = 0x002CEE70;
-constexpr uintptr_t CScriptSourceFile__LoadScript = 0x002CCA30;
-constexpr uintptr_t CScriptSourceFile__UnloadScript = 0x002CCAD0;
-
-constexpr uintptr_t CScriptTalent__CScriptTalentCtor = 0x001E9190;
-constexpr uintptr_t CScriptTalent__CScriptTalentDtor = 0x001E91C0;
-constexpr uintptr_t CScriptTalent__CopyScriptTalent = 0x001E91D0;
-constexpr uintptr_t CScriptTalent__Equals = 0x001E93F0;
-constexpr uintptr_t CScriptTalent__LoadTalent = 0x001E92E0;
-constexpr uintptr_t CScriptTalent__SaveTalent = 0x001E9210;
-
-constexpr uintptr_t CServerAIBodyBagInfo__LoadBodyBag = 0x000BA160;
-constexpr uintptr_t CServerAIBodyBagInfo__SaveBodyBag = 0x000B9C00;
-
-constexpr uintptr_t CServerAIEventNode__LoadNode = 0x000BA220;
-constexpr uintptr_t CServerAIEventNode__SaveNode = 0x000B9C80;
-
-constexpr uintptr_t CServerAIList__CServerAIListCtor = 0x000B8B70;
-constexpr uintptr_t CServerAIList__CServerAIListDtor = 0x000B8BA0;
-constexpr uintptr_t CServerAIList__AddObject = 0x000BA9D0;
-constexpr uintptr_t CServerAIList__GetNextObject = 0x000B8C80;
-constexpr uintptr_t CServerAIList__RemoveObject = 0x000B8BD0;
-
-constexpr uintptr_t CServerAIMaster__CServerAIMasterCtor = 0x000BACD0;
-constexpr uintptr_t CServerAIMaster__CServerAIMasterDtor = 0x000BAAE0;
-constexpr uintptr_t CServerAIMaster__AddEventAbsoluteTime = 0x000B8DB0;
-constexpr uintptr_t CServerAIMaster__AddEventAbsoluteTimeViaTail = 0x000B8EC0;
-constexpr uintptr_t CServerAIMaster__AddEventDeltaTime = 0x000B8FD0;
-constexpr uintptr_t CServerAIMaster__AddObject = 0x000BAAB0;
-constexpr uintptr_t CServerAIMaster__AdjustTargetAndWitnessReputations = 0x000BAEA0;
-constexpr uintptr_t CServerAIMaster__AppendToScriptsRun = 0x000BA970;
-constexpr uintptr_t CServerAIMaster__ClearEventQueue = 0x000B8D10;
-constexpr uintptr_t CServerAIMaster__ClearScriptsRun = 0x000BA830;
-constexpr uintptr_t CServerAIMaster__DeleteEventData = 0x000B9290;
-constexpr uintptr_t CServerAIMaster__EventPending = 0x000B9120;
-constexpr uintptr_t CServerAIMaster__GetPendingEvent = 0x000B9180;
-constexpr uintptr_t CServerAIMaster__GetScriptsRun = 0x000BA840;
-constexpr uintptr_t CServerAIMaster__LoadEventQueue = 0x000BA720;
-constexpr uintptr_t CServerAIMaster__LoadReputationAdjustments = 0x000BB5F0;
-constexpr uintptr_t CServerAIMaster__OnEffectApplied = 0x000B9200;
-constexpr uintptr_t CServerAIMaster__OnEffectRemoved = 0x000B9220;
-constexpr uintptr_t CServerAIMaster__OnItemPropertyApplied = 0x000B9240;
-constexpr uintptr_t CServerAIMaster__OnItemPropertyRemoved = 0x000B9270;
-constexpr uintptr_t CServerAIMaster__RemoveObject = 0x000B8D60;
-constexpr uintptr_t CServerAIMaster__SaveEventQueue = 0x000BA090;
-constexpr uintptr_t CServerAIMaster__SetAILevel = 0x000BAA60;
-constexpr uintptr_t CServerAIMaster__SetExoAppInternal = 0x000B8D00;
-constexpr uintptr_t CServerAIMaster__UpdateState = 0x000B9360;
-
-constexpr uintptr_t CServerExoApp__CServerExoAppCtor = 0x000BC6A0;
-constexpr uintptr_t CServerExoApp__CServerExoAppDtor__0 = 0x000BBF70;
-constexpr uintptr_t CServerExoApp__AddCDKeyToBannedList = 0x000BDB40;
-constexpr uintptr_t CServerExoApp__AddCharListRequest = 0x000BDA00;
-constexpr uintptr_t CServerExoApp__AddExportPlayersCharacterRequest = 0x000BC990;
-constexpr uintptr_t CServerExoApp__AddIPToBannedList = 0x000BDA60;
-constexpr uintptr_t CServerExoApp__AddPlayerNameToBannedList = 0x000BDAD0;
-constexpr uintptr_t CServerExoApp__AddSubNetProfileSendSize = 0x000BDDD0;
-constexpr uintptr_t CServerExoApp__AddToExclusionList = 0x000BD8A0;
-constexpr uintptr_t CServerExoApp__AdmitNetworkAddress = 0x000BC0F0;
-constexpr uintptr_t CServerExoApp__AdmitPlayerName = 0x000BC1F0;
-constexpr uintptr_t CServerExoApp__CheckStickyPlayerNameReserved = 0x000BC590;
-constexpr uintptr_t CServerExoApp__ClearExportPlayerCharacterRequests = 0x000BCA90;
-constexpr uintptr_t CServerExoApp__ContinueMessageProcessing = 0x000BC2A0;
-constexpr uintptr_t CServerExoApp__ExportAllPlayers = 0x000BCAF0;
-constexpr uintptr_t CServerExoApp__GetAbilityBonusLimit = 0x000BDF20;
-constexpr uintptr_t CServerExoApp__GetAbilityPenaltyLimit = 0x000BDF60;
-constexpr uintptr_t CServerExoApp__GetActiveExclusionList = 0x000BD900;
-constexpr uintptr_t CServerExoApp__GetActivePauseState = 0x000BD840;
-constexpr uintptr_t CServerExoApp__GetActiveTimer = 0x000BD070;
-constexpr uintptr_t CServerExoApp__GetApplicationId = 0x000BBF30;
-constexpr uintptr_t CServerExoApp__GetAreaByGameObjectID = 0x000BCDA0;
-constexpr uintptr_t CServerExoApp__GetAreaOfEffectByGameObjectID = 0x000BCE60;
-constexpr uintptr_t CServerExoApp__GetAttackBonusLimit = 0x000BDE60;
-constexpr uintptr_t CServerExoApp__GetAutoSavePending = 0x000BCBC0;
-constexpr uintptr_t CServerExoApp__GetBannedListString = 0x000BD360;
-constexpr uintptr_t CServerExoApp__GetCDKeys = 0x000BE170;
-constexpr uintptr_t CServerExoApp__GetClientObjectByObjectId = 0x000BD690;
-constexpr uintptr_t CServerExoApp__GetClientObjectByPlayerId = 0x000BD6C0;
-constexpr uintptr_t CServerExoApp__GetClientsRequiredToDisableCPUSleep = 0x000BDE20;
-constexpr uintptr_t CServerExoApp__GetCodeBase = 0x000BD570;
-constexpr uintptr_t CServerExoApp__GetConnectionLib = 0x000BBF10;
-constexpr uintptr_t CServerExoApp__GetCreatureByGameObjectID = 0x000BCD40;
-constexpr uintptr_t CServerExoApp__GetCreatureDeathLogging = 0x000BDE00;
-constexpr uintptr_t CServerExoApp__GetDamageBonusLimit = 0x000BDEA0;
-constexpr uintptr_t CServerExoApp__GetDebugMode = 0x000BD120;
-constexpr uintptr_t CServerExoApp__GetDifficultyOption = 0x000BD9D0;
-constexpr uintptr_t CServerExoApp__GetDoorByGameObjectID = 0x000BCE30;
-constexpr uintptr_t CServerExoApp__GetEncounterByGameObjectID = 0x000BCEC0;
-constexpr uintptr_t CServerExoApp__GetExportCharacterPending = 0x000BC950;
-constexpr uintptr_t CServerExoApp__GetExportPlayersCharacterRequests = 0x000BCA80;
-constexpr uintptr_t CServerExoApp__GetExtendedServerInfo__0 = 0x000BE0C0;
-constexpr uintptr_t CServerExoApp__GetExtendedServerInfo__1 = 0x000BBFE0;
-constexpr uintptr_t CServerExoApp__GetFactionOfObject = 0x000BD7B0;
-constexpr uintptr_t CServerExoApp__GetFirstPCObject = 0x000BDD00;
-constexpr uintptr_t CServerExoApp__GetFPS = 0x000BE0D0;
-constexpr uintptr_t CServerExoApp__GetGameObject = 0x000BCCB0;
-constexpr uintptr_t CServerExoApp__GetGameSpyEnabled = 0x000BDD80;
-constexpr uintptr_t CServerExoApp__GetHostedPublicInternetAddressAndPort = 0x000BDFE0;
-constexpr uintptr_t CServerExoApp__GetImportingChar = 0x000BCB60;
-constexpr uintptr_t CServerExoApp__GetIsCDKeyOnBannedList = 0x000BC400;
-constexpr uintptr_t CServerExoApp__GetIsControlledByPlayer = 0x000BD780;
-constexpr uintptr_t CServerExoApp__GetIsIPOnBannedList = 0x000BC300;
-constexpr uintptr_t CServerExoApp__GetIsPlayerNameOnBannedList = 0x000BC380;
-constexpr uintptr_t CServerExoApp__GetItemByGameObjectID = 0x000BCD10;
-constexpr uintptr_t CServerExoApp__GetLoadingModule = 0x000BCB20;
-constexpr uintptr_t CServerExoApp__GetModule = 0x000BC700;
-constexpr uintptr_t CServerExoApp__GetModuleByGameObjectID = 0x000BCD70;
-constexpr uintptr_t CServerExoApp__GetModuleDescription = 0x000BC010;
-constexpr uintptr_t CServerExoApp__GetModuleLanguage = 0x000BCF80;
-constexpr uintptr_t CServerExoApp__GetModuleName = 0x000BC730;
-constexpr uintptr_t CServerExoApp__GetMoveToModulePending = 0x000BC870;
-constexpr uintptr_t CServerExoApp__GetMoveToModuleString = 0x000BC8C0;
-constexpr uintptr_t CServerExoApp__GetMultiplayerEnabled = 0x000BBF50;
-constexpr uintptr_t CServerExoApp__GetNetLayer = 0x000BBEF0;
-constexpr uintptr_t CServerExoApp__GetNextPCObject = 0x000BDD30;
-constexpr uintptr_t CServerExoApp__GetNWSMessage = 0x000BCFF0;
-constexpr uintptr_t CServerExoApp__GetObjectArray = 0x000BCC90;
-constexpr uintptr_t CServerExoApp__GetPauseState = 0x000BD810;
-constexpr uintptr_t CServerExoApp__GetPauseTimer = 0x000BD0E0;
-constexpr uintptr_t CServerExoApp__GetPlaceableByGameObjectID = 0x000BCE00;
-constexpr uintptr_t CServerExoApp__GetPlaceMeshManager = 0x000BD050;
-constexpr uintptr_t CServerExoApp__GetPlayerAddressData = 0x000BD590;
-constexpr uintptr_t CServerExoApp__GetPlayerIDByGameObjectID = 0x000BCF20;
-constexpr uintptr_t CServerExoApp__GetPlayerLanguage = 0x000BCF50;
-constexpr uintptr_t CServerExoApp__GetPlayerList = 0x000BCFD0;
-constexpr uintptr_t CServerExoApp__GetPlayerListString = 0x000BD310;
-constexpr uintptr_t CServerExoApp__GetPortalListString = 0x000BD3B0;
-constexpr uintptr_t CServerExoApp__GetReloadModuleWhenEmpty = 0x000BD9B0;
-constexpr uintptr_t CServerExoApp__GetSavingThrowBonusLimit = 0x000BDEE0;
-constexpr uintptr_t CServerExoApp__GetServerAIMaster = 0x000BCFB0;
-constexpr uintptr_t CServerExoApp__GetServerInfo = 0x000BBED0;
-constexpr uintptr_t CServerExoApp__GetServerMode = 0x000BD030;
-constexpr uintptr_t CServerExoApp__GetSkillBonusLimit = 0x000BDFA0;
-constexpr uintptr_t CServerExoApp__GetSoundObjectByGameObjectID = 0x000BCEF0;
-constexpr uintptr_t CServerExoApp__GetStickyCombatModesEnabled = 0x000BDE40;
-constexpr uintptr_t CServerExoApp__GetStoreByGameObjectID = 0x000BCCE0;
-constexpr uintptr_t CServerExoApp__GetSysAdminList = 0x000BD010;
-constexpr uintptr_t CServerExoApp__GetTimestopTimer = 0x000BD0C0;
-constexpr uintptr_t CServerExoApp__GetTriggerByGameObjectID = 0x000BCDD0;
-constexpr uintptr_t CServerExoApp__GetWaypointByGameObjectID = 0x000BCE90;
-constexpr uintptr_t CServerExoApp__GetWorldTimer = 0x000BD0A0;
-constexpr uintptr_t CServerExoApp__GSClientAddServer = 0x000BE110;
-constexpr uintptr_t CServerExoApp__GSClientChatMessage = 0x000BE100;
-constexpr uintptr_t CServerExoApp__GSClientClearServers = 0x000BE140;
-constexpr uintptr_t CServerExoApp__GSClientGroupRoomAdded = 0x000BE0F0;
-constexpr uintptr_t CServerExoApp__GSClientRemoveServer = 0x000BE120;
-constexpr uintptr_t CServerExoApp__GSClientUpdateConnectionPhase = 0x000BE150;
-constexpr uintptr_t CServerExoApp__GSClientUpdateServer = 0x000BE130;
-constexpr uintptr_t CServerExoApp__HandleGameSpyToServerMessage = 0x000BC2D0;
-constexpr uintptr_t CServerExoApp__HandleMessage = 0x000BC0C0;
-constexpr uintptr_t CServerExoApp__HandleOldServerVaultMigration = 0x000BC480;
-constexpr uintptr_t CServerExoApp__Initialize = 0x000BD140;
-constexpr uintptr_t CServerExoApp__InitiateModuleForPlayer = 0x000BD720;
-constexpr uintptr_t CServerExoApp__IsOnActiveExclusionList = 0x000BD930;
-constexpr uintptr_t CServerExoApp__IsOnExclusionList = 0x000BDA30;
-constexpr uintptr_t CServerExoApp__IsPlayerNameSticky = 0x000BC560;
-constexpr uintptr_t CServerExoApp__LoadCharacterFinish = 0x000BCC30;
-constexpr uintptr_t CServerExoApp__LoadCharacterStart = 0x000BCBE0;
-constexpr uintptr_t CServerExoApp__LoadGame = 0x000BC7F0;
-constexpr uintptr_t CServerExoApp__LoadModule = 0x000BD260;
-constexpr uintptr_t CServerExoApp__LoadPrimaryPlayer = 0x000BCC60;
-constexpr uintptr_t CServerExoApp__MainLoop = 0x000BD170;
-constexpr uintptr_t CServerExoApp__MovePlayerToArea = 0x000BD750;
-constexpr uintptr_t CServerExoApp__OnCDChange = 0x000BD400;
-constexpr uintptr_t CServerExoApp__OnExit = 0x000BD430;
-constexpr uintptr_t CServerExoApp__OnGainFocus = 0x000BD460;
-constexpr uintptr_t CServerExoApp__OnLostFocus = 0x000BD490;
-constexpr uintptr_t CServerExoApp__OnVideoChange = 0x000BD4C0;
-constexpr uintptr_t CServerExoApp__PlayerListChange = 0x000BC270;
-constexpr uintptr_t CServerExoApp__PushMessageOverWall = 0x000BC670;
-constexpr uintptr_t CServerExoApp__RemoveCDKeyFromBannedList = 0x000BDC90;
-constexpr uintptr_t CServerExoApp__RemoveFromExclusionList = 0x000BD8D0;
-constexpr uintptr_t CServerExoApp__RemoveIPFromBannedList = 0x000BDBB0;
-constexpr uintptr_t CServerExoApp__RemovePCFromWorld = 0x000BD1D0;
-constexpr uintptr_t CServerExoApp__RemovePlayerNameFromBannedList = 0x000BDC20;
-constexpr uintptr_t CServerExoApp__ResolvePlayerByFirstName = 0x000BD960;
-constexpr uintptr_t CServerExoApp__RestartNetLayer = 0x000BD630;
-constexpr uintptr_t CServerExoApp__RunModule = 0x000BD2E0;
-constexpr uintptr_t CServerExoApp__SaveGame = 0x000BC780;
-constexpr uintptr_t CServerExoApp__SendCharacterQuery = 0x000BC7C0;
-constexpr uintptr_t CServerExoApp__SetAbilityBonusLimit = 0x000BDF40;
-constexpr uintptr_t CServerExoApp__SetAbilityPenaltyLimit = 0x000BDF80;
-constexpr uintptr_t CServerExoApp__SetApplicationIdsMatch = 0x000BE160;
-constexpr uintptr_t CServerExoApp__SetAttackBonusLimit = 0x000BDE80;
-constexpr uintptr_t CServerExoApp__SetAutoSavePending = 0x000BCBA0;
-constexpr uintptr_t CServerExoApp__SetDamageBonusLimit = 0x000BDEC0;
-constexpr uintptr_t CServerExoApp__SetDDCipherForModule = 0x000BE030;
-constexpr uintptr_t CServerExoApp__SetDebugMode = 0x000BD100;
-constexpr uintptr_t CServerExoApp__SetEndGamePending = 0x000BC900;
-constexpr uintptr_t CServerExoApp__SetEndGameString = 0x000BC920;
-constexpr uintptr_t CServerExoApp__SetExportCharacterPending = 0x000BC970;
-constexpr uintptr_t CServerExoApp__SetForceUpdate = 0x000BD550;
-constexpr uintptr_t CServerExoApp__SetGameSpyEnabled = 0x000BDD60;
-constexpr uintptr_t CServerExoApp__SetGameSpyReporting = 0x000BD4F0;
-constexpr uintptr_t CServerExoApp__SetImportingChar = 0x000BCB80;
-constexpr uintptr_t CServerExoApp__SetLoadingModule = 0x000BCB40;
-constexpr uintptr_t CServerExoApp__SetMoveToModulePending = 0x000BC850;
-constexpr uintptr_t CServerExoApp__SetMoveToModuleString = 0x000BC890;
-constexpr uintptr_t CServerExoApp__SetNetworkAddressBan = 0x000BC170;
-constexpr uintptr_t CServerExoApp__SetPauseState = 0x000BD870;
-constexpr uintptr_t CServerExoApp__SetReloadModuleWhenEmpty = 0x000BD990;
-constexpr uintptr_t CServerExoApp__SetSavingThrowBonusLimit = 0x000BDF00;
-constexpr uintptr_t CServerExoApp__SetSkillBonusLimit = 0x000BDFC0;
-constexpr uintptr_t CServerExoApp__SetWeGotDisconnected = 0x000BE180;
-constexpr uintptr_t CServerExoApp__Shutdown = 0x000BD200;
-constexpr uintptr_t CServerExoApp__ShutdownNetLayer = 0x000BD600;
-constexpr uintptr_t CServerExoApp__ShutDownToMainMenu = 0x000BE0B0;
-constexpr uintptr_t CServerExoApp__StartNewModule = 0x000BC820;
-constexpr uintptr_t CServerExoApp__StartServices = 0x000BD5D0;
-constexpr uintptr_t CServerExoApp__StopServices = 0x000BD660;
-constexpr uintptr_t CServerExoApp__StripColorTokens = 0x000BDDA0;
-constexpr uintptr_t CServerExoApp__TogglePauseState = 0x000BD7E0;
-constexpr uintptr_t CServerExoApp__Uninitialize = 0x000BD520;
-constexpr uintptr_t CServerExoApp__UnloadModule = 0x000BD230;
-constexpr uintptr_t CServerExoApp__ValidatePlayerLogin = 0x000BD6F0;
-constexpr uintptr_t CServerExoApp__VomitServerOptionsToLog = 0x000BD1A0;
-
-constexpr uintptr_t CServerExoAppInternal__CServerExoAppInternalCtor = 0x000CA720;
-constexpr uintptr_t CServerExoAppInternal__CServerExoAppInternalDtor = 0x000CAC20;
-constexpr uintptr_t CServerExoAppInternal__AddCDKeyToBannedList = 0x000CF590;
-constexpr uintptr_t CServerExoAppInternal__AddCharListRequest = 0x000CE510;
-constexpr uintptr_t CServerExoAppInternal__AddIPToBannedList = 0x000CF470;
-constexpr uintptr_t CServerExoAppInternal__AddPendingAuthorization = 0x000C3DF0;
-constexpr uintptr_t CServerExoAppInternal__AddPlayerNameToBannedList = 0x000CF500;
-constexpr uintptr_t CServerExoAppInternal__AddSubNetProfile = 0x000C90D0;
-constexpr uintptr_t CServerExoAppInternal__AddSubNetProfileRecvSize = 0x000C9060;
-constexpr uintptr_t CServerExoAppInternal__AddSubNetProfileSendSize = 0x000C8FF0;
-constexpr uintptr_t CServerExoAppInternal__AddToExclusionList = 0x000C5470;
-constexpr uintptr_t CServerExoAppInternal__AdmitNetworkAddress = 0x000BE3C0;
-constexpr uintptr_t CServerExoAppInternal__AdmitPlayerName = 0x000BE3D0;
-constexpr uintptr_t CServerExoAppInternal__CheckMasterServerTranslation = 0x000C5E60;
-constexpr uintptr_t CServerExoAppInternal__CheckStickyPlayerNameReserved = 0x000C7C80;
-constexpr uintptr_t CServerExoAppInternal__ConnectionLibMainLoop = 0x000C6450;
-constexpr uintptr_t CServerExoAppInternal__ContinueMessageProcessing = 0x000C1B40;
-constexpr uintptr_t CServerExoAppInternal__CopyModuleToCurrentGame = 0x000C0010;
-constexpr uintptr_t CServerExoAppInternal__CreateServerVaultLostAndFound = 0x000C8970;
-constexpr uintptr_t CServerExoAppInternal__DealWithLoadGameError = 0x000CB320;
-constexpr uintptr_t CServerExoAppInternal__EndGame = 0x000BF300;
-constexpr uintptr_t CServerExoAppInternal__ExportAllPlayers = 0x000BFD20;
-constexpr uintptr_t CServerExoAppInternal__ExportPlayer = 0x000BFCB0;
-constexpr uintptr_t CServerExoAppInternal__GetActiveExclusionList = 0x000C5BE0;
-constexpr uintptr_t CServerExoAppInternal__GetActivePauseState = 0x000C5340;
-constexpr uintptr_t CServerExoAppInternal__GetActiveTimer = 0x000C5780;
-constexpr uintptr_t CServerExoAppInternal__GetAreaByGameObjectID = 0x000C21B0;
-constexpr uintptr_t CServerExoAppInternal__GetAreaOfEffectByGameObjectID = 0x000C2880;
-constexpr uintptr_t CServerExoAppInternal__GetBannedListString = 0x000C4D50;
-constexpr uintptr_t CServerExoAppInternal__GetClientObjectByObjectId = 0x000BE3E0;
-constexpr uintptr_t CServerExoAppInternal__GetClientObjectByPlayerId = 0x000BE4C0;
-constexpr uintptr_t CServerExoAppInternal__GetCreatureByGameObjectID = 0x000C2070;
-constexpr uintptr_t CServerExoAppInternal__GetDifficultyOption = 0x000C7430;
-constexpr uintptr_t CServerExoAppInternal__GetDoorByGameObjectID = 0x000C27F0;
-constexpr uintptr_t CServerExoAppInternal__GetEncounterByGameObjectID = 0x000C29A0;
-constexpr uintptr_t CServerExoAppInternal__GetExtendedServerInfo = 0x000C0E40;
-constexpr uintptr_t CServerExoAppInternal__GetFactionOfObject = 0x000C3ED0;
-constexpr uintptr_t CServerExoAppInternal__GetFirstPCObject = 0x000C8760;
-constexpr uintptr_t CServerExoAppInternal__GetGameObject = 0x000C1EC0;
-constexpr uintptr_t CServerExoAppInternal__GetHostedPublicInternetAddressAndPort = 0x000C9530;
-constexpr uintptr_t CServerExoAppInternal__GetIsCDKeyOnBannedList = 0x000C7BD0;
-constexpr uintptr_t CServerExoAppInternal__GetIsIPOnBannedList = 0x000C77B0;
-constexpr uintptr_t CServerExoAppInternal__GetIsPlayerNameOnBannedList = 0x000C79C0;
-constexpr uintptr_t CServerExoAppInternal__GetItemByGameObjectID = 0x000C1FC0;
-constexpr uintptr_t CServerExoAppInternal__GetModule = 0x000BE5D0;
-constexpr uintptr_t CServerExoAppInternal__GetModuleByGameObjectID = 0x000C2100;
-constexpr uintptr_t CServerExoAppInternal__GetModuleExists = 0x000C0110;
-constexpr uintptr_t CServerExoAppInternal__GetModuleLanguage = 0x000C2B70;
-constexpr uintptr_t CServerExoAppInternal__GetModuleName = 0x000BE670;
-constexpr uintptr_t CServerExoAppInternal__GetNextPCObject = 0x000C87E0;
-constexpr uintptr_t CServerExoAppInternal__GetPauseState = 0x000C5320;
-constexpr uintptr_t CServerExoAppInternal__GetPlaceableByGameObjectID = 0x000C2760;
-constexpr uintptr_t CServerExoAppInternal__GetPlayerAddressData = 0x000C0E00;
-constexpr uintptr_t CServerExoAppInternal__GetPlayerIDByGameObjectID = 0x000C5E20;
-constexpr uintptr_t CServerExoAppInternal__GetPlayerLanguage = 0x000C2AC0;
-constexpr uintptr_t CServerExoAppInternal__GetPlayerListString = 0x000C4050;
-constexpr uintptr_t CServerExoAppInternal__GetPortalListString = 0x000C52D0;
-constexpr uintptr_t CServerExoAppInternal__GetServerInfoFromIniFile = 0x000CF620;
-constexpr uintptr_t CServerExoAppInternal__GetSoundObjectByGameObjectID = 0x000C2A30;
-constexpr uintptr_t CServerExoAppInternal__GetStoreByGameObjectID = 0x000C1F30;
-constexpr uintptr_t CServerExoAppInternal__GetTriggerByGameObjectID = 0x000C26D0;
-constexpr uintptr_t CServerExoAppInternal__GetWaypointByGameObjectID = 0x000C2910;
-constexpr uintptr_t CServerExoAppInternal__HandleGameSpyToServerMessage = 0x000C3DE0;
-constexpr uintptr_t CServerExoAppInternal__HandleMessage = 0x000BFE50;
-constexpr uintptr_t CServerExoAppInternal__HandleOldServerVaultMigration = 0x000C9C00;
-constexpr uintptr_t CServerExoAppInternal__Initialize = 0x000C0000;
-constexpr uintptr_t CServerExoAppInternal__InitializeNetLayer = 0x000C2B90;
-constexpr uintptr_t CServerExoAppInternal__InitiateModuleForPlayer = 0x000C2260;
-constexpr uintptr_t CServerExoAppInternal__IsOnActiveExclusionList = 0x000C56C0;
-constexpr uintptr_t CServerExoAppInternal__IsOnExclusionList = 0x000C5360;
-constexpr uintptr_t CServerExoAppInternal__IsPlayerNameSticky = 0x000C7C60;
-constexpr uintptr_t CServerExoAppInternal__LoadCharacterFinish = 0x000BF6D0;
-constexpr uintptr_t CServerExoAppInternal__LoadCharacterStart = 0x000D77B0;
-constexpr uintptr_t CServerExoAppInternal__LoadGame = 0x000CD210;
-constexpr uintptr_t CServerExoAppInternal__LoadModule = 0x000CB470;
-constexpr uintptr_t CServerExoAppInternal__LoadPrimaryPlayer = 0x000BFC50;
-constexpr uintptr_t CServerExoAppInternal__MainLoop = 0x000D5480;
-constexpr uintptr_t CServerExoAppInternal__MarkUpdateClientsForObject = 0x000C1940;
-constexpr uintptr_t CServerExoAppInternal__MovePlayerToArea = 0x000C11B0;
-constexpr uintptr_t CServerExoAppInternal__OnCDChange = 0x000C1340;
-constexpr uintptr_t CServerExoAppInternal__OnExit = 0x000C1350;
-constexpr uintptr_t CServerExoAppInternal__OnGainFocus = 0x000C1360;
-constexpr uintptr_t CServerExoAppInternal__OnLostFocus = 0x000C1370;
-constexpr uintptr_t CServerExoAppInternal__OnVideoChange = 0x000C1380;
-constexpr uintptr_t CServerExoAppInternal__PlayerListChange = 0x000CD980;
-constexpr uintptr_t CServerExoAppInternal__PushMessageOverWall = 0x000C8840;
-constexpr uintptr_t CServerExoAppInternal__QuarantineInvalidCharacter = 0x000BF460;
-constexpr uintptr_t CServerExoAppInternal__ReadBannedLists = 0x000CE5F0;
-constexpr uintptr_t CServerExoAppInternal__RemoveCDKeyFromBannedList = 0x000CF390;
-constexpr uintptr_t CServerExoAppInternal__RemoveFromExclusionList = 0x000C5590;
-constexpr uintptr_t CServerExoAppInternal__RemoveIPFromBannedList = 0x000CF1D0;
-constexpr uintptr_t CServerExoAppInternal__RemovePCFromWorld = 0x000C1B70;
-constexpr uintptr_t CServerExoAppInternal__RemovePendingAuthorization = 0x000C3E60;
-constexpr uintptr_t CServerExoAppInternal__RemovePlayerNameFromBannedList = 0x000CF2B0;
-constexpr uintptr_t CServerExoAppInternal__RemoveSubNetProfile = 0x000C9280;
-constexpr uintptr_t CServerExoAppInternal__ReprocessExclusionListActions = 0x000C5810;
-constexpr uintptr_t CServerExoAppInternal__ResolvePlayerByFirstName = 0x000C5C20;
-constexpr uintptr_t CServerExoAppInternal__RestartNetLayer = 0x000C2DC0;
-constexpr uintptr_t CServerExoAppInternal__RunModule = 0x000C1390;
-constexpr uintptr_t CServerExoAppInternal__SaveGame = 0x000C0780;
-constexpr uintptr_t CServerExoAppInternal__SendCharacterQuery = 0x000BFDC0;
-constexpr uintptr_t CServerExoAppInternal__SendEnhancedHeartbeatToMasterServer = 0x000C60C0;
-constexpr uintptr_t CServerExoAppInternal__SendEnteringStartNewModuleMessage = 0x000BF3E0;
-constexpr uintptr_t CServerExoAppInternal__SendExitingStartNewModuleMessage = 0x000BF420;
-constexpr uintptr_t CServerExoAppInternal__SendHeartbeatToRelay = 0x000C6370;
-constexpr uintptr_t CServerExoAppInternal__SendStartStallEvent = 0x000C0740;
-constexpr uintptr_t CServerExoAppInternal__SetDDCipherForModule = 0x000C95B0;
-constexpr uintptr_t CServerExoAppInternal__SetEstimatedSaveSize = 0x000C05C0;
-constexpr uintptr_t CServerExoAppInternal__SetGameSpyReporting = 0x000C2B80;
-constexpr uintptr_t CServerExoAppInternal__SetNetworkAddressBan = 0x000CE570;
-constexpr uintptr_t CServerExoAppInternal__SetPauseState = 0x000C5900;
-constexpr uintptr_t CServerExoAppInternal__Shutdown = 0x000CD560;
-constexpr uintptr_t CServerExoAppInternal__ShutdownNetLayer = 0x000C1580;
-constexpr uintptr_t CServerExoAppInternal__ShutdownServerProfiles = 0x000C9510;
-constexpr uintptr_t CServerExoAppInternal__StallEventSaveGame = 0x000C0FA0;
-constexpr uintptr_t CServerExoAppInternal__StartNewModule = 0x000D53A0;
-constexpr uintptr_t CServerExoAppInternal__StartServices = 0x000D2FB0;
-constexpr uintptr_t CServerExoAppInternal__StartShutdownTimer = 0x000C7470;
-constexpr uintptr_t CServerExoAppInternal__StopServices = 0x000CEAF0;
-constexpr uintptr_t CServerExoAppInternal__StorePlayerCharacters = 0x000D4EA0;
-constexpr uintptr_t CServerExoAppInternal__StripColorTokens = 0x000C8D10;
-constexpr uintptr_t CServerExoAppInternal__Test_Unit_Script_Compile = 0x000C8A30;
-constexpr uintptr_t CServerExoAppInternal__Test_Unit_Script_Run = 0x000C8BE0;
-constexpr uintptr_t CServerExoAppInternal__TogglePauseState = 0x000C5BB0;
-constexpr uintptr_t CServerExoAppInternal__Uninitialize = 0x000C1AD0;
-constexpr uintptr_t CServerExoAppInternal__UnloadModule = 0x000CAF70;
-constexpr uintptr_t CServerExoAppInternal__UnlockBiowareModule = 0x000BE720;
-constexpr uintptr_t CServerExoAppInternal__UpdateAutoSaveTimer = 0x000C8880;
-constexpr uintptr_t CServerExoAppInternal__UpdateClientGameObjects = 0x000C1A10;
-constexpr uintptr_t CServerExoAppInternal__UpdateClientGameObjectsForPlayer = 0x000C1680;
-constexpr uintptr_t CServerExoAppInternal__UpdateClientsForObject = 0x000C15D0;
-constexpr uintptr_t CServerExoAppInternal__UpdateLogHeartbeatTimer = 0x000C76A0;
-constexpr uintptr_t CServerExoAppInternal__UpdateShutdownTimer = 0x000C74A0;
-constexpr uintptr_t CServerExoAppInternal__UpdateWindowTitle = 0x000C1570;
-constexpr uintptr_t CServerExoAppInternal__ValidateCreateServerCharacter = 0x000D5F70;
-constexpr uintptr_t CServerExoAppInternal__ValidatePlayerLogin = 0x000C1AE0;
-constexpr uintptr_t CServerExoAppInternal__VomitServerOptionsToLog = 0x000C36A0;
-constexpr uintptr_t CServerExoAppInternal__WriteServerInfoToIniFile = 0x000C2DD0;
-
-constexpr uintptr_t CServerInfo__CServerInfoCtor = 0x0006C1D0;
-constexpr uintptr_t CServerInfo__FindOptionIndex = 0x0006CB60;
-constexpr uintptr_t CServerInfo__SetDifficultyLevel = 0x0006CC00;
-
-constexpr uintptr_t CStoreCustomer__CStoreCustomerCtor = 0x000B0C60;
-
-constexpr uintptr_t CTlkFile__CTlkFileCtor = 0x00040ED0;
-constexpr uintptr_t CTlkFile__ReadHeader = 0x00040F80;
-
-constexpr uintptr_t CTlkTable__CTlkTableCtor = 0x00040FD0;
-constexpr uintptr_t CTlkTable__CTlkTableDtor__0 = 0x000410B0;
-constexpr uintptr_t CTlkTable__ClearCustomTokens = 0x00041830;
-constexpr uintptr_t CTlkTable__CloseFile = 0x00041030;
-constexpr uintptr_t CTlkTable__CloseFileAlternate = 0x000411F0;
-constexpr uintptr_t CTlkTable__ExoIsDBCSLeadByte = 0x00041210;
-constexpr uintptr_t CTlkTable__FetchInternal = 0x00041F10;
-constexpr uintptr_t CTlkTable__GetLanguageVersion = 0x000424C0;
-constexpr uintptr_t CTlkTable__GetSimpleString = 0x00042410;
-constexpr uintptr_t CTlkTable__GetTokenValue = 0x00042CC0;
-constexpr uintptr_t CTlkTable__OpenFile__0 = 0x00042560;
-constexpr uintptr_t CTlkTable__OpenFile__1 = 0x00041340;
-constexpr uintptr_t CTlkTable__OpenFileAlternate = 0x00041580;
-constexpr uintptr_t CTlkTable__ParseStr = 0x000418B0;
-constexpr uintptr_t CTlkTable__RemapFontName = 0x00041220;
-constexpr uintptr_t CTlkTable__SetCustomToken = 0x000415A0;
-constexpr uintptr_t CTlkTable__SetUseLargeDialogFont = 0x000424F0;
-
-constexpr uintptr_t CTwoDimArrays__CTwoDimArraysCtor = 0x000D8AC0;
-constexpr uintptr_t CTwoDimArrays__CTwoDimArraysDtor = 0x000DCE80;
-constexpr uintptr_t CTwoDimArrays__ClearCached2DAs = 0x000DCDB0;
-constexpr uintptr_t CTwoDimArrays__GetCached2DA = 0x000DC9C0;
-constexpr uintptr_t CTwoDimArrays__GetEpicAttackBonus = 0x000DC930;
-constexpr uintptr_t CTwoDimArrays__GetEpicFortSaveBonus = 0x000DC8D0;
-constexpr uintptr_t CTwoDimArrays__GetEpicRefSaveBonus = 0x000DC8F0;
-constexpr uintptr_t CTwoDimArrays__GetEpicWillSaveBonus = 0x000DC910;
-constexpr uintptr_t CTwoDimArrays__GetIPRPCostTable = 0x000DA570;
-constexpr uintptr_t CTwoDimArrays__Load2DArrays = 0x000DA890;
-constexpr uintptr_t CTwoDimArrays__LoadEpicAttacks = 0x000DA770;
-constexpr uintptr_t CTwoDimArrays__LoadEpicSaves = 0x000DA5A0;
-constexpr uintptr_t CTwoDimArrays__LoadIPRPCostTables = 0x000D8EF0;
-constexpr uintptr_t CTwoDimArrays__UnLoad2DArrays = 0x000D9240;
-constexpr uintptr_t CTwoDimArrays__UnLoadIPRPCostTables = 0x000D91A0;
-constexpr uintptr_t CTwoDimArrays__Update2DACache = 0x000DC950;
-
-constexpr uintptr_t CVirtualMachine__CVirtualMachineCtor = 0x002EB290;
-constexpr uintptr_t CVirtualMachine__CVirtualMachineDtor = 0x002EC930;
-constexpr uintptr_t CVirtualMachine__Debugger = 0x002E8900;
-constexpr uintptr_t CVirtualMachine__DeleteScript = 0x002E7D20;
-constexpr uintptr_t CVirtualMachine__DeleteScriptSituation = 0x002E8820;
-constexpr uintptr_t CVirtualMachine__ExecuteCode = 0x002E89B0;
-constexpr uintptr_t CVirtualMachine__GetRunScriptReturnValue = 0x002E7E90;
-constexpr uintptr_t CVirtualMachine__GetScriptLog = 0x002E7E10;
-constexpr uintptr_t CVirtualMachine__InitializeScript = 0x002E7CC0;
-constexpr uintptr_t CVirtualMachine__LoadScriptSituation_Internal = 0x002E8580;
-constexpr uintptr_t CVirtualMachine__PopInstructionPtr = 0x002E7DA0;
-constexpr uintptr_t CVirtualMachine__PushInstructionPtr = 0x002E7DE0;
-constexpr uintptr_t CVirtualMachine__ReadScriptFile = 0x002EBD40;
-constexpr uintptr_t CVirtualMachine__RunScript = 0x002EC3A0;
-constexpr uintptr_t CVirtualMachine__RunScriptFile = 0x002EA860;
-constexpr uintptr_t CVirtualMachine__RunScriptSituation = 0x002EBFF0;
-constexpr uintptr_t CVirtualMachine__SaveScriptSituation_Internal = 0x002EC1E0;
-constexpr uintptr_t CVirtualMachine__SetCommandImplementer = 0x002E88D0;
-constexpr uintptr_t CVirtualMachine__SetDebugGUIFlag = 0x002E88B0;
-constexpr uintptr_t CVirtualMachine__SetUpScriptSituation = 0x002EBF10;
-constexpr uintptr_t CVirtualMachine__StackPopCommand_Internal = 0x002E83E0;
-constexpr uintptr_t CVirtualMachine__StackPopEngineStructure = 0x002E8230;
-constexpr uintptr_t CVirtualMachine__StackPopFloat = 0x002E7F70;
-constexpr uintptr_t CVirtualMachine__StackPopInteger = 0x002E7EC0;
-constexpr uintptr_t CVirtualMachine__StackPopObject = 0x002E8330;
-constexpr uintptr_t CVirtualMachine__StackPopString = 0x002E8120;
-constexpr uintptr_t CVirtualMachine__StackPopVector = 0x002E8020;
-constexpr uintptr_t CVirtualMachine__StackPushEngineStructure = 0x002E82D0;
-constexpr uintptr_t CVirtualMachine__StackPushFloat = 0x002E7FE0;
-constexpr uintptr_t CVirtualMachine__StackPushInteger = 0x002E7F30;
-constexpr uintptr_t CVirtualMachine__StackPushObject = 0x002E83A0;
-constexpr uintptr_t CVirtualMachine__StackPushString = 0x002E81B0;
-constexpr uintptr_t CVirtualMachine__StackPushVector = 0x002E80A0;
-constexpr uintptr_t CVirtualMachine__Test_RunAllScriptsInDirectory = 0x002EA9A0;
-
-constexpr uintptr_t CVirtualMachineCache__CVirtualMachineCacheDtor = 0x002EC8D0;
-constexpr uintptr_t CVirtualMachineCache__ClearAllFiles = 0x002EC880;
-constexpr uintptr_t CVirtualMachineCache__PrecacheFile = 0x002EBBA0;
-
-constexpr uintptr_t CVirtualMachineDebuggerInstance__CVirtualMachineDebuggerInstanceCtor = 0x002ED100;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__CVirtualMachineDebuggerInstanceDtor = 0x002ED340;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__DebuggerDisplayCurrentLocation = 0x002F2580;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__DebuggerMainLoop = 0x002F2B30;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__DebuggerSingleStep = 0x002F27B0;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__FindEmptyWatchViewEntry = 0x002F05C0;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__FindWatchViewEntry = 0x002F0DD0;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__GenerateCallStackParameterView = 0x002EFF00;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__GenerateCallStackView = 0x002F0000;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__GenerateDebugVariableLocationForParameter = 0x002EFE70;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__GenerateFunctionIDFromInstructionPointer = 0x002EF660;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__GenerateLineNumberFromInstructionPointer = 0x002EF6A0;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__GenerateStackSizeAtInstructionPointer = 0x002EFB90;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__GenerateTypeName = 0x002EF860;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__GenerateTypeSize = 0x002EF780;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__GenerateTypeValueFromStackLocation = 0x002EFA50;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__GetNextDebugVariable = 0x002EFDA0;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__LoadDebugInfo = 0x002EDCB0;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__LoadDebugInfoLine = 0x002EDC50;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__LoadScriptLine = 0x002EDBC0;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__ParseAndExecuteMessage = 0x002F2850;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__ReadIntegerFromInput = 0x002EDA00;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__ReadStringFromInput = 0x002EDA60;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__SendCallStackWindowUpdateCommands = 0x002F0320;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__SendCodeWindowUpdateCommands = 0x002F2160;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__SendLabelsAndKeywords = 0x002F1E70;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__SendWatchWindowEntry = 0x002F0E90;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__SendWatchWindowUpdateCommands = 0x002F1830;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__ShutDownDebugger = 0x002ED9A0;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__SpawnDebugger = 0x002F2DA0;
-constexpr uintptr_t CVirtualMachineDebuggerInstance__ToggleWatchWindowExpansion = 0x002EDB30;
-
-constexpr uintptr_t CVirtualMachineDebugLoader__CVirtualMachineDebugLoaderDtor__0 = 0x002CED60;
-constexpr uintptr_t CVirtualMachineDebugLoader__DemandDebugInfo = 0x002F2BE0;
-constexpr uintptr_t CVirtualMachineDebugLoader__GetDataPtr = 0x002ED080;
-constexpr uintptr_t CVirtualMachineDebugLoader__GetSize = 0x002ED0C0;
-constexpr uintptr_t CVirtualMachineDebugLoader__ReleaseDebugInfo = 0x002F2D80;
-
-constexpr uintptr_t CVirtualMachineFile__CVirtualMachineFileCtor = 0x002EB190;
-constexpr uintptr_t CVirtualMachineFile__CVirtualMachineFileDtor__0 = 0x002EB1C0;
-constexpr uintptr_t CVirtualMachineFile__GetData = 0x002E7C80;
-constexpr uintptr_t CVirtualMachineFile__LoadFile = 0x002EBB30;
-constexpr uintptr_t CVirtualMachineFile__UnloadFile = 0x002EBCD0;
-
-constexpr uintptr_t CVirtualMachineScript__CVirtualMachineScriptDtor = 0x002ECDE0;
-
-constexpr uintptr_t CVirtualMachineStack__CVirtualMachineStackCtor = 0x002E6DF0;
-constexpr uintptr_t CVirtualMachineStack__CVirtualMachineStackDtor = 0x002E7800;
-constexpr uintptr_t CVirtualMachineStack__AddToTopOfStack = 0x002E6E30;
-constexpr uintptr_t CVirtualMachineStack__AssignLocationToLocation = 0x002E6F70;
-constexpr uintptr_t CVirtualMachineStack__ClearStack = 0x002E7690;
-constexpr uintptr_t CVirtualMachineStack__CopyFromStack = 0x002E7820;
-constexpr uintptr_t CVirtualMachineStack__GetBasePointer = 0x002E7B70;
-constexpr uintptr_t CVirtualMachineStack__GetStackPointer = 0x002E7B90;
-constexpr uintptr_t CVirtualMachineStack__InitializeStack = 0x002E7810;
-constexpr uintptr_t CVirtualMachineStack__LoadStack = 0x002E7370;
-constexpr uintptr_t CVirtualMachineStack__ModifyIntegerAtLocation = 0x002E7130;
-constexpr uintptr_t CVirtualMachineStack__SaveStack = 0x002E7160;
-constexpr uintptr_t CVirtualMachineStack__SetBasePointer = 0x002E7B80;
-constexpr uintptr_t CVirtualMachineStack__SetStackPointer = 0x002E7BA0;
-
-constexpr uintptr_t CWorldJournalEntry__CWorldJournalEntryDtor = 0x001E7F90;
-
-constexpr uintptr_t CWorldTimer__CWorldTimerCtor = 0x00267950;
-constexpr uintptr_t CWorldTimer__CWorldTimerDtor = 0x00267A20;
-constexpr uintptr_t CWorldTimer__AddWorldTimes = 0x00267FF0;
-constexpr uintptr_t CWorldTimer__AdvanceToTime = 0x00268940;
-constexpr uintptr_t CWorldTimer__CompareWorldTimes = 0x00268120;
-constexpr uintptr_t CWorldTimer__ConvertFromCalendarDay = 0x00267BE0;
-constexpr uintptr_t CWorldTimer__ConvertFromTimeOfDay = 0x00267C50;
-constexpr uintptr_t CWorldTimer__ConvertToCalendarDay = 0x00267B20;
-constexpr uintptr_t CWorldTimer__ConvertToTimeOfDay = 0x00267B70;
-constexpr uintptr_t CWorldTimer__GetCalendarDayFromSeconds = 0x00268840;
-constexpr uintptr_t CWorldTimer__GetSnapshotTime = 0x00267AF0;
-constexpr uintptr_t CWorldTimer__GetSnapshotTimeDifference = 0x00267B00;
-constexpr uintptr_t CWorldTimer__GetTimeDifferenceFromWorldTime = 0x002680B0;
-constexpr uintptr_t CWorldTimer__GetTimeOfDayFromSeconds = 0x002688A0;
-constexpr uintptr_t CWorldTimer__GetWorldTime = 0x00267EA0;
-constexpr uintptr_t CWorldTimer__GetWorldTimeCalendarDay = 0x00268270;
-constexpr uintptr_t CWorldTimer__GetWorldTimeCalendarDayString = 0x002682B0;
-constexpr uintptr_t CWorldTimer__GetWorldTimeDay = 0x00268660;
-constexpr uintptr_t CWorldTimer__GetWorldTimeHour = 0x002686B0;
-constexpr uintptr_t CWorldTimer__GetWorldTimeMillisecond = 0x002687C0;
-constexpr uintptr_t CWorldTimer__GetWorldTimeMinute = 0x00268700;
-constexpr uintptr_t CWorldTimer__GetWorldTimeMonth = 0x00268600;
-constexpr uintptr_t CWorldTimer__GetWorldTimeSecond = 0x00268760;
-constexpr uintptr_t CWorldTimer__GetWorldTimeTimeOfDay = 0x00268390;
-constexpr uintptr_t CWorldTimer__GetWorldTimeTimeOfDayString = 0x002683D0;
-constexpr uintptr_t CWorldTimer__GetWorldTimeYear = 0x002685A0;
-constexpr uintptr_t CWorldTimer__PauseWorldTimer = 0x00268180;
-constexpr uintptr_t CWorldTimer__ResetTimer = 0x00267F90;
-constexpr uintptr_t CWorldTimer__SetFixedSnapshotRate = 0x00268810;
-constexpr uintptr_t CWorldTimer__SetMinutesPerHour = 0x00267A30;
-constexpr uintptr_t CWorldTimer__SetSnapshotTime = 0x00267A80;
-constexpr uintptr_t CWorldTimer__SetWorldTime__0 = 0x00267E10;
-constexpr uintptr_t CWorldTimer__SetWorldTime__1 = 0x00267CC0;
-constexpr uintptr_t CWorldTimer__SubtractWorldTimes = 0x00268040;
-constexpr uintptr_t CWorldTimer__TranslateWorldTimeToString = 0x002684A0;
-constexpr uintptr_t CWorldTimer__UnpauseWorldTimer = 0x002681E0;
-
-constexpr uintptr_t ICrashReporter__ExposeFile = 0x003A2BA0;
-constexpr uintptr_t ICrashReporter__WriteCallstack = 0x003A2EC0;
-constexpr uintptr_t ICrashReporter__WriteMinidump = 0x003A2CB0;
-constexpr uintptr_t ICrashReporter__WriteSystemFiles = 0x003A2ED0;
-
-constexpr uintptr_t ListTemplatedCExoString__ListTemplatedCExoStringDtor = 0x00063EB0;
-constexpr uintptr_t ListTemplatedCExoString__allocate = 0x00063F10;
-
-constexpr uintptr_t Matrix__getquaternion = 0x002C3E50;
-
-constexpr uintptr_t Plane__Transform = 0x002C4630;
-
-constexpr uintptr_t Quaternion__OperatorMultiplicationAssignment = 0x002C4510;
-
-constexpr uintptr_t SJournalEntry__SJournalEntryDtor = 0x001D8640;
-
-constexpr uintptr_t STR_RES__STR_RESCtor = 0x0025DBA0;
-
-constexpr uintptr_t Vector__Normalize = 0x002C2B90;
-constexpr uintptr_t Vector__OperatorMultiplicationAssignment = 0x002C2FC0;
-constexpr uintptr_t Vector__OperatorDivisionAssignment = 0x002C2FE0;
-constexpr uintptr_t Vector__OperatorAdditionAssignment = 0x002C2F60;
-constexpr uintptr_t Vector__OperatorSubtractionAssignment = 0x002C2F90;
-
-constexpr uintptr_t Vector4__Normalize = 0x002C3620;
-
-}
-
-}
-
-}
+#ifndef NWNXLIB_FUNCTION_NO_VERSION_CHECK
+NWNX_EXPECT_VERSION(8193, 13);
+#endif
+
+NWNXLIB_FUNCTION(_ZN10CERFString4ReadEv, 0x000000000078ade0)
+NWNXLIB_FUNCTION(_ZN10CERFString5ResetEv, 0x000000000078ac40)
+NWNXLIB_FUNCTION(_ZN10CERFString5WriteER8CExoFile, 0x000000000078adf0)
+NWNXLIB_FUNCTION(_ZN10CERFString7GetTextEv, 0x000000000078ac80)
+NWNXLIB_FUNCTION(_ZN10CERFString7SetTextER10CExoString, 0x000000000078acb0)
+NWNXLIB_FUNCTION(_ZN10CERFStringC1Ev, 0x000000000078ac00)
+NWNXLIB_FUNCTION(_ZN10CERFStringC2Ev, 0x000000000078ac00)
+NWNXLIB_FUNCTION(_ZN10CERFStringD1Ev, 0x000000000078ac20)
+NWNXLIB_FUNCTION(_ZN10CERFStringD2Ev, 0x000000000078ac20)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE10IsModifiedEv, 0x00000000000e7bd0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE10MakeSchemaEv, 0x00000000000f5100)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE10WriteToIniEv, 0x00000000000e8910)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE11ReadFromIniEv, 0x00000000000f9f70)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE12DeprecateIniEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_, 0x00000000000e7380)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE14ResetToDefaultEv, 0x00000000000f9d10)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE16ApplyConstraintsEv, 0x00000000000f9d30)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE20ReadExternalOverrideEv, 0x00000000000f9da0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE23OverrideForSingleplayerERKb, 0x00000000000e0d70)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE24RequestTemporaryOverrideERKb, 0x00000000000ecaf0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE6MapIniEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_St8functionIFbRK10CExoStringEESA_IFSB_RKbEE, 0x00000000000e0d90)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE8RollbackEv, 0x00000000000f9ca0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE9ConstrainESt6vectorIbSaIbEE, 0x00000000000e0ad0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE9ConstrainESt8functionIFbRKbEE, 0x00000000000e0c60)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbE9IsDefaultEb, 0x00000000000e88e0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbED0Ev, 0x00000000000e3420)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbED1Ev, 0x00000000000e2f40)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIbED2Ev, 0x00000000000e2f40)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE10IsModifiedEv, 0x00000000000ef3b0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE10MakeSchemaEv, 0x00000000000f1120)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE10WriteToIniEv, 0x00000000000ef0a0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE11ReadFromIniEv, 0x00000000000f9800)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE12DeprecateIniEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_, 0x00000000000e72b0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE14ResetToDefaultEv, 0x00000000000f95d0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE16ApplyConstraintsEv, 0x00000000000f95f0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE20ReadExternalOverrideEv, 0x00000000000f9660)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE23OverrideForSingleplayerERKd, 0x00000000000e0620)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE24RequestTemporaryOverrideERKd, 0x00000000000ec8e0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE6MapIniEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_St8functionIFdRK10CExoStringEESA_IFSB_RKdEE, 0x00000000000e0860)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE8RollbackEv, 0x00000000000f9560)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE9ConstrainESt6vectorIdSaIdEE, 0x00000000000e0430)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE9ConstrainESt8functionIFdRKdEE, 0x00000000000e0500)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdE9IsDefaultEb, 0x00000000000ef060)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdED0Ev, 0x00000000000e32c0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdED1Ev, 0x00000000000e31c0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIdED2Ev, 0x00000000000e31c0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE10IsModifiedEv, 0x00000000000e7a20)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE10MakeSchemaEv, 0x00000000000f2730)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE10WriteToIniEv, 0x00000000000e8bf0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE11ReadFromIniEv, 0x00000000000f90d0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE12DeprecateIniEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_, 0x00000000000e71e0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE14ResetToDefaultEv, 0x00000000000f8e90)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE16ApplyConstraintsEv, 0x00000000000f8eb0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE20ReadExternalOverrideEv, 0x00000000000f8f30)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE23OverrideForSingleplayerERKl, 0x00000000000dffc0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE24RequestTemporaryOverrideERKl, 0x00000000000ec6d0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE6MapIniEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_St8functionIFlRK10CExoStringEESA_IFSB_RKlEE, 0x00000000000e01c0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE8RollbackEv, 0x00000000000f8e20)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE9ConstrainESt6vectorIlSaIlEE, 0x00000000000dfdd0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE9ConstrainESt8functionIFlRKlEE, 0x00000000000dfea0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlE9IsDefaultEb, 0x00000000000e8bc0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlED0Ev, 0x00000000000e3370)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlED1Ev, 0x00000000000e3120)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigIlED2Ev, 0x00000000000e3120)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE10IsModifiedEv, 0x00000000000e7700)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE10MakeSchemaEv, 0x00000000000f3c30)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE10WriteToIniEv, 0x00000000000e8530)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE11ReadFromIniEv, 0x00000000000f8900)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE12DeprecateIniEiRKS6_S9_, 0x00000000000e7110)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE14ResetToDefaultEv, 0x00000000000f85c0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE16ApplyConstraintsEv, 0x00000000000f85e0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE20ReadExternalOverrideEv, 0x00000000000f8710)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE23OverrideForSingleplayerERKS6_, 0x00000000000dfa00)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE24RequestTemporaryOverrideERKS6_, 0x00000000000ec4c0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE6MapIniEiRKS6_S9_St8functionIFS6_RK10CExoStringEESA_IFSB_S9_EE, 0x00000000000dfb10)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE8RollbackEv, 0x00000000000f8520)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE9ConstrainESt6vectorIS6_SaIS6_EE, 0x00000000000e2950)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE9ConstrainESt8functionIFS6_RKS6_EE, 0x00000000000df8d0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE9IsDefaultEb, 0x00000000000e8480)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEED0Ev, 0x00000000000e30f0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEED1Ev, 0x00000000000e2fe0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEED2Ev, 0x00000000000e2fe0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10IniMappingD1Ev, 0x00000000000df6b0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10IniMappingD2Ev, 0x00000000000df6b0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10InitializeEv, 0x00000000000dd670)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10IsModifiedIbEEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE, 0x00000000000e7b60)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10IsModifiedIdEEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE, 0x00000000000ef340)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10IsModifiedIlEEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE, 0x00000000000e79c0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10IsModifiedINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEbRKS6_, 0x00000000000e7620)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10MakeSchemaEv, 0x00000000000dc5b0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig10SaveToDiskEv, 0x00000000000dce20)
+NWNXLIB_FUNCTION(_ZN10CExoConfig13GetBindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEPNS_10BindConfigIT_EERKS6_, 0x00000000000e8220)
+NWNXLIB_FUNCTION(_ZN10CExoConfig14BindConfigBaseC1Ev, 0x00000000000df700)
+NWNXLIB_FUNCTION(_ZN10CExoConfig14BindConfigBaseC2Ev, 0x00000000000df700)
+NWNXLIB_FUNCTION(_ZN10CExoConfig14BindConfigBaseD0Ev, 0x00000000000e2530)
+NWNXLIB_FUNCTION(_ZN10CExoConfig14BindConfigBaseD1Ev, 0x00000000000e23f0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig14BindConfigBaseD2Ev, 0x00000000000e23f0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig14ResetToDefaultERKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS6_EEb, 0x00000000000dd9d0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideIbEC1EPNS_10BindConfigIbEERKb, 0x00000000000e0f80)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideIbEC2EPNS_10BindConfigIbEERKb, 0x00000000000e0f80)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideIbED1Ev, 0x00000000000e0fa0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideIbED2Ev, 0x00000000000e0fa0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideIdEC1EPNS_10BindConfigIdEERKd, 0x00000000000e0a50)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideIdEC2EPNS_10BindConfigIdEERKd, 0x00000000000e0a50)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideIdED1Ev, 0x00000000000e0a80)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideIdED2Ev, 0x00000000000e0a80)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideIlEC1EPNS_10BindConfigIlEERKl, 0x00000000000e03b0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideIlEC2EPNS_10BindConfigIlEERKl, 0x00000000000e03b0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideIlED1Ev, 0x00000000000e03d0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideIlED2Ev, 0x00000000000e03d0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEC1EPNS_10BindConfigIS6_EERKS6_, 0x00000000000dfd00)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEC2EPNS_10BindConfigIS6_EERKS6_, 0x00000000000dfd00)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEED1Ev, 0x00000000000dfd50)
+NWNXLIB_FUNCTION(_ZN10CExoConfig17TemporaryOverrideINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEED2Ev, 0x00000000000dfd50)
+NWNXLIB_FUNCTION(_ZN10CExoConfig24RequestTemporaryOverrideIbEESt10shared_ptrINS_17TemporaryOverrideIT_EEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS3_, 0x00000000000ecc40)
+NWNXLIB_FUNCTION(_ZN10CExoConfig24RequestTemporaryOverrideIdEESt10shared_ptrINS_17TemporaryOverrideIT_EEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS3_, 0x00000000000eca30)
+NWNXLIB_FUNCTION(_ZN10CExoConfig24RequestTemporaryOverrideIlEESt10shared_ptrINS_17TemporaryOverrideIT_EEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS3_, 0x00000000000ec820)
+NWNXLIB_FUNCTION(_ZN10CExoConfig24RequestTemporaryOverrideINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESt10shared_ptrINS_17TemporaryOverrideIT_EEERKS6_RKS9_, 0x00000000000ec610)
+NWNXLIB_FUNCTION(_ZN10CExoConfig3GetIbEET_RKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb, 0x00000000000e8820)
+NWNXLIB_FUNCTION(_ZN10CExoConfig3GetIdEET_RKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb, 0x00000000000eefa0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig3GetIlEET_RKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb, 0x00000000000e8b00)
+NWNXLIB_FUNCTION(_ZN10CExoConfig3GetINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEET_RKS6_b, 0x00000000000e8290)
+NWNXLIB_FUNCTION(_ZN10CExoConfig3RawEv, 0x00000000000db530)
+NWNXLIB_FUNCTION(_ZN10CExoConfig3SetIbEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_b, 0x00000000000f9990)
+NWNXLIB_FUNCTION(_ZN10CExoConfig3SetIdEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_b, 0x00000000000f9250)
+NWNXLIB_FUNCTION(_ZN10CExoConfig3SetIlEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_b, 0x00000000000f8b10)
+NWNXLIB_FUNCTION(_ZN10CExoConfig3SetINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEvRKS6_RKT_b, 0x00000000000f81a0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig4BindIbEEPNS_10BindConfigIT_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS2_St8functionIFvS2_EE, 0x00000000000f0ba0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig4BindIdEEPNS_10BindConfigIT_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS2_St8functionIFvS2_EE, 0x00000000000ee970)
+NWNXLIB_FUNCTION(_ZN10CExoConfig4BindIlEEPNS_10BindConfigIT_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS2_St8functionIFvS2_EE, 0x00000000000f0350)
+NWNXLIB_FUNCTION(_ZN10CExoConfig4BindINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEPNS_10BindConfigIT_EERKS6_RKS8_St8functionIFvS8_EE, 0x00000000000ed560)
+NWNXLIB_FUNCTION(_ZN10CExoConfig6CommitESt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS6_EE, 0x00000000000dd430)
+NWNXLIB_FUNCTION(_ZN10CExoConfig6UpdateEv, 0x00000000000db5b0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig8RollbackESt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS6_EE, 0x00000000000db720)
+NWNXLIB_FUNCTION(_ZN10CExoConfig9DeprecateERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE, 0x00000000000db6b0)
+NWNXLIB_FUNCTION(_ZN10CExoConfig9MarkDirtyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb, 0x00000000000dbaf0)
+NWNXLIB_FUNCTION(_ZN10CExoConfigC1EPKc, 0x00000000000ddbe0)
+NWNXLIB_FUNCTION(_ZN10CExoConfigC2EPKc, 0x00000000000ddbe0)
+NWNXLIB_FUNCTION(_ZN10CExoConfigD1Ev, 0x00000000000ddab0)
+NWNXLIB_FUNCTION(_ZN10CExoConfigD2Ev, 0x00000000000ddab0)
+NWNXLIB_FUNCTION(_ZN10CExoMemman10CheckHeapsEv, 0x0000000000788c60)
+NWNXLIB_FUNCTION(_ZN10CExoMemman10DoHeapWalkEv, 0x0000000000788b80)
+NWNXLIB_FUNCTION(_ZN10CExoMemman11FinalReportEv, 0x0000000000789220)
+NWNXLIB_FUNCTION(_ZN10CExoMemman11ReportEntryER10CMemRecord, 0x00000000007891e0)
+NWNXLIB_FUNCTION(_ZN10CExoMemman11StartReportEv, 0x0000000000788cf0)
+NWNXLIB_FUNCTION(_ZN10CExoMemman13AddFreeRecordEj, 0x00000000007893d0)
+NWNXLIB_FUNCTION(_ZN10CExoMemman13GetFreeRecordEv, 0x00000000007893b0)
+NWNXLIB_FUNCTION(_ZN10CExoMemman13ReportRemovalER10CMemRecordi, 0x0000000000789200)
+NWNXLIB_FUNCTION(_ZN10CExoMemman18FillRecordPtrArrayEv, 0x0000000000789440)
+NWNXLIB_FUNCTION(_ZN10CExoMemman19SnapShotReportPrintEv, 0x0000000000789490)
+NWNXLIB_FUNCTION(_ZN10CExoMemman22SnapShotReportWithSortEv, 0x00000000007895d0)
+NWNXLIB_FUNCTION(_ZN10CExoMemman24OutputTypeTrackingReportEv, 0x0000000000789240)
+NWNXLIB_FUNCTION(_ZN10CExoMemman4FreeEPv, 0x0000000000789040)
+NWNXLIB_FUNCTION(_ZN10CExoMemman5AllocEji, 0x0000000000788e50)
+NWNXLIB_FUNCTION(_ZN10CExoMemman5ClearEv, 0x0000000000788960)
+NWNXLIB_FUNCTION(_ZN10CExoMemman7DestroyEv, 0x00000000007891c0)
+NWNXLIB_FUNCTION(_ZN10CExoMemman7PopTypeEj, 0x0000000000788cb0)
+NWNXLIB_FUNCTION(_ZN10CExoMemman8GetHeapsEv, 0x0000000000788b70)
+NWNXLIB_FUNCTION(_ZN10CExoMemman8PushTypeEj, 0x0000000000788c70)
+NWNXLIB_FUNCTION(_ZN10CExoMemmanD1Ev, 0x0000000000789670)
+NWNXLIB_FUNCTION(_ZN10CExoMemmanD2Ev, 0x0000000000789670)
+NWNXLIB_FUNCTION(_ZN10CExoResMan10RemoveFileERK10CExoStringt, 0x000000000011a270)
+NWNXLIB_FUNCTION(_ZN10CExoResMan11AddKeyTableEjRK10CExoStringjPhi, 0x000000000011a710)
+NWNXLIB_FUNCTION(_ZN10CExoResMan11AddManifestERK10CExoStringj, 0x000000000011b1e0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan11AddOverrideERK7CResRefS2_t, 0x000000000011d4b0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan11GetKeyEntryERK7CResReftPP12CExoKeyTablePP14CKeyTableEntryb, 0x000000000011c8b0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan11GetOverrideERK7CResReft, 0x000000000011c4a0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan12GetNewResRefERK7CResReftRS0_, 0x000000000011cb40)
+NWNXLIB_FUNCTION(_ZN10CExoResMan12GetResObjectERK7CResReft, 0x000000000011cee0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan12GetResOfTypeEti, 0x0000000000118640)
+NWNXLIB_FUNCTION(_ZN10CExoResMan12GetResOfTypeEtP4CRes, 0x0000000000118760)
+NWNXLIB_FUNCTION(_ZN10CExoResMan12SetResObjectERK7CResReftP4CRes, 0x000000000011cf60)
+NWNXLIB_FUNCTION(_ZN10CExoResMan13CancelRequestEP4CRes, 0x0000000000117e70)
+NWNXLIB_FUNCTION(_ZN10CExoResMan13DumpAllOfTypeEt, 0x0000000000118310)
+NWNXLIB_FUNCTION(_ZN10CExoResMan13GetTableCountEP4CResi, 0x0000000000118a10)
+NWNXLIB_FUNCTION(_ZN10CExoResMan13NukeDirectoryE10CExoStringii, 0x000000000011bb00)
+NWNXLIB_FUNCTION(_ZN10CExoResMan13WipeDirectoryE10CExoStringiiii, 0x000000000011b200)
+NWNXLIB_FUNCTION(_ZN10CExoResMan14CleanDirectoryE10CExoStringii, 0x000000000011ba70)
+NWNXLIB_FUNCTION(_ZN10CExoResMan14ClearOverridesEv, 0x000000000011c320)
+NWNXLIB_FUNCTION(_ZN10CExoResMan14RemoveKeyTableERK10CExoStringji, 0x00000000001192a0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan14RemoveManifestERK10CExoString, 0x0000000000119410)
+NWNXLIB_FUNCTION(_ZN10CExoResMan14RemoveOverrideERK7CResReft, 0x000000000011d070)
+NWNXLIB_FUNCTION(_ZN10CExoResMan14UpdateKeyTableERK10CExoStringj, 0x0000000000119940)
+NWNXLIB_FUNCTION(_ZN10CExoResMan14UpdateManifestERK10CExoString, 0x0000000000119a10)
+NWNXLIB_FUNCTION(_ZN10CExoResMan15CreateDirectoryE10CExoString, 0x000000000011a180)
+NWNXLIB_FUNCTION(_ZN10CExoResMan15GetIsStaticTypeEt, 0x0000000000118bd0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan15ResumeServicingEv, 0x0000000000119490)
+NWNXLIB_FUNCTION(_ZN10CExoResMan16CountKeyTablesOfEiRK10CExoString, 0x0000000000117dd0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan16FreeResourceDataEP4CRes, 0x0000000000118050)
+NWNXLIB_FUNCTION(_ZN10CExoResMan16GetFreeDiskSpaceERK10CExoStringPm, 0x000000000011a040)
+NWNXLIB_FUNCTION(_ZN10CExoResMan16ReleaseResObjectEP4CResb, 0x0000000000119100)
+NWNXLIB_FUNCTION(_ZN10CExoResMan16ServiceFromImageEP4CResi, 0x00000000001198b0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan16SuspendServicingEv, 0x0000000000119930)
+NWNXLIB_FUNCTION(_ZN10CExoResMan17GetResRefFromFileER7CResRefRK10CExoString, 0x00000000001187c0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan18GetResTypeFromFileERK10CExoString, 0x00000000001188b0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan18ServiceFromResFileEP4CResi, 0x0000000000119890)
+NWNXLIB_FUNCTION(_ZN10CExoResMan19ServiceFromImageRawEP4CResiPc, 0x0000000000119ed0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan19ServiceFromManifestEP4CResi, 0x000000000011bb90)
+NWNXLIB_FUNCTION(_ZN10CExoResMan20AddFixedKeyTableFileERK10CExoStringj, 0x000000000011a980)
+NWNXLIB_FUNCTION(_ZN10CExoResMan20AddResourceDirectoryERK10CExoStringji, 0x000000000011a9a0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan20AddResourceImageFileERK10CExoStringPhj, 0x000000000011a960)
+NWNXLIB_FUNCTION(_ZN10CExoResMan20ServiceFromDirectoryEP4CResi, 0x00000000001194a0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan21ServiceFromResFileRawEP4CResiPc, 0x0000000000119dc0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan22GetTotalPhysicalMemoryEv, 0x0000000000118c00)
+NWNXLIB_FUNCTION(_ZN10CExoResMan22ServiceCurrentAsyncResEv, 0x000000000011a3d0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan22SetTotalResourceMemoryEl, 0x00000000001198d0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan22SetupDefaultSearchPathEv, 0x000000000011a9c0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan23RemoveFixedKeyTableFileERK10CExoString, 0x00000000001193d0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan23RemoveFromToBeFreedListEP4CRes, 0x0000000000118a70)
+NWNXLIB_FUNCTION(_ZN10CExoResMan23RemoveResourceDirectoryERK10CExoString, 0x00000000001193f0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan23RemoveResourceImageFileERK10CExoString, 0x00000000001193b0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan23ServiceFromDirectoryRawEP4CResiPc, 0x0000000000119a20)
+NWNXLIB_FUNCTION(_ZN10CExoResMan23ServiceFromEncapsulatedEP4CResi, 0x0000000000119870)
+NWNXLIB_FUNCTION(_ZN10CExoResMan23UpdateFixedKeyTableFileERK10CExoString, 0x00000000001199f0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan23UpdateResourceDirectoryERK10CExoString, 0x0000000000119a00)
+NWNXLIB_FUNCTION(_ZN10CExoResMan26ServiceFromEncapsulatedRawEP4CResiPc, 0x0000000000119cc0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan27AddEncapsulatedResourceFileERK10CExoStringj, 0x000000000011a940)
+NWNXLIB_FUNCTION(_ZN10CExoResMan30GetEncapsulatedFileDescriptionERK10CExoString, 0x0000000000118550)
+NWNXLIB_FUNCTION(_ZN10CExoResMan30RemoveEncapsulatedResourceFileERK10CExoStringi, 0x0000000000119390)
+NWNXLIB_FUNCTION(_ZN10CExoResMan30UpdateEncapsulatedResourceFileERK10CExoString, 0x00000000001199e0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan4DumpEP4CResi, 0x00000000001181e0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan4FreeEP4CRes, 0x00000000001180c0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan6DemandEP4CRes, 0x000000000011bdd0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan6ExistsERK7CResReftPj, 0x000000000011cad0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan6MallocEP4CRes, 0x0000000000118c10)
+NWNXLIB_FUNCTION(_ZN10CExoResMan6UpdateEj, 0x000000000011c0d0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan7DumpAllEv, 0x0000000000118280)
+NWNXLIB_FUNCTION(_ZN10CExoResMan7ReadRawEP4CResiPc, 0x0000000000119fd0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan7ReleaseEP4CRes, 0x0000000000119180)
+NWNXLIB_FUNCTION(_ZN10CExoResMan7RequestEP4CRes, 0x0000000000119430)
+NWNXLIB_FUNCTION(_ZN10CExoResMan8GetResIDERK7CResReft, 0x000000000011d000)
+NWNXLIB_FUNCTION(_ZN10CExoResMan8GetTableEP4CRes, 0x00000000001189c0)
+NWNXLIB_FUNCTION(_ZN10CExoResMan9FreeChunkEv, 0x00000000001183c0)
+NWNXLIB_FUNCTION(_ZN10CExoResManC1Ev, 0x000000000011a500)
+NWNXLIB_FUNCTION(_ZN10CExoResManC2Ev, 0x000000000011a500)
+NWNXLIB_FUNCTION(_ZN10CExoResManD1Ev, 0x000000000011c340)
+NWNXLIB_FUNCTION(_ZN10CExoResManD2Ev, 0x000000000011c340)
+NWNXLIB_FUNCTION(_ZN10CExoString11FormatBytesEm, 0x000000000010c3c0)
+NWNXLIB_FUNCTION(_ZN10CExoString14FormatDurationEm, 0x000000000010c570)
+NWNXLIB_FUNCTION(_ZN10CExoString20StripNonAlphaNumericEiii, 0x000000000010be90)
+NWNXLIB_FUNCTION(_ZN10CExoString6FormatEPKcz, 0x000000000010b500)
+NWNXLIB_FUNCTION(_ZN10CExoString6InsertERKS_i, 0x000000000010b710)
+NWNXLIB_FUNCTION(_ZN10CExoStringaSEOS_, 0x00000000001f72a0)
+NWNXLIB_FUNCTION(_ZN10CExoStringaSEPKc, 0x000000000010abe0)
+NWNXLIB_FUNCTION(_ZN10CExoStringaSERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE, 0x000000000010aa00)
+NWNXLIB_FUNCTION(_ZN10CExoStringaSERKS_, 0x000000000010ab00)
+NWNXLIB_FUNCTION(_ZN10CExoStringC1Ei, 0x000000000010a8c0)
+NWNXLIB_FUNCTION(_ZN10CExoStringC1EPKc, 0x000000000010a760)
+NWNXLIB_FUNCTION(_ZN10CExoStringC1EPKci, 0x000000000010a860)
+NWNXLIB_FUNCTION(_ZN10CExoStringC1ERK7CResRef, 0x000000000010a790)
+NWNXLIB_FUNCTION(_ZN10CExoStringC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE, 0x000000000010a9a0)
+NWNXLIB_FUNCTION(_ZN10CExoStringC1ERKS_, 0x000000000010a800)
+NWNXLIB_FUNCTION(_ZN10CExoStringC1Ev, 0x000000000010a740)
+NWNXLIB_FUNCTION(_ZN10CExoStringC2Ei, 0x000000000010a8c0)
+NWNXLIB_FUNCTION(_ZN10CExoStringC2EPKc, 0x000000000010a760)
+NWNXLIB_FUNCTION(_ZN10CExoStringC2EPKci, 0x000000000010a860)
+NWNXLIB_FUNCTION(_ZN10CExoStringC2ERK7CResRef, 0x000000000010a790)
+NWNXLIB_FUNCTION(_ZN10CExoStringC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE, 0x000000000010a9a0)
+NWNXLIB_FUNCTION(_ZN10CExoStringC2ERKS_, 0x000000000010a800)
+NWNXLIB_FUNCTION(_ZN10CExoStringC2Ev, 0x000000000010a740)
+NWNXLIB_FUNCTION(_ZN10CExoStringD1Ev, 0x000000000010a970)
+NWNXLIB_FUNCTION(_ZN10CExoStringD2Ev, 0x000000000010a970)
+NWNXLIB_FUNCTION(_ZN10CExoTimers21GetLowResolutionTimerEv, 0x000000000010c8d0)
+NWNXLIB_FUNCTION(_ZN10CExoTimers22GetHighResolutionTimerEv, 0x000000000010c8e0)
+NWNXLIB_FUNCTION(_ZN10CExoTimersC1Ev, 0x000000000010c850)
+NWNXLIB_FUNCTION(_ZN10CExoTimersC2Ev, 0x000000000010c850)
+NWNXLIB_FUNCTION(_ZN10CExoTimersD1Ev, 0x000000000010c890)
+NWNXLIB_FUNCTION(_ZN10CExoTimersD2Ev, 0x000000000010c890)
+NWNXLIB_FUNCTION(_ZN10CMemRecord5ClearEv, 0x0000000000788920)
+NWNXLIB_FUNCTION(_ZN10CNWMessage10ReadDOUBLEEddi, 0x00000000001b4df0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage10ReadDOUBLEEdi, 0x00000000001b4d60)
+NWNXLIB_FUNCTION(_ZN10CNWMessage10ReadSignedEi, 0x00000000001b4880)
+NWNXLIB_FUNCTION(_ZN10CNWMessage10WriteDWORDEji, 0x00000000001b55f0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage10WriteFLOATEfffi, 0x00000000001b57b0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage10WriteFLOATEffi, 0x00000000001b56e0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage10WriteINT64Eli, 0x00000000001b5680)
+NWNXLIB_FUNCTION(_ZN10CNWMessage10WriteSHORTEsi, 0x00000000001b5590)
+NWNXLIB_FUNCTION(_ZN10CNWMessage11ReadCResRefEi, 0x00000000001b4e80)
+NWNXLIB_FUNCTION(_ZN10CNWMessage11ReadDWORD64Ei, 0x00000000001b4ad0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage11ReadVOIDPtrEi, 0x00000000001b4fe0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage11WriteDOUBLEEdddi, 0x00000000001b59b0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage11WriteDOUBLEEddi, 0x00000000001b58e0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage11WriteSignedEli, 0x00000000001b5430)
+NWNXLIB_FUNCTION(_ZN10CNWMessage12ReadUnsignedEi, 0x00000000001b4630)
+NWNXLIB_FUNCTION(_ZN10CNWMessage12WriteCResRefE7CResRefi, 0x00000000001b5ab0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage12WriteDWORD64Emi, 0x00000000001b5660)
+NWNXLIB_FUNCTION(_ZN10CNWMessage12WriteVOIDPtrEPvi, 0x00000000001b5b70)
+NWNXLIB_FUNCTION(_ZN10CNWMessage13WriteUnsignedEmi, 0x00000000001b5290)
+NWNXLIB_FUNCTION(_ZN10CNWMessage14ReadCExoStringEi, 0x00000000001b4f20)
+NWNXLIB_FUNCTION(_ZN10CNWMessage14SetReadMessageEPhjji, 0x00000000001b48a0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage15GetWriteMessageEPPhPj, 0x00000000001b5bd0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage15WriteCExoStringE10CExoStringi, 0x00000000001b5b00)
+NWNXLIB_FUNCTION(_ZN10CNWMessage16ClearReadMessageEv, 0x00000000001b43f0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage17ExtendWriteBufferEj, 0x00000000001b50b0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage18CreateWriteMessageEjji, 0x00000000001b53d0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage19MessageReadOverflowEi, 0x00000000001b5010)
+NWNXLIB_FUNCTION(_ZN10CNWMessage20MessageReadUnderflowEi, 0x00000000001b5030)
+NWNXLIB_FUNCTION(_ZN10CNWMessage21MessageMoreDataToReadEv, 0x00000000001b5070)
+NWNXLIB_FUNCTION(_ZN10CNWMessage22PeekAtWriteMessageSizeEv, 0x00000000001b5bc0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage26ExtendWriteFragmentsBufferEj, 0x00000000001b5220)
+NWNXLIB_FUNCTION(_ZN10CNWMessage7ReadBitEh, 0x00000000001b4410)
+NWNXLIB_FUNCTION(_ZN10CNWMessage7ReadINTEi, 0x00000000001b4a70)
+NWNXLIB_FUNCTION(_ZN10CNWMessage8ReadBitsEi, 0x00000000001b4460)
+NWNXLIB_FUNCTION(_ZN10CNWMessage8ReadBOOLEv, 0x00000000001b4810)
+NWNXLIB_FUNCTION(_ZN10CNWMessage8ReadBYTEEi, 0x00000000001b45f0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage8ReadCHAREi, 0x00000000001b4930)
+NWNXLIB_FUNCTION(_ZN10CNWMessage8ReadWORDEi, 0x00000000001b4990)
+NWNXLIB_FUNCTION(_ZN10CNWMessage8WriteBitEh, 0x00000000001b4530)
+NWNXLIB_FUNCTION(_ZN10CNWMessage8WriteINTEii, 0x00000000001b5610)
+NWNXLIB_FUNCTION(_ZN10CNWMessage9ReadDWORDEi, 0x00000000001b4a30)
+NWNXLIB_FUNCTION(_ZN10CNWMessage9ReadFLOATEffi, 0x00000000001b4c60)
+NWNXLIB_FUNCTION(_ZN10CNWMessage9ReadFLOATEfi, 0x00000000001b4b70)
+NWNXLIB_FUNCTION(_ZN10CNWMessage9ReadINT64Ei, 0x00000000001b4b20)
+NWNXLIB_FUNCTION(_ZN10CNWMessage9ReadSHORTEi, 0x00000000001b49d0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage9WriteBitsEmi, 0x00000000001b4570)
+NWNXLIB_FUNCTION(_ZN10CNWMessage9WriteBOOLEi, 0x00000000001b54c0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage9WriteBYTEEhi, 0x00000000001b54e0)
+NWNXLIB_FUNCTION(_ZN10CNWMessage9WriteCHAREci, 0x00000000001b5510)
+NWNXLIB_FUNCTION(_ZN10CNWMessage9WriteWORDEti, 0x00000000001b5560)
+NWNXLIB_FUNCTION(_ZN10CNWMessageC1Ev, 0x00000000001b4340)
+NWNXLIB_FUNCTION(_ZN10CNWMessageC2Ev, 0x00000000001b4340)
+NWNXLIB_FUNCTION(_ZN10CNWMessageD0Ev, 0x00000000001b3ed0)
+NWNXLIB_FUNCTION(_ZN10CNWMessageD1Ev, 0x00000000001b3e80)
+NWNXLIB_FUNCTION(_ZN10CNWMessageD2Ev, 0x00000000001b3e80)
+NWNXLIB_FUNCTION(_ZN10CNWNameGen13GetRandomNameEth, 0x0000000000798160)
+NWNXLIB_FUNCTION(_ZN10CNWNameGen13GetRandomNameEv, 0x0000000000797ab0)
+NWNXLIB_FUNCTION(_ZN10CNWNameGen13LoadNameTableE10CExoString, 0x00000000007980e0)
+NWNXLIB_FUNCTION(_ZN10CNWNameGen15UnloadNameTableEv, 0x0000000000797a80)
+NWNXLIB_FUNCTION(_ZN10CNWNameGenC1Ev, 0x00000000007979f0)
+NWNXLIB_FUNCTION(_ZN10CNWNameGenC2Ev, 0x00000000007979f0)
+NWNXLIB_FUNCTION(_ZN10CNWNameGenD0Ev, 0x00000000007979c0)
+NWNXLIB_FUNCTION(_ZN10CNWNameGenD1Ev, 0x0000000000797980)
+NWNXLIB_FUNCTION(_ZN10CNWNameGenD2Ev, 0x0000000000797980)
+NWNXLIB_FUNCTION(_ZN10CNWSBarter10RemoveItemEjRhS0_, 0x0000000000341330)
+NWNXLIB_FUNCTION(_ZN10CNWSBarter11PullItemOutEj, 0x00000000003415f0)
+NWNXLIB_FUNCTION(_ZN10CNWSBarter13SetListLockedEi, 0x0000000000341f40)
+NWNXLIB_FUNCTION(_ZN10CNWSBarter15SetListAcceptedEi, 0x0000000000341810)
+NWNXLIB_FUNCTION(_ZN10CNWSBarter5ResetEji, 0x0000000000340d00)
+NWNXLIB_FUNCTION(_ZN10CNWSBarter7AddItemEjRhS0_, 0x0000000000341120)
+NWNXLIB_FUNCTION(_ZN10CNWSBarter7CleanUpEv, 0x0000000000340d30)
+NWNXLIB_FUNCTION(_ZN10CNWSBarter8GetStateEv, 0x0000000000341700)
+NWNXLIB_FUNCTION(_ZN10CNWSBarter8MoveItemEjRhS0_, 0x00000000003414c0)
+NWNXLIB_FUNCTION(_ZN10CNWSBarterC1EP12CNWSCreature, 0x0000000000340c30)
+NWNXLIB_FUNCTION(_ZN10CNWSBarterC2EP12CNWSCreature, 0x0000000000340c30)
+NWNXLIB_FUNCTION(_ZN10CNWSBarterD1Ev, 0x0000000000341000)
+NWNXLIB_FUNCTION(_ZN10CNWSBarterD2Ev, 0x0000000000341000)
+NWNXLIB_FUNCTION(_ZN10CNWSClient11AsNWSPlayerEv, 0x000000000028ea60)
+NWNXLIB_FUNCTION(_ZN10CNWSClient18AsNWSDungeonMasterEv, 0x00000000001f70b0)
+NWNXLIB_FUNCTION(_ZN10CNWSClientC1Ej, 0x00000000003420c0)
+NWNXLIB_FUNCTION(_ZN10CNWSClientC2Ej, 0x00000000003420c0)
+NWNXLIB_FUNCTION(_ZN10CNWSClientD0Ev, 0x00000000003420b0)
+NWNXLIB_FUNCTION(_ZN10CNWSClientD1Ev, 0x00000000003420a0)
+NWNXLIB_FUNCTION(_ZN10CNWSClientD2Ev, 0x00000000003420a0)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog10GetSpeakerEP10CNWSObjectRK10CExoString, 0x0000000000349640)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog10LoadDialogEP7CResGFFi, 0x00000000003481f0)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog11CheckScriptEP10CNWSObjectRK7CResRef, 0x0000000000349b00)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog11HandleReplyEjP10CNWSObjectjij, 0x000000000034b2d0)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog12RemovePlayerEj, 0x0000000000349450)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog13GetStartEntryEP10CNWSObject, 0x0000000000349cb0)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog14SetDialogDelayEP10CNWSObject13CExoLocStringji, 0x0000000000349f00)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog15AddJournalEntryERK10CExoStringjj, 0x000000000034a0a0)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog15SendDialogEntryEP10CNWSObjectjji, 0x000000000034ac70)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog16IsPlayerInDialogEj, 0x00000000003495a0)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog17SendDialogRepliesEP10CNWSObjectj, 0x000000000034a390)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog21GetStartEntryOneLinerEP10CNWSObjectR13CExoLocStringR7CResRefS5_, 0x0000000000349dc0)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog24ClearDialogOwnerInObjectEj, 0x0000000000347d20)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog7CleanupEv, 0x0000000000347de0)
+NWNXLIB_FUNCTION(_ZN10CNWSDialog9RunScriptEP10CNWSObjectRK7CResRef, 0x0000000000349c00)
+NWNXLIB_FUNCTION(_ZN10CNWSDialogC1Ev, 0x0000000000347c00)
+NWNXLIB_FUNCTION(_ZN10CNWSDialogC2Ev, 0x0000000000347c00)
+NWNXLIB_FUNCTION(_ZN10CNWSDialogD0Ev, 0x00000000002a0fe0)
+NWNXLIB_FUNCTION(_ZN10CNWSDialogD1Ev, 0x00000000002a0fb0)
+NWNXLIB_FUNCTION(_ZN10CNWSDialogD2Ev, 0x00000000002a0fb0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule10SaveStaticEP8CERFFile10CExoStringti, 0x0000000000282960)
+NWNXLIB_FUNCTION(_ZN10CNWSModule10UpdateTimeEjjj, 0x0000000000285380)
+NWNXLIB_FUNCTION(_ZN10CNWSModule11AsNWSModuleEv, 0x000000000028ea40)
+NWNXLIB_FUNCTION(_ZN10CNWSModule11GetWaypointERK10CExoString, 0x0000000000284c80)
+NWNXLIB_FUNCTION(_ZN10CNWSModule11PostProcessEv, 0x0000000000286c90)
+NWNXLIB_FUNCTION(_ZN10CNWSModule11SavePlayersEP7CResGFFP10CResStructR10CExoStringR13CExoArrayListIjE, 0x0000000000287980)
+NWNXLIB_FUNCTION(_ZN10CNWSModule12EventHandlerEjjPvjj, 0x000000000027ff10)
+NWNXLIB_FUNCTION(_ZN10CNWSModule12GetAreaByTagER10CExoString, 0x00000000002808c0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule12InterAreaDFSEiiP20CPathfindInformation, 0x0000000000280b20)
+NWNXLIB_FUNCTION(_ZN10CNWSModule12LoadTURDListEP7CResGFFP10CResStruct, 0x00000000002850a0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule12SaveTURDListEP7CResGFFP10CResStruct, 0x00000000002820f0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule12UnloadModuleEv, 0x00000000002843f0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule13AddToTURDListEP14CNWSPlayerTURD, 0x0000000000284e60)
+NWNXLIB_FUNCTION(_ZN10CNWSModule13GetAreaByNameER10CExoString, 0x0000000000280750)
+NWNXLIB_FUNCTION(_ZN10CNWSModule13GetFullCipherE10CExoString, 0x000000000028a6a0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule13SaveModuleFACEP8CERFFile, 0x0000000000282380)
+NWNXLIB_FUNCTION(_ZN10CNWSModule14PlotPathInAreaEP20CPathfindInformationj, 0x0000000000281450)
+NWNXLIB_FUNCTION(_ZN10CNWSModule15AddTURDsToWorldEv, 0x0000000000281160)
+NWNXLIB_FUNCTION(_ZN10CNWSModule15IsObjectInLimboEj, 0x0000000000285710)
+NWNXLIB_FUNCTION(_ZN10CNWSModule15LoadModuleStartE10CExoStringii, 0x000000000028b950)
+NWNXLIB_FUNCTION(_ZN10CNWSModule15SaveModuleStartER10CExoStringS1_, 0x0000000000283a30)
+NWNXLIB_FUNCTION(_ZN10CNWSModule16AddObjectToLimboEj, 0x0000000000287150)
+NWNXLIB_FUNCTION(_ZN10CNWSModule16CleanUpLimboListEv, 0x0000000000285760)
+NWNXLIB_FUNCTION(_ZN10CNWSModule16LoadModuleFinishEv, 0x0000000000286e90)
+NWNXLIB_FUNCTION(_ZN10CNWSModule16SaveModuleFinishER10CExoStringS1_, 0x000000000028a190)
+NWNXLIB_FUNCTION(_ZN10CNWSModule16SetIntraAreaGoalEP20CPathfindInformation, 0x00000000002843c0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule17PlotInterAreaPathEP20CPathfindInformationj, 0x0000000000281e30)
+NWNXLIB_FUNCTION(_ZN10CNWSModule18IsOfficialCampaignEv, 0x0000000000285bc0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule18LoadLimboCreaturesEP7CResGFFP10CResStructi, 0x00000000002871b0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule18RemoveFromTURDListEP10CNWSPlayer, 0x00000000002851b0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule18SaveLimboCreaturesEP7CResGFFP10CResStruct, 0x0000000000282bf0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule18SaveModuleIFOStartEP7CResGFFP10CResStruct, 0x0000000000282dc0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule19SaveModuleIFOFinishEP7CResGFFP10CResStructP8CERFFileR10CExoStringR13CExoArrayListIjE, 0x000000000028a050)
+NWNXLIB_FUNCTION(_ZN10CNWSModule19TimeStopSanityCheckEv, 0x00000000002858b0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule20AddWorldJournalEntryEi10CExoStringS0_jj, 0x0000000000287450)
+NWNXLIB_FUNCTION(_ZN10CNWSModule20ComputeInterAreaPathEP20CPathfindInformation, 0x0000000000280e50)
+NWNXLIB_FUNCTION(_ZN10CNWSModule20LoadModuleInProgressEii, 0x0000000000280f30)
+NWNXLIB_FUNCTION(_ZN10CNWSModule20SaveModuleInProgressEv, 0x0000000000282750)
+NWNXLIB_FUNCTION(_ZN10CNWSModule21ClearAreaVisitedFlagsEv, 0x0000000000280ab0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule21GetPlayerTURDFromListEP10CNWSPlayer, 0x00000000002821c0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule21GetPrimaryPlayerIndexEv, 0x0000000000283f20)
+NWNXLIB_FUNCTION(_ZN10CNWSModule21PackModuleIntoMessageEj, 0x0000000000285dc0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule21RemoveObjectFromLimboEj, 0x0000000000285690)
+NWNXLIB_FUNCTION(_ZN10CNWSModule22AddObjectToLookupTableE10CExoStringj, 0x00000000002844a0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule22FindObjectByTagOrdinalERK10CExoStringj, 0x0000000000284a30)
+NWNXLIB_FUNCTION(_ZN10CNWSModule22FindTagPositionInTableEPc, 0x0000000000284400)
+NWNXLIB_FUNCTION(_ZN10CNWSModule23DeleteWorldJournalEntryEi, 0x0000000000286120)
+NWNXLIB_FUNCTION(_ZN10CNWSModule26AddWorldJournalEntryStrrefEjjjj, 0x0000000000287730)
+NWNXLIB_FUNCTION(_ZN10CNWSModule26FindObjectByTagTypeOrdinalERK10CExoStringij, 0x0000000000284b20)
+NWNXLIB_FUNCTION(_ZN10CNWSModule26GetPlayerIndexInPlayerListEP10CNWSPlayer, 0x0000000000283d90)
+NWNXLIB_FUNCTION(_ZN10CNWSModule26GetWorldJournalIndexUniqueEv, 0x0000000000284e00)
+NWNXLIB_FUNCTION(_ZN10CNWSModule27RemoveObjectFromLookupTableE10CExoStringj, 0x0000000000284890)
+NWNXLIB_FUNCTION(_ZN10CNWSModule28DeleteWorldJournalAllEntriesEv, 0x0000000000284ca0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule29DeleteWorldJournalEntryStrrefEj, 0x0000000000286250)
+NWNXLIB_FUNCTION(_ZN10CNWSModule30GenerateInterAreaDFSSuccessorsEiP20CPathfindInformationPPj, 0x00000000002806a0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule30PackModuleResourcesIntoMessageEv, 0x0000000000281210)
+NWNXLIB_FUNCTION(_ZN10CNWSModule34PackPlayerCharacterListIntoMessageEP10CNWSPlayerR13CExoArrayListIP24NWPlayerCharacterList_stE, 0x0000000000283fc0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule7GetAreaE7CResRef, 0x0000000000280530)
+NWNXLIB_FUNCTION(_ZN10CNWSModule7GetAreaEj, 0x0000000000280610)
+NWNXLIB_FUNCTION(_ZN10CNWSModule7GetTimeEPjS0_S0_S0_PhS0_, 0x0000000000285650)
+NWNXLIB_FUNCTION(_ZN10CNWSModule8AIUpdateEv, 0x00000000002859a0)
+NWNXLIB_FUNCTION(_ZN10CNWSModule8DoUpdateEv, 0x0000000000285b60)
+NWNXLIB_FUNCTION(_ZN10CNWSModule8PlotPathEP20CPathfindInformationj, 0x0000000000282010)
+NWNXLIB_FUNCTION(_ZN10CNWSModuleC1E10CExoStringiii, 0x000000000028ad90)
+NWNXLIB_FUNCTION(_ZN10CNWSModuleC2E10CExoStringiii, 0x000000000028ad90)
+NWNXLIB_FUNCTION(_ZN10CNWSModuleD0Ev, 0x0000000000286c50)
+NWNXLIB_FUNCTION(_ZN10CNWSModuleD1Ev, 0x0000000000286380)
+NWNXLIB_FUNCTION(_ZN10CNWSModuleD2Ev, 0x0000000000286380)
+NWNXLIB_FUNCTION(_ZN10CNWSObject10RunActionsEjjm, 0x00000000002a69b0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject10StopDialogEv, 0x000000000029a300)
+NWNXLIB_FUNCTION(_ZN10CNWSObject11ApplyEffectEP11CGameEffectii, 0x00000000002987e0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject11AsNWSObjectEv, 0x00000000001f7090)
+NWNXLIB_FUNCTION(_ZN10CNWSObject11ClearActionEP20CNWSObjectActionNodei, 0x0000000000258d10)
+NWNXLIB_FUNCTION(_ZN10CNWSObject11GetLastNameEv, 0x0000000000258d30)
+NWNXLIB_FUNCTION(_ZN10CNWSObject11GetNodeByIdEtt, 0x00000000002904b0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject11GetPortraitEv, 0x0000000000258d90)
+NWNXLIB_FUNCTION(_ZN10CNWSObject11RemoveGroupEt, 0x0000000000290600)
+NWNXLIB_FUNCTION(_ZN10CNWSObject11ReplyDialogEjjij, 0x000000000029a200)
+NWNXLIB_FUNCTION(_ZN10CNWSObject11SetPortraitE7CResRef, 0x0000000000258e40)
+NWNXLIB_FUNCTION(_ZN10CNWSObject11SetPositionE6Vectori, 0x0000000000294390)
+NWNXLIB_FUNCTION(_ZN10CNWSObject11StartDialogEjRK10CExoStringii, 0x00000000002a0910)
+NWNXLIB_FUNCTION(_ZN10CNWSObject12AIActionWaitEP20CNWSObjectActionNode, 0x00000000002a2120)
+NWNXLIB_FUNCTION(_ZN10CNWSObject12GetFirstNameEv, 0x00000000002a0f60)
+NWNXLIB_FUNCTION(_ZN10CNWSObject12GetIsPCDyingEv, 0x0000000000295990)
+NWNXLIB_FUNCTION(_ZN10CNWSObject12LoadVarTableEP7CResGFFP10CResStruct, 0x0000000000291900)
+NWNXLIB_FUNCTION(_ZN10CNWSObject12PlaySoundSetEP10CNWSPlayerh, 0x0000000000294930)
+NWNXLIB_FUNCTION(_ZN10CNWSObject12RemoveEffectEP11CGameEffect, 0x0000000000293ef0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject12SaveVarTableEP7CResGFFP10CResStruct, 0x0000000000291920)
+NWNXLIB_FUNCTION(_ZN10CNWSObject12SetAnimationEi, 0x000000000028f2e0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject12SpawnBodyBagEv, 0x0000000000297be0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject12UpdateDialogEv, 0x000000000029a6a0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject13AIActionSpeakEP20CNWSObjectActionNode, 0x00000000002a1f60)
+NWNXLIB_FUNCTION(_ZN10CNWSObject13GetNewGroupIDEv, 0x0000000000290720)
+NWNXLIB_FUNCTION(_ZN10CNWSObject13GetPortraitIdEv, 0x00000000001f70a0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject13GetReputationEjRii, 0x00000000002a5460)
+NWNXLIB_FUNCTION(_ZN10CNWSObject13IsDialogDelayEv, 0x0000000000294550)
+NWNXLIB_FUNCTION(_ZN10CNWSObject13SetPortraitIdEt, 0x000000000028f340)
+NWNXLIB_FUNCTION(_ZN10CNWSObject14CopyScriptVarsEP18CNWSScriptVarTable, 0x0000000000290cb0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject14GetDamageLevelEv, 0x00000000002930b0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject14LoadEffectListEP7CResGFFP10CResStruct, 0x0000000000298ef0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject14LoadListenDataEP7CResGFFP10CResStruct, 0x0000000000294c30)
+NWNXLIB_FUNCTION(_ZN10CNWSObject14ReportOverflowEiiii, 0x0000000000298010)
+NWNXLIB_FUNCTION(_ZN10CNWSObject14SaveEffectListEP7CResGFFP10CResStruct, 0x0000000000291940)
+NWNXLIB_FUNCTION(_ZN10CNWSObject14SaveListenDataEP7CResGFFP10CResStruct, 0x0000000000291960)
+NWNXLIB_FUNCTION(_ZN10CNWSObject14SetDialogDelayEf, 0x0000000000294460)
+NWNXLIB_FUNCTION(_ZN10CNWSObject14SetDialogOwnerEj, 0x00000000002948c0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject14SetOrientationE6Vector, 0x0000000000293240)
+NWNXLIB_FUNCTION(_ZN10CNWSObject14TestActionListEv, 0x00000000002908c0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject15BroadcastDialogE10CExoStringf, 0x00000000002950a0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject15ClearAllActionsEv, 0x00000000002926a0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject15DoSpellImmunityEPS_, 0x0000000000292da0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject15GetDialogResrefEv, 0x0000000000273810)
+NWNXLIB_FUNCTION(_ZN10CNWSObject15GetMaxHitPointsEi, 0x0000000000258d40)
+NWNXLIB_FUNCTION(_ZN10CNWSObject15LoadActionQueueEP7CResGFFP10CResStruct, 0x0000000000290f00)
+NWNXLIB_FUNCTION(_ZN10CNWSObject15LoadObjectStateEP7CResGFFP10CResStruct, 0x0000000000299020)
+NWNXLIB_FUNCTION(_ZN10CNWSObject15SaveActionQueueEP7CResGFFP10CResStruct, 0x0000000000291540)
+NWNXLIB_FUNCTION(_ZN10CNWSObject15SaveObjectStateEP7CResGFFP10CResStruct, 0x0000000000291890)
+NWNXLIB_FUNCTION(_ZN10CNWSObject15SendDialogEntryEji, 0x000000000029a0a0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject16AddActionToFrontEjtjPvjS0_jS0_jS0_jS0_jS0_jS0_jS0_jS0_jS0_jS0_jS0_, 0x0000000000291e60)
+NWNXLIB_FUNCTION(_ZN10CNWSObject16AIActionGiveItemEP20CNWSObjectActionNode, 0x00000000002a2810)
+NWNXLIB_FUNCTION(_ZN10CNWSObject16AIActionOpenDoorEP20CNWSObjectActionNode, 0x00000000002a57c0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject16AIActionTakeItemEP20CNWSObjectActionNode, 0x00000000002a2db0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject16DoDamageImmunityEP12CNWSCreatureitii, 0x000000000029eb20)
+NWNXLIB_FUNCTION(_ZN10CNWSObject16GetEffectSpellIdEv, 0x0000000000258d50)
+NWNXLIB_FUNCTION(_ZN10CNWSObject16RemoveEffectByIdEm, 0x0000000000293580)
+NWNXLIB_FUNCTION(_ZN10CNWSObject16SetEffectSpellIdEj, 0x0000000000258d60)
+NWNXLIB_FUNCTION(_ZN10CNWSObject16UpdateEffectListEjj, 0x0000000000299080)
+NWNXLIB_FUNCTION(_ZN10CNWSObject16UpdateEffectPtrsEv, 0x0000000000258dc0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject17AddOpenDoorActionEji, 0x0000000000295a80)
+NWNXLIB_FUNCTION(_ZN10CNWSObject17AIActionCloseDoorEP20CNWSObjectActionNode, 0x00000000002a2f90)
+NWNXLIB_FUNCTION(_ZN10CNWSObject17AIActionDoCommandEP20CNWSObjectActionNode, 0x00000000002a20b0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject17AIActionPlaySoundEP20CNWSObjectActionNode, 0x00000000002a2230)
+NWNXLIB_FUNCTION(_ZN10CNWSObject17AIActionUseObjectEP20CNWSObjectActionNode, 0x00000000002a5ed0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject17DoDamageReductionEP12CNWSCreatureihii, 0x000000000029a8a0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject17GetAQActionIDByIDEti, 0x00000000002a1320)
+NWNXLIB_FUNCTION(_ZN10CNWSObject17GetDamageImmunityEh, 0x000000000028f5a0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject17GetIDByAQActionIDEt, 0x00000000002a14a0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject17GetScriptLocationEv, 0x00000000002956c0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject17RunDialogOneLinerERK10CExoStringj, 0x00000000002a05b0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject17SendDialogRepliesEv, 0x000000000029a570)
+NWNXLIB_FUNCTION(_ZN10CNWSObject17SetDamageImmunityEti, 0x0000000000292d10)
+NWNXLIB_FUNCTION(_ZN10CNWSObject18AddCloseDoorActionEji, 0x0000000000295b00)
+NWNXLIB_FUNCTION(_ZN10CNWSObject18AddDoCommandActionEPv, 0x00000000002a53d0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject18AddGiveItemActionsEjji, 0x00000000002a50c0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject18AddTakeItemActionsEjji, 0x00000000002a51a0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject18AddUseObjectActionEj, 0x00000000002a5020)
+NWNXLIB_FUNCTION(_ZN10CNWSObject18AIActionLockObjectEP20CNWSObjectActionNode, 0x00000000002a41d0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject18BroadcastSpellDataEP8CNWSpellP16CNWCCMessageData, 0x0000000000295fe0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject18DoDamageResistanceEP12CNWSCreatureitiii, 0x000000000029b7d0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject18GetActionByGroupIdEtPP20CNWSObjectActionNode, 0x00000000002902f0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject18GetAIStateReactionEj, 0x00000000002a7dc0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject18GetNumActionGroupsEv, 0x0000000000290550)
+NWNXLIB_FUNCTION(_ZN10CNWSObject18RemoveEffectTargetEj, 0x0000000000293450)
+NWNXLIB_FUNCTION(_ZN10CNWSObject18SpellCastAndImpactEj6Vectorjhjiihi, 0x00000000002965f0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject19AddActionAfterFrontEjtjPvjS0_jS0_jS0_jS0_jS0_jS0_jS0_jS0_jS0_jS0_jS0_, 0x00000000002921d0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject19AddLockObjectActionEj, 0x0000000000295c00)
+NWNXLIB_FUNCTION(_ZN10CNWSObject19AIActionPauseDialogEP20CNWSObjectActionNode, 0x00000000002a1c10)
+NWNXLIB_FUNCTION(_ZN10CNWSObject19AIActionSpeakStrRefEP20CNWSObjectActionNode, 0x00000000002a1ed0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject19AnimationStationaryEt, 0x0000000000292650)
+NWNXLIB_FUNCTION(_ZN10CNWSObject19BroadcastFloatyDataEP16CNWCCMessageData, 0x000000000028f330)
+NWNXLIB_FUNCTION(_ZN10CNWSObject19GetAcceptableActionEj, 0x00000000002a12f0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject19GetCurrentHitPointsEi, 0x000000000028f2f0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject19LoadVisualTransformEP7CResGFFP10CResStruct, 0x00000000002985e0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject19SaveVisualTransformEP7CResGFFP10CResStruct, 0x0000000000291a60)
+NWNXLIB_FUNCTION(_ZN10CNWSObject19SetLastHostileActorEji, 0x00000000002982e0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject19SetListenExpressionE10CExoStringi, 0x0000000000294a70)
+NWNXLIB_FUNCTION(_ZN10CNWSObject20AIActionDialogObjectEP20CNWSObjectActionNode, 0x00000000002a14c0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject20AIActionResumeDialogEP20CNWSObjectActionNode, 0x00000000002a1d40)
+NWNXLIB_FUNCTION(_ZN10CNWSObject20AIActionUnlockObjectEP20CNWSObjectActionNode, 0x00000000002a3300)
+NWNXLIB_FUNCTION(_ZN10CNWSObject20TestListenExpressionE10CExoString, 0x0000000000294e40)
+NWNXLIB_FUNCTION(_ZN10CNWSObject21AddUnlockObjectActionEjji, 0x0000000000295b80)
+NWNXLIB_FUNCTION(_ZN10CNWSObject21AIActionPlayAnimationEP20CNWSObjectActionNode, 0x00000000002a2460)
+NWNXLIB_FUNCTION(_ZN10CNWSObject21DeleteCurrentAIActionEv, 0x00000000002925e0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject21HasSpellEffectAppliedEj, 0x0000000000295720)
+NWNXLIB_FUNCTION(_ZN10CNWSObject21LoadMaterialOverridesEP7CResGFFP10CResStruct, 0x000000000029edb0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject21RemoveEffectByCreatorEj, 0x0000000000294080)
+NWNXLIB_FUNCTION(_ZN10CNWSObject21RemoveEffectBySpellIdEj, 0x0000000000295770)
+NWNXLIB_FUNCTION(_ZN10CNWSObject21SaveMaterialOverridesEP7CResGFFP10CResStruct, 0x0000000000291be0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject21SetGroupInterruptableEti, 0x0000000000290810)
+NWNXLIB_FUNCTION(_ZN10CNWSObject22AddActionNodeParameterEP20CNWSObjectActionNodejjPv, 0x0000000000290750)
+NWNXLIB_FUNCTION(_ZN10CNWSObject22AddLoopingVisualEffectEtjh, 0x0000000000293260)
+NWNXLIB_FUNCTION(_ZN10CNWSObject22AIActionSetCommandableEP20CNWSObjectActionNode, 0x00000000002a4fd0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject22ClearAllHostileActionsEj, 0x0000000000292820)
+NWNXLIB_FUNCTION(_ZN10CNWSObject22DoSpellLevelAbsorptionEPS_, 0x00000000002937f0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject22GetDialogInterruptableEv, 0x0000000000258d20)
+NWNXLIB_FUNCTION(_ZN10CNWSObject22GetListenExpressionObjEi, 0x0000000000294a20)
+NWNXLIB_FUNCTION(_ZN10CNWSObject22GetNearestObjectByNameERK10CExoStringf, 0x0000000000294600)
+NWNXLIB_FUNCTION(_ZN10CNWSObject22RemoveObjectFromDialogEj, 0x000000000029a4f0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject22SetVisualTransformDataERK25ObjectVisualTransformData, 0x00000000002984a0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject23BroadcastSafeProjectileEjj6VectorS0_jhjhh, 0x00000000002963e0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject23GetHasFeatEffectAppliedEt, 0x0000000000297f90)
+NWNXLIB_FUNCTION(_ZN10CNWSObject23GetPositionByGroupIndexEi, 0x00000000002903f0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject23SetMaterialShaderParamIERK10CExoStringS2_i, 0x000000000029f250)
+NWNXLIB_FUNCTION(_ZN10CNWSObject24GetDamageImmunityByFlagsEt, 0x000000000028f6f0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject24UpdateAttributesOnEffectEP11CGameEffecti, 0x0000000000258dd0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject25BroadcastCounterSpellDataEP8CNWSpellP16CNWCCMessageData, 0x0000000000295c80)
+NWNXLIB_FUNCTION(_ZN10CNWSObject25BroadcastFloatyDataSTRREFEj, 0x000000000028f500)
+NWNXLIB_FUNCTION(_ZN10CNWSObject25ClearSpellEffectsOnOthersEv, 0x00000000002940f0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject25RemoveLoopingVisualEffectEt, 0x0000000000293380)
+NWNXLIB_FUNCTION(_ZN10CNWSObject25ResetMaterialShaderParamsERK10CExoStringS2_, 0x000000000029f860)
+NWNXLIB_FUNCTION(_ZN10CNWSObject26AddMatchedExpressionStringERK10CExoString, 0x0000000000294ed0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject26GetLastDamageAmountByFlagsEi, 0x0000000000292d60)
+NWNXLIB_FUNCTION(_ZN10CNWSObject26GetLockOrientationToObjectEv, 0x0000000000258d80)
+NWNXLIB_FUNCTION(_ZN10CNWSObject26SetLockOrientationToObjectEj, 0x0000000000258d70)
+NWNXLIB_FUNCTION(_ZN10CNWSObject26SetMaterialShaderParamVec4ERK10CExoStringS2_ffff, 0x000000000029f530)
+NWNXLIB_FUNCTION(_ZN10CNWSObject27TerminateAISliceAfterActionEj, 0x00000000002a12d0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject29ClearMatchedExpressionStringsEv, 0x0000000000294ff0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject30CalculateSpellRangedMissTargetEjj, 0x00000000002970d0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject31RemoveSomeEffectsOfDurationTypeEt, 0x0000000000293e70)
+NWNXLIB_FUNCTION(_ZN10CNWSObject32CalculateLastSpellProjectileTimeEh, 0x0000000000296d60)
+NWNXLIB_FUNCTION(_ZN10CNWSObject38GetMaximumDamageResistanceVsDamageFlagEtPi, 0x000000000028f8d0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject7GetAreaEv, 0x0000000000294310)
+NWNXLIB_FUNCTION(_ZN10CNWSObject7GetDeadEv, 0x00000000002957f0)
+NWNXLIB_FUNCTION(_ZN10CNWSObject7SetAreaEP8CNWSArea, 0x0000000000294420)
+NWNXLIB_FUNCTION(_ZN10CNWSObject8DoDamageEi, 0x000000000028fa70)
+NWNXLIB_FUNCTION(_ZN10CNWSObject9AddActionEjtjPvjS0_jS0_jS0_jS0_jS0_jS0_jS0_jS0_jS0_jS0_jS0_, 0x0000000000290940)
+NWNXLIB_FUNCTION(_ZN10CNWSObject9GetGenderEv, 0x000000000028f320)
+NWNXLIB_FUNCTION(_ZN10CNWSObjectC1Ehjii, 0x000000000029fb50)
+NWNXLIB_FUNCTION(_ZN10CNWSObjectC2Ehjii, 0x000000000029fb50)
+NWNXLIB_FUNCTION(_ZN10CNWSObjectD0Ev, 0x00000000002a0580)
+NWNXLIB_FUNCTION(_ZN10CNWSObjectD1Ev, 0x00000000002a0200)
+NWNXLIB_FUNCTION(_ZN10CNWSObjectD2Ev, 0x00000000002a0200)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer11AsNWSPlayerEv, 0x00000000002b9cf0)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer12CleanMyTURDsEv, 0x00000000002b1800)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer13AllocateAreasEi, 0x00000000002b3a30)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer13GetGameObjectEv, 0x00000000002b26d0)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer13GetPlayerNameEv, 0x00000000002b3b10)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer13SetGameObjectEP10CNWSObject, 0x00000000002b3fd0)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer14AddDMAbilitiesEP12CNWSCreature, 0x00000000002b1bd0)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer15LoadDMCharacterEv, 0x00000000002b9a80)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer16HasExpansionPackEhi, 0x00000000002b4ec0)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer16LoadCreatureDataE7CResRefP12CNWSCreature, 0x00000000002b8cf0)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer17ValidateCharacterEPi, 0x00000000002b5710)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer18GetIsAllowedToSaveEv, 0x00000000002b18f0)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer18LoadLocalCharacterEv, 0x00000000002b9990)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer19GetLastUpdateObjectEj, 0x00000000002b1850)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer19LoadServerCharacterE7CResRefi, 0x00000000002b9b90)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer19LoadTURDInfoFromIFOEj, 0x00000000002b28c0)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer19SaveServerCharacterEi, 0x00000000002b7e60)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer19StoreCameraSettingsEv, 0x00000000002b4ee0)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer20LoadCharacterFromIFOEjiiii, 0x00000000002b4650)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer20SetAreaTransitionBMPEi10CExoString, 0x00000000002b1920)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer21BackupServerCharacterERK10CExoString, 0x00000000002b2460)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer21RestoreCameraSettingsEv, 0x00000000002b4f20)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer23GetCharacterInfoFromIFOERhPiPhRj, 0x00000000002b1960)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer23PackCreatureIntoMessageEv, 0x00000000002b2ba0)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer24ClearPlayerOnDestroyGameEv, 0x00000000002b5440)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer27ClearPlayerLastUpdateObjectEv, 0x00000000002b3f90)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer31CreateNewPlayerLastUpdateObjectEv, 0x00000000002b3f10)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer32PermittedToDisplayCharacterSheetEj, 0x00000000002b4e20)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer35StripAllInvalidItemPropertiesOnItemEP8CNWSItem, 0x00000000002b4f60)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer37ValidateCharacter_SetNormalBonusFlagsEtRiS0_h, 0x00000000002b25f0)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer40StripAllInvalidItemPropertiesInInventoryEP12CNWSCreature, 0x00000000002b50c0)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer7AddAreaEj, 0x00000000002b3ab0)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer7EatTURDEP14CNWSPlayerTURD, 0x00000000002b4280)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayer8DropTURDEv, 0x00000000002b3b80)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayerC1Ej, 0x00000000002b1500)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayerC2Ej, 0x00000000002b1500)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayerD0Ev, 0x00000000002b5410)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayerD1Ev, 0x00000000002b51b0)
+NWNXLIB_FUNCTION(_ZN10CNWSPlayerD2Ev, 0x00000000002b51b0)
+NWNXLIB_FUNCTION(_ZN10CNWTileSet11GetEdgeTypeEihh, 0x00000000001b6750)
+NWNXLIB_FUNCTION(_ZN10CNWTileSet11GetTileDataEi, 0x00000000001b6800)
+NWNXLIB_FUNCTION(_ZN10CNWTileSet11LoadTileSetEv, 0x00000000001b6920)
+NWNXLIB_FUNCTION(_ZN10CNWTileSet12SetTileValueEPcS0_, 0x00000000001b7560)
+NWNXLIB_FUNCTION(_ZN10CNWTileSet13GetCornerTypeEihh, 0x00000000001b66e0)
+NWNXLIB_FUNCTION(_ZN10CNWTileSet13UnloadTileSetEv, 0x00000000001b7a60)
+NWNXLIB_FUNCTION(_ZN10CNWTileSet15GetEnvMapResRefEv, 0x00000000001b67c0)
+NWNXLIB_FUNCTION(_ZN10CNWTileSet19GetHeightTransitionEv, 0x00000000001b67f0)
+NWNXLIB_FUNCTION(_ZN10CNWTileSet9ParseLineEPc, 0x00000000001b7880)
+NWNXLIB_FUNCTION(_ZN10CNWTileSetC1E7CResRefi, 0x00000000001b7b90)
+NWNXLIB_FUNCTION(_ZN10CNWTileSetC2E7CResRefi, 0x00000000001b7b90)
+NWNXLIB_FUNCTION(_ZN10CNWTileSetD0Ev, 0x00000000001b7b60)
+NWNXLIB_FUNCTION(_ZN10CNWTileSetD1Ev, 0x00000000001b7b20)
+NWNXLIB_FUNCTION(_ZN10CNWTileSetD2Ev, 0x00000000001b7b20)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CRes2DALt2017EE9SetResRefERK7CResRefi, 0x0000000000122780)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CRes2DALt2017EEC1Ev, 0x0000000000122700)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CRes2DALt2017EEC2Ev, 0x0000000000122700)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CRes2DALt2017EED0Ev, 0x00000000001226d0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CRes2DALt2017EED1Ev, 0x0000000000122630)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CRes2DALt2017EED2Ev, 0x0000000000122630)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResARELt2012EE9SetResRefERK7CResRefi, 0x00000000003359f0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResARELt2012EED0Ev, 0x0000000000335970)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResARELt2012EED1Ev, 0x00000000003358d0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResARELt2012EED2Ev, 0x00000000003358d0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResDWKLt2052EE9SetResRefERK7CResRefi, 0x00000000007df100)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResDWKLt2052EED0Ev, 0x00000000007df0d0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResDWKLt2052EED1Ev, 0x00000000007df030)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResDWKLt2052EED2Ev, 0x00000000007df030)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResIFOLt2014EE9SetResRefERK7CResRefi, 0x000000000028eda0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResIFOLt2014EED0Ev, 0x000000000028eb90)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResIFOLt2014EED1Ev, 0x000000000028eaf0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResIFOLt2014EED2Ev, 0x000000000028eaf0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResLTRLt2036EE9SetResRefERK7CResRefi, 0x00000000007988c0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResLTRLt2036EED0Ev, 0x0000000000798890)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResLTRLt2036EED1Ev, 0x00000000007987f0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResLTRLt2036EED2Ev, 0x00000000007987f0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNCSLt2010EE9SetResRefERK7CResRefi, 0x00000000007bd6f0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNCSLt2010EEC1Ev, 0x00000000007bd670)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNCSLt2010EEC2Ev, 0x00000000007bd670)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNCSLt2010EED0Ev, 0x00000000007bd5e0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNCSLt2010EED1Ev, 0x00000000007bd540)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNCSLt2010EED2Ev, 0x00000000007bd540)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNDBLt2064EE9SetResRefERK7CResRefi, 0x00000000007c38c0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNDBLt2064EED0Ev, 0x000000000079ebd0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNDBLt2064EED1Ev, 0x000000000079eb30)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNDBLt2064EED2Ev, 0x000000000079eb30)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNSSLt2009EE9SetResRefERK7CResRefi, 0x000000000079edf0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNSSLt2009EEC1Ev, 0x000000000079ed70)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNSSLt2009EEC2Ev, 0x000000000079ed70)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNSSLt2009EED0Ev, 0x000000000079ecf0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNSSLt2009EED1Ev, 0x000000000079ec50)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResNSSLt2009EED2Ev, 0x000000000079ec50)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResPWKLt2053EE9SetResRefERK7CResRefi, 0x00000000007dcf20)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResPWKLt2053EED0Ev, 0x00000000007dcef0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResPWKLt2053EED1Ev, 0x00000000007dce50)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResPWKLt2053EED2Ev, 0x00000000007dce50)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResSETLt2013EE9SetResRefERK7CResRefi, 0x00000000001b7e60)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResSETLt2013EED0Ev, 0x00000000001b7e30)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResSETLt2013EED1Ev, 0x00000000001b7d90)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResSETLt2013EED2Ev, 0x00000000001b7d90)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResTLKLt2018EE9SetResRefERK7CResRefi, 0x000000000011fed0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResTLKLt2018EED0Ev, 0x000000000011fea0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResTLKLt2018EED1Ev, 0x000000000011fe00)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResTLKLt2018EED2Ev, 0x000000000011fe00)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResWOKLt2016EE9SetResRefERK7CResRefi, 0x00000000001c4090)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResWOKLt2016EED0Ev, 0x00000000001c3840)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResWOKLt2016EED1Ev, 0x00000000001c37a0)
+NWNXLIB_FUNCTION(_ZN10CResHelperI7CResWOKLt2016EED2Ev, 0x00000000001c37a0)
+NWNXLIB_FUNCTION(_ZN10QuaternionmLEf, 0x0000000000794530)
+NWNXLIB_FUNCTION(_ZN10ScopeGuardD1Ev, 0x0000000000110b50)
+NWNXLIB_FUNCTION(_ZN10ScopeGuardD2Ev, 0x0000000000110b50)
+NWNXLIB_FUNCTION(_ZN11CAppManager12CreateServerEv, 0x00000000000d1330)
+NWNXLIB_FUNCTION(_ZN11CAppManager13DestroyServerEv, 0x00000000000d1220)
+NWNXLIB_FUNCTION(_ZN11CAppManager13ShowServerMemEv, 0x00000000000d1210)
+NWNXLIB_FUNCTION(_ZN11CAppManager15ConnectToServerE10CExoStringi, 0x00000000000d15c0)
+NWNXLIB_FUNCTION(_ZN11CAppManager19ReadProgressFromINIEh, 0x00000000000d13b0)
+NWNXLIB_FUNCTION(_ZN11CAppManager20DoSaveGameScreenShotER10CExoString, 0x00000000000d1200)
+NWNXLIB_FUNCTION(_ZN11CAppManager20SetDDCipherForModuleE10CExoString, 0x00000000000d15d0)
+NWNXLIB_FUNCTION(_ZN11CAppManager21GetObjectTableManagerEj, 0x00000000000d11e0)
+NWNXLIB_FUNCTION(_ZN11CAppManager26DestroyScriptDebuggerPopupEv, 0x00000000000d15a0)
+NWNXLIB_FUNCTION(_ZN11CAppManager26DisplayScriptDebuggerPopupEv, 0x00000000000d1590)
+NWNXLIB_FUNCTION(_ZN11CAppManager26GetDungeonMasterEXERunningEv, 0x00000000000d13a0)
+NWNXLIB_FUNCTION(_ZN11CAppManager26SetDungeonMasterEXERunningEi, 0x00000000000d1390)
+NWNXLIB_FUNCTION(_ZN11CAppManager27SpawnExternalScriptDebuggerEv, 0x00000000000d15b0)
+NWNXLIB_FUNCTION(_ZN11CAppManagerC1Ev, 0x00000000000d1060)
+NWNXLIB_FUNCTION(_ZN11CAppManagerC2Ev, 0x00000000000d1060)
+NWNXLIB_FUNCTION(_ZN11CAppManagerD1Ev, 0x00000000000d1270)
+NWNXLIB_FUNCTION(_ZN11CAppManagerD2Ev, 0x00000000000d1270)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB10DecompressERKSt10shared_ptrI9DataBlockEbRK10CExoString, 0x0000000000322550)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB11GetLocationERK10CExoStringS2_S2_, 0x00000000003276d0)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB11HandleErrorERSt9exception, 0x00000000003220b0)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB11SetLocationERK10CExoStringS2_S2_RK15CScriptLocation, 0x0000000000328140)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB12OpenDatabaseERK10CExoString, 0x0000000000322230)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB13GetBinaryDataERK10CExoStringS2_S2_, 0x0000000000327a10)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB13SetBinaryDataERK10CExoStringS2_S2_RKSt10shared_ptrIK9DataBlockEt, 0x00000000003270c0)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB14GetDatabaseForERK10CExoString, 0x0000000000326870)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB15DestroyDatabaseERK10CExoString, 0x0000000000326440)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB6GetIntERK10CExoStringS2_S2_i, 0x0000000000327590)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB6SetIntERK10CExoStringS2_S2_i, 0x0000000000327ec0)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB6WithDBIbEET_RK10CExoStringS1_St8functionIFS1_RN6sqlite8databaseEEE, 0x000000000032a320)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB8CompressERKSt10shared_ptrI9DataBlockEtRK10CExoString, 0x0000000000322710)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB8GetFloatERK10CExoStringS2_S2_f, 0x0000000000327440)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB8SetFloatERK10CExoStringS2_S2_f, 0x0000000000327c40)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB9DeleteVarERK10CExoStringS2_S2_, 0x0000000000327b60)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB9GetStringERK10CExoStringS2_S2_S2_, 0x0000000000327890)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB9GetVectorERK10CExoStringS2_S2_, 0x00000000003277b0)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB9SetStringERK10CExoStringS2_S2_S2_, 0x0000000000326d00)
+NWNXLIB_FUNCTION(_ZN11CCampaignDB9SetVectorERK10CExoStringS2_S2_RK6Vector, 0x0000000000327d80)
+NWNXLIB_FUNCTION(_ZN11CCampaignDBC1Ev, 0x0000000000329a60)
+NWNXLIB_FUNCTION(_ZN11CCampaignDBC2Ev, 0x0000000000329a60)
+NWNXLIB_FUNCTION(_ZN11CCampaignDBD0Ev, 0x00000000003224e0)
+NWNXLIB_FUNCTION(_ZN11CCampaignDBD1Ev, 0x0000000000322480)
+NWNXLIB_FUNCTION(_ZN11CCampaignDBD2Ev, 0x0000000000322480)
+NWNXLIB_FUNCTION(_ZN11CExoEncrypt13EncryptStringERK10CExoString, 0x0000000000787620)
+NWNXLIB_FUNCTION(_ZN11CExoEncrypt17GenerateChallengeEt, 0x0000000000787750)
+NWNXLIB_FUNCTION(_ZN11CExoResFile10InitializeEv, 0x0000000000122a00)
+NWNXLIB_FUNCTION(_ZN11CExoResFile10LoadHeaderEh, 0x00000000001231e0)
+NWNXLIB_FUNCTION(_ZN11CExoResFile11AddRefCountEv, 0x0000000000122960)
+NWNXLIB_FUNCTION(_ZN11CExoResFile12ReadResourceE5RESIDPvjj, 0x00000000001281a0)
+NWNXLIB_FUNCTION(_ZN11CExoResFile12UnloadHeaderEv, 0x0000000000123f80)
+NWNXLIB_FUNCTION(_ZN11CExoResFile13OpenAsyncFileEv, 0x0000000000123e70)
+NWNXLIB_FUNCTION(_ZN11CExoResFile14CloseAsyncFileEv, 0x0000000000124300)
+NWNXLIB_FUNCTION(_ZN11CExoResFile14DeleteRefCountEv, 0x0000000000124140)
+NWNXLIB_FUNCTION(_ZN11CExoResFile15GetResourceSizeE5RESID, 0x00000000001229e0)
+NWNXLIB_FUNCTION(_ZN11CExoResFile16AddAsyncRefCountEv, 0x00000000001229a0)
+NWNXLIB_FUNCTION(_ZN11CExoResFile17ReadResourceAsyncE5RESIDPvjj, 0x0000000000123c40)
+NWNXLIB_FUNCTION(_ZN11CExoResFile19DeleteAsyncRefCountEv, 0x0000000000124110)
+NWNXLIB_FUNCTION(_ZN11CExoResFile8OpenFileEPh, 0x0000000000122a60)
+NWNXLIB_FUNCTION(_ZN11CExoResFile8OpenFileEv, 0x0000000000123d60)
+NWNXLIB_FUNCTION(_ZN11CExoResFile9CloseFileEv, 0x0000000000124170)
+NWNXLIB_FUNCTION(_ZN11CExoResFileC1Ev, 0x0000000000125b50)
+NWNXLIB_FUNCTION(_ZN11CExoResFileC2Ev, 0x0000000000125b50)
+NWNXLIB_FUNCTION(_ZN11CExoResFileD0Ev, 0x00000000001242b0)
+NWNXLIB_FUNCTION(_ZN11CExoResFileD1Ev, 0x0000000000124270)
+NWNXLIB_FUNCTION(_ZN11CExoResFileD2Ev, 0x0000000000124270)
+NWNXLIB_FUNCTION(_ZN11CFriendInfo8SanitizeEv, 0x00000000001297d0)
+NWNXLIB_FUNCTION(_ZN11CGameEffect10CopyEffectEPS_i, 0x0000000000259530)
+NWNXLIB_FUNCTION(_ZN11CGameEffect10GetIntegerEi, 0x0000000000259410)
+NWNXLIB_FUNCTION(_ZN11CGameEffect10SetCreatorEj, 0x0000000000259dd0)
+NWNXLIB_FUNCTION(_ZN11CGameEffect10SetIntegerEii, 0x0000000000259420)
+NWNXLIB_FUNCTION(_ZN11CGameEffect11GetObjectIDEi, 0x0000000000259450)
+NWNXLIB_FUNCTION(_ZN11CGameEffect11SetObjectIDEij, 0x0000000000259460)
+NWNXLIB_FUNCTION(_ZN11CGameEffect12SetCustomTagERK10CExoString, 0x0000000000259510)
+NWNXLIB_FUNCTION(_ZN11CGameEffect12UpdateLinkedEv, 0x0000000000259f90)
+NWNXLIB_FUNCTION(_ZN11CGameEffect13GetExpiryTimeEPjS0_, 0x00000000002594d0)
+NWNXLIB_FUNCTION(_ZN11CGameEffect13SetExpiryTimeEjj, 0x00000000002594c0)
+NWNXLIB_FUNCTION(_ZN11CGameEffect14LoadGameEffectEP7CResGFFP10CResStruct, 0x000000000025a190)
+NWNXLIB_FUNCTION(_ZN11CGameEffect14SaveGameEffectEP7CResGFFP10CResStruct, 0x0000000000259a90)
+NWNXLIB_FUNCTION(_ZN11CGameEffect14SetNumIntegersEi, 0x0000000000258f50)
+NWNXLIB_FUNCTION(_ZN11CGameEffect19GetScriptEffectTypeEv, 0x000000000025a720)
+NWNXLIB_FUNCTION(_ZN11CGameEffect37SetNumIntegersInitializeToNegativeOneEi, 0x00000000002593a0)
+NWNXLIB_FUNCTION(_ZN11CGameEffect8GetFloatEi, 0x0000000000259430)
+NWNXLIB_FUNCTION(_ZN11CGameEffect8SetFloatEif, 0x0000000000259440)
+NWNXLIB_FUNCTION(_ZN11CGameEffect9GetStringEi, 0x0000000000259470)
+NWNXLIB_FUNCTION(_ZN11CGameEffect9SetLinkedEPS_S0_, 0x000000000025a170)
+NWNXLIB_FUNCTION(_ZN11CGameEffect9SetStringEi10CExoString, 0x00000000002594a0)
+NWNXLIB_FUNCTION(_ZN11CGameEffectaSERKS_, 0x0000000000259760)
+NWNXLIB_FUNCTION(_ZN11CGameEffectC1Ei, 0x0000000000258fc0)
+NWNXLIB_FUNCTION(_ZN11CGameEffectC1EPS_i, 0x0000000000259190)
+NWNXLIB_FUNCTION(_ZN11CGameEffectC2Ei, 0x0000000000258fc0)
+NWNXLIB_FUNCTION(_ZN11CGameEffectC2EPS_i, 0x0000000000259190)
+NWNXLIB_FUNCTION(_ZN11CGameEffectD1Ev, 0x0000000000258e90)
+NWNXLIB_FUNCTION(_ZN11CGameEffectD2Ev, 0x0000000000258e90)
+NWNXLIB_FUNCTION(_ZN11CGameObject10AsNWCStoreEv, 0x00000000001f7050)
+NWNXLIB_FUNCTION(_ZN11CGameObject10AsNWSStoreEv, 0x00000000001f7060)
+NWNXLIB_FUNCTION(_ZN11CGameObject11AsNWCModuleEv, 0x00000000001f6f40)
+NWNXLIB_FUNCTION(_ZN11CGameObject11AsNWCObjectEv, 0x00000000001f6f10)
+NWNXLIB_FUNCTION(_ZN11CGameObject11AsNWSModuleEv, 0x00000000001f6f50)
+NWNXLIB_FUNCTION(_ZN11CGameObject11AsNWSObjectEv, 0x000000000028ea30)
+NWNXLIB_FUNCTION(_ZN11CGameObject12AsNWCTriggerEv, 0x00000000001f6fb0)
+NWNXLIB_FUNCTION(_ZN11CGameObject12AsNWSTriggerEv, 0x00000000001f6fc0)
+NWNXLIB_FUNCTION(_ZN11CGameObject13AsNWCCreatureEv, 0x00000000001f6f80)
+NWNXLIB_FUNCTION(_ZN11CGameObject13AsNWSCreatureEv, 0x0000000000258d00)
+NWNXLIB_FUNCTION(_ZN11CGameObject13AsNWSWaypointEv, 0x00000000001f7030)
+NWNXLIB_FUNCTION(_ZN11CGameObject14AsNWCPlaceableEv, 0x00000000001f7000)
+NWNXLIB_FUNCTION(_ZN11CGameObject14AsNWSEncounterEv, 0x00000000001f7040)
+NWNXLIB_FUNCTION(_ZN11CGameObject14AsNWSPlaceableEv, 0x00000000001f6ff0)
+NWNXLIB_FUNCTION(_ZN11CGameObject15AsNWCProjectileEv, 0x00000000001f6fd0)
+NWNXLIB_FUNCTION(_ZN11CGameObject15AsNWSPlayerTURDEv, 0x00000000001f6fe0)
+NWNXLIB_FUNCTION(_ZN11CGameObject16AsNWCSoundObjectEv, 0x00000000001f7080)
+NWNXLIB_FUNCTION(_ZN11CGameObject16AsNWSSoundObjectEv, 0x00000000001f7070)
+NWNXLIB_FUNCTION(_ZN11CGameObject16ResetUpdateTimesEjj, 0x0000000000258cf0)
+NWNXLIB_FUNCTION(_ZN11CGameObject23AsNWCAreaOfEffectObjectEv, 0x00000000001f7020)
+NWNXLIB_FUNCTION(_ZN11CGameObject23AsNWSAreaOfEffectObjectEv, 0x00000000001f7010)
+NWNXLIB_FUNCTION(_ZN11CGameObject5SetIdEj, 0x0000000000258ce0)
+NWNXLIB_FUNCTION(_ZN11CGameObject9AsNWCAreaEv, 0x00000000001f6f60)
+NWNXLIB_FUNCTION(_ZN11CGameObject9AsNWCDoorEv, 0x00000000001f6f20)
+NWNXLIB_FUNCTION(_ZN11CGameObject9AsNWCItemEv, 0x00000000001f6f90)
+NWNXLIB_FUNCTION(_ZN11CGameObject9AsNWSAreaEv, 0x00000000001f6f70)
+NWNXLIB_FUNCTION(_ZN11CGameObject9AsNWSDoorEv, 0x00000000001f6f30)
+NWNXLIB_FUNCTION(_ZN11CGameObject9AsNWSItemEv, 0x00000000001f6fa0)
+NWNXLIB_FUNCTION(_ZN11CGameObjectC1Ehj, 0x00000000007c5000)
+NWNXLIB_FUNCTION(_ZN11CGameObjectC2Ehj, 0x00000000007c5000)
+NWNXLIB_FUNCTION(_ZN11CGameObjectD0Ev, 0x000000000028ea90)
+NWNXLIB_FUNCTION(_ZN11CGameObjectD1Ev, 0x000000000028ea20)
+NWNXLIB_FUNCTION(_ZN11CGameObjectD2Ev, 0x000000000028ea20)
+NWNXLIB_FUNCTION(_ZN11CNWBaseItem11GetNameTextEv, 0x00000000007c8a10)
+NWNXLIB_FUNCTION(_ZN11CNWBaseItem13GetIconResRefEhsc, 0x00000000007c8870)
+NWNXLIB_FUNCTION(_ZN11CNWBaseItem14GetModelResRefEhsc, 0x00000000007c8ac0)
+NWNXLIB_FUNCTION(_ZN11CNWBaseItem15GetRequiredFeatEh, 0x00000000007c89e0)
+NWNXLIB_FUNCTION(_ZN11CNWBaseItem15SetRequiredFeatEht, 0x00000000007c89c0)
+NWNXLIB_FUNCTION(_ZN11CNWBaseItem20SetRequiredFeatCountEh, 0x00000000007c8960)
+NWNXLIB_FUNCTION(_ZN11CNWBaseItemC1Ev, 0x00000000007c8750)
+NWNXLIB_FUNCTION(_ZN11CNWBaseItemC2Ev, 0x00000000007c8750)
+NWNXLIB_FUNCTION(_ZN11CNWBaseItemD1Ev, 0x00000000007c8840)
+NWNXLIB_FUNCTION(_ZN11CNWBaseItemD2Ev, 0x00000000007c8840)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction10GetWorstACEji, 0x00000000002a92d0)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction10InitialiseEv, 0x00000000002a9b00)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction11AttemptJoinEj, 0x00000000002aa2e0)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction12GetAverageXPEv, 0x00000000002a90a0)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction12GetIsInvitedEj, 0x00000000002a98e0)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction12InviteMemberEjj, 0x00000000002a8010)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction12RemoveMemberEj, 0x00000000002a9e40)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction13AttemptRemoveEjj, 0x00000000002aa320)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction13GetMemberListEPPj, 0x00000000002a8000)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction14ChangeMemberIdEjj, 0x00000000002a8090)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction15GetAverageLevelEv, 0x00000000002a8ff0)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction15SendChatMessageEj10CExoString, 0x00000000002a80e0)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction16GetFactionMemberEii, 0x00000000002a9a00)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction16GetWeakestMemberEji, 0x00000000002a8390)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction17GetFactionManagerEv, 0x00000000002a9ad0)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction17GetSingletonPartyEv, 0x00000000002a9930)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction18GetCreatureInPartyEj, 0x00000000002a9740)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction18GetStrongestMemberEji, 0x00000000002a85c0)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction18TransferLeadershipEjj, 0x00000000002a9c30)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction20GetAverageReputationEj, 0x00000000002a8d30)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction20GetMostDamagedMemberEji, 0x00000000002a87f0)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction20GetMostFrequentClassEv, 0x00000000002a9140)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction20SendFactionUpdateAddEj, 0x00000000002a8250)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction21GetLeastDamagedMemberEji, 0x00000000002a8a60)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction21SendFactionUpdateListEv, 0x00000000002a81c0)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction23SendFactionUpdateRemoveEj, 0x00000000002a82f0)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction26ClearAllReputationsTowardsEj, 0x00000000002a9b90)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction27GetAverageGoodEvilAlignmentEv, 0x00000000002a8e10)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction27GetAverageLawChaosAlignmentEv, 0x00000000002a8f00)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction7GetGoldEv, 0x00000000002a8cd0)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction9AddMemberEji, 0x00000000002aa0e0)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction9GetBestACEji, 0x00000000002a9510)
+NWNXLIB_FUNCTION(_ZN11CNWSFaction9GetLeaderEv, 0x00000000002a9780)
+NWNXLIB_FUNCTION(_ZN11CNWSFactionC1Ej, 0x00000000002a9d00)
+NWNXLIB_FUNCTION(_ZN11CNWSFactionC1Ev, 0x00000000002aa390)
+NWNXLIB_FUNCTION(_ZN11CNWSFactionC2Ej, 0x00000000002a9d00)
+NWNXLIB_FUNCTION(_ZN11CNWSFactionC2Ev, 0x00000000002aa390)
+NWNXLIB_FUNCTION(_ZN11CNWSFactionD1Ev, 0x00000000002a7fc0)
+NWNXLIB_FUNCTION(_ZN11CNWSFactionD2Ev, 0x00000000002a7fc0)
+NWNXLIB_FUNCTION(_ZN11CNWSJournal10SetPictureE10CExoStringii, 0x000000000027d510)
+NWNXLIB_FUNCTION(_ZN11CNWSJournal7DestroyE10CExoString, 0x000000000027d520)
+NWNXLIB_FUNCTION(_ZN11CNWSJournal7SetDateE10CExoStringji, 0x000000000027d8b0)
+NWNXLIB_FUNCTION(_ZN11CNWSJournal7SetTimeE10CExoStringji, 0x000000000027dce0)
+NWNXLIB_FUNCTION(_ZN11CNWSJournal8SetStateE10CExoStringji, 0x000000000027e110)
+NWNXLIB_FUNCTION(_ZN11CNWSJournalC1Ev, 0x000000000027d460)
+NWNXLIB_FUNCTION(_ZN11CNWSJournalC2Ev, 0x000000000027d460)
+NWNXLIB_FUNCTION(_ZN11CNWSJournalD1Ev, 0x000000000027d480)
+NWNXLIB_FUNCTION(_ZN11CNWSJournalD2Ev, 0x000000000027d480)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage10ParseTokenEPKcPPhRji, 0x0000000000364cf0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage12ParseGetBoolEPhjRi, 0x0000000000364c70)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage14HasValidStringER13CExoLocStringh, 0x00000000002d3300)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage14ParseGetStringEPhjR10CExoStringj, 0x0000000000364cc0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage17TestObjectVisibleEP10CNWSObjectS1_, 0x00000000002c2410)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage18GetLocStringServerEj13CExoLocStringS0_R10CExoStringRfh, 0x000000000027f480)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage18ReadOBJECTIDServerEv, 0x000000000027f3e0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage19AssignCreatureListsEP13CExoArrayListIjES2_, 0x00000000002d5800)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage19WriteOBJECTIDServerEj, 0x000000000027f420)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage20CompareCreatureListsEP13CExoArrayListIjES2_, 0x00000000002bf260)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage21ComputeUpdateRequiredEP10CNWSPlayerP10CNWSObjectP17CLastUpdateObjecti, 0x00000000002c0220)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage21WriteRepositoryUpdateEP10CNWSPlayerP10CNWSObjectP15CItemRepositoryP22CNWSPlayerLUOInventoryhch, 0x00000000002c3040)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage22ComputeVisibilityListsEP12CNWSCreatureP26CNWSPlayerLastUpdateObject, 0x00000000002bf2c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage22UpdateLastUpdateObjectEP10CNWSPlayerP10CNWSObjectP17CLastUpdateObjectj, 0x00000000002df900)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage23AssignVisualEffectListsEP13CExoArrayListIP20CLoopingVisualEffectES4_, 0x00000000002bef10)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage23UpdateLastUpdateAutoMapEP12CNWSCreatureP26CNWSPlayerLastUpdateObject, 0x00000000002bfaf0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage24CompareVisualEffectListsEP13CExoArrayListIP20CLoopingVisualEffectES4_, 0x00000000002bf110)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage24WriteCExoLocStringServerERK13CExoLocStringh, 0x000000000027f8c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage25ComputeLastUpdate_AutoMapEP12CNWSCreatureP26CNWSPlayerLastUpdateObject, 0x00000000002bfdc0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage25CreateNewLastUpdateObjectEP10CNWSPlayerP10CNWSObjectPjS4_, 0x00000000002e0900)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage25HandlePlayerToServerPartyEP10CNWSPlayerh, 0x0000000000359940)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage25SendServerToPlayerMessageEjhhPhj, 0x00000000002c43f0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage25UpdateLastUpdateInventoryEP10CNWSPlayerjP22CNWSPlayerInventoryGUI, 0x00000000002cc8c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage25WriteGuiEffectIconsUpdateEP12CNWSCreatureP13CExoArrayListIP17CEffectIconObjectEi, 0x00000000002d7990)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage25WriteStoreInventoryUpdateEP10CNWSPlayerP9CNWSStore, 0x00000000002c35b0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage26AddDoorAppearanceToMessageEP8CNWSDoor, 0x00000000002be760)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage26AddItemAppearanceToMessageEP8CNWSItem, 0x00000000002bec60)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage26ComputeLastUpdate_GuiFeatsEP12CNWSCreatureP26CNWSPlayerLastUpdateObject, 0x00000000002bf420)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage26HandlePlayerToServerBarterEP10CNWSPlayerh, 0x000000000035c510)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage26HandlePlayerToServerPortalEP10CNWSPlayerh, 0x000000000035ce80)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage26SendServerToPlayerCharListEP10CNWSPlayer, 0x00000000002de680)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage27AddTriggerGeometryToMessageEP11CNWSTrigger, 0x00000000002c2340)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage27ComputeLastUpdate_GuiSkillsEP12CNWSCreature, 0x00000000002bf3a0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage27HandlePlayerToServerMessageEjPhj, 0x00000000003641e0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage27SelectCategoryForGameObjectEP11CGameObjectP10CNWSObject, 0x00000000002c1cc0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage27SendServerToPlayerCCMessageEjhP16CNWCCMessageDataP20CNWSCombatAttackData, 0x00000000002cc920)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage27SendServerToPlayerChat_TalkEjj10CExoString, 0x00000000002c67d0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage27SendServerToPlayerChat_TellEjj10CExoString, 0x00000000002c6e10)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage27SendServerToPlayerPolymorphEP10CNWSPlayerjii, 0x00000000002d50e0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage27SendServerToPlayerQuickChatEjjt, 0x00000000002c6b40)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage27TestObjectUpdateDifferencesEP10CNWSPlayerP10CNWSObjectPP17CLastUpdateObjectPjS7_, 0x00000000002e1460)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage27TestPlayerUpdateDifferencesEP10CNWSPlayerP26CNWSPlayerLastUpdateObjectP17CLastUpdateObjectRt, 0x00000000002d9830)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage27UpdateLastUpdateActionQueueEP12CNWSCreatureP26CNWSPlayerLastUpdateObject, 0x00000000002bfcd0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage28HandlePlayerToServerCutsceneEP10CNWSPlayerh, 0x000000000035d2f0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage28SendServerToPlayerChat_PartyEjj10CExoString, 0x00000000002c6540)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage28SendServerToPlayerChat_ShoutEjj10CExoString, 0x00000000002c7170)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage28SendServerToPlayerCheatNastyEjj, 0x00000000002ceaa0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage28SendServerToPlayerLogin_FailEjj, 0x00000000002cb130)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage28SendServerToPlayerParty_ListEjiPjhj, 0x00000000002cc300)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage29ComputeLastUpdate_ActionQueueEP12CNWSCreatureP26CNWSPlayerLastUpdateObject, 0x00000000002bfd30)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage29ComputeLastUpdate_PlayerStateEP12CNWSCreature, 0x00000000002bffe0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage29SendServerToPlayerChat_StrRefEjjhj, 0x00000000002c61d0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage29SendServerToPlayerChatMessageEhj10CExoStringjRKS0_, 0x00000000002c7e90)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage29SendServerToPlayerDialogCloseEj, 0x00000000002c9c80)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage29SendServerToPlayerDialogEntryEjjj13CExoLocStringjh, 0x00000000002c98c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage29SendServerToPlayerMapPinAddedEP10CNWSPlayer6Vector10CExoStringj, 0x00000000002d1d70)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage29SendServerToPlayerModule_InfoEj, 0x00000000002cc210)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage29StoreValuesInLastUpdateObjectEP10CNWSPlayerP17CLastUpdateObjectP10CNWSObjectjj, 0x00000000002e08a0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage30AddAreaOfEffectObjectToMessageEP22CNWSAreaOfEffectObject, 0x00000000002bee60)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage30ComputeInventoryUpdateRequiredEP10CNWSPlayerjP22CNWSPlayerInventoryGUI, 0x00000000002beed0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage30HandlePlayerToServerPlayerListEP10CNWSPlayerh, 0x000000000035d3f0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage30SendServerToPlayerArea_SetNameEP10CNWSPlayerj, 0x00000000002c5960)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage30SendServerToPlayerArea_WeatherEP10CNWSPlayerhi, 0x00000000002c57f0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage30SendServerToPlayerBarterRejectEjhhj, 0x00000000002d2ff0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage30SendServerToPlayerCamera_StoreEP10CNWSPlayer, 0x00000000002c4720)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage30SendServerToPlayerChat_DM_TalkEjj10CExoString, 0x00000000002c68b0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage30SendServerToPlayerChat_WhisperEjj10CExoString, 0x00000000002c7890)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage30SendServerToPlayerParty_InviteEjj, 0x00000000002cc2f0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage30SendServerToPlayerUpdateSkyBoxEij, 0x00000000002cf820)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage30SendServerToServerAdminMessageEj10CExoString, 0x000000000036dd40)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage30SortObjectsForGameObjectUpdateEP10CNWSPlayerP10CNWSObjectP16CGameObjectArrayPi, 0x00000000002c1da0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage30UpdateLastUpdateVisibilityListEP12CNWSCreatureP26CNWSPlayerLastUpdateObject, 0x00000000002d8b70)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31AddPlaceableAppearanceToMessageEP13CNWSPlaceable, 0x00000000002be7b0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31ComputeAppearanceUpdateRequiredEP10CNWSObjectP17CLastUpdateObject, 0x00000000002beea0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31ComputeRepositoryUpdateRequiredEP10CNWSPlayerP18CExoLinkedListNodeS3_, 0x00000000002bef00)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31HandlePlayerToServerAreaMessageEP10CNWSPlayerh, 0x00000000003597b0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31HandlePlayerToServerChatMessageEP10CNWSPlayerh, 0x000000000034d700)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31HandlePlayerToServerGoldMessageEP10CNWSPlayerh, 0x00000000003533a0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31HandlePlayerToServerGuiQuickbarEP10CNWSPlayerh, 0x000000000035b5c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31HandlePlayerToServerPlayerDeathEP10CNWSPlayerh, 0x000000000035c5c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31SendServerToPlayerCheatPonyRideEjj, 0x00000000002ceb40)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31SendServerToPlayerDialogRepliesEjP13CExoLocStringPjjjjhiji, 0x00000000002c99a0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31SendServerToPlayerGameObjUpdateEP10CNWSPlayer, 0x00000000002e1ce0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31SendServerToPlayerGameObjUpdateEP10CNWSPlayerj, 0x00000000002e1840)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31SendServerToPlayerLevelUp_BeginEjP12CNWSCreature, 0x00000000002d1340)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31SendServerToPlayerLogin_ConfirmEj, 0x00000000002cb0f0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31SendServerToPlayerMapPinCreatedEP10CNWSPlayerj6Vector13CExoLocStringi, 0x00000000002d1eb0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31SendServerToPlayerMapPinEnabledEP10CNWSPlayerji, 0x00000000002d1cc0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31SendServerToPlayerPopUpGUIPanelEjiiii10CExoString, 0x00000000002d30c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31SendServerToPlayerStringMessageEjh10CExoString, 0x00000000002c8ab0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31UpdateLastUpdate_GuiEffectIconsEP12CNWSCreatureP13CExoArrayListIP17CEffectIconObjectEi, 0x00000000002d4540)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31WriteGameObjUpdate_PartyAIStateEP10CNWSPlayer, 0x00000000002de260)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31WriteGameObjUpdate_PlayerUpdateEP10CNWSPlayerP26CNWSPlayerLastUpdateObjectP17CLastUpdateObjectt, 0x00000000002d9c20)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage31WriteGameObjUpdate_UpdateObjectEP10CNWSPlayerP10CNWSObjectP17CLastUpdateObjectjj, 0x00000000002dbbf0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32AddActiveItemPropertiesToMessageEP8CNWSItemP12CNWSCreature, 0x00000000002be970)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32ComputeGameObjectUpdateForObjectEP10CNWSPlayerP10CNWSObjectP16CGameObjectArrayj, 0x00000000002e15a0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32ComputeLastUpdate_AssociateStateEP12CNWSCreature, 0x00000000002c0160)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32ComputeLastUpdate_GuiEffectIconsEP12CNWSCreatureP13CExoArrayListIP17CEffectIconObjectEi, 0x00000000002d44b0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32ComputeLastUpdate_GuiKnownSpellsEP12CNWSCreatureP26CNWSPlayerLastUpdateObject, 0x00000000002d5870)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32ComputeNumAutoMapUpdatesRequiredEP12CNWSCreatureP26CNWSPlayerLastUpdateObjectPj, 0x00000000002bfba0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32DeleteLastUpdateObjectsForObjectEP10CNWSPlayerj, 0x00000000002c2d00)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32HandlePlayerToServerCheatMessageEP10CNWSPlayerh, 0x000000000034dc70)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32HandlePlayerToServerInputMessageEP10CNWSPlayerh, 0x0000000000353580)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32HandlePlayerToServerLoginMessageEP10CNWSPlayerh, 0x0000000000358b00)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32HandlePlayerToServerStoreMessageEP10CNWSPlayerh, 0x0000000000352e10)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32HandleServerAdminToServerMessageEjPhj, 0x0000000000364dd0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerActivatePortalEj10CExoStringS0_S0_i, 0x00000000002d3fa0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerArea_DestroyedEP10CNWSPlayerj, 0x00000000002c5ae0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerBarterLockListEjjii, 0x00000000002d2e30)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerCamera_LockYawEP10CNWSPlayeri, 0x00000000002c4950)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerCamera_RestoreEP10CNWSPlayer, 0x00000000002c4740)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerCamera_SetModeEP10CNWSPlayerh, 0x00000000002c4680)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerCheatDebugModeEi, 0x00000000002ceca0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerDebugInfo_AreaEP10CNWSPlayerj, 0x00000000002d2b70)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerDebugInfo_DoorEP10CNWSPlayerj, 0x00000000002d2900)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerDebugInfo_ItemEP10CNWSPlayerj, 0x00000000002d2400)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerGuiTimingEventEP10CNWSPlayerihj, 0x00000000002d49f0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerInventory_DropEjji, 0x00000000002ca890)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerJournalUpdatedEP10CNWSPlayerii13CExoLocString, 0x00000000002d1240)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerModule_EndGameEjRK10CExoString, 0x00000000002c4bc0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerModule_LoadingEP10CNWSPlayer, 0x00000000002c4f20)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerPlayerList_AddEjP10CNWSPlayer, 0x00000000002e2740)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerPlayerList_AllEP10CNWSPlayer, 0x00000000002e1cf0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerResmanOverrideEjtRK7CResRefS2_, 0x00000000002d5660)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerSafeProjectileEP10CNWSPlayerjj6VectorS2_jhjhhh, 0x00000000002c8880)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerSetCustomTokenEjiRK10CExoString, 0x00000000002c5b80)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerShutDownServerEjj, 0x00000000002d4930)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerUpdateFogColorEjjj, 0x00000000002cf9a0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerUpdateItemNameEP10CNWSPlayerP8CNWSItem, 0x00000000002cf5c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32SendServerToPlayerVoiceChat_PlayEP10CNWSPlayerjh, 0x00000000002cfcf0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32TestPartyObjectUpdateDifferencesEP10CNWSPlayerP12CNWSCreaturePP22CLastUpdatePartyObjectPj, 0x00000000002c3aa0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32UpdateLastUpdateObjectAppearanceEP10CNWSObjectP17CLastUpdateObjectj, 0x00000000002cc8f0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage32WriteGameObjUpdate_WorkRemainingEP10CNWSObjectP8CNWSAreaii, 0x00000000002c2240)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33HandlePlayerToServerBarter_WindowEP10CNWSPlayer, 0x000000000035c480)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33HandlePlayerToServerDialogMessageEP10CNWSPlayerh, 0x0000000000350c10)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33HandlePlayerToServerMapPinMessageEP10CNWSPlayerh, 0x000000000035bdf0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33HandlePlayerToServerModuleMessageEP10CNWSPlayerh, 0x00000000003592c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToPlayerArea_ClientAreaEP10CNWSPlayerP8CNWSAreafffRK6Vectori, 0x00000000002c5100)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToPlayerChat_DM_WhisperEjj10CExoString, 0x00000000002c7c00)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToPlayerChat_ServerTellEj10CExoString, 0x00000000002c70a0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToPlayerCheatRainOfCowsEjj, 0x00000000002cebf0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToPlayerCutscene_StatusEP10CNWSPlayerii, 0x00000000002cff10)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToPlayerDestroyDeathGUIEj, 0x00000000002d49d0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToPlayerInventory_EquipEjjji, 0x00000000002ca9f0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToPlayerJournalAddQuestEP10CNWSPlayer10CExoStringijtijj13CExoLocStringS3_, 0x00000000002d0400)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToPlayerJournalAddWorldEP10CNWSPlayeri10CExoStringS2_jj, 0x00000000002d0740)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToPlayerSaveLoad_StatusEP10CNWSPlayerhj, 0x00000000002c4f40)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToPlayerUpdateFogAmountEhhj, 0x00000000002cfb40)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToPlayerWhirlwindAttackEP10CNWSPlayerP12CNWSCreature, 0x00000000002d51a0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToServerAdminBannedListEj, 0x000000000036e160)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToServerAdminModuleListEj, 0x000000000036ff70)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToServerAdminPlayerListEj, 0x000000000036e030)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToServerAdminPortalListEj, 0x000000000036e290)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33SendServerToServerAdminSaveStatusEjh, 0x000000000036fea0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33WriteGameObjUpdate_CharacterSheetEP10CNWSPlayerj, 0x00000000002d7c70)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33WriteGameObjUpdate_MajorGUIPanelsEP10CNWSPlayer, 0x00000000002dba50)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage33WriteGameObjUpdate_MinorGUIPanelsEP10CNWSPlayer, 0x00000000002d89c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34ComputeGameObjectUpdateForCategoryEjjP10CNWSPlayerP10CNWSObjectP16CGameObjectArrayP29CNWSPlayerLUOSortedObjectListi, 0x00000000002e16e0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34ComputeGameObjectUpdateForYourselfEP10CNWSPlayerP10CNWSObjectP16CGameObjectArrayj, 0x00000000002e16b0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34HandlePlayerToServerBarter_AddItemEP10CNWSPlayer, 0x000000000035bff0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34HandlePlayerToServerJournalMessageEP10CNWSPlayerh, 0x000000000035a8d0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34HandlePlayerToServerLevelUpMessageEP10CNWSPlayerh, 0x0000000000363c10)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34HandlePlayerToServerShutDownServerEP10CNWSPlayerh, 0x000000000035cfa0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34SendServerToPlayerAmbientMusicPlayEji, 0x00000000002d3a70)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34SendServerToPlayerCamera_LockPitchEP10CNWSPlayeri, 0x00000000002c4810)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34SendServerToPlayerCamera_SetHeightEP10CNWSPlayerf, 0x00000000002c4760)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34SendServerToPlayerCutscene_HideGuiEP10CNWSPlayeri, 0x00000000002d0170)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34SendServerToPlayerInventory_PickupEjji, 0x00000000002cae30)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34SendServerToPlayerQuickChatMessageEjt, 0x00000000002c6bf0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34SendServerToPlayerSoundObject_PlayEP10CNWSPlayerj, 0x00000000002c5ef0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34SendServerToPlayerSoundObject_StopEP10CNWSPlayerj, 0x00000000002c5f90)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34SendServerToPlayerUpdateItemHiddenEP10CNWSPlayerP8CNWSItem, 0x00000000002cf760)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage34StoreValuesInLastUpdatePartyObjectEP12CNWSCreatureP22CLastUpdatePartyObjectS1_j, 0x00000000002c40e0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35ComputeLastUpdate_GuiKnownSpellUsesEP12CNWSCreatureP26CNWSPlayerLastUpdateObject, 0x00000000002bfa10)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35DeleteLastUpdateObjectsInOtherAreasEP10CNWSPlayer, 0x00000000002c2a30)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35HandlePlayerToServerBarter_LockListEP10CNWSPlayer, 0x000000000035c340)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35HandlePlayerToServerBarter_MoveItemEP10CNWSPlayer, 0x000000000035c220)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35HandlePlayerToServerCharListMessageEP10CNWSPlayerh, 0x0000000000359150)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35HandlePlayerToServerMapPinChangePinEP10CNWSPlayer, 0x000000000035bb50)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerAIActionPlaySoundEjj10CExoString, 0x00000000002c5e10)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerArea_VisualEffectEP10CNWSPlayert6Vector, 0x00000000002c56f0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerBarterAcceptTradeEjjii, 0x00000000002d2f10)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerBarterCloseBarterEjji, 0x00000000002d2d50)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerBarterStartBarterEjjjj, 0x00000000002d2c70)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerChat_Silent_ShoutEjj10CExoString, 0x00000000002c7500)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerChatStrRefMessageEhjj, 0x00000000002c6290)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerCutscene_StopFadeEP10CNWSPlayer, 0x00000000002d0130)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerDebugInfo_TriggerEP10CNWSPlayerj, 0x00000000002d2560)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerDialogReplyChosenEjjj13CExoLocStringjhi, 0x00000000002c9b80)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerInventory_UnequipEjji, 0x00000000002caf90)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerJournalFullUpdateEP10CNWSPlayer, 0x00000000002d0c50)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerLogin_GetWaypointEj, 0x00000000002cb110)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerModule_DumpPlayerEP10CNWSPlayer, 0x00000000002c50e0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerModuleUpdate_TimeEP10CNWSPlayerhjjjjhj, 0x00000000002d1480)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToPlayerPlayerList_DeleteEjP10CNWSPlayer, 0x00000000002cc4d0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToServerAdminSaveGameListEj, 0x0000000000370c80)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35SendServerToServerAdminServerStatusEj, 0x000000000036de00)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35StoreValuesInLastPlayerUpdateObjectEP10CNWSPlayerP26CNWSPlayerLastUpdateObjectP17CLastUpdateObjectt, 0x00000000002d8cd0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage35WriteGameObjUpdate_UpdateAppearanceEP10CNWSObjectP17CLastUpdateObjectj, 0x00000000002d5a80)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage36ComputeLastUpdate_GuiMemorizedSpellsEP12CNWSCreatureP26CNWSPlayerLastUpdateObject, 0x00000000002d94c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage36HandlePlayerToServerGameObjectUpdateEP10CNWSPlayerh, 0x0000000000350d60)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage36HandlePlayerToServerInventoryMessageEP10CNWSPlayerh, 0x0000000000357ab0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage36HandlePlayerToServerQuickChatMessageEP10CNWSPlayerh, 0x000000000034d640)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage36SendServerToPlayerCombatRoundStartedEP10CNWSPlayer, 0x00000000002cf270)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage36SendServerToPlayerDebugInfo_CreatureEP10CNWSPlayerj, 0x00000000002d1fd0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage36SendServerToPlayerJournalDeleteWorldEP10CNWSPlayeri, 0x00000000002d0980)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage36SendServerToPlayerJournalRemoveQuestEP10CNWSPlayer10CExoString, 0x00000000002d0570)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage36SendServerToPlayerModule_ExportReplyEP10CNWSPlayer, 0x00000000002c4e90)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage36SendServerToPlayerOpenStoreInventoryEP10CNWSPlayerjh, 0x00000000002cb1d0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage36SendServerToPlayerSetCustomTokenListEj, 0x00000000002c5c70)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage36SendServerToPlayerUpdateCharResponseEP10CNWSPlayerh7CResRef, 0x00000000002e3420)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37ComputeGameObjectUpdateForYourselfTooEP10CNWSPlayerP10CNWSObjectP16CGameObjectArrayj, 0x00000000002e16c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37HandlePlayerToServerBarter_RemoveItemEP10CNWSPlayer, 0x000000000035c100)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37HandlePlayerToServerCharacterDownloadEP10CNWSPlayerh, 0x000000000035cf30)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37HandlePlayerToServerGroupInputMessageEP10CNWSPlayerh, 0x0000000000355d40)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37HandlePlayerToServerInputDriveControlEP10CNWSPlayer, 0x0000000000351ea0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37HandlePlayerToServerMapPinSetMapPinAtEP10CNWSPlayer, 0x000000000035b5e0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37HandlePlayerToServerPVPListOperationsEP10CNWSPlayerh, 0x000000000035c690)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37HandlePlayerToServerServerChatMessageEP10CNWSPlayerh, 0x000000000035a870)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37SendPlayerToServerGuiInventory_StatusEP10CNWSPlayerij, 0x00000000002cfe60)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37SendServerToPlayerArea_ChangeDayNightEP10CNWSPlayerif, 0x00000000002c58a0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37SendServerToPlayerCamera_LockDistanceEP10CNWSPlayeri, 0x00000000002c48b0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37SendServerToPlayerCloseStoreInventoryEP10CNWSPlayer, 0x00000000002c8b90)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37SendServerToPlayerDebugInfo_PlaceableEP10CNWSPlayerj, 0x00000000002d26a0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37SendServerToPlayerExamineGui_DoorDataEP10CNWSPlayerj, 0x00000000002c9680)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37SendServerToPlayerExamineGui_ItemDataEP10CNWSPlayerj, 0x00000000002d3460)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37SendServerToPlayerExamineGui_TrapDataEP10CNWSPlayerjP12CNWSCreaturei, 0x00000000002c8d40)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37SendServerToPlayerLogin_NeedCharacterEj, 0x00000000002c4b00)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37SendServerToPlayerPVP_Attitude_ChangeEjji, 0x00000000002d4340)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37SendServerToPlayerServerStatus_StatusEj, 0x00000000002cc6a0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage37SendServerToServerAdminServerSettingsEj, 0x000000000036e3c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38HandlePlayerToServerBarter_AcceptTradeEP10CNWSPlayer, 0x000000000035c3e0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38HandlePlayerToServerBarter_CloseBarterEP10CNWSPlayer, 0x000000000035bee0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38HandlePlayerToServerBarter_StartBarterEP10CNWSPlayer, 0x000000000035be40)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38SendServerPlayerItemUpdate_DestroyItemEP10CNWSPlayerj, 0x00000000002d0360)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38SendServerToPlayerAmbientMusicSetDelayEji, 0x00000000002d3b10)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38SendServerToPlayerAmbientSoundLoopPlayEji, 0x00000000002d3da0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38SendServerToPlayerChat_DM_Silent_ShoutEjj10CExoString, 0x00000000002c7970)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38SendServerToPlayerChatMultiLang_HelperEjhj13CExoLocStringjhiRK7CResRefij, 0x00000000002cc1c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38SendServerToPlayerChatMultiLangMessageEhj13CExoLocStringjhPjjiRK7CResRefij, 0x00000000002cbef0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38SendServerToPlayerCutscene_BlackScreenEP10CNWSPlayer, 0x00000000002d0150)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38SendServerToPlayerCutscene_FadeToBlackEP10CNWSPlayerf, 0x00000000002cffd0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38SendServerToPlayerInventory_DropCancelEjji, 0x00000000002ca940)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38SendServerToPlayerInventory_SelectPageEjh, 0x00000000002c43e0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38SendServerToPlayerLevelUp_ConfirmationEji, 0x00000000002d1310)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38SendServerToPlayerLogin_CharacterQueryEP10CNWSPlayerRhPiPhRj, 0x00000000002c49f0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38SendServerToPlayerModule_SetPauseStateEhi, 0x00000000002cb430)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage38SendServerToPlayerUpdateBlackoutEffectEP10CNWSPlayeri, 0x00000000002d4ac0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39ComputeLastUpdate_WriteSpellLikeAbilityEP12CNWSCreatureP26CNWSPlayerLastUpdateObject, 0x00000000002bf650)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39HandlePlayerToServerGuiContainerMessageEP10CNWSPlayerh, 0x0000000000351a90)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39HandlePlayerToServerGuiInventoryMessageEP10CNWSPlayerh, 0x00000000003518f0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39HandlePlayerToServerInputWalkToWaypointEP10CNWSPlayer, 0x00000000003521b0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39HandlePlayerToServerMapPinDestroyMapPinEP10CNWSPlayer, 0x000000000035b9a0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39HandlePlayerToServerServerStatusMessageEP10CNWSPlayerh, 0x000000000035a880)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39SendServerToPlayerCamera_ChangeLocationEP10CNWSPlayerifffi, 0x00000000002c4520)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39SendServerToPlayerCharacterDownloadFailEP10CNWSPlayer, 0x00000000002d41e0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39SendServerToPlayerDungeonMasterAreaListEj, 0x00000000002c9ca0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39SendServerToPlayerDungeonMasterAreaListEP10CNWSPlayer, 0x00000000002cbca0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39SendServerToPlayerGuiQuickbar_SetButtonEP10CNWSPlayerhi, 0x00000000002d16c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39SendServerToPlayerInventory_ConfirmDropEjji, 0x00000000002cace0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39SendServerToPlayerInventory_EquipCancelEjjji, 0x00000000002caab0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39SendServerToPlayerInventory_LearnScrollEjjh, 0x00000000002d47d0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39SendServerToPlayerInventory_SelectPanelEjh, 0x00000000002cad90)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39SendServerToPlayerJournalAddWorldStrrefEP10CNWSPlayerjjjj, 0x00000000002d0890)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39SendServerToPlayerJournalDeleteWorldAllEP10CNWSPlayer, 0x00000000002d0ae0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39SendServerToPlayerLoadBar_EndStallEventEjj, 0x00000000002c4de0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39SendServerToPlayerModule_SaveGameStatusEh, 0x00000000002c4b20)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39SendServerToPlayerWhirlwindAttackDamageEP10CNWSPlayerP12CNWSCreature, 0x00000000002d5340)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage39WriteGameObjUpdate_DungeonMasterAIStateEP10CNWSPlayer, 0x00000000002de490)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage40HandlePlayerToServerDungeonMasterMessageEP10CNWSPlayerhi, 0x000000000035d6a0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage40SendServerToPlayerAmbientBattleMusicPlayEji, 0x00000000002d3c60)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage40SendServerToPlayerAmbientSoundLoopChangeEjii, 0x00000000002d3e40)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage40SendServerToPlayerCharacterDownloadReplyEP10CNWSPlayer, 0x00000000002d40f0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage40SendServerToPlayerCutscene_FadeFromBlackEP10CNWSPlayerf, 0x00000000002d0080)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage40SendServerToPlayerGameObjUpdateVisEffectEP10CNWSPlayertjjhh6Vectorf, 0x00000000002cedc0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage40SendServerToPlayerInventory_PickupCancelEjji, 0x00000000002caee0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage40SendServerToPlayerJournalSetQuestPictureEP10CNWSPlayer10CExoStringi, 0x00000000002d0650)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage40WriteGameObjUpdate_WriteInventorySlotAddEP12CNWSCreatureP8CNWSItemj, 0x00000000002c1ac0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage41ComputeLastUpdate_CompareSpellLikeAbilityEP12CNWSCreatureP26CNWSPlayerLastUpdateObject, 0x00000000002bf5b0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage41ComputeQuickbarItemUseCountUpdateRequiredEP10CNWSObjectP17CLastUpdateObject, 0x00000000002d4b60)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage41HandlePlayerToServerCharacterSheetMessageEP10CNWSPlayerh, 0x0000000000351d60)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage41HandlePlayerToServerGuiQuickbar_SetButtonEP10CNWSPlayerhh, 0x000000000035ac90)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage41SendServerToPlayerAmbientMusicChangeTrackEjii, 0x00000000002d3bb0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage41SendServerToPlayerDungeonMasterObjectListEP10CNWSPlayerji, 0x00000000002d6c50)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage41SendServerToPlayerExamineGui_CreatureDataEP10CNWSPlayerj, 0x00000000002e2c20)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage41SendServerToPlayerGameObjUpdateFloatyTextEP10CNWSPlayerjj, 0x00000000002cf1c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage41SendServerToPlayerInventory_UnequipCancelEjji, 0x00000000002cb040)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage41SendServerToPlayerLoadBar_StartStallEventEj, 0x00000000002c4c90)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage41SendServerToPlayerPlaceableUpdate_UseableEP13CNWSPlaceable, 0x00000000002d54d0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage41SendServerToPlayerStoreConfirmTransactionEP10CNWSPlayeriji, 0x00000000002d1610)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage42ComputeLastUpdate_GuiNumberMemorizedSpellsEP12CNWSCreatureP26CNWSPlayerLastUpdateObject, 0x00000000002bfef0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage42HandlePlayerToServerInputAbortDriveControlEP10CNWSPlayer, 0x0000000000352090)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage42SendServerToPlayerAmbientBattleMusicChangeEji, 0x00000000002d3d00)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage42SendServerToPlayerAmbientSoundVolumeChangeEjii, 0x00000000002d3ef0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage42SendServerToPlayerExamineGui_PlaceableDataEP10CNWSPlayerj, 0x00000000002c8bb0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage42SendServerToPlayerGameObjUpdate_ObjControlEjj, 0x00000000002c9810)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage42SendServerToPlayerInventory_RepositoryMoveEjji, 0x00000000002cab80)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage42SendServerToPlayerJournalDeleteWorldStrrefEP10CNWSPlayerj, 0x00000000002d0a30)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage42SendServerToPlayerLoadBar_UpdateStallEventEjj, 0x00000000002c4d30)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage42SendServerToPlayerModule_EndStartNewModuleEi, 0x00000000002c5040)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage42SendServerToPlayerSoundObject_ChangeVolumeEP10CNWSPlayerji, 0x00000000002c6030)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage43HandlePlayerToServerPlayModuleCharacterListEP10CNWSPlayerh, 0x000000000035d280)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage43SendServerToPlayerDungeonMasterCreatorListsEP10CNWSPlayer, 0x00000000002c9fd0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage43SendServerToPlayerGuiContainerObject_StatusEP10CNWSPlayerji, 0x00000000002cfdb0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage43SendServerToPlayerPartyBar_PanelButtonFlashEjhi, 0x00000000002d4870)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage43WriteGameObjUpdate_MajorGUIPanels_InventoryEP10CNWSPlayerP22CNWSPlayerInventoryGUI, 0x00000000002d6850)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage43WriteGameObjUpdate_WriteInventorySlotDeleteEP12CNWSCreaturej, 0x00000000002c1b30)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage43WriteGameObjUpdate_WriteInventorySlotUpdateEjj, 0x00000000002c1b80)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage44HandlePlayerToServerGroupInputWalkToWaypointEP10CNWSPlayerP12CNWSCreaturejfffhiij, 0x00000000003528c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage44SendServerToPlayerJournalFullUpdateNotNeededEP10CNWSPlayeri, 0x00000000002d0b80)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage44SendServerToPlayerModule_StartStartNewModuleEv, 0x00000000002c5010)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage44SendServerToPlayerSoundObject_ChangePositionEP10CNWSPlayerj6Vector, 0x00000000002c60e0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage44SendServerToPlayerUpdateActiveItemPropertiesEP10CNWSPlayerP8CNWSItem, 0x00000000002cf420)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage45ComputeLastUpdate_StoreUpdateSpellLikeAbilityEP12CNWSCreatureP26CNWSPlayerLastUpdateObject, 0x00000000002bf860)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage45HandlePlayerToServerInputCancelGuiTimingEventEP10CNWSPlayer, 0x0000000000352140)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage45SendServerToPlayerParty_TransferObjectControlEjjj, 0x00000000002cc420)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage45SendServerToPlayerPlayerList_ReauthorizeCDKeyEjRK10CExoStringS2_, 0x00000000002cc590)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage45WriteGameObjUpdate_UpdateQuickbarItemUseCountEP10CNWSObjectP17CLastUpdateObject, 0x00000000002d4ce0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage46SendServerToPlayerArea_RecomputeStaticLightingEj, 0x00000000002cb750)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage46SendServerToPlayerDungeonMasterUpdatePartyListEj, 0x00000000002ca810)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage46SendServerToPlayerDungeonMasterUpdatePartyListEP10CNWSPlayer, 0x00000000002ca830)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage47SendServerToPlayerDungeonMasterSearchByIdResultEP10CNWSPlayerjij, 0x00000000002c9f10)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage48HandlePlayerToServerPlayModuleCharacterList_StopEP10CNWSPlayer, 0x000000000035d230)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage48SendServerToPlayerDungeonMastersDifficultyChangeEi, 0x00000000002cb600)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage48SendServerToPlayerDungeonMasterSearchByTagResultEP10CNWSPlayerRK10CExoStringij, 0x00000000002d7280)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage48SendServerToPlayerGUICharacterSheet_NotPermittedEjj, 0x00000000002d5040)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage48SendServerToPlayerInventory_RepositoryMoveCancelEjji, 0x00000000002cac30)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage48SendServerToPlayerUpdateActiveItemPropertiesUsesEP10CNWSPlayerjhhPh, 0x00000000002cf310)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage49HandlePlayerToServerPlayModuleCharacterList_StartEP10CNWSPlayer, 0x000000000035d100)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage49SendServerToPlayerPlayModuleCharacterListResponseEjji, 0x00000000002e2340)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage55SendServerToAllPlayersCreatureUpdate_StripEquippedItemsEjii, 0x00000000002d0210)
+NWNXLIB_FUNCTION(_ZN11CNWSMessage55WriteGameObjUpdate_MajorGUIPanels_HenchmanInventoryDataEP10CNWSPlayer, 0x00000000002c2ef0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessageC1Ev, 0x000000000034d610)
+NWNXLIB_FUNCTION(_ZN11CNWSMessageC2Ev, 0x000000000034d610)
+NWNXLIB_FUNCTION(_ZN11CNWSMessageD0Ev, 0x000000000034d5e0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessageD1Ev, 0x000000000034d5c0)
+NWNXLIB_FUNCTION(_ZN11CNWSMessageD2Ev, 0x000000000034d5c0)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger11LoadTriggerEP7CResGFFP10CResStruct, 0x00000000002eb1f0)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger11OnEnterTrapEi, 0x00000000002ed370)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger11SaveTriggerEP7CResGFFP10CResStruct, 0x00000000002ec600)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger12AsNWSTriggerEv, 0x00000000002eea90)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger12EventHandlerEjjPvjj, 0x00000000002ed8a0)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger12GetFirstNameEv, 0x00000000002e3f00)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger13GetScriptNameEi, 0x00000000002ed320)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger13GetTargetAreaEv, 0x00000000002ea830)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger14RemoveFromAreaEv, 0x00000000002ed640)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger16LoadFromTemplateE7CResRef, 0x00000000002edeb0)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger17CreateNewGeometryEf6VectorP8CNWSArea, 0x00000000002ecdd0)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger17CreateNewGeometryEfP15CScriptLocationP8CNWSArea, 0x00000000002ed000)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger17GetFacingPositionEv, 0x00000000002eabe0)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger18ComputeBoundingBoxEPfS0_S0_S0_, 0x00000000002eaaa0)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger21CalculateNearestPointE6VectorPS0_, 0x00000000002ea890)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger22GetCanFireTrapOnObjectEji, 0x00000000002ed350)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger27LineSegmentIntersectTriggerE6VectorS0_, 0x00000000002eacb0)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger28GetClosestPointWithinTriggerE6VectorPS0_, 0x00000000002eafc0)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger8AIUpdateEv, 0x00000000002ea300)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger9AddToAreaEP8CNWSAreafffi, 0x00000000002edc10)
+NWNXLIB_FUNCTION(_ZN11CNWSTrigger9InTriggerE6Vector, 0x00000000002eae10)
+NWNXLIB_FUNCTION(_ZN11CNWSTriggerC1Ej, 0x00000000002ea560)
+NWNXLIB_FUNCTION(_ZN11CNWSTriggerC2Ej, 0x00000000002ea560)
+NWNXLIB_FUNCTION(_ZN11CNWSTriggerD0Ev, 0x00000000002ed870)
+NWNXLIB_FUNCTION(_ZN11CNWSTriggerD1Ev, 0x00000000002ed720)
+NWNXLIB_FUNCTION(_ZN11CNWSTriggerD2Ev, 0x00000000002ed720)
+NWNXLIB_FUNCTION(_ZN11CNWTileData10GetMapIconEv, 0x00000000001c4b90)
+NWNXLIB_FUNCTION(_ZN11CNWTileData10SetMapIconE7CResRef, 0x00000000001c4bc0)
+NWNXLIB_FUNCTION(_ZN11CNWTileData11GetEdgeTypeEh, 0x00000000001c4ae0)
+NWNXLIB_FUNCTION(_ZN11CNWTileData11SetEdgeTypeEh10CExoString, 0x00000000001c4a70)
+NWNXLIB_FUNCTION(_ZN11CNWTileData13GetCornerTypeEh, 0x00000000001c49e0)
+NWNXLIB_FUNCTION(_ZN11CNWTileData13SetCornerTypeEh10CExoStringi, 0x00000000001c4890)
+NWNXLIB_FUNCTION(_ZN11CNWTileData14GetModelResRefEv, 0x00000000001c4810)
+NWNXLIB_FUNCTION(_ZN11CNWTileData14SetModelResRefE7CResRef, 0x00000000001c4840)
+NWNXLIB_FUNCTION(_ZN11CNWTileData23AddPropertyMethodStringEj10CExoString, 0x00000000001c4770)
+NWNXLIB_FUNCTION(_ZN11CNWTileData27GetPropertyMethodStringListEj, 0x00000000001c47f0)
+NWNXLIB_FUNCTION(_ZN11CNWTileDataC1Ev, 0x00000000001c4c10)
+NWNXLIB_FUNCTION(_ZN11CNWTileDataC2Ev, 0x00000000001c4c10)
+NWNXLIB_FUNCTION(_ZN11CNWTileDataD0Ev, 0x00000000001c4fd0)
+NWNXLIB_FUNCTION(_ZN11CNWTileDataD1Ev, 0x00000000001c4ea0)
+NWNXLIB_FUNCTION(_ZN11CNWTileDataD2Ev, 0x00000000001c4ea0)
+NWNXLIB_FUNCTION(_ZN11CServerInfo15FindOptionIndexE10CExoStringS0_, 0x00000000001b3d80)
+NWNXLIB_FUNCTION(_ZN11CServerInfo18SetDifficultyLevelEii, 0x00000000001b3e20)
+NWNXLIB_FUNCTION(_ZN11CServerInfoC1Ev, 0x00000000001b30e0)
+NWNXLIB_FUNCTION(_ZN11CServerInfoC2Ev, 0x00000000001b30e0)
+NWNXLIB_FUNCTION(_ZN11CTlkResFileC1ERK7CResRef, 0x000000000011f320)
+NWNXLIB_FUNCTION(_ZN11CTlkResFileC2ERK7CResRef, 0x000000000011f320)
+NWNXLIB_FUNCTION(_ZN11CTlkResFileD0Ev, 0x000000000011df40)
+NWNXLIB_FUNCTION(_ZN11CTlkResFileD1Ev, 0x000000000011ded0)
+NWNXLIB_FUNCTION(_ZN11CTlkResFileD2Ev, 0x000000000011ded0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer10ResetTimerEPS_, 0x00000000003be730)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer12GetWorldTimeEPjS0_, 0x00000000003be690)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer12SetWorldTimeEjji, 0x00000000003be480)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer12SetWorldTimeEjjjjjjji, 0x00000000003be520)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer13AddWorldTimesEjjjjPjS0_, 0x00000000003be790)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer13AdvanceToTimeEiiii, 0x00000000003bf050)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer15GetSnapshotTimeEv, 0x00000000003be2c0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer15GetWorldTimeDayEv, 0x00000000003bedc0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer15PauseWorldTimerEv, 0x00000000003be8f0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer15SetSnapshotTimeEv, 0x00000000003be260)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer16GetWorldTimeHourEv, 0x00000000003bee20)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer16GetWorldTimeYearEv, 0x00000000003becf0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer17CompareWorldTimesEjjjj, 0x00000000003be8b0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer17GetTimeDifferenceEjjjj, 0x00000000003be660)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer17GetWorldTimeMonthEv, 0x00000000003bed50)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer17SetMinutesPerHourEh, 0x00000000003be220)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer17UnpauseWorldTimerEv, 0x00000000003be950)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer18ConvertToTimeOfDayEjjjj, 0x00000000003be330)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer18GetWorldTimeMinuteEv, 0x00000000003bee80)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer18GetWorldTimeSecondEv, 0x00000000003beee0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer18SubtractWorldTimesEjjjjPjS0_, 0x00000000003be7d0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer20ConvertFromTimeOfDayEjPjS0_S0_S0_, 0x00000000003be410)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer20ConvertToCalendarDayEjjj, 0x00000000003be2e0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer20SetFixedSnapshotRateEii, 0x00000000003befa0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer21GetWorldTimeTimeOfDayEv, 0x00000000003beac0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer22ConvertFromCalendarDayEjPjS0_S0_, 0x00000000003be3a0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer23GetTimeOfDayFromSecondsEf, 0x00000000003beff0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer23GetWorldTimeCalendarDayEv, 0x00000000003be9a0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer23GetWorldTimeMillisecondEv, 0x00000000003bef40)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer25GetCalendarDayFromSecondsEf, 0x00000000003befc0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer25GetSnapshotTimeDifferenceEv, 0x00000000003be2d0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer26TranslateWorldTimeToStringEjjR10CExoStringS1_, 0x00000000003bebd0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer27GetWorldTimeTimeOfDayStringEv, 0x00000000003beb00)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer29GetWorldTimeCalendarDayStringEv, 0x00000000003be9e0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimer30GetTimeDifferenceFromWorldTimeEjj, 0x00000000003be830)
+NWNXLIB_FUNCTION(_ZN11CWorldTimerC1Ev, 0x00000000003be5f0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimerC2Ev, 0x00000000003be5f0)
+NWNXLIB_FUNCTION(_ZN11CWorldTimerD1Ev, 0x00000000003be210)
+NWNXLIB_FUNCTION(_ZN11CWorldTimerD2Ev, 0x00000000003be210)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable12DestroyTableEv, 0x0000000000124940)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable12RebuildTableEPh, 0x00000000001279c0)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable13AllocateTableEji, 0x00000000001245b0)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable13BuildNewTableEjRK10CExoStringjiPh, 0x0000000000127840)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable13GetEntryCountEi, 0x00000000001246c0)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable13GetKeysOfTypeEt, 0x0000000000124c30)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable13GetTableEntryEjR7CResRefRt, 0x0000000000124ec0)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable13GetTableIndexERjRK7CResReft, 0x0000000000124f40)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable13LocateBifFileERK10CExoString, 0x0000000000124870)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable15DeleteTableListEP14CExoLinkedListI13CKeyTableInfoE, 0x0000000000124ba0)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable19AddKeyTableContentsEi, 0x0000000000126540)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable19AddManifestContentsEi, 0x0000000000125640)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable20AddDirectoryContentsEi, 0x0000000000126330)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable21DropContentsFromCacheEv, 0x0000000000124790)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable21SetAllowDynamicReloadEi, 0x0000000000124740)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable23AddEncapsulatedContentsEi, 0x0000000000125ca0)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable24AddResourceImageContentsEiPh, 0x0000000000125320)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable30CheckForModificationsInStorageEv, 0x00000000001247d0)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable4HashERK7CResReft, 0x0000000000124ff0)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable6AddKeyERK7CResReft5RESIDi, 0x0000000000125080)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable6GetResERK7CResReft, 0x0000000000125a50)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable7FindKeyEP4CRes, 0x0000000000125a20)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable7FindKeyERK7CResReft, 0x0000000000125940)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTable8GetResIDERK7CResReft, 0x0000000000125a80)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTableC1Ev, 0x00000000001243a0)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTableC2Ev, 0x00000000001243a0)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTableD1Ev, 0x00000000001244c0)
+NWNXLIB_FUNCTION(_ZN12CExoKeyTableD2Ev, 0x00000000001244c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature10CancelRestEt, 0x00000000001e64e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature10CanUseItemEP8CNWSItemi, 0x0000000000206670)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature10GetFactionEv, 0x00000000001fdb20)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature10GetFlankedEPS_, 0x000000000021a790)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature10GetJournalEv, 0x00000000001d3be0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature10GetRunRateEv, 0x00000000001cf780)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature10GetUnarmedEv, 0x00000000001cac30)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature10RemoveGoldEii, 0x00000000001de630)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature10RemoveItemEP8CNWSItemiiii, 0x0000000000208d00)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature10RequestBuyEjjj, 0x00000000001de7c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature10RunUnequipEjjhhij, 0x00000000001dcd50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature10ToggleModeEh, 0x00000000001ea6d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11AcquireItemEPP8CNWSItemjjhhii, 0x0000000000208e00)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11AIActionSitEP20CNWSObjectActionNode, 0x00000000001fe170)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11BumpFriendsEPS_RK6VectorS3_, 0x00000000001e39d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11ClearActionEP20CNWSObjectActionNodei, 0x00000000001e66a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11GetActivityEi, 0x00000000001c8f50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11GetLastNameEv, 0x00000000001f7130)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11GetPortraitEv, 0x00000000001f71d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11GetUseRangeEjR6VectorRf, 0x00000000001e2680)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11GetWalkRateEv, 0x00000000001cf750)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11LearnScrollEj, 0x00000000001e7a30)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11PostProcessEv, 0x00000000001f3cc0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11RequestSellEjj, 0x00000000001de910)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11SetActivityEii, 0x00000000001c93f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11SetPortraitE7CResRef, 0x00000000001f7230)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11StartBarterEjji, 0x00000000001e2f40)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11UnequipItemEP8CNWSItemi, 0x00000000001dc2e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature11UnPolymorphEP11CGameEffect, 0x00000000001e0ce0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12AddAssociateEjt, 0x000000000020e9a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12AddToPVPListEj, 0x0000000000215b60)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12AIActionHealEP20CNWSObjectActionNode, 0x000000000020a240)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12AIActionRestEP20CNWSObjectActionNode, 0x0000000000208240)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12CancelActionEtt, 0x00000000001cf810)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12CanEquipItemEP8CNWSItemPjiiiP10CNWSPlayer, 0x00000000002061f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12DoCombatStepEhij, 0x0000000000219ed0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12EvaluateLockEP10CNWSObjecti, 0x00000000001db570)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12EventHandlerEjjPvjj, 0x00000000001eeaa0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12GetFirstNameEv, 0x00000000001f7110)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12GetInvisibleEP10CNWSObjecti, 0x00000000001e5240)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12GetIsInMeleeEv, 0x000000000021a860)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12GetItemCountEi, 0x00000000001d2d50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12LoadCreatureEP7CResGFFP10CResStructiiii, 0x00000000001f6660)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12SaveCreatureEP7CResGFFP10CResStructiiii, 0x00000000001ccde0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12SetAnimationEi, 0x00000000001c7ca0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12SetInTransitEi, 0x00000000001e0ca0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature12TransferGoldEj6Vectorjihh, 0x00000000001e3340)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13ActionManagerEj, 0x00000000001cb500)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13AddSitActionsEj, 0x00000000001ca860)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13AIActionDriveEP20CNWSObjectActionNode, 0x0000000000210060)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13AIActionTauntEP20CNWSObjectActionNode, 0x0000000000215df0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13ApplyWoundingEP11CGameEffect, 0x00000000001eb9a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13AsNWSCreatureEv, 0x00000000001f70c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13GetArmorClassEv, 0x00000000001d2e70)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13GetBarterInfoEi, 0x00000000001d3c40)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13GetDetectModeEv, 0x00000000001d3a90)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13GetFlatFootedEv, 0x000000000021a6f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13GetNumInvitedEv, 0x00000000002072c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13ResolveAttackEjii, 0x0000000000225c80)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13ResolveDamageEP10CNWSObject, 0x0000000000223c90)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13SetCombatModeEhi, 0x00000000001f8db0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13SetDetectModeEh, 0x00000000001f8c40)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13SetPortraitIdEt, 0x00000000001c8c60)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13UpdateAutoMapEj, 0x00000000001edd00)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature13UseLoreOnItemEj, 0x00000000001d4f90)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14AddDriveActionEtRK6Vectoriiii, 0x00000000001c99b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14AddHealActionsEjji, 0x00000000001db440)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14AddTrapActionsEjhj6Vectorj, 0x00000000001cb570)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14AIActionAppearEP20CNWSObjectActionNode, 0x00000000001fdf10)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14AIActionBarterEP20CNWSObjectActionNode, 0x00000000001f87f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14ApplyOnHitDazeEP10CNWSObjecti, 0x000000000021b520)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14ApplyOnHitDoomEP10CNWSObjecti, 0x000000000021bb60)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14ApplyOnHitFearEP10CNWSObjecti, 0x000000000021bfb0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14ApplyOnHitHoldEP10CNWSObjecti, 0x000000000021c1c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14ApplyOnHitSlowEP10CNWSObjecti, 0x000000000021cbd0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14ApplyOnHitStunEP10CNWSObjecti, 0x000000000021cdd0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14CanEquipShieldEP8CNWSItemii, 0x00000000001fb5d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14CanEquipWeaponEP8CNWSItemPjiiP10CNWSPlayer, 0x00000000001faab0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14ComputeAIStateEv, 0x00000000001cb430)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14DMClearScriptsEi, 0x00000000001ff890)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14GetAssociateIdEti, 0x0000000000200440)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14GetDamageFlagsEv, 0x00000000001d2fd0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14GetWeaponPowerEP10CNWSObjecti, 0x00000000001d5170)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14MaxAttackRangeEjii, 0x00000000001caee0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14PacifyCreatureEj, 0x00000000001e5100)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14PacifyCreatureEv, 0x00000000001e4ff0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14RemoveFromAreaEi, 0x00000000001d3ca0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14SetAutoMapDataEiPjPPh, 0x00000000001f5cd0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14SetCombatStateEi, 0x00000000001d10b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14SetStealthModeEh, 0x00000000001f8c70)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14SummonFamiliarEv, 0x000000000020f5a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature14UnsummonMyselfEv, 0x00000000001fecc0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15ActivityManagerEj, 0x00000000001c9680)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15AddTauntActionsEj, 0x00000000001de410)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15AIActionExamineEP20CNWSObjectActionNode, 0x00000000001f8ae0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15AIActionSetTrapEP20CNWSObjectActionNode, 0x000000000020d580)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15ApplyOnHitKnockEP10CNWSObjectj, 0x0000000000227700)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15ApplyOnHitSleepEP10CNWSObjecti, 0x000000000021c930)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15ClearActivitiesEi, 0x00000000001c8f70)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15CutWaypointPathEv, 0x00000000001e0bf0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15DoSpotDetectionEPS_i, 0x00000000001e1a90)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15GetDialogResrefEv, 0x00000000001f7170)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15GetIsInUseRangeEjfi, 0x00000000001e2b40)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15GetMaxHitPointsEi, 0x00000000001c7e20)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15GetNearestEnemyEfjii, 0x00000000001d1640)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15GetTileExploredEjii, 0x00000000001eda40)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15LoadAutoMapDataEP7CResGFFP10CResStruct, 0x00000000001f5e20)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15PossessCreatureEj, 0x00000000001ff7a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15PossessFamiliarEv, 0x00000000001fef20)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15RemoveAssociateEj, 0x000000000020cf40)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15SaveAutoMapDataEP7CResGFFP10CResStruct, 0x00000000001cc530)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15SavingThrowRollEhthjiti, 0x000000000021edf0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15SetExcitedStateEh, 0x00000000001d2270)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15SetTileExploredEjiii, 0x00000000001ed940)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15SummonAssociateE7CResRef10CExoStringt, 0x000000000020ed80)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature15UpdateTrapCheckEv, 0x00000000001f1aa0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16AddAppearActionsEi, 0x00000000001d20c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16AddAttackActionsEjiii, 0x00000000001def50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16AddToVisibleListEjiihi, 0x00000000001fdb50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16AdjustReputationEii, 0x0000000000202390)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16AIActionAreaWaitEP20CNWSObjectActionNode, 0x0000000000202160)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16AIActionDropItemEP20CNWSObjectActionNode, 0x0000000000209860)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16AIActionFlagTrapEP20CNWSObjectActionNode, 0x00000000001f77b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16ApplyOnHitPoisonEP10CNWSObjectP15CNWItemProperty, 0x000000000021d450)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16ApplyOnHitVorpalEP10CNWSObjectP15CNWItemProperty, 0x000000000021dba0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16CanUnEquipWeaponEP8CNWSItem, 0x00000000001fd910)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16CheckVisibleListEj, 0x00000000001fde80)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16ClearAutoMapDataEv, 0x00000000001f5600)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16ClearVisibleListEv, 0x00000000001fdcf0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16ForceMoveToPointEP16CNWSForcedAction, 0x00000000001d4d80)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16GetEffectSpellIdEv, 0x00000000001f7150)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16GetHenchmanIndexEj, 0x00000000001eb720)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16GetPVPReputationEj, 0x000000000020acb0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16LoadFromTemplateE7CResRefP10CExoString, 0x00000000001f6c50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16LoadQuickBarHackE10CExoString, 0x00000000001f6b70)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16LoadQuickButtonsEP7CResGFFP10CResStruct, 0x00000000001e98f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16ReadItemsFromGffEP7CResGFFP10CResStructii, 0x00000000001ec9d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16RemoveBadEffectsEv, 0x00000000001d2c00)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16RemoveDominationEv, 0x000000000020d1f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16ResetUpdateTimesEjj, 0x00000000001c7640)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16SaveQuickBarHackE10CExoString, 0x00000000001e41f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16SaveQuickButtonsEP7CResGFFP10CResStruct, 0x00000000001cc7d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16SetAssociateTypeEt, 0x00000000001ea580)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16SetEffectSpellIdEj, 0x00000000001f7160)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16StopGuiTimingBarEv, 0x00000000001e6470)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16TranslateAddressEjiiPiS0_, 0x00000000001cf7b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature16UpdateEffectPtrsEv, 0x00000000001c7670)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17AddUnequipActionsEP8CNWSItemjhhiij, 0x00000000001db030)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17AIActionCastSpellEP20CNWSObjectActionNode, 0x0000000000202470)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17AIActionDisappearEP20CNWSObjectActionNode, 0x00000000001fe040)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17AIActionEquipItemEP20CNWSObjectActionNode, 0x0000000000207650)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17ApplyOnHitDiseaseEP10CNWSObjectP15CNWItemProperty, 0x000000000021d210)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17ApplyOnHitSilenceEP10CNWSObjecti, 0x000000000021c730)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17ComputeSpellRangeE10CExoStringj, 0x00000000001c96e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17DoListenDetectionEPS_i, 0x00000000001e1300)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17GetQuickbarButtonEh, 0x00000000001ea550)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17InitialisePVPListEv, 0x0000000000215b90)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17LoadAssociateListEP7CResGFFP10CResStruct, 0x00000000001f6320)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17LoadPolymorphDataEP7CResGFFP10CResStructi, 0x00000000001cc180)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17PayToIdentifyItemEjj, 0x00000000001de700)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17PossessCreatureDMEjh, 0x00000000001ffe80)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17RemoveFromPVPListEj, 0x000000000020ae50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17ReplyToInvitationEij, 0x0000000000215a30)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17ResolveAmmunitionEj, 0x0000000000216ae0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17ResolveAttackRollEP10CNWSObject, 0x0000000000223110)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17ResolveInitiativeEv, 0x00000000001d1140)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17ResolveRangedMissEP10CNWSObject, 0x00000000002174a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17SaveAssociateListEP7CResGFFP10CResStructi, 0x00000000001cdb80)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17SetInvitedToPartyEi, 0x00000000001e6dd0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17SignalMeleeDamageEP10CNWSObjecti, 0x0000000000219180)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17StartGuiTimingBarEjh, 0x00000000001e63e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17StoreCutsceneVarsEv, 0x00000000001eb7e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17TestAIStateAsModeEi, 0x00000000001caf80)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17UnpossessCreatureEv, 0x00000000001ff7c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17UnpossessFamiliarEv, 0x00000000001ff290)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17UpdateActionQueueEv, 0x00000000001e48c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17UpdateTrapCheckDMEv, 0x00000000001caae0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature17UpdateVisibleListEv, 0x0000000000204fd0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18AddDropItemActionsEj6Vectori, 0x00000000001db330)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18AddToAssociateListEj, 0x000000000020e930)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18AIActionDisarmTrapEP20CNWSObjectActionNode, 0x000000000020c000)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18AIActionPickPocketEP20CNWSObjectActionNode, 0x00000000002149b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18AIActionPickUpItemEP20CNWSObjectActionNode, 0x00000000002091b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18AIActionRandomWalkEP20CNWSObjectActionNode, 0x00000000001fb9f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18ApplyOnHitDeafnessEP10CNWSObjecti, 0x000000000021b740)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18ApplyOnHitDominateEP10CNWSObjecti, 0x000000000021b940)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18ApplyOnHitWoundingEP10CNWSObjectP15CNWItemProperty, 0x000000000021daa0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18ApplyPoisonPayloadEP11CGameEffectjj, 0x00000000001e76b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18AutoCloseGUIPanelsEi, 0x00000000001e0540)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18BroadcastBattleCryEv, 0x00000000001d0dd0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18BroadcastSkillDataEP16CNWCCMessageData, 0x00000000001d0340)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18BroadcastSpellCastEjht, 0x00000000001f47a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18BroadcastVoiceChatEh, 0x00000000001d0f50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18CancelGoldTransferEj, 0x00000000001d34f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18CheckMasterIsValidEjj, 0x00000000001d4050)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18CheckProficienciesEP8CNWSItemj, 0x00000000001fb780)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18ComputeArmourClassEP8CNWSItemii, 0x00000000001dbb50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18DesiredAttackRangeEji, 0x00000000001cad80)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18DoStealthDetectionEPS_iPiS1_i, 0x00000000001e2090)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18GetAttackResultHitEP20CNWSCombatAttackData, 0x000000000021aef0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18InitializeQuickbarEv, 0x00000000001e8930)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18ReadScriptsFromGffEP7CResGFFP10CResStruct, 0x00000000001cb840)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18RemoveSleepEffectsEv, 0x00000000001d2a90)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18ResetItemPossessorEv, 0x0000000000205a10)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18ResolveDeathAttackEPS_, 0x000000000021e6a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18ResolveMeleeAttackEP10CNWSObjectii, 0x0000000000225ae0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18ResolveOnHitEffectEP10CNWSObjectii, 0x0000000000220fc0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18ResolveSneakAttackEPS_, 0x000000000021dd40)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18SendFeedbackStringE10CExoStringP10CNWSPlayer, 0x00000000001e0470)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18SignalRangedDamageEP10CNWSObjecti, 0x00000000002189a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature18WalkUpdateLocationEv, 0x00000000002114a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19AddCastSpellActionsEjiiii6Vectorjiiihiiih, 0x00000000001d9c30)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19AddDisappearActionsEii, 0x00000000001d2150)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19AddEquipItemActionsEP8CNWSItemjiij, 0x00000000001da900)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19AIActionExamineTrapEP20CNWSObjectActionNode, 0x00000000001f7fe0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19AIActionJumpToPointEP20CNWSObjectActionNode, 0x0000000000213740)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19AIActionMoveToPointEP20CNWSObjectActionNode, 0x0000000000211ab0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19AIActionRecoverTrapEP20CNWSObjectActionNode, 0x000000000020b1a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19AIActionUnequipItemEP20CNWSObjectActionNode, 0x00000000002021d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19ApplyDiseasePayloadEP11CGameEffectjj, 0x00000000001e6f40)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19ApplyOnHitBlindnessEP10CNWSObjecti, 0x000000000021b0f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19ApplyOnHitCastSpellEP10CNWSObjectP15CNWItemPropertyP8CNWSItem, 0x0000000000223700)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19ApplyOnHitConfusionEP10CNWSObjecti, 0x000000000021b300)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19BroadcastFloatyDataEP16CNWCCMessageData, 0x00000000001c87e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19DriveUpdateLocationEi, 0x000000000020fbe0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19GetCanSlayAlignmentEP10CNWSObjectP15CNWItemProperty, 0x000000000021ade0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19GetPVPPlayerLikesMeEj, 0x000000000020adf0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19GetTotalEffectBonusEhP10CNWSObjectiihhhhi, 0x00000000001d6390)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19GetTurnResistanceHDEv, 0x00000000001e3670)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19GetUseMonkAbilitiesEv, 0x00000000001cf430)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19RemoveAllAssociatesEv, 0x000000000020b0a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19ResolveOnHitVisualsEP10CNWSObject, 0x000000000021af10)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19ResolveRangedAttackEP10CNWSObjectii, 0x0000000000224790)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19RestoreCutsceneVarsEv, 0x00000000001eb800)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19SendFeedbackMessageEtP16CNWCCMessageDataP10CNWSPlayer, 0x00000000001d9b40)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19SetAllTilesExploredEji, 0x00000000001ee4d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19SetBroadcastedAOOToEi, 0x00000000001d05e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19SetPVPPlayerLikesMeEjii, 0x0000000000214040)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19UnpossessCreatureDMEv, 0x0000000000200400)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature19UpdatePersonalSpaceEv, 0x00000000001d35a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20AddMoveToPointActionEt6Vectorjjiffiiiiii, 0x00000000001c9b70)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20AddPickPocketActionsEj, 0x00000000001ca610)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20AddPickUpItemActionsEjjhh, 0x00000000001ca7a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20AIActionAttackObjectEP20CNWSObjectActionNode, 0x0000000000226080)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20AIActionCounterSpellEP20CNWSObjectActionNode, 0x00000000001fe600)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20AIActionJumpToObjectEP20CNWSObjectActionNode, 0x0000000000212f50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20AIActionOrientCameraEP20CNWSObjectActionNode, 0x00000000001fd870)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20ApplyDeathExperienceEv, 0x00000000001f36c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20ApplyOnHitLevelDrainEP10CNWSObjectP15CNWItemProperty, 0x000000000021d2d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20CalculateDamagePowerEP10CNWSObjecti, 0x00000000001d5620)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20CalculateSpellSaveDCEi, 0x00000000001e7f40)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20CleanInvitationListsEi, 0x0000000000206f80)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20DestroyEquippedItemsEv, 0x00000000001caaf0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20GetBodyBagAppearanceEv, 0x00000000001e43b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20GetIsWeaponEffectiveEji, 0x00000000001d4be0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20GetSpotCheckDistanceEv, 0x00000000001e3610)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20RealizeAssociateListEv, 0x00000000001f07c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20ReconcileAutoMapDataEv, 0x00000000001ed6b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20RemoveCounterspellerEj, 0x00000000001cac50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20ResolveDamageShieldsEPS_, 0x0000000000219b30)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20ResolveItemCastSpellEP10CNWSObject, 0x0000000000223a00)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature20UpdateSpecialAttacksEv, 0x00000000001e47f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21AIActionAnimalEmpathyEP20CNWSObjectActionNode, 0x0000000000205290)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21AIActionItemCastSpellEP20CNWSObjectActionNode, 0x0000000000201340)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21ApplyOnHitDeathAttackEP10CNWSObjecti, 0x000000000021c470)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21ApplyOnHitDispelMagicEP10CNWSObjectj, 0x00000000002273a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21ApplyOnHitDispelMagicEP10CNWSObjectP15CNWItemProperty, 0x000000000021d150)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21CanEquipMiscellaneousEP8CNWSItemPjii, 0x00000000001fb900)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21DMResetClearedScriptsEi, 0x00000000001fff10)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21ExternalResolveAttackEji, 0x0000000000227380)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21GetCreatureReputationEjii, 0x0000000000214540)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21GetFilteredEffectListEh, 0x00000000001ed0f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21GetIsCreatureBumpableEPS_, 0x00000000001e3750)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21GetMovementRateFactorEv, 0x00000000001cf550)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21GetRelativeWeaponSizeEP8CNWSItem, 0x00000000001d2d10)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21GetVisibleListElementEj, 0x00000000001fdec0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21RemoveFromVisibleListEj, 0x00000000001fddb0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21RemoveWoundingEffectsEv, 0x00000000001d2ca0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21ResolveSafeProjectileEji, 0x0000000000216970)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21RestoreItemPropertiesEv, 0x00000000001d15d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21SetMovementRateFactorEf, 0x00000000001ce1d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21SetPCDominatedScriptsEv, 0x0000000000200500)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature21SummonAnimalCompanionEv, 0x000000000020f0f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22AddAnimalEmpathyActionEj, 0x00000000001de2e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22AddCounterSpellActionsEj, 0x00000000001d1ed0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22AIActionRepositoryMoveEP20CNWSObjectActionNode, 0x00000000002077c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22ApplyOnHitLesserDispelEP10CNWSObjectj, 0x0000000000227960)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22ComputeAIStateOnActionEij, 0x00000000001caf90)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22CopyQuickButtonsFromDMEP10CNWSPlayer, 0x00000000001cddc0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22GetAmmunitionAvailableEi, 0x0000000000216c50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22GetDialogInterruptableEv, 0x00000000001f70e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22GetDominatedCreatureIdEv, 0x00000000002012c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22GetIsPossessedFamiliarEv, 0x0000000000201300)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22GetListenCheckDistanceEv, 0x00000000001e3640)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22GetNumAssociatesOfTypeEt, 0x0000000000200460)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22GetRangeWeaponEquippedEv, 0x00000000001cabf0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22RemoveDominationEffectEv, 0x0000000000200f60)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22ReprocessAssociateListEv, 0x000000000020ec80)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22ResolveElementalDamageEP10CNWSObject, 0x0000000000219ac0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22ResolveMeleeAnimationsEiiP10CNWSObjecti, 0x0000000000218ef0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22ResolvePostMeleeDamageEP10CNWSObject, 0x0000000000222180)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22SetQuickbarButton_ItemEhjij, 0x00000000001d4220)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22UpdateCombatRoundTimerEv, 0x00000000001caca0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22UpdateEncumbranceStateEi, 0x00000000002072e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature22UpdateSubareasOnMoveToE6VectorS0_iP13CExoArrayListIjEi, 0x000000000020f970)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23AddItemCastSpellActionsEjii6Vectorji, 0x00000000001c9cb0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23AddToInvitationsIgnoredEj, 0x0000000000215970)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23AddToInvitationsOfferedEj, 0x00000000002158b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23ApplyOnHitAbilityDamageEP10CNWSObjectP15CNWItemProperty, 0x000000000021cff0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23ApplyOnHitGreaterDispelEP10CNWSObjectj, 0x0000000000227550)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23ApplyOnHitSlayAlignmentEP10CNWSObjectP15CNWItemProperty, 0x000000000021d640)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23ClearPersonalReputationEj, 0x0000000000213d90)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23DisplayFloatyDataToSelfEj, 0x00000000001e6e20)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23EquipMostEffectiveArmorEv, 0x00000000001dadb0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23ReceiveAssociateCommandEi, 0x0000000000201010)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23RemoveFromAssociateListEj, 0x000000000020cef0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23ResetPCDominatedScriptsEv, 0x0000000000200ab0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23ResolveDefensiveEffectsEP10CNWSObjecti, 0x00000000002203b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23ResolvePostRangedDamageEP10CNWSObject, 0x0000000000222b90)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23ResolveRangedAnimationsEP10CNWSObjecti, 0x000000000021a950)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23SawTrapInformAssociatesEj, 0x000000000020e7d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23SetDefensiveCastingModeEh, 0x00000000001f8d50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23SetQuickbarButton_SpellEhhjhh, 0x00000000001d4260)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23TerminateClientSidePathEi, 0x00000000001fbed0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature23UpdateExcitedStateTimerEv, 0x00000000001d2580)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature24AddRepositoryMoveActionsEP8CNWSItemjhh, 0x00000000001ca560)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature24AIActionCheckMoveToPointEP20CNWSObjectActionNode, 0x00000000001fa4f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature24BroadcastSavingThrowDataEP16CNWCCMessageData, 0x00000000001d04a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature24BroadcastWhirlwindAttackEi, 0x00000000001eb820)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature24CalculateDeathExperienceEii, 0x00000000001ce000)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature24CheckUseMagicDeviceSkillEP8CNWSItemi, 0x0000000000205b00)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature24ComputeTotalWalkDistanceEv, 0x00000000001fc780)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature24DecrementSpellReadyCountEjhhhh, 0x00000000001d5110)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature24RemoveItemFromRepositoryEP8CNWSItemi, 0x00000000001e8860)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature24UpdateAttributesOnEffectEP11CGameEffecti, 0x00000000001e07f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature24ValidateCounterSpellDataEjhh, 0x00000000001d0ce0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25AIActionChangeFacingPointEP20CNWSObjectActionNode, 0x00000000001f9440)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25AIActionCheckMoveToObjectEP20CNWSObjectActionNode, 0x00000000001f9dc0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25AIActionForceFollowObjectEP20CNWSObjectActionNode, 0x00000000001fd4d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25AIActionWaitForEndOfRoundEP20CNWSObjectActionNode, 0x00000000001fdaa0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25ApplyOnHitSlayRacialGroupEP10CNWSObjectP15CNWItemProperty, 0x000000000021d930)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25BroadcastAssociateCommandEi, 0x00000000001d1470)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25BroadcastDeathDataToPartyEP16CNWCCMessageDataPS_, 0x00000000001cfff0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25CheckItemRaceRestrictionsEP8CNWSItem, 0x0000000000205df0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25ClearHostileActionsVersusEPS_, 0x00000000001e4fd0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25ComputeTotalWeightCarriedEv, 0x00000000001cab60)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25CreateDefaultQuickButtonsEv, 0x00000000001e8ab0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25GetIsInInvitationsIgnoredEj, 0x0000000000206d00)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25GetIsInInvitationsOfferedEj, 0x0000000000206aa0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25HandleSubAreaStateChangesEP13CExoArrayListIjES2_i, 0x00000000001fbf50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25QuickbarButton_RemoveItemEj, 0x00000000001d49f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature25ResolveMeleeSpecialAttackEiiP10CNWSObjecti, 0x0000000000224980)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26AIActionChangeFacingObjectEP20CNWSObjectActionNode, 0x00000000001f92c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26BroadcastAttackDataToPartyEP16CNWCCMessageDataP20CNWSCombatAttackDataPS_, 0x00000000001cfa00)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26BroadcastDamageDataToPartyEP16CNWCCMessageDataPS_, 0x00000000001cfd30)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26CheckInventoryForPlotItemsEv, 0x00000000001e4520)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26CheckItemClassRestrictionsEP8CNWSItem, 0x0000000000205cf0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26ComputeTotalEquippedWeightEv, 0x00000000001cab90)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26FailedOpenInformAssociatesEv, 0x000000000020ad80)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26GetIsAbleToPossessFamiliarEv, 0x00000000001d34d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26GetLockOrientationToObjectEv, 0x00000000001f70d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26GetSpellOrHealActionQueuedEv, 0x00000000001ebcc0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26LoadPersonalReputationListEP7CResGFFP10CResStruct, 0x00000000001f6010)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26QuickbarButton_RemoveSpellEj, 0x00000000001d4ad0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26RemoveSpellActionFromRoundEv, 0x00000000001e4db0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26ResolveRangedSpecialAttackEP10CNWSObjecti, 0x00000000002241e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26SavePersonalReputationListEP7CResGFFP10CResStruct, 0x00000000001cbf70)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26SetAssociateListenPatternsEv, 0x00000000001fe980)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26SetLockOrientationToObjectEj, 0x00000000001c8ad0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26SpawnInHeartbeatPerceptionEi, 0x00000000001edd20)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature26WalkUpdateLocationDistanceEfP6VectorS1_P13CExoArrayListIjE, 0x00000000001fcc10)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature27AddMoveToPointActionToFrontEt6Vectorjjiffiiiiii, 0x00000000001c9870)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature27AddToPersonalReputationListEjiif, 0x0000000000215cb0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature27AddUseTalentOnObjectActionsEiijhjihh, 0x00000000001eb520)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature27ApplyOnHitMordysDisjunctionEP10CNWSObjectj, 0x0000000000227b10)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature27BringAssociatesToNewFactionEi, 0x0000000000206ec0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature27BroadcastCombatStateToPartyEv, 0x00000000001d23e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature27CalculateMaxElementalDamageEP10CNWSObjecti, 0x0000000000219ae0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature27ComputeModifiedMovementRateEv, 0x00000000001e3ef0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature27CreateDefaultQuickButtonsDMEv, 0x00000000001cdd50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature27EquipMostDamagingAmmunitionEjP8CNWSItem, 0x00000000001ddad0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature27NotifyAssociateActionToggleEi, 0x00000000001ea5b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature27ProcessPendingCombatActionsEv, 0x00000000001e6230)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature27ResolveCachedSpecialAttacksEv, 0x0000000000219780)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature27ResolveSituationalModifiersEP10CNWSObject, 0x00000000002198c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature28ApplyOnHitSlayAlignmentGroupEP10CNWSObjectP15CNWItemProperty, 0x000000000021d7b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature28BroadcastAttackOfOpportunityEji, 0x00000000001ebe50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature28ConvertModeToggleQuickButtonEP18CNWSQuickbarButton, 0x00000000001cc650)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature28DoPerceptionUpdateOnCreatureEPS_i, 0x00000000001e5650)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature28EquipMostDamagingMeleeWeaponEjii, 0x00000000001dd4b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature28GetStandardFactionReputationEi, 0x000000000020aef0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature28RemoveCharmEffectsByOBJECTIDEji, 0x00000000001d25b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature28RemoveFromInvitationsOfferedEj, 0x0000000000206c60)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature28SetStandardFactionReputationEii, 0x0000000000214170)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature28UpdateSubareasOnJumpPositionE6Vectorj, 0x0000000000212d30)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature29AddUseTalentAtLocationActionsEii6Vectorhjihh, 0x00000000001eb400)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature29EquipMostDamagingRangedWeaponEj, 0x00000000001dded0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature29RemoveCharmEffectsByFactionIDEii, 0x00000000001d2840)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature29SetQuickbarButton_CommandLineEhRK10CExoStringS2_, 0x00000000001d4890)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature29UpdateAppearanceDependantInfoEv, 0x00000000001d37b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature30AIActionCheckForceFollowObjectEP20CNWSObjectActionNode, 0x00000000001fd760)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature30AIActionCheckMoveToPointRadiusEP20CNWSObjectActionNode, 0x00000000001fa760)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature30ApplyOnHitVampiricRegenerationEP10CNWSObjectP15CNWItemProperty, 0x000000000021dc50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature30CheckItemAlignmentRestrictionsEP8CNWSItem, 0x0000000000205ec0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature30CleanOutPersonalReputationListEv, 0x0000000000214800)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature30GetHasInvisbilityEffectAppliedEv, 0x00000000001ebdb0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature30GetNumCounterSpellingCreaturesEj, 0x00000000001d0610)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature30RecomputeAmbientAnimationStateEv, 0x00000000001d13e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature30WalkUpdateLocationTestDistanceE6VectorS0_, 0x00000000001fc8b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature31AddPathfindingWaitActionToFrontEt, 0x00000000001c9ab0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature31AIActionCheckMoveAwayFromObjectEP20CNWSObjectActionNode, 0x00000000001f9520)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature31AIActionCheckMoveToObjectRadiusEP20CNWSObjectActionNode, 0x00000000001fa040)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature31CalculateProjectileTimeToTargetE6Vectori, 0x000000000021a8b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature31ProcessMasterDeathForAssociatesEv, 0x000000000020d270)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature31RemoveCombatInvisibilityEffectsEv, 0x00000000001e22e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature31SetAssociatesToForgetAggressionEj, 0x0000000000213e60)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature32RestorePolymorphToOutputCreatureEP27CNWSCreRestorePolymorphData, 0x00000000001ec860)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature32SetQuickbarButton_GeneralNoParamEhh, 0x00000000001d4980)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature32UpdateAppearanceForEquippedItemsEv, 0x00000000001d3030)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature33AIActionCheckInterAreaPathfindingEP20CNWSObjectActionNode, 0x00000000001f9af0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature33AIActionCheckMoveAwayFromLocationEP20CNWSObjectActionNode, 0x00000000001f98a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature33CreateDefaultQuickButtons_AddFeatERhti, 0x00000000001cc7b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature33RelayQuickChatCommandToAssociatesEt, 0x0000000000201220)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature33RemovePolymorphFromOutputCreatureEv, 0x00000000001ec570)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature33RestoreItemPropertiesInRepositoryEP15CItemRepository, 0x00000000001d14f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature33SetQuickbarButton_GeneralINTParamEhhi, 0x00000000001d49b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature34SetQuickbarButton_AssociateCommandEhitj, 0x00000000001d4300)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature34SetQuickbarButton_SpellLikeAbilityEhjh, 0x00000000001d42c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature35CreateDefaultQuickButtons_CheckItemEP8CNWSItemRjS2_S2_S2_, 0x00000000001cc700)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature36AIActionEncounterCreatureDestroySelfEv, 0x00000000001fa9c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature37CalculatePersonalReputationAdjustmentEj, 0x00000000002142c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature40SetQuickbarButton_DM_General_ResRefParamEhhRK7CResRef, 0x00000000001d4910)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature42SetQuickbarButton_DungeonMaster_CreateItemEhRK7CResRefRK10CExoString, 0x00000000001d4410)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature44SetQuickbarButton_DungeonMaster_CreatePortalEhRK7CResRefRK10CExoString, 0x00000000001d4710)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature45SetQuickbarButton_DungeonMaster_CreateTriggerEhRK7CResRefRK10CExoString, 0x00000000001d4650)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature46SetQuickbarButton_DungeonMaster_CreateCreatureEhRK7CResRefRK10CExoString, 0x00000000001d4350)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature46SetQuickbarButton_DungeonMaster_CreateWaypointEhRK7CResRefRK10CExoString, 0x00000000001d4590)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature47SetQuickbarButton_DungeonMaster_CreateEncounterEhRK7CResRefRK10CExoString, 0x00000000001d44d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature47SetQuickbarButton_DungeonMaster_CreatePlaceableEhRK7CResRefRK10CExoString, 0x00000000001d47d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature4RestEii, 0x00000000001deb80)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature5SetIdEj, 0x00000000001c7c50)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature7AddGoldEii, 0x00000000001de520)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature7GetModeEh, 0x00000000001d3ae0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature7SetGoldEi, 0x00000000001d50f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature7SetModeEhi, 0x00000000001eab40)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature7UseFeatEttjjP6Vector, 0x00000000001df420)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature7UseItemEjhhj6Vectorj, 0x00000000001eb140)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature8AIUpdateEv, 0x00000000001f2f60)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature8DoDamageEi, 0x00000000001c85c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature8GetBlindEv, 0x00000000001e12c0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature8RunEquipEjjj, 0x00000000001dc5b0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature8UseSkillEhhj6Vectorjji, 0x00000000001eab90)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature9AddToAreaEP8CNWSAreafffi, 0x00000000001ee5d0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature9DumpToLogEv, 0x00000000001e7970)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature9EquipItemEjP8CNWSItemii, 0x00000000001dc3f0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature9GetGenderEv, 0x00000000001f75a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature9MergeItemEP8CNWSItemS1_, 0x00000000001dabf0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature9PolymorphEiP11CGameEffecti, 0x00000000001f0a70)
+NWNXLIB_FUNCTION(_ZN12CNWSCreature9SplitItemEP8CNWSItemi, 0x00000000001ca970)
+NWNXLIB_FUNCTION(_ZN12CNWSCreatureC1Ejii, 0x00000000001ce2e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreatureC2Ejii, 0x00000000001ce2e0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreatureD0Ev, 0x00000000001f5ca0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreatureD1Ev, 0x00000000001f56a0)
+NWNXLIB_FUNCTION(_ZN12CNWSCreatureD2Ev, 0x00000000001f56a0)
+NWNXLIB_FUNCTION(_ZN12CNWSSysAdmin13AsNWSSysAdminEv, 0x00000000003728c0)
+NWNXLIB_FUNCTION(_ZN12CNWSSysAdminC1Ej, 0x0000000000372890)
+NWNXLIB_FUNCTION(_ZN12CNWSSysAdminC2Ej, 0x0000000000372890)
+NWNXLIB_FUNCTION(_ZN12CNWSSysAdminD0Ev, 0x0000000000372860)
+NWNXLIB_FUNCTION(_ZN12CNWSSysAdminD1Ev, 0x0000000000372840)
+NWNXLIB_FUNCTION(_ZN12CNWSSysAdminD2Ev, 0x0000000000372840)
+NWNXLIB_FUNCTION(_ZN12CNWSWaypoint12EventHandlerEjjPvjj, 0x0000000000374940)
+NWNXLIB_FUNCTION(_ZN12CNWSWaypoint12GetFirstNameEv, 0x0000000000374b20)
+NWNXLIB_FUNCTION(_ZN12CNWSWaypoint12LoadWaypointEP7CResGFFP10CResStructP10CExoString, 0x0000000000373fe0)
+NWNXLIB_FUNCTION(_ZN12CNWSWaypoint12SaveWaypointEP7CResGFFP10CResStruct, 0x0000000000374500)
+NWNXLIB_FUNCTION(_ZN12CNWSWaypoint13AsNWSWaypointEv, 0x0000000000374b10)
+NWNXLIB_FUNCTION(_ZN12CNWSWaypoint14RemoveFromAreaEv, 0x0000000000374700)
+NWNXLIB_FUNCTION(_ZN12CNWSWaypoint16LoadFromTemplateE7CResRefP10CExoString, 0x0000000000374980)
+NWNXLIB_FUNCTION(_ZN12CNWSWaypoint8AIUpdateEv, 0x0000000000373f30)
+NWNXLIB_FUNCTION(_ZN12CNWSWaypoint9AddToAreaEP8CNWSAreafffi, 0x0000000000374860)
+NWNXLIB_FUNCTION(_ZN12CNWSWaypointC1Ej, 0x0000000000373f40)
+NWNXLIB_FUNCTION(_ZN12CNWSWaypointC2Ej, 0x0000000000373f40)
+NWNXLIB_FUNCTION(_ZN12CNWSWaypointD0Ev, 0x0000000000374830)
+NWNXLIB_FUNCTION(_ZN12CNWSWaypointD1Ev, 0x0000000000374760)
+NWNXLIB_FUNCTION(_ZN12CNWSWaypointD2Ev, 0x0000000000374760)
+NWNXLIB_FUNCTION(_ZN12CScriptEvent10GetIntegerEi, 0x00000000002bd310)
+NWNXLIB_FUNCTION(_ZN12CScriptEvent10SetIntegerEii, 0x00000000002bd790)
+NWNXLIB_FUNCTION(_ZN12CScriptEvent11GetObjectIDEi, 0x00000000002bd350)
+NWNXLIB_FUNCTION(_ZN12CScriptEvent11SetObjectIDEij, 0x00000000002bd950)
+NWNXLIB_FUNCTION(_ZN12CScriptEvent15CopyScriptEventEPS_, 0x00000000002bd990)
+NWNXLIB_FUNCTION(_ZN12CScriptEvent8GetFloatEi, 0x00000000002bd330)
+NWNXLIB_FUNCTION(_ZN12CScriptEvent8SetFloatEif, 0x00000000002bd7d0)
+NWNXLIB_FUNCTION(_ZN12CScriptEvent9GetStringEi, 0x00000000002bd370)
+NWNXLIB_FUNCTION(_ZN12CScriptEvent9LoadEventEP7CResGFFP10CResStruct, 0x00000000002bdaa0)
+NWNXLIB_FUNCTION(_ZN12CScriptEvent9SaveEventEP7CResGFFP10CResStruct, 0x00000000002bd3c0)
+NWNXLIB_FUNCTION(_ZN12CScriptEvent9SetStringEi10CExoString, 0x00000000002bd810)
+NWNXLIB_FUNCTION(_ZN12CScriptEventC1Ev, 0x00000000002bd2b0)
+NWNXLIB_FUNCTION(_ZN12CScriptEventC2Ev, 0x00000000002bd2b0)
+NWNXLIB_FUNCTION(_ZN12CScriptEventD1Ev, 0x00000000002bd860)
+NWNXLIB_FUNCTION(_ZN12CScriptEventD2Ev, 0x00000000002bd860)
+NWNXLIB_FUNCTION(_ZN13CCallbackImplILi12EE20GetCallbackSizeBytesEv, 0x0000000000140530)
+NWNXLIB_FUNCTION(_ZN13CCallbackImplILi12EE3RunEPvby, 0x0000000000140910)
+NWNXLIB_FUNCTION(_ZN13CCallbackImplILi16EE20GetCallbackSizeBytesEv, 0x0000000000140400)
+NWNXLIB_FUNCTION(_ZN13CCallbackImplILi16EE3RunEPvby, 0x0000000000140850)
+NWNXLIB_FUNCTION(_ZN13CCallbackImplILi20EE20GetCallbackSizeBytesEv, 0x0000000000140380)
+NWNXLIB_FUNCTION(_ZN13CCallbackImplILi20EE3RunEPvby, 0x0000000000140370)
+NWNXLIB_FUNCTION(_ZN13CCallbackImplILi264EE20GetCallbackSizeBytesEv, 0x00000000001403c0)
+NWNXLIB_FUNCTION(_ZN13CCallbackImplILi264EE3RunEPvby, 0x0000000000140810)
+NWNXLIB_FUNCTION(_ZN13CCallbackImplILi28EE20GetCallbackSizeBytesEv, 0x0000000000140440)
+NWNXLIB_FUNCTION(_ZN13CCallbackImplILi28EE3RunEPvby, 0x0000000000140890)
+NWNXLIB_FUNCTION(_ZN13CCallbackImplILi4EE20GetCallbackSizeBytesEv, 0x00000000001404c0)
+NWNXLIB_FUNCTION(_ZN13CCallbackImplILi4EE3RunEPvby, 0x00000000001407d0)
+NWNXLIB_FUNCTION(_ZN13CCallbackImplILi8EE20GetCallbackSizeBytesEv, 0x0000000000140480)
+NWNXLIB_FUNCTION(_ZN13CCallbackImplILi8EE3RunEPvby, 0x00000000001408d0)
+NWNXLIB_FUNCTION(_ZN13CExoAliasList3AddE10CExoStringS0_, 0x0000000000106530)
+NWNXLIB_FUNCTION(_ZN13CExoAliasList5ClearEv, 0x00000000001065e0)
+NWNXLIB_FUNCTION(_ZN13CExoAliasList6DeleteE10CExoString, 0x00000000001065f0)
+NWNXLIB_FUNCTION(_ZN13CExoAliasListC1Ev, 0x00000000001064b0)
+NWNXLIB_FUNCTION(_ZN13CExoAliasListC2Ev, 0x00000000001064b0)
+NWNXLIB_FUNCTION(_ZN13CExoAliasListD1Ev, 0x00000000001064f0)
+NWNXLIB_FUNCTION(_ZN13CExoAliasListD2Ev, 0x00000000001064f0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI10CExoStringE3AddES0_, 0x0000000000105010)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI10CExoStringE6InsertES0_i, 0x0000000000105060)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI10CExoStringE6RemoveES0_, 0x000000000030d720)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI10CExoStringE7SetSizeEi, 0x00000000002be060)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI10CExoStringE8AllocateEi, 0x00000000000da6b0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI10CExoStringE9AddUniqueES0_, 0x00000000000da830)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI10CExoStringED1Ev, 0x00000000000da580)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI10CExoStringED2Ev, 0x00000000000da580)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI12CNWSPVPEntryE3AddES0_, 0x0000000000216840)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI13CNWSScriptVarE8AllocateEi, 0x00000000002f4570)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI13SJournalEntryE3AddES0_, 0x000000000027f320)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI13SJournalEntryE8AllocateEi, 0x000000000027f090)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI15ChangeContainerE9AddUniqueES0_, 0x00000000002e4450)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI15CNWItemPropertyE3AddES0_, 0x000000000027d270)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI15CNWItemPropertyE7SetSizeEi, 0x000000000027d1c0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI15CNWItemPropertyE8AllocateEi, 0x000000000027cf70)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI15CNWItemPropertyE8DelIndexEi, 0x000000000027ce90)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI15CNWItemPropertyEaSERKS1_, 0x000000000027d330)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI15CNWItemPropertyED1Ev, 0x000000000027ce10)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI15CNWItemPropertyED2Ev, 0x000000000027ce10)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI18CWorldJournalEntryE3AddES0_, 0x000000000028f240)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI18CWorldJournalEntryE8AllocateEi, 0x000000000028f020)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI18CWorldJournalEntryE8DelIndexEi, 0x000000000028ef70)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI18CWorldJournalEntryED1Ev, 0x000000000028ed00)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI18CWorldJournalEntryED2Ev, 0x000000000028ed00)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI19MaterialShaderParamE3AddES0_, 0x00000000002a1210)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI19MaterialShaderParamE8AllocateEi, 0x00000000002a1060)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI21CNWSInvitationDetailsE3AddES0_, 0x0000000000216740)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI22CNWSPersonalReputationE3AddES0_, 0x00000000002bd240)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI22CNWSPersonalReputationE8AllocateEi, 0x00000000001f74a0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI22CNWSPersonalReputationE8DelIndexEi, 0x0000000000216600)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI24CNetLayerPlayerCDKeyInfoE8AllocateEi, 0x000000000013adf0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI24CNetLayerPlayerCDKeyInfoED1Ev, 0x000000000013acb0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI24CNetLayerPlayerCDKeyInfoED2Ev, 0x000000000013acb0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI29CNWSPlayerJournalQuestUpdatesE3AddES0_, 0x000000000027f030)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI29CNWSPlayerJournalQuestUpdatesE8AllocateEi, 0x000000000027ee80)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI29CNWSPlayerJournalQuestUpdatesED1Ev, 0x00000000002b9d00)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI29CNWSPlayerJournalQuestUpdatesED2Ev, 0x00000000002b9d00)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI29NWPlayerCharacterListClass_stE3AddES0_, 0x00000000002e4120)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI7CResRefE3AddES0_, 0x000000000030d8e0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI7CResRefE8AllocateEi, 0x000000000030d7c0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI9CFileInfoE3AddES0_, 0x0000000000105300)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI9CFileInfoE8AllocateEi, 0x0000000000105140)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI9CFileInfoED1Ev, 0x0000000000371400)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListI9CFileInfoED2Ev, 0x0000000000371400)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIcE3AddEc, 0x00000000002e43b0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIfE3AddEf, 0x0000000000273840)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIfE6InsertEfi, 0x00000000003bb5f0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIfE7SetSizeEi, 0x00000000001b6580)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIfE8AllocateEi, 0x00000000002bdff0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIfED1Ev, 0x00000000002737f0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIfED2Ev, 0x00000000002737f0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIhE3AddEh, 0x0000000000254450)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIiE3AddEi, 0x00000000000da670)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIiE7SetSizeEi, 0x00000000001b64d0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIiE8AllocateEi, 0x00000000000da600)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIiE9AddUniqueEi, 0x000000000027fc10)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIjE3AddEj, 0x0000000000110b90)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIjE6RemoveEj, 0x00000000001f72f0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIjE7SetSizeEi, 0x00000000001b6630)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIjE8AllocateEi, 0x00000000001f7430)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIjE9AddUniqueEj, 0x0000000000110cb0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIjEaSERKS0_, 0x0000000000110c50)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListImE3AddEm, 0x000000000026e460)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP10CExoStringE3AddES1_, 0x000000000034d4f0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP10CExoStringEC1ERKS2_, 0x00000000003bb720)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP10CExoStringEC2ERKS2_, 0x00000000003bb720)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP10CSpell_AddE3AddES1_, 0x00000000002e4050)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP11CGameEffectE3AddES1_, 0x00000000001f7360)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP11CGameEffectEaSERKS2_, 0x0000000000254260)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP11CGameObjectE3AddES1_, 0x0000000000335bc0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP11CNWSFactionE3AddES1_, 0x00000000002aa450)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP12CExoKeyTableE6InsertES1_i, 0x000000000011da10)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP12SMstKeyEntryE3AddES1_, 0x000000000077fd50)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP13CNWLevelStatsE3AddES1_, 0x0000000000254190)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP13SMstNameEntryE3AddES1_, 0x000000000077fe20)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP14SMstBuddyEntryE3AddES1_, 0x000000000077fef0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP16CNWCCMessageDataE3AddES1_, 0x0000000000227ce0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP16SMstDigiDistInfoE6RemoveES1_, 0x000000000077ffc0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP17CFeatUseListEntryE3AddES1_, 0x0000000000254380)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP17CNWVisibilityNodeE3AddES1_, 0x00000000002e3f80)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP18CNWSExpressionListE3AddES1_, 0x000000000034d350)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP18CNWSExpressionNodeE3AddES1_, 0x000000000034d420)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP19CNWSSpellScriptDataE3AddES1_, 0x0000000000227db0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP22CCombatInformationNodeE3AddES1_, 0x0000000000254000)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP24NWPlayerCharacterList_stE9AddUniqueES1_, 0x00000000002e4280)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP26CNWTileSurfaceMeshAABBNodeE3AddES1_, 0x00000000001c4250)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListIP8CNWSItemE3AddES1_, 0x0000000000216670)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListItE3AddEt, 0x00000000002540d0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListItE6InsertEti, 0x0000000000347b50)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListItE7SetSizeEi, 0x0000000000347bb0)
+NWNXLIB_FUNCTION(_ZN13CExoArrayListItE8AllocateEi, 0x0000000000347ae0)
+NWNXLIB_FUNCTION(_ZN13CExoLocString12RemoveStringEi, 0x00000000001093c0)
+NWNXLIB_FUNCTION(_ZN13CExoLocString12RemoveStringEih, 0x0000000000109400)
+NWNXLIB_FUNCTION(_ZN13CExoLocString14ClearLocStringEv, 0x00000000001090d0)
+NWNXLIB_FUNCTION(_ZN13CExoLocString9AddStringEi10CExoStringh, 0x0000000000109040)
+NWNXLIB_FUNCTION(_ZN13CExoLocStringaSERKS_, 0x0000000000109010)
+NWNXLIB_FUNCTION(_ZN13CExoLocStringC1ERKS_, 0x0000000000108ef0)
+NWNXLIB_FUNCTION(_ZN13CExoLocStringC1Ev, 0x0000000000108ea0)
+NWNXLIB_FUNCTION(_ZN13CExoLocStringC2ERKS_, 0x0000000000108ef0)
+NWNXLIB_FUNCTION(_ZN13CExoLocStringC2Ev, 0x0000000000108ea0)
+NWNXLIB_FUNCTION(_ZN13CExoLocStringD1Ev, 0x0000000000108f60)
+NWNXLIB_FUNCTION(_ZN13CExoLocStringD2Ev, 0x0000000000108f60)
+NWNXLIB_FUNCTION(_ZN13CExoLocStringeqERS_, 0x0000000000108fa0)
+NWNXLIB_FUNCTION(_ZN13CExoLocStringneERS_, 0x0000000000108fd0)
+NWNXLIB_FUNCTION(_ZN13CNWLevelStats10ClearFeatsEv, 0x00000000007c5b10)
+NWNXLIB_FUNCTION(_ZN13CNWLevelStats18GetSkillRankChangeEt, 0x00000000007c5b60)
+NWNXLIB_FUNCTION(_ZN13CNWLevelStats18SetSkillRankChangeEtc, 0x00000000007c5b90)
+NWNXLIB_FUNCTION(_ZN13CNWLevelStats7AddFeatEt, 0x00000000007c5bc0)
+NWNXLIB_FUNCTION(_ZN13CNWLevelStatsC1Ev, 0x00000000007c5840)
+NWNXLIB_FUNCTION(_ZN13CNWLevelStatsC2Ev, 0x00000000007c5840)
+NWNXLIB_FUNCTION(_ZN13CNWLevelStatsD1Ev, 0x00000000007c59f0)
+NWNXLIB_FUNCTION(_ZN13CNWLevelStatsD2Ev, 0x00000000007c59f0)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter12EventHandlerEjjPvjj, 0x0000000000272c00)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter12GetFirstNameEv, 0x00000000002737e0)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter13LoadEncounterEP7CResGFFP10CResStruct, 0x00000000002716c0)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter13MakeSpawnListEP19CEncounterListEntryRi, 0x000000000026ecd0)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter13SaveEncounterEP7CResGFFP10CResStruct, 0x000000000026f7f0)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter13SetDifficultyEi, 0x0000000000271ac0)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter14AsNWSEncounterEv, 0x00000000002737d0)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter14RemoveFromAreaEv, 0x000000000026e520)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter16LoadFromTemplateE7CResRefiP6Vector, 0x0000000000273610)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter17GetInActivateAreaE6Vector, 0x000000000026eb20)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter18CalculateSpawnPoolEf, 0x0000000000272a70)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter18SpawnIfAppropriateEjf, 0x0000000000272b80)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter19PadOutCreatureCountEP19CEncounterListEntryRi, 0x0000000000271ba0)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter20LoadFractionalCRDataEv, 0x0000000000273190)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter20ReadEncounterFromGffEP7CResGFFP10CResStructiP6Vector, 0x0000000000270400)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter21AddToActivateAreaListEj, 0x000000000026f0e0)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter21CalculatePointsFromCREf, 0x0000000000270080)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter21GetInActivateAreaListEj, 0x000000000026f090)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter22TallyEnemyRadiusPointsEv, 0x0000000000272770)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter22UpdateActivateAreaListEj, 0x000000000026f280)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter23AddCreaturesToSpawnListEP19CEncounterListEntryRiiS0_, 0x0000000000270150)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter23SpawnEncounterCreaturesEv, 0x0000000000271e20)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter26RemoveFromActivateAreaListEj, 0x000000000026f200)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter27ReadEncounterScriptsFromGffEP7CResGFFP10CResStruct, 0x000000000026f510)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter29RemoveFromActiveCreatureCountEfi, 0x00000000002718f0)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter32LineSegmentIntersectActivateAreaE6VectorS0_, 0x000000000026e9c0)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter8AIUpdateEv, 0x0000000000272e40)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter9AddToAreaEP8CNWSAreafffi, 0x000000000026e840)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounter9SetActiveEi, 0x0000000000273160)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounterC1Ej, 0x0000000000273280)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounterC2Ej, 0x0000000000273280)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounterD0Ev, 0x000000000026e810)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounterD1Ev, 0x000000000026e5f0)
+NWNXLIB_FUNCTION(_ZN13CNWSEncounterD2Ev, 0x000000000026e5f0)
+NWNXLIB_FUNCTION(_ZN13CNWSInventory10RemoveItemEP8CNWSItem, 0x0000000000273e50)
+NWNXLIB_FUNCTION(_ZN13CNWSInventory13GetItemInSlotEj, 0x0000000000273e10)
+NWNXLIB_FUNCTION(_ZN13CNWSInventory13PutItemInSlotEjP8CNWSItem, 0x0000000000273e90)
+NWNXLIB_FUNCTION(_ZN13CNWSInventory15GetSlotFromItemEP8CNWSItem, 0x0000000000273c70)
+NWNXLIB_FUNCTION(_ZN13CNWSInventory18GetItemInInventoryEP8CNWSItem, 0x0000000000273c30)
+NWNXLIB_FUNCTION(_ZN13CNWSInventory24GetArraySlotFromSlotFlagEj, 0x0000000000273cb0)
+NWNXLIB_FUNCTION(_ZN13CNWSInventoryC1Ev, 0x0000000000273bf0)
+NWNXLIB_FUNCTION(_ZN13CNWSInventoryC2Ev, 0x0000000000273bf0)
+NWNXLIB_FUNCTION(_ZN13CNWSInventoryD0Ev, 0x0000000000273bc0)
+NWNXLIB_FUNCTION(_ZN13CNWSInventoryD1Ev, 0x0000000000273b50)
+NWNXLIB_FUNCTION(_ZN13CNWSInventoryD2Ev, 0x0000000000273b50)
+NWNXLIB_FUNCTION(_ZN13CNWSpellArray4LoadEv, 0x00000000007d45d0)
+NWNXLIB_FUNCTION(_ZN13CNWSpellArrayC1Ev, 0x00000000007d4500)
+NWNXLIB_FUNCTION(_ZN13CNWSpellArrayC2Ev, 0x00000000007d4500)
+NWNXLIB_FUNCTION(_ZN13CNWSpellArrayD1Ev, 0x00000000007d4520)
+NWNXLIB_FUNCTION(_ZN13CNWSpellArrayD2Ev, 0x00000000007d4520)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable10RemoveItemEP8CNWSItemi, 0x00000000002ab880)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable11AcquireItemEPP8CNWSItemjhhi, 0x00000000002ab8f0)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable11LoadBodyBagEt, 0x00000000002aade0)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable11PostProcessEv, 0x00000000002aad10)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable12EventHandlerEjjPvjj, 0x00000000002af610)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable12GetFirstNameEv, 0x00000000002b0ee0)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable12GetItemCountEi, 0x00000000002aede0)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable12GetLightIsOnEv, 0x00000000002ac690)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable12SetLightIsOnEi, 0x00000000002ac5d0)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable13LoadPlaceableEP7CResGFFP10CResStructP10CExoString, 0x00000000002ac740)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable13OpenInventoryEj, 0x00000000002abca0)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable13SavePlaceableEP7CResGFFP10CResStructi, 0x00000000002ae0d0)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable14AsNWSPlaceableEv, 0x0000000000227cd0)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable14CloseInventoryEji, 0x00000000002abae0)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable14RemoveFromAreaEv, 0x00000000002aef80)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable14SetOrientationE6Vector, 0x00000000002ab730)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable15GetDialogResrefEv, 0x00000000002b0ef0)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable16GetEffectSpellIdEv, 0x00000000002b0f30)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable16LoadFromTemplateE7CResRefP10CExoString, 0x00000000002b0d40)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable16SetEffectSpellIdEj, 0x00000000002b0f40)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable17AIActionCastSpellEP20CNWSObjectActionNode, 0x00000000002ac310)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable17DropItemsIntoAreaEv, 0x00000000002abf30)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable19AddCastSpellActionsEji6Vectorjih, 0x00000000002ac170)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable20GetBodyBagAppearanceEv, 0x00000000002aec80)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable21CalculateActionPointsEv, 0x00000000002ab550)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable21GetNearestActionPointERK6Vector, 0x00000000002abff0)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable22AcquireItemsFromObjectEji, 0x00000000002b0690)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable27ClosePlaceableForAllPlayersEv, 0x00000000002aeea0)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable8AIUpdateEv, 0x00000000002aa520)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable8DoDamageEi, 0x00000000002aa7d0)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceable9AddToAreaEP8CNWSAreafffi, 0x00000000002af230)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceableC1Ej, 0x00000000002aa810)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceableC2Ej, 0x00000000002aa810)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceableD0Ev, 0x00000000002af200)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceableD1Ev, 0x00000000002af070)
+NWNXLIB_FUNCTION(_ZN13CNWSPlaceableD2Ev, 0x00000000002af070)
+NWNXLIB_FUNCTION(_ZN13CScriptTalent10LoadTalentEP7CResGFFP10CResStruct, 0x00000000002900a0)
+NWNXLIB_FUNCTION(_ZN13CScriptTalent10SaveTalentEP7CResGFFP10CResStruct, 0x000000000028ffd0)
+NWNXLIB_FUNCTION(_ZN13CScriptTalent16CopyScriptTalentEPS_, 0x000000000028ff90)
+NWNXLIB_FUNCTION(_ZN13CScriptTalent6EqualsEPS_, 0x00000000002901b0)
+NWNXLIB_FUNCTION(_ZN13CScriptTalentC1Ev, 0x000000000028ff50)
+NWNXLIB_FUNCTION(_ZN13CScriptTalentC2Ev, 0x000000000028ff50)
+NWNXLIB_FUNCTION(_ZN13CScriptTalentD1Ev, 0x000000000028ff80)
+NWNXLIB_FUNCTION(_ZN13CScriptTalentD2Ev, 0x000000000028ff80)
+NWNXLIB_FUNCTION(_ZN13CServerAIList12RemoveObjectEj, 0x00000000002f4ac0)
+NWNXLIB_FUNCTION(_ZN13CServerAIList13GetNextObjectEv, 0x00000000002f4b60)
+NWNXLIB_FUNCTION(_ZN13CServerAIList9AddObjectEj, 0x00000000002f6860)
+NWNXLIB_FUNCTION(_ZN13CServerAIListC1Ev, 0x00000000002f4a70)
+NWNXLIB_FUNCTION(_ZN13CServerAIListC2Ev, 0x00000000002f4a70)
+NWNXLIB_FUNCTION(_ZN13CServerAIListD1Ev, 0x00000000002f4aa0)
+NWNXLIB_FUNCTION(_ZN13CServerAIListD2Ev, 0x00000000002f4aa0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp10InitializeEv, 0x00000000002f8900)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp10LoadModuleE10CExoStringiP10CNWSPlayeri, 0x00000000002f8960)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp10OnCDChangeEv, 0x00000000002f8af0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp11GetNetLayerEv, 0x00000000002f7be0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp11OnGainFocusEv, 0x00000000002f8b10)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp11OnLostFocusEv, 0x00000000002f8b20)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp12GetDebugModeEv, 0x00000000002f88f0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp12SetDebugModeEi, 0x00000000002f88e0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp12StopServicesEv, 0x00000000002f8be0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp12UninitializeEv, 0x00000000002f8b50)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp12UnloadModuleEv, 0x00000000002f8950)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp13GetCampaignDBEv, 0x00000000002f8b80)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp13GetGameObjectEj, 0x00000000002f86b0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp13GetModuleNameEv, 0x00000000002f8340)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp13GetNWSMessageEv, 0x00000000002f87f0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp13GetPauseStateEh, 0x00000000002f8ca0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp13GetPauseTimerEv, 0x00000000002f88c0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp13GetPlayerListEv, 0x00000000002f87d0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp13GetServerInfoEv, 0x00000000002f7bc0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp13GetServerModeEv, 0x00000000002f8830)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp13GetWorldTimerEv, 0x00000000002f8880)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp13HandleMessageEjPhji, 0x00000000002f7da0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp13OnVideoChangeEv, 0x00000000002f8b30)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp13SetPauseStateEhi, 0x00000000002f8cd0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp13StartServicesEv, 0x00000000002f8bb0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp14GetActiveTimerEj, 0x00000000002f8870)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp14GetObjectArrayEv, 0x00000000002f8690)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp14SetForceUpdateEv, 0x00000000002f8b60)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp14StartNewModuleER10CExoString, 0x00000000002f83c0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp15AdmitPlayerNameE10CExoString, 0x00000000002f7ec0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp15GetNextPCObjectEv, 0x00000000002f9060)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp15GetSysAdminListEv, 0x00000000002f8810)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp15RestartNetLayerEv, 0x00000000002f8bd0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16ExportAllPlayersEv, 0x00000000002f85e0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16GetApplicationIdEv, 0x00000000002f7c20)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16GetConnectionLibEv, 0x00000000002f7c00)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16GetFirstPCObjectEv, 0x00000000002f9050)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16GetImportingCharEv, 0x00000000002f8610)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16GetIsMultiPlayerEv, 0x00000000002f7c40)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16GetLoadingModuleEv, 0x00000000002f85f0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16GetTimestopTimerEv, 0x00000000002f88a0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16MovePlayerToAreaEPv, 0x00000000002f8c40)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16PlayerListChangeEjii, 0x00000000002f7f40)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16SetEndGameStringER10CExoString, 0x00000000002f8450)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16SetImportingCharEi, 0x00000000002f8620)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16SetLoadingModuleEi, 0x00000000002f8600)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16ShutdownNetLayerEv, 0x00000000002f8bc0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16StripColorTokensER10CExoString, 0x00000000002f9090)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp16TogglePauseStateEh, 0x00000000002f8c80)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp17AddIPToBannedListE10CExoString, 0x00000000002f8db0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp17GetGameSpyEnabledEv, 0x00000000002f9080)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp17GetModuleLanguageEv, 0x00000000002f87a0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp17GetPlayerLanguageEj, 0x00000000002f8790)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp17GetServerAIMasterEv, 0x00000000002f87b0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp17IsOnExclusionListEj, 0x00000000002f8da0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp17LoadPrimaryPlayerEP10CNWSPlayer, 0x00000000002f8680)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp17RemovePCFromWorldEP10CNWSPlayer, 0x00000000002f8930)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp17SetEndGamePendingEi, 0x00000000002f8440)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp17SetGameSpyEnabledEi, 0x00000000002f9070)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp18AddCharListRequestEj, 0x00000000002f8d90)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp18AddToExclusionListEjh, 0x00000000002f8cf0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp18GetAutoSavePendingEv, 0x00000000002f8640)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp18GetFactionOfObjectEjPi, 0x00000000002f8c70)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp18GetSkillBonusLimitEv, 0x00000000002f9260)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp18IsPlayerNameStickyEv, 0x00000000002f81d0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp18LoadCharacterStartEhP10CNWSPlayer7CResRefPvj, 0x00000000002f8650)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp18SendCharacterQueryEP10CNWSPlayer, 0x00000000002f83a0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp18SetAutoSavePendingEi, 0x00000000002f8630)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp18SetSkillBonusLimitEii, 0x00000000002f9280)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp18ShutDownToMainMenuEv, 0x00000000002f9370)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19AdmitNetworkAddressEj10CExoString, 0x00000000002f7db0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19GetActivePauseStateEv, 0x00000000002f8cc0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19GetAttackBonusLimitEv, 0x00000000002f9120)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19GetBannedListStringEv, 0x00000000002f8a50)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19GetDamageBonusLimitEv, 0x00000000002f9160)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19GetDifficultyOptionEi, 0x00000000002f8d80)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19GetHeartBeatLoggingEv, 0x00000000002f90d0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19GetIsIPOnBannedListE10CExoString, 0x00000000002f7f70)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19GetPlaceMeshManagerEv, 0x00000000002f8850)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19GetPlayerListStringEv, 0x00000000002f8a00)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19GetPortalListStringEv, 0x00000000002f8aa0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19LoadCharacterFinishEP10CNWSPlayerii, 0x00000000002f8670)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19PushMessageOverWallEPhj, 0x00000000002f82d0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19SetAttackBonusLimitEii, 0x00000000002f9140)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19SetDamageBonusLimitEii, 0x00000000002f9180)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19SetGameSpyReportingEi, 0x00000000002f8b40)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19SetHeartBeatLoggingEi, 0x00000000002f90e0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp19ValidatePlayerLoginEPv, 0x00000000002f8c20)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp20AddCDKeyToBannedListE10CExoString, 0x00000000002f8e90)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp20GetAbilityBonusLimitEv, 0x00000000002f91e0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp20GetModuleDescriptionEv, 0x00000000002f7cf0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp20GetPlayerAddressDataEjPjPPhS2_S0_, 0x00000000002f8ba0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp20SetAbilityBonusLimitEii, 0x00000000002f9200)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp20SetDDCipherForModuleE10CExoString, 0x00000000002f92f0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp20SetNetworkAddressBanEj10CExoStringi, 0x00000000002f7e30)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp20SetWeGotDisconnectedEv, 0x00000000002f93c0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp21GetAreaByGameObjectIDEj, 0x00000000002f8700)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp21GetDoorByGameObjectIDEj, 0x00000000002f8730)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp21GetExtendedServerInfoEP19CExtendedServerInfo, 0x00000000002f7ce0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp21GetExtendedServerInfoEv, 0x00000000002f9380)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp21GetItemByGameObjectIDEj, 0x00000000002f86d0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp21GetMoveToModuleStringEv, 0x00000000002f8410)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp21GetMultiplayerEnabledEv, 0x00000000002f7c40)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp21SetMoveToModuleStringER10CExoString, 0x00000000002f83f0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp22GetAbilityPenaltyLimitEv, 0x00000000002f9220)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp22GetActiveExclusionListEv, 0x00000000002f8d30)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp22GetIsCDKeyOnBannedListE10CExoString, 0x00000000002f8070)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp22GetMoveToModulePendingEv, 0x00000000002f83e0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp22GetStoreByGameObjectIDEj, 0x00000000002f86c0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp22RemoveIPFromBannedListE10CExoString, 0x00000000002f8f00)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp22SetAbilityPenaltyLimitEii, 0x00000000002f9240)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp22SetApplicationIdsMatchEi, 0x00000000002f93a0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp22SetMoveToModulePendingEi, 0x00000000002f83d0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp23GetCreatureDeathLoggingEv, 0x00000000002f90b0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp23GetIsControlledByPlayerEj, 0x00000000002f8c50)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp23GetModuleByGameObjectIDEj, 0x00000000002f86f0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp23InitiateModuleForPlayerEPv, 0x00000000002f8c30)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp23IsOnActiveExclusionListEj, 0x00000000002f8d40)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp23RemoveFromExclusionListEjh, 0x00000000002f8d10)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp23SetCreatureDeathLoggingEi, 0x00000000002f90c0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp23VomitServerOptionsToLogEv, 0x00000000002f8920)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp24AddSubNetProfileSendSizeEjj, 0x00000000002f90a0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp24GetReloadModuleWhenEmptyEv, 0x00000000002f8d70)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp24GetSavingThrowBonusLimitEv, 0x00000000002f91a0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp24GetTriggerByGameObjectIDEj, 0x00000000002f8710)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp24ResolvePlayerByFirstNameERK10CExoString, 0x00000000002f8d50)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp24SetReloadModuleWhenEmptyEi, 0x00000000002f8d60)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp24SetSavingThrowBonusLimitEii, 0x00000000002f91c0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp25AddPlayerNameToBannedListE10CExoString, 0x00000000002f8e20)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp25ContinueMessageProcessingEv, 0x00000000002f7f50)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp25GetClientObjectByObjectIdEj, 0x00000000002f8bf0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp25GetClientObjectByPlayerIdEjh, 0x00000000002f8c00)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp25GetCreatureByGameObjectIDEj, 0x00000000002f86e0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp25GetExportCharacterPendingEv, 0x00000000002f8470)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp25GetPlayerIDByGameObjectIDEj, 0x00000000002f8780)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp25GetWaypointByGameObjectIDEj, 0x00000000002f8750)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp25RemoveCDKeyFromBannedListE10CExoString, 0x00000000002f8fe0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp25SetExportCharacterPendingEi, 0x00000000002f8480)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp26GetEncounterByGameObjectIDEj, 0x00000000002f8760)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp26GetPlaceableByGameObjectIDEj, 0x00000000002f8720)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp27GetIsPlayerNameOnBannedListE10CExoString, 0x00000000002f7ff0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp27GetStickyCombatModesEnabledEv, 0x00000000002f9100)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp27SetStickyCombatModesEnabledEi, 0x00000000002f9110)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp28GetSoundObjectByGameObjectIDEj, 0x00000000002f8770)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp28HandleGameSpyToServerMessageEiPvi, 0x00000000002f7f60)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp29CheckStickyPlayerNameReservedE10CExoStringS0_S0_i, 0x00000000002f81e0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp29GetAreaOfEffectByGameObjectIDEj, 0x00000000002f8740)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp29HandleOldServerVaultMigrationE10CExoStringS0_S0_, 0x00000000002f80f0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp30RemovePlayerNameFromBannedListE10CExoString, 0x00000000002f8f70)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp32AddExportPlayersCharacterRequestEj, 0x00000000002f8490)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp33GetExportPlayersCharacterRequestsEv, 0x00000000002f8580)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp34ClearExportPlayerCharacterRequestsEv, 0x00000000002f8590)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp35GetClientsRequiredToDisableCPUSleepEv, 0x00000000002f90f0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp37GetHostedPublicInternetAddressAndPortEv, 0x00000000002f92a0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp6GetFPSEv, 0x00000000002f9390)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp6OnExitEv, 0x00000000002f8b00)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp8LoadGameEjR10CExoStringS1_P10CNWSPlayer, 0x00000000002f83b0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp8MainLoopEv, 0x00000000002f8910)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp8SaveGameEjR10CExoStringS1_P10CNWSPlayeriS1_, 0x00000000002f8390)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp8ShutdownEii, 0x00000000002f8940)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp9GetCDKeysEPP13CExoArrayListI10CExoStringE, 0x00000000002f93b0)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp9GetModuleEv, 0x00000000002f8330)
+NWNXLIB_FUNCTION(_ZN13CServerExoApp9RunModuleEv, 0x00000000002f89f0)
+NWNXLIB_FUNCTION(_ZN13CServerExoAppC1Ev, 0x00000000002f82e0)
+NWNXLIB_FUNCTION(_ZN13CServerExoAppC2Ev, 0x00000000002f82e0)
+NWNXLIB_FUNCTION(_ZN13CServerExoAppD0Ev, 0x00000000002f7cb0)
+NWNXLIB_FUNCTION(_ZN13CServerExoAppD1Ev, 0x00000000002f7c60)
+NWNXLIB_FUNCTION(_ZN13CServerExoAppD2Ev, 0x00000000002f7c60)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArrays12GetCached2DAE10CExoStringi, 0x00000000007dac50)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArrays12Load2DArraysEv, 0x00000000007d8c40)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArrays13LoadEpicSavesEv, 0x00000000007d89b0)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArrays14UnLoad2DArraysEv, 0x00000000007d78d0)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArrays14Update2DACacheEP14CExoLinkedListI4C2DAEiPS1_, 0x00000000007dabf0)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArrays15ClearCached2DAsEv, 0x00000000007db020)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArrays15LoadEpicAttacksEv, 0x00000000007d8b30)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArrays16GetIPRPCostTableEh, 0x00000000007d8980)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArrays18GetEpicAttackBonusEh, 0x00000000007dabd0)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArrays18LoadIPRPCostTablesEv, 0x00000000007d7530)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArrays19GetEpicRefSaveBonusEh, 0x00000000007dab70)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArrays20GetEpicFortSaveBonusEh, 0x00000000007dab50)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArrays20GetEpicWillSaveBonusEh, 0x00000000007daba0)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArrays20UnLoadIPRPCostTablesEv, 0x00000000007d7820)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArraysC1Ev, 0x00000000007d7090)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArraysC2Ev, 0x00000000007d7090)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArraysD1Ev, 0x00000000007db0c0)
+NWNXLIB_FUNCTION(_ZN13CTwoDimArraysD2Ev, 0x00000000007db0c0)
+NWNXLIB_FUNCTION(_ZN13SJournalEntryD1Ev, 0x000000000027ee50)
+NWNXLIB_FUNCTION(_ZN13SJournalEntryD2Ev, 0x000000000027ee50)
+NWNXLIB_FUNCTION(_ZN14CExoFileThread4ReadEPvjjP8_IO_FILE, 0x0000000000106e50)
+NWNXLIB_FUNCTION(_ZN14CExoFileThread9AsyncReadEv, 0x0000000000106d40)
+NWNXLIB_FUNCTION(_ZN14CExoFileThreadC1Ev, 0x0000000000106c70)
+NWNXLIB_FUNCTION(_ZN14CExoFileThreadC2Ev, 0x0000000000106c70)
+NWNXLIB_FUNCTION(_ZN14CExoFileThreadD1Ev, 0x0000000000106a50)
+NWNXLIB_FUNCTION(_ZN14CExoFileThreadD2Ev, 0x0000000000106a50)
+NWNXLIB_FUNCTION(_ZN14CExoPackedFile12GetAsyncFileEv, 0x0000000000122950)
+NWNXLIB_FUNCTION(_ZN14CExoPackedFile22ReadNWCompressedBufferEPvjj, 0x0000000000127ce0)
+NWNXLIB_FUNCTION(_ZN14CExoPackedFile7GetFileEv, 0x0000000000122940)
+NWNXLIB_FUNCTION(_ZN14CExoPackedFileC1Ev, 0x0000000000125ab0)
+NWNXLIB_FUNCTION(_ZN14CExoPackedFileC2Ev, 0x0000000000125ab0)
+NWNXLIB_FUNCTION(_ZN14CExoPackedFileD0Ev, 0x0000000000125b10)
+NWNXLIB_FUNCTION(_ZN14CExoPackedFileD1Ev, 0x0000000000125af0)
+NWNXLIB_FUNCTION(_ZN14CExoPackedFileD2Ev, 0x0000000000125af0)
+NWNXLIB_FUNCTION(_ZN14CExoStringList12GetDuplicateEv, 0x0000000000787e70)
+NWNXLIB_FUNCTION(_ZN14CExoStringList3AddEP10CExoString, 0x0000000000787c10)
+NWNXLIB_FUNCTION(_ZN14CExoStringList5ClearEv, 0x0000000000787ce0)
+NWNXLIB_FUNCTION(_ZN14CExoStringList5MergeEPS_ii, 0x0000000000787ed0)
+NWNXLIB_FUNCTION(_ZN14CExoStringList6DeleteEP10CExoString, 0x0000000000787d50)
+NWNXLIB_FUNCTION(_ZN14CExoStringList6InsertEP10CExoStringi, 0x0000000000787eb0)
+NWNXLIB_FUNCTION(_ZN14CExoStringList6RemoveEi, 0x00000000007882c0)
+NWNXLIB_FUNCTION(_ZN14CExoStringList7GetSizeEv, 0x0000000000787e80)
+NWNXLIB_FUNCTION(_ZN14CExoStringList8GetCountEv, 0x0000000000787e60)
+NWNXLIB_FUNCTION(_ZN14CExoStringList9AddSortedEP10CExoString, 0x0000000000787880)
+NWNXLIB_FUNCTION(_ZN14CExoStringList9GetSortedEv, 0x0000000000787e90)
+NWNXLIB_FUNCTION(_ZN14CExoStringList9GetStringEi, 0x0000000000787ea0)
+NWNXLIB_FUNCTION(_ZN14CExoStringList9IntroduceEP10CExoStringi, 0x00000000007877a0)
+NWNXLIB_FUNCTION(_ZN14CExoStringListaSERS_, 0x0000000000788360)
+NWNXLIB_FUNCTION(_ZN14CExoStringListC1Eiii, 0x0000000000787a50)
+NWNXLIB_FUNCTION(_ZN14CExoStringListC1EPS_, 0x0000000000787aa0)
+NWNXLIB_FUNCTION(_ZN14CExoStringListC1Ev, 0x0000000000787a20)
+NWNXLIB_FUNCTION(_ZN14CExoStringListC2Eiii, 0x0000000000787a50)
+NWNXLIB_FUNCTION(_ZN14CExoStringListC2EPS_, 0x0000000000787aa0)
+NWNXLIB_FUNCTION(_ZN14CExoStringListC2Ev, 0x0000000000787a20)
+NWNXLIB_FUNCTION(_ZN14CExoStringListD1Ev, 0x0000000000787b90)
+NWNXLIB_FUNCTION(_ZN14CExoStringListD2Ev, 0x0000000000787b90)
+NWNXLIB_FUNCTION(_ZN14CExoStringListixEi, 0x0000000000788350)
+NWNXLIB_FUNCTION(_ZN14CNWSExpression10ClearGraphEv, 0x000000000034c3d0)
+NWNXLIB_FUNCTION(_ZN14CNWSExpression10TestStringERK10CExoStringi, 0x000000000034cc60)
+NWNXLIB_FUNCTION(_ZN14CNWSExpression11ParseStringE10CExoString, 0x000000000034c430)
+NWNXLIB_FUNCTION(_ZN14CNWSExpression14ClearAlternateEP18CNWSExpressionNode, 0x000000000034c370)
+NWNXLIB_FUNCTION(_ZN14CNWSExpression7NewNodeEi, 0x000000000034c1e0)
+NWNXLIB_FUNCTION(_ZN14CNWSExpressionC1Ev, 0x000000000034c240)
+NWNXLIB_FUNCTION(_ZN14CNWSExpressionC2Ev, 0x000000000034c240)
+NWNXLIB_FUNCTION(_ZN14CNWSExpressionD1Ev, 0x000000000034c2a0)
+NWNXLIB_FUNCTION(_ZN14CNWSExpressionD2Ev, 0x000000000034c2a0)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD11GetLastNameEv, 0x000000000028ea80)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD12EventHandlerEjjPvjj, 0x00000000002bbc10)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD12GetFirstNameEv, 0x000000000028ea70)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD13SetReputationEP13CExoArrayListIiE, 0x00000000002bca70)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD14CopyEffectListEP13CExoArrayListIP11CGameEffectE, 0x00000000002bbe10)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD14RemoveFromAreaEv, 0x00000000002bbd10)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD15AsNWSPlayerTURDEv, 0x00000000002bd230)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD15CopyAutomapDataEiP13CExoArrayListIjEPPh, 0x00000000002bc1b0)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD15LoadAutoMapDataEP7CResGFFP10CResStruct, 0x00000000002bc310)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD15SaveAutoMapDataEP7CResGFFP10CResStruct, 0x00000000002bc4f0)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD16ClearAutomapDataEv, 0x00000000002bbf90)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD21SetPersonalReputationEP13CExoArrayListI22CNWSPersonalReputationE, 0x00000000002bcb40)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD8AIUpdateEv, 0x00000000002bbc00)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD8LoadTURDEP7CResGFFP10CResStruct, 0x00000000002bcc30)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD8SaveTURDEP7CResGFFP10CResStruct, 0x00000000002bc600)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURD9AddToAreaEP8CNWSAreai, 0x00000000002bbd50)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURDC1Ej, 0x00000000002bbc20)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURDC2Ej, 0x00000000002bbc20)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURDD0Ev, 0x00000000002bc180)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURDD1Ev, 0x00000000002bc040)
+NWNXLIB_FUNCTION(_ZN14CNWSPlayerTURDD2Ev, 0x00000000002bc040)
+NWNXLIB_FUNCTION(_ZN14CNWSTransition11LoadFromGffEP7CResGFFP10CResStruct, 0x00000000002ea180)
+NWNXLIB_FUNCTION(_ZN14CNWSTransition12LookupTargetEv, 0x00000000002e9f50)
+NWNXLIB_FUNCTION(_ZN14CNWSTransition6UnlinkEi, 0x00000000002ea130)
+NWNXLIB_FUNCTION(_ZN14CNWSTransition9SaveToGffEP7CResGFFP10CResStruct, 0x00000000002ea270)
+NWNXLIB_FUNCTION(_ZN14CNWSTransition9SetTargetEP10CNWSObject, 0x00000000002ea050)
+NWNXLIB_FUNCTION(_ZN14CNWSTransition9SetTargetERK10CExoString, 0x00000000002ea0a0)
+NWNXLIB_FUNCTION(_ZN14CStoreCustomerC1Ev, 0x00000000002e7600)
+NWNXLIB_FUNCTION(_ZN14CStoreCustomerC2Ev, 0x00000000002e7600)
+NWNXLIB_FUNCTION(_ZN15CExoIniInternal12ReadIniEntryER10CExoStringRKiRKS0_S5_, 0x00000000001087f0)
+NWNXLIB_FUNCTION(_ZN15CExoIniInternal13WriteIniEntryERK10CExoStringRKiS2_S2_i, 0x00000000001088c0)
+NWNXLIB_FUNCTION(_ZN15CExoIniInternalC1E10CExoString, 0x00000000001082f0)
+NWNXLIB_FUNCTION(_ZN15CExoIniInternalC2E10CExoString, 0x00000000001082f0)
+NWNXLIB_FUNCTION(_ZN15CExoIniInternalD1Ev, 0x0000000000108770)
+NWNXLIB_FUNCTION(_ZN15CExoIniInternalD2Ev, 0x0000000000108770)
+NWNXLIB_FUNCTION(_ZN15CFactionManager10GetFactionEi, 0x000000000032a4d0)
+NWNXLIB_FUNCTION(_ZN15CFactionManager12LoadFactionsEP7CResGFFP8CResList, 0x000000000032a5f0)
+NWNXLIB_FUNCTION(_ZN15CFactionManager12SaveFactionsEP7CResGFFP8CResList, 0x000000000032a920)
+NWNXLIB_FUNCTION(_ZN15CFactionManager13DeleteFactionEi, 0x000000000032ab50)
+NWNXLIB_FUNCTION(_ZN15CFactionManager15GetIsNPCFactionEi, 0x000000000032a5d0)
+NWNXLIB_FUNCTION(_ZN15CFactionManager15LoadReputationsEP7CResGFFP8CResList, 0x000000000032af60)
+NWNXLIB_FUNCTION(_ZN15CFactionManager15SaveReputationsEP7CResGFFP8CResList, 0x000000000032aa50)
+NWNXLIB_FUNCTION(_ZN15CFactionManager18GetFactionIdByNameERK10CExoString, 0x000000000032abb0)
+NWNXLIB_FUNCTION(_ZN15CFactionManager21CreateDefaultFactionsEv, 0x000000000032b100)
+NWNXLIB_FUNCTION(_ZN15CFactionManager22GetDefaultPCReputationEv, 0x000000000032aed0)
+NWNXLIB_FUNCTION(_ZN15CFactionManager23GetNPCFactionReputationEii, 0x000000000032a560)
+NWNXLIB_FUNCTION(_ZN15CFactionManager23SetNPCFactionReputationEiii, 0x000000000032a500)
+NWNXLIB_FUNCTION(_ZN15CFactionManagerC1Ev, 0x000000000032a390)
+NWNXLIB_FUNCTION(_ZN15CFactionManagerC2Ev, 0x000000000032a390)
+NWNXLIB_FUNCTION(_ZN15CFactionManagerD1Ev, 0x000000000032a400)
+NWNXLIB_FUNCTION(_ZN15CFactionManagerD2Ev, 0x000000000032a400)
+NWNXLIB_FUNCTION(_ZN15CItemRepository10RemoveItemEP8CNWSItem, 0x0000000000276790)
+NWNXLIB_FUNCTION(_ZN15CItemRepository12FindPositionEP8CNWSItemRhS2_i, 0x000000000027a1b0)
+NWNXLIB_FUNCTION(_ZN15CItemRepository13CalculatePageEhh, 0x0000000000275fe0)
+NWNXLIB_FUNCTION(_ZN15CItemRepository15FindItemWithTagEP10CExoString, 0x00000000002764e0)
+NWNXLIB_FUNCTION(_ZN15CItemRepository15ItemListGetItemEP18CExoLinkedListNode, 0x0000000000276a30)
+NWNXLIB_FUNCTION(_ZN15CItemRepository17CheckItemOverlapsEP8CNWSItemS1_hh, 0x0000000000276280)
+NWNXLIB_FUNCTION(_ZN15CItemRepository19GetItemInRepositoryEhh, 0x0000000000276aa0)
+NWNXLIB_FUNCTION(_ZN15CItemRepository19GetItemInRepositoryEP8CNWSItemi, 0x0000000000276620)
+NWNXLIB_FUNCTION(_ZN15CItemRepository22FindItemWithBaseItemIdEji, 0x00000000002763c0)
+NWNXLIB_FUNCTION(_ZN15CItemRepository23CalculateContentsWeightEv, 0x0000000000278580)
+NWNXLIB_FUNCTION(_ZN15CItemRepository23ItemListGetItemObjectIDEP18CExoLinkedListNode, 0x0000000000276a70)
+NWNXLIB_FUNCTION(_ZN15CItemRepository7AddItemEPP8CNWSItemhhii, 0x000000000027a6f0)
+NWNXLIB_FUNCTION(_ZN15CItemRepository8AddPanelEv, 0x0000000000276b80)
+NWNXLIB_FUNCTION(_ZN15CItemRepository8CheckFitEP8CNWSItemhh, 0x0000000000276000)
+NWNXLIB_FUNCTION(_ZN15CItemRepository8MoveItemEP8CNWSItemhh, 0x0000000000276900)
+NWNXLIB_FUNCTION(_ZN15CItemRepositoryC1Ejhhji, 0x0000000000275db0)
+NWNXLIB_FUNCTION(_ZN15CItemRepositoryC2Ejhhji, 0x0000000000275db0)
+NWNXLIB_FUNCTION(_ZN15CItemRepositoryD1Ev, 0x0000000000275e60)
+NWNXLIB_FUNCTION(_ZN15CItemRepositoryD2Ev, 0x0000000000275e60)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow10InitializeEP17CNetLayerInternal, 0x000000000012a5d0)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow11SetAckTimerEv, 0x000000000012a530)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow12FrameReceiveEPhj, 0x00000000001372b0)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow12FrameTimeoutEj, 0x0000000000135e10)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow12TestAckTimerEj, 0x000000000012a570)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow15SetInFrameTimerEv, 0x000000000012a490)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow16SetOutFrameTimerEj, 0x000000000012ad30)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow16TestInFrameTimerEj, 0x000000000012a4f0)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow17SetFauxNagleTimerEv, 0x000000000012a590)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow17TestOutFrameTimerEjj, 0x000000000012ad90)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow18FrameNumberBetweenEjjj, 0x000000000012a460)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow18TestFauxNagleTimerEj, 0x000000000012acb0)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow20LoadWindowWithFramesEv, 0x000000000012ee50)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow21AddToLowOutgoingQueueEt, 0x0000000000135c00)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow21CutOutgoingBufferSizeEv, 0x000000000012adc0)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow22AddToHighOutgoingQueueEt, 0x0000000000135ba0)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow23UnpacketizeFullMessagesEi, 0x000000000012c0e0)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow24DoubleOutgoingBufferSizeEv, 0x000000000012aec0)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow27PlaceFrameInOutgoingBuffersEt, 0x000000000012edf0)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow28InitializeCompressionBuffersEv, 0x000000000012a2e0)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow8ShutDownEv, 0x000000000012a720)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow9FauxNagleEv, 0x0000000000135d70)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindow9FrameSendEhtt, 0x000000000012ebb0)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindowC1Ev, 0x000000000012abb0)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindowC2Ev, 0x000000000012abb0)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindowD1Ev, 0x000000000012aa30)
+NWNXLIB_FUNCTION(_ZN15CNetLayerWindowD2Ev, 0x000000000012aa30)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound11AddReactionEii, 0x0000000000345180)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound13AddParryIndexEv, 0x0000000000345320)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound13SetPauseTimerEii, 0x0000000000343b20)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound14AddEquipActionEjj, 0x00000000003453a0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound14AddParryAttackEj, 0x0000000000346bd0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound14AddSpellActionEv, 0x0000000000345210)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound14EndCombatRoundEv, 0x0000000000343840)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound14GetExtraAttackEv, 0x0000000000344190)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound14GetNewAttackIDEv, 0x0000000000345150)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound14IncrementTimerEi, 0x0000000000343dd0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound14RecomputeRoundEv, 0x00000000003447d0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound14SetRoundPausedEij, 0x0000000000343af0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound15AddCleaveAttackEji, 0x0000000000346d60)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound15ClearAllAttacksEv, 0x0000000000344380)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound15GetTotalAttacksEv, 0x0000000000346470)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound15LoadCombatRoundEP7CResGFFP10CResStruct, 0x0000000000347360)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound15SaveCombatRoundEP7CResGFFP10CResStruct, 0x00000000003464b0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound15SetDeflectArrowEi, 0x00000000003464a0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound16AddSpecialAttackEt, 0x00000000003469c0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound16AddUnequipActionEjjhh, 0x00000000003455d0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound16GetActionPendingEv, 0x0000000000343c60)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound16GetOffHandAttackEv, 0x0000000000344150)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound16GetSpecialAttackEi, 0x0000000000344f80)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound16RemoveAllActionsEv, 0x00000000003440f0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound16SetCurrentAttackEh, 0x0000000000344370)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound16StartCombatRoundEj, 0x00000000003461c0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound17CheckActionLengthEji, 0x0000000000343b90)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound17RemoveSpellActionEv, 0x0000000000345230)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound18AddWhirlwindAttackEji, 0x0000000000347060)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound18GetSpecialAttackIDEi, 0x0000000000345050)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound18HasCreatureWeaponsEv, 0x0000000000345840)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound19AddCircleKickAttackEj, 0x0000000000346ef0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound19AddCombatStepActionEjj, 0x00000000003457a0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound19DecrementPauseTimerEi, 0x0000000000343ad0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound19GetWeaponAttackTypeEv, 0x0000000000345900)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound19InsertSpecialAttackEti, 0x0000000000346b20)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound19RemoveSpecialAttackEi, 0x0000000000344c90)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound20DecrementRoundLengthEii, 0x0000000000343b70)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound20GetNumSpecialAttacksEv, 0x0000000000344ef0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound20StartCombatRoundCastEj, 0x0000000000343fd0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound21GetCombatStepRequiredEj, 0x0000000000345cc0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound21GetSpellActionPendingEv, 0x0000000000343d20)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound21InitializeCombatModesEv, 0x00000000003443c0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound22AddAttackOfOpportunityEj, 0x0000000000347150)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound22ClearAllSpecialAttacksEv, 0x00000000003472c0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound22GetAttackActionPendingEv, 0x0000000000343cb0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound22GetCurrentAttackWeaponEi, 0x0000000000345b50)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound23CalculateOffHandAttacksEv, 0x00000000003441c0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound23CheckActionLengthAtTimeEjii, 0x0000000000343bf0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound23InitializeAttackActionsEj, 0x0000000000345e50)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound24SignalCombatRoundStartedEv, 0x00000000003437e0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound25InitializeNumberOfAttacksEv, 0x0000000000344410)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound31UpdateAttackTargetForAllActionsEj, 0x00000000003463c0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound9AddActionEP21CNWSCombatRoundAction, 0x0000000000343ea0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound9GetActionEv, 0x0000000000343e40)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRound9GetAttackEi, 0x0000000000344340)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRoundC1EP12CNWSCreature, 0x00000000003433a0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRoundC2EP12CNWSCreature, 0x00000000003433a0)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRoundD1Ev, 0x0000000000343700)
+NWNXLIB_FUNCTION(_ZN15CNWSCombatRoundD2Ev, 0x0000000000343700)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObject12ChangeVolumeEi, 0x0000000000371f40)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObject12EventHandlerEjjPvjj, 0x0000000000371490)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObject14ChangePositionE6Vector, 0x0000000000372080)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObject14RemoveFromAreaEv, 0x0000000000371940)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObject15PackIntoMessageEP11CNWSMessage, 0x0000000000371a40)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObject16AsNWSSoundObjectEv, 0x0000000000372830)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObject21GetPeopleInSoundRangeEv, 0x00000000003721f0)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObject4LoadEP7CResGFFP10CResStruct, 0x0000000000372210)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObject4PlayEv, 0x0000000000371d00)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObject4SaveEP7CResGFFP10CResStruct, 0x0000000000371620)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObject4StopEv, 0x0000000000371e20)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObject8AIUpdateEv, 0x0000000000371480)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObject9AddToAreaEP8CNWSAreai, 0x0000000000371980)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObjectC1Ej, 0x0000000000371510)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObjectC2Ej, 0x0000000000371510)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObjectD0Ev, 0x00000000003714e0)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObjectD1Ev, 0x00000000003714a0)
+NWNXLIB_FUNCTION(_ZN15CNWSSoundObjectD2Ev, 0x00000000003714a0)
+NWNXLIB_FUNCTION(_ZN15CNWSStats_SpellC1Ev, 0x0000000000228fe0)
+NWNXLIB_FUNCTION(_ZN15CNWSStats_SpellC2Ev, 0x0000000000228fe0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler10HashStringEPKc, 0x000000000079a1f0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler10HashStringERK10CExoString, 0x000000000079a260)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler10InitializeEv, 0x000000000079aa30)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler10PopSRStackEPiS0_S0_PP20CScriptParseTreeNodeS3_, 0x00000000007afd30)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler11CompileFileERK10CExoString, 0x000000000079d060)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler11HandleTokenEv, 0x00000000007aeaa0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler11OutputErrorEiP10CExoStringiRKS0_, 0x000000000079c870)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler11ParseSourceEPci, 0x00000000007b7810)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler11PushSRStackEiiiP20CScriptParseTreeNode, 0x00000000007afc00)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler13InstallLoaderEv, 0x00000000007a5a80)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler13ResolveLabelsEv, 0x00000000007a0c10)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler13WalkParseTreeEP20CScriptParseTreeNode, 0x00000000007ad1a0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler14HashManagerAddEjj, 0x000000000079a3f0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler14SetOutputAliasERK10CExoString, 0x000000000079c340)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler15DeleteParseTreeEiP20CScriptParseTreeNode, 0x000000000079bfe0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler15TokenInitializeEv, 0x00000000007afbe0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler16GetStructureSizeERK10CExoString, 0x00000000007a0050)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler17CheckForBadLValueEP20CScriptParseTreeNode, 0x00000000007b0500)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler17FinalizeFinalCodeEv, 0x000000000079f020)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler17GenerateParseTreeEv, 0x00000000007b1400)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler17GetStructureFieldERK10CExoStringS2_, 0x00000000007a01a0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler17HashManagerDeleteEjj, 0x000000000079a500)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler18AddVariableToStackEiP10CExoStringi, 0x00000000007a05f0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler18CompileScriptChunkERK10CExoStringi, 0x000000000079c500)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler18DeleteCompileStackEv, 0x00000000007b75b0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler18GetHashEntryByNameEPKc, 0x000000000079a2e0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler18ParseNextCharacterEii, 0x00000000007af630)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler18PrintBinaryAddressEv, 0x000000000079ff70)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19AddStructureToStackERK10CExoStringi, 0x00000000007a02a0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19CleanUpAfterCompileEiP20CScriptParseTreeNode, 0x000000000079f710)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19ClearAllSymbolListsEv, 0x000000000079f690)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19GetIdentifierByNameERK10CExoString, 0x00000000007a00d0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19InitializeFinalCodeEv, 0x000000000079efb0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19InVisitGenerateCodeEP20CScriptParseTreeNode, 0x00000000007a4610)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19OutputWalkTreeErrorEiP20CScriptParseTreeNode, 0x000000000079f7a0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19ParseCharacterCaratEi, 0x00000000007aee40)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19ParseCharacterColonEv, 0x00000000007aee10)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19ParseCharacterCommaEv, 0x00000000007aedb0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19ParseCharacterSlashEi, 0x00000000007af2e0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19ParseCharacterTildeEv, 0x00000000007aed80)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19ParseIdentifierFileEv, 0x00000000007ae520)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19ShutdownIncludeFileEi, 0x000000000079bf90)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19TestIdentifierTokenEv, 0x00000000007af360)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler19WriteResolvedOutputEv, 0x000000000079fe30)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler20AddSymbolToLabelListEiiii, 0x00000000007a0fb0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler20AddSymbolToQueryListEiiii, 0x00000000007a1170)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler20CleanUpAfterCompilesEv, 0x000000000079c3a0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler20CleanUpDuringCompileEi, 0x00000000007b7630)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler20ClearSwitchLabelListEv, 0x00000000007a12e0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler20ParseCharacterHyphenEi, 0x00000000007af140)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler20ParseCharacterPeriodEv, 0x00000000007af570)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler20ParseStringCharacterEii, 0x00000000007aeb40)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler20PreVisitGenerateCodeEP20CScriptParseTreeNode, 0x00000000007a1b50)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler20SetCompileDebugLevelEi, 0x000000000079c0a0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler20WriteFinalCodeToFileERK10CExoString, 0x000000000079f0d0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler21GetCompiledScriptCodeEPPcPi, 0x000000000079c800)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler21HandleIdentifierTokenEv, 0x00000000007af530)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler21InitializeIncludeFileEi, 0x000000000079bf20)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler21OutputIdentifierErrorERK10CExoStringii, 0x000000000079f8f0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler21ParseCharacterNumericEi, 0x00000000007ae7c0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler21PostVisitGenerateCodeEP20CScriptParseTreeNode, 0x00000000007a63e0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler21PrintParseSourceErrorEi, 0x00000000007b76a0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler22GenerateIdentifierListEv, 0x00000000007ad470)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler22ParseCharacterAlphabetEi, 0x00000000007ae840)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler22ParseCharacterAsteriskEi, 0x00000000007af1b0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler22ParseCharacterEllipsisEv, 0x00000000007aea60)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler22ParseCharacterPlusSignEi, 0x00000000007aeee0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler23AddToGlobalVariableListEP20CScriptParseTreeNode, 0x00000000007b1390)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler23ClearCompiledScriptCodeEv, 0x000000000079c820)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler23DetermineLocationOfCodeEv, 0x00000000007a0b00)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler23ModifySRStackReturnTreeEP20CScriptParseTreeNode, 0x00000000007afdc0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler23ParseCharacterAmpersandEi, 0x00000000007af270)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler23ParseCharacterEqualSignEi, 0x00000000007aef50)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler23ParseCharacterLeftAngleEi, 0x00000000007aeff0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler23ParseCharacterLeftBraceEv, 0x00000000007aec30)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler23ParseCharacterSemicolonEv, 0x00000000007aed50)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler24AddToSymbolTableVarStackEiii, 0x00000000007a56f0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler24AddUserDefinedIdentifierEP20CScriptParseTreeNodei, 0x00000000007b0540)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler24CompileScriptConditionalERK10CExoString, 0x000000000079c6c0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler24DuplicateScriptParseTreeEP20CScriptParseTreeNode, 0x00000000007b0390)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler24ParseCharacterRightAngleEi, 0x00000000007af080)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler24ParseCharacterRightBraceEv, 0x00000000007aec60)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler24SetCompileSymbolicOutputEi, 0x000000000079c0c0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler25CreateScriptParseTreeNodeEiP20CScriptParseTreeNodeS1_, 0x00000000007b0200)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler25DeleteScriptParseTreeNodeEP20CScriptParseTreeNode, 0x00000000007b0130)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler25GetNewScriptParseTreeNodeEv, 0x00000000007afde0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler25InitializeSwitchLabelListEv, 0x000000000079fa30)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler25ParseCharacterLeftBracketEv, 0x00000000007aec90)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler25ParseCharacterPercentSignEi, 0x00000000007aee90)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler25ParseCharacterVerticalBarEi, 0x00000000007af200)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler25ParseFloatFromTokenStringEv, 0x00000000007ae6f0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler25SetCompileConditionalFileEi, 0x000000000079c370)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler25SetGenerateDebuggerOutputEi, 0x000000000079c0b0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler25Test_CompareFileInclusionER10CExoStringS1_P14CExoStringListt, 0x000000000079ca80)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler25WriteDebuggerOutputToFileE10CExoString, 0x00000000007a3740)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler26ParseCharacterQuestionMarkEv, 0x00000000007aede0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler26ParseCharacterRightBracketEv, 0x00000000007aecc0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler26ParseCommentedOutCharacterEi, 0x00000000007ae940)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler26SetIdentifierSpecificationERK10CExoString, 0x000000000079c0d0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler27ClearUserDefinedIdentifiersEv, 0x000000000079f330)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler27GenerateCodeForSwitchLabelsEP20CScriptParseTreeNode, 0x00000000007a4570)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler27ParseCharacterQuotationMarkEv, 0x00000000007aeaf0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler27ResolveDebuggingInformationEv, 0x00000000007a34d0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler27SetCompileConditionalOrMainEi, 0x000000000079c380)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler27SetOptimizeBinaryCodeLengthEi, 0x000000000079c360)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler27TraverseTreeForSwitchLabelsEP20CScriptParseTreeNode, 0x00000000007a14e0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler28ValidateLocationOfIdentifierERK10CExoString, 0x00000000007a0930)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler29PrintParseIdentifierFileErrorEi, 0x00000000007ae450)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler29RemoveFromSymbolTableVarStackEiii, 0x00000000007a6070)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler29Test_CompareDirectoryContentsER10CExoStringS1_, 0x000000000079daa0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler30GenerateFinalCodeFromParseTreeE10CExoString, 0x00000000007ad290)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler30InitializePreDefinedStructuresEv, 0x000000000079a960)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler30ParseCharacterExclamationPointEi, 0x00000000007aefa0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler31ParseCharacterLeftSquareBracketEv, 0x00000000007aecf0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler32EndLineNumberAtBinaryInstructionEiii, 0x00000000007a4320)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler32GenerateDebuggerTypeAbbreviationEi10CExoString, 0x00000000007a3580)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler32InsertGlobalVariablesInParseTreeEP20CScriptParseTreeNode, 0x000000000079f8b0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler32ParseCharacterRightSquareBracketEv, 0x00000000007aed20)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler32SetAutomaticCleanUpAfterCompilesEi, 0x000000000079c390)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler33FoundReturnStatementOnAllBranchesEP20CScriptParseTreeNode, 0x000000000079ffb0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler33GetFunctionNameFromSymbolSubTypesEii, 0x00000000007a0830)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler33Test_CompileAllScriptsInDirectoryER10CExoStringS1_S1_, 0x000000000079d3c0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler34StartLineNumberAtBinaryInstructionEiii, 0x00000000007a1ab0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler40GenerateIdentifiersFromConstantVariablesEP20CScriptParseTreeNode, 0x000000000079fa80)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler40ResolveDebuggingInformationForIdentifierEi, 0x00000000007a3320)
+NWNXLIB_FUNCTION(_ZN15CScriptCompiler8ShutDownEv, 0x000000000079a610)
+NWNXLIB_FUNCTION(_ZN15CScriptCompilerC1Ev, 0x000000000079e3b0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompilerC2Ev, 0x000000000079e3b0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompilerD1Ev, 0x000000000079e0e0)
+NWNXLIB_FUNCTION(_ZN15CScriptCompilerD2Ev, 0x000000000079e0e0)
+NWNXLIB_FUNCTION(_ZN15CScriptLocation12LoadLocationEP7CResGFFP10CResStruct, 0x000000000028fc40)
+NWNXLIB_FUNCTION(_ZN15CScriptLocation12SaveLocationEP7CResGFFP10CResStruct, 0x000000000028fd90)
+NWNXLIB_FUNCTION(_ZN15CScriptLocation18CopyScriptLocationEPS_, 0x000000000028fc10)
+NWNXLIB_FUNCTION(_ZN15CScriptLocationC1Ev, 0x000000000028fbd0)
+NWNXLIB_FUNCTION(_ZN15CScriptLocationC2Ev, 0x000000000028fbd0)
+NWNXLIB_FUNCTION(_ZN15CScriptLocationD1Ev, 0x000000000028fc00)
+NWNXLIB_FUNCTION(_ZN15CScriptLocationD2Ev, 0x000000000028fc00)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster10SetAILevelEP10CNWSObjecti, 0x00000000002f68f0)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster11UpdateStateEv, 0x00000000002f5250)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster12EventPendingEjj, 0x00000000002f5040)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster12RemoveObjectEP10CNWSObject, 0x00000000002f4c30)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster13GetScriptsRunEv, 0x00000000002f66f0)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster14LoadEventQueueEP7CResGFFP10CResStruct, 0x00000000002f65d0)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster14SaveEventQueueEP7CResGFFP10CResStruct, 0x00000000002f5ee0)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster15ClearEventQueueEv, 0x00000000002f4be0)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster15ClearScriptsRunEv, 0x00000000002f66e0)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster15DeleteEventDataEjPv, 0x00000000002f51a0)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster15GetPendingEventEPjS0_S0_S0_S0_PPv, 0x00000000002f5090)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster15OnEffectAppliedEP10CNWSObjectP11CGameEffecti, 0x00000000002f5120)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster15OnEffectRemovedEP10CNWSObjectP11CGameEffect, 0x00000000002f5140)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster17AddEventDeltaTimeEjjjjjPv, 0x00000000002f4ec0)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster17SetExoAppInternalEP21CServerExoAppInternal, 0x00000000002f4bd0)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster18AppendToScriptsRunE10CExoString, 0x00000000002f6810)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster20AddEventAbsoluteTimeEjjjjjPv, 0x00000000002f4c80)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster21OnItemPropertyAppliedEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x00000000002f5160)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster21OnItemPropertyRemovedEP8CNWSItemP15CNWItemPropertyP12CNWSCreaturej, 0x00000000002f5180)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster25LoadReputationAdjustmentsEv, 0x00000000002f74d0)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster27AddEventAbsoluteTimeViaTailEjjjjjPv, 0x00000000002f4da0)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster33AdjustTargetAndWitnessReputationsEjji, 0x00000000002f6d00)
+NWNXLIB_FUNCTION(_ZN15CServerAIMaster9AddObjectEP10CNWSObjecti, 0x00000000002f6930)
+NWNXLIB_FUNCTION(_ZN15CServerAIMasterC1Ev, 0x00000000002f6b20)
+NWNXLIB_FUNCTION(_ZN15CServerAIMasterC2Ev, 0x00000000002f6b20)
+NWNXLIB_FUNCTION(_ZN15CServerAIMasterD1Ev, 0x00000000002f6950)
+NWNXLIB_FUNCTION(_ZN15CServerAIMasterD2Ev, 0x00000000002f6950)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine11ExecuteCodeEPiPciP31CVirtualMachineDebuggingContext, 0x00000000007b9880)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine12DeleteScriptEP21CVirtualMachineScript, 0x00000000007b8b30)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine12GetScriptLogERK10CExoString, 0x00000000007b8c10)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine13RunScriptFileEi, 0x00000000007bb5a0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine13StackPopFloatEPf, 0x00000000007b8d70)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine14ReadScriptFileEP10CExoString, 0x00000000007bc440)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine14RunScriptChunkERK10CExoStringjii, 0x00000000007bd0e0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine14StackPopObjectEPj, 0x00000000007b91f0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine14StackPopStringEP10CExoString, 0x00000000007b8fb0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine14StackPopVectorEP6Vector, 0x00000000007b8e30)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine14StackPushFloatEf, 0x00000000007b8de0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine15SetDebugGUIFlagEi, 0x00000000007b97a0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine15StackPopIntegerEPi, 0x00000000007b8cc0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine15StackPushObjectEj, 0x00000000007b9250)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine15StackPushStringERK10CExoString, 0x00000000007b9030)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine15StackPushVectorE6Vector, 0x00000000007b8ed0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine16InitializeScriptEP21CVirtualMachineScriptPci, 0x00000000007b8ad0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine16StackPushIntegerEi, 0x00000000007b8d20)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine17PopInstructionPtrEPi, 0x00000000007b8ba0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine18PushInstructionPtrEi, 0x00000000007b8be0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine18RunScriptSituationEPvji, 0x00000000007bc700)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine20SetUpScriptSituationEP21CVirtualMachineScript, 0x00000000007bc610)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine21DeleteScriptSituationEPv, 0x00000000007b9730)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine21SetCommandImplementerEP29CVirtualMachineCmdImplementer, 0x00000000007b97b0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine22SetUpJITCompiledScriptERK10CExoStringi, 0x00000000007bcf70)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine23GetRunScriptReturnValueEPiPPv, 0x00000000007b8c90)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine23StackPopEngineStructureEiPPv, 0x00000000007b90c0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine24StackPopCommand_InternalEPP21CVirtualMachineScript, 0x00000000007b92a0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine24StackPushEngineStructureEiPv, 0x00000000007b9170)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine28LoadScriptSituation_InternalEPP21CVirtualMachineScriptP7CResGFFP10CResStruct, 0x00000000007b9460)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine28SaveScriptSituation_InternalEP21CVirtualMachineScriptP7CResGFFP10CResStruct, 0x00000000007bc8d0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine29Test_RunAllScriptsInDirectoryER10CExoString, 0x00000000007bb6e0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine8DebuggerEPi, 0x00000000007b97e0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachine9RunScriptEP10CExoStringji, 0x00000000007bcaa0)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachineC1Ev, 0x00000000007bbf40)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachineC2Ev, 0x00000000007bbf40)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachineD1Ev, 0x00000000007bd290)
+NWNXLIB_FUNCTION(_ZN15CVirtualMachineD2Ev, 0x00000000007bd290)
+NWNXLIB_FUNCTION(_ZN15NWVMachineUtils14SerializeToGffEP10CNWSObject, 0x00000000003bb860)
+NWNXLIB_FUNCTION(_ZN16CExoBaseInternal10CheckForCDEj, 0x00000000001043e0)
+NWNXLIB_FUNCTION(_ZN16CExoBaseInternal11LoadAliasesEi, 0x0000000000101ca0)
+NWNXLIB_FUNCTION(_ZN16CExoBaseInternal16GetDirectoryListEP13CExoArrayListI10CExoStringES1_tii, 0x00000000001043f0)
+NWNXLIB_FUNCTION(_ZN16CExoBaseInternal20GetResourceExtensionEt, 0x0000000000101bd0)
+NWNXLIB_FUNCTION(_ZN16CExoBaseInternal23GetResTypeFromExtensionERK10CExoString, 0x0000000000101c20)
+NWNXLIB_FUNCTION(_ZN16CExoBaseInternal24SpawnExternalApplicationERK10CExoStringS2_i, 0x0000000000104310)
+NWNXLIB_FUNCTION(_ZN16CExoBaseInternal25GetAugmentedDirectoryListEP13CExoArrayListI9CFileInfoE10CExoStringti, 0x00000000001048b0)
+NWNXLIB_FUNCTION(_ZN16CExoBaseInternal28CreateResourceExtensionTableEv, 0x0000000000100a80)
+NWNXLIB_FUNCTION(_ZN16CExoBaseInternal8AddAliasEi10CExoStringS0_, 0x0000000000101a50)
+NWNXLIB_FUNCTION(_ZN16CExoBaseInternal8ShutDownEv, 0x0000000000104300)
+NWNXLIB_FUNCTION(_ZN16CExoBaseInternalC1Ev, 0x0000000000101850)
+NWNXLIB_FUNCTION(_ZN16CExoBaseInternalC2Ev, 0x0000000000101850)
+NWNXLIB_FUNCTION(_ZN16CExoBaseInternalD1Ev, 0x00000000001009f0)
+NWNXLIB_FUNCTION(_ZN16CExoBaseInternalD2Ev, 0x00000000001009f0)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal10FileOpenedEv, 0x0000000000107eb0)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal13SeekBeginningEv, 0x0000000000108010)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal15SetMemoryBufferEPKvi, 0x0000000000107b00)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal17ReadAsyncCompleteEv, 0x0000000000107dd0)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal18ReadAsyncBytesReadEv, 0x0000000000107e00)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal3EofEv, 0x0000000000107e70)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal4ReadEP10CExoStringj, 0x0000000000107bc0)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal4ReadEPvjj, 0x0000000000107f10)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal4SeekEii, 0x0000000000107fa0)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal5FlushEv, 0x0000000000107ee0)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal5WriteEPKc, 0x0000000000107e30)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal7GetSizeEv, 0x0000000000107b90)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal7SeekEndEv, 0x0000000000108050)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal9GetOffsetEv, 0x0000000000107b60)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternal9ReadAsyncEPvjj, 0x0000000000107cf0)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternalC1EPKvi, 0x0000000000107a90)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternalC1ERK10CExoStringS2_, 0x0000000000107990)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternalC1ERK10CExoStringtS2_, 0x0000000000107610)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternalC2EPKvi, 0x0000000000107a90)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternalC2ERK10CExoStringS2_, 0x0000000000107990)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternalC2ERK10CExoStringtS2_, 0x0000000000107610)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternalD0Ev, 0x0000000000106b30)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternalD1Ev, 0x0000000000106ab0)
+NWNXLIB_FUNCTION(_ZN16CExoFileInternalD2Ev, 0x0000000000106ab0)
+NWNXLIB_FUNCTION(_ZN16CExoRandInternal11SignalEventEj, 0x000000000010a5b0)
+NWNXLIB_FUNCTION(_ZN16CExoRandInternal11SignalEventEv, 0x000000000010a490)
+NWNXLIB_FUNCTION(_ZN16CExoRandInternal3AddEPhi, 0x0000000000109ed0)
+NWNXLIB_FUNCTION(_ZN16CExoRandInternal4RandEv, 0x0000000000109c80)
+NWNXLIB_FUNCTION(_ZN16CExoRandInternal6ReSeedEjjjj, 0x0000000000109d20)
+NWNXLIB_FUNCTION(_ZN16CExoRandInternal7GenSeedEv, 0x0000000000109e10)
+NWNXLIB_FUNCTION(_ZN16CExoRandInternal9GetStringEt, 0x0000000000109fe0)
+NWNXLIB_FUNCTION(_ZN16CExoRandInternalC1Ev, 0x000000000010a170)
+NWNXLIB_FUNCTION(_ZN16CExoRandInternalC2Ev, 0x000000000010a170)
+NWNXLIB_FUNCTION(_ZN16CExoRandInternalD1Ev, 0x0000000000109c60)
+NWNXLIB_FUNCTION(_ZN16CExoRandInternalD2Ev, 0x0000000000109c60)
+NWNXLIB_FUNCTION(_ZN16CGameObjectArray13GetGameObjectEjPP11CGameObject, 0x00000000007c57d0)
+NWNXLIB_FUNCTION(_ZN16CGameObjectArray14AddObjectAtPosEjP11CGameObject, 0x00000000007c5230)
+NWNXLIB_FUNCTION(_ZN16CGameObjectArray17AddExternalObjectERjP11CGameObjecti, 0x00000000007c54e0)
+NWNXLIB_FUNCTION(_ZN16CGameObjectArray17AddInternalObjectERjP11CGameObjecti, 0x00000000007c5620)
+NWNXLIB_FUNCTION(_ZN16CGameObjectArray23AddCharacterObjectAtPosEjP11CGameObject, 0x00000000007c53e0)
+NWNXLIB_FUNCTION(_ZN16CGameObjectArray5CleanEt, 0x00000000007c57c0)
+NWNXLIB_FUNCTION(_ZN16CGameObjectArray6DeleteEj, 0x00000000007c5780)
+NWNXLIB_FUNCTION(_ZN16CGameObjectArray6DeleteEjPP11CGameObject, 0x00000000007c56f0)
+NWNXLIB_FUNCTION(_ZN16CGameObjectArrayC1Ei, 0x00000000007c5020)
+NWNXLIB_FUNCTION(_ZN16CGameObjectArrayC2Ei, 0x00000000007c5020)
+NWNXLIB_FUNCTION(_ZN16CGameObjectArrayD1Ev, 0x00000000007c5150)
+NWNXLIB_FUNCTION(_ZN16CGameObjectArrayD2Ev, 0x00000000007c5150)
+NWNXLIB_FUNCTION(_ZN16CNetworkProfiler11GetLastTimeEv, 0x0000000000111690)
+NWNXLIB_FUNCTION(_ZN16CNetworkProfiler12GetStartTimeEv, 0x0000000000111630)
+NWNXLIB_FUNCTION(_ZN16CNetworkProfiler12OutputReportEv, 0x0000000000110f50)
+NWNXLIB_FUNCTION(_ZN16CNetworkProfiler16GetFrameLastTimeEv, 0x00000000001116c0)
+NWNXLIB_FUNCTION(_ZN16CNetworkProfiler17GetFrameStartTimeEv, 0x0000000000111660)
+NWNXLIB_FUNCTION(_ZN16CNetworkProfiler17SetOutputFilenameEPc, 0x0000000000110e80)
+NWNXLIB_FUNCTION(_ZN16CNetworkProfiler19AddMessageToProfileEhhhj, 0x00000000001116f0)
+NWNXLIB_FUNCTION(_ZN16CNetworkProfiler24AddMessageToFrameProfileEhj, 0x0000000000111900)
+NWNXLIB_FUNCTION(_ZN16CNetworkProfiler8SetStateEi, 0x0000000000111400)
+NWNXLIB_FUNCTION(_ZN16CNetworkProfilerC1Ev, 0x0000000000110d70)
+NWNXLIB_FUNCTION(_ZN16CNetworkProfilerC2Ev, 0x0000000000110d70)
+NWNXLIB_FUNCTION(_ZN16CNetworkProfilerD1Ev, 0x0000000000110d00)
+NWNXLIB_FUNCTION(_ZN16CNetworkProfilerD2Ev, 0x0000000000110d00)
+NWNXLIB_FUNCTION(_ZN16CNWBaseItemArray25GetDefaultWeaponFocusFeatEj, 0x00000000007ca6a0)
+NWNXLIB_FUNCTION(_ZN16CNWBaseItemArray28GetDefaultWeaponOfChoiceFeatEj, 0x00000000007ca780)
+NWNXLIB_FUNCTION(_ZN16CNWBaseItemArray29GetDefaultEpicWeaponFocusFeatEj, 0x00000000007ca6c0)
+NWNXLIB_FUNCTION(_ZN16CNWBaseItemArray34GetDefaultWeaponSpecializationFeatEj, 0x00000000007ca6e0)
+NWNXLIB_FUNCTION(_ZN16CNWBaseItemArray36GetDefaultWeaponImprovedCriticalFeatEj, 0x00000000007ca720)
+NWNXLIB_FUNCTION(_ZN16CNWBaseItemArray38GetDefaultEpicWeaponSpecializationFeatEj, 0x00000000007ca700)
+NWNXLIB_FUNCTION(_ZN16CNWBaseItemArray43GetDefaultEpicWeaponDevastatingCriticalFeatEj, 0x00000000007ca760)
+NWNXLIB_FUNCTION(_ZN16CNWBaseItemArray44GetDefaultEpicWeaponOverwhelmingCriticalFeatEj, 0x00000000007ca740)
+NWNXLIB_FUNCTION(_ZN16CNWBaseItemArray4LoadEv, 0x00000000007c8cb0)
+NWNXLIB_FUNCTION(_ZN16CNWBaseItemArrayC1Ev, 0x00000000007c8bb0)
+NWNXLIB_FUNCTION(_ZN16CNWBaseItemArrayC2Ev, 0x00000000007c8bb0)
+NWNXLIB_FUNCTION(_ZN16CNWBaseItemArrayD1Ev, 0x00000000007c8bd0)
+NWNXLIB_FUNCTION(_ZN16CNWBaseItemArrayD2Ev, 0x00000000007c8bd0)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageData10GetIntegerEi, 0x00000000001b4030)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageData10SetIntegerEii, 0x00000000001b5ca0)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageData11GetObjectIDEi, 0x00000000001b4070)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageData11SetObjectIDEij, 0x00000000001b5d20)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageData6CopyToEPS_, 0x00000000001b6280)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageData8GetFloatEi, 0x00000000001b4050)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageData8LoadDataEP7CResGFFP10CResStruct, 0x00000000001b5e40)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageData8SaveDataEP7CResGFFP10CResStruct, 0x00000000001b40e0)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageData8SetFloatEif, 0x00000000001b5ce0)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageData9ClearDataEv, 0x00000000001b4310)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageData9GetStringEi, 0x00000000001b4090)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageData9SetStringEi10CExoString, 0x00000000001b5d60)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageDataC1Ev, 0x00000000001b3f00)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageDataC2Ev, 0x00000000001b3f00)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageDataD1Ev, 0x00000000001b3f70)
+NWNXLIB_FUNCTION(_ZN16CNWCCMessageDataD2Ev, 0x00000000001b3f70)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound13SetMusicDelayEi, 0x00000000003bd5e0)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound15PackIntoMessageEP11CNWSMessage, 0x00000000003be140)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound15PlayBattleMusicEi, 0x00000000003bd8a0)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound16GetPlayersInAreaEP13CExoArrayListIjE, 0x00000000003bd330)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound16PlayAmbientSoundEi, 0x00000000003bda80)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound16SetMusicDayTrackEi, 0x00000000003bd6d0)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound18SetAmbientDayTrackEi, 0x00000000003bdb60)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound18SetMusicNightTrackEi, 0x00000000003bd7b0)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound19SetAmbientDayVolumeEi, 0x00000000003bdd40)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound19SetBattleMusicTrackEi, 0x00000000003bd990)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound20SetAmbientNightTrackEi, 0x00000000003bdc50)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound21SetAmbientNightVolumeEi, 0x00000000003bde30)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound4LoadEP7CResGFFP10CResStruct, 0x00000000003bdf20)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound4SaveEP7CResGFFP10CResStruct, 0x00000000003be060)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSound9PlayMusicEi, 0x00000000003bd500)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSoundC1Ej, 0x00000000003bd2d0)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSoundC2Ej, 0x00000000003bd2d0)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSoundD0Ev, 0x0000000000335870)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSoundD1Ev, 0x00000000003359a0)
+NWNXLIB_FUNCTION(_ZN16CNWSAmbientSoundD2Ev, 0x00000000003359a0)
+NWNXLIB_FUNCTION(_ZN16CNWSForcedAction16LoadForcedActionEP7CResGFFP10CResStruct, 0x0000000000273a30)
+NWNXLIB_FUNCTION(_ZN16CNWSForcedAction16SaveForcedActionEP7CResGFFP10CResStruct, 0x0000000000273960)
+NWNXLIB_FUNCTION(_ZN16CNWSForcedActionC1Ev, 0x0000000000273910)
+NWNXLIB_FUNCTION(_ZN16CNWSForcedActionC2Ev, 0x0000000000273910)
+NWNXLIB_FUNCTION(_ZN16CNWSForcedActionD1Ev, 0x0000000000273950)
+NWNXLIB_FUNCTION(_ZN16CNWSForcedActionD2Ev, 0x0000000000273950)
+NWNXLIB_FUNCTION(_ZN17CExoDebugInternal12FlushLogFileEv, 0x0000000000105980)
+NWNXLIB_FUNCTION(_ZN17CExoDebugInternal12OpenLogFilesE10CExoStringi, 0x0000000000105f90)
+NWNXLIB_FUNCTION(_ZN17CExoDebugInternal13CloseLogFilesEv, 0x0000000000105940)
+NWNXLIB_FUNCTION(_ZN17CExoDebugInternal14FlushErrorFileEv, 0x0000000000105960)
+NWNXLIB_FUNCTION(_ZN17CExoDebugInternal14WriteToLogFileERK10CExoString, 0x0000000000105c50)
+NWNXLIB_FUNCTION(_ZN17CExoDebugInternal15CreateDirectoryE10CExoString, 0x0000000000105ea0)
+NWNXLIB_FUNCTION(_ZN17CExoDebugInternal16WriteToErrorFileERK10CExoString, 0x0000000000105a80)
+NWNXLIB_FUNCTION(_ZN17CExoDebugInternal19GetCurrentTimestampER10CExoString, 0x0000000000105e20)
+NWNXLIB_FUNCTION(_ZN17CExoDebugInternal6AssertEiPKcS1_, 0x0000000000105860)
+NWNXLIB_FUNCTION(_ZN17CExoDebugInternal7WarningEiPKcS1_, 0x00000000001059a0)
+NWNXLIB_FUNCTION(_ZN17CExoDebugInternalC1Ev, 0x00000000001057d0)
+NWNXLIB_FUNCTION(_ZN17CExoDebugInternalC2Ev, 0x00000000001057d0)
+NWNXLIB_FUNCTION(_ZN17CExoDebugInternalD1Ev, 0x0000000000105830)
+NWNXLIB_FUNCTION(_ZN17CExoDebugInternalD2Ev, 0x0000000000105830)
+NWNXLIB_FUNCTION(_ZN17CLastUpdateObject18InitializeQuickbarEv, 0x00000000002baa50)
+NWNXLIB_FUNCTION(_ZN17CLastUpdateObjectC1Ev, 0x00000000002ba400)
+NWNXLIB_FUNCTION(_ZN17CLastUpdateObjectC2Ev, 0x00000000002ba400)
+NWNXLIB_FUNCTION(_ZN17CLastUpdateObjectD1Ev, 0x00000000002ba920)
+NWNXLIB_FUNCTION(_ZN17CLastUpdateObjectD2Ev, 0x00000000002ba920)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal10InitializeEP11CBaseExoApp, 0x000000000012b920)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal11EndProtocolEj, 0x000000000012c9b0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal12StoreMessageEPhj, 0x000000000012dbe0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal13CRCBuildTableEv, 0x000000000012ea50)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal13EndServerModeEv, 0x000000000012cd10)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal13StartProtocolEjjjj, 0x000000000012c930)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal14CRCEncodeFrameEPhj, 0x000000000012eae0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal14CRCVerifyFrameEPhj, 0x000000000012eb00)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal14FindPlayerNameE10CExoStringj, 0x00000000001320a0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal14GetSessionInfoEj, 0x000000000012dd50)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal14GetSessionNameEv, 0x000000000012dc20)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal14MessageArrivedEjjji, 0x000000000012bd00)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal14SetSessionNameE10CExoString, 0x000000000012dc50)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal15SendBNCRMessageEjhj, 0x0000000000130130)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal15SendBNCSMessageEjhiRK10CExoStringS2_S2_, 0x000000000012fa10)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal15SendBNDMMessageEj, 0x00000000001319c0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal15SendBNDPMessageEjjRK10CExoString, 0x0000000000131b00)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal15SendBNDSMessageEj, 0x00000000001318f0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal15SendBNLMMessageEjj, 0x0000000000131480)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal15SendBNVRMessageEjh, 0x0000000000130680)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal15SendBNVSMessageEPK13CExoArrayListI10CExoStringERKS1_S6_, 0x0000000000133ef0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal15StartServerModeE10CExoStringj, 0x000000000012ca30)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal16DisconnectPlayerEjjiiRK10CExoString, 0x0000000000131be0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal16GetIPBySessionIdEjP10CExoString, 0x00000000001347c0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal16GetPlayerAddressEji, 0x000000000012e640)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal16GetSendUDPSocketEv, 0x000000000012ea00)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal16PurgeConnectionsEv, 0x000000000012c620)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal16SetSlidingWindowEjPj, 0x000000000012c790)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal16UpdateStatusLoopEj, 0x00000000001361b0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17GetPlayerPasswordEv, 0x000000000012cb90)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17GetSessionSectionEj, 0x0000000000135520)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17GetUDPRecievePortEv, 0x000000000012dc70)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNCRMessageEjPhj, 0x0000000000138010)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNCSMessageEjPhj, 0x00000000001321c0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNDMMessageEjPhj, 0x0000000000131fd0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNDPMessageEjPhj, 0x000000000012e060)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNDRMessageEjPhj, 0x000000000012d4a0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNDSMessageEjPhj, 0x0000000000130db0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNERMessageEjPhj, 0x0000000000133670)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNESMessageEjPhj, 0x000000000012f070)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNK0MessageEjPhm, 0x000000000012c8a0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNK1MessageEjPhm, 0x0000000000131da0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNK2MessageEjPhm, 0x000000000012f6c0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNK3MessageEjPhm, 0x000000000012f5a0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNK4MessageEjPhm, 0x000000000012fda0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNLMMessageEjPhj, 0x00000000001317b0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNLRMessageEjPhj, 0x0000000000131780)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNVRMessageEjPhj, 0x000000000012e230)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNVSMessageEjPhj, 0x0000000000138a30)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNXIMessageEjPhj, 0x0000000000133f10)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17HandleBNXRMessageEjPhj, 0x0000000000139ae0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17NonWindowMessagesEjPhj, 0x000000000013a660)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17SendBNKAnyMessageEjNS_8KXPacketEPKh, 0x000000000012f3a0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17SendDirectMessageEjPhjjj, 0x000000000012eb20)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17SetPlayerPasswordE10CExoString, 0x000000000012cbe0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17SetServerLanguageEi, 0x000000000012c9c0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal17UncompressMessageEjPhj, 0x000000000012bd20)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal18GetConnectionErrorEv, 0x000000000012de00)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal18GetLocalPrivilegesEj, 0x000000000012cd30)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal18GetPortBySessionIdEj, 0x000000000012dc90)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal18GetServerConnectedEv, 0x000000000012e770)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal18SetPlayerConnectedEj, 0x000000000012e430)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal19EndConnectToSessionEv, 0x000000000012dda0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal19GetPasswordRequiredEv, 0x000000000012cb60)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal19SendMessageToPlayerEjPhjj, 0x0000000000136f30)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal20ConnectToSessionLoopEv, 0x000000000012de40)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal20EndEnumerateSessionsEv, 0x000000000012ce20)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal20GetPlayerAddressDataEjPjPPhS2_S0_, 0x000000000012d290)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal20GetServerPlayerCountEv, 0x000000000012e920)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal20GetSessionMaxPlayersEv, 0x000000000012dbf0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal20SendMessageToAddressEjPhj, 0x000000000012eff0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal20SetSessionMaxPlayersEj, 0x000000000012dc00)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal21DisconnectFromSessionEv, 0x0000000000131ab0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal21EndAddressTranslationERK10CExoString, 0x000000000012e760)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal21EnumerateSessionsListEh, 0x0000000000130bf0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal21EnumerateSessionsLoopEv, 0x0000000000130730)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal21GetGameMasterPasswordEv, 0x000000000012cc10)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal21GetLocalAdapterStringEjj, 0x000000000012c9e0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal21GetSessionSectionSizeEj, 0x0000000000135500)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal21ProcessReceivedFramesEi, 0x000000000013a880)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal21SetGameMasterPasswordE10CExoString, 0x000000000012cc60)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal21SetNetworkAddressDataEjPhS0_j15RelayModeChangePKc, 0x000000000012db20)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal21SetSessionInfoChangedEji, 0x000000000012bc70)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal21SetSteamLobbyMetaDataEi, 0x0000000000134dd0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal21StartConnectToSessionEjRK10CExoStringiS2_jjS2_S2_S2_, 0x000000000012fdc0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal22DropConnectionToServerEv, 0x000000000012ded0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal22GetNumberLocalAdaptersEj, 0x000000000012c9d0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal22GetServerAdminPasswordEv, 0x000000000012cc90)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal22GetSessionSectionStartEj, 0x00000000001354b0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal22IsConnectedToLocalhostEv, 0x000000000012df70)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal22OpenStandardConnectionEi10CExoStringi, 0x0000000000134700)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal22PlayerIdToConnectionIdEjPj, 0x000000000012c750)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal22SetServerAdminPasswordE10CExoString, 0x000000000012cce0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal22StartEnumerateSessionsEPjiPhti, 0x0000000000135860)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal23ClearSessionInfoChangedEj, 0x000000000012d1f0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal23CloseStandardConnectionEi, 0x00000000001347b0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal23GetPlayerAddressRelayedEj, 0x000000000012e6e0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal23GetServerNetworkAddressEv, 0x000000000012e7b0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal23PlacePacketInSendQueuesEjiPhji, 0x0000000000135d50)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal23PlayerIdToSlidingWindowEjPj, 0x000000000012c700)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal23SetUpPlayBackConnectionEv, 0x000000000012c880)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal23StartAddressTranslationERK10CExoString, 0x000000000012e740)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal24CleanUpEnumerateSpecificEv, 0x000000000012cf70)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal25BroadcastMessageToAddressEjjPhj, 0x000000000012f030)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal25CheckMasterServerTimeoutsEv, 0x0000000000134960)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal25RequestExtendedServerInfoEjii, 0x0000000000133640)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal26GetWindowSendIdByReceiveIdEjPj, 0x000000000012e970)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal26IsPlayerIpSameAsConnectionEjj, 0x000000000012e9d0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal26ResetEnumerateSessionsListEh, 0x000000000012d040)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal27ConnectionIdToSlidingWindowEjPj, 0x000000000012c6b0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal27EndEnumerateSessionsSectionEj, 0x000000000012ce00)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal27GetAddressTranslationResultERK10CExoStringR13CExoArrayListIjE, 0x000000000012e750)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal27GetRouterPortMapDescriptionEv, 0x0000000000135560)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal28PacketizeSendMessageToPlayerEjPhjj, 0x0000000000136a60)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal29PacketizeSmallMessageToPlayerEjPhjj, 0x0000000000136510)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal29StartEnumerateSessionsSectionEjjP10CExoString, 0x000000000012cd90)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal30SendBNESDirectMessageToAddressE10CExoStringh, 0x0000000000130900)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal31SendMessageToStandardConnectionEiPci, 0x00000000001347a0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal32GetMessageFromStandardConnectionEPiPPcS0_, 0x0000000000134790)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal33ShutDownClientInterfaceWithReasonEjRK10CExoString, 0x000000000012ea10)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal37SetCurrentMasterServerInternetAddressEjj, 0x000000000012e9f0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal40ValidatePlayerAgainstLastSuccessfulLoginE10CExoStringS0_, 0x0000000000134880)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal7EndPingEj, 0x000000000012d0e0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal8CRCBlockEPhj, 0x000000000012eaa0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal8ShutDownEv, 0x000000000012bce0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal9GetExoAppEv, 0x000000000012bc60)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternal9StartPingEj, 0x00000000001315b0)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternalC1Ev, 0x0000000000137a20)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternalC2Ev, 0x0000000000137a20)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternalD1Ev, 0x0000000000137880)
+NWNXLIB_FUNCTION(_ZN17CNetLayerInternalD2Ev, 0x0000000000137880)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10CanLevelUpEv, 0x000000000022f780)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10ClearFeatsEv, 0x000000000022b1f0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10GetCHAStatEv, 0x0000000000230800)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10GetCONStatEv, 0x00000000002304b0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10GetDEXStatEv, 0x0000000000230390)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10GetDomain1Eh, 0x000000000022f4f0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10GetDomain2Eh, 0x000000000022f540)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10GetINTStatEv, 0x0000000000230620)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10GetIsClassEh, 0x000000000022a3a0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10GetSTRStatEv, 0x00000000002302a0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10GetWISStatEv, 0x0000000000230710)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10RemoveFeatEt, 0x000000000022dec0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10SetCHABaseEh, 0x0000000000230880)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10SetCONBaseEhi, 0x0000000000230530)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10SetDEXBaseEh, 0x0000000000230450)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10SetDomain1Ehh, 0x000000000022f4d0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10SetDomain2Ehh, 0x000000000022f520)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10SetINTBaseEh, 0x00000000002306a0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10SetSTRBaseEh, 0x0000000000230320)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats10SetWISBaseEh, 0x0000000000230790)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats11GetFullNameEv, 0x0000000000229020)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats11GetStatByIdEi, 0x0000000000243090)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats11SetStatByIdEif, 0x0000000000248900)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats12FeatAcquiredEtP13CExoArrayListItEi, 0x000000000022f9a0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats12GetBonusFeatEt, 0x0000000000234550)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats12GetClassInfoEh, 0x000000000022a370)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats12GetSkillRankEhP10CNWSObjecti, 0x000000000022bfc0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats12SetSkillRankEhc, 0x000000000022b1c0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats12UnReadySpellEjhhh, 0x0000000000245810)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats13AddExperienceEj, 0x000000000024c710)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats13AddKnownSpellEhj, 0x000000000024ad10)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats13CanChooseFeatEthhP13CExoArrayListItE, 0x0000000000243c30)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats13GetAbilityModEh, 0x000000000022fa30)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats13GetClassLevelEhi, 0x000000000022a400)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats13GetDamageRollEP10CNWSObjectiiiii, 0x0000000000239150)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats13GetKnownSpellEhhh, 0x000000000022e0d0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats13GetLevelStatsEh, 0x000000000022a480)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats13GetPrimaryModEh, 0x000000000022fab0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats13GetRaceStringEv, 0x000000000022a9a0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats13SaveClassInfoEP7CResGFFP10CResStruct, 0x00000000002356c0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats13SetClassLevelEhh, 0x00000000002312e0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats13SetExperienceEji, 0x000000000024c440)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats14GetAbilityInfoEhPhPcS0_S1_, 0x00000000002308c0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats14GetCanUseSkillEh, 0x000000000022dc70)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats14GetCasterLevelEh, 0x0000000000234490)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats14GetClassStringEh, 0x000000000022aa80)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats14GetDamageBonusEP12CNWSCreaturei, 0x00000000002374e0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats14GetWeaponFocusEP8CNWSItem, 0x000000000022e720)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats15AdjustAlignmentEhsj, 0x0000000000247b40)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats15GetSpellFailureEh, 0x0000000000237110)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats15ModifyAlignmentEss, 0x0000000000247960)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats15ReadySpellLevelEh, 0x0000000000231040)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats15SetMovementRateEi, 0x000000000022fb90)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats15SetSpellFailureEhh, 0x0000000000237130)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats15ValidateLevelUpEP13CNWLevelStatshhh, 0x0000000000251be0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16CalcStatModifierEh, 0x000000000022ab10)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16GetACNaturalBaseEi, 0x0000000000231f50)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16GetFeatTotalUsesEt, 0x0000000000236680)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16GetIsDomainSpellEhhh, 0x000000000022e040)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16GetLargePortraitEv, 0x000000000022a8f0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16GetSmallPortraitEv, 0x000000000022a840)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16GetSpellUsesLeftEjhhh, 0x0000000000245500)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16GetTotalCHABonusEv, 0x00000000002307d0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16GetTotalCONBonusEv, 0x0000000000230480)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16GetTotalDEXBonusEv, 0x0000000000230360)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16GetTotalINTBonusEv, 0x00000000002305f0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16GetTotalSTRBonusEv, 0x0000000000230270)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16GetTotalWISBonusEv, 0x00000000002306e0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16GetWeaponFinesseEP8CNWSItem, 0x000000000022e640)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16LevelUpAutomaticEhih, 0x0000000000252810)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16ReadStatsFromGffEP7CResGFFP10CResStructP26CNWSCreatureAppearanceInfoiii, 0x000000000024ca40)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats16RemoveKnownSpellEhj, 0x0000000000246320)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats17GetEffectImmunityEhP12CNWSCreaturei, 0x0000000000234580)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats17GetPotentialLevelEv, 0x000000000022aff0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats17ReadSpellsFromGffEP7CResGFFP10CResStructi, 0x000000000024ad30)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats17RunDataMigrationsEv, 0x0000000000246170)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18AutoMemorizeSpellsEi, 0x000000000024f760)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18ComputeFeatBonusesEP13CExoArrayListItEi, 0x000000000023e190)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18ConfirmDomainSpellEhhj, 0x000000000022e000)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18GetAlignmentStringEv, 0x000000000022acb0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18GetAttacksPerRoundEv, 0x000000000023e4f0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18GetBaseAttackBonusEi, 0x000000000023e3e0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18GetCriticalHitRollEi, 0x00000000002371a0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18GetEpicWeaponFocusEP8CNWSItem, 0x000000000022e780)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18GetFeatSourceClassEt, 0x000000000023c010)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18GetFortSavingThrowEi, 0x0000000000243450)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18GetHasStilledSpellEj, 0x000000000022e4f0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18GetSpellcastingModEh, 0x000000000022fb20)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18GetSpellResistanceEv, 0x00000000002319a0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18GetTotalACSkillModEv, 0x000000000023c0c0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18GetWillSavingThrowEi, 0x0000000000244230)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats18SetSpellResistanceEc, 0x00000000002488e0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats19FeatRequirementsMetEtP13CExoArrayListItE, 0x0000000000243580)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats19GetArmorClassVersusEP12CNWSCreaturei, 0x0000000000232220)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats19GetHasSilencedSpellEj, 0x000000000022e390)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats19GetIsClassAvailableEh, 0x00000000002519c0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats19GetIsWeaponOfChoiceEj, 0x0000000000237150)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats19GetMeleeAttackBonusEiii, 0x000000000023e560)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats19GetMeleeDamageBonusEih, 0x000000000022e8a0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats19GetNumLevelsOfClassEh, 0x00000000002453e0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats19GetNumLevelsOfClassEhi, 0x000000000023e3b0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats19GetSpellsPerDayLeftEhh, 0x000000000022f400)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats19GetUnarmedDamageDieEv, 0x0000000000229650)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats19SetNormalBonusFlagsEtRiS0_, 0x000000000022f870)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats20GetCreatureDamageDieEh, 0x000000000022a0a0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats20GetCreatureHasTalentEiih, 0x0000000000245f00)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats20GetFavoredEnemyBonusEP12CNWSCreature, 0x0000000000233eb0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats20GetFeatRemainingUsesEt, 0x0000000000234c90)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats20GetHighestLevelKnownEv, 0x000000000022e2a0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats20GetNumberKnownSpellsEhh, 0x000000000022e270)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats20GetRangedAttackBonusEii, 0x000000000023edb0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats20GetRangedDamageBonusEv, 0x000000000022ebb0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats20GetReflexSavingThrowEi, 0x00000000002445d0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats20GetUnarmedDamageDiceEv, 0x0000000000229320)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats20GetUnarmedDamageRollEP10CNWSObject, 0x000000000022a200)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats20SetFeatRemainingUsesEth, 0x0000000000248bf0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats21AdjustSpellUsesPerDayEv, 0x00000000002348f0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats21CheckSpellSuitabilityEiP8CNWSpelliiiiiiRhi, 0x0000000000245f30)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats21GetCreatureDamageDiceEh, 0x0000000000229f40)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats21GetHighestLevelOfFeatEt, 0x0000000000234c00)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats21GetIsInKnownSpellListEhj, 0x0000000000230160)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats21GetSpellGainWithBonusEhh, 0x0000000000230ac0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats21GetSpellMinAbilityMetEhh, 0x0000000000231370)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats21GetSpellsOfLevelReadyEhh, 0x000000000023c1c0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats21ResetSpellsPerDayLeftEhh, 0x0000000000231020)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats21SetArcaneSpellFailureEc, 0x00000000002488c0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats21SetMemorizedSpellSlotEhhjhhi, 0x00000000002317f0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats21UpdateLastStatsObjectEmP22CNWCreatureStatsUpdate, 0x00000000002463e0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats22CalcLevelUpNumberFeatsEhhRhS0_, 0x0000000000234b00)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats22GetBaseFortSavingThrowEv, 0x00000000002431e0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats22GetBaseWillSavingThrowEv, 0x0000000000243f70)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats22GetClassNegativeLevelsEh, 0x000000000022a450)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats22GetExpNeededForLevelUpEv, 0x000000000022afd0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats22GetNumberOfBonusSpellsEhh, 0x0000000000234310)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats22GetTotalNegativeLevelsEv, 0x000000000023c170)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats22GetUseMonkAttackTablesEi, 0x0000000000229260)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats22ResetFeatRemainingUsesEv, 0x000000000022ddf0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats22SetClassNegativeLevelsEhh, 0x0000000000231310)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats23ClearMemorizedSpellSlotEhhh, 0x000000000022e090)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats23GetAttackModifierVersusEP12CNWSCreature, 0x000000000023f600)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats23GetClassesAbilityAdjustEi, 0x000000000022a680)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats23GetCreatureTalentRandomEiiRiS0_RhRjS0_S1_S1_, 0x0000000000250e60)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats23GetIsEpitomeOfAlignmentEv, 0x000000000022a510)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats23GetMemorizedSpellInSlotEhhh, 0x000000000022e120)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats23GetStatBonusesFromFeatsEP13CExoArrayListItEPii, 0x000000000023c260)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats23GetWeaponSpecializationEP8CNWSItem, 0x000000000022e7e0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats23ModifyNumberBonusSpellsEhhi, 0x0000000000234350)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats23ResetSpellLikeAbilitiesEv, 0x00000000002300d0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats23UpdateCombatInformationEv, 0x00000000002468c0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats24GetBaseReflexSavingThrowEv, 0x0000000000244360)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats24GetCanUseRelatedCategoryEii, 0x0000000000234a40)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats24GetCriticalHitMultiplierEi, 0x00000000002373d0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats24GetHasLostClassAbilitiesEh, 0x000000000022a4b0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats24SetHasLostClassAbilitiesEhi, 0x000000000022a4e0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats24SetSpellLikeAbilityReadyEjih, 0x0000000000230020)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats25AddSpellLikeAbilityToListEjih, 0x000000000022fed0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats25DecrementSpellsPerDayLeftEhh, 0x000000000022f440)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats25GetWeaponImprovedCriticalEP8CNWSItem, 0x000000000022f2e0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats25IncrementSpellsPerDayLeftEhh, 0x000000000022f470)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats25SetSpellResistancePenaltyEc, 0x0000000000248ad0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats26DecrementFeatRemainingUsesEt, 0x000000000022de30)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats26GetCanUseSkillAfterLevelUpEtP13CNWLevelStats, 0x000000000023ad70)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats26GetSimpleAlignmentGoodEvilEv, 0x000000000022a650)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats26GetSimpleAlignmentLawChaosEv, 0x000000000022a620)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats26IncrementFeatRemainingUsesEt, 0x000000000022de70)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats27GetCreatureTalentRandomFeatEiiRiS0_Rh, 0x0000000000248fc0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats27GetEpicWeaponSpecializationEP8CNWSItem, 0x000000000022e840)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats27GetIsInSpellLikeAbilityListEj, 0x0000000000230110)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats27GetMemorizedSpellReadyCountEhjh, 0x0000000000231df0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats27GetMemorizedSpellReadyCountEhjPhS0_, 0x0000000000231db0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats27GetMemorizedSpellReadyCountEj, 0x0000000000231e60)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats28ComputeNumberKnownSpellsLeftEhh, 0x0000000000231820)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats28GetCreatureTalentRandomSkillEiiRiS0_Rh, 0x0000000000249170)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats28GetCreatureTalentRandomSpellEiiRiS0_RhS1_, 0x0000000000249f60)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats28GetMemorizedSpellInSlotReadyEhhh, 0x000000000022e170)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats28GetMetamagicPrerequisitesMetEh, 0x0000000000245450)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats28GetNumberMemorizedSpellSlotsEhh, 0x000000000022e310)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats28SetMemorizedSpellInSlotReadyEhhhi, 0x000000000022e1c0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats28SetNumberMemorizedSpellSlotsEhhh, 0x000000000022e360)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats30GetSpellLikeAbilityCasterLevelEj, 0x0000000000234aa0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats31FeatRequirementsMetAfterLevelUpEtP13CNWLevelStatsh, 0x000000000023b500)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats31GetEffectiveCRForPotentialLevelEv, 0x000000000022b090)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats31GetMemorizedSpellInSlotMetaTypeEhhh, 0x000000000022e210)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats31ResolveSpecialAttackAttackBonusEP12CNWSCreature, 0x000000000022b390)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats31ResolveSpecialAttackDamageBonusEP12CNWSCreature, 0x000000000022b7b0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats31UpdateNumberMemorizedSpellSlotsEv, 0x00000000002311a0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats32GetEpicWeaponDevastatingCriticalEP8CNWSItem, 0x000000000022f3a0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats33GetCreatureTalentRandomKnownSpellEiiRiS0_Rhi, 0x0000000000249380)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats33GetEpicWeaponOverwhelmingCriticalEP8CNWSItem, 0x000000000022f340)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats33GetMeetsPrestigeClassRequirementsEP8CNWClass, 0x00000000002510b0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats33GetSpellGainWithBonusAfterLevelUpEhhP13CNWLevelStatshi, 0x000000000023af30)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats36GetCreatureTalentRandomSpellFromItemEiiRiS0_RhRjS0_, 0x0000000000250630)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats37GetCreatureTalentRandomMemorisedSpellEiiRiS0_RhiS1_, 0x00000000002498d0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats39GetCreatureTalentRandomSpellLikeAbilityEiiRiS0_RhS1_, 0x0000000000248cc0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats6GetTagEv, 0x000000000022af00)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats6SetTagERK10CExoString, 0x000000000022af10)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats7AddFeatEt, 0x0000000000248af0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats7GetFeatEt, 0x0000000000234460)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats7HasFeatEt, 0x000000000022b270)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats7LevelUpEP13CNWLevelStatshhhi, 0x000000000024b220)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats8GetClassEh, 0x000000000022a340)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats8GetLevelEi, 0x00000000002290f0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats8SetClassEhh, 0x00000000002312b0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats9GetDEXModEi, 0x000000000022a750)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats9GetHitDieEhh, 0x000000000022f570)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats9GetSchoolEh, 0x000000000022f4a0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats9LevelDownEP13CNWLevelStats, 0x000000000024baf0)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats9SaveStatsEP7CResGFFP10CResStruct, 0x0000000000244700)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStats9SetSchoolEhh, 0x0000000000231340)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStatsC1EP12CNWSCreature, 0x000000000024a320)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStatsC2EP12CNWSCreature, 0x000000000024a320)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStatsD1Ev, 0x000000000024a110)
+NWNXLIB_FUNCTION(_ZN17CNWSCreatureStatsD2Ev, 0x000000000024a110)
+NWNXLIB_FUNCTION(_ZN17CNWSDungeonMaster15PossessCreatureEjh, 0x000000000034b9a0)
+NWNXLIB_FUNCTION(_ZN17CNWSDungeonMaster18AsNWSDungeonMasterEv, 0x00000000002e3f10)
+NWNXLIB_FUNCTION(_ZN17CNWSDungeonMasterC1Ej, 0x000000000034b960)
+NWNXLIB_FUNCTION(_ZN17CNWSDungeonMasterC2Ej, 0x000000000034b960)
+NWNXLIB_FUNCTION(_ZN17CNWSDungeonMasterD0Ev, 0x000000000034bfd0)
+NWNXLIB_FUNCTION(_ZN17CNWSDungeonMasterD1Ev, 0x000000000034bfb0)
+NWNXLIB_FUNCTION(_ZN17CNWSDungeonMasterD2Ev, 0x000000000034bfb0)
+NWNXLIB_FUNCTION(_ZN17CNWTileSetManager15GetTilePathNodeEhh, 0x00000000001b3040)
+NWNXLIB_FUNCTION(_ZN17CNWTileSetManager15RegisterTileSetE7CResRef, 0x00000000001b0fa0)
+NWNXLIB_FUNCTION(_ZN17CNWTileSetManager17UnregisterTileSetEP10CNWTileSet, 0x00000000001b1100)
+NWNXLIB_FUNCTION(_ZN17CNWTileSetManager18ClearTilePathNodesEv, 0x00000000001b11e0)
+NWNXLIB_FUNCTION(_ZN17CNWTileSetManager23ComputePathNodeRotationEiPfS0_, 0x00000000001b1310)
+NWNXLIB_FUNCTION(_ZN17CNWTileSetManager23InitializeTilePathNodesEv, 0x00000000001b1190)
+NWNXLIB_FUNCTION(_ZN17CNWTileSetManager26ComputePathNodeInformationEhiRiS0_PPfS2_PPi, 0x00000000001b13c0)
+NWNXLIB_FUNCTION(_ZN17CNWTileSetManagerC1Ev, 0x00000000001b0f30)
+NWNXLIB_FUNCTION(_ZN17CNWTileSetManagerC2Ev, 0x00000000001b0f30)
+NWNXLIB_FUNCTION(_ZN17CNWTileSetManagerD1Ev, 0x00000000001b12c0)
+NWNXLIB_FUNCTION(_ZN17CNWTileSetManagerD2Ev, 0x00000000001b12c0)
+NWNXLIB_FUNCTION(_ZN17CScriptSourceFile10LoadScriptERK10CExoStringPPcPj, 0x000000000079cf50)
+NWNXLIB_FUNCTION(_ZN17CScriptSourceFile12UnloadScriptEv, 0x000000000079cff0)
+NWNXLIB_FUNCTION(_ZN17CScriptSourceFileC1Ev, 0x000000000079cf20)
+NWNXLIB_FUNCTION(_ZN17CScriptSourceFileC2Ev, 0x000000000079cf20)
+NWNXLIB_FUNCTION(_ZN17CScriptSourceFileD0Ev, 0x000000000079ed40)
+NWNXLIB_FUNCTION(_ZN17CScriptSourceFileD1Ev, 0x000000000079ed20)
+NWNXLIB_FUNCTION(_ZN17CScriptSourceFileD2Ev, 0x000000000079ed20)
+NWNXLIB_FUNCTION(_ZN18CCombatInformation8LoadDataEP7CResGFFP10CResStruct, 0x00000000007d1030)
+NWNXLIB_FUNCTION(_ZN18CCombatInformation8SaveDataEP7CResGFFP10CResStruct, 0x00000000007cb4b0)
+NWNXLIB_FUNCTION(_ZN18CCombatInformationaSERS_, 0x00000000007d1990)
+NWNXLIB_FUNCTION(_ZN18CCombatInformationC1Ev, 0x00000000007cb260)
+NWNXLIB_FUNCTION(_ZN18CCombatInformationC2Ev, 0x00000000007cb260)
+NWNXLIB_FUNCTION(_ZN18CCombatInformationD1Ev, 0x00000000007cb390)
+NWNXLIB_FUNCTION(_ZN18CCombatInformationD2Ev, 0x00000000007cb390)
+NWNXLIB_FUNCTION(_ZN18CCombatInformationeqERS_, 0x00000000007cbb60)
+NWNXLIB_FUNCTION(_ZN18CCombatInformationneERS_, 0x00000000007cbc50)
+NWNXLIB_FUNCTION(_ZN18CExoTimersInternal21GetLowResolutionTimerEv, 0x000000000010cce0)
+NWNXLIB_FUNCTION(_ZN18CExoTimersInternal22GetHighResolutionTimerEv, 0x000000000010cd00)
+NWNXLIB_FUNCTION(_ZN18CExoTimersInternal25GetLowResolutionTimerRealEv, 0x000000000010cb80)
+NWNXLIB_FUNCTION(_ZN18CExoTimersInternal26GetHighResolutionTimerRealEv, 0x000000000010cb90)
+NWNXLIB_FUNCTION(_ZN18CExoTimersInternalC1Ev, 0x000000000010cd20)
+NWNXLIB_FUNCTION(_ZN18CExoTimersInternalC2Ev, 0x000000000010cd20)
+NWNXLIB_FUNCTION(_ZN18CExoTimersInternalD1Ev, 0x000000000010cb30)
+NWNXLIB_FUNCTION(_ZN18CExoTimersInternalD2Ev, 0x000000000010cb30)
+NWNXLIB_FUNCTION(_ZN18CNWDoorSurfaceMesh12LoadWalkMeshE7CResRef, 0x00000000007de520)
+NWNXLIB_FUNCTION(_ZN18CNWDoorSurfaceMesh18GetMeshBoundingBoxE6VectorS0_RS0_S1_, 0x00000000007de300)
+NWNXLIB_FUNCTION(_ZN18CNWDoorSurfaceMesh18LoadWalkMeshStringEPPhPjS0_j, 0x00000000007dd320)
+NWNXLIB_FUNCTION(_ZN18CNWDoorSurfaceMesh21IntersectLineSegmentsE6VectorS0_S0_S0_PS0_, 0x00000000007dd350)
+NWNXLIB_FUNCTION(_ZN18CNWDoorSurfaceMesh27NoNonWalkPolysOnSurfaceMeshEifffffff, 0x00000000007dd9f0)
+NWNXLIB_FUNCTION(_ZN18CNWDoorSurfaceMeshC1Ev, 0x00000000007dd220)
+NWNXLIB_FUNCTION(_ZN18CNWDoorSurfaceMeshC2Ev, 0x00000000007dd220)
+NWNXLIB_FUNCTION(_ZN18CNWDoorSurfaceMeshD0Ev, 0x00000000007dd1f0)
+NWNXLIB_FUNCTION(_ZN18CNWDoorSurfaceMeshD1Ev, 0x00000000007dd180)
+NWNXLIB_FUNCTION(_ZN18CNWDoorSurfaceMeshD2Ev, 0x00000000007dd180)
+NWNXLIB_FUNCTION(_ZN18CNWSExpressionList10DeleteListEv, 0x000000000034c0e0)
+NWNXLIB_FUNCTION(_ZN18CNWSExpressionList13AddNodeToHeadEP18CNWSExpressionNode, 0x000000000034c1a0)
+NWNXLIB_FUNCTION(_ZN18CNWSExpressionList15DeleteAlternateEP18CNWSExpressionNode, 0x000000000034c070)
+NWNXLIB_FUNCTION(_ZN18CNWSExpressionList7AddNodeEP18CNWSExpressionNode, 0x000000000034c150)
+NWNXLIB_FUNCTION(_ZN18CNWSExpressionListC1Ev, 0x000000000034c040)
+NWNXLIB_FUNCTION(_ZN18CNWSExpressionListC2Ev, 0x000000000034c040)
+NWNXLIB_FUNCTION(_ZN18CNWSExpressionListD1Ev, 0x000000000034c060)
+NWNXLIB_FUNCTION(_ZN18CNWSExpressionListD2Ev, 0x000000000034c060)
+NWNXLIB_FUNCTION(_ZN18CNWSExpressionNodeC1Ev, 0x000000000034c000)
+NWNXLIB_FUNCTION(_ZN18CNWSExpressionNodeC2Ev, 0x000000000034c000)
+NWNXLIB_FUNCTION(_ZN18CNWSExpressionNodeD1Ev, 0x000000000034c030)
+NWNXLIB_FUNCTION(_ZN18CNWSExpressionNodeD2Ev, 0x000000000034c030)
+NWNXLIB_FUNCTION(_ZN18CNWSPlayerStoreGUI10CloseStoreEP10CNWSPlayeri, 0x00000000002b2720)
+NWNXLIB_FUNCTION(_ZN18CNWSPlayerStoreGUI9OpenStoreEP10CNWSPlayerjcc, 0x00000000002b30d0)
+NWNXLIB_FUNCTION(_ZN18CNWSPlayerStoreGUIC1Ev, 0x00000000002b0fe0)
+NWNXLIB_FUNCTION(_ZN18CNWSPlayerStoreGUIC2Ev, 0x00000000002b0fe0)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable10DestroyIntER10CExoString, 0x00000000002f35f0)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable10MatchIndexER10CExoStringji, 0x00000000002f3720)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable11DeleteIndexER10CExoStringj, 0x00000000002f3410)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable11GetLocationER10CExoString, 0x00000000002f3a20)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable11SetLocationER10CExoString15CScriptLocation, 0x00000000002f4070)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable12DestroyFloatER10CExoString, 0x00000000002f36e0)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable12LoadVarTableEP7CResGFFP10CResStruct, 0x00000000002f40c0)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable12SaveVarTableEP7CResGFFP10CResStruct, 0x00000000002f3aa0)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable13DestroyObjectER10CExoString, 0x00000000002f3700)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable13DestroyStringER10CExoString, 0x00000000002f36f0)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable15DestroyLocationER10CExoString, 0x00000000002f3710)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable6GetIntER10CExoString, 0x00000000002f3940)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable6SetIntER10CExoStringii, 0x00000000002f3db0)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable8GetFloatER10CExoString, 0x00000000002f3970)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable8SetFloatER10CExoStringf, 0x00000000002f3fe0)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable9GetObjectER10CExoString, 0x00000000002f39f0)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable9GetStringER10CExoString, 0x00000000002f3990)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable9SetObjectER10CExoStringj, 0x00000000002f4040)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTable9SetStringER10CExoStringS1_, 0x00000000002f4010)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTableD1Ev, 0x00000000002f34d0)
+NWNXLIB_FUNCTION(_ZN18CNWSScriptVarTableD2Ev, 0x00000000002f34d0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh11GetPathNodeEv, 0x00000000001babf0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh11GetWalkMeshEv, 0x00000000001baed0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh11SetPathNodeEh, 0x00000000001bb520)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh11SetWalkMeshE7CResRef, 0x00000000001bb5c0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh12FindTriangleEiiffi, 0x00000000001bddc0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh12IntraTileDFSEP7CNWTileP7CNWAreaP20CPathfindInformationififffffi, 0x00000000001c25a0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh12LoadWalkMeshEv, 0x00000000001bb610)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh13CheckAABBNodeEiP26CNWTileSurfaceMeshAABBNodeRK6VectorRS2_, 0x00000000001b9fb0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh13ComputeHeightE6Vector, 0x00000000001be180)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh13GetExitNumberEff, 0x00000000001baae0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh13GetTotalExitsEv, 0x00000000001bad50)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh14RunSubdivisionEPiiPfiS0_S0_iS1_iS0_, 0x00000000001c2af0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh15GetLOSMaterialsEv, 0x00000000001b8f80)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh15GetRegionCoordsEiPfS0_hi, 0x00000000001bac10)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh16ClearLineOfSightEi6VectorS0_PS0_, 0x00000000001bdb50)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh16ClearSubdivisionEv, 0x00000000001b92e0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh16ComputePathNodesEv, 0x00000000001ba580)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh17FindClosestRegionEP7CNWTileffhi, 0x00000000001be3d0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh17GetRegionEntranceEffhi, 0x00000000001bac90)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh17GetVertexGeometryEiP6Vector, 0x00000000001bae90)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh17GetVertexGeometryEiPfS0_S0_, 0x00000000001bae40)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh17PlotIntraTilePathEP7CNWTileP7CNWAreaP20CPathfindInformationffffji, 0x00000000001c30b0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh18GetSurfaceMaterialE6Vector, 0x00000000001be100)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh18LoadWalkMeshStringEPPhPjS0_j, 0x00000000001bb4f0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh19CheckAABBNodeOneWayEiP26CNWTileSurfaceMeshAABBNodeRK6VectorRS2_, 0x00000000001ba2f0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh19GetTriangleCentroidEiPfS0_S0_, 0x00000000001badd0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh19GetTriangleVerticesEiiPiS0_S0_, 0x00000000001badf0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh19LoadDefaultWalkMeshEv, 0x00000000001bb090)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh20GetTriangleAdjacencyEiiPiS0_S0_, 0x00000000001bad80)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh20NoNonWalkPolysOnTileEfffffffi, 0x00000000001bf730)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh21FindRegionViaTriangleEiiPiS0_, 0x00000000001bdc70)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh21IntersectLineSegmentsE6VectorS0_S0_S0_PS0_, 0x00000000001be7d0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh22ClearLineOfSightOneWayEi6VectorS0_PS0_, 0x00000000001bdbe0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh22GetPathNodeOrientationEv, 0x00000000001bac00)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh23PrintAABBTreeToPrintLogEP26CNWTileSurfaceMeshAABBNodei, 0x00000000001bb310)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh24ComputeTriangleAdjacencyEv, 0x00000000001ba5e0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh24ConvertToTileOrientationEi, 0x00000000001bb530)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh24EstimateDistanceToTargetEff, 0x00000000001baa60)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh25ComputeClippedLineSegmentEP7CNWTileffffPfS2_S2_S2_, 0x00000000001bd690)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh25GenerateBestIntraTileExitEP7CNWTileP7CNWAreaP20CPathfindInformationff, 0x00000000001c02e0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh25GetTopLevelVertexGeometryEiPfS0_S0_, 0x00000000001be740)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh25TestLineForWalkableOnAreaEffffffP20CPathfindInformationP7CNWTileP7CNWArea, 0x00000000001baf00)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh25TestLineForWalkableOnTileEffffPfS0_P20CPathfindInformationP7CNWTilei, 0x00000000001c0100)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh26ClippedLineSegmentWalkableEP7CNWTileffffPfS2_S2_S2_S2_S2_, 0x00000000001bef20)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh30IntraTileDFSGenerateSuccessorsEiP7CNWTileP7CNWAreaffiP20CPathfindInformationPP32CPathfindInfoIntraTileSuccessors, 0x00000000001c1440)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh7GetExitEiPfS0_Pi, 0x00000000001be690)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh7PolyHitEPK6VectoriRS1_S3_S3_fPS0_, 0x00000000001b9be0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMesh9SubdivideEv, 0x00000000001c2e80)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMeshC1Ev, 0x00000000001b9080)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMeshC2Ev, 0x00000000001b9080)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMeshD0Ev, 0x00000000001b9bb0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMeshD1Ev, 0x00000000001b93b0)
+NWNXLIB_FUNCTION(_ZN18CNWTileSurfaceMeshD2Ev, 0x00000000001b93b0)
+NWNXLIB_FUNCTION(_ZN18CObjectLookupTable14GetIDFromIndexEj, 0x00000000001b0a40)
+NWNXLIB_FUNCTION(_ZN18CObjectLookupTable14GetIndexFromIDEj, 0x00000000001b0a50)
+NWNXLIB_FUNCTION(_ZN18CObjectLookupTable5AddIDEj, 0x00000000001b09f0)
+NWNXLIB_FUNCTION(_ZN18CObjectLookupTable5TouchEj, 0x00000000001b0aa0)
+NWNXLIB_FUNCTION(_ZN18CObjectLookupTable6UpdateEPhj, 0x00000000001b0ba0)
+NWNXLIB_FUNCTION(_ZN18CObjectLookupTable9GetUpdateEPhPj, 0x00000000001b0b60)
+NWNXLIB_FUNCTION(_ZN18CObjectLookupTableC1Ev, 0x00000000001b0980)
+NWNXLIB_FUNCTION(_ZN18CObjectLookupTableC2Ev, 0x00000000001b0980)
+NWNXLIB_FUNCTION(_ZN18CObjectLookupTableD1Ev, 0x00000000001b09d0)
+NWNXLIB_FUNCTION(_ZN18CObjectLookupTableD2Ev, 0x00000000001b09d0)
+NWNXLIB_FUNCTION(_ZN18CResGFFFieldIDHash10InitializeEv, 0x0000000000128830)
+NWNXLIB_FUNCTION(_ZN18CResGFFFieldIDHash4HashEPKcj, 0x0000000000128880)
+NWNXLIB_FUNCTION(_ZN18CServerAIEventNode8LoadNodeEP7CResGFFP10CResStruct, 0x00000000002f6090)
+NWNXLIB_FUNCTION(_ZN18CServerAIEventNode8SaveNodeEP7CResGFFP10CResStruct, 0x00000000002f5b00)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23CompressedBufferHandler12CompressFileERK10CExoStringS3_S3_, 0x00000000001844c0)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23CompressedBufferHandler14DecompressFileERK10CExoStringS3_S3_, 0x0000000000184870)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23CompressedBufferHandler16CompressToBufferERKSt10shared_ptrIK9DataBlockEtRK10CExoString, 0x0000000000183250)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23CompressedBufferHandler20DecompressFromBufferERKSt10shared_ptrIK9DataBlockERK10CExoString, 0x0000000000183630)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23CompressedBufferHandler22VerifyCompressedBufferERKSt10shared_ptrIK9DataBlockERmRK10CExoString, 0x0000000000183b90)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23CompressedBufferHandler4BarfERK10CExoStringRKSt10shared_ptrIK9DataBlockES3_, 0x0000000000182eb0)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23CompressedBufferHandler5SlurpERK10CExoStringS3_, 0x0000000000183f70)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23CompressedBufferHandlerD1Ev, 0x0000000000128600)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23CompressedBufferHandlerD2Ev, 0x0000000000128600)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23NullCompressionProvider14CompressBufferERKSt10shared_ptrIK9DataBlockEt, 0x0000000000128720)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23NullCompressionProvider14ShouldCompressERKSt10shared_ptrIK9DataBlockEt, 0x00000000001285d0)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23NullCompressionProvider16DecompressBufferERKSt10shared_ptrIK9DataBlockEm, 0x0000000000128650)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23NullCompressionProvider21MinCompressBufferSizeEm, 0x00000000001285c0)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23NullCompressionProvider22VerifyCompressedBufferERKSt10shared_ptrIK9DataBlockERmRK10CExoString, 0x00000000001285e0)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23ZlibCompressionProvider14CompressBufferERKSt10shared_ptrIK9DataBlockEt, 0x0000000000182290)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23ZlibCompressionProvider14ShouldCompressERKSt10shared_ptrIK9DataBlockEt, 0x00000000001821f0)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23ZlibCompressionProvider16DecompressBufferERKSt10shared_ptrIK9DataBlockEm, 0x00000000001824d0)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23ZlibCompressionProvider21MinCompressBufferSizeEm, 0x0000000000182200)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23ZlibCompressionProvider22VerifyCompressedBufferERKSt10shared_ptrIK9DataBlockERmRK10CExoString, 0x0000000000182220)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23ZstdCompressionProvider14CompressBufferERKSt10shared_ptrIK9DataBlockEt, 0x00000000001828a0)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23ZstdCompressionProvider14ShouldCompressERKSt10shared_ptrIK9DataBlockEt, 0x0000000000182740)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23ZstdCompressionProvider16DecompressBufferERKSt10shared_ptrIK9DataBlockEm, 0x0000000000182b10)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23ZstdCompressionProvider21MinCompressBufferSizeEm, 0x0000000000182750)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23ZstdCompressionProvider22VerifyCompressedBufferERKSt10shared_ptrIK9DataBlockERmRK10CExoString, 0x0000000000182770)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23ZstdCompressionProviderC1Ev, 0x0000000000182840)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23ZstdCompressionProviderC2Ev, 0x0000000000182840)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23ZstdCompressionProviderD1Ev, 0x0000000000182880)
+NWNXLIB_FUNCTION(_ZN18NWCompressedBuffer23ZstdCompressionProviderD2Ev, 0x0000000000182880)
+NWNXLIB_FUNCTION(_ZN19CExoCriticalSection20EnterCriticalSectionEv, 0x0000000000105420)
+NWNXLIB_FUNCTION(_ZN19CExoCriticalSection20LeaveCriticalSectionEv, 0x0000000000105430)
+NWNXLIB_FUNCTION(_ZN19CExoCriticalSectionC1Ev, 0x00000000001053a0)
+NWNXLIB_FUNCTION(_ZN19CExoCriticalSectionC2Ev, 0x00000000001053a0)
+NWNXLIB_FUNCTION(_ZN19CExoCriticalSectionD1Ev, 0x00000000001053e0)
+NWNXLIB_FUNCTION(_ZN19CExoCriticalSectionD2Ev, 0x00000000001053e0)
+NWNXLIB_FUNCTION(_ZN19CExtendedServerInfoaSER20CNetLayerSessionInfo, 0x000000000012b3e0)
+NWNXLIB_FUNCTION(_ZN19CFriendPresenceInfo6DecodeE10CExoString, 0x0000000000129ae0)
+NWNXLIB_FUNCTION(_ZN19CFriendPresenceInfo6EncodeEP19CExtendedServerInfo, 0x0000000000129870)
+NWNXLIB_FUNCTION(_ZN19CNetLayerPlayerInfo10InitializeEv, 0x000000000012b620)
+NWNXLIB_FUNCTION(_ZN19CNetLayerPlayerInfo13AllKeysAuthedERj, 0x000000000012b840)
+NWNXLIB_FUNCTION(_ZN19CNetLayerPlayerInfo13StartMstTimerEm, 0x000000000012b7d0)
+NWNXLIB_FUNCTION(_ZN19CNetLayerPlayerInfo14GetPublicCDKeyEi, 0x0000000000364880)
+NWNXLIB_FUNCTION(_ZN19CNetLayerPlayerInfo14UpdateMstTimerEm, 0x000000000012b7f0)
+NWNXLIB_FUNCTION(_ZN19CNetLayerPlayerInfo8AddCDKeyERK10CExoStringS2_, 0x0000000000137e60)
+NWNXLIB_FUNCTION(_ZN19CNetLayerPlayerInfo8SetCDKeyEiRK10CExoStringS2_, 0x000000000012b8b0)
+NWNXLIB_FUNCTION(_ZN19CNetLayerPlayerInfoC1Ev, 0x0000000000137750)
+NWNXLIB_FUNCTION(_ZN19CNetLayerPlayerInfoC2Ev, 0x0000000000137750)
+NWNXLIB_FUNCTION(_ZN19CNetLayerPlayerInfoD1Ev, 0x000000000013ad40)
+NWNXLIB_FUNCTION(_ZN19CNetLayerPlayerInfoD2Ev, 0x000000000013ad40)
+NWNXLIB_FUNCTION(_ZN19CNWPlaceMeshManager11GetWalkMeshEi, 0x00000000007dbd20)
+NWNXLIB_FUNCTION(_ZN19CNWPlaceMeshManager15ClearWalkMeshesEv, 0x00000000007dbc10)
+NWNXLIB_FUNCTION(_ZN19CNWPlaceMeshManager20InitializeWalkMeshesEi, 0x00000000007dbcb0)
+NWNXLIB_FUNCTION(_ZN19CNWPlaceMeshManagerC1Ev, 0x00000000007dbbf0)
+NWNXLIB_FUNCTION(_ZN19CNWPlaceMeshManagerC2Ev, 0x00000000007dbbf0)
+NWNXLIB_FUNCTION(_ZN19CNWPlaceMeshManagerD1Ev, 0x00000000007dbca0)
+NWNXLIB_FUNCTION(_ZN19CNWPlaceMeshManagerD2Ev, 0x00000000007dbca0)
+NWNXLIB_FUNCTION(_ZN19CNWSSpellScriptData8LoadDataEP7CResGFFP10CResStruct, 0x00000000001e24a0)
+NWNXLIB_FUNCTION(_ZN19CNWSSpellScriptData8SaveDataEP7CResGFFP10CResStruct, 0x00000000001e2390)
+NWNXLIB_FUNCTION(_ZN19CObjectTableManager12RemovePlayerEj, 0x00000000001b0cb0)
+NWNXLIB_FUNCTION(_ZN19CObjectTableManager14GetIDFromIndexEjj, 0x00000000001b0e60)
+NWNXLIB_FUNCTION(_ZN19CObjectTableManager14GetIndexFromIDEjj, 0x00000000001b0eb0)
+NWNXLIB_FUNCTION(_ZN19CObjectTableManager15CreateNewPlayerEj, 0x00000000001b0c20)
+NWNXLIB_FUNCTION(_ZN19CObjectTableManager5AddIDEjPjj, 0x00000000001b0db0)
+NWNXLIB_FUNCTION(_ZN19CObjectTableManager5TouchEjj, 0x00000000001b0d80)
+NWNXLIB_FUNCTION(_ZN19CObjectTableManager8ClearAllEv, 0x00000000001b0d00)
+NWNXLIB_FUNCTION(_ZN19CObjectTableManagerC1Ev, 0x00000000001b0bf0)
+NWNXLIB_FUNCTION(_ZN19CObjectTableManagerC2Ev, 0x00000000001b0bf0)
+NWNXLIB_FUNCTION(_ZN19CObjectTableManagerD1Ev, 0x00000000001b0d70)
+NWNXLIB_FUNCTION(_ZN19CObjectTableManagerD2Ev, 0x00000000001b0d70)
+NWNXLIB_FUNCTION(_ZN19CVirtualMachineFile10UnloadFileEv, 0x00000000007bc3d0)
+NWNXLIB_FUNCTION(_ZN19CVirtualMachineFile7GetDataEPPcRj, 0x00000000007b8a90)
+NWNXLIB_FUNCTION(_ZN19CVirtualMachineFile8LoadFileERK10CExoString, 0x00000000007bc220)
+NWNXLIB_FUNCTION(_ZN19CVirtualMachineFileC1Ev, 0x00000000007bbe50)
+NWNXLIB_FUNCTION(_ZN19CVirtualMachineFileC2Ev, 0x00000000007bbe50)
+NWNXLIB_FUNCTION(_ZN19CVirtualMachineFileD0Ev, 0x00000000007bbf10)
+NWNXLIB_FUNCTION(_ZN19CVirtualMachineFileD1Ev, 0x00000000007bbe80)
+NWNXLIB_FUNCTION(_ZN19CVirtualMachineFileD2Ev, 0x00000000007bbe80)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile10InitializeEv, 0x0000000000122b10)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile10LoadHeaderEh, 0x0000000000123450)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile11AddRefCountEv, 0x0000000000122a70)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile12ReadResourceE5RESIDPvjj, 0x0000000000128260)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile12UnloadHeaderEv, 0x0000000000123ff0)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile13OpenAsyncFileEv, 0x0000000000122f80)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile14CloseAsyncFileEv, 0x00000000001240c0)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile14DeleteRefCountEv, 0x0000000000124090)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile15GetResourceSizeE5RESID, 0x0000000000122af0)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile16AddAsyncRefCountEv, 0x0000000000122ab0)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile17ReadResourceAsyncE5RESIDPvjj, 0x0000000000123cd0)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile19DeleteAsyncRefCountEv, 0x0000000000124060)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile8OpenFileEPh, 0x0000000000122b70)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile8OpenFileEv, 0x0000000000122d20)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFile9CloseFileEv, 0x0000000000123a20)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFileC1Ev, 0x0000000000125be0)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFileC2Ev, 0x0000000000125be0)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFileD0Ev, 0x0000000000123aa0)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFileD1Ev, 0x0000000000123a50)
+NWNXLIB_FUNCTION(_ZN20CExoEncapsulatedFileD2Ev, 0x0000000000123a50)
+NWNXLIB_FUNCTION(_ZN20CLoopingVisualEffect9GetIsBeamEv, 0x000000000028fe60)
+NWNXLIB_FUNCTION(_ZN20CNetLayerSessionInfo5CleanEv, 0x000000000012afb0)
+NWNXLIB_FUNCTION(_ZN20CNetLayerSessionInfoC1Ev, 0x00000000001355b0)
+NWNXLIB_FUNCTION(_ZN20CNetLayerSessionInfoC2Ev, 0x00000000001355b0)
+NWNXLIB_FUNCTION(_ZN20CNetLayerSessionInfoD1Ev, 0x000000000012aee0)
+NWNXLIB_FUNCTION(_ZN20CNetLayerSessionInfoD2Ev, 0x000000000012aee0)
+NWNXLIB_FUNCTION(_ZN20CNWSCombatAttackData13SetBaseDamageEi, 0x0000000000342a80)
+NWNXLIB_FUNCTION(_ZN20CNWSCombatAttackData14GetTotalDamageEi, 0x0000000000342b50)
+NWNXLIB_FUNCTION(_ZN20CNWSCombatAttackData15ClearAttackDataEv, 0x0000000000342610)
+NWNXLIB_FUNCTION(_ZN20CNWSCombatAttackData4CopyEPS_i, 0x0000000000342860)
+NWNXLIB_FUNCTION(_ZN20CNWSCombatAttackData8LoadDataEP7CResGFFP10CResStruct, 0x0000000000342eb0)
+NWNXLIB_FUNCTION(_ZN20CNWSCombatAttackData8SaveDataEP7CResGFFP10CResStruct, 0x0000000000342b90)
+NWNXLIB_FUNCTION(_ZN20CNWSCombatAttackData9AddDamageEti, 0x0000000000342ad0)
+NWNXLIB_FUNCTION(_ZN20CNWSCombatAttackData9GetDamageEt, 0x0000000000342970)
+NWNXLIB_FUNCTION(_ZN20CNWSCombatAttackData9SetDamageEti, 0x0000000000342a90)
+NWNXLIB_FUNCTION(_ZN20CNWSCombatAttackDataC1Ev, 0x0000000000342730)
+NWNXLIB_FUNCTION(_ZN20CNWSCombatAttackDataC2Ev, 0x0000000000342730)
+NWNXLIB_FUNCTION(_ZN20CNWSCombatAttackDataD1Ev, 0x0000000000342590)
+NWNXLIB_FUNCTION(_ZN20CNWSCombatAttackDataD2Ev, 0x0000000000342590)
+NWNXLIB_FUNCTION(_ZN20CNWSObjectActionNodeC1Ev, 0x0000000000290200)
+NWNXLIB_FUNCTION(_ZN20CNWSObjectActionNodeC2Ev, 0x0000000000290200)
+NWNXLIB_FUNCTION(_ZN20CNWSObjectActionNodeD1Ev, 0x0000000000290240)
+NWNXLIB_FUNCTION(_ZN20CNWSObjectActionNodeD2Ev, 0x0000000000290240)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation10InitializeEv, 0x00000000007c3e40)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation16ResetAtEndOfPathEv, 0x00000000007c4ab0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation17FlipTempEndPointsEv, 0x00000000007c4c30)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation17ResetWayPointDataEv, 0x00000000007c44e0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation18FlipStartEndPointsEv, 0x00000000007c4be0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation19AddToGridSearchPathEiiii, 0x00000000007c4db0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation19ResetGridSearchDataEv, 0x00000000007c42a0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation20ComputeStepToleranceEv, 0x00000000007c4ca0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation20CreateGridSearchPathEv, 0x00000000007c4ce0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation20GetGridPointSearchedEii, 0x00000000007c4470)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation20SetGridPointSearchedEiib, 0x00000000007c44b0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation21GetGridSearchPathInfoEi, 0x00000000007c4e90)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation21SetGridSearchPathInfoEi17CNWGridSearchPath, 0x00000000007c4ed0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation24GetGridSearchActivePathsEv, 0x00000000007c4f00)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation24ResetInterAreaSearchDataEv, 0x00000000007c4a40)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation24ResetInterTileSearchDataEv, 0x00000000007c4910)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation24ResetIntraTileSearchDataEv, 0x00000000007c48b0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation24SetGridSearchActivePathsEi, 0x00000000007c4f10)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation28ResetInterAreaPathSearchDataEv, 0x00000000007c49c0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation30GetFirstTileFValueAlternativesEiPiS0_PP32CPathfindInfoIntraTileSuccessors, 0x00000000007c45a0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation30SetFirstTileFValueAlternativesEiiiP32CPathfindInfoIntraTileSuccessors, 0x00000000007c45d0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation33CreateFirstTileFValueAlternativesEi, 0x00000000007c4b20)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation33DeleteFirstTileFValueAlternativesEv, 0x00000000007c4600)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformation8ShutdownEv, 0x00000000007c46f0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformationC1Ev, 0x00000000007c4180)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformationC2Ev, 0x00000000007c4180)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformationD1Ev, 0x00000000007c48a0)
+NWNXLIB_FUNCTION(_ZN20CPathfindInformationD2Ev, 0x00000000007c48a0)
+NWNXLIB_FUNCTION(_ZN20CServerAIBodyBagInfo11LoadBodyBagEP7CResGFFP10CResStruct, 0x00000000002f5fc0)
+NWNXLIB_FUNCTION(_ZN20CServerAIBodyBagInfo11SaveBodyBagEP7CResGFFP10CResStruct, 0x00000000002f5a70)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineCache12PrecacheFileERK10CExoString, 0x00000000007bc290)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineCache13ClearAllFilesEv, 0x00000000007bd200)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineCacheD1Ev, 0x00000000007bd260)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineCacheD2Ev, 0x00000000007bd260)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStack10ClearStackEv, 0x00000000007b83c0)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStack13CopyFromStackEPS_ii, 0x00000000007b8580)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStack14GetBasePointerEv, 0x00000000007b8980)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStack14SetBasePointerEi, 0x00000000007b8990)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStack15AddToTopOfStackEi, 0x00000000007b7990)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStack15GetStackPointerEv, 0x00000000007b89a0)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStack15InitializeStackEv, 0x00000000007b8570)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStack15SetStackPointerEi, 0x00000000007b89b0)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStack23ModifyIntegerAtLocationEii, 0x00000000007b7da0)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStack24AssignLocationToLocationEii, 0x00000000007b7ba0)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStack9LoadStackEP7CResGFFP10CResStruct, 0x00000000007b7fe0)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStack9SaveStackEP7CResGFFP10CResStruct, 0x00000000007b7dd0)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStackC1Ev, 0x00000000007b7950)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStackC2Ev, 0x00000000007b7950)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStackD1Ev, 0x00000000007b8560)
+NWNXLIB_FUNCTION(_ZN20CVirtualMachineStackD2Ev, 0x00000000007b8560)
+NWNXLIB_FUNCTION(_ZN21CExoAliasListInternal3AddE10CExoStringS0_, 0x0000000000106f80)
+NWNXLIB_FUNCTION(_ZN21CExoAliasListInternal5ClearEv, 0x0000000000107190)
+NWNXLIB_FUNCTION(_ZN21CExoAliasListInternal6DeleteE10CExoString, 0x00000000001071f0)
+NWNXLIB_FUNCTION(_ZN21CExoAliasListInternalC1Ev, 0x0000000000106ee0)
+NWNXLIB_FUNCTION(_ZN21CExoAliasListInternalC2Ev, 0x0000000000106ee0)
+NWNXLIB_FUNCTION(_ZN21CExoAliasListInternalD1Ev, 0x0000000000106f20)
+NWNXLIB_FUNCTION(_ZN21CExoAliasListInternalD2Ev, 0x0000000000106f20)
+NWNXLIB_FUNCTION(_ZN21CExoLocStringInternal12RemoveStringEi, 0x0000000000109aa0)
+NWNXLIB_FUNCTION(_ZN21CExoLocStringInternal14ClearLocStringEv, 0x0000000000109550)
+NWNXLIB_FUNCTION(_ZN21CExoLocStringInternal14GetStringCountEv, 0x00000000001099f0)
+NWNXLIB_FUNCTION(_ZN21CExoLocStringInternal15GetStringLengthEj, 0x0000000000109a00)
+NWNXLIB_FUNCTION(_ZN21CExoLocStringInternal6AssignEPS_, 0x00000000001095f0)
+NWNXLIB_FUNCTION(_ZN21CExoLocStringInternal7CompareER13CExoLocString, 0x00000000001096d0)
+NWNXLIB_FUNCTION(_ZN21CExoLocStringInternal9AddStringEi10CExoString, 0x0000000000109460)
+NWNXLIB_FUNCTION(_ZN21CExoLocStringInternal9GetStringEiP10CExoString, 0x0000000000109940)
+NWNXLIB_FUNCTION(_ZN21CExoLocStringInternal9GetStringEjPiP10CExoString, 0x0000000000109880)
+NWNXLIB_FUNCTION(_ZN21CExoLocStringInternalC1Ev, 0x0000000000109420)
+NWNXLIB_FUNCTION(_ZN21CExoLocStringInternalC2Ev, 0x0000000000109420)
+NWNXLIB_FUNCTION(_ZN21CExoLocStringInternalD1Ev, 0x00000000001095b0)
+NWNXLIB_FUNCTION(_ZN21CExoLocStringInternalD2Ev, 0x00000000001095b0)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile10GetKeyListEv, 0x00000000001262b0)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile10InitializeEv, 0x0000000000122c30)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile10LoadHeaderEh, 0x0000000000122cb0)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile11AddRefCountEv, 0x0000000000122b80)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile11GetResourceE5RESID, 0x0000000000122c10)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile12ReadResourceE5RESIDPvjj, 0x0000000000122cc0)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile12UnloadHeaderEv, 0x0000000000122ca0)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile13OpenAsyncFileEv, 0x0000000000122ca0)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile14CloseAsyncFileEv, 0x0000000000122ca0)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile14DeleteRefCountEv, 0x0000000000122bc0)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile15GetKeyListEntryEj, 0x00000000001262c0)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile15GetResourceSizeE5RESID, 0x0000000000122bf0)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile16AddAsyncRefCountEv, 0x0000000000122c90)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile17ReadResourceAsyncE5RESIDPvjj, 0x0000000000122c80)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile19DeleteAsyncRefCountEv, 0x0000000000122c90)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile20GetResourceListEntryE5RESID, 0x0000000000126300)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile8OpenFileEPh, 0x0000000000128310)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile8OpenFileEv, 0x0000000000122c70)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile9CloseFileEv, 0x0000000000124350)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFile9GetHeaderEv, 0x0000000000126320)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFileC1Ev, 0x0000000000126240)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFileC2Ev, 0x0000000000126240)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFileD0Ev, 0x0000000000123b30)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFileD1Ev, 0x0000000000123ad0)
+NWNXLIB_FUNCTION(_ZN21CExoResourceImageFileD2Ev, 0x0000000000123ad0)
+NWNXLIB_FUNCTION(_ZN21CNWSCombatRoundAction8LoadDataEP7CResGFFP10CResStruct, 0x0000000000342410)
+NWNXLIB_FUNCTION(_ZN21CNWSCombatRoundAction8SaveDataEP7CResGFFP10CResStruct, 0x00000000003422f0)
+NWNXLIB_FUNCTION(_ZN21CNWSCombatRoundActionC1Ev, 0x0000000000342290)
+NWNXLIB_FUNCTION(_ZN21CNWSCombatRoundActionC2Ev, 0x0000000000342290)
+NWNXLIB_FUNCTION(_ZN21CNWSCombatRoundActionD1Ev, 0x00000000003422e0)
+NWNXLIB_FUNCTION(_ZN21CNWSCombatRoundActionD2Ev, 0x00000000003422e0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler11OnApplyBeamEP10CNWSObjectP11CGameEffecti, 0x0000000000264740)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler11OnApplyDeafEP10CNWSObjectP11CGameEffecti, 0x000000000026c2f0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler11OnApplyHealEP10CNWSObjectP11CGameEffecti, 0x000000000026a1e0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler11OnApplyLinkEP10CNWSObjectP11CGameEffecti, 0x0000000000267ed0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler12OnApplyCurseEP10CNWSObjectP11CGameEffecti, 0x0000000000260c20)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler12OnApplyDeathEP10CNWSObjectP11CGameEffecti, 0x0000000000262e90)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler12OnApplyLightEP10CNWSObjectP11CGameEffecti, 0x000000000025d140)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler12OnApplySwarmEP10CNWSObjectP11CGameEffecti, 0x00000000002646e0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler12OnApplyTauntEP10CNWSObjectP11CGameEffecti, 0x000000000025eae0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler12OnRemoveBeamEP10CNWSObjectP11CGameEffect, 0x000000000026b050)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler13OnApplyAppearEP10CNWSObjectP11CGameEffecti, 0x0000000000268dd0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler13OnApplyDamageEP10CNWSObjectP11CGameEffecti, 0x000000000025f0a0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler13OnApplyDisarmEP10CNWSObjectP11CGameEffecti, 0x0000000000265c20)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler13OnApplyPoisonEP10CNWSObjectP11CGameEffecti, 0x0000000000267380)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler13OnApplyVisionEP10CNWSObjectP11CGameEffecti, 0x00000000002680b0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler13OnRemoveCurseEP10CNWSObjectP11CGameEffect, 0x000000000026b080)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler13OnRemoveLightEP10CNWSObjectP11CGameEffect, 0x000000000026b060)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler13OnRemoveSwarmEP10CNWSObjectP11CGameEffect, 0x0000000000265440)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler13OnRemoveTauntEP10CNWSObjectP11CGameEffect, 0x000000000025aed0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler14OnApplyDiseaseEP10CNWSObjectP11CGameEffecti, 0x000000000026ced0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler14OnApplyPetrifyEP10CNWSObjectP11CGameEffecti, 0x000000000025cfe0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler14OnApplySilenceEP10CNWSObjectP11CGameEffecti, 0x00000000002618c0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler14OnRemoveDisarmEP10CNWSObjectP11CGameEffect, 0x000000000026b0b0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler14OnRemoveVisionEP10CNWSObjectP11CGameEffect, 0x000000000026b070)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler15OnApplyDarknessEP10CNWSObjectP11CGameEffecti, 0x000000000025cad0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler15OnApplySetStateEP10CNWSObjectP11CGameEffecti, 0x0000000000261f60)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler15OnApplyTimestopEP10CNWSObjectP11CGameEffecti, 0x0000000000269f40)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler15OnApplyWoundingEP10CNWSObjectP11CGameEffecti, 0x000000000025c510)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler15OnEffectAppliedEP10CNWSObjectP11CGameEffecti, 0x000000000025ad00)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler15OnEffectRemovedEP10CNWSObjectP11CGameEffect, 0x000000000025ad50)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler15OnRemovePetrifyEP10CNWSObjectP11CGameEffect, 0x000000000025b090)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler15OnRemoveSilenceEP10CNWSObjectP11CGameEffect, 0x000000000025ae90)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler16OnApplyBlindnessEP10CNWSObjectP11CGameEffecti, 0x0000000000261500)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler16OnApplyBonusFeatEP10CNWSObjectP11CGameEffecti, 0x0000000000267f40)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler16OnApplyDisappearEP10CNWSObjectP11CGameEffecti, 0x000000000026a100)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler16OnApplyEntangledEP10CNWSObjectP11CGameEffecti, 0x000000000026bfa0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler16OnApplyKnockdownEP10CNWSObjectP11CGameEffecti, 0x0000000000261af0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler16OnApplyPolymorphEP10CNWSObjectP11CGameEffecti, 0x0000000000268230)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler16OnApplySanctuaryEP10CNWSObjectP11CGameEffecti, 0x000000000026d780)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler16OnRemoveDarknessEP10CNWSObjectP11CGameEffect, 0x000000000025e190)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler16OnRemoveSetStateEP10CNWSObjectP11CGameEffect, 0x0000000000260520)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler16OnRemoveTimestopEP10CNWSObjectP11CGameEffect, 0x0000000000268700)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler16OnRemoveWoundingEP10CNWSObjectP11CGameEffect, 0x000000000026b0f0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler16SendFloatyEffectEjj, 0x000000000026bb20)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17InitializeEffectsEv, 0x000000000025b1c0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17OnApplyACDecreaseEP10CNWSObjectP11CGameEffecti, 0x00000000002609b0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17OnApplyACIncreaseEP10CNWSObjectP11CGameEffecti, 0x000000000025ed00)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17OnApplyEffectIconEP10CNWSObjectP11CGameEffecti, 0x0000000000269ab0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17OnApplyMissChanceEP10CNWSObjectP11CGameEffecti, 0x00000000002699b0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17OnApplyRacialTypeEP10CNWSObjectP11CGameEffecti, 0x0000000000268750)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17OnApplyRegenerateEP10CNWSObjectP11CGameEffecti, 0x0000000000267280)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17OnApplySetAIStateEP10CNWSObjectP11CGameEffecti, 0x000000000025d650)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17OnApplyTrueSeeingEP10CNWSObjectP11CGameEffecti, 0x0000000000268a80)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17OnRemoveBlindnessEP10CNWSObjectP11CGameEffect, 0x000000000025e090)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17OnRemoveBonusFeatEP10CNWSObjectP11CGameEffect, 0x000000000025e4e0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17OnRemoveEntangledEP10CNWSObjectP11CGameEffect, 0x0000000000265ba0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17OnRemoveKnockdownEP10CNWSObjectP11CGameEffect, 0x0000000000263d00)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17OnRemovePolymorphEP10CNWSObjectP11CGameEffect, 0x0000000000268450)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler17OnRemoveSanctuaryEP10CNWSObjectP11CGameEffect, 0x000000000026d9d0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler18OnApplyConcealmentEP10CNWSObjectP11CGameEffecti, 0x000000000025d2a0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler18OnApplyHasteOrSlowEP10CNWSObjectP11CGameEffecti, 0x0000000000262ad0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler18OnApplyUltraVisionEP10CNWSObjectP11CGameEffecti, 0x0000000000268920)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler18OnRemoveACDecreaseEP10CNWSObjectP11CGameEffect, 0x000000000025dbd0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler18OnRemoveACIncreaseEP10CNWSObjectP11CGameEffect, 0x000000000025d940)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler18OnRemoveEffectIconEP10CNWSObjectP11CGameEffect, 0x000000000025e280)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler18OnRemoveMissChanceEP10CNWSObjectP11CGameEffect, 0x000000000026b010)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler18OnRemoveRacialTypeEP10CNWSObjectP11CGameEffect, 0x000000000026b000)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler18OnRemoveSetAIStateEP10CNWSObjectP11CGameEffect, 0x000000000025de30)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler18OnRemoveTrueSeeingEP10CNWSObjectP11CGameEffect, 0x000000000026ad10)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler19OnApplyAreaOfEffectEP10CNWSObjectP11CGameEffecti, 0x000000000026a760)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler19OnApplyDamageShieldEP10CNWSObjectP11CGameEffecti, 0x000000000025cd70)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler19OnApplyInvisibilityEP10CNWSObjectP11CGameEffecti, 0x000000000026d660)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler19OnApplyItemPropertyEP10CNWSObjectP11CGameEffecti, 0x000000000026b520)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler19OnApplyResurrectionEP10CNWSObjectP11CGameEffecti, 0x000000000026d3b0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler19OnApplySeeInvisibleEP10CNWSObjectP11CGameEffecti, 0x000000000025c620)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler19OnApplySlowInternalEP10CNWSObjectP11CGameEffecti, 0x000000000025c840)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler19OnApplySpellFailureEP10CNWSObjectP11CGameEffecti, 0x00000000002697f0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler19OnApplyVisualEffectEP10CNWSObjectP11CGameEffecti, 0x0000000000266880)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler19OnRemoveConcealmentEP10CNWSObjectP11CGameEffect, 0x000000000026b020)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler19OnRemoveHasteOrSlowEP10CNWSObjectP11CGameEffect, 0x0000000000260730)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler19OnRemoveUltraVisionEP10CNWSObjectP11CGameEffect, 0x000000000026aa30)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler20OnApplyCutsceneGhostEP10CNWSObjectP11CGameEffecti, 0x000000000025b0a0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler20OnApplyHasteInternalEP10CNWSObjectP11CGameEffecti, 0x000000000025c6c0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler20OnApplyNegativeLevelEP10CNWSObjectP11CGameEffecti, 0x00000000002690f0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler20OnApplySkillDecreaseEP10CNWSObjectP11CGameEffecti, 0x0000000000261060)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler20OnApplySkillIncreaseEP10CNWSObjectP11CGameEffecti, 0x000000000025d1e0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler20OnApplySpellImmunityEP10CNWSObjectP11CGameEffecti, 0x000000000025ccc0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler20OnRemoveAreaOfEffectEP10CNWSObjectP11CGameEffect, 0x0000000000264610)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler20OnRemoveDamageShieldEP10CNWSObjectP11CGameEffect, 0x000000000026b0e0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler20OnRemoveInvisibilityEP10CNWSObjectP11CGameEffect, 0x000000000026d530)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler20OnRemoveItemPropertyEP10CNWSObjectP11CGameEffect, 0x000000000026b100)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler20OnRemoveSeeInvisibleEP10CNWSObjectP11CGameEffect, 0x000000000025afb0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler20OnRemoveSlowInternalEP10CNWSObjectP11CGameEffect, 0x000000000025ae60)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler20OnRemoveSpellFailureEP10CNWSObjectP11CGameEffect, 0x0000000000269920)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler20OnRemoveVisualEffectEP10CNWSObjectP11CGameEffect, 0x0000000000266d10)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler21OnApplyAttackDecreaseEP10CNWSObjectP11CGameEffecti, 0x00000000002612a0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler21OnApplyAttackIncreaseEP10CNWSObjectP11CGameEffecti, 0x000000000025d800)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler21OnApplyDamageDecreaseEP10CNWSObjectP11CGameEffecti, 0x00000000002613e0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler21OnApplyDamageIncreaseEP10CNWSObjectP11CGameEffecti, 0x000000000025ce20)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler21OnApplyDispelAllMagicEP10CNWSObjectP11CGameEffecti, 0x000000000026dcc0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler21OnApplyEffectImmunityEP10CNWSObjectP11CGameEffecti, 0x000000000025d430)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler21OnApplySummonCreatureEP10CNWSObjectP11CGameEffecti, 0x0000000000264e50)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler21OnApplyTurnResistanceEP10CNWSObjectP11CGameEffecti, 0x0000000000269d20)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler21OnRemoveCutsceneGhostEP10CNWSObjectP11CGameEffect, 0x000000000025b100)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler21OnRemoveHasteInternalEP10CNWSObjectP11CGameEffect, 0x000000000025ae30)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler21OnRemoveNegativeLevelEP10CNWSObjectP11CGameEffect, 0x0000000000269770)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler21OnRemoveSkillDecreaseEP10CNWSObjectP11CGameEffect, 0x000000000026aff0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler21OnRemoveSkillIncreaseEP10CNWSObjectP11CGameEffect, 0x000000000026b0a0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler21OnRemoveSpellImmunityEP10CNWSObjectP11CGameEffect, 0x000000000026b0d0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler22OnApplyAbilityDecreaseEP10CNWSObjectP11CGameEffecti, 0x0000000000264240)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler22OnApplyAbilityIncreaseEP10CNWSObjectP11CGameEffecti, 0x000000000025e610)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler22OnApplyDamageReductionEP10CNWSObjectP11CGameEffecti, 0x000000000026bd50)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler22OnApplyDefensiveStanceEP10CNWSObjectP11CGameEffecti, 0x000000000025e7b0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler22OnApplyDisappearAppearEP10CNWSObjectP11CGameEffecti, 0x0000000000268c00)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler22OnApplyDispelBestMagicEP10CNWSObjectP11CGameEffecti, 0x000000000026e110)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler22OnRemoveAttackDecreaseEP10CNWSObjectP11CGameEffect, 0x000000000025adf0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler22OnRemoveAttackIncreaseEP10CNWSObjectP11CGameEffect, 0x000000000025ae00)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler22OnRemoveDamageDecreaseEP10CNWSObjectP11CGameEffect, 0x000000000025ada0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler22OnRemoveDamageIncreaseEP10CNWSObjectP11CGameEffect, 0x000000000025ade0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler22OnRemoveEffectImmunityEP10CNWSObjectP11CGameEffect, 0x000000000026b090)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler22OnRemoveSummonCreatureEP10CNWSObjectP11CGameEffect, 0x0000000000265400)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler22OnRemoveTurnResistanceEP10CNWSObjectP11CGameEffect, 0x000000000026b030)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler23OnApplyCutsceneImmobileEP10CNWSObjectP11CGameEffecti, 0x000000000025c5a0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler23OnApplyDamageResistanceEP10CNWSObjectP11CGameEffecti, 0x000000000026bdf0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler23OnApplyEnemyAttackBonusEP10CNWSObjectP11CGameEffecti, 0x000000000025d540)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler23OnApplyModifyNumAttacksEP10CNWSObjectP11CGameEffecti, 0x0000000000269e90)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler23OnApplySetStateInternalEP10CNWSObjectP11CGameEffecti, 0x000000000026c5a0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler23OnRemoveAbilityDecreaseEP10CNWSObjectP11CGameEffect, 0x000000000025d100)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler23OnRemoveAbilityIncreaseEP10CNWSObjectP11CGameEffect, 0x000000000025d0b0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler23OnRemoveDisappearAppearEP10CNWSObjectP11CGameEffect, 0x0000000000268e40)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler24OnApplyBlindnessInactiveEP10CNWSObjectP11CGameEffecti, 0x000000000025c490)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler24OnApplyBonusSpellOfLevelEP10CNWSObjectP11CGameEffecti, 0x000000000025b080)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler24OnRemoveEnemyAttackBonusEP10CNWSObjectP11CGameEffect, 0x000000000025df10)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler24OnRemoveModifyNumAttacksEP10CNWSObjectP11CGameEffect, 0x000000000025dfe0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler24OnRemoveSetStateInternalEP10CNWSObjectP11CGameEffect, 0x00000000002662d0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler25OnApplyArcaneSpellFailureEP10CNWSObjectP11CGameEffecti, 0x0000000000269d90)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler25OnApplyLimitMovementSpeedEP10CNWSObjectP11CGameEffecti, 0x000000000025cef0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler25OnApplyTemporaryHitpointsEP10CNWSObjectP11CGameEffecti, 0x000000000026be90)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler25OnRemoveBonusSpellOfLevelEP10CNWSObjectP11CGameEffect, 0x000000000026b040)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler26OnApplySavingThrowDecreaseEP10CNWSObjectP11CGameEffecti, 0x0000000000261180)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler26OnApplySavingThrowIncreaseEP10CNWSObjectP11CGameEffecti, 0x000000000025d6b0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler26OnRemoveArcaneSpellFailureEP10CNWSObjectP11CGameEffect, 0x0000000000266120)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler26OnRemoveLimitMovementSpeedEP10CNWSObjectP11CGameEffect, 0x000000000025af10)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler26OnRemoveTemporaryHitpointsEP10CNWSObjectP11CGameEffect, 0x0000000000263dc0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler27OnApplySpecialWalkAnimationEP10CNWSObjectP11CGameEffecti, 0x000000000025d8e0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler27OnApplySpellLevelAbsorptionEP10CNWSObjectP11CGameEffecti, 0x000000000025d360)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler27OnApplyVampiricRegenerationEP10CNWSObjectP11CGameEffecti, 0x000000000025efb0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler27OnRemoveSavingThrowDecreaseEP10CNWSObjectP11CGameEffect, 0x000000000025ae10)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler27OnRemoveSavingThrowIncreaseEP10CNWSObjectP11CGameEffect, 0x000000000025ae20)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler28OnApplyMovementSpeedDecreaseEP10CNWSObjectP11CGameEffecti, 0x00000000002665e0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler28OnApplyMovementSpeedIncreaseEP10CNWSObjectP11CGameEffecti, 0x00000000002664a0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler28OnRemoveSpecialWalkAnimationEP10CNWSObjectP11CGameEffect, 0x0000000000269a10)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler28OnRemoveSpellLevelAbsorptionEP10CNWSObjectP11CGameEffect, 0x000000000026b0c0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler29OnApplyDamageImmunityDecreaseEP10CNWSObjectP11CGameEffecti, 0x00000000002656d0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler29OnApplyDamageImmunityIncreaseEP10CNWSObjectP11CGameEffecti, 0x0000000000265480)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler29OnRemoveMovementSpeedDecreaseEP10CNWSObjectP11CGameEffect, 0x0000000000266740)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler29OnRemoveMovementSpeedIncreaseEP10CNWSObjectP11CGameEffect, 0x0000000000266870)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler30OnApplyHitPointChangeWhenDyingEP10CNWSObjectP11CGameEffecti, 0x0000000000264850)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler30OnApplySpellResistanceDecreaseEP10CNWSObjectP11CGameEffecti, 0x0000000000266fb0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler30OnApplySpellResistanceIncreaseEP10CNWSObjectP11CGameEffecti, 0x0000000000266d40)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler30OnRemoveDamageImmunityDecreaseEP10CNWSObjectP11CGameEffect, 0x0000000000265a80)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler30OnRemoveDamageImmunityIncreaseEP10CNWSObjectP11CGameEffect, 0x0000000000265960)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler31OnRemoveHitPointChangeWhenDyingEP10CNWSObjectP11CGameEffect, 0x0000000000264990)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler31OnRemoveSpellResistanceDecreaseEP10CNWSObjectP11CGameEffect, 0x0000000000267150)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandler31OnRemoveSpellResistanceIncreaseEP10CNWSObjectP11CGameEffect, 0x0000000000266eb0)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandlerD0Ev, 0x000000000025b190)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandlerD1Ev, 0x000000000025b140)
+NWNXLIB_FUNCTION(_ZN21CNWSEffectListHandlerD2Ev, 0x000000000025b140)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal10InitializeEv, 0x00000000002fb010)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal10LoadModuleE10CExoStringiP10CNWSPlayeri, 0x0000000000306610)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal10OnCDChangeEv, 0x00000000002fc160)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal11OnGainFocusEv, 0x00000000002fc180)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal11OnLostFocusEv, 0x00000000002fc190)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal12ExportPlayerEP10CNWSPlayer, 0x00000000002face0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal12StopServicesEv, 0x00000000003058f0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal12UninitializeEv, 0x00000000002fc810)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal12UnloadModuleEv, 0x00000000003001c0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal13GetGameObjectEj, 0x00000000002fcbd0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal13GetModuleNameEv, 0x00000000002f9900)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal13GetPauseStateEh, 0x00000000002ffbb0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal13HandleMessageEjPhji, 0x00000000002faea0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal13OnVideoChangeEv, 0x00000000002fc1a0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal13SetPauseStateEhi, 0x00000000002fff50)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal13StartServicesEv, 0x000000000030a780)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal14GetActiveTimerEj, 0x00000000002ffe00)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal14StartNewModuleER10CExoString, 0x00000000003084b0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal15AdmitPlayerNameE10CExoString, 0x00000000002f9660)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal15GetModuleExistsERK10CExoString, 0x00000000002fb120)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal15GetNextPCObjectEv, 0x0000000000302910)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal15ReadBannedListsEv, 0x0000000000305260)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal15RestartNetLayerEv, 0x00000000002fd9b0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal16AddSubNetProfileEj10CExoStringS0_, 0x00000000003031e0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal16ExportAllPlayersEv, 0x00000000002fad50)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal16GetFirstPCObjectEv, 0x00000000003028a0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal16MovePlayerToAreaEPv, 0x00000000002fbfb0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal16PlayerListChangeEjii, 0x0000000000309150)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal16ShutdownNetLayerEv, 0x00000000002fc390)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal16StripColorTokensER10CExoString, 0x0000000000302e00)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal16TogglePauseStateEh, 0x00000000003001a0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal17AddIPToBannedListE10CExoString, 0x0000000000305e50)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal17GetModuleLanguageEv, 0x00000000002fd860)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal17GetPlayerLanguageEj, 0x00000000002fd7b0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal17IsOnExclusionListEj, 0x00000000002ffbf0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal17LoadPrimaryPlayerEP10CNWSPlayer, 0x00000000002fac90)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal17RemovePCFromWorldEP10CNWSPlayer, 0x00000000002fc890)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal17UpdateWindowTitleEv, 0x00000000002fc380)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal18AddCharListRequestEj, 0x0000000000305190)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal18AddToExclusionListEjh, 0x0000000000304d90)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal18GetFactionOfObjectEjPi, 0x00000000002fe8c0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal18InitializeNetLayerEv, 0x00000000002fd880)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal18IsPlayerNameStickyEv, 0x0000000000301f70)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal18LoadCharacterStartEhP10CNWSPlayer7CResRefPvj, 0x000000000030c690)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal18SendCharacterQueryEP10CNWSPlayer, 0x00000000002fadf0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal18StallEventSaveGameEv, 0x00000000002fbd90)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal18StartShutdownTimerEmm, 0x0000000000301800)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19AdmitNetworkAddressEj10CExoString, 0x00000000002f9650)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19GetActivePauseStateEv, 0x00000000002ffbd0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19GetBannedListStringEv, 0x00000000002ff630)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19GetDifficultyOptionEi, 0x00000000003017d0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19GetIsIPOnBannedListE10CExoString, 0x00000000003019e0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19GetPlayerListStringEv, 0x00000000002fea20)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19GetPortalListStringEv, 0x00000000002ffb70)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19LoadCharacterFinishEP10CNWSPlayerii, 0x00000000002fa760)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19PushMessageOverWallEPhj, 0x0000000000302970)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19RemoveSubNetProfileEj, 0x0000000000303380)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19SendStartStallEventEj, 0x00000000002fb5a0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19SetGameSpyReportingEi, 0x00000000002fd870)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19UnlockBiowareModuleEP10CNWSModule, 0x00000000002f99c0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19UpdateAutoSaveTimerEv, 0x00000000003029c0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19UpdateShutdownTimerEm, 0x0000000000301820)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal19ValidatePlayerLoginEPv, 0x00000000002fc820)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal20AddCDKeyToBannedListE10CExoString, 0x0000000000305f70)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal20GetPlayerAddressDataEjPjPPhS2_S0_, 0x00000000002fbc10)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal20SendHeartbeatToRelayEv, 0x0000000000300ca0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal20SetDDCipherForModuleE10CExoString, 0x00000000003036b0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal20SetEstimatedSaveSizeERK10CExoStringt, 0x00000000003064b0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal20SetNetworkAddressBanEj10CExoStringi, 0x00000000003051e0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal20Test_Unit_Script_RunEv, 0x0000000000302cd0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal21ConnectionLibMainLoopEv, 0x0000000000300d90)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal21DealWithLoadGameErrorEj, 0x0000000000300580)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal21GetAreaByGameObjectIDEj, 0x00000000002fce90)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal21GetDoorByGameObjectIDEj, 0x00000000002fd530)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal21GetExtendedServerInfoEP19CExtendedServerInfo, 0x00000000002fbc30)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal21GetItemByGameObjectIDEj, 0x00000000002fccb0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal21StorePlayerCharactersEv, 0x0000000000306000)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal22GetActiveExclusionListEv, 0x00000000003006e0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal22GetIsCDKeyOnBannedListE10CExoString, 0x0000000000301ee0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal22GetStoreByGameObjectIDEj, 0x00000000002fcc30)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal22RemoveIPFromBannedListE10CExoString, 0x0000000000305680)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal22ShutdownServerProfilesEv, 0x0000000000303630)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal22UpdateClientsForObjectEj, 0x00000000002fc3b0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal23AddPendingAuthorizationEj, 0x00000000002fe810)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal23CopyModuleToCurrentGameER10CExoStringS1_t, 0x00000000002fb020)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal23GetModuleByGameObjectIDEj, 0x00000000002fcde0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal23InitiateModuleForPlayerEPv, 0x00000000002fcf40)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal23IsOnActiveExclusionListEj, 0x00000000002ffd80)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal23RemoveFromExclusionListEjh, 0x00000000002ffc90)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal23UpdateClientGameObjectsEi, 0x00000000002fc750)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal23UpdateLogHeartbeatTimerEm, 0x0000000000301960)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal23VomitServerOptionsToLogEv, 0x00000000002fe080)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal24AddSubNetProfileRecvSizeEjj, 0x0000000000303180)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal24AddSubNetProfileSendSizeEjj, 0x0000000000303120)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal24GetServerInfoFromIniFileEv, 0x0000000000309dc0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal24GetTriggerByGameObjectIDEj, 0x00000000002fd430)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal24ResolvePlayerByFirstNameERK10CExoString, 0x0000000000300720)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal24Test_Unit_Script_CompileEv, 0x0000000000302b40)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal24WriteServerInfoToIniFileEv, 0x00000000002fd9c0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal25AddPlayerNameToBannedListE10CExoString, 0x0000000000305ee0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal25ContinueMessageProcessingEv, 0x00000000002fc870)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal25GetClientObjectByObjectIdEj, 0x00000000002f9670)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal25GetClientObjectByPlayerIdEjh, 0x00000000002f9750)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal25GetCreatureByGameObjectIDEj, 0x00000000002fcd60)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal25GetPlayerIDByGameObjectIDEj, 0x0000000000300930)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal25GetWaypointByGameObjectIDEj, 0x00000000002fd630)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal25RemoveCDKeyFromBannedListE10CExoString, 0x0000000000305820)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal26GetEncounterByGameObjectIDEj, 0x00000000002fd6b0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal26GetPlaceableByGameObjectIDEj, 0x00000000002fd4b0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal26MarkUpdateClientsForObjectEj, 0x00000000002fc670)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal26QuarantineInvalidCharacterEPvj, 0x00000000002fa4e0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal26RemovePendingAuthorizationEj, 0x00000000002fe870)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal27GetIsPlayerNameOnBannedListE10CExoString, 0x0000000000301c60)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal28GetSoundObjectByGameObjectIDEj, 0x00000000002fd730)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal28HandleGameSpyToServerMessageEiPvi, 0x00000000002fe800)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal29CheckStickyPlayerNameReservedE10CExoStringS0_S0_i, 0x0000000000301f90)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal29CreateServerVaultLostAndFoundEv, 0x0000000000302a80)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal29GetAreaOfEffectByGameObjectIDEj, 0x00000000002fd5b0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal29HandleOldServerVaultMigrationE10CExoStringS0_S0_, 0x0000000000303c80)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal29ReprocessExclusionListActionsEh, 0x00000000002ffe70)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal29ValidateCreateServerCharacterEP10CNWSPlayerPvj, 0x000000000030af30)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal30RemovePlayerNameFromBannedListE10CExoString, 0x0000000000305750)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal32SendExitingStartNewModuleMessageEi, 0x00000000002fa4a0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal32UpdateClientGameObjectsForPlayerEP10CNWSPlayerim, 0x00000000002fc460)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal33SendEnteringStartNewModuleMessageEv, 0x00000000002fa470)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal35SendEnhancedHeartbeatToMasterServerEv, 0x0000000000300960)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal37GetHostedPublicInternetAddressAndPortEv, 0x0000000000303650)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal6OnExitEv, 0x00000000002fc170)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal7EndGameERK10CExoString, 0x00000000002fa390)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal8LoadGameEjR10CExoStringS1_P10CNWSPlayer, 0x00000000003081a0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal8MainLoopEv, 0x00000000003085a0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal8SaveGameEjR10CExoStringS1_P10CNWSPlayeriS1_, 0x00000000002fb5d0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal8ShutdownEii, 0x0000000000304e20)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal9GetModuleEv, 0x00000000002f9860)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternal9RunModuleEv, 0x00000000002fc1b0)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternalC1Ev, 0x0000000000304650)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternalC2Ev, 0x0000000000304650)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternalD1Ev, 0x0000000000304b50)
+NWNXLIB_FUNCTION(_ZN21CServerExoAppInternalD2Ev, 0x0000000000304b50)
+NWNXLIB_FUNCTION(_ZN21CVirtualMachineScriptD1Ev, 0x00000000007bd610)
+NWNXLIB_FUNCTION(_ZN21CVirtualMachineScriptD2Ev, 0x00000000007bd610)
+NWNXLIB_FUNCTION(_ZN22CCombatInformationNodeaSERKS_, 0x00000000007cb220)
+NWNXLIB_FUNCTION(_ZN22CCombatInformationNodeC1Ev, 0x00000000007cb150)
+NWNXLIB_FUNCTION(_ZN22CCombatInformationNodeC2Ev, 0x00000000007cb150)
+NWNXLIB_FUNCTION(_ZN22CCombatInformationNodeeqERS_, 0x00000000007cb180)
+NWNXLIB_FUNCTION(_ZN22CCombatInformationNodeneERS_, 0x00000000007cb1d0)
+NWNXLIB_FUNCTION(_ZN22CExoLinkedListInternal10RemoveHeadEv, 0x0000000000108da0)
+NWNXLIB_FUNCTION(_ZN22CExoLinkedListInternal10RemoveTailEv, 0x0000000000108e20)
+NWNXLIB_FUNCTION(_ZN22CExoLinkedListInternal6RemoveEP18CExoLinkedListNode, 0x0000000000108d00)
+NWNXLIB_FUNCTION(_ZN22CExoLinkedListInternal7AddHeadEPv, 0x00000000001089c0)
+NWNXLIB_FUNCTION(_ZN22CExoLinkedListInternal7AddTailEPv, 0x0000000000108a20)
+NWNXLIB_FUNCTION(_ZN22CExoLinkedListInternal7GetNextERP18CExoLinkedListNode, 0x0000000000108c40)
+NWNXLIB_FUNCTION(_ZN22CExoLinkedListInternal7GetPrevERP18CExoLinkedListNode, 0x0000000000108ca0)
+NWNXLIB_FUNCTION(_ZN22CExoLinkedListInternal8AddAfterEPvP18CExoLinkedListNode, 0x0000000000108a80)
+NWNXLIB_FUNCTION(_ZN22CExoLinkedListInternal8GetAtPosEP18CExoLinkedListNode, 0x0000000000108c00)
+NWNXLIB_FUNCTION(_ZN22CExoLinkedListInternal9AddBeforeEPvP18CExoLinkedListNode, 0x0000000000108b40)
+NWNXLIB_FUNCTION(_ZN22CExoLinkedListInternalD1Ev, 0x0000000000108980)
+NWNXLIB_FUNCTION(_ZN22CExoLinkedListInternalD2Ev, 0x0000000000108980)
+NWNXLIB_FUNCTION(_ZN22CNWCreatureStatsUpdate16ClearEffectIconsEv, 0x00000000002f4920)
+NWNXLIB_FUNCTION(_ZN22CNWCreatureStatsUpdate20SetCombatInformationEP18CCombatInformation, 0x00000000002f4a60)
+NWNXLIB_FUNCTION(_ZN22CNWCreatureStatsUpdateC1Ev, 0x00000000002f4710)
+NWNXLIB_FUNCTION(_ZN22CNWCreatureStatsUpdateC2Ev, 0x00000000002f4710)
+NWNXLIB_FUNCTION(_ZN22CNWCreatureStatsUpdateD1Ev, 0x00000000002f49d0)
+NWNXLIB_FUNCTION(_ZN22CNWCreatureStatsUpdateD2Ev, 0x00000000002f49d0)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject10LoadEffectEP7CResGFFP10CResStruct, 0x00000000002e5450)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject10SaveEffectEP7CResGFFP10CResStruct, 0x00000000002e5af0)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject10SetCreatorEj, 0x00000000002e5e70)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject11GetPositionEv, 0x00000000002e4e50)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject11JumpToPointEP8CNWSAreaRK6Vector, 0x00000000002e71c0)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject11MoveToPointERK6Vector, 0x00000000002e72b0)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject11SetDurationEhf, 0x00000000002e4f30)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject12EventHandlerEjjPvjj, 0x00000000002e6300)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject14InAreaOfEffectE6Vector, 0x00000000002e4c80)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject14LoadAreaEffectEi, 0x00000000002e4f60)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject14RemoveFromAreaEv, 0x00000000002e6270)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject14SetTargetObjIDEj, 0x00000000002e65b0)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject14UpdateSubAreasEP6Vector, 0x00000000002e66f0)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject16GetEffectSpellIdEv, 0x0000000000227cc0)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject16SetEffectSpellIdEj, 0x000000000026e450)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject18RemoveFromSubAreasEi, 0x00000000002e6010)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject23AsNWSAreaOfEffectObjectEv, 0x00000000002e75e0)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject32LineSegmentIntersectAreaOfEffectE6VectorS0_, 0x00000000002e4880)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject8AIUpdateEv, 0x00000000002e6ed0)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject8SetShapeEhff, 0x00000000002e4e20)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObject9AddToAreaEP8CNWSAreafffi, 0x00000000002e7320)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObjectC1Ej, 0x00000000002e46b0)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObjectC2Ej, 0x00000000002e46b0)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObjectD0Ev, 0x00000000002e6580)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObjectD1Ev, 0x00000000002e6430)
+NWNXLIB_FUNCTION(_ZN22CNWSAreaOfEffectObjectD2Ev, 0x00000000002e6430)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerCharSheetGUI20SetCreatureDisplayedEj, 0x00000000002b1020)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerCharSheetGUI35ComputeCharacterSheetUpdateRequiredEP10CNWSPlayer, 0x00000000002b32a0)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerContainerGUI11SetNextPageEP10CNWSPlayer, 0x00000000002b1350)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerContainerGUI15SetPreviousPageEP10CNWSPlayer, 0x00000000002b13e0)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerContainerGUI7SetOpenEP10CNWSPlayerji, 0x00000000002b1470)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerContainerGUIC1Ev, 0x00000000002b1330)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerContainerGUIC2Ev, 0x00000000002b1330)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerInventoryGUI7SetOpenEii, 0x00000000002b1170)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerInventoryGUI8SetOwnerEj, 0x00000000002b12b0)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerInventoryGUI8SetPanelEP10CNWSPlayerh, 0x00000000002b2840)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerInventoryGUIC1Ev, 0x00000000002b10a0)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerInventoryGUIC2Ev, 0x00000000002b10a0)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerInventoryGUID1Ev, 0x00000000002b1120)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerInventoryGUID2Ev, 0x00000000002b1120)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory10ClearSlotsEv, 0x00000000002b9ed0)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory10ClearStoreEv, 0x00000000002b9e20)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory11ClearBarterEv, 0x00000000002b9e80)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory14ClearContainerEv, 0x00000000002b9dd0)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory14ItemListRemoveEP18CExoLinkedListNodeh, 0x00000000002ba2b0)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory14ItemListSetEndERP18CExoLinkedListNodeh, 0x00000000002ba130)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory15ClearRepositoryEv, 0x00000000002b9d80)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory15ItemListAddHeadEjhhhjj, 0x00000000002ba340)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory15ItemListGetItemEP18CExoLinkedListNodeh, 0x00000000002b9f00)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory15ItemListGetNextERP18CExoLinkedListNodeh, 0x00000000002ba190)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory15ItemListGetPrevERP18CExoLinkedListNodeh, 0x00000000002ba1f0)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory16ItemListSetStartERP18CExoLinkedListNodeh, 0x00000000002ba0d0)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory17ItemListGetNumberEh, 0x00000000002ba250)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory21ItemListGetUpdateItemEP18CExoLinkedListNodeh, 0x00000000002ba070)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventory23ItemListGetItemObjectIDEP18CExoLinkedListNodeh, 0x00000000002ba000)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventoryC1Ev, 0x00000000002bb590)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventoryC2Ev, 0x00000000002bb590)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventoryD1Ev, 0x00000000002bb6e0)
+NWNXLIB_FUNCTION(_ZN22CNWSPlayerLUOInventoryD2Ev, 0x00000000002bb6e0)
+NWNXLIB_FUNCTION(_ZN23CNWPlaceableSurfaceMesh12LoadWalkMeshE7CResRef, 0x00000000007dc140)
+NWNXLIB_FUNCTION(_ZN23CNWPlaceableSurfaceMesh18LoadWalkMeshStringEPPhPjS0_j, 0x00000000007dc110)
+NWNXLIB_FUNCTION(_ZN23CNWPlaceableSurfaceMeshC1Ev, 0x00000000007dc040)
+NWNXLIB_FUNCTION(_ZN23CNWPlaceableSurfaceMeshC2Ev, 0x00000000007dc040)
+NWNXLIB_FUNCTION(_ZN23CNWPlaceableSurfaceMeshD0Ev, 0x00000000007dc010)
+NWNXLIB_FUNCTION(_ZN23CNWPlaceableSurfaceMeshD1Ev, 0x00000000007dbf90)
+NWNXLIB_FUNCTION(_ZN23CNWPlaceableSurfaceMeshD2Ev, 0x00000000007dbf90)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler10ApplyHasteEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000368020)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler10ApplyLightEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x000000000036be80)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler12ApplyACBonusEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x000000000036b7e0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler13ApplyImmunityEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000368950)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler14ApplyBonusFeatEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000368810)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler15ApplyDarkVisionEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000367c10)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler15ApplyDecreaseACEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x00000000003697e0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler15ApplyFreeActionEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000367df0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler15ApplySkillBonusEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000368420)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler15ApplyTrueSeeingEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000367cc0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler16ApplyAttackBonusEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x000000000036b030)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler16ApplyDamageBonusEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000369c30)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler16ApplyHolyAvengerEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x000000000036c690)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler16ApplySpecialWalkEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x00000000003680b0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler17ApplyAbilityBonusEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000368c30)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler17ApplyRegenerationEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000368600)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler18ApplyAttackPenaltyEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x000000000036b4e0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler18ApplyDamagePenaltyEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x000000000036bb60)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler18ApplyDecreaseSkillEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000369970)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler18ApplyUnlimitedAmmoEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x000000000036c070)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler19ApplyDamageImmunityEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000368f80)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler19ApplyTurnResistanceEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000368370)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler19RemoveUnlimitedAmmoEP8CNWSItemP15CNWItemPropertyP12CNWSCreaturej, 0x000000000036bfc0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler20ApplyDamageReductionEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x00000000003691c0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler20ApplyDecreaseAbilityEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x00000000003695d0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler20ApplyImprovedEvasionEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000367d50)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler21ApplyDamageResistanceEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000369310)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler21ApplyEnhancementBonusEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x000000000036a0c0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler21OnItemPropertyAppliedEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x00000000003677d0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler21OnItemPropertyRemovedEP8CNWSItemP15CNWItemPropertyP12CNWSCreaturej, 0x0000000000367a10)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler22ApplyBonusSpellOfLevelEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x000000000036c4e0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler23ApplyArcaneSpellFailureEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x00000000003686e0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler23ApplyChangedSavingThrowEP8CNWSItemiP15CNWItemPropertyP12CNWSCreaturei, 0x000000000036d430)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler23ApplyEnhancementPenaltyEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x000000000036aae0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler23ApplyReducedSavingThrowEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x000000000036d680)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler23ApplySpellImmunityLevelEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000368510)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler23RemoveBonusSpellOfLevelEP8CNWSItemP15CNWItemPropertyP12CNWSCreaturej, 0x000000000036c580)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler24ApplyDamageVulnerabilityEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000369470)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler24ApplyImprovedSavingThrowEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x000000000036d5a0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler24ApplySpellImmunitySchoolEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x00000000003681e0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler24InitializeItemPropertiesEv, 0x00000000003671c0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler26ApplyChangedSavingThrowVsXEP8CNWSItemiP15CNWItemPropertyP12CNWSCreaturei, 0x000000000036d760)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler26ApplyReducedSavingThrowVsXEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x000000000036dbe0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler26ApplySpellImmunitySpecificEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000369af0)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler27ApplyImprovedSavingThrowVsXEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x000000000036db00)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandler28ApplyImprovedSpellResistanceEP8CNWSItemP15CNWItemPropertyP12CNWSCreatureji, 0x0000000000368e40)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandlerD0Ev, 0x0000000000367190)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandlerD1Ev, 0x0000000000367140)
+NWNXLIB_FUNCTION(_ZN23CNWSItemPropertyHandlerD2Ev, 0x0000000000367140)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands11ReportErrorER10CExoStringi, 0x00000000003ad0f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands12DebugGUIStopEv, 0x000000000037bb80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands13DebugGUIStartEv, 0x00000000003ac740)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands14DebugGUIUpdateEv, 0x0000000000374b80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands14ExecuteCommandEii, 0x0000000000374b30)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands17RunScriptCallbackER10CExoString, 0x000000000037ac20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands18ExecuteCommandIsDMEii, 0x0000000000384c40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands18ExecuteCommandIsPCEii, 0x000000000038c510)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands18ExecuteCommandMathEii, 0x000000000038e620)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands18ExecuteCommandWaitEii, 0x0000000000381d90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands18GetObjectWatchViewEjPiPP10CExoStringS3_, 0x00000000003b2850)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands18InitializeCommandsEv, 0x0000000000374c40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands19ExecuteCommandGetACEii, 0x0000000000394f90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands19ExecuteCommandGetPCEii, 0x00000000003a25b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands19ExecuteCommandGetXPEii, 0x000000000037fcb0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands19ExecuteCommandSetXPEii, 0x000000000039f5f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands20ExecuteCommandAttackEii, 0x0000000000389d00)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands20ExecuteCommandBootPCEii, 0x000000000038e370)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands20ExecuteCommandGetAgeEii, 0x0000000000383fb0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands20ExecuteCommandGetTagEii, 0x00000000003b1510)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands20ExecuteCommandGetVarEii, 0x00000000003b21b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands20ExecuteCommandRandomEii, 0x000000000037bd90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands20ExecuteCommandSetTagEii, 0x00000000003add20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands20ExecuteCommandSetVarEii, 0x00000000003b1e80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands20ExecuteCommandTalentEii, 0x0000000000387520)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands20ExecuteCommandVectorEii, 0x0000000000387270)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands20GetDebuggerLabelNameEi, 0x00000000003acc60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands21DebugGUISendMessageToEPci, 0x000000000037bbc0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands21ExecuteCommandEndGameEii, 0x00000000003a1ac0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands21ExecuteCommandGetAreaEii, 0x0000000000385740)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands21ExecuteCommandGetGoldEii, 0x000000000039fea0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands21ExecuteCommandGetNameEii, 0x00000000003b1710)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands21ExecuteCommandGetStatEii, 0x0000000000383cc0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands21ExecuteCommandNothingEii, 0x00000000003bb5b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands21ExecuteCommandSetFadeEii, 0x00000000003a8790)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands21ExecuteCommandSetLikeEii, 0x000000000039e3a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands21ExecuteCommandSetNameEii, 0x00000000003ae0f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands21ExecuteCommandSetTimeEii, 0x0000000000381600)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands21ExecuteCommandVibrateEii, 0x00000000003aacd0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands21GetTableFromArmorPartEi, 0x00000000003b3b70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands22DebugGUIGetMessageFromEPPcPi, 0x000000000037bc00)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands22ExecuteCommandCopyItemEii, 0x00000000003a3530)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands22ExecuteCommandGetColorEii, 0x000000000037d670)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands22ExecuteCommandGetDeityEii, 0x000000000038cec0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands22ExecuteCommandGetIsDayEii, 0x0000000000380da0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands22ExecuteCommandLocationEii, 0x0000000000387640)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands22ExecuteCommandOpenDoorEii, 0x000000000038c370)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands22ExecuteCommandRollDiceEii, 0x0000000000394ab0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands22ExecuteCommandSetColorEii, 0x000000000037d800)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands22ExecuteCommandSetDeityEii, 0x0000000000383d70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands22ExecuteCommandStopFadeEii, 0x00000000003a88c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands22ExecuteCommandStoreGetEii, 0x00000000003a9770)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands22ExecuteCommandStoreSetEii, 0x00000000003a9840)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandActionSitEii, 0x00000000003a2120)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandCastSpellEii, 0x00000000003831d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandCloseDoorEii, 0x000000000038c450)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandDeleteVarEii, 0x00000000003b11c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandEquipItemEii, 0x0000000000389210)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandForceRestEii, 0x00000000003a9ab0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandGetDomainEii, 0x00000000003a2f90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandGetEffectEii, 0x0000000000387d60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandGetFacingEii, 0x00000000003885a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandGetIsDawnEii, 0x0000000000380e40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandGetIsDuskEii, 0x0000000000380e90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandGetIsOpenEii, 0x00000000003a0460)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandGetLockedEii, 0x0000000000380270)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandGetMasterEii, 0x0000000000386680)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandGetModuleEii, 0x00000000003856f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandGetResRefEii, 0x00000000003af360)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandGetSkyBoxEii, 0x00000000003aee50)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandGetWeightEii, 0x00000000003a8de0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandIsAIStateEii, 0x000000000038a4a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandOpenStoreEii, 0x000000000039ec20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandPlaySoundEii, 0x0000000000381c40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandSetFacingEii, 0x0000000000380a40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandSetLockedEii, 0x0000000000380360)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandSetSkyBoxEii, 0x00000000003af1d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandTagEffectEii, 0x00000000003aa030)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands23ExecuteCommandVoiceChatEii, 0x000000000039ff90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24CopyGameDefinedStructureEiPv, 0x000000000037ae10)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandActionRestEii, 0x000000000039fa70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandAddToPartyEii, 0x000000000039c3b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandCopyObjectEii, 0x00000000003b8650)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandEffectBeamEii, 0x0000000000393890)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandEffectHealEii, 0x000000000038ec60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandFloatToIntEii, 0x000000000037c2c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandGetAILevelEii, 0x0000000000383c30)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandGetHasFeatEii, 0x000000000039afe0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandGetHitDiceEii, 0x0000000000396480)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandGetIsNightEii, 0x0000000000380df0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandGetSpellIdEii, 0x000000000037f9d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandGetSubRaceEii, 0x000000000038cfd0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandGetWeatherEii, 0x000000000037c960)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandGetXPScaleEii, 0x0000000000381000)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandIntToFloatEii, 0x0000000000388430)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandLockCameraEii, 0x00000000003a9ca0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandPickUpItemEii, 0x0000000000389bb0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandPostStringEii, 0x00000000003aae90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandPrintFloatEii, 0x000000000037c0a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandRandomNameEii, 0x00000000003ba610)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandSetAILevelEii, 0x000000000039c0b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandSetDislikeEii, 0x000000000039e510)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandSetSubRaceEii, 0x0000000000383e90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandSetSubTypeEii, 0x0000000000394e80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandSetWeatherEii, 0x00000000003a18c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandSetXPScaleEii, 0x0000000000381060)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24ExecuteCommandTestStringEii, 0x0000000000396bf0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24LoadGameDefinedStructureEiPPvP7CResGFFP10CResStruct, 0x000000000037b060)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands24SaveGameDefinedStructureEiPvP7CResGFFP10CResStruct, 0x000000000037af80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandBlackScreenEii, 0x00000000003a8960)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandEffectSwarmEii, 0x0000000000393520)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetAreaSizeEii, 0x00000000003ae6f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetDayTrackEii, 0x000000000037f030)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetEmotionsEii, 0x000000000038a2e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetFogColorEii, 0x00000000003aec90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetHardnessEii, 0x000000000037dc20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetHasSkillEii, 0x000000000039b110)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetHasSpellEii, 0x000000000039e8e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetHenchmanEii, 0x000000000039d500)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetImmortalEii, 0x0000000000384d90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetIsImmuneEii, 0x000000000039ac60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetLocationEii, 0x00000000003877b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetLockInfoEii, 0x000000000038d4a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetLootableEii, 0x0000000000384bb0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetPlotFlagEii, 0x000000000037caf0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetPositionEii, 0x0000000000387420)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetTimeHourEii, 0x0000000000381830)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandGetTrapInfoEii, 0x00000000003b51e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandIntToStringEii, 0x000000000038cbe0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandIsListeningEii, 0x000000000037f7d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandLineOfSightEii, 0x00000000003955d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandMoveToPointEii, 0x0000000000382ea0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandMusicBattleEii, 0x000000000037c850)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandPrintObjectEii, 0x000000000037c330)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandPrintStringEii, 0x000000000037bf60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandPrintVectorEii, 0x000000000037f210)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandPutDownItemEii, 0x0000000000389c50)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandResistSpellEii, 0x00000000003abe60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandSavingThrowEii, 0x0000000000394c20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandSetCalendarEii, 0x00000000003813b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandSetFogColorEii, 0x00000000003aef90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandSetHardnessEii, 0x00000000003a6f30)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandSetImmortalEii, 0x0000000000384cf0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandSetLockInfoEii, 0x000000000037e0b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandSetLootableEii, 0x000000000039c2e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandSetPlotFlagEii, 0x000000000037d410)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandSetTrapInfoEii, 0x000000000037e830)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandSignalEventEii, 0x0000000000382110)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandSpeakStringEii, 0x000000000038a910)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandSpeakStrRefEii, 0x0000000000398750)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands25ExecuteCommandUnequipItemEii, 0x0000000000389ad0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26CreateGameDefinedStructureEi, 0x000000000037acd0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandAmbientSoundEii, 0x00000000003a02d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandCreateObjectEii, 0x00000000003b4660)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandDelayCommandEii, 0x00000000003ac990)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandDoDoorActionEii, 0x0000000000389dd0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandEffectAppearEii, 0x0000000000391b10)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandEffectDamageEii, 0x0000000000393170)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandEffectPoisonEii, 0x0000000000390da0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandFloatingTextEii, 0x00000000003959c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandGet2DAStringEii, 0x00000000003a8030)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandGetAlignmentEii, 0x0000000000395480)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandGetAssociateEii, 0x000000000039d9a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandGetEffectTagEii, 0x00000000003a9f50)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandGetFogAmountEii, 0x00000000003ae8d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandGetHitpointsEii, 0x000000000037f350)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandGetIsRestingEii, 0x00000000003846b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandGetIsTrappedEii, 0x000000000037e720)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandGetModeStateEii, 0x00000000003a2cb0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandGetPCSpeakerEii, 0x0000000000386e40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandGetPhenoTypeEii, 0x0000000000384510)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandGetSkillRankEii, 0x000000000039b210)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandGetSpellCastEii, 0x0000000000385e90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandGetSubStringEii, 0x000000000038e230)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandInsertStringEii, 0x000000000038e140)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandModuleAccessEii, 0x000000000039b610)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandMoveToObjectEii, 0x0000000000385390)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandPrintIntegerEii, 0x000000000037bca0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandRemoveEffectEii, 0x0000000000382b40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandSetFogAmountEii, 0x00000000003aea80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandSetListeningEii, 0x000000000037f710)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandSetPhenoTypeEii, 0x00000000003845c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandTalentAccessEii, 0x0000000000382020)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands26ExecuteCommandVersusEffectEii, 0x000000000038e8e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27DestroyGameDefinedStructureEiPv, 0x000000000037b280)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandActionExamineEii, 0x0000000000383b50)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandActionUseFeatEii, 0x000000000039b340)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandAssignCommandEii, 0x00000000003ac5c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandChangeFactionEii, 0x0000000000396880)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandDayNightCycleEii, 0x00000000003a96a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandDestroyObjectEii, 0x0000000000380510)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandDoTouchAttackEii, 0x0000000000395e90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandEffectComplexEii, 0x000000000038ff20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandEffectDiseaseEii, 0x0000000000390eb0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandEffectPetrifyEii, 0x0000000000392270)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandExecuteScriptEii, 0x0000000000380640)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandFindSubStringEii, 0x000000000038e500)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandFloatToStringEii, 0x000000000038c860)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetActionModeEii, 0x0000000000380970)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetEffectTypeEii, 0x0000000000381ec0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetIdentifiedEii, 0x00000000003896f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetIsInCombatEii, 0x00000000003848b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetItemInSlotEii, 0x0000000000388d00)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetLastKillerEii, 0x00000000003859d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetLastLockedEii, 0x0000000000386a90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetLastUsedByEii, 0x0000000000386bf0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetModuleNameEii, 0x00000000003a29b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetNightTrackEii, 0x000000000037f0d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetObjectTypeEii, 0x000000000037f480)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetPortraitIdEii, 0x00000000003abd80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetRacialTypeEii, 0x000000000037fa80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetRandomUUIDEii, 0x00000000003ab360)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetReputationEii, 0x000000000038a1e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetStolenFlagEii, 0x000000000037cd40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetStringLeftEii, 0x000000000038dc10)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetTimeMinuteEii, 0x0000000000381870)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandGetTimeSecondEii, 0x00000000003818b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandIsEffectValidEii, 0x0000000000382590)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandItemActivatedEii, 0x0000000000387ac0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandOpenInventoryEii, 0x00000000003a8a90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandPlayAnimationEii, 0x000000000038b3e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandPopUpGUIPanelEii, 0x000000000039f060)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandPrintLogEntryEii, 0x00000000003a2890)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandSetActionModeEii, 0x00000000003808a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandSetCameraModeEii, 0x00000000003a1810)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandSetIdentifiedEii, 0x000000000039c770)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandSetPortraitIdEii, 0x000000000037c670)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27ExecuteCommandSetStolenFlagEii, 0x000000000037ce00)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27GetEngineStructureWatchViewEiPvPiPP10CExoStringS4_, 0x000000000037b430)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands27GetGameDefinedStructureNameEi, 0x000000000037b380)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandActionUseSkillEii, 0x000000000039b460)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandActivatePortalEii, 0x00000000003a09e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandAreaManagementEii, 0x00000000003baa40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandEffectDarknessEii, 0x00000000003915c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandEffectEtherealEii, 0x00000000003924e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandEffectImmunityEii, 0x0000000000392850)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetBattleTrackEii, 0x000000000037f170)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetCalendarDayEii, 0x00000000003817f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetCampaignIntEii, 0x00000000003a5410)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetCasterLevelEii, 0x0000000000394550)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetCommandableEii, 0x000000000037f640)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetDescriptionEii, 0x00000000003b3020)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetFactionGoldEii, 0x00000000003971c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetIsInTriggerEii, 0x0000000000384e20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetItemACValueEii, 0x000000000039f800)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetItemChargesEii, 0x0000000000389a40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetLastDamagerEii, 0x0000000000385b10)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetLastSpeakerEii, 0x0000000000385920)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetMaxHenchmenEii, 0x0000000000380ee0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetNearestTrapEii, 0x0000000000386f10)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetObjectByTagEii, 0x0000000000397b60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetObjectValidEii, 0x000000000037c420)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetPCIPAddressEii, 0x000000000039e1c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetSpellSaveDCEii, 0x0000000000394da0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetStrByStrRefEii, 0x00000000003ace60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetStringRightEii, 0x000000000038dae0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandGetUseableFlagEii, 0x000000000037e660)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandIntToHexStringEii, 0x000000000038cb30)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandLocationAccessEii, 0x00000000003882b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandObjectToStringEii, 0x000000000038ca40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandSetCampaignIntEii, 0x00000000003a3f10)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandSetCommandableEii, 0x000000000037f560)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandSetCustomTokenEii, 0x0000000000397d40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandSetDescriptionEii, 0x000000000038dd40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandSetItemChargesEii, 0x00000000003a6900)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandSetMaxHenchmenEii, 0x0000000000380f30)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandSetSavingThrowEii, 0x000000000037de70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandSetUseableFlagEii, 0x00000000003a9e00)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandStartNewModuleEii, 0x00000000003a1a10)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28ExecuteCommandUUIDManagementEii, 0x00000000003ad860)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands28GetEqualGameDefinedStructureEiPvS0_, 0x00000000003ab700)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandActionDoCommandEii, 0x00000000003ac4a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandActionUseTalentEii, 0x000000000039bb50)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandAddItemPropertyEii, 0x00000000003a6a40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandAdjustAlignmentEii, 0x000000000039aa80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandAssociateAccessEii, 0x000000000039dac0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandClearAllActionsEii, 0x0000000000380710)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandEffectBlindnessEii, 0x0000000000391950)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandEffectDisappearEii, 0x0000000000391a00)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandEffectSanctuaryEii, 0x0000000000391140)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetAbilityScoreEii, 0x0000000000399c70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetAttackTargetEii, 0x00000000003867b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetBaseItemTypeEii, 0x00000000003893a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetBlockingDoorEii, 0x0000000000386970)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetCalendarYearEii, 0x0000000000381770)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetCreatureSizeEii, 0x0000000000384750)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetCutsceneModeEii, 0x000000000038c5a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetFactionEqualEii, 0x00000000003967b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetFamiliarNameEii, 0x000000000038d0e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetFootstepTypeEii, 0x00000000003a39f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetGroundHeightEii, 0x0000000000398970)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetHasInventoryEii, 0x000000000037e520)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetInfiniteFlagEii, 0x000000000037cbb0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetItemPropertyEii, 0x0000000000387f80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetLastAttackerEii, 0x0000000000385a50)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetLastClosedByEii, 0x0000000000386d80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetLastDisarmedEii, 0x00000000003869c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetLastEquippedEii, 0x0000000000386080)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetLastOpenedByEii, 0x0000000000386cc0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetLastPCRestedEii, 0x0000000000386120)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetLastUnlockedEii, 0x0000000000386b40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetMovementRateEii, 0x0000000000384050)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetObjectInAreaEii, 0x00000000003947f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetPCChatVolumeEii, 0x00000000003811d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetPCPlayerNameEii, 0x000000000039dca0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetStringLengthEii, 0x000000000038d820)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandGetWeaponRangedEii, 0x0000000000389430)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandLevelUpHenchmanEii, 0x00000000003a8c60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandMusicBackgroundEii, 0x000000000037c730)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandRemoveFromPartyEii, 0x00000000003a2be0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandSendMessageToPCEii, 0x0000000000383a00)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandSetCameraHeightEii, 0x00000000003a9be0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandSetCutsceneModeEii, 0x00000000003a8520)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandSetFootstepTypeEii, 0x00000000003a38a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandSetInfiniteFlagEii, 0x000000000037cc70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandSetListenStringEii, 0x0000000000396ab0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandSetPCChatVolumeEii, 0x0000000000381290)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandSoundObjectPlayEii, 0x000000000039fc60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandSoundObjectStopEii, 0x000000000039fce0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandSummonAssociateEii, 0x000000000039c800)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandTagItemPropertyEii, 0x00000000003933e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandTimeConversionsEii, 0x00000000003884a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandVectorMagnitudeEii, 0x000000000038beb0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands29ExecuteCommandVectorNormalizeEii, 0x0000000000387330)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandActionRandomWalkEii, 0x0000000000381930)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandAdjustReputationEii, 0x00000000003980d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandEffectACDecreaseEii, 0x000000000038f5f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandEffectACIncreaseEii, 0x000000000038f400)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandEffectAreaEffectEii, 0x0000000000393d20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandEffectMissChanceEii, 0x0000000000391700)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandEffectTrueSeeingEii, 0x0000000000391660)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandEventSpellCastAtEii, 0x0000000000398a20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandEventUserDefinedEii, 0x00000000003958e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetAssociateTypeEii, 0x0000000000384a70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetCalendarMonthEii, 0x00000000003817b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetCampaignFloatEii, 0x00000000003a5020)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetCurrentActionEii, 0x00000000003a1ee0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetDroppableFlagEii, 0x000000000037cf80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetEffectCreatorEii, 0x0000000000385860)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetEffectSpellIdEii, 0x00000000003826a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetEffectSubTypeEii, 0x0000000000382310)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetEncounterDataEii, 0x000000000039adc0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetFactionBestACEii, 0x00000000003978b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetFactionLeaderEii, 0x00000000003a2aa0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetFactionMemberEii, 0x000000000039eda0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetHasFeatEffectEii, 0x00000000003a23b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetIsAreaNaturalEii, 0x000000000037c4b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetIsDMPossessedEii, 0x00000000003849d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetIsTalentValidEii, 0x0000000000381f70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetItemPossessorEii, 0x0000000000386320)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetItemStackSizeEii, 0x0000000000389810)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetLastDisturbedEii, 0x0000000000385c80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetLastPerceivedEii, 0x0000000000386710)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetLeavingObjectEii, 0x00000000003b2550)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetMatchedStringEii, 0x00000000003b7dc0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetMetaMagicFeatEii, 0x000000000037bee0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetNearestObjectEii, 0x00000000003b6d80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetObjectInShapeEii, 0x00000000003af760)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetPCChatMessageEii, 0x000000000038cdd0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetPCChatSpeakerEii, 0x00000000003862c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetPCLevellingUpEii, 0x0000000000386270)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetPCPublicCDKeyEii, 0x000000000039deb0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGetWaypointByTagEii, 0x00000000003979d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandGiveXPToCreatureEii, 0x000000000039f510)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandIsInConversationEii, 0x000000000037c9f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandSetCampaignFloatEii, 0x00000000003a3b30)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandSetDroppableFlagEii, 0x000000000037cec0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandSetEncounterDataEii, 0x000000000039aed0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandSetIsDestroyableEii, 0x000000000039bee0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandSetItemStackSizeEii, 0x00000000003898a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandSetMapPinEnabledEii, 0x000000000039ef20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands30ExecuteCommandSetPCChatMessageEii, 0x0000000000381110)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandActionJumpToPointEii, 0x0000000000385090)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandActionLockActionsEii, 0x00000000003a1390)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandBeginConversationEii, 0x0000000000398b60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandCopyItemAndModifyEii, 0x00000000003b3d10)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandDecrementFeatUsesEii, 0x00000000003a2d90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandDoWhirlwindAttackEii, 0x00000000003a8ec0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandEffectConcealmentEii, 0x0000000000391400)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandEffectLinkEffectsEii, 0x0000000000399af0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandEffectTemporaryHPEii, 0x0000000000390fc0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandEffectUltravisionEii, 0x0000000000392090)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandEventActivateItemEii, 0x00000000003a0110)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandEventConversationEii, 0x0000000000387ce0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetAppearanceTypeEii, 0x000000000037db30)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetCampaignStringEii, 0x00000000003a60f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetCampaignVectorEii, 0x00000000003a5800)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetCreatureTalentEii, 0x000000000039b910)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetEffectDurationEii, 0x0000000000382990)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetEnteringObjectEii, 0x00000000003b26c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetFactionWorstACEii, 0x0000000000397790)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetGameDifficultyEii, 0x000000000037be20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetGoldPieceValueEii, 0x000000000039bd40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetHasSpellEffectEii, 0x000000000038a5a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetIsAreaInteriorEii, 0x000000000037c5d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetIsReactionTypeEii, 0x00000000003a0890)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetItemAppearanceEii, 0x00000000003894e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetItemCursedFlagEii, 0x000000000037d290)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetLastAttackModeEii, 0x000000000037ff20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetLastAttackTypeEii, 0x000000000037fd80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetLastPerceptionEii, 0x0000000000380070)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetLastWeaponUsedEii, 0x0000000000385bf0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetPortraitResRefEii, 0x000000000038ccd0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetSpecializationEii, 0x00000000003a2e80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetSpellTargetLocEii, 0x00000000003878f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandGetTileLightColorEii, 0x00000000003a1cf0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandPlaySoundByStrRefEii, 0x00000000003ad450)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandSetCameraLocationEii, 0x000000000038c680)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandSetCampaignStringEii, 0x00000000003a4b70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandSetCampaignVectorEii, 0x00000000003a42f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandSetItemCursedFlagEii, 0x000000000037d1d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandSetPortraitResRefEii, 0x0000000000388840)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandSetTileLightColorEii, 0x0000000000382740)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandStoreCameraFacingEii, 0x00000000003ab9a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandStringConversionsEii, 0x0000000000398660)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandUnlockAchievementEii, 0x0000000000395c50)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandUnpossessFamiliarEii, 0x00000000003a94f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands31ExecuteCommandVectorConversionsEii, 0x00000000003ab570)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandActionCounterSpellEii, 0x00000000003a2b50)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandActionExchangeItemEii, 0x00000000003999e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandActionFollowObjectEii, 0x0000000000383850)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandActionJumpToObjectEii, 0x0000000000384f00)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandApplyEffectAtPointEii, 0x00000000003af560)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandCreateItemOnObjectEii, 0x0000000000388960)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandCreateTrapOnObjectEii, 0x00000000003b6730)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandDecrementSpellUsesEii, 0x00000000003a30e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandEffectDamageShieldEii, 0x0000000000391ef0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandEffectInvisibilityEii, 0x00000000003912c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandEffectResurrectionEii, 0x000000000038f120)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandEffectSeeInvisibleEii, 0x00000000003918b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandEffectSpellFailureEii, 0x00000000003923a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandEffectVisualEffectEii, 0x0000000000390a10)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandExecuteScriptChunkEii, 0x00000000003ab170)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetAbilityModifierEii, 0x000000000039c610)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetBaseAttackBonusEii, 0x00000000003a8a00)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetChallengeRatingEii, 0x0000000000388700)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetDistanceBetweenEii, 0x000000000038c240)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetItemInInventoryEii, 0x000000000039cc50)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetItemPossessedByEii, 0x0000000000388ef0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetItemPropertyTagEii, 0x00000000003aa3b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetLimitSkillBonusEii, 0x00000000003aa7f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetModuleItemStuffEii, 0x0000000000386170)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetNumStackedItemsEii, 0x0000000000389780)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetPlayerBuildInfoEii, 0x000000000039ddb0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetSittingCreatureEii, 0x00000000003942d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetSpellCasterItemEii, 0x0000000000386570)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetSpellResistanceEii, 0x0000000000396720)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetStartingPackageEii, 0x0000000000384470)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetStringLowerCaseEii, 0x000000000038d9d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetStringUpperCaseEii, 0x000000000038d8c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetSurfaceMaterialEii, 0x00000000003aa600)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetTimeMillisecondEii, 0x00000000003818f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGetWillSavingThrowEii, 0x00000000003a15b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandGiveGoldToCreatureEii, 0x000000000039f440)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandItemPropertyEffectEii, 0x00000000003a72e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandMoveAwayFromObjectEii, 0x0000000000381a70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandRemoveItemPropertyEii, 0x0000000000382ce0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandSetBaseAttackBonusEii, 0x0000000000384310)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandSetLimitSkillBonusEii, 0x00000000003ba2b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandSetTextureOverrideEii, 0x00000000003ab3e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands32ExecuteCommandSurrenderToEnemiesEii, 0x00000000003a0de0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandApplyEffectOnObjectEii, 0x0000000000398460)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandDistanceConversionsEii, 0x00000000003881f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandEffectCutsceneGhostEii, 0x00000000003925d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandEffectModifyAttacksEii, 0x0000000000391c20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandEffectNegativeLevelEii, 0x0000000000396560)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandEffectSkillDecreaseEii, 0x0000000000392fa0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandEffectSkillIncreaseEii, 0x0000000000392dd0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandEffectSpellImmunityEii, 0x0000000000392c90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandExportAllCharactersEii, 0x00000000003a27c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetAOEObjectCreatorEii, 0x00000000003864a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetCampaignLocationEii, 0x00000000003a5c40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetClassInformationEii, 0x0000000000394360)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetCreatureBodyPartEii, 0x000000000038ae70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetCreatureTailTypeEii, 0x000000000037d5c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetCreatureWingTypeEii, 0x000000000037d510)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetDistanceToObjectEii, 0x000000000038c070)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetFactionAverageXPEii, 0x00000000003975f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetItemPropertyInfoEii, 0x00000000003a6d90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetItemPropertyTypeEii, 0x00000000003a6ca0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetLastHostileActorEii, 0x00000000003a2630)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetLastTrapDetectedEii, 0x00000000003865f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetLimitAttackBonusEii, 0x00000000003aa6b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetLimitDamageBonusEii, 0x00000000003aa6f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetObjectVisibilityEii, 0x000000000038a680)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetTotalDamageDealtEii, 0x000000000039d340)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetTransitionTargetEii, 0x0000000000397aa0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandGetTurnResistanceHDEii, 0x00000000003a12f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandIsItemPropertyValidEii, 0x00000000003823c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandRestoreCameraFacingEii, 0x00000000003abb40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandSendMessageToAllDMsEii, 0x000000000038a7e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandSetCampaignLocationEii, 0x00000000003a4700)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandSetCreatureBodyPartEii, 0x000000000038b1d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandSetCreatureTailTypeEii, 0x000000000038b040)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandSetCreatureWingTypeEii, 0x000000000038ace0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandSetLimitAttackBonusEii, 0x00000000003b9890)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandSetLimitDamageBonusEii, 0x00000000003b9f50)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandSetPanelButtonFlashEii, 0x00000000003a2040)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandSetTransitionTargetEii, 0x00000000003aa500)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandSpawnScriptDebuggerEii, 0x00000000003ab7a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands33ExecuteCommandStoreCampaignObjectEii, 0x00000000003b8c10)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandActionInteractObjectEii, 0x000000000039c570)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandAddJournalQuestEntryEii, 0x000000000039a1f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandCreateTrapAtLocationEii, 0x00000000003b5fb0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandEffectAttackDecreaseEii, 0x000000000038fd60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandEffectAttackIncreaseEii, 0x000000000038fba0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandEffectDamageDecreaseEii, 0x00000000003952a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandEffectDamageIncreaseEii, 0x00000000003950b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandEffectSummonCreatureEii, 0x0000000000393b00)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandEffectTurnResistanceEii, 0x0000000000392130)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandExploreAreaForPlayerEii, 0x000000000039fb10)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandGetCreatureHasTalentEii, 0x000000000039b810)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandGetDamageDealtByTypeEii, 0x000000000039d410)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandGetDialogSoundLengthEii, 0x00000000003acb70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandGetEffectCasterLevelEii, 0x00000000003828e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandGetIsAreaAboveGroundEii, 0x000000000037c540)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandGetIsSkillSuccessfulEii, 0x00000000003a81d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandGetIsWeaponEffectiveEii, 0x00000000003a0060)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandGetLastRestEventTypeEii, 0x0000000000380d50)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandGetLimitAbilityBonusEii, 0x00000000003aa770)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandGetMatchedStringsNumEii, 0x000000000037f890)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandGetReflexSavingThrowEii, 0x00000000003a16e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandGetSpellTargetObjectEii, 0x0000000000385db0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandSetAreaTransitionBMPEii, 0x0000000000397c40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandSetLimitAbilityBonusEii, 0x00000000003b9bf0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandSoundObjectSetVolumeEii, 0x000000000039fd60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands34ExecuteCommandTakeGoldFromCreatureEii, 0x00000000003a0550)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandEffectAbilityDecreaseEii, 0x000000000038ef80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandEffectAbilityIncreaseEii, 0x000000000038ede0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandEffectDamageReductionEii, 0x0000000000392670)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandEffectDisappearAppearEii, 0x0000000000394130)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandEventScriptManagementEii, 0x00000000003b0820)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandExportSingleCharacterEii, 0x00000000003a27e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandGetArcaneSpellFailureEii, 0x0000000000384230)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandGetEffectDurationTypeEii, 0x0000000000382260)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandGetHiddenWhenEquippedEii, 0x000000000037d350)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandGetInPersistentObjectEii, 0x0000000000398f30)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandGetLastSpellCastClassEii, 0x0000000000383130)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandGetPickpocketableFlagEii, 0x000000000037d100)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandObjectVisualTransformEii, 0x00000000003aa830)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandSetHiddenWhenEquippedEii, 0x00000000003abc00)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands35ExecuteCommandSetPickpocketableFlagEii, 0x000000000037d040)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandDeleteCampaignVariableEii, 0x00000000003a6540)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandDoSinglePlayerAutoSaveEii, 0x00000000003a1b70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandEffectDamageResistanceEii, 0x000000000038f240)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandGetAnimalCompanionNameEii, 0x000000000038d1f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandGetFactionAverageLevelEii, 0x0000000000397520)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandGetGoingToBeAttackedByEii, 0x00000000003868e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandGetIsEncounterCreatureEii, 0x0000000000384b10)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandGetIsPossessedFamiliarEii, 0x000000000039be50)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandGetItemHasItemPropertyEii, 0x000000000039f6d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandGetLimitAbilityPenaltyEii, 0x00000000003aa7b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandGetMatchedStringsCountEii, 0x000000000037f930)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandGetStrRefSoundDurationEii, 0x00000000003acd70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandMaterialShaderUniformsEii, 0x00000000003aaae0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandRestoreBaseAttackBonusEii, 0x00000000003843e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandRetrieveCampaignObjectEii, 0x00000000003b7f20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandSetLimitAbilityPenaltyEii, 0x00000000003b91d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands36ExecuteCommandSoundObjectSetPositionEii, 0x000000000039fdf0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandActionPauseConversationEii, 0x00000000003aba60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandActionStartConversationEii, 0x0000000000397eb0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandDestroyCampaignDatabaseEii, 0x00000000003a4f70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandGetAttemptedSpellTargetEii, 0x0000000000386890)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandGetFactionWeakestMemberEii, 0x0000000000396d40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandGetFamiliarCreatureTypeEii, 0x00000000003840f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandGetFortitudeSavingThrowEii, 0x00000000003a1480)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandGetInventoryDisturbItemEii, 0x0000000000385d30)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandGetInventoryDisturbTypeEii, 0x000000000037be60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandGetIsCreatureDisarmableEii, 0x0000000000388e10)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandGetIsDoorActionPossibleEii, 0x000000000039c8c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandGetIsRacialTypePlayableEii, 0x000000000037fb60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandGetItemPropertyDurationEii, 0x0000000000382a60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandGetLastAssociateCommandEii, 0x0000000000384940)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandGetReflexAdjustedDamageEii, 0x00000000003981d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandRecomputeStaticLightingEii, 0x00000000003a1c70)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandRemoveJournalQuestEntryEii, 0x000000000039a6e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands37ExecuteCommandSendMessageToPCByStrRefEii, 0x00000000003acfa0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands38ExecuteCommandActionResumeConversationEii, 0x00000000003ab8c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands38ExecuteCommandGetAttemptedAttackTargetEii, 0x0000000000386840)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands38ExecuteCommandGetLimitSavingThrowBonusEii, 0x00000000003aa730)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands38ExecuteCommandGetPlaceableIlluminationEii, 0x00000000003a2520)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands38ExecuteCommandPersonalReputationAccessEii, 0x000000000039f240)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands38ExecuteCommandSetLimitSavingThrowBonusEii, 0x00000000003b9530)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands38ExecuteCommandSetPlaceableIlluminationEii, 0x00000000003a2490)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands39ExecuteCommandEffectSavingThrowDecreaseEii, 0x000000000038f9c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands39ExecuteCommandEffectSavingThrowIncreaseEii, 0x000000000038f7e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands39ExecuteCommandGetCutsceneCameraMoveRateEii, 0x00000000003887a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands39ExecuteCommandGetFactionStrongestMemberEii, 0x0000000000396e60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands39ExecuteCommandGetJournalQuestExperienceEii, 0x000000000039e670)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands39ExecuteCommandGetUserDefinedEventNumberEii, 0x00000000003b13d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands39ExecuteCommandSetCreatureAppearanceTypeEii, 0x00000000003a9940)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands39ExecuteCommandSetCutsceneCameraMoveRateEii, 0x00000000003847e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands39ExecuteCommandSpeakOneLinerConversationEii, 0x000000000038aba0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands39ExecuteCommandTileExplorationManagementEii, 0x00000000003adb50)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands40ExecuteCommandActionMoveAwayFromLocationEii, 0x000000000039d5e0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands40ExecuteCommandEffectSpellLevelAbsorptionEii, 0x0000000000391d40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands40ExecuteCommandGetEffectDurationRemainingEii, 0x00000000003aa140)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands40ExecuteCommandGetFactionNthNearestMemberEii, 0x00000000003b3b60)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands40ExecuteCommandGetPlayerConnectionRelayedEii, 0x000000000039e2f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands40ExecuteCommandIncrementRemainingFeatUsesEii, 0x00000000003a95d0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands40ExecuteCommandSetAssociateListenPatternsEii, 0x000000000039c4f0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands41ExecuteCommandEffectMovementSpeedDecreaseEii, 0x00000000003908c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands41ExecuteCommandEffectMovementSpeedIncreaseEii, 0x0000000000390770)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands41ExecuteCommandGetDistanceBetweenLocationsEii, 0x000000000038bf40)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands41ExecuteCommandGetFactionAverageReputationEii, 0x0000000000397290)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands41ExecuteCommandGetFactionMostDamagedMemberEii, 0x0000000000396f80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands41ExecuteCommandGetFactionMostFrequentClassEii, 0x00000000003976c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands41ExecuteCommandGetItemPropertyDurationTypeEii, 0x00000000003824b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands42ExecuteCommandActionEquipMostDamagingMeleeEii, 0x000000000039f900)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands42ExecuteCommandAutoMapExplorationManagementEii, 0x000000000037da20)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands42ExecuteCommandEffectDamageImmunityDecreaseEii, 0x0000000000392b10)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands42ExecuteCommandEffectDamageImmunityIncreaseEii, 0x0000000000392980)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands42ExecuteCommandGetFactionLeastDamagedMemberEii, 0x00000000003970a0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands43ExecuteCommandActionEquipMostDamagingRangedEii, 0x000000000039f9c0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands43ExecuteCommandActionEquipMostEffectiveArmorEii, 0x000000000039fc30)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands43ExecuteCommandEffectHitPointChangeWhenDyingEii, 0x0000000000394000)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands43ExecuteCommandEffectSpellResistanceDecreaseEii, 0x0000000000390c90)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands43ExecuteCommandEffectSpellResistanceIncreaseEii, 0x0000000000390b80)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands43ExecuteCommandGetKeyRequiredFeedbackMessageEii, 0x000000000038d300)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands43ExecuteCommandSetKeyRequiredFeedbackMessageEii, 0x000000000037dd00)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands44ExecuteCommandGetAnimalCompanionCreatureTypeEii, 0x0000000000384190)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands45ExecuteCommandStandardFactionReputationAccessEii, 0x00000000003a21b0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands46ExecuteCommandGetItemPropertyDurationRemainingEii, 0x00000000003aa270)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands48ExecuteCommandGetFactionAverageGoodEvilAlignmentEii, 0x0000000000397380)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommands48ExecuteCommandGetFactionAverageLawChaosAlignmentEii, 0x0000000000397450)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommandsD0Ev, 0x0000000000374c00)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommandsD1Ev, 0x0000000000374bd0)
+NWNXLIB_FUNCTION(_ZN25CNWVirtualMachineCommandsD2Ev, 0x0000000000374bd0)
+NWNXLIB_FUNCTION(_ZN25ObjectVisualTransformData4ReadEP10CNWMessage, 0x00000000007df3f0)
+NWNXLIB_FUNCTION(_ZN25ObjectVisualTransformData5WriteEP10CNWMessageRKS_, 0x00000000007df2c0)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject13AddKnownSpellEhhj, 0x00000000002bbb40)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject13GetKnownSpellEhhh, 0x00000000002baf50)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject16ClearActionQueueEv, 0x00000000002bb440)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject16ClearAutoMapDataEv, 0x00000000002bb4a0)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject16ClearEffectIconsEv, 0x00000000002badb0)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject16ClearKnownSpellsEv, 0x00000000002bb760)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject16GetIsDomainSpellEhhh, 0x00000000002bb010)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject16ResetAutoMapDataEj, 0x00000000002bb550)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject17GetMemorizedSpellEhhh, 0x00000000002baf90)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject19ClearVisibilityListEv, 0x00000000002bb380)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject20ClearMemorizedSpellsEv, 0x00000000002bad00)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject21GetKnownSpellUsesLeftEhh, 0x00000000002bb310)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject21InitializeAutoMapDataEv, 0x00000000002bb4e0)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject21SetKnownSpellUsesLeftEhhh, 0x00000000002bb350)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject21SetMemorizedSpellSlotEhhhjih, 0x00000000002bae60)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject23ClearKnownSpellUsesLeftEv, 0x00000000002bb2d0)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject24ClearSpellAddDeleteListsEv, 0x00000000002bb7b0)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject24GetMemorizedSpellReadiedEhhh, 0x00000000002bafd0)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject24SetMemorizedSpellReadiedEhhhi, 0x00000000002bb090)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject25GetMemorizedSpellMetaTypeEhhh, 0x00000000002bb050)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObject28SetNumberMemorizedSpellSlotsEhhh, 0x00000000002bb0d0)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObjectC1Ev, 0x00000000002baad0)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObjectC2Ev, 0x00000000002baad0)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObjectD1Ev, 0x00000000002bb860)
+NWNXLIB_FUNCTION(_ZN26CNWSPlayerLastUpdateObjectD2Ev, 0x00000000002bb860)
+NWNXLIB_FUNCTION(_ZN26CNWSStats_SpellLikeAbilityC1Ev, 0x0000000000229000)
+NWNXLIB_FUNCTION(_ZN26CNWSStats_SpellLikeAbilityC2Ev, 0x0000000000229000)
+NWNXLIB_FUNCTION(_ZN26CNWTileSurfaceMeshAABBNodeD1Ev, 0x00000000001c3870)
+NWNXLIB_FUNCTION(_ZN26CNWTileSurfaceMeshAABBNodeD2Ev, 0x00000000001c3870)
+NWNXLIB_FUNCTION(_ZN26CScriptCompilerIdListEntry20ExpandParameterSpaceEv, 0x0000000000799b40)
+NWNXLIB_FUNCTION(_ZN26CScriptCompilerIdListEntryC1Ev, 0x00000000007998b0)
+NWNXLIB_FUNCTION(_ZN26CScriptCompilerIdListEntryC2Ev, 0x00000000007998b0)
+NWNXLIB_FUNCTION(_ZN26CScriptCompilerIdListEntryD1Ev, 0x00000000007999d0)
+NWNXLIB_FUNCTION(_ZN26CScriptCompilerIdListEntryD2Ev, 0x00000000007999d0)
+NWNXLIB_FUNCTION(_ZN26CVirtualMachineDebugLoader10GetDataPtrEv, 0x00000000007bd8b0)
+NWNXLIB_FUNCTION(_ZN26CVirtualMachineDebugLoader15DemandDebugInfoEP10CExoString, 0x00000000007c3570)
+NWNXLIB_FUNCTION(_ZN26CVirtualMachineDebugLoader16ReleaseDebugInfoEv, 0x00000000007c3730)
+NWNXLIB_FUNCTION(_ZN26CVirtualMachineDebugLoader7GetSizeEv, 0x00000000007bd8d0)
+NWNXLIB_FUNCTION(_ZN26CVirtualMachineDebugLoaderD0Ev, 0x000000000079ec20)
+NWNXLIB_FUNCTION(_ZN26CVirtualMachineDebugLoaderD1Ev, 0x000000000079ec00)
+NWNXLIB_FUNCTION(_ZN26CVirtualMachineDebugLoaderD2Ev, 0x000000000079ec00)
+NWNXLIB_FUNCTION(_ZN27CExoCriticalSectionInternal20EnterCriticalSectionEv, 0x00000000001054b0)
+NWNXLIB_FUNCTION(_ZN27CExoCriticalSectionInternal20LeaveCriticalSectionEv, 0x00000000001054c0)
+NWNXLIB_FUNCTION(_ZN27CExoCriticalSectionInternalC1Ev, 0x0000000000105440)
+NWNXLIB_FUNCTION(_ZN27CExoCriticalSectionInternalC2Ev, 0x0000000000105440)
+NWNXLIB_FUNCTION(_ZN27CExoCriticalSectionInternalD1Ev, 0x00000000001054a0)
+NWNXLIB_FUNCTION(_ZN27CExoCriticalSectionInternalD2Ev, 0x00000000001054a0)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo13AddKnownSpellEhj, 0x000000000024ab40)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo13GetKnownSpellEhh, 0x00000000002286d0)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo16GetIsDomainSpellEhh, 0x0000000000228730)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo16RemoveKnownSpellEhj, 0x00000000002462f0)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo18ConfirmDomainSpellEhj, 0x0000000000228980)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo19GetSpellsPerDayLeftEh, 0x0000000000228890)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo19SetSpellsPerDayLeftEhh, 0x00000000002288b0)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo20GetNumberBonusSpellsEh, 0x0000000000228f80)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo20GetNumberKnownSpellsEh, 0x0000000000228f40)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo21ResetSpellsPerDayLeftEhh, 0x0000000000228950)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo21SetMemorizedSpellSlotEhhjih, 0x00000000002284f0)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo22GetMaxSpellsPerDayLeftEh, 0x00000000002288d0)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo22SetMaxSpellsPerDayLeftEhh, 0x00000000002288f0)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo23ClearMemorizedSpellSlotEhh, 0x0000000000228520)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo23GetMemorizedSpellInSlotEhh, 0x0000000000228700)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo23ModifyNumberBonusSpellsEhi, 0x0000000000228fa0)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo25ClearMemorizedKnownSpellsEj, 0x0000000000228550)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo25DecrementSpellsPerDayLeftEh, 0x0000000000228910)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo25IncrementSpellsPerDayLeftEh, 0x0000000000228930)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo27GetMemorizedSpellReadyCountEjh, 0x0000000000228840)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo27GetMemorizedSpellReadyCountEjPhS0_h, 0x0000000000228a40)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo28GetMemorizedSpellInSlotReadyEhh, 0x00000000002287e0)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo28GetNumberMemorizedSpellSlotsEh, 0x0000000000228f60)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo28SetMemorizedSpellInSlotReadyEhhi, 0x0000000000228810)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo28SetNumberMemorizedSpellSlotsEhhi, 0x00000000002287b0)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo30GetMemorizedSpellInSlotDetailsEhh, 0x0000000000228760)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfo31GetMemorizedSpellInSlotMetaTypeEhh, 0x0000000000228860)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfoC1Ev, 0x0000000000228400)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfoC2Ev, 0x0000000000228400)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfoD1Ev, 0x000000000024a060)
+NWNXLIB_FUNCTION(_ZN27CNWSCreatureStats_ClassInfoD2Ev, 0x000000000024a060)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance13LoadDebugInfoEP26CVirtualMachineDebugLoader, 0x00000000007be550)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance13SpawnDebuggerEv, 0x00000000007c3750)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance14LoadScriptLineEPhjjPji, 0x00000000007be470)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance16DebuggerMainLoopEv, 0x00000000007c34c0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance16GenerateTypeNameEP10CExoString, 0x00000000007c0070)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance16GenerateTypeSizeEP10CExoString, 0x00000000007bff90)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance16ShutDownDebuggerEv, 0x00000000007be230)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance17LoadDebugInfoLineEPhjjPj, 0x00000000007be4f0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance18DebuggerSingleStepEi, 0x00000000007c30f0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance18FindWatchViewEntryEP10CExoStringS1_i, 0x00000000007c15f0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance19ReadStringFromInputEPiP10CExoString, 0x00000000007be2f0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance20GetNextDebugVariableEiii, 0x00000000007c0550)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance20ReadIntegerFromInputEPiS0_, 0x00000000007be290)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance20SendWatchWindowEntryEP10CExoStringS1_S1_S1_i, 0x00000000007c16b0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance21GenerateCallStackViewEiii, 0x00000000007c07c0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance21SendLabelsAndKeywordsEv, 0x00000000007c2750)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance22ParseAndExecuteMessageEPi, 0x00000000007c31c0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance23FindEmptyWatchViewEntryEv, 0x00000000007c0e50)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance26ToggleWatchWindowExpansionE10CExoString, 0x00000000007be3e0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance28SendCodeWindowUpdateCommandsE10CExoStringi, 0x00000000007c2a70)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance29SendWatchWindowUpdateCommandsEi, 0x00000000007c20e0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance30DebuggerDisplayCurrentLocationEii, 0x00000000007c2eb0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance30GenerateCallStackParameterViewEiP10CExoStringS1_, 0x00000000007c06b0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance33SendCallStackWindowUpdateCommandsEv, 0x00000000007c0b90)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance34GenerateTypeValueFromStackLocationEiP10CExoString, 0x00000000007c0220)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance37GenerateStackSizeAtInstructionPointerEii, 0x00000000007c0370)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance40GenerateFunctionIDFromInstructionPointerEi, 0x00000000007bfea0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance40GenerateLineNumberFromInstructionPointerEii, 0x00000000007bfee0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstance41GenerateDebugVariableLocationForParameterEii, 0x00000000007c0610)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstanceC1Ev, 0x00000000007bd8f0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstanceC2Ev, 0x00000000007bd8f0)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstanceD1Ev, 0x00000000007bdb80)
+NWNXLIB_FUNCTION(_ZN31CVirtualMachineDebuggerInstanceD2Ev, 0x00000000007bdb80)
+NWNXLIB_FUNCTION(_ZN32CNWTileSurfaceMeshHashTableEntry5FetchEi, 0x00000000001b8f20)
+NWNXLIB_FUNCTION(_ZN32CNWTileSurfaceMeshHashTableEntry5StoreEif, 0x00000000001b8f50)
+NWNXLIB_FUNCTION(_ZN32CNWTileSurfaceMeshHashTableEntryC1Ev, 0x00000000001b8ef0)
+NWNXLIB_FUNCTION(_ZN32CNWTileSurfaceMeshHashTableEntryC2Ev, 0x00000000001b8ef0)
+NWNXLIB_FUNCTION(_ZN32CPathfindInfoIntraTileSuccessorsC1Ev, 0x00000000007c3e10)
+NWNXLIB_FUNCTION(_ZN32CPathfindInfoIntraTileSuccessorsC2Ev, 0x00000000007c3e10)
+NWNXLIB_FUNCTION(_ZN4C2DA11GetINTEntryEiiPi, 0x0000000000120900)
+NWNXLIB_FUNCTION(_ZN4C2DA11GetINTEntryEiRK10CExoStringPi, 0x0000000000120a30)
+NWNXLIB_FUNCTION(_ZN4C2DA11GetINTEntryERK10CExoStringiPi, 0x0000000000121610)
+NWNXLIB_FUNCTION(_ZN4C2DA11GetINTEntryERK10CExoStringS2_Pi, 0x00000000001214d0)
+NWNXLIB_FUNCTION(_ZN4C2DA11GetRowIndexERK10CExoString, 0x0000000000120f10)
+NWNXLIB_FUNCTION(_ZN4C2DA11Load2DArrayEv, 0x0000000000121ac0)
+NWNXLIB_FUNCTION(_ZN4C2DA11SetINTEntryE10CExoStringii, 0x0000000000121800)
+NWNXLIB_FUNCTION(_ZN4C2DA11SetINTEntryE10CExoStringS0_i, 0x0000000000121740)
+NWNXLIB_FUNCTION(_ZN4C2DA11SetINTEntryEi10CExoStringi, 0x0000000000120c10)
+NWNXLIB_FUNCTION(_ZN4C2DA11SetINTEntryEiii, 0x0000000000120b60)
+NWNXLIB_FUNCTION(_ZN4C2DA12GetNextTokenEPPcPjS0_jS2_, 0x0000000000120de0)
+NWNXLIB_FUNCTION(_ZN4C2DA12SkipNewLinesEPPcPj, 0x00000000001219c0)
+NWNXLIB_FUNCTION(_ZN4C2DA13GetFLOATEntryEiiPf, 0x0000000000120630)
+NWNXLIB_FUNCTION(_ZN4C2DA13GetFLOATEntryEiRK10CExoStringPf, 0x00000000001206d0)
+NWNXLIB_FUNCTION(_ZN4C2DA13GetFLOATEntryERK10CExoStringiPf, 0x00000000001212b0)
+NWNXLIB_FUNCTION(_ZN4C2DA13GetFLOATEntryERK10CExoStringS2_Pf, 0x00000000001211f0)
+NWNXLIB_FUNCTION(_ZN4C2DA13SetBlankEntryE10CExoStringi, 0x0000000000121950)
+NWNXLIB_FUNCTION(_ZN4C2DA13SetBlankEntryE10CExoStringS0_, 0x00000000001218d0)
+NWNXLIB_FUNCTION(_ZN4C2DA13SetBlankEntryEi10CExoString, 0x0000000000120d30)
+NWNXLIB_FUNCTION(_ZN4C2DA13SetBlankEntryEii, 0x0000000000120cd0)
+NWNXLIB_FUNCTION(_ZN4C2DA13SetFLOATEntryE10CExoStringif, 0x0000000000121400)
+NWNXLIB_FUNCTION(_ZN4C2DA13SetFLOATEntryE10CExoStringS0_f, 0x0000000000121330)
+NWNXLIB_FUNCTION(_ZN4C2DA13SetFLOATEntryEi10CExoStringf, 0x0000000000120840)
+NWNXLIB_FUNCTION(_ZN4C2DA13SetFLOATEntryEiif, 0x0000000000120780)
+NWNXLIB_FUNCTION(_ZN4C2DA13Unload2DArrayEv, 0x00000000001224c0)
+NWNXLIB_FUNCTION(_ZN4C2DA14GetColumnIndexERK10CExoString, 0x0000000000120340)
+NWNXLIB_FUNCTION(_ZN4C2DA17GetNextLineLengthEPcj, 0x0000000000120d90)
+NWNXLIB_FUNCTION(_ZN4C2DA18GetCExoStringEntryEiiP10CExoString, 0x00000000001203f0)
+NWNXLIB_FUNCTION(_ZN4C2DA18GetCExoStringEntryEiRK10CExoStringPS0_, 0x00000000001204b0)
+NWNXLIB_FUNCTION(_ZN4C2DA18GetCExoStringEntryERK10CExoStringiPS0_, 0x0000000000121040)
+NWNXLIB_FUNCTION(_ZN4C2DA18GetCExoStringEntryERK10CExoStringS2_PS0_, 0x0000000000120f80)
+NWNXLIB_FUNCTION(_ZN4C2DA18SetCExoStringEntryE10CExoStringiS0_, 0x0000000000121170)
+NWNXLIB_FUNCTION(_ZN4C2DA18SetCExoStringEntryE10CExoStringS0_S0_, 0x0000000000121100)
+NWNXLIB_FUNCTION(_ZN4C2DA18SetCExoStringEntryEi10CExoStringS0_, 0x00000000001205c0)
+NWNXLIB_FUNCTION(_ZN4C2DA18SetCExoStringEntryEii10CExoString, 0x0000000000120570)
+NWNXLIB_FUNCTION(_ZN4C2DAC1E7CResRefi, 0x0000000000122580)
+NWNXLIB_FUNCTION(_ZN4C2DAC1Ev, 0x00000000001224e0)
+NWNXLIB_FUNCTION(_ZN4C2DAC2E7CResRefi, 0x0000000000122580)
+NWNXLIB_FUNCTION(_ZN4C2DAC2Ev, 0x00000000001224e0)
+NWNXLIB_FUNCTION(_ZN4C2DAD0Ev, 0x0000000000120310)
+NWNXLIB_FUNCTION(_ZN4C2DAD1Ev, 0x00000000001202d0)
+NWNXLIB_FUNCTION(_ZN4C2DAD2Ev, 0x00000000001202d0)
+NWNXLIB_FUNCTION(_ZN4CRes10GetDemandsEv, 0x0000000000117d20)
+NWNXLIB_FUNCTION(_ZN4CRes11GetRequestsEv, 0x0000000000117d30)
+NWNXLIB_FUNCTION(_ZN4CRes13CancelRequestEv, 0x0000000000118020)
+NWNXLIB_FUNCTION(_ZN4CRes15OnResourceFreedEv, 0x000000000011d9b0)
+NWNXLIB_FUNCTION(_ZN4CRes18OnResourceServicedEv, 0x000000000011d9c0)
+NWNXLIB_FUNCTION(_ZN4CRes20GetFixedResourceSizeEv, 0x000000000011d990)
+NWNXLIB_FUNCTION(_ZN4CRes26GetFixedResourceDataOffsetEv, 0x000000000011d9a0)
+NWNXLIB_FUNCTION(_ZN4CRes4DumpEi, 0x0000000000118220)
+NWNXLIB_FUNCTION(_ZN4CRes5GetIDEv, 0x0000000000117d40)
+NWNXLIB_FUNCTION(_ZN4CRes5SetIDE5RESID, 0x0000000000118240)
+NWNXLIB_FUNCTION(_ZN4CRes6DemandEv, 0x000000000011c0a0)
+NWNXLIB_FUNCTION(_ZN4CRes7GetDataEv, 0x0000000000117d10)
+NWNXLIB_FUNCTION(_ZN4CRes7GetSizeEv, 0x0000000000117d50)
+NWNXLIB_FUNCTION(_ZN4CRes7ReadRawEiPc, 0x000000000011a020)
+NWNXLIB_FUNCTION(_ZN4CRes7ReleaseEv, 0x0000000000119280)
+NWNXLIB_FUNCTION(_ZN4CRes7RequestEv, 0x0000000000117d60)
+NWNXLIB_FUNCTION(_ZN4CResC1E5RESID, 0x0000000000117cb0)
+NWNXLIB_FUNCTION(_ZN4CResC1Ev, 0x0000000000117c30)
+NWNXLIB_FUNCTION(_ZN4CResC2E5RESID, 0x0000000000117cb0)
+NWNXLIB_FUNCTION(_ZN4CResC2Ev, 0x0000000000117c30)
+NWNXLIB_FUNCTION(_ZN4CResD0Ev, 0x0000000000118ba0)
+NWNXLIB_FUNCTION(_ZN4CResD1Ev, 0x0000000000118b30)
+NWNXLIB_FUNCTION(_ZN4CResD2Ev, 0x0000000000118b30)
+NWNXLIB_FUNCTION(_ZN4ListI10CExoStringE8allocateEi, 0x00000000001409d0)
+NWNXLIB_FUNCTION(_ZN4ListI10CExoStringED1Ev, 0x0000000000140950)
+NWNXLIB_FUNCTION(_ZN4ListI10CExoStringED2Ev, 0x0000000000140950)
+NWNXLIB_FUNCTION(_ZN4ListIjE3AddEj, 0x000000000030d5f0)
+NWNXLIB_FUNCTION(_ZN4ListItE3AddEt, 0x000000000013abf0)
+NWNXLIB_FUNCTION(_ZN4Task12CExoBaseTask12AttemptQueueEv, 0x0000000000429ea0)
+NWNXLIB_FUNCTION(_ZN4Task12CExoBaseTask12AttemptStartEv, 0x0000000000429ec0)
+NWNXLIB_FUNCTION(_ZN4Task12CExoBaseTask13AttemptFinishEv, 0x0000000000429ee0)
+NWNXLIB_FUNCTION(_ZN4Task12CExoBaseTaskC1ERK10CExoString, 0x0000000000429dc0)
+NWNXLIB_FUNCTION(_ZN4Task12CExoBaseTaskC2ERK10CExoString, 0x0000000000429dc0)
+NWNXLIB_FUNCTION(_ZN4Task12CExoBaseTaskD0Ev, 0x0000000000429e20)
+NWNXLIB_FUNCTION(_ZN4Task12CExoBaseTaskD1Ev, 0x0000000000429e00)
+NWNXLIB_FUNCTION(_ZN4Task12CExoBaseTaskD2Ev, 0x0000000000429e00)
+NWNXLIB_FUNCTION(_ZN4Task13CExoTaskGroup4PumpEv, 0x000000000042cfa0)
+NWNXLIB_FUNCTION(_ZN4Task13CExoTaskGroup9QueueTaskESt8weak_ptrINS_12CExoBaseTaskEE, 0x000000000042d600)
+NWNXLIB_FUNCTION(_ZN4Task13CExoTaskGroupC1ERK10CExoStringmh, 0x000000000042ccf0)
+NWNXLIB_FUNCTION(_ZN4Task13CExoTaskGroupC2ERK10CExoStringmh, 0x000000000042ccf0)
+NWNXLIB_FUNCTION(_ZN4Task13CExoTaskGroupD1Ev, 0x000000000042ce70)
+NWNXLIB_FUNCTION(_ZN4Task13CExoTaskGroupD2Ev, 0x000000000042ce70)
+NWNXLIB_FUNCTION(_ZN4Task14CExoTaskThread10SignalWorkEv, 0x000000000042c2b0)
+NWNXLIB_FUNCTION(_ZN4Task14CExoTaskThread10ThreadFuncEPS0_, 0x000000000042c510)
+NWNXLIB_FUNCTION(_ZN4Task14CExoTaskThread12BlockForWorkEv, 0x000000000042c320)
+NWNXLIB_FUNCTION(_ZN4Task14CExoTaskThread19SetMutexMaxWaitTimeEj, 0x000000000042c310)
+NWNXLIB_FUNCTION(_ZN4Task14CExoTaskThread5StartEv, 0x000000000042c620)
+NWNXLIB_FUNCTION(_ZN4Task14CExoTaskThread7HasWorkEv, 0x000000000042c2c0)
+NWNXLIB_FUNCTION(_ZN4Task14CExoTaskThread9LinkGroupEPNS_13CExoTaskGroupE, 0x000000000042c7c0)
+NWNXLIB_FUNCTION(_ZN4Task14CExoTaskThreadC1ERK10CExoStringm, 0x000000000042c190)
+NWNXLIB_FUNCTION(_ZN4Task14CExoTaskThreadC2ERK10CExoStringm, 0x000000000042c190)
+NWNXLIB_FUNCTION(_ZN4Task14CExoTaskThreadD1Ev, 0x000000000042c220)
+NWNXLIB_FUNCTION(_ZN4Task14CExoTaskThreadD2Ev, 0x000000000042c220)
+NWNXLIB_FUNCTION(_ZN4Task15CExoTaskManager10PumpGroupsEm, 0x000000000042b220)
+NWNXLIB_FUNCTION(_ZN4Task15CExoTaskManager15PumpGroupsTimedEmNSt6chrono8durationIlSt5ratioILl1ELl1000EEEE, 0x000000000042b230)
+NWNXLIB_FUNCTION(_ZN4Task15CExoTaskManager5StartEv, 0x000000000042b1e0)
+NWNXLIB_FUNCTION(_ZN4Task15CExoTaskManager8AddGroupERK10CExoStringmh, 0x000000000042b200)
+NWNXLIB_FUNCTION(_ZN4Task15CExoTaskManager9AddThreadERK10CExoStringm, 0x000000000042b210)
+NWNXLIB_FUNCTION(_ZN4Task15CExoTaskManager9QueueTaskESt8weak_ptrINS_12CExoBaseTaskEEm, 0x000000000042b240)
+NWNXLIB_FUNCTION(_ZN4Task15CExoTaskManagerC1Ev, 0x000000000042a6a0)
+NWNXLIB_FUNCTION(_ZN4Task15CExoTaskManagerC2Ev, 0x000000000042a6a0)
+NWNXLIB_FUNCTION(_ZN4Task15CExoTaskManagerD1Ev, 0x000000000042ad20)
+NWNXLIB_FUNCTION(_ZN4Task15CExoTaskManagerD2Ev, 0x000000000042ad20)
+NWNXLIB_FUNCTION(_ZN4Task15FreeTaskManagerEv, 0x000000000042a1a0)
+NWNXLIB_FUNCTION(_ZN4Task15InitTaskManagerEj, 0x000000000042abb0)
+NWNXLIB_FUNCTION(_ZN4Task20CExoTaskManager_impl10PumpGroupsEm, 0x000000000042b3e0)
+NWNXLIB_FUNCTION(_ZN4Task20CExoTaskManager_impl15PumpGroupsTimedEmNSt6chrono8durationIlSt5ratioILl1ELl1000EEEE, 0x000000000042b440)
+NWNXLIB_FUNCTION(_ZN4Task20CExoTaskManager_impl5StartEv, 0x000000000042b380)
+NWNXLIB_FUNCTION(_ZN4Task20CExoTaskManager_impl8AddGroupERK10CExoStringmh, 0x000000000042b610)
+NWNXLIB_FUNCTION(_ZN4Task20CExoTaskManager_impl9AddThreadERK10CExoStringm, 0x000000000042b760)
+NWNXLIB_FUNCTION(_ZN4Task20CExoTaskManager_impl9QueueTaskESt8weak_ptrINS_12CExoBaseTaskEEm, 0x000000000042b4c0)
+NWNXLIB_FUNCTION(_ZN4Task20CExoTaskManager_implC1Ev, 0x000000000042b330)
+NWNXLIB_FUNCTION(_ZN4Task20CExoTaskManager_implC2Ev, 0x000000000042b330)
+NWNXLIB_FUNCTION(_ZN5Plane9TransformERK6VectorRK10Quaternion, 0x00000000007946c0)
+NWNXLIB_FUNCTION(_ZN6NWSync13Advertisement11LoadFromGffEP7CResGFFP10CResStruct, 0x0000000000185ce0)
+NWNXLIB_FUNCTION(_ZN6NWSync13Advertisement14WriteToNetworkEP10CNWMessage, 0x0000000000185850)
+NWNXLIB_FUNCTION(_ZN6NWSync13Advertisement15ReadFromNetworkEP10CNWMessage, 0x0000000000186270)
+NWNXLIB_FUNCTION(_ZN6NWSync13Advertisement9ParseJsonEP6json_tRS0_, 0x00000000001865a0)
+NWNXLIB_FUNCTION(_ZN6NWSync13Advertisement9ParseJsonEPKcmRS0_, 0x0000000000186930)
+NWNXLIB_FUNCTION(_ZN6NWSync13Advertisement9SaveToGffEP7CResGFFP10CResStruct, 0x0000000000185710)
+NWNXLIB_FUNCTION(_ZN6NWSync13AdvertisementD1Ev, 0x000000000013ab20)
+NWNXLIB_FUNCTION(_ZN6NWSync13AdvertisementD2Ev, 0x000000000013ab20)
+NWNXLIB_FUNCTION(_ZN6NWSync15CNWSyncInternal14CreateManifestERK10CExoStringS3_, 0x000000000018ed40)
+NWNXLIB_FUNCTION(_ZN6NWSync15CNWSyncInternal14DeleteManifestERK10CExoString, 0x000000000018edf0)
+NWNXLIB_FUNCTION(_ZN6NWSync15CNWSyncInternal14PlatformCommitEv, 0x000000000018d1a0)
+NWNXLIB_FUNCTION(_ZN6NWSync15CNWSyncInternal17AsyncHousekeepingEbb, 0x000000000018f3d0)
+NWNXLIB_FUNCTION(_ZN6NWSync15CNWSyncInternal17SetCachedManifestERK10CExoStringRKSt10shared_ptrIK9DataBlockE, 0x000000000018f000)
+NWNXLIB_FUNCTION(_ZN6NWSync15CNWSyncInternal18MarkManifestUsedByERK10CExoStringS3_, 0x000000000018e950)
+NWNXLIB_FUNCTION(_ZN6NWSync15CNWSyncInternal19BatchSetMappingDataERK10CExoStringRKSt6vectorINS_7CNWSync23MappingBatchInsertEntryESaIS6_EE, 0x000000000018d590)
+NWNXLIB_FUNCTION(_ZN6NWSync15CNWSyncInternal19GetStorageProvidersEv, 0x000000000018e190)
+NWNXLIB_FUNCTION(_ZN6NWSync15CNWSyncInternal21BatchInsertResRefDataERKSt6vectorINS_7CNWSync22ResRefBatchInsertEntryESaIS3_EE, 0x000000000018d130)
+NWNXLIB_FUNCTION(_ZN6NWSync15CNWSyncInternal22InvalidateAllManifestsEv, 0x000000000018f240)
+NWNXLIB_FUNCTION(_ZN6NWSync15CNWSyncInternal22UpdateManifestMetaDataERK10CExoStringRKNS_7CNWSync16ManifestMetaDataE, 0x000000000018f160)
+NWNXLIB_FUNCTION(_ZN6NWSync15CNWSyncInternalC1ERKNS_7CNWSync13StartupConfigE, 0x0000000000190360)
+NWNXLIB_FUNCTION(_ZN6NWSync15CNWSyncInternalC2ERKNS_7CNWSync13StartupConfigE, 0x0000000000190360)
+NWNXLIB_FUNCTION(_ZN6NWSync21SQLiteStorageProvider12StorageShard14PlatformCommitEv, 0x0000000000197bf0)
+NWNXLIB_FUNCTION(_ZN6NWSync21SQLiteStorageProvider12StorageShard5StoreERKSt6vectorINS_7CNWSync22ResRefBatchInsertEntryESaIS4_EE, 0x000000000019a990)
+NWNXLIB_FUNCTION(_ZN6NWSync21SQLiteStorageProvider17AsyncHousekeepingEbRKSt3setI10CExoStringSt4lessIS2_ESaIS2_EEb, 0x000000000019df10)
+NWNXLIB_FUNCTION(_ZN6NWSync21SQLiteStorageProvider19SetupExistingShardsEv, 0x000000000019c740)
+NWNXLIB_FUNCTION(_ZN6NWSync21SQLiteStorageProvider3HasERK10CExoString, 0x0000000000198750)
+NWNXLIB_FUNCTION(_ZN6NWSync21SQLiteStorageProvider5FetchERK10CExoString, 0x0000000000198170)
+NWNXLIB_FUNCTION(_ZN6NWSync21SQLiteStorageProvider5StoreERKSt6vectorINS_7CNWSync22ResRefBatchInsertEntryESaIS3_EE, 0x000000000019b5e0)
+NWNXLIB_FUNCTION(_ZN6NWSync21SQLiteStorageProvider6DeleteERKSt6vectorI10CExoStringSaIS2_EE, 0x0000000000198fe0)
+NWNXLIB_FUNCTION(_ZN6NWSync21SQLiteStorageProviderD0Ev, 0x0000000000195840)
+NWNXLIB_FUNCTION(_ZN6NWSync21SQLiteStorageProviderD1Ev, 0x00000000001957c0)
+NWNXLIB_FUNCTION(_ZN6NWSync21SQLiteStorageProviderD2Ev, 0x00000000001957c0)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider12StorageShard13DestroyHelperD1Ev, 0x00000000001a6a40)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider12StorageShard13DestroyHelperD2Ev, 0x00000000001a6a40)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider12StorageShard13ShouldDestroyEv, 0x00000000001a6b20)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider12StorageShard14PlatformCommitEv, 0x00000000001a7590)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider12StorageShard17IsAutoCompactableEv, 0x00000000001a7c30)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider12StorageShard18SetAutoCompactableEb, 0x00000000001a6f40)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider12StorageShard7GetMetaIbEET_RK10CExoStringS3_, 0x00000000001ab8b0)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider12StorageShard7GetMetaIlEET_RK10CExoStringS3_, 0x00000000001ab240)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider12StorageShardC1EjRKN8NWSQLite10Migrations10DefinitionE, 0x00000000001a6a50)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider12StorageShardC2EjRKN8NWSQLite10Migrations10DefinitionE, 0x00000000001a6a50)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider12StorageShardD0Ev, 0x00000000001a6da0)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider12StorageShardD1Ev, 0x00000000001a6b40)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider12StorageShardD2Ev, 0x00000000001a6b40)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider18out_of_space_errorD0Ev, 0x00000000001aaef0)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider18out_of_space_errorD1Ev, 0x00000000001aaed0)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider18out_of_space_errorD2Ev, 0x00000000001aaed0)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider26OpenOrAllocateStorageShardERKNS0_23StorageShardAllocParamsE, 0x00000000001aa5f0)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider26PlatformRequiresCompactingEv, 0x00000000001a6b30)
+NWNXLIB_FUNCTION(_ZN6NWSync26PlatformIntrinsicsProvider29OpenAllAllocatedStorageShardsERKNS0_23StorageShardAllocParamsE, 0x00000000001a9f50)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync11DeconfigureEv, 0x0000000000184dc0)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync12ManifestInfoD1Ev, 0x00000000001947c0)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync12ManifestInfoD2Ev, 0x00000000001947c0)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync13StartupConfigC1Ev, 0x000000000019f0a0)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync13StartupConfigC2Ev, 0x000000000019f0a0)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync14CreateManifestERK10CExoStringS3_, 0x00000000001851e0)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync14DeleteManifestERK10CExoString, 0x00000000001851f0)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync16GetStartupConfigEv, 0x0000000000184ef0)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync16ManifestMetaData9ParseJsonEP6json_tRS1_, 0x00000000001852c0)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync16ManifestMetaData9ParseJsonEPKcmRS1_, 0x0000000000185540)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync17AsyncHousekeepingEbb, 0x00000000001855d0)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync17SetCachedManifestERK10CExoStringRKSt10shared_ptrIK9DataBlockE, 0x0000000000185250)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync18MarkManifestUsedByERK10CExoStringS3_, 0x0000000000185160)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync19BatchSetMappingDataERK10CExoStringRKSt6vectorINS0_23MappingBatchInsertEntryESaIS5_EE, 0x00000000001851d0)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync19GetStorageProvidersEv, 0x0000000000185690)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync21BatchInsertResRefDataERKSt6vectorINS0_22ResRefBatchInsertEntryESaIS2_EE, 0x0000000000185170)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync22ResRefBatchInsertEntryD1Ev, 0x0000000000194740)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync22ResRefBatchInsertEntryD2Ev, 0x0000000000194740)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync22UpdateManifestMetaDataERK10CExoStringRKNS0_16ManifestMetaDataE, 0x0000000000185260)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSync9ConfigureEv, 0x0000000000185a20)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSyncC1Ev, 0x0000000000184c50)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSyncC2Ev, 0x0000000000184c50)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSyncD1Ev, 0x0000000000184c70)
+NWNXLIB_FUNCTION(_ZN6NWSync7CNWSyncD2Ev, 0x0000000000184c70)
+NWNXLIB_FUNCTION(_ZN6Vector9NormalizeEv, 0x00000000007920d0)
+NWNXLIB_FUNCTION(_ZN6VectordVEf, 0x0000000000792540)
+NWNXLIB_FUNCTION(_ZN6VectormIERKS_, 0x00000000007924d0)
+NWNXLIB_FUNCTION(_ZN6VectormLEf, 0x0000000000792510)
+NWNXLIB_FUNCTION(_ZN6VectorpLERKS_, 0x0000000000792490)
+NWNXLIB_FUNCTION(_ZN7CERFKey4ReadEv, 0x000000000078a7e0)
+NWNXLIB_FUNCTION(_ZN7CERFKey5ResetEv, 0x000000000078a760)
+NWNXLIB_FUNCTION(_ZN7CERFKey5WriteER8CExoFile, 0x000000000078a7f0)
+NWNXLIB_FUNCTION(_ZN7CERFKey7SetNameER10CExoString, 0x000000000078a790)
+NWNXLIB_FUNCTION(_ZN7CERFKeyC1Ev, 0x000000000078a490)
+NWNXLIB_FUNCTION(_ZN7CERFKeyC2Ev, 0x000000000078a490)
+NWNXLIB_FUNCTION(_ZN7CERFKeyD1Ev, 0x000000000078a750)
+NWNXLIB_FUNCTION(_ZN7CERFKeyD2Ev, 0x000000000078a750)
+NWNXLIB_FUNCTION(_ZN7CERFRes4ReadEv, 0x000000000078a8f0)
+NWNXLIB_FUNCTION(_ZN7CERFRes5ResetEv, 0x000000000078a8b0)
+NWNXLIB_FUNCTION(_ZN7CERFRes5WriteER8CExoFilej, 0x000000000078a900)
+NWNXLIB_FUNCTION(_ZN7CERFResC1Ev, 0x000000000078a860)
+NWNXLIB_FUNCTION(_ZN7CERFResC2Ev, 0x000000000078a860)
+NWNXLIB_FUNCTION(_ZN7CERFResD1Ev, 0x000000000078a880)
+NWNXLIB_FUNCTION(_ZN7CERFResD2Ev, 0x000000000078a880)
+NWNXLIB_FUNCTION(_ZN7CExoIni10GetFloatOrERKiRK10CExoStringS4_f, 0x0000000000108230)
+NWNXLIB_FUNCTION(_ZN7CExoIni12ReadIniEntryER10CExoStringRKiRKS0_S5_, 0x0000000000108170)
+NWNXLIB_FUNCTION(_ZN7CExoIni13WriteIniEntryERK10CExoStringRKiS2_S2_i, 0x00000000001082e0)
+NWNXLIB_FUNCTION(_ZN7CExoIni8GetIntOrERKiRK10CExoStringS4_i, 0x0000000000108180)
+NWNXLIB_FUNCTION(_ZN7CExoIniC1E10CExoString, 0x0000000000108090)
+NWNXLIB_FUNCTION(_ZN7CExoIniC2E10CExoString, 0x0000000000108090)
+NWNXLIB_FUNCTION(_ZN7CExoIniD1Ev, 0x0000000000108130)
+NWNXLIB_FUNCTION(_ZN7CExoIniD2Ev, 0x0000000000108130)
+NWNXLIB_FUNCTION(_ZN7CNWArea10GetIsNightEv, 0x00000000001c7370)
+NWNXLIB_FUNCTION(_ZN7CNWArea10SetIsNightEi, 0x00000000001c5160)
+NWNXLIB_FUNCTION(_ZN7CNWArea14NoNonWalkPolysEfffffffj, 0x00000000001c7130)
+NWNXLIB_FUNCTION(_ZN7CNWArea15AddStaticObjectEjRK6VectorS2_iPS0_iPi, 0x00000000001c5aa0)
+NWNXLIB_FUNCTION(_ZN7CNWArea17NoCreaturesOnLineEffffP20CPathfindInformationiiPji, 0x00000000001c3790)
+NWNXLIB_FUNCTION(_ZN7CNWArea18RemoveStaticObjectEi, 0x00000000001c7170)
+NWNXLIB_FUNCTION(_ZN7CNWArea19ReplaceStaticObjectEijRK6VectorS2_iPS0_iPi, 0x00000000001c53e0)
+NWNXLIB_FUNCTION(_ZN7CNWArea20AddStaticBoundingBoxEjRK6VectorS2_, 0x00000000001c7380)
+NWNXLIB_FUNCTION(_ZN7CNWArea20GetIsIDInExcludeListEjP13CExoArrayListIP11CGameObjectE, 0x00000000001c7630)
+NWNXLIB_FUNCTION(_ZN7CNWArea21GrowStaticObjectArrayEv, 0x00000000001c5630)
+NWNXLIB_FUNCTION(_ZN7CNWArea21IntersectLineSegmentsEffffffffPfS0_, 0x00000000001c5e40)
+NWNXLIB_FUNCTION(_ZN7CNWArea21NoNonWalkPolysInDoorsEfffffffjRjiP13CExoArrayListIP11CGameObjectEi, 0x00000000001c6230)
+NWNXLIB_FUNCTION(_ZN7CNWArea22HandleTransparentDoorsEfffffffjRjiP13CExoArrayListIP11CGameObjectEi, 0x00000000001c7620)
+NWNXLIB_FUNCTION(_ZN7CNWArea22NoNonWalkPolysDetailedEfffffffjRjiP13CExoArrayListIP11CGameObjectEi, 0x00000000001c6660)
+NWNXLIB_FUNCTION(_ZN7CNWArea23InitializeStaticObjectsEv, 0x00000000001c5da0)
+NWNXLIB_FUNCTION(_ZN7CNWArea23RemoveStaticBoundingBoxEj, 0x00000000001c7550)
+NWNXLIB_FUNCTION(_ZN7CNWArea24GrowStaticObjectVerticesEi, 0x00000000001c5990)
+NWNXLIB_FUNCTION(_ZN7CNWArea25GrowStaticObjectTrianglesEi, 0x00000000001c58d0)
+NWNXLIB_FUNCTION(_ZN7CNWArea6GetFogEPiP6Vector, 0x00000000001c7340)
+NWNXLIB_FUNCTION(_ZN7CNWArea6SetFogEi6Vector, 0x00000000001c5130)
+NWNXLIB_FUNCTION(_ZN7CNWArea7SetWindEh, 0x00000000001c5180)
+NWNXLIB_FUNCTION(_ZN7CNWAreaC1Ev, 0x00000000001c51a0)
+NWNXLIB_FUNCTION(_ZN7CNWAreaC2Ev, 0x00000000001c51a0)
+NWNXLIB_FUNCTION(_ZN7CNWAreaD0Ev, 0x00000000001c53b0)
+NWNXLIB_FUNCTION(_ZN7CNWAreaD1Ev, 0x00000000001c52f0)
+NWNXLIB_FUNCTION(_ZN7CNWAreaD2Ev, 0x00000000001c52f0)
+NWNXLIB_FUNCTION(_ZN7CNWFeat11GetNameTextEv, 0x00000000007df8a0)
+NWNXLIB_FUNCTION(_ZN7CNWFeat18GetDescriptionTextEv, 0x00000000007df7f0)
+NWNXLIB_FUNCTION(_ZN7CNWFeatC1Ev, 0x00000000007df6e0)
+NWNXLIB_FUNCTION(_ZN7CNWFeatC2Ev, 0x00000000007df6e0)
+NWNXLIB_FUNCTION(_ZN7CNWFeatD1Ev, 0x00000000007df7e0)
+NWNXLIB_FUNCTION(_ZN7CNWFeatD2Ev, 0x00000000007df7e0)
+NWNXLIB_FUNCTION(_ZN7CNWItem29GetLayeredTextureColorPerPartEhh, 0x00000000007ca870)
+NWNXLIB_FUNCTION(_ZN7CNWItem29SetLayeredTextureColorPerPartEhhh, 0x00000000007ca7f0)
+NWNXLIB_FUNCTION(_ZN7CNWItemC1Ev, 0x00000000007ca7a0)
+NWNXLIB_FUNCTION(_ZN7CNWItemC2Ev, 0x00000000007ca7a0)
+NWNXLIB_FUNCTION(_ZN7CNWItemD0Ev, 0x00000000007c86f0)
+NWNXLIB_FUNCTION(_ZN7CNWItemD1Ev, 0x00000000007c86b0)
+NWNXLIB_FUNCTION(_ZN7CNWItemD2Ev, 0x00000000007c86b0)
+NWNXLIB_FUNCTION(_ZN7CNWRace11GetNameTextEv, 0x00000000007caaf0)
+NWNXLIB_FUNCTION(_ZN7CNWRace14LoadFeatsTableE10CExoString, 0x00000000007cadb0)
+NWNXLIB_FUNCTION(_ZN7CNWRace16GetAbilityAdjustEh, 0x00000000007cb0d0)
+NWNXLIB_FUNCTION(_ZN7CNWRace17GetConverNameTextEv, 0x00000000007caba0)
+NWNXLIB_FUNCTION(_ZN7CNWRace17GetNamePluralTextEv, 0x00000000007cad00)
+NWNXLIB_FUNCTION(_ZN7CNWRace18GetDescriptionTextEv, 0x00000000007ca990)
+NWNXLIB_FUNCTION(_ZN7CNWRace22GetConverNameLowerTextEv, 0x00000000007cac50)
+NWNXLIB_FUNCTION(_ZN7CNWRace23GetDefaultBiographyTextEv, 0x00000000007caa40)
+NWNXLIB_FUNCTION(_ZN7CNWRace23IsFirstLevelGrantedFeatEt, 0x00000000007cb080)
+NWNXLIB_FUNCTION(_ZN7CNWRaceC1Ev, 0x00000000007ca8b0)
+NWNXLIB_FUNCTION(_ZN7CNWRaceC2Ev, 0x00000000007ca8b0)
+NWNXLIB_FUNCTION(_ZN7CNWRaceD1Ev, 0x00000000007ca950)
+NWNXLIB_FUNCTION(_ZN7CNWRaceD2Ev, 0x00000000007ca950)
+NWNXLIB_FUNCTION(_ZN7CNWTile11GetAnimLoopEPhS0_S0_, 0x00000000001c4710)
+NWNXLIB_FUNCTION(_ZN7CNWTile11GetLocationEPiS0_, 0x00000000001c43b0)
+NWNXLIB_FUNCTION(_ZN7CNWTile11SetAnimLoopEhhh, 0x00000000001c4760)
+NWNXLIB_FUNCTION(_ZN7CNWTile11SetPositionEiiif, 0x00000000001c4660)
+NWNXLIB_FUNCTION(_ZN7CNWTile14SetOrientationEi, 0x00000000001c46c0)
+NWNXLIB_FUNCTION(_ZN7CNWTile17GetMainLightColorEPhS0_, 0x00000000001c46d0)
+NWNXLIB_FUNCTION(_ZN7CNWTile17SetMainLightColorEhh, 0x00000000001c4730)
+NWNXLIB_FUNCTION(_ZN7CNWTile17SetReplaceTextureEh, 0x00000000001c4750)
+NWNXLIB_FUNCTION(_ZN7CNWTile19GetSourceLightColorEPhS0_, 0x00000000001c46f0)
+NWNXLIB_FUNCTION(_ZN7CNWTile19SetSourceLightColorEhh, 0x00000000001c4740)
+NWNXLIB_FUNCTION(_ZN7CNWTile21RotateCanonicalToRealEffPfS0_, 0x00000000001c4550)
+NWNXLIB_FUNCTION(_ZN7CNWTile21RotateRealToCanonicalEffPfS0_, 0x00000000001c45d0)
+NWNXLIB_FUNCTION(_ZN7CNWTile25RotateCanonicalToRealTileEffPfS0_, 0x00000000001c43d0)
+NWNXLIB_FUNCTION(_ZN7CNWTile25RotateRealToCanonicalTileEffPfS0_, 0x00000000001c4490)
+NWNXLIB_FUNCTION(_ZN7CNWTile5SetIDEi, 0x00000000001c4650)
+NWNXLIB_FUNCTION(_ZN7CNWTileC1Ev, 0x00000000001c4340)
+NWNXLIB_FUNCTION(_ZN7CNWTileC2Ev, 0x00000000001c4340)
+NWNXLIB_FUNCTION(_ZN7CNWTileD0Ev, 0x00000000001c4330)
+NWNXLIB_FUNCTION(_ZN7CNWTileD1Ev, 0x00000000001c4320)
+NWNXLIB_FUNCTION(_ZN7CNWTileD2Ev, 0x00000000001c4320)
+NWNXLIB_FUNCTION(_ZN7CRes2DA10Get2DASizeEv, 0x0000000000128a80)
+NWNXLIB_FUNCTION(_ZN7CRes2DA13Get2DADataPtrEv, 0x0000000000128a70)
+NWNXLIB_FUNCTION(_ZN7CRes2DA15Get2DAHeaderPtrEv, 0x0000000000128a60)
+NWNXLIB_FUNCTION(_ZN7CRes2DA15OnResourceFreedEv, 0x00000000001288d0)
+NWNXLIB_FUNCTION(_ZN7CRes2DA18OnResourceServicedEv, 0x0000000000128950)
+NWNXLIB_FUNCTION(_ZN7CRes2DA8IsLoadedEv, 0x0000000000128a90)
+NWNXLIB_FUNCTION(_ZN7CRes2DAC1Ev, 0x0000000000128a20)
+NWNXLIB_FUNCTION(_ZN7CRes2DAC2Ev, 0x0000000000128a20)
+NWNXLIB_FUNCTION(_ZN7CRes2DAD0Ev, 0x0000000000128920)
+NWNXLIB_FUNCTION(_ZN7CRes2DAD1Ev, 0x0000000000128900)
+NWNXLIB_FUNCTION(_ZN7CRes2DAD2Ev, 0x0000000000128900)
+NWNXLIB_FUNCTION(_ZN7CResARED0Ev, 0x00000000003358a0)
+NWNXLIB_FUNCTION(_ZN7CResARED1Ev, 0x0000000000335880)
+NWNXLIB_FUNCTION(_ZN7CResARED2Ev, 0x0000000000335880)
+NWNXLIB_FUNCTION(_ZN7CResDWK10GetDWKSizeEv, 0x00000000007dfa60)
+NWNXLIB_FUNCTION(_ZN7CResDWK13GetDWKDataPtrEv, 0x00000000007dfa50)
+NWNXLIB_FUNCTION(_ZN7CResDWK15OnResourceFreedEv, 0x00000000007df950)
+NWNXLIB_FUNCTION(_ZN7CResDWK18OnResourceServicedEv, 0x00000000007df980)
+NWNXLIB_FUNCTION(_ZN7CResDWK8IsLoadedEv, 0x00000000007dfa70)
+NWNXLIB_FUNCTION(_ZN7CResDWKC1Ev, 0x00000000007dfa10)
+NWNXLIB_FUNCTION(_ZN7CResDWKC2Ev, 0x00000000007dfa10)
+NWNXLIB_FUNCTION(_ZN7CResDWKD0Ev, 0x00000000007df9e0)
+NWNXLIB_FUNCTION(_ZN7CResDWKD1Ev, 0x00000000007df9c0)
+NWNXLIB_FUNCTION(_ZN7CResDWKD2Ev, 0x00000000007df9c0)
+NWNXLIB_FUNCTION(_ZN7CResGFF12AddDataFieldEjjj, 0x000000000078c6b0)
+NWNXLIB_FUNCTION(_ZN7CResGFF12GetDataFieldEP12CResGFFFieldRj, 0x000000000078be40)
+NWNXLIB_FUNCTION(_ZN7CResGFF12GetFieldSizeEP10CResStructPcj, 0x000000000078ce00)
+NWNXLIB_FUNCTION(_ZN7CResGFF12GetFieldTypeEP10CResStructPcj, 0x000000000078cd70)
+NWNXLIB_FUNCTION(_ZN7CResGFF12GetListCountEP8CResList, 0x000000000078cfb0)
+NWNXLIB_FUNCTION(_ZN7CResGFF12GetTotalSizeEv, 0x000000000078eff0)
+NWNXLIB_FUNCTION(_ZN7CResGFF12ReadFieldINTEP10CResStructPcRii, 0x000000000078d410)
+NWNXLIB_FUNCTION(_ZN7CResGFF12WriteGFFDataER8CExoFileRj, 0x000000000078ee40)
+NWNXLIB_FUNCTION(_ZN7CResGFF12WriteGFFFileEPc, 0x000000000078f4f0)
+NWNXLIB_FUNCTION(_ZN7CResGFF12WriteGFFFileERK10CExoStringt, 0x0000000000790680)
+NWNXLIB_FUNCTION(_ZN7CResGFF13CreateGFFFileEP10CResStructRK10CExoStringS4_, 0x000000000078eca0)
+NWNXLIB_FUNCTION(_ZN7CResGFF13FinalizeSetupEv, 0x000000000078bc50)
+NWNXLIB_FUNCTION(_ZN7CResGFF13GetFieldCountEP10CResStruct, 0x000000000078cd30)
+NWNXLIB_FUNCTION(_ZN7CResGFF13GetFieldCountEP13CResGFFStruct, 0x000000000078cd10)
+NWNXLIB_FUNCTION(_ZN7CResGFF13GetFieldLabelEP10CResStructj, 0x000000000078cdb0)
+NWNXLIB_FUNCTION(_ZN7CResGFF13IsDataInPlaceEj, 0x000000000078c0a0)
+NWNXLIB_FUNCTION(_ZN7CResGFF13PrepareHeaderEv, 0x000000000078bae0)
+NWNXLIB_FUNCTION(_ZN7CResGFF13ReadFieldBYTEEP10CResStructPcRih, 0x000000000078d190)
+NWNXLIB_FUNCTION(_ZN7CResGFF13ReadFieldCHAREP10CResStructPcRic, 0x000000000078d210)
+NWNXLIB_FUNCTION(_ZN7CResGFF13ReadFieldVOIDEP10CResStructPvjPcRiS2_, 0x000000000078da90)
+NWNXLIB_FUNCTION(_ZN7CResGFF13ReadFieldWORDEP10CResStructPcRit, 0x000000000078d290)
+NWNXLIB_FUNCTION(_ZN7CResGFF13WriteFieldINTEP10CResStructiPc, 0x000000000078e200)
+NWNXLIB_FUNCTION(_ZN7CResGFF14AddListElementEP10CResStructP8CResListj, 0x000000000078dc50)
+NWNXLIB_FUNCTION(_ZN7CResGFF14GetElementTypeEP10CResStruct, 0x000000000078ccd0)
+NWNXLIB_FUNCTION(_ZN7CResGFF14GetGFFFileInfoEP10CExoStringS1_, 0x000000000078cc70)
+NWNXLIB_FUNCTION(_ZN7CResGFF14GetListElementEP10CResStructP8CResListj, 0x000000000078d030)
+NWNXLIB_FUNCTION(_ZN7CResGFF14ReadFieldDWORDEP10CResStructPcRij, 0x000000000078d390)
+NWNXLIB_FUNCTION(_ZN7CResGFF14ReadFieldFLOATEP10CResStructPcRif, 0x000000000078d490)
+NWNXLIB_FUNCTION(_ZN7CResGFF14ReadFieldINT64EP10CResStructPcRil, 0x000000000078d5b0)
+NWNXLIB_FUNCTION(_ZN7CResGFF14ReadFieldSHORTEP10CResStructPcRis, 0x000000000078d310)
+NWNXLIB_FUNCTION(_ZN7CResGFF14WriteFieldBYTEEP10CResStructhPc, 0x000000000078de40)
+NWNXLIB_FUNCTION(_ZN7CResGFF14WriteFieldCHAREP10CResStructcPc, 0x000000000078df00)
+NWNXLIB_FUNCTION(_ZN7CResGFF14WriteFieldVOIDEP10CResStructPKvjPc, 0x000000000078ebd0)
+NWNXLIB_FUNCTION(_ZN7CResGFF14WriteFieldWORDEP10CResStructtPc, 0x000000000078dfc0)
+NWNXLIB_FUNCTION(_ZN7CResGFF15GetDataFromFileEPc, 0x000000000078cb70)
+NWNXLIB_FUNCTION(_ZN7CResGFF15GetFieldByLabelEP10CResStructPc, 0x000000000078bf00)
+NWNXLIB_FUNCTION(_ZN7CResGFF15OnResourceFreedEv, 0x000000000078b4d0)
+NWNXLIB_FUNCTION(_ZN7CResGFF15ReadFieldDOUBLEEP10CResStructPcRid, 0x000000000078d650)
+NWNXLIB_FUNCTION(_ZN7CResGFF15ReleaseResourceEv, 0x000000000078b860)
+NWNXLIB_FUNCTION(_ZN7CResGFF15WriteFieldDWORDEP10CResStructjPc, 0x000000000078e140)
+NWNXLIB_FUNCTION(_ZN7CResGFF15WriteFieldFLOATEP10CResStructfPc, 0x000000000078e540)
+NWNXLIB_FUNCTION(_ZN7CResGFF15WriteFieldINT64EP10CResStructlPc, 0x000000000078e400)
+NWNXLIB_FUNCTION(_ZN7CResGFF15WriteFieldSHORTEP10CResStructsPc, 0x000000000078e080)
+NWNXLIB_FUNCTION(_ZN7CResGFF16GetFieldStringIDEP10CResStructj, 0x000000000078cdc0)
+NWNXLIB_FUNCTION(_ZN7CResGFF16ReadFieldCResRefEP10CResStructPcRiRK7CResRef, 0x000000000078d6f0)
+NWNXLIB_FUNCTION(_ZN7CResGFF16ReadFieldDWORD64EP10CResStructPcRim, 0x000000000078d510)
+NWNXLIB_FUNCTION(_ZN7CResGFF16ValidateAndSetupEv, 0x000000000078f690)
+NWNXLIB_FUNCTION(_ZN7CResGFF16WriteFieldDOUBLEEP10CResStructdPc, 0x000000000078e600)
+NWNXLIB_FUNCTION(_ZN7CResGFF17AddDataLayoutListEjjj, 0x000000000078ca70)
+NWNXLIB_FUNCTION(_ZN7CResGFF17AddStructToStructEP10CResStructS1_Pcj, 0x000000000078dd80)
+NWNXLIB_FUNCTION(_ZN7CResGFF17GetDataLayoutListEP12CResGFFFieldRj, 0x000000000078bec0)
+NWNXLIB_FUNCTION(_ZN7CResGFF17GetTopLevelStructEP10CResStruct, 0x000000000078d160)
+NWNXLIB_FUNCTION(_ZN7CResGFF17WriteFieldCResRefEP10CResStructRK7CResRefPc, 0x000000000078e750)
+NWNXLIB_FUNCTION(_ZN7CResGFF17WriteFieldDWORD64EP10CResStructmPc, 0x000000000078e2c0)
+NWNXLIB_FUNCTION(_ZN7CResGFF17WriteGFFToPointerEPPvRi, 0x000000000078f330)
+NWNXLIB_FUNCTION(_ZN7CResGFF18AddDataLayoutFieldEjjj, 0x000000000078c7b0)
+NWNXLIB_FUNCTION(_ZN7CResGFF18GetDataFromPointerEPvi, 0x000000000078cc50)
+NWNXLIB_FUNCTION(_ZN7CResGFF18GetDataLayoutFieldEP12CResGFFFieldRj, 0x000000000078be80)
+NWNXLIB_FUNCTION(_ZN7CResGFF18OnResourceServicedEv, 0x0000000000790500)
+NWNXLIB_FUNCTION(_ZN7CResGFF19GetStructFromStructEP10CResStructS1_Pc, 0x000000000078d0e0)
+NWNXLIB_FUNCTION(_ZN7CResGFF19ReadFieldCExoStringEP10CResStructPcRiRK10CExoString, 0x000000000078d7d0)
+NWNXLIB_FUNCTION(_ZN7CResGFF20InitializeForWritingEv, 0x000000000078c0d0)
+NWNXLIB_FUNCTION(_ZN7CResGFF20WriteFieldCExoStringEP10CResStructRK10CExoStringPc, 0x000000000078e8b0)
+NWNXLIB_FUNCTION(_ZN7CResGFF22ReadFieldCExoLocStringEP10CResStructPcRiRK13CExoLocString, 0x000000000078d8a0)
+NWNXLIB_FUNCTION(_ZN7CResGFF23WriteFieldCExoLocStringEP10CResStruct13CExoLocStringPc, 0x000000000078e9d0)
+NWNXLIB_FUNCTION(_ZN7CResGFF4PackEhj, 0x000000000078f030)
+NWNXLIB_FUNCTION(_ZN7CResGFF7AddListEP8CResListP10CResStructPc, 0x000000000078db60)
+NWNXLIB_FUNCTION(_ZN7CResGFF7GetListEP8CResListP10CResStructPc, 0x000000000078cf00)
+NWNXLIB_FUNCTION(_ZN7CResGFF8AddFieldEP10CResStructPcj, 0x000000000078c8b0)
+NWNXLIB_FUNCTION(_ZN7CResGFF8AddLabelEPc, 0x000000000078c550)
+NWNXLIB_FUNCTION(_ZN7CResGFF8GetFieldEP10CResStructj, 0x000000000078bd60)
+NWNXLIB_FUNCTION(_ZN7CResGFF8GetLabelEP10CResStructj, 0x000000000078be00)
+NWNXLIB_FUNCTION(_ZN7CResGFF9AddStructEj, 0x000000000078c460)
+NWNXLIB_FUNCTION(_ZN7CResGFF9GetStructEP10CResStruct, 0x000000000078bd20)
+NWNXLIB_FUNCTION(_ZN7CResGFFC1EtPcRK7CResRef, 0x000000000078b6a0)
+NWNXLIB_FUNCTION(_ZN7CResGFFC1Ev, 0x000000000078b550)
+NWNXLIB_FUNCTION(_ZN7CResGFFC2EtPcRK7CResRef, 0x000000000078b6a0)
+NWNXLIB_FUNCTION(_ZN7CResGFFC2Ev, 0x000000000078b550)
+NWNXLIB_FUNCTION(_ZN7CResGFFD0Ev, 0x000000000078bab0)
+NWNXLIB_FUNCTION(_ZN7CResGFFD1Ev, 0x000000000078b960)
+NWNXLIB_FUNCTION(_ZN7CResGFFD2Ev, 0x000000000078b960)
+NWNXLIB_FUNCTION(_ZN7CResIFOD0Ev, 0x000000000028eac0)
+NWNXLIB_FUNCTION(_ZN7CResIFOD1Ev, 0x000000000028eaa0)
+NWNXLIB_FUNCTION(_ZN7CResIFOD2Ev, 0x000000000028eaa0)
+NWNXLIB_FUNCTION(_ZN7CResLTR15OnResourceFreedEv, 0x0000000000798ad0)
+NWNXLIB_FUNCTION(_ZN7CResLTR18OnResourceServicedEv, 0x0000000000798e30)
+NWNXLIB_FUNCTION(_ZN7CResLTRC1Ev, 0x0000000000799810)
+NWNXLIB_FUNCTION(_ZN7CResLTRC2Ev, 0x0000000000799810)
+NWNXLIB_FUNCTION(_ZN7CResLTRD0Ev, 0x0000000000798aa0)
+NWNXLIB_FUNCTION(_ZN7CResLTRD1Ev, 0x0000000000798a80)
+NWNXLIB_FUNCTION(_ZN7CResLTRD2Ev, 0x0000000000798a80)
+NWNXLIB_FUNCTION(_ZN7CResNCS10GetNCSSizeEv, 0x00000000007c3b90)
+NWNXLIB_FUNCTION(_ZN7CResNCS13GetNCSDataPtrEv, 0x00000000007c3b80)
+NWNXLIB_FUNCTION(_ZN7CResNCS15OnResourceFreedEv, 0x00000000007c3a80)
+NWNXLIB_FUNCTION(_ZN7CResNCS18OnResourceServicedEv, 0x00000000007c3ab0)
+NWNXLIB_FUNCTION(_ZN7CResNCS8IsLoadedEv, 0x00000000007c3ba0)
+NWNXLIB_FUNCTION(_ZN7CResNCSC1Ev, 0x00000000007c3b40)
+NWNXLIB_FUNCTION(_ZN7CResNCSC2Ev, 0x00000000007c3b40)
+NWNXLIB_FUNCTION(_ZN7CResNCSD0Ev, 0x00000000007c3b10)
+NWNXLIB_FUNCTION(_ZN7CResNCSD1Ev, 0x00000000007c3af0)
+NWNXLIB_FUNCTION(_ZN7CResNCSD2Ev, 0x00000000007c3af0)
+NWNXLIB_FUNCTION(_ZN7CResNDB10GetNDBSizeEv, 0x00000000007c3cc0)
+NWNXLIB_FUNCTION(_ZN7CResNDB13GetNDBDataPtrEv, 0x00000000007c3cb0)
+NWNXLIB_FUNCTION(_ZN7CResNDB15OnResourceFreedEv, 0x00000000007c3bb0)
+NWNXLIB_FUNCTION(_ZN7CResNDB18OnResourceServicedEv, 0x00000000007c3be0)
+NWNXLIB_FUNCTION(_ZN7CResNDB8IsLoadedEv, 0x00000000007c3cd0)
+NWNXLIB_FUNCTION(_ZN7CResNDBC1Ev, 0x00000000007c3c70)
+NWNXLIB_FUNCTION(_ZN7CResNDBC2Ev, 0x00000000007c3c70)
+NWNXLIB_FUNCTION(_ZN7CResNDBD0Ev, 0x00000000007c3c40)
+NWNXLIB_FUNCTION(_ZN7CResNDBD1Ev, 0x00000000007c3c20)
+NWNXLIB_FUNCTION(_ZN7CResNDBD2Ev, 0x00000000007c3c20)
+NWNXLIB_FUNCTION(_ZN7CResNSS10GetNSSSizeEv, 0x00000000007c3df0)
+NWNXLIB_FUNCTION(_ZN7CResNSS13GetNSSDataPtrEv, 0x00000000007c3de0)
+NWNXLIB_FUNCTION(_ZN7CResNSS15OnResourceFreedEv, 0x00000000007c3ce0)
+NWNXLIB_FUNCTION(_ZN7CResNSS18OnResourceServicedEv, 0x00000000007c3d10)
+NWNXLIB_FUNCTION(_ZN7CResNSS8IsLoadedEv, 0x00000000007c3e00)
+NWNXLIB_FUNCTION(_ZN7CResNSSC1Ev, 0x00000000007c3da0)
+NWNXLIB_FUNCTION(_ZN7CResNSSC2Ev, 0x00000000007c3da0)
+NWNXLIB_FUNCTION(_ZN7CResNSSD0Ev, 0x00000000007c3d70)
+NWNXLIB_FUNCTION(_ZN7CResNSSD1Ev, 0x00000000007c3d50)
+NWNXLIB_FUNCTION(_ZN7CResNSSD2Ev, 0x00000000007c3d50)
+NWNXLIB_FUNCTION(_ZN7CResPWK10GetPWKSizeEv, 0x00000000007dfb90)
+NWNXLIB_FUNCTION(_ZN7CResPWK13GetPWKDataPtrEv, 0x00000000007dfb80)
+NWNXLIB_FUNCTION(_ZN7CResPWK15OnResourceFreedEv, 0x00000000007dfa80)
+NWNXLIB_FUNCTION(_ZN7CResPWK18OnResourceServicedEv, 0x00000000007dfab0)
+NWNXLIB_FUNCTION(_ZN7CResPWK8IsLoadedEv, 0x00000000007dfba0)
+NWNXLIB_FUNCTION(_ZN7CResPWKC1Ev, 0x00000000007dfb40)
+NWNXLIB_FUNCTION(_ZN7CResPWKC2Ev, 0x00000000007dfb40)
+NWNXLIB_FUNCTION(_ZN7CResPWKD0Ev, 0x00000000007dfb10)
+NWNXLIB_FUNCTION(_ZN7CResPWKD1Ev, 0x00000000007dfaf0)
+NWNXLIB_FUNCTION(_ZN7CResPWKD2Ev, 0x00000000007dfaf0)
+NWNXLIB_FUNCTION(_ZN7CResRefaSEPKc, 0x0000000000117a80)
+NWNXLIB_FUNCTION(_ZN7CResRefaSEPKh, 0x0000000000117800)
+NWNXLIB_FUNCTION(_ZN7CResRefaSERK10CExoString, 0x00000000001178e0)
+NWNXLIB_FUNCTION(_ZN7CResRefaSERKS_, 0x00000000001177c0)
+NWNXLIB_FUNCTION(_ZN7CResRefC1EPKc, 0x0000000000117b00)
+NWNXLIB_FUNCTION(_ZN7CResRefC1EPKh, 0x00000000001178a0)
+NWNXLIB_FUNCTION(_ZN7CResRefC1EPKhh, 0x00000000001179e0)
+NWNXLIB_FUNCTION(_ZN7CResRefC1ERK10CExoString, 0x00000000001179a0)
+NWNXLIB_FUNCTION(_ZN7CResRefC1Ev, 0x0000000000117520)
+NWNXLIB_FUNCTION(_ZN7CResRefC2EPKc, 0x0000000000117b00)
+NWNXLIB_FUNCTION(_ZN7CResRefC2EPKh, 0x00000000001178a0)
+NWNXLIB_FUNCTION(_ZN7CResRefC2EPKhh, 0x00000000001179e0)
+NWNXLIB_FUNCTION(_ZN7CResRefC2ERK10CExoString, 0x00000000001179a0)
+NWNXLIB_FUNCTION(_ZN7CResRefC2Ev, 0x0000000000117520)
+NWNXLIB_FUNCTION(_ZN7CResRefntEv, 0x00000000001177b0)
+NWNXLIB_FUNCTION(_ZN7CResRefpLERK10CExoString, 0x0000000000117b40)
+NWNXLIB_FUNCTION(_ZN7CResSET10GetSETSizeEv, 0x00000000001b8260)
+NWNXLIB_FUNCTION(_ZN7CResSET11CopySETDataEPh, 0x00000000001b8220)
+NWNXLIB_FUNCTION(_ZN7CResSET11GetNextLineEjPj, 0x00000000001b8390)
+NWNXLIB_FUNCTION(_ZN7CResSET13GetSETDataPtrEv, 0x00000000001b8250)
+NWNXLIB_FUNCTION(_ZN7CResSET14SkipWhiteSpaceEPc, 0x00000000001b8c50)
+NWNXLIB_FUNCTION(_ZN7CResSET15OnResourceFreedEv, 0x00000000001b8020)
+NWNXLIB_FUNCTION(_ZN7CResSET18CreateSectionTableEv, 0x00000000001b83f0)
+NWNXLIB_FUNCTION(_ZN7CResSET18OnResourceServicedEv, 0x00000000001b8b00)
+NWNXLIB_FUNCTION(_ZN7CResSET20GetSectionEntryValueEPcS0_S0_, 0x00000000001b8280)
+NWNXLIB_FUNCTION(_ZN7CResSET8IsLoadedEv, 0x00000000001b8270)
+NWNXLIB_FUNCTION(_ZN7CResSETC1Ev, 0x00000000001b81d0)
+NWNXLIB_FUNCTION(_ZN7CResSETC2Ev, 0x00000000001b81d0)
+NWNXLIB_FUNCTION(_ZN7CResSETD0Ev, 0x00000000001b8190)
+NWNXLIB_FUNCTION(_ZN7CResSETD1Ev, 0x00000000001b8160)
+NWNXLIB_FUNCTION(_ZN7CResSETD2Ev, 0x00000000001b8160)
+NWNXLIB_FUNCTION(_ZN7CResTGA10GetTGASizeEv, 0x00000000007910e0)
+NWNXLIB_FUNCTION(_ZN7CResTGA11CopyTGADataEPh, 0x0000000000791040)
+NWNXLIB_FUNCTION(_ZN7CResTGA12GetTGAAttribEPjS0_Ph, 0x0000000000791070)
+NWNXLIB_FUNCTION(_ZN7CResTGA12IsCompressedEv, 0x0000000000791100)
+NWNXLIB_FUNCTION(_ZN7CResTGA13GetTGADataPtrEv, 0x00000000007910c0)
+NWNXLIB_FUNCTION(_ZN7CResTGA13IsColorMappedEv, 0x00000000007910f0)
+NWNXLIB_FUNCTION(_ZN7CResTGA15GetTGAHeaderPtrEv, 0x00000000007910d0)
+NWNXLIB_FUNCTION(_ZN7CResTGA15OnResourceFreedEv, 0x0000000000790f60)
+NWNXLIB_FUNCTION(_ZN7CResTGA17GetTGAColorMapPtrEv, 0x00000000007910b0)
+NWNXLIB_FUNCTION(_ZN7CResTGA18OnResourceServicedEv, 0x0000000000791490)
+NWNXLIB_FUNCTION(_ZN7CResTGA18ReadUnmappedRLETGAEv, 0x0000000000791200)
+NWNXLIB_FUNCTION(_ZN7CResTGA21ReadColorMappedRLETGAEv, 0x0000000000791120)
+NWNXLIB_FUNCTION(_ZN7CResTGA5WriteER10CExoString, 0x00000000007916e0)
+NWNXLIB_FUNCTION(_ZN7CResTGA8IsLoadedEv, 0x0000000000791110)
+NWNXLIB_FUNCTION(_ZN7CResTGAC1Ev, 0x0000000000790fd0)
+NWNXLIB_FUNCTION(_ZN7CResTGAC2Ev, 0x0000000000790fd0)
+NWNXLIB_FUNCTION(_ZN7CResTGAD0Ev, 0x0000000000790f30)
+NWNXLIB_FUNCTION(_ZN7CResTGAD1Ev, 0x0000000000790f10)
+NWNXLIB_FUNCTION(_ZN7CResTGAD2Ev, 0x0000000000790f10)
+NWNXLIB_FUNCTION(_ZN7CResTLKC1Ev, 0x00000000001200e0)
+NWNXLIB_FUNCTION(_ZN7CResTLKC2Ev, 0x00000000001200e0)
+NWNXLIB_FUNCTION(_ZN7CResTLKD0Ev, 0x00000000001200b0)
+NWNXLIB_FUNCTION(_ZN7CResTLKD1Ev, 0x0000000000120090)
+NWNXLIB_FUNCTION(_ZN7CResTLKD2Ev, 0x0000000000120090)
+NWNXLIB_FUNCTION(_ZN7CResWOK10GetWOKSizeEv, 0x00000000001c5110)
+NWNXLIB_FUNCTION(_ZN7CResWOK13GetWOKDataPtrEv, 0x00000000001c5100)
+NWNXLIB_FUNCTION(_ZN7CResWOK15OnResourceFreedEv, 0x00000000001c5000)
+NWNXLIB_FUNCTION(_ZN7CResWOK18OnResourceServicedEv, 0x00000000001c5030)
+NWNXLIB_FUNCTION(_ZN7CResWOK8IsLoadedEv, 0x00000000001c5120)
+NWNXLIB_FUNCTION(_ZN7CResWOKC1Ev, 0x00000000001c50c0)
+NWNXLIB_FUNCTION(_ZN7CResWOKC2Ev, 0x00000000001c50c0)
+NWNXLIB_FUNCTION(_ZN7CResWOKD0Ev, 0x00000000001c5090)
+NWNXLIB_FUNCTION(_ZN7CResWOKD1Ev, 0x00000000001c5070)
+NWNXLIB_FUNCTION(_ZN7CResWOKD2Ev, 0x00000000001c5070)
+NWNXLIB_FUNCTION(_ZN7STR_RESC1Ev, 0x00000000003bb5c0)
+NWNXLIB_FUNCTION(_ZN7STR_RESC2Ev, 0x00000000003bb5c0)
+NWNXLIB_FUNCTION(_ZN7Vector49NormalizeEv, 0x0000000000792c20)
+NWNXLIB_FUNCTION(_ZN8CERFFile10SetVersionEPc, 0x00000000007897c0)
+NWNXLIB_FUNCTION(_ZN8CERFFile11AddResourceEPctP4CRes, 0x000000000078a660)
+NWNXLIB_FUNCTION(_ZN8CERFFile11AddResourceER10CExoString, 0x00000000007897d0)
+NWNXLIB_FUNCTION(_ZN8CERFFile11WriteHeaderEv, 0x0000000000789a30)
+NWNXLIB_FUNCTION(_ZN8CERFFile13SetNumEntriesEj, 0x000000000078a4c0)
+NWNXLIB_FUNCTION(_ZN8CERFFile13WriteResourceEPctP4CResi, 0x000000000078a990)
+NWNXLIB_FUNCTION(_ZN8CERFFile14RemoveResourceEP7CERFRes, 0x0000000000789940)
+NWNXLIB_FUNCTION(_ZN8CERFFile14RemoveResourceER10CExoStringt, 0x00000000007897e0)
+NWNXLIB_FUNCTION(_ZN8CERFFile16WriteStringTableEv, 0x000000000078ae50)
+NWNXLIB_FUNCTION(_ZN8CERFFile18RecalculateOffsetsEv, 0x0000000000789b10)
+NWNXLIB_FUNCTION(_ZN8CERFFile21ReadModuleDescriptionERK10CExoStringtPjPS0_, 0x0000000000789be0)
+NWNXLIB_FUNCTION(_ZN8CERFFile4ReadEv, 0x0000000000789950)
+NWNXLIB_FUNCTION(_ZN8CERFFile5ResetEv, 0x00000000007896a0)
+NWNXLIB_FUNCTION(_ZN8CERFFile5WriteER10CExoString, 0x000000000078b130)
+NWNXLIB_FUNCTION(_ZN8CERFFile6CreateER10CExoString, 0x0000000000789960)
+NWNXLIB_FUNCTION(_ZN8CERFFile6FinishEv, 0x0000000000789ac0)
+NWNXLIB_FUNCTION(_ZN8CERFFile9AddStringEP10CERFString, 0x000000000078ad20)
+NWNXLIB_FUNCTION(_ZN8CERFFileC1Ev, 0x000000000078afe0)
+NWNXLIB_FUNCTION(_ZN8CERFFileC2Ev, 0x000000000078afe0)
+NWNXLIB_FUNCTION(_ZN8CERFFileD1Ev, 0x000000000078b0e0)
+NWNXLIB_FUNCTION(_ZN8CERFFileD2Ev, 0x000000000078b0e0)
+NWNXLIB_FUNCTION(_ZN8CExoBase10CheckForCDEj, 0x00000000000db090)
+NWNXLIB_FUNCTION(_ZN8CExoBase11LoadAliasesEi, 0x00000000000db060)
+NWNXLIB_FUNCTION(_ZN8CExoBase16GetDirectoryListEP13CExoArrayListI10CExoStringES1_tii, 0x00000000000dae60)
+NWNXLIB_FUNCTION(_ZN8CExoBase20GetResourceExtensionEt, 0x00000000000db030)
+NWNXLIB_FUNCTION(_ZN8CExoBase23GetResTypeFromExtensionERK10CExoString, 0x00000000000db050)
+NWNXLIB_FUNCTION(_ZN8CExoBase24SpawnExternalApplicationERK10CExoStringS2_i, 0x00000000000db080)
+NWNXLIB_FUNCTION(_ZN8CExoBase25GetAugmentedDirectoryListEP13CExoArrayListI9CFileInfoE10CExoStringti, 0x00000000000daf90)
+NWNXLIB_FUNCTION(_ZN8CExoBase27GetDirectoryAndWorkshopListEP13CExoArrayListI10CExoStringES1_tii, 0x00000000000db0a0)
+NWNXLIB_FUNCTION(_ZN8CExoBase8ShutDownEv, 0x00000000000db070)
+NWNXLIB_FUNCTION(_ZN8CExoBaseC1E10CExoString, 0x00000000000daaf0)
+NWNXLIB_FUNCTION(_ZN8CExoBaseC2E10CExoString, 0x00000000000daaf0)
+NWNXLIB_FUNCTION(_ZN8CExoBaseD1Ev, 0x00000000000dad00)
+NWNXLIB_FUNCTION(_ZN8CExoBaseD2Ev, 0x00000000000dad00)
+NWNXLIB_FUNCTION(_ZN8CExoFile10FileOpenedEv, 0x0000000000106820)
+NWNXLIB_FUNCTION(_ZN8CExoFile13SeekBeginningEv, 0x0000000000106960)
+NWNXLIB_FUNCTION(_ZN8CExoFile15SetMemoryBufferEPKvi, 0x00000000001067f0)
+NWNXLIB_FUNCTION(_ZN8CExoFile17ReadAsyncCompleteEv, 0x0000000000106890)
+NWNXLIB_FUNCTION(_ZN8CExoFile18ReadAsyncBytesReadEv, 0x00000000001068a0)
+NWNXLIB_FUNCTION(_ZN8CExoFile24ReadStringLineFromBufferEPPhPjS0_j, 0x0000000000106980)
+NWNXLIB_FUNCTION(_ZN8CExoFile3EofEv, 0x0000000000106810)
+NWNXLIB_FUNCTION(_ZN8CExoFile4ReadEPvjj, 0x0000000000106860)
+NWNXLIB_FUNCTION(_ZN8CExoFile4ReadER10CExoStringj, 0x0000000000106870)
+NWNXLIB_FUNCTION(_ZN8CExoFile4SeekEii, 0x0000000000106950)
+NWNXLIB_FUNCTION(_ZN8CExoFile5FlushEv, 0x0000000000106830)
+NWNXLIB_FUNCTION(_ZN8CExoFile5WriteEPKc, 0x00000000001068f0)
+NWNXLIB_FUNCTION(_ZN8CExoFile5WriteEPKvjj, 0x00000000001068b0)
+NWNXLIB_FUNCTION(_ZN8CExoFile5WriteERK10CExoString, 0x0000000000106900)
+NWNXLIB_FUNCTION(_ZN8CExoFile7GetSizeEv, 0x0000000000106850)
+NWNXLIB_FUNCTION(_ZN8CExoFile7SeekEndEv, 0x0000000000106970)
+NWNXLIB_FUNCTION(_ZN8CExoFile9GetOffsetEv, 0x0000000000106840)
+NWNXLIB_FUNCTION(_ZN8CExoFile9ReadAsyncEPvjj, 0x0000000000106880)
+NWNXLIB_FUNCTION(_ZN8CExoFileC1EPKvi, 0x0000000000106790)
+NWNXLIB_FUNCTION(_ZN8CExoFileC1ERK10CExoStringS2_, 0x00000000001066c0)
+NWNXLIB_FUNCTION(_ZN8CExoFileC1ERK10CExoStringtS2_, 0x0000000000106720)
+NWNXLIB_FUNCTION(_ZN8CExoFileC2EPKvi, 0x0000000000106790)
+NWNXLIB_FUNCTION(_ZN8CExoFileC2ERK10CExoStringS2_, 0x00000000001066c0)
+NWNXLIB_FUNCTION(_ZN8CExoFileC2ERK10CExoStringtS2_, 0x0000000000106720)
+NWNXLIB_FUNCTION(_ZN8CExoFileD0Ev, 0x0000000000106470)
+NWNXLIB_FUNCTION(_ZN8CExoFileD1Ev, 0x0000000000106440)
+NWNXLIB_FUNCTION(_ZN8CExoFileD2Ev, 0x0000000000106440)
+NWNXLIB_FUNCTION(_ZN8CExoRand11SignalEventEj, 0x0000000000109c50)
+NWNXLIB_FUNCTION(_ZN8CExoRand11SignalEventEv, 0x0000000000109c40)
+NWNXLIB_FUNCTION(_ZN8CExoRand4RandEv, 0x0000000000109be0)
+NWNXLIB_FUNCTION(_ZN8CExoRand9GetStringEt, 0x0000000000109bf0)
+NWNXLIB_FUNCTION(_ZN8CExoRandC1Ev, 0x0000000000109b60)
+NWNXLIB_FUNCTION(_ZN8CExoRandC2Ev, 0x0000000000109b60)
+NWNXLIB_FUNCTION(_ZN8CExoRandD1Ev, 0x0000000000109ba0)
+NWNXLIB_FUNCTION(_ZN8CExoRandD2Ev, 0x0000000000109ba0)
+NWNXLIB_FUNCTION(_ZN8CNWClass11GetNameTextEv, 0x00000000007c8040)
+NWNXLIB_FUNCTION(_ZN8CNWClass11IsBonusFeatEt, 0x00000000007c82e0)
+NWNXLIB_FUNCTION(_ZN8CNWClass12GetClassFeatEt, 0x00000000007c8250)
+NWNXLIB_FUNCTION(_ZN8CNWClass12GetSpellGainEhh, 0x00000000007c61e0)
+NWNXLIB_FUNCTION(_ZN8CNWClass12IsNormalFeatEt, 0x00000000007c8350)
+NWNXLIB_FUNCTION(_ZN8CNWClass13GetBonusFeatsEh, 0x00000000007c6130)
+NWNXLIB_FUNCTION(_ZN8CNWClass13IsFeatUseableEt, 0x00000000007c84c0)
+NWNXLIB_FUNCTION(_ZN8CNWClass13IsGrantedFeatEtRh, 0x00000000007c83d0)
+NWNXLIB_FUNCTION(_ZN8CNWClass14GetAttackBonusEh, 0x00000000007c6110)
+NWNXLIB_FUNCTION(_ZN8CNWClass14IsSkillUseableEt, 0x00000000007c7f00)
+NWNXLIB_FUNCTION(_ZN8CNWClass14LoadFeatsTableE10CExoStringP8CNWRules, 0x00000000007c6610)
+NWNXLIB_FUNCTION(_ZN8CNWClass15GetLevelGrantedEt, 0x00000000007c8450)
+NWNXLIB_FUNCTION(_ZN8CNWClass15GetRefSaveBonusEh, 0x00000000007c6180)
+NWNXLIB_FUNCTION(_ZN8CNWClass15LoadSkillsTableE10CExoString, 0x00000000007c6dc0)
+NWNXLIB_FUNCTION(_ZN8CNWClass16GetFortSaveBonusEh, 0x00000000007c6160)
+NWNXLIB_FUNCTION(_ZN8CNWClass16GetNameLowerTextEv, 0x00000000007c80f0)
+NWNXLIB_FUNCTION(_ZN8CNWClass16GetWillSaveBonusEh, 0x00000000007c61b0)
+NWNXLIB_FUNCTION(_ZN8CNWClass17GetNamePluralTextEv, 0x00000000007c81a0)
+NWNXLIB_FUNCTION(_ZN8CNWClass17IsSkillClassSkillEt, 0x00000000007c7e80)
+NWNXLIB_FUNCTION(_ZN8CNWClass17LoadStatGainTableE10CExoString, 0x00000000007c79c0)
+NWNXLIB_FUNCTION(_ZN8CNWClass18GetDescriptionTextEv, 0x00000000007c7f90)
+NWNXLIB_FUNCTION(_ZN8CNWClass18LoadSpellGainTableE10CExoString, 0x00000000007c7310)
+NWNXLIB_FUNCTION(_ZN8CNWClass19GetLevelFeatGrantedEt, 0x00000000007c8280)
+NWNXLIB_FUNCTION(_ZN8CNWClass19LoadBonusFeatsTableE10CExoString, 0x00000000007c70d0)
+NWNXLIB_FUNCTION(_ZN8CNWClass19LoadSpellKnownTableE10CExoString, 0x00000000007c7660)
+NWNXLIB_FUNCTION(_ZN8CNWClass20LoadAttackBonusTableE10CExoString, 0x00000000007c6390)
+NWNXLIB_FUNCTION(_ZN8CNWClass20LoadSavingThrowTableE10CExoString, 0x00000000007c6b10)
+NWNXLIB_FUNCTION(_ZN8CNWClass21GetIsAlignmentAllowedEhh, 0x00000000007c8560)
+NWNXLIB_FUNCTION(_ZN8CNWClass22GetAbilityGainForLevelEii, 0x00000000007c7df0)
+NWNXLIB_FUNCTION(_ZN8CNWClass22GetSpellsKnownPerLevelEhhhth, 0x00000000007c6220)
+NWNXLIB_FUNCTION(_ZN8CNWClass24GetNaturalACGainForLevelEi, 0x00000000007c7e40)
+NWNXLIB_FUNCTION(_ZN8CNWClass28GetAbilityGainForSingleLevelEii, 0x00000000007c7dd0)
+NWNXLIB_FUNCTION(_ZN8CNWClassC1Ev, 0x00000000007c5d00)
+NWNXLIB_FUNCTION(_ZN8CNWClassC2Ev, 0x00000000007c5d00)
+NWNXLIB_FUNCTION(_ZN8CNWClassD1Ev, 0x00000000007c5ff0)
+NWNXLIB_FUNCTION(_ZN8CNWClassD2Ev, 0x00000000007c5ff0)
+NWNXLIB_FUNCTION(_ZN8CNWRules12LoadFeatInfoEv, 0x00000000007cbe00)
+NWNXLIB_FUNCTION(_ZN8CNWRules12LoadRaceInfoEv, 0x00000000007cd500)
+NWNXLIB_FUNCTION(_ZN8CNWRules13IsArcaneClassEh, 0x00000000007cf410)
+NWNXLIB_FUNCTION(_ZN8CNWRules13IsFeatUseableEht, 0x00000000007cbdc0)
+NWNXLIB_FUNCTION(_ZN8CNWRules13LoadClassInfoEv, 0x00000000007cf980)
+NWNXLIB_FUNCTION(_ZN8CNWRules13LoadSkillInfoEv, 0x00000000007ce3c0)
+NWNXLIB_FUNCTION(_ZN8CNWRules14LoadDomainInfoEv, 0x00000000007cea40)
+NWNXLIB_FUNCTION(_ZN8CNWRules15CompareFeatNameEPKvS1_, 0x00000000007cd060)
+NWNXLIB_FUNCTION(_ZN8CNWRules15LoadRulesetInfoEv, 0x00000000007d2970)
+NWNXLIB_FUNCTION(_ZN8CNWRules17GetMasterFeatIconEc, 0x00000000007cd420)
+NWNXLIB_FUNCTION(_ZN8CNWRules18GetRulesetIntEntryERK10CExoStringi, 0x00000000007d2620)
+NWNXLIB_FUNCTION(_ZN8CNWRules18LoadDifficultyInfoEv, 0x00000000007cf020)
+NWNXLIB_FUNCTION(_ZN8CNWRules19GetDifficultyOptionEii, 0x00000000007cf000)
+NWNXLIB_FUNCTION(_ZN8CNWRules20GetRulesetFloatEntryERK10CExoStringf, 0x00000000007d2480)
+NWNXLIB_FUNCTION(_ZN8CNWRules21GetFeatExpansionLevelEt, 0x00000000007cf290)
+NWNXLIB_FUNCTION(_ZN8CNWRules21GetMasterFeatNameTextEc, 0x00000000007ccf90)
+NWNXLIB_FUNCTION(_ZN8CNWRules21GetMetaMagicLevelCostEh, 0x00000000007d27b0)
+NWNXLIB_FUNCTION(_ZN8CNWRules21GetRulesetStringEntryERK10CExoStringS0_, 0x00000000007d22c0)
+NWNXLIB_FUNCTION(_ZN8CNWRules22GetClassExpansionLevelEh, 0x00000000007cf390)
+NWNXLIB_FUNCTION(_ZN8CNWRules22GetSkillExpansionLevelEt, 0x00000000007cf2e0)
+NWNXLIB_FUNCTION(_ZN8CNWRules22GetSpellExpansionLevelEj, 0x00000000007cf310)
+NWNXLIB_FUNCTION(_ZN8CNWRules23GetDamageIndexFromFlagsEj, 0x00000000007cf270)
+NWNXLIB_FUNCTION(_ZN8CNWRules23GetWeightedDamageAmountEiiiii, 0x00000000007cf130)
+NWNXLIB_FUNCTION(_ZN8CNWRules23InitLegacyClassDefaultsEh, 0x00000000007cf440)
+NWNXLIB_FUNCTION(_ZN8CNWRules25GetFamiliarExpansionLevelEhi, 0x00000000007cf3d0)
+NWNXLIB_FUNCTION(_ZN8CNWRules28GetMasterFeatDescriptionTextEc, 0x00000000007cd350)
+NWNXLIB_FUNCTION(_ZN8CNWRules7GetFeatEt, 0x00000000007cef80)
+NWNXLIB_FUNCTION(_ZN8CNWRules8RollDiceEhh, 0x00000000007cef30)
+NWNXLIB_FUNCTION(_ZN8CNWRules9GetDomainEt, 0x00000000007cefc0)
+NWNXLIB_FUNCTION(_ZN8CNWRules9ReloadAllEv, 0x00000000007d3320)
+NWNXLIB_FUNCTION(_ZN8CNWRules9SortFeatsEv, 0x00000000007cd4d0)
+NWNXLIB_FUNCTION(_ZN8CNWRules9UnloadAllEv, 0x00000000007d1be0)
+NWNXLIB_FUNCTION(_ZN8CNWRulesC1Ev, 0x00000000007d2f40)
+NWNXLIB_FUNCTION(_ZN8CNWRulesC2Ev, 0x00000000007d2f40)
+NWNXLIB_FUNCTION(_ZN8CNWRulesD0Ev, 0x00000000007d2290)
+NWNXLIB_FUNCTION(_ZN8CNWRulesD1Ev, 0x00000000007d1f30)
+NWNXLIB_FUNCTION(_ZN8CNWRulesD2Ev, 0x00000000007d1f30)
+NWNXLIB_FUNCTION(_ZN8CNWSArea10InSubAreasE6VectorP13CExoArrayListIjE, 0x0000000000340a70)
+NWNXLIB_FUNCTION(_ZN8CNWSArea10LoadSoundsEP7CResGFFP10CResStructi, 0x000000000032d630)
+NWNXLIB_FUNCTION(_ZN8CNWSArea10LoadStoresEP7CResGFFP10CResStructi, 0x000000000032d790)
+NWNXLIB_FUNCTION(_ZN8CNWSArea10SaveSoundsEP7CResGFFP10CResStructR13CExoArrayListIjEi, 0x000000000032e740)
+NWNXLIB_FUNCTION(_ZN8CNWSArea10SaveStoresEP7CResGFFP10CResStructR13CExoArrayListIjEi, 0x000000000032ea60)
+NWNXLIB_FUNCTION(_ZN8CNWSArea10UnloadAreaEv, 0x000000000032ee90)
+NWNXLIB_FUNCTION(_ZN8CNWSArea11ApplyEffectEP11CGameEffect6VectorS2_, 0x00000000003323f0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea11ExploreAreaEP12CNWSCreatureiii, 0x0000000000337c70)
+NWNXLIB_FUNCTION(_ZN8CNWSArea11LoadPlayersEP7CResGFFP10CResStruct, 0x000000000032d030)
+NWNXLIB_FUNCTION(_ZN8CNWSArea12EventHandlerEjjPvjj, 0x000000000032ff70)
+NWNXLIB_FUNCTION(_ZN8CNWSArea12GridDFSearchEiiiiii, 0x000000000033fae0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea12InterTileDFSEiiiii, 0x0000000000339160)
+NWNXLIB_FUNCTION(_ZN8CNWSArea12LoadTriggersEP7CResGFFP10CResStructi, 0x0000000000331010)
+NWNXLIB_FUNCTION(_ZN8CNWSArea12PlotGridPathEP20CPathfindInformationm, 0x000000000033fd40)
+NWNXLIB_FUNCTION(_ZN8CNWSArea12SaveTriggersEP7CResGFFP10CResStructR13CExoArrayListIjEi, 0x000000000032e290)
+NWNXLIB_FUNCTION(_ZN8CNWSArea13ComputeHeightE6Vector, 0x0000000000335e90)
+NWNXLIB_FUNCTION(_ZN8CNWSArea13GetPVPSettingEv, 0x000000000032f380)
+NWNXLIB_FUNCTION(_ZN8CNWSArea13LoadCreaturesEP7CResGFFP10CResStructi, 0x000000000032cc80)
+NWNXLIB_FUNCTION(_ZN8CNWSArea13LoadWaypointsEP7CResGFFP10CResStructi, 0x000000000032d450)
+NWNXLIB_FUNCTION(_ZN8CNWSArea13PlotSoundPathEP20CPathfindInformation, 0x0000000000340660)
+NWNXLIB_FUNCTION(_ZN8CNWSArea13SaveCreaturesEP7CResGFFP10CResStructR13CExoArrayListIjEi, 0x000000000032dc50)
+NWNXLIB_FUNCTION(_ZN8CNWSArea13SaveWaypointsEP7CResGFFP10CResStructR13CExoArrayListIjEi, 0x000000000032e5b0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea14BudgeCreaturesERK6VectorS2_S2_ji, 0x000000000032fbf0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea14GetDoorCrossedE6VectorS0_, 0x000000000032f570)
+NWNXLIB_FUNCTION(_ZN8CNWSArea14GoalMoveDeniedEiii, 0x0000000000337ee0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea14GridSearchPathEi, 0x000000000033e2a0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea14LoadAreaHeaderEP10CResStruct, 0x000000000032bc40)
+NWNXLIB_FUNCTION(_ZN8CNWSArea14LoadEncountersEP7CResGFFP10CResStructi, 0x000000000032d2c0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea14LoadPlaceablesEP7CResGFFP10CResStructi, 0x0000000000331210)
+NWNXLIB_FUNCTION(_ZN8CNWSArea14LoadPropertiesEP7CResGFFP10CResStruct, 0x000000000032da70)
+NWNXLIB_FUNCTION(_ZN8CNWSArea14SaveEncountersEP7CResGFFP10CResStructR13CExoArrayListIjEi, 0x000000000032e420)
+NWNXLIB_FUNCTION(_ZN8CNWSArea14SavePlaceablesEP7CResGFFP10CResStructR13CExoArrayListIjEi, 0x000000000032e8d0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea14SavePropertiesEP7CResGFFP10CResStruct, 0x000000000032ed80)
+NWNXLIB_FUNCTION(_ZN8CNWSArea14TestDirectLineEffffffi, 0x000000000033b4b0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea15AddObjectToAreaEji, 0x00000000003309f0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea15LoadAreaEffectsEP7CResGFFP10CResStructi, 0x00000000003315d0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea15LoadTileSetInfoEP10CResStruct, 0x000000000032c6e0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea15NWAreaAsNWSAreaEv, 0x0000000000335860)
+NWNXLIB_FUNCTION(_ZN8CNWSArea15SaveAreaEffectsEP7CResGFFP10CResStructR13CExoArrayListIjEi, 0x000000000032ebf0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea15SmoothSelectionEiPfPiPS0_, 0x000000000033ce60)
+NWNXLIB_FUNCTION(_ZN8CNWSArea16ClearLineOfSightE6VectorS0_PS0_Pjjji, 0x0000000000332aa0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea16PlayVisualEffectEt6Vector, 0x000000000032f120)
+NWNXLIB_FUNCTION(_ZN8CNWSArea16PositionWalkableE6Vector, 0x000000000032f4c0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea16TestLineWalkableEfffff, 0x0000000000339d50)
+NWNXLIB_FUNCTION(_ZN8CNWSArea17ComputeAwayVectorE6VectorS0_fP20CPathfindInformation, 0x000000000033bac0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea17ComputeBestCornerEffffffffPfS0_S0_S0_, 0x000000000033c1b0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea17NoCreaturesOnLineEffffP20CPathfindInformationiiPji, 0x0000000000339630)
+NWNXLIB_FUNCTION(_ZN8CNWSArea17SetCurrentWeatherEhi, 0x000000000032f700)
+NWNXLIB_FUNCTION(_ZN8CNWSArea17SmoothSelectNodesEiPfPiPS0_ii, 0x000000000033c930)
+NWNXLIB_FUNCTION(_ZN8CNWSArea18GetSurfaceMaterialE6Vector, 0x000000000032f400)
+NWNXLIB_FUNCTION(_ZN8CNWSArea18SmoothPointsOnPathEv, 0x000000000033cf20)
+NWNXLIB_FUNCTION(_ZN8CNWSArea19ComputePathDistanceEiPf, 0x0000000000336030)
+NWNXLIB_FUNCTION(_ZN8CNWSArea19ComputeSafeLocationE6VectorfP20CPathfindInformationiPS0_, 0x000000000033a080)
+NWNXLIB_FUNCTION(_ZN8CNWSArea19GetNextObjectInAreaERj, 0x000000000032b720)
+NWNXLIB_FUNCTION(_ZN8CNWSArea19PackAreaIntoMessageEiiiP10CNWSPlayer, 0x0000000000333370)
+NWNXLIB_FUNCTION(_ZN8CNWSArea19RemoveInterTileExitEiiii, 0x0000000000339bf0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea20GetFirstObjectInAreaERj, 0x000000000032b6f0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea20GetIsIDInExcludeListEjP13CExoArrayListIP11CGameObjectE, 0x000000000032b230)
+NWNXLIB_FUNCTION(_ZN8CNWSArea20GridDFSTransTableGetEiiPiS0_, 0x000000000033f9c0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea20GridDFSTransTablePutEiiii, 0x000000000033fa60)
+NWNXLIB_FUNCTION(_ZN8CNWSArea20PlotGridPathEnhancedEP20CPathfindInformationmb, 0x000000000033e900)
+NWNXLIB_FUNCTION(_ZN8CNWSArea20RemoveObjectFromAreaEj, 0x0000000000330810)
+NWNXLIB_FUNCTION(_ZN8CNWSArea20SmoothCornerOptimizeEiPfPiPS0_, 0x000000000033c4d0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea20UpdatePlayerAutomapsEv, 0x0000000000337de0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea21CountVisibleToPlayersE6Vectori, 0x0000000000336570)
+NWNXLIB_FUNCTION(_ZN8CNWSArea21GenerateInterTilePathEPiiii, 0x0000000000339330)
+NWNXLIB_FUNCTION(_ZN8CNWSArea21GridDFSTransTableHashEii, 0x000000000033f990)
+NWNXLIB_FUNCTION(_ZN8CNWSArea21InterTileDFSSoundPathEPhiiii, 0x00000000003372f0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea21TestSafeLocationPointE6VectorP20CPathfindInformation, 0x00000000003360c0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea22DecrementPlayersInAreaEv, 0x000000000032bc20)
+NWNXLIB_FUNCTION(_ZN8CNWSArea22HandleTransparentDoorsEfffffffjRjiP13CExoArrayListIP11CGameObjectEi, 0x00000000003328f0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea22IncrementPlayersInAreaEv, 0x000000000032bab0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea23DecreaseAILevelPriorityEv, 0x000000000032baf0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea23GetFirstObjectIndiceByXEPif, 0x000000000032b280)
+NWNXLIB_FUNCTION(_ZN8CNWSArea23IncreaseAILevelPriorityEv, 0x000000000032b860)
+NWNXLIB_FUNCTION(_ZN8CNWSArea23IntersectingLineSegmentE6VectorS0_P13CExoArrayListIjE, 0x0000000000340870)
+NWNXLIB_FUNCTION(_ZN8CNWSArea23InterTileDFSExploreAreaEPhiiiff, 0x0000000000336a60)
+NWNXLIB_FUNCTION(_ZN8CNWSArea25ComputeNonVisibleLocationE6VectorP20CPathfindInformationiPS0_f, 0x000000000033ad20)
+NWNXLIB_FUNCTION(_ZN8CNWSArea25GridDFSGenerateSuccessorsEiiiiiPP22CNWSAreaGridSuccessors, 0x000000000033f1c0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea25GridSearchPathInDirectionEiiiiibP17CNWSAreaGridPoint, 0x000000000033de00)
+NWNXLIB_FUNCTION(_ZN8CNWSArea26EvaluateOverlappingTargetsEP20CPathfindInformation6VectorjfffiiPj, 0x0000000000339510)
+NWNXLIB_FUNCTION(_ZN8CNWSArea27CountAreaTransitionTriggersEPjiS0_, 0x0000000000336790)
+NWNXLIB_FUNCTION(_ZN8CNWSArea27GridDFSTransTableInitializeEv, 0x000000000033f920)
+NWNXLIB_FUNCTION(_ZN8CNWSArea28UpdatePositionInObjectsArrayEP11CGameObject, 0x000000000032b390)
+NWNXLIB_FUNCTION(_ZN8CNWSArea29NoNoneWalkPolysInStaticObjectEjfffffffji, 0x0000000000340780)
+NWNXLIB_FUNCTION(_ZN8CNWSArea30ComputeSafeLocationInDirectionE6VectorS0_fP20CPathfindInformationiPS0_, 0x000000000033a730)
+NWNXLIB_FUNCTION(_ZN8CNWSArea30InterTileDFSGenerateSuccessorsEiiii, 0x0000000000338040)
+NWNXLIB_FUNCTION(_ZN8CNWSArea7GetTileE6Vector, 0x000000000032b760)
+NWNXLIB_FUNCTION(_ZN8CNWSArea7LoadGITEi, 0x00000000003355b0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea7LoadGITEP7CResGFFP10CResStructi, 0x00000000003318f0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea7SaveGITEP7CResGFFP10CResStructR13CExoArrayListIjEi, 0x0000000000331a90)
+NWNXLIB_FUNCTION(_ZN8CNWSArea7SaveGITEP8CERFFileR10CExoStringR13CExoArrayListIjE, 0x0000000000332280)
+NWNXLIB_FUNCTION(_ZN8CNWSArea8AIUpdateEv, 0x000000000032f920)
+NWNXLIB_FUNCTION(_ZN8CNWSArea8LoadAreaEiP7CResGFFP10CResStruct, 0x00000000003356c0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea8PlotPathEP20CPathfindInformationm, 0x000000000033d0b0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea8SaveAreaEP8CERFFileR10CExoString, 0x000000000032dc40)
+NWNXLIB_FUNCTION(_ZN8CNWSArea9AsNWSAreaEv, 0x00000000002165c0)
+NWNXLIB_FUNCTION(_ZN8CNWSArea9LoadDoorsEP7CResGFFP10CResStructi, 0x0000000000330c80)
+NWNXLIB_FUNCTION(_ZN8CNWSArea9LoadItemsEP7CResGFFP10CResStructi, 0x000000000032d040)
+NWNXLIB_FUNCTION(_ZN8CNWSArea9SaveDoorsEP7CResGFFP10CResStructR13CExoArrayListIjEi, 0x000000000032e120)
+NWNXLIB_FUNCTION(_ZN8CNWSArea9SaveItemsEP7CResGFFP10CResStructR13CExoArrayListIjEi, 0x000000000032dfb0)
+NWNXLIB_FUNCTION(_ZN8CNWSAreaC1E7CResRefij, 0x0000000000334de0)
+NWNXLIB_FUNCTION(_ZN8CNWSAreaC2E7CResRefij, 0x0000000000334de0)
+NWNXLIB_FUNCTION(_ZN8CNWSAreaD0Ev, 0x0000000000335560)
+NWNXLIB_FUNCTION(_ZN8CNWSAreaD1Ev, 0x0000000000335380)
+NWNXLIB_FUNCTION(_ZN8CNWSAreaD2Ev, 0x0000000000335380)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor11PostProcessEv, 0x0000000000255e30)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor12EventHandlerEjjPvjj, 0x0000000000257cc0)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor12GetFirstNameEv, 0x0000000000258e30)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor12GetOpenStateEv, 0x0000000000257490)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor12SetOpenStateEh, 0x0000000000255ca0)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor14GetActionPointEih, 0x00000000002555c0)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor14RemoveFromAreaEv, 0x00000000002574b0)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor15GetDialogResrefEv, 0x0000000000258df0)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor20NoNonWalkPolysInDoorEfffffff, 0x0000000000255410)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor21GetNearestActionPointERK6Vectori, 0x0000000000255700)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor8AIUpdateEv, 0x00000000002544f0)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor8DoDamageEi, 0x0000000000254640)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor8LoadDoorEP7CResGFFP10CResStruct, 0x0000000000255f30)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor8SaveDoorEP7CResGFFP10CResStruct, 0x0000000000254ac0)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor9AddToAreaEP8CNWSAreafffi, 0x0000000000257920)
+NWNXLIB_FUNCTION(_ZN8CNWSDoor9AsNWSDoorEv, 0x0000000000258de0)
+NWNXLIB_FUNCTION(_ZN8CNWSDoorC1Ej, 0x00000000002546f0)
+NWNXLIB_FUNCTION(_ZN8CNWSDoorC2Ej, 0x00000000002546f0)
+NWNXLIB_FUNCTION(_ZN8CNWSDoorD0Ev, 0x00000000002578f0)
+NWNXLIB_FUNCTION(_ZN8CNWSDoorD1Ev, 0x0000000000257780)
+NWNXLIB_FUNCTION(_ZN8CNWSDoorD2Ev, 0x0000000000257780)
+NWNXLIB_FUNCTION(_ZN8CNWSItem11AcquireItemEPPS_jhhi, 0x000000000027b070)
+NWNXLIB_FUNCTION(_ZN8CNWSItem11CompareItemEPS_, 0x0000000000275ab0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem12EventHandlerEjjPvjj, 0x0000000000278b60)
+NWNXLIB_FUNCTION(_ZN8CNWSItem12GetFirstNameEv, 0x000000000027cdf0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem12SetPossessorEjiii, 0x0000000000274030)
+NWNXLIB_FUNCTION(_ZN8CNWSItem13ComputeWeightEv, 0x0000000000274a00)
+NWNXLIB_FUNCTION(_ZN8CNWSItem13OpenInventoryEj, 0x0000000000276dc0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem13SetIdentifiedEi, 0x0000000000278a30)
+NWNXLIB_FUNCTION(_ZN8CNWSItem13SetNumChargesEii, 0x0000000000275100)
+NWNXLIB_FUNCTION(_ZN8CNWSItem14ActivePropertyEt, 0x0000000000275640)
+NWNXLIB_FUNCTION(_ZN8CNWSItem14CloseInventoryEji, 0x0000000000276bc0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem14GetDamageFlagsEv, 0x0000000000278740)
+NWNXLIB_FUNCTION(_ZN8CNWSItem14InitRepositoryEj, 0x0000000000275ef0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem14RemoveFromAreaEv, 0x0000000000274ff0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem15LoadDataFromGffEP7CResGFFP10CResStructi, 0x000000000027b960)
+NWNXLIB_FUNCTION(_ZN8CNWSItem16GetMinEquipLevelEv, 0x0000000000278930)
+NWNXLIB_FUNCTION(_ZN8CNWSItem16LoadFromTemplateE7CResRefP10CExoString, 0x000000000027b320)
+NWNXLIB_FUNCTION(_ZN8CNWSItem17AddActivePropertyE15CNWItemProperty, 0x00000000002799b0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem17ComputeArmorClassEv, 0x0000000000275970)
+NWNXLIB_FUNCTION(_ZN8CNWSItem17GetActivePropertyEi, 0x0000000000275710)
+NWNXLIB_FUNCTION(_ZN8CNWSItem17GetPropertyByTypeEPP15CNWItemPropertytt, 0x0000000000275770)
+NWNXLIB_FUNCTION(_ZN8CNWSItem18AddPassivePropertyE15CNWItemProperty, 0x0000000000279a90)
+NWNXLIB_FUNCTION(_ZN8CNWSItem18CalculateBaseCostsEv, 0x0000000000277350)
+NWNXLIB_FUNCTION(_ZN8CNWSItem18GetPassivePropertyEi, 0x0000000000275740)
+NWNXLIB_FUNCTION(_ZN8CNWSItem18SaveContainerItemsEP7CResGFFP10CResStructi, 0x00000000002783e0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem18SaveItemPropertiesEP7CResGFFP10CResStruct, 0x0000000000274c60)
+NWNXLIB_FUNCTION(_ZN8CNWSItem18UpdateVisualEffectEv, 0x0000000000278f80)
+NWNXLIB_FUNCTION(_ZN8CNWSItem19ApplyItemPropertiesEP12CNWSCreatureji, 0x0000000000275820)
+NWNXLIB_FUNCTION(_ZN8CNWSItem20CalculatePassiveCostEP15CNWItemProperty, 0x0000000000277080)
+NWNXLIB_FUNCTION(_ZN8CNWSItem20RemoveActivePropertyEi, 0x0000000000279770)
+NWNXLIB_FUNCTION(_ZN8CNWSItem20RemoveItemPropertiesEP12CNWSCreaturej, 0x00000000002758c0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem21RemovePassivePropertyEi, 0x00000000002797a0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem22CloseItemForAllPlayersEv, 0x0000000000278a60)
+NWNXLIB_FUNCTION(_ZN8CNWSItem23GetPropertyByTypeExistsEtt, 0x0000000000275670)
+NWNXLIB_FUNCTION(_ZN8CNWSItem25ReadContainerItemsFromGffEP7CResGFFP10CResStruct, 0x000000000027b770)
+NWNXLIB_FUNCTION(_ZN8CNWSItem25RestoreUsedActivePropertyEP15CNWItemPropertyi, 0x0000000000275540)
+NWNXLIB_FUNCTION(_ZN8CNWSItem26UpdateUsedActivePropertiesEi, 0x00000000002752a0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem27RestoreUsedActivePropertiesEi, 0x00000000002755e0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem29GetUsedActivePropertyUsesLeftEh, 0x0000000000275140)
+NWNXLIB_FUNCTION(_ZN8CNWSItem7GetCostEiiii, 0x00000000002777d0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem8AIUpdateEv, 0x0000000000273eb0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem8CopyItemEPS_i, 0x0000000000279b70)
+NWNXLIB_FUNCTION(_ZN8CNWSItem8LoadItemEP7CResGFFP10CResStructi, 0x000000000027b540)
+NWNXLIB_FUNCTION(_ZN8CNWSItem8SaveItemEP7CResGFFP10CResStructi, 0x0000000000277910)
+NWNXLIB_FUNCTION(_ZN8CNWSItem9AddToAreaEP8CNWSAreafffi, 0x0000000000275060)
+NWNXLIB_FUNCTION(_ZN8CNWSItem9AsNWSItemEv, 0x00000000002165e0)
+NWNXLIB_FUNCTION(_ZN8CNWSItem9GetWeightEv, 0x0000000000278530)
+NWNXLIB_FUNCTION(_ZN8CNWSItem9MergeItemEPS_, 0x0000000000275d30)
+NWNXLIB_FUNCTION(_ZN8CNWSItem9SplitItemEi, 0x000000000027a110)
+NWNXLIB_FUNCTION(_ZN8CNWSItemC1Ej, 0x0000000000279460)
+NWNXLIB_FUNCTION(_ZN8CNWSItemC2Ej, 0x0000000000279460)
+NWNXLIB_FUNCTION(_ZN8CNWSItemD0Ev, 0x0000000000279970)
+NWNXLIB_FUNCTION(_ZN8CNWSItemD1Ev, 0x00000000002797d0)
+NWNXLIB_FUNCTION(_ZN8CNWSItemD2Ev, 0x00000000002797d0)
+NWNXLIB_FUNCTION(_ZN8CNWSkill11GetNameTextEv, 0x00000000007d3c10)
+NWNXLIB_FUNCTION(_ZN8CNWSkill18GetDescriptionTextEv, 0x00000000007d3b60)
+NWNXLIB_FUNCTION(_ZN8CNWSkillC1Ev, 0x00000000007d3b00)
+NWNXLIB_FUNCTION(_ZN8CNWSkillC2Ev, 0x00000000007d3b00)
+NWNXLIB_FUNCTION(_ZN8CNWSkillD1Ev, 0x00000000007d3b50)
+NWNXLIB_FUNCTION(_ZN8CNWSkillD2Ev, 0x00000000007d3b50)
+NWNXLIB_FUNCTION(_ZN8CNWSpell13GetSpellLevelEh, 0x00000000007d40c0)
+NWNXLIB_FUNCTION(_ZN8CNWSpell16GetSpellNameTextEv, 0x00000000007d4450)
+NWNXLIB_FUNCTION(_ZN8CNWSpell17GetSubRadialSpellEh, 0x00000000007d43a0)
+NWNXLIB_FUNCTION(_ZN8CNWSpell17SetSubRadialSpellEhj, 0x00000000007d43d0)
+NWNXLIB_FUNCTION(_ZN8CNWSpell22SetSubRadialSpellCountEh, 0x00000000007d43f0)
+NWNXLIB_FUNCTION(_ZN8CNWSpell26GetSpellHasVerbalComponentEv, 0x00000000007d42a0)
+NWNXLIB_FUNCTION(_ZN8CNWSpell27GetSpellHasSomaticComponentEv, 0x00000000007d4320)
+NWNXLIB_FUNCTION(_ZN8CNWSpellC1Ev, 0x00000000007d3cc0)
+NWNXLIB_FUNCTION(_ZN8CNWSpellC2Ev, 0x00000000007d3cc0)
+NWNXLIB_FUNCTION(_ZN8CNWSpellD1Ev, 0x00000000007d4070)
+NWNXLIB_FUNCTION(_ZN8CNWSpellD2Ev, 0x00000000007d4070)
+NWNXLIB_FUNCTION(_ZN8CNWSTile10AddTriggerEj, 0x0000000000372a20)
+NWNXLIB_FUNCTION(_ZN8CNWSTile11GetTileDataEv, 0x0000000000373550)
+NWNXLIB_FUNCTION(_ZN8CNWSTile11GetWalkMeshEv, 0x0000000000373940)
+NWNXLIB_FUNCTION(_ZN8CNWSTile11SetTileDataEP11CNWTileData, 0x0000000000373f20)
+NWNXLIB_FUNCTION(_ZN8CNWSTile12LoadWalkMeshEv, 0x0000000000373920)
+NWNXLIB_FUNCTION(_ZN8CNWSTile13ComputeHeightE6Vector, 0x00000000003731e0)
+NWNXLIB_FUNCTION(_ZN8CNWSTile13GetExitNumberEff, 0x00000000003733b0)
+NWNXLIB_FUNCTION(_ZN8CNWSTile13GetTotalExitsEv, 0x0000000000373560)
+NWNXLIB_FUNCTION(_ZN8CNWSTile15GetRegionCoordsEiPfS0_, 0x0000000000373430)
+NWNXLIB_FUNCTION(_ZN8CNWSTile16ClearLineOfSightEi6VectorS0_PS0_, 0x0000000000372ae0)
+NWNXLIB_FUNCTION(_ZN8CNWSTile17FindClosestRegionEff, 0x00000000003732a0)
+NWNXLIB_FUNCTION(_ZN8CNWSTile17GetRegionEntranceEff, 0x00000000003734d0)
+NWNXLIB_FUNCTION(_ZN8CNWSTile17PlotIntraTilePathEP7CNWAreaP20CPathfindInformationffffj, 0x0000000000373ba0)
+NWNXLIB_FUNCTION(_ZN8CNWSTile17SetMainLightColorEhh, 0x00000000003728d0)
+NWNXLIB_FUNCTION(_ZN8CNWSTile18GetSurfaceMaterialE6Vector, 0x0000000000373990)
+NWNXLIB_FUNCTION(_ZN8CNWSTile19SetSourceLightColorEhh, 0x0000000000372900)
+NWNXLIB_FUNCTION(_ZN8CNWSTile20NoNonWalkPolysOnTileEfffffffi, 0x0000000000373a40)
+NWNXLIB_FUNCTION(_ZN8CNWSTile21IntersectLineSegmentsEffffffffPfS0_, 0x0000000000373740)
+NWNXLIB_FUNCTION(_ZN8CNWSTile25ComputeClippedLineSegmentE6VectorS0_PS0_S1_, 0x0000000000372e60)
+NWNXLIB_FUNCTION(_ZN8CNWSTile26ClippedLineSegmentWalkableEffffPfS0_S0_S0_S0_S0_, 0x0000000000372d00)
+NWNXLIB_FUNCTION(_ZN8CNWSTile7GetExitEiPfS0_Pi, 0x0000000000373320)
+NWNXLIB_FUNCTION(_ZN8CNWSTile9InTriggerE6VectorP13CExoArrayListIjE, 0x0000000000373590)
+NWNXLIB_FUNCTION(_ZN8CNWSTileC1Ev, 0x00000000003729a0)
+NWNXLIB_FUNCTION(_ZN8CNWSTileC2Ev, 0x00000000003729a0)
+NWNXLIB_FUNCTION(_ZN8CNWSTileD0Ev, 0x0000000000372970)
+NWNXLIB_FUNCTION(_ZN8CNWSTileD1Ev, 0x0000000000372930)
+NWNXLIB_FUNCTION(_ZN8CNWSTileD2Ev, 0x0000000000372930)
+NWNXLIB_FUNCTION(_ZN8CNWSUUID10MakeRandomEv, 0x00000000002eecf0)
+NWNXLIB_FUNCTION(_ZN8CNWSUUID11LoadFromGffEP7CResGFFP10CResStruct, 0x00000000002f1110)
+NWNXLIB_FUNCTION(_ZN8CNWSUUID12AssignRandomEv, 0x00000000002f2310)
+NWNXLIB_FUNCTION(_ZN8CNWSUUID12CanCarryUUIDEi, 0x00000000002eebd0)
+NWNXLIB_FUNCTION(_ZN8CNWSUUID12CanCarryUUIDEv, 0x00000000002eec60)
+NWNXLIB_FUNCTION(_ZN8CNWSUUID17GetOrAssignRandomEv, 0x00000000002f0780)
+NWNXLIB_FUNCTION(_ZN8CNWSUUID20LookupObjectIdByUUIDERK10CExoString, 0x00000000002ef580)
+NWNXLIB_FUNCTION(_ZN8CNWSUUID9SaveToGffEP7CResGFFP10CResStruct, 0x00000000002eec80)
+NWNXLIB_FUNCTION(_ZN8CNWSUUID9TryAssignERK10CExoString, 0x00000000002ef650)
+NWNXLIB_FUNCTION(_ZN8CNWSUUIDC1EP11CGameObject, 0x00000000002eebb0)
+NWNXLIB_FUNCTION(_ZN8CNWSUUIDC2EP11CGameObject, 0x00000000002eebb0)
+NWNXLIB_FUNCTION(_ZN8CNWSUUIDD0Ev, 0x00000000002f2d70)
+NWNXLIB_FUNCTION(_ZN8CNWSUUIDD1Ev, 0x00000000002f2cb0)
+NWNXLIB_FUNCTION(_ZN8CNWSUUIDD2Ev, 0x00000000002f2cb0)
+NWNXLIB_FUNCTION(_ZN8CTlkFile10ReadHeaderEv, 0x000000000011e070)
+NWNXLIB_FUNCTION(_ZN8CTlkFileC1E10CExoString, 0x000000000011df80)
+NWNXLIB_FUNCTION(_ZN8CTlkFileC1EPKvi, 0x000000000011e030)
+NWNXLIB_FUNCTION(_ZN8CTlkFileC2E10CExoString, 0x000000000011df80)
+NWNXLIB_FUNCTION(_ZN8CTlkFileC2EPKvi, 0x000000000011e030)
+NWNXLIB_FUNCTION(_ZN8CTlkFileD0Ev, 0x000000000011fdd0)
+NWNXLIB_FUNCTION(_ZN8CTlkFileD1Ev, 0x000000000011fdb0)
+NWNXLIB_FUNCTION(_ZN8CTlkFileD2Ev, 0x000000000011fdb0)
+NWNXLIB_FUNCTION(_ZN8NWSQLite10Migrations10DefinitionD1Ev, 0x00000000001869c0)
+NWNXLIB_FUNCTION(_ZN8NWSQLite10Migrations10DefinitionD2Ev, 0x00000000001869c0)
+NWNXLIB_FUNCTION(_ZN8NWSQLite7CheckedIbEET_St8functionIFS1_vEES1_, 0x0000000000194800)
+NWNXLIB_FUNCTION(_ZN8NWSQLite7CheckedIPN6NWSync15CNWSyncInternalELPv0EEET_St8functionIFS5_vEE, 0x0000000000186a90)
+NWNXLIB_FUNCTION(_ZN8NWSQLite7CheckedISt10shared_ptrI9DataBlockELPv0EEET_St8functionIFS5_vEE, 0x0000000000195070)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8Database11TransactionESt8functionIFvvEE, 0x00000000006e0d20)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8Database12HousekeepingEv, 0x00000000006df770)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8Database13RunMigrationsENS_10Migrations10DefinitionE, 0x00000000006dfd50)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8Database14CopyAtomicallyERS0_, 0x00000000006deb40)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8Database16FilePathUnlinkerD1Ev, 0x00000000006e18c0)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8Database16FilePathUnlinkerD2Ev, 0x00000000006e18c0)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8Database18CheckedTransactionESt8functionIFbvEE, 0x00000000006de960)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8Database19EnsurePathWriteableERK10CExoString, 0x00000000006de730)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8Database19HasMigrationAppliedERK10CExoString, 0x00000000006dea50)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8Database20MarkMigrationAppliedERK10CExoString, 0x00000000006df210)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8Database27ApplyMigrationTransactionalERK10CExoStringRKSt8functionIFvvEE, 0x00000000006df3b0)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8Database27ApplyMigrationTransactionalERK10CExoStringS3_, 0x00000000006df560)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8Database5SetupEv, 0x00000000006e0310)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8DatabaseC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb, 0x00000000006e1420)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8DatabaseC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_10Migrations10DefinitionE, 0x00000000006e0ff0)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8DatabaseC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb, 0x00000000006e1420)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8DatabaseC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_10Migrations10DefinitionE, 0x00000000006e0ff0)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8LogErrorEPKciS1_, 0x00000000006de4f0)
+NWNXLIB_FUNCTION(_ZN8NWSQLite8LogErrorERN6sqlite16sqlite_exceptionE, 0x00000000006de640)
+NWNXLIB_FUNCTION(_ZN9CExoDebug12FlushLogFileEv, 0x0000000000105620)
+NWNXLIB_FUNCTION(_ZN9CExoDebug12OpenLogFilesE10CExoStringi, 0x0000000000105680)
+NWNXLIB_FUNCTION(_ZN9CExoDebug13CloseLogFilesEv, 0x00000000001055f0)
+NWNXLIB_FUNCTION(_ZN9CExoDebug14FlushErrorFileEv, 0x0000000000105610)
+NWNXLIB_FUNCTION(_ZN9CExoDebug14WriteToLogFileERK10CExoString, 0x0000000000105720)
+NWNXLIB_FUNCTION(_ZN9CExoDebug16SetRotateLogFileEi, 0x0000000000105760)
+NWNXLIB_FUNCTION(_ZN9CExoDebug16WriteToErrorFileERK10CExoString, 0x0000000000105710)
+NWNXLIB_FUNCTION(_ZN9CExoDebug19GetCurrentTimestampER10CExoString, 0x0000000000105740)
+NWNXLIB_FUNCTION(_ZN9CExoDebug21GetMaxAllocatedMemoryEv, 0x0000000000105650)
+NWNXLIB_FUNCTION(_ZN9CExoDebug25GetCurrentAllocatedMemoryEv, 0x0000000000105640)
+NWNXLIB_FUNCTION(_ZN9CExoDebug25GetTotalMemoryAllocationsEv, 0x0000000000105660)
+NWNXLIB_FUNCTION(_ZN9CExoDebug27GetCurrentMemoryAllocationsEv, 0x0000000000105670)
+NWNXLIB_FUNCTION(_ZN9CExoDebug6AssertEiPKcS1_, 0x00000000001055b0)
+NWNXLIB_FUNCTION(_ZN9CExoDebug7WarningEiPKcS1_, 0x0000000000105700)
+NWNXLIB_FUNCTION(_ZN9CExoDebugC1Ev, 0x00000000001054f0)
+NWNXLIB_FUNCTION(_ZN9CExoDebugC2Ev, 0x00000000001054f0)
+NWNXLIB_FUNCTION(_ZN9CExoDebugD1Ev, 0x0000000000105560)
+NWNXLIB_FUNCTION(_ZN9CExoDebugD2Ev, 0x0000000000105560)
+NWNXLIB_FUNCTION(_ZN9CNetLayer10InitializeEP11CBaseExoApp, 0x0000000000128b30)
+NWNXLIB_FUNCTION(_ZN9CNetLayer11EndProtocolEj, 0x0000000000128bb0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer12StoreMessageEPhj, 0x0000000000129160)
+NWNXLIB_FUNCTION(_ZN9CNetLayer13EndServerModeEv, 0x0000000000128ed0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer13GetPlayerInfoEj, 0x00000000001293a0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer13SetNWSyncDataERKN6NWSync13AdvertisementE, 0x0000000000129df0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer13StartProtocolEjjjj, 0x0000000000128ba0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer14GetSessionInfoEj, 0x00000000001292b0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer14GetSessionNameEv, 0x00000000001291d0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer14MessageArrivedEjjji, 0x0000000000128b70)
+NWNXLIB_FUNCTION(_ZN9CNetLayer14SetSessionNameE10CExoString, 0x0000000000129220)
+NWNXLIB_FUNCTION(_ZN9CNetLayer15StartServerModeE10CExoStringj, 0x0000000000128bd0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer16DisconnectPlayerEjjiRK10CExoString, 0x0000000000129020)
+NWNXLIB_FUNCTION(_ZN9CNetLayer16GetIPBySessionIdEjP10CExoString, 0x0000000000129750)
+NWNXLIB_FUNCTION(_ZN9CNetLayer16GetPlayerAddressEji, 0x00000000001293d0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer16GetSendUDPSocketEv, 0x0000000000129510)
+NWNXLIB_FUNCTION(_ZN9CNetLayer16UpdateStatusLoopEj, 0x0000000000129300)
+NWNXLIB_FUNCTION(_ZN9CNetLayer17GetPlayerPasswordEv, 0x0000000000128c60)
+NWNXLIB_FUNCTION(_ZN9CNetLayer17GetUDPRecievePortEv, 0x0000000000129290)
+NWNXLIB_FUNCTION(_ZN9CNetLayer17SetPlayerPasswordE10CExoString, 0x0000000000128cb0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer17SetServerLanguageEi, 0x0000000000128bc0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer18GetAnyWindowBehindEv, 0x0000000000129630)
+NWNXLIB_FUNCTION(_ZN9CNetLayer18GetClientConnectedEv, 0x0000000000129310)
+NWNXLIB_FUNCTION(_ZN9CNetLayer18GetConnectionErrorEv, 0x0000000000128fe0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer18GetLocalPrivilegesEj, 0x0000000000129390)
+NWNXLIB_FUNCTION(_ZN9CNetLayer18GetPortBySessionIdEj, 0x00000000001292a0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer18GetServerConnectedEv, 0x0000000000129340)
+NWNXLIB_FUNCTION(_ZN9CNetLayer19EndConnectToSessionEv, 0x0000000000128fd0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer19GetDisconnectReasonEv, 0x0000000000129060)
+NWNXLIB_FUNCTION(_ZN9CNetLayer19GetDisconnectStrrefEv, 0x0000000000129040)
+NWNXLIB_FUNCTION(_ZN9CNetLayer19GetPasswordRequiredEv, 0x0000000000128c50)
+NWNXLIB_FUNCTION(_ZN9CNetLayer19SendMessageToPlayerEjPhjj, 0x0000000000128b80)
+NWNXLIB_FUNCTION(_ZN9CNetLayer19SetDisconnectReasonERK10CExoString, 0x0000000000129090)
+NWNXLIB_FUNCTION(_ZN9CNetLayer19SetDisconnectStrrefEj, 0x0000000000129050)
+NWNXLIB_FUNCTION(_ZN9CNetLayer20EndEnumerateSessionsEv, 0x0000000000128fa0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer20GetExpansionPackReqdEv, 0x00000000001295f0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer20GetPlayerAddressDataEjPjPPhS2_S0_, 0x0000000000129150)
+NWNXLIB_FUNCTION(_ZN9CNetLayer20GetSessionMaxPlayersEv, 0x00000000001291b0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer20RequestServerDetailsEj, 0x0000000000129120)
+NWNXLIB_FUNCTION(_ZN9CNetLayer20SendMessageToAddressEjPhj, 0x0000000000128b90)
+NWNXLIB_FUNCTION(_ZN9CNetLayer20SetExpansionPackReqdEt, 0x00000000001295d0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer20SetMstServerPasswordE10CExoString, 0x0000000000129550)
+NWNXLIB_FUNCTION(_ZN9CNetLayer20SetSessionMaxPlayersEj, 0x00000000001291c0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer21DisconnectFromSessionEv, 0x0000000000128ff0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer21EndAddressTranslationERK10CExoString, 0x00000000001292f0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer21GetGameMasterPasswordEv, 0x0000000000128d30)
+NWNXLIB_FUNCTION(_ZN9CNetLayer21GetLocalAdapterStringEjj, 0x00000000001290c0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer21GetSessionInfoChangedEj, 0x0000000000129180)
+NWNXLIB_FUNCTION(_ZN9CNetLayer21ProcessReceivedFramesEi, 0x0000000000128b50)
+NWNXLIB_FUNCTION(_ZN9CNetLayer21SetGameMasterPasswordE10CExoString, 0x0000000000128d80)
+NWNXLIB_FUNCTION(_ZN9CNetLayer21SetSessionInfoChangedEji, 0x0000000000129170)
+NWNXLIB_FUNCTION(_ZN9CNetLayer21StartConnectToSessionEjRK10CExoStringiS2_jjS2_S2_S2_, 0x0000000000128fc0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer22DropConnectionToServerEv, 0x0000000000129000)
+NWNXLIB_FUNCTION(_ZN9CNetLayer22GetNumberLocalAdaptersEj, 0x00000000001290b0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer22GetServerAdminPasswordEv, 0x0000000000128e00)
+NWNXLIB_FUNCTION(_ZN9CNetLayer22GetSessionSectionStartEj, 0x0000000000128f50)
+NWNXLIB_FUNCTION(_ZN9CNetLayer22IsConnectedToLocalhostEv, 0x0000000000129010)
+NWNXLIB_FUNCTION(_ZN9CNetLayer22OpenStandardConnectionEi10CExoStringi, 0x0000000000129650)
+NWNXLIB_FUNCTION(_ZN9CNetLayer22PlayerIdToConnectionIdEjPj, 0x0000000000129610)
+NWNXLIB_FUNCTION(_ZN9CNetLayer22SetServerAdminPasswordE10CExoString, 0x0000000000128e50)
+NWNXLIB_FUNCTION(_ZN9CNetLayer22StartEnumerateSessionsEjiPhti, 0x0000000000128f00)
+NWNXLIB_FUNCTION(_ZN9CNetLayer22StartEnumerateSessionsEPjiPhti, 0x0000000000128ee0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer23ClearSessionInfoChangedEj, 0x00000000001291a0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer23CloseStandardConnectionEi, 0x0000000000129730)
+NWNXLIB_FUNCTION(_ZN9CNetLayer23GetPlayerAddressRelayedEj, 0x0000000000129420)
+NWNXLIB_FUNCTION(_ZN9CNetLayer23GetServerNetworkAddressEv, 0x0000000000129490)
+NWNXLIB_FUNCTION(_ZN9CNetLayer23SetUpPlayBackConnectionEv, 0x00000000001292c0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer23StartAddressTranslationERK10CExoString, 0x00000000001292d0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer24CleanUpEnumerateSpecificEv, 0x0000000000128fb0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer24GetAnySessionsEnumeratedEv, 0x0000000000129350)
+NWNXLIB_FUNCTION(_ZN9CNetLayer24SetConnectionsDisallowedEi, 0x0000000000129770)
+NWNXLIB_FUNCTION(_ZN9CNetLayer25RequestExtendedServerInfoEjii, 0x0000000000129110)
+NWNXLIB_FUNCTION(_ZN9CNetLayer26TranslateAddressFromStringEPcPjPhS2_S1_, 0x0000000000129450)
+NWNXLIB_FUNCTION(_ZN9CNetLayer27EndEnumerateSessionsSectionEj, 0x0000000000128f80)
+NWNXLIB_FUNCTION(_ZN9CNetLayer27GetAddressTranslationResultERK10CExoStringR13CExoArrayListIjE, 0x00000000001292e0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer27GetRouterPortMapDescriptionEv, 0x0000000000129d90)
+NWNXLIB_FUNCTION(_ZN9CNetLayer29GetConnectionsMustBeValidatedEv, 0x0000000000129790)
+NWNXLIB_FUNCTION(_ZN9CNetLayer29GetEnumerateSpecificOverRelayEv, 0x0000000000129d30)
+NWNXLIB_FUNCTION(_ZN9CNetLayer29SetConnectionsMustBeValidatedEi, 0x00000000001297b0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer29SetEnumerateSpecificOverRelayEiPKc, 0x0000000000129d40)
+NWNXLIB_FUNCTION(_ZN9CNetLayer29StartEnumerateSessionsSectionEjjP10CExoString, 0x0000000000128f60)
+NWNXLIB_FUNCTION(_ZN9CNetLayer31SendMessageToStandardConnectionEiPci, 0x0000000000129710)
+NWNXLIB_FUNCTION(_ZN9CNetLayer32GetMessageFromStandardConnectionEPiPPcS0_, 0x00000000001296f0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer33ShutDownClientInterfaceWithReasonEjRK10CExoString, 0x0000000000129530)
+NWNXLIB_FUNCTION(_ZN9CNetLayer37SetCurrentMasterServerInternetAddressEjj, 0x00000000001294f0)
+NWNXLIB_FUNCTION(_ZN9CNetLayer7EndPingEj, 0x0000000000129140)
+NWNXLIB_FUNCTION(_ZN9CNetLayer8ShutDownEv, 0x0000000000128b60)
+NWNXLIB_FUNCTION(_ZN9CNetLayer9GetExoAppEv, 0x0000000000128b40)
+NWNXLIB_FUNCTION(_ZN9CNetLayer9GetExoNetEv, 0x0000000000129470)
+NWNXLIB_FUNCTION(_ZN9CNetLayer9StartPingEj, 0x0000000000129130)
+NWNXLIB_FUNCTION(_ZN9CNetLayerC1Ev, 0x0000000000128aa0)
+NWNXLIB_FUNCTION(_ZN9CNetLayerC2Ev, 0x0000000000128aa0)
+NWNXLIB_FUNCTION(_ZN9CNetLayerD1Ev, 0x0000000000128ae0)
+NWNXLIB_FUNCTION(_ZN9CNetLayerD2Ev, 0x0000000000128ae0)
+NWNXLIB_FUNCTION(_ZN9CNWDomain11GetNameTextEv, 0x00000000007df630)
+NWNXLIB_FUNCTION(_ZN9CNWDomain18GetDescriptionTextEv, 0x00000000007df580)
+NWNXLIB_FUNCTION(_ZN9CNWDomainC1Ev, 0x00000000007df510)
+NWNXLIB_FUNCTION(_ZN9CNWDomainC2Ev, 0x00000000007df510)
+NWNXLIB_FUNCTION(_ZN9CNWDomainD1Ev, 0x00000000007df570)
+NWNXLIB_FUNCTION(_ZN9CNWDomainD2Ev, 0x00000000007df570)
+NWNXLIB_FUNCTION(_ZN9CNWSRulesC1Ev, 0x000000000036dd10)
+NWNXLIB_FUNCTION(_ZN9CNWSRulesC2Ev, 0x000000000036dd10)
+NWNXLIB_FUNCTION(_ZN9CNWSRulesD0Ev, 0x000000000036dce0)
+NWNXLIB_FUNCTION(_ZN9CNWSRulesD1Ev, 0x000000000036dcc0)
+NWNXLIB_FUNCTION(_ZN9CNWSRulesD2Ev, 0x000000000036dcc0)
+NWNXLIB_FUNCTION(_ZN9CNWSStore10AsNWSStoreEv, 0x00000000002e9f40)
+NWNXLIB_FUNCTION(_ZN9CNWSStore10RemoveItemEP8CNWSItem, 0x00000000002e82a0)
+NWNXLIB_FUNCTION(_ZN9CNWSStore11AcquireItemEP8CNWSItemihh, 0x00000000002e8c90)
+NWNXLIB_FUNCTION(_ZN9CNWSStore11AddCustomerEP10CNWSPlayercc, 0x00000000002e84a0)
+NWNXLIB_FUNCTION(_ZN9CNWSStore11GetCustomerEj, 0x00000000002e86d0)
+NWNXLIB_FUNCTION(_ZN9CNWSStore12EventHandlerEjjPvjj, 0x00000000002e7e70)
+NWNXLIB_FUNCTION(_ZN9CNWSStore14RemoveCustomerEP10CNWSPlayer, 0x00000000002e8600)
+NWNXLIB_FUNCTION(_ZN9CNWSStore14RemoveFromAreaEv, 0x00000000002e7d90)
+NWNXLIB_FUNCTION(_ZN9CNWSStore16LoadFromTemplateE7CResRefP10CExoString, 0x00000000002e9db0)
+NWNXLIB_FUNCTION(_ZN9CNWSStore18AddItemToInventoryEPP8CNWSItemhhh, 0x00000000002e89a0)
+NWNXLIB_FUNCTION(_ZN9CNWSStore18GetCustomerBuyRateEji, 0x00000000002e8780)
+NWNXLIB_FUNCTION(_ZN9CNWSStore18GetItemInInventoryEj, 0x00000000002e88b0)
+NWNXLIB_FUNCTION(_ZN9CNWSStore18GetItemInInventoryEP10CExoString, 0x00000000002e8930)
+NWNXLIB_FUNCTION(_ZN9CNWSStore19GetCustomerSellRateEj, 0x00000000002e8720)
+NWNXLIB_FUNCTION(_ZN9CNWSStore20GetAppropriateListIdEj, 0x00000000002e82f0)
+NWNXLIB_FUNCTION(_ZN9CNWSStore21CalculateItemBuyPriceEP8CNWSItemj, 0x00000000002e8800)
+NWNXLIB_FUNCTION(_ZN9CNWSStore22CalculateItemSellPriceEP8CNWSItemj, 0x00000000002e81d0)
+NWNXLIB_FUNCTION(_ZN9CNWSStore22GetIsRestrictedBuyItemEi, 0x00000000002e8410)
+NWNXLIB_FUNCTION(_ZN9CNWSStore23RemoveItemFromInventoryEP8CNWSItemh, 0x00000000002e8320)
+NWNXLIB_FUNCTION(_ZN9CNWSStore8AIUpdateEv, 0x00000000002e75f0)
+NWNXLIB_FUNCTION(_ZN9CNWSStore8SellItemEP8CNWSItemP12CNWSCreaturehh, 0x00000000002e8e80)
+NWNXLIB_FUNCTION(_ZN9CNWSStore9AddToAreaEP8CNWSAreafffi, 0x00000000002e7dd0)
+NWNXLIB_FUNCTION(_ZN9CNWSStore9LoadStoreEP7CResGFFP10CResStructP10CExoString, 0x00000000002e90c0)
+NWNXLIB_FUNCTION(_ZN9CNWSStore9SaveStoreEP7CResGFFP10CResStructi, 0x00000000002e7870)
+NWNXLIB_FUNCTION(_ZN9CNWSStoreC1Ej, 0x00000000002e7630)
+NWNXLIB_FUNCTION(_ZN9CNWSStoreC2Ej, 0x00000000002e7630)
+NWNXLIB_FUNCTION(_ZN9CNWSStoreD0Ev, 0x00000000002e81a0)
+NWNXLIB_FUNCTION(_ZN9CNWSStoreD1Ev, 0x00000000002e7f70)
+NWNXLIB_FUNCTION(_ZN9CNWSStoreD2Ev, 0x00000000002e7f70)
+NWNXLIB_FUNCTION(_ZN9CTlkTable13FetchInternalEjR7STR_RESi, 0x000000000011ed70)
+NWNXLIB_FUNCTION(_ZN9CTlkTable13GetTokenValueERK14CTlkTableTokenR10CExoString, 0x000000000011fda0)
+NWNXLIB_FUNCTION(_ZN9CTlkTable13RemapFontNameEPc, 0x000000000011e320)
+NWNXLIB_FUNCTION(_ZN9CTlkTable14SetCustomTokenEiRK10CExoString, 0x000000000011e3d0)
+NWNXLIB_FUNCTION(_ZN9CTlkTable15GetSimpleStringEj, 0x000000000011f200)
+NWNXLIB_FUNCTION(_ZN9CTlkTable17ClearCustomTokensEv, 0x000000000011e650)
+NWNXLIB_FUNCTION(_ZN9CTlkTable17ExoIsDBCSLeadByteEh, 0x000000000011e310)
+NWNXLIB_FUNCTION(_ZN9CTlkTable17OpenFileAlternateERK10CExoString, 0x000000000011f7f0)
+NWNXLIB_FUNCTION(_ZN9CTlkTable18CloseFileAlternateEv, 0x000000000011e300)
+NWNXLIB_FUNCTION(_ZN9CTlkTable18GetLanguageVersionEv, 0x000000000011f2a0)
+NWNXLIB_FUNCTION(_ZN9CTlkTable21SetUseLargeDialogFontEi, 0x000000000011f2c0)
+NWNXLIB_FUNCTION(_ZN9CTlkTable6ReloadEv, 0x000000000011fcf0)
+NWNXLIB_FUNCTION(_ZN9CTlkTable8OpenFileE10CExoString, 0x000000000011f820)
+NWNXLIB_FUNCTION(_ZN9CTlkTable8OpenFileERK10CExoStringPP8CTlkFile, 0x000000000011f440)
+NWNXLIB_FUNCTION(_ZN9CTlkTable8ParseStrER10CExoString, 0x000000000011e6d0)
+NWNXLIB_FUNCTION(_ZN9CTlkTable9CloseFileEPP8CTlkFile, 0x000000000011e150)
+NWNXLIB_FUNCTION(_ZN9CTlkTableC1Ev, 0x000000000011e0c0)
+NWNXLIB_FUNCTION(_ZN9CTlkTableC2Ev, 0x000000000011e0c0)
+NWNXLIB_FUNCTION(_ZN9CTlkTableD0Ev, 0x000000000011e2d0)
+NWNXLIB_FUNCTION(_ZN9CTlkTableD1Ev, 0x000000000011e1b0)
+NWNXLIB_FUNCTION(_ZN9CTlkTableD2Ev, 0x000000000011e1b0)
+NWNXLIB_FUNCTION(_ZngRK10Quaternion, 0x0000000000794480)
+NWNXLIB_FUNCTION(_ZNK10CExoConfig10BindConfigIbE23ApplyConstraintsToValueEb, 0x00000000000edf00)
+NWNXLIB_FUNCTION(_ZNK10CExoConfig10BindConfigIdE23ApplyConstraintsToValueEd, 0x00000000000e0640)
+NWNXLIB_FUNCTION(_ZNK10CExoConfig10BindConfigIlE23ApplyConstraintsToValueEl, 0x00000000000dffe0)
+NWNXLIB_FUNCTION(_ZNK10CExoConfig10BindConfigINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE23ApplyConstraintsToValueES6_, 0x00000000000e90a0)
+NWNXLIB_FUNCTION(_ZNK10CExoString13CompareNoCaseERKS_, 0x000000000010bcd0)
+NWNXLIB_FUNCTION(_ZNK10CExoString19ComparePrefixNoCaseERKS_i, 0x000000000010be50)
+NWNXLIB_FUNCTION(_ZNK10CExoString4CStrEv, 0x000000000010b210)
+NWNXLIB_FUNCTION(_ZNK10CExoString4FindEci, 0x000000000010b340)
+NWNXLIB_FUNCTION(_ZNK10CExoString4FindERKS_i, 0x000000000010b230)
+NWNXLIB_FUNCTION(_ZNK10CExoString4LeftEi, 0x000000000010b850)
+NWNXLIB_FUNCTION(_ZNK10CExoString5AsINTEv, 0x000000000010b1b0)
+NWNXLIB_FUNCTION(_ZNK10CExoString5AsTAGEv, 0x000000000010c2d0)
+NWNXLIB_FUNCTION(_ZNK10CExoString5RightEi, 0x000000000010ba20)
+NWNXLIB_FUNCTION(_ZNK10CExoString5StripEbbPKc, 0x000000000010c190)
+NWNXLIB_FUNCTION(_ZNK10CExoString7AsFLOATEv, 0x000000000010b1e0)
+NWNXLIB_FUNCTION(_ZNK10CExoString7FindNotEci, 0x000000000010b420)
+NWNXLIB_FUNCTION(_ZNK10CExoString7IsEmptyEv, 0x000000000010b820)
+NWNXLIB_FUNCTION(_ZNK10CExoString9GetLengthEv, 0x000000000010b6f0)
+NWNXLIB_FUNCTION(_ZNK10CExoString9LowerCaseEv, 0x000000000010b8f0)
+NWNXLIB_FUNCTION(_ZNK10CExoString9SubStringEii, 0x000000000010bae0)
+NWNXLIB_FUNCTION(_ZNK10CExoString9UpperCaseEv, 0x000000000010bba0)
+NWNXLIB_FUNCTION(_ZNK10CExoStringcvNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEB5cxx11Ev, 0x000000000010aaa0)
+NWNXLIB_FUNCTION(_ZNK10CExoStringeqEPKc, 0x000000000010ad10)
+NWNXLIB_FUNCTION(_ZNK10CExoStringeqERKS_, 0x000000000010acc0)
+NWNXLIB_FUNCTION(_ZNK10CExoStringgeEPKc, 0x000000000010aff0)
+NWNXLIB_FUNCTION(_ZNK10CExoStringgeERKS_, 0x000000000010afa0)
+NWNXLIB_FUNCTION(_ZNK10CExoStringgtEPKc, 0x000000000010aec0)
+NWNXLIB_FUNCTION(_ZNK10CExoStringgtERKS_, 0x000000000010ae80)
+NWNXLIB_FUNCTION(_ZNK10CExoStringixEi, 0x000000000010b030)
+NWNXLIB_FUNCTION(_ZNK10CExoStringleEPKc, 0x000000000010af50)
+NWNXLIB_FUNCTION(_ZNK10CExoStringleERKS_, 0x000000000010af00)
+NWNXLIB_FUNCTION(_ZNK10CExoStringltEPKc, 0x000000000010ae40)
+NWNXLIB_FUNCTION(_ZNK10CExoStringltERKS_, 0x000000000010ae00)
+NWNXLIB_FUNCTION(_ZNK10CExoStringneEPKc, 0x000000000010adb0)
+NWNXLIB_FUNCTION(_ZNK10CExoStringneERKS_, 0x000000000010ad60)
+NWNXLIB_FUNCTION(_ZNK10CExoStringplERKS_, 0x000000000010b080)
+NWNXLIB_FUNCTION(_ZNK11CGameEffect12GetCustomTagEv, 0x00000000002594e0)
+NWNXLIB_FUNCTION(_ZNK11CGameEffecteqERKS_, 0x0000000000259940)
+NWNXLIB_FUNCTION(_ZNK11CGameEffectneERKS_, 0x0000000000259a70)
+NWNXLIB_FUNCTION(_ZNK12CScriptEventeqERKS_, 0x00000000002bd620)
+NWNXLIB_FUNCTION(_ZNK12CScriptEventneERKS_, 0x00000000002bd770)
+NWNXLIB_FUNCTION(_ZNK13CExoAliasList12GetAliasPathERK10CExoStringi, 0x0000000000106660)
+NWNXLIB_FUNCTION(_ZNK13CExoAliasList15ResolveFileNameERK10CExoStringt, 0x0000000000106670)
+NWNXLIB_FUNCTION(_ZNK13CExoArrayListI10CExoStringE8ContainsES0_, 0x000000000030d6b0)
+NWNXLIB_FUNCTION(_ZNK13CExoArrayListIP24NWPlayerCharacterList_stE13DerefContainsES1_, 0x00000000002e41e0)
+NWNXLIB_FUNCTION(_ZNK13CExoLocString12GetStringLocEiP10CExoStringh, 0x0000000000109370)
+NWNXLIB_FUNCTION(_ZNK13CExoLocString14GetStringCountEv, 0x0000000000109390)
+NWNXLIB_FUNCTION(_ZNK13CExoLocString15GetStringLengthEj, 0x00000000001093a0)
+NWNXLIB_FUNCTION(_ZNK13CExoLocString17GetStringInternalEiP10CExoString, 0x00000000001093b0)
+NWNXLIB_FUNCTION(_ZNK13CExoLocString9GetStringEiP10CExoStringhb, 0x0000000000109120)
+NWNXLIB_FUNCTION(_ZNK13CExoLocString9GetStringEjPiP10CExoStringPh, 0x00000000001090e0)
+NWNXLIB_FUNCTION(_ZNK13CNWSpellArray8GetSpellEi, 0x00000000007d45a0)
+NWNXLIB_FUNCTION(_ZNK13CNWSpellArrayixEi, 0x00000000007d65e0)
+NWNXLIB_FUNCTION(_ZNK16CExoFileInternal14IsMemoryBackedEv, 0x0000000000107b30)
+NWNXLIB_FUNCTION(_ZNK16CExoFileInternal9IsMMappedEv, 0x0000000000107b40)
+NWNXLIB_FUNCTION(_ZNK16CNWBaseItemArray11GetBaseItemEi, 0x00000000007c8c70)
+NWNXLIB_FUNCTION(_ZNK21CExoAliasListInternal12GetAliasPathERK10CExoStringi, 0x0000000000107320)
+NWNXLIB_FUNCTION(_ZNK21CExoAliasListInternal15ResolveFileNameERK10CExoStringt, 0x00000000001073e0)
+NWNXLIB_FUNCTION(_ZNK29CAurObjectVisualTransformDataeqERKS_, 0x00000000002e3f20)
+NWNXLIB_FUNCTION(_ZNK4Task12CExoBaseTask10IsFinishedEv, 0x0000000000429e90)
+NWNXLIB_FUNCTION(_ZNK4Task12CExoBaseTask7GetNameEv, 0x0000000000429e60)
+NWNXLIB_FUNCTION(_ZNK4Task12CExoBaseTask7WaitForEv, 0x0000000000429f20)
+NWNXLIB_FUNCTION(_ZNK4Task12CExoBaseTask8FinishedEv, 0x0000000000429f00)
+NWNXLIB_FUNCTION(_ZNK4Task12CExoBaseTask8IsQueuedEv, 0x0000000000429e70)
+NWNXLIB_FUNCTION(_ZNK4Task12CExoBaseTask9IsStartedEv, 0x0000000000429e80)
+NWNXLIB_FUNCTION(_ZNK4Task13CExoTaskGroup11GetPriorityEv, 0x000000000042cf80)
+NWNXLIB_FUNCTION(_ZNK4Task13CExoTaskGroup12GetWorkItemsEv, 0x000000000042cf90)
+NWNXLIB_FUNCTION(_ZNK4Task13CExoTaskGroup7GetNameEv, 0x000000000042cf60)
+NWNXLIB_FUNCTION(_ZNK4Task13CExoTaskGroup8GetFlagsEv, 0x000000000042cf70)
+NWNXLIB_FUNCTION(_ZNK4Task14CExoTaskThread7GetNameEv, 0x000000000042c290)
+NWNXLIB_FUNCTION(_ZNK4Task14CExoTaskThread8GetFlagsEv, 0x000000000042c2a0)
+NWNXLIB_FUNCTION(_ZNK4Task15CExoTaskManager7StartedEv, 0x000000000042b1f0)
+NWNXLIB_FUNCTION(_ZNK4Task20CExoTaskManager_impl7StartedEv, 0x000000000042b3d0)
+NWNXLIB_FUNCTION(_ZNK6Matrix13getquaternionEv, 0x00000000007935a0)
+NWNXLIB_FUNCTION(_ZNK6NWSync13Advertisement8Manifest18ShouldLoadOnClientEv, 0x00000000001859d0)
+NWNXLIB_FUNCTION(_ZNK6NWSync15CNWSyncInternal11GetManifestERK10CExoString, 0x000000000018cee0)
+NWNXLIB_FUNCTION(_ZNK6NWSync15CNWSyncInternal11HasManifestERK10CExoString, 0x000000000018ddc0)
+NWNXLIB_FUNCTION(_ZNK6NWSync15CNWSyncInternal13GetResrefDataERK10CExoString, 0x0000000000190050)
+NWNXLIB_FUNCTION(_ZNK6NWSync15CNWSyncInternal13GetResrefDataERK10CExoStringS3_t, 0x000000000018d430)
+NWNXLIB_FUNCTION(_ZNK6NWSync15CNWSyncInternal14GetWriteSerialEv, 0x000000000018d1b0)
+NWNXLIB_FUNCTION(_ZNK6NWSync15CNWSyncInternal17GetCachedManifestERK10CExoString, 0x000000000018d510)
+NWNXLIB_FUNCTION(_ZNK6NWSync15CNWSyncInternal19GetManifestContentsERK10CExoString, 0x000000000018d230)
+NWNXLIB_FUNCTION(_ZNK6NWSync15CNWSyncInternal20GetMatchingManifestsEbbRK10CExoStringm, 0x000000000018cdc0)
+NWNXLIB_FUNCTION(_ZNK6NWSync15CNWSyncInternal9HasResRefERK10CExoString, 0x000000000018fee0)
+NWNXLIB_FUNCTION(_ZNK6NWSync21SQLiteStorageProvider20GetHumanReadableNameEv, 0x0000000000190b40)
+NWNXLIB_FUNCTION(_ZNK6NWSync21SQLiteStorageProvider8GetStatsEv, 0x0000000000194860)
+NWNXLIB_FUNCTION(_ZNK6NWSync7CNWSync11GetManifestERK10CExoString, 0x0000000000185270)
+NWNXLIB_FUNCTION(_ZNK6NWSync7CNWSync11HasManifestERK10CExoString, 0x0000000000184f90)
+NWNXLIB_FUNCTION(_ZNK6NWSync7CNWSync11IsAvailableEv, 0x0000000000184db0)
+NWNXLIB_FUNCTION(_ZNK6NWSync7CNWSync13GetResrefDataERK10CExoString, 0x0000000000185070)
+NWNXLIB_FUNCTION(_ZNK6NWSync7CNWSync13GetResrefDataERK10CExoStringS3_t, 0x00000000001850c0)
+NWNXLIB_FUNCTION(_ZNK6NWSync7CNWSync14GetWriteSerialEv, 0x00000000001856e0)
+NWNXLIB_FUNCTION(_ZNK6NWSync7CNWSync17GetCachedManifestERK10CExoString, 0x0000000000185200)
+NWNXLIB_FUNCTION(_ZNK6NWSync7CNWSync17HasAdvertisedDataERKNS_13AdvertisementE, 0x0000000000184fe0)
+NWNXLIB_FUNCTION(_ZNK6NWSync7CNWSync19GetManifestContentsERK10CExoString, 0x0000000000185110)
+NWNXLIB_FUNCTION(_ZNK6NWSync7CNWSync20GetMatchingManifestsEbbRK10CExoStringm, 0x0000000000185620)
+NWNXLIB_FUNCTION(_ZNK6NWSync7CNWSync9HasResRefERK10CExoString, 0x0000000000185050)
+NWNXLIB_FUNCTION(_ZNK7CResRef12CopyToStringEPc, 0x00000000001175a0)
+NWNXLIB_FUNCTION(_ZNK7CResRef12CopyToStringER10CExoString, 0x0000000000117550)
+NWNXLIB_FUNCTION(_ZNK7CResRef12GetResRefStrEv, 0x00000000001175d0)
+NWNXLIB_FUNCTION(_ZNK7CResRef7IsValidEv, 0x0000000000117600)
+NWNXLIB_FUNCTION(_ZNK7CResRef9GetLengthEv, 0x0000000000117610)
+NWNXLIB_FUNCTION(_ZNK7CResRef9GetResRefEPh, 0x0000000000117c10)
+NWNXLIB_FUNCTION(_ZNK7CResRef9GetResRefEv, 0x00000000001175c0)
+NWNXLIB_FUNCTION(_ZNK7CResRefeqEPKc, 0x00000000001176a0)
+NWNXLIB_FUNCTION(_ZNK7CResRefeqERK10CExoString, 0x0000000000117750)
+NWNXLIB_FUNCTION(_ZNK7CResRefeqERKS_, 0x0000000000117670)
+NWNXLIB_FUNCTION(_ZNK7CResRefneEPKc, 0x0000000000117730)
+NWNXLIB_FUNCTION(_ZNK7CResRefneERK10CExoString, 0x0000000000117780)
+NWNXLIB_FUNCTION(_ZNK7CResRefneERKS_, 0x0000000000117640)
+NWNXLIB_FUNCTION(_ZNK8CExoFile14IsMemoryBackedEv, 0x0000000000106800)
+NWNXLIB_FUNCTION(_ZNK8CExoFile9IsMMappedEv, 0x0000000000106a40)
+NWNXLIB_FUNCTION(_ZNK8NWSQLite8Database11GetPageInfoEv, 0x00000000006e0410)
+NWNXLIB_FUNCTION(_ZNK9CNetLayer13GetNWSyncDataEv, 0x0000000000129de0)
+NWNXLIB_FUNCTION(_ZNK9CNetLayer22GetGameMasterPermisionEv, 0x0000000000129430)

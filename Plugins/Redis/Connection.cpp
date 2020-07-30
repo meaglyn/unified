@@ -8,8 +8,6 @@
 #include <mutex>
 #include <chrono>
 
-#include "Util.h"
-
 namespace Redis
 {
 
@@ -17,18 +15,6 @@ using namespace NWNXLib;
 using namespace NWNXLib::Services;
 using namespace std::chrono;
 
-std::string RedisReplyTypeToString(const cpp_redis::reply::type& t)
-{
-    switch (t) {
-        case cpp_redis::reply::type::array: return "Array";
-        case cpp_redis::reply::type::bulk_string: return "BulkString";
-        case cpp_redis::reply::type::error: return "Error";
-        case cpp_redis::reply::type::integer: return "Integer";
-        case cpp_redis::reply::type::simple_string: return "String";
-        case cpp_redis::reply::type::null: return "Null";
-    }
-    return "Unknown";
-}
 
 void Redis::LogQuery(const std::vector<std::string>& v, const cpp_redis::reply& r,
                      const uint64_t ns)
@@ -75,16 +61,16 @@ void Redis::LogQuery(const std::vector<std::string>& v, const cpp_redis::reply& 
         std::move(fields),
         std::move(tags));
 
-    auto qstr = str_implode(v);
-    auto rstr = r.as_string();
+    auto qstr = Utils::join(v);
+    auto rstr = RedisReplyAsString(r);
 
     if (r.is_error())
     {
-        LOG_ERROR("Query failed: '%s' -> '%s'", qstr.c_str(), rstr.c_str());
+        LOG_ERROR("Query failed: '%s' -> '%s'", qstr, rstr);
     }
     else
     {
-        LOG_DEBUG("Query: '%s' -> '%s'", qstr.c_str(), rstr.c_str());
+        LOG_DEBUG("Query: '%s' -> '%s'", qstr, rstr);
     }
 }
 
@@ -129,7 +115,7 @@ cpp_redis::reply Redis::RawSync(const std::vector<std::string>& v)
 
 std::string Redis::Sync(const std::vector<std::string>& v)
 {
-    return RawSync(v).as_string();
+    return RedisReplyAsString(RawSync(v));
 }
 
 std::vector<std::string> Redis::SyncList(const std::vector<std::string>& v)
@@ -137,7 +123,7 @@ std::vector<std::string> Redis::SyncList(const std::vector<std::string>& v)
     std::vector<std::string> r;
     auto p = RawSync(v).as_array();
     for (auto& k : p)
-        r.push_back(k.as_string());
+        r.push_back(RedisReplyAsString(k));
     return r;
 }
 
